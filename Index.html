@@ -715,7 +715,7 @@ canvas { width: 100% !important; }
         <input type="number" id="set-schritte" style="width:80px;text-align:right;background:transparent;border:none;color:var(--text);font-size:14px;font-weight:500;" onchange="saveSettings()">
       </div>
     </div>
-    <div class="card">
+     <div class="card">
       <div class="card-label">Supabase</div>
       <div id="sb-status-settings" class="sb-status" style="margin-bottom:10px;">
         <div class="sb-dot" id="sb-dot-settings"></div>
@@ -725,6 +725,16 @@ canvas { width: 100% !important; }
         Rezepte, Bewertungen und Favoriten werden in Supabase gespeichert.<br>
         Tageslog und Gewicht bleiben lokal (localStorage).
       </div>
+    </div>
+    <div class="card">
+      <div class="card-label">App-Version</div>
+      <div class="setting-row" style="margin-bottom:12px;">
+        <span class="setting-label">Installierte Version</span>
+        <span style="font-size:14px;font-weight:600;color:var(--accent);" id="settings-app-version"></span>
+      </div>
+      <button class="btn btn-ghost" style="width:100%;font-size:13px;" onclick="checkForUpdate(true)">
+        🔄 Jetzt auf Updates prüfen
+      </button>
     </div>
   </div>
 </div>
@@ -749,6 +759,20 @@ canvas { width: 100% !important; }
 </nav>
 
 <div class="toast" id="toast"></div>
+<div class="modal-overlay hidden" id="update-modal" style="z-index:999;">
+  <div class="modal-box" style="max-width:360px;">
+    <div class="modal-title" style="color:var(--accent);">🎉 Update verfügbar</div>
+    <div style="margin-bottom:8px;font-size:14px;color:var(--muted);">
+      Version <strong id="update-version" style="color:var(--text);"></strong> ist jetzt verfügbar.<br>
+      Deine Daten in Supabase bleiben vollständig erhalten.
+    </div>
+    <ul id="update-changelog" style="font-size:13px;line-height:1.8;padding-left:18px;color:var(--text);margin-bottom:16px;"></ul>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="document.getElementById('update-modal').classList.add('hidden')">Später</button>
+      <button class="btn btn-primary" onclick="applyUpdate()">Jetzt aktualisieren</button>
+    </div>
+  </div>
+</div>
 
 <!-- MODAL: Lebensmittel anlegen / bearbeiten -->
 <div class="modal-overlay" id="food-modal">
@@ -837,14 +861,19 @@ canvas { width: 100% !important; }
 // ============================================================
 
 // SUPABASE – Werte aus Supabase → Project Settings → API
-const SB_URL     = 'https://DEIN-PROJEKT.supabase.co';   // ← ersetzen
-const SB_ANON    = 'DEIN-ANON-KEY';                       // ← ersetzen
+const SB_URL     = 'https://cnlgpviurgpxcrjtfxqi.supabase.co';
+const SB_ANON    = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNubGdwdml1cmdweGNyanRmeHFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3NjExMjQsImV4cCI6MjA4ODMzNzEyNH0.FQ842Ete0xJ1MgCM0aBejDVkBL15-OaCGuN_0Cu80Og';
 
 // LOCK – SHA-256 Hash deines Passworts
 // Aktuell: "MeinWeg2026"  → eigenen Hash in Browser-Konsole erzeugen:
 //   hashCode('DEIN_PASSWORT').then(h => console.log(h))
 const ACCESS_HASH = 'edc985dd86d2aa665e8969d567defee69970e1a7245e4292936e3efb105aff72';
 const UNLOCK_DAYS = 30;
+
+// VERSION
+const APP_VERSION        = '1.0';
+const VERSION_URL        = 'https://raw.githubusercontent.com/tomsen3/mein-weg/main/version.json';
+const UPDATE_INTERVAL_MS = 6 * 60 * 60 * 1000; // 6 Stunden
 
 // Nutzer-ID (UUID für Supabase – einmalig erzeugt, in localStorage gespeichert)
 // Diese ID identifiziert DIESES Gerät ohne Auth-Login.
@@ -1958,6 +1987,54 @@ function escHtml(s) {
 }
 
 // ============================================================
+// UPDATE-MECHANISMUS
+// ============================================================
+
+function isNewerVersion(local, remote) {
+  const toNum = v => v.split('.').map(Number);
+  const [lA, lB = 0] = toNum(local);
+  const [rA, rB = 0] = toNum(remote);
+  if (rA !== lA) return rA > lA;
+  return rB > lB;
+}
+
+async function checkForUpdate(manual = false) {
+  const now = Date.now();
+  const lastCheck = parseInt(localStorage.getItem('meinweg_update_check') || '0');
+  if (!manual && (now - lastCheck) < UPDATE_INTERVAL_MS) return;
+  localStorage.setItem('meinweg_update_check', String(now));
+  try {
+    const res = await fetch(VERSION_URL + '?t=' + now);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (isNewerVersion(APP_VERSION, data.version)) {
+      showUpdateModal(data.version, data.changelog || []);
+    } else if (manual) {
+      toast('App ist aktuell ✓ (v' + APP_VERSION + ')');
+    }
+  } catch (e) {
+    if (manual) toast('Update-Prüfung fehlgeschlagen – bitte später erneut versuchen.');
+    console.warn('Update-Check fehlgeschlagen:', e);
+  }
+}
+
+function showUpdateModal(newVersion, changelog) {
+  document.getElementById('update-version').textContent = newVersion;
+  const list = document.getElementById('update-changelog');
+  list.innerHTML = changelog.map(line => '<li>' + escHtml(line) + '</li>').join('');
+  document.getElementById('update-modal').classList.remove('hidden');
+}
+
+async function applyUpdate() {
+  localStorage.setItem('meinweg_known_version', APP_VERSION);
+  if ('caches' in window) {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => caches.delete(k)));
+  }
+  location.reload(true);
+}
+
+// ============================================================
 // APP INIT
 // ============================================================
 
@@ -1966,12 +2043,19 @@ async function initApp() {
   renderAll();
   renderFastenPage();
 
+  // Versionsnummer in Einstellungen anzeigen
+  const verEl = document.getElementById('settings-app-version');
+  if (verEl) verEl.textContent = 'v' + APP_VERSION;
+
   // Supabase-Verbindung prüfen und Daten laden (parallel, nicht-blockierend)
   checkSbConnection().then(() => {
     loadRezepteData().then(() => {
       renderHomeFav();   // Favoriten auf Startseite
     });
   });
+
+  // Update-Prüfung beim Start (respektiert 6h-Intervall)
+  checkForUpdate(false);
 }
 
 // Beim Laden prüfen
