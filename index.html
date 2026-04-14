@@ -729,7 +729,7 @@ canvas { width: 100% !important; }
         Tageslog und Gewicht bleiben lokal (localStorage).
       </div>
     </div>
-    <div class="card">
+     <div class="card">
       <div class="card-label">App-Version</div>
       <div class="setting-row" style="margin-bottom:12px;">
         <span class="setting-label">Installierte Version</span>
@@ -737,6 +737,31 @@ canvas { width: 100% !important; }
       </div>
       <button class="btn btn-ghost" style="width:100%;font-size:13px;" onclick="checkForUpdate(true)">
         🔄 Jetzt auf Updates prüfen
+      </button>
+    </div>
+    <div class="card">
+      <div class="card-label">Geräte-Sync</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px;">
+        Damit alle Geräte dieselben Daten sehen, muss die Geräte-ID übereinstimmen.
+        Kopiere die ID vom Hauptgerät und füge sie auf dem anderen Gerät ein.
+      </div>
+      <div class="setting-row" style="margin-bottom:8px;">
+        <span class="setting-label" style="font-size:11px;color:var(--muted);">Meine Geräte-ID</span>
+      </div>
+      <div style="display:flex;gap:8px;margin-bottom:12px;">
+        <input type="text" id="sync-uid-display" readonly
+          style="flex:1;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--muted);">
+        <button class="btn btn-ghost btn-sm" onclick="copyUserId()" style="white-space:nowrap;">📋 Kopieren</button>
+      </div>
+      <div style="margin-bottom:8px;font-size:12px;color:var(--muted);">Andere ID einfügen (neues Gerät):</div>
+      <div style="display:flex;gap:8px;margin-bottom:8px;">
+        <input type="text" id="sync-uid-input" placeholder="UUID hier einfügen …"
+          style="flex:1;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px;">
+        <button class="btn btn-primary btn-sm" onclick="applyUserId()" style="white-space:nowrap;">✓ Übernehmen</button>
+      </div>
+      <div id="sync-uid-canvas" style="margin-top:12px;text-align:center;"></div>
+      <button class="btn btn-ghost" style="width:100%;font-size:13px;margin-top:8px;" onclick="showQrCode()">
+        📱 QR-Code anzeigen
       </button>
     </div>
   </div>
@@ -2036,7 +2061,47 @@ async function applyUpdate() {
   }
   location.reload(true);
 }
+// ============================================================
+// GERÄTE-SYNC
+// ============================================================
 
+function copyUserId() {
+  const uid = localStorage.getItem('meinweg_uid') || '';
+  navigator.clipboard.writeText(uid).then(() => {
+    toast('Geräte-ID kopiert ✓');
+  }).catch(() => {
+    const el = document.getElementById('sync-uid-display');
+    el.select();
+    document.execCommand('copy');
+    toast('Geräte-ID kopiert ✓');
+  });
+}
+
+function applyUserId() {
+  const input = document.getElementById('sync-uid-input').value.trim();
+  const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  if (!uuidPattern.test(input)) {
+    toast('Ungültige Geräte-ID – bitte prüfen');
+    return;
+  }
+  if (!confirm('Geräte-ID wirklich übernehmen? Die App lädt danach neu.')) return;
+  localStorage.setItem('meinweg_uid', input);
+  toast('Geräte-ID übernommen – App wird neu geladen …');
+  setTimeout(() => location.reload(true), 1500);
+}
+
+function showQrCode() {
+  const uid = localStorage.getItem('meinweg_uid') || '';
+  const canvas = document.getElementById('sync-uid-canvas');
+  const url = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(uid);
+  canvas.innerHTML = '<img src="' + url + '" style="border-radius:8px;border:1px solid var(--border);" alt="QR-Code"><div style="font-size:11px;color:var(--muted);margin-top:6px;">UUID ablesen und auf anderem Gerät einfügen</div>';
+}
+
+function initSyncUid() {
+  const uid = localStorage.getItem('meinweg_uid') || '';
+  const el = document.getElementById('sync-uid-display');
+  if (el) el.value = uid;
+}
 // ============================================================
 // APP INIT
 // ============================================================
@@ -2046,9 +2111,10 @@ async function initApp() {
   renderAll();
   renderFastenPage();
 
-  // Versionsnummer in Einstellungen anzeigen
+   // Versionsnummer und Sync-ID in Einstellungen anzeigen
   const verEl = document.getElementById('settings-app-version');
   if (verEl) verEl.textContent = 'v' + APP_VERSION;
+  initSyncUid();
 
   // Supabase-Verbindung prüfen und Daten laden (parallel, nicht-blockierend)
   checkSbConnection().then(() => {
