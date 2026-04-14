@@ -904,7 +904,7 @@ const ACCESS_HASH = 'edc985dd86d2aa665e8969d567defee69970e1a7245e4292936e3efb105
 const UNLOCK_DAYS = 30;
 
 // VERSION
-const APP_VERSION        = '1.1';
+const APP_VERSION        = '1.2';
 const VERSION_URL        = 'https://raw.githubusercontent.com/tomsen3/mein-weg/main/version.json';
 const UPDATE_INTERVAL_MS = 6 * 60 * 60 * 1000; // 6 Stunden
 
@@ -1050,24 +1050,105 @@ const TODAY = () => new Date().toISOString().slice(0,10);
 function ls(k)      { try { return JSON.parse(localStorage.getItem(KEY+k)); } catch(e) { return null; } }
 function lsSet(k,v) { localStorage.setItem(KEY+k, JSON.stringify(v)); }
 
+// ANFANG ERSETZEN  (ersetzt: getSettings, saveSettings, getDayData, saveDayData)
+
 const defaultSettings = { start: 104, ziel: 87, kcalMax: 1800, wasserMax: 2.5, schritteMax: 8000, fastenH: 16 };
 
-function getSettings() { return Object.assign({}, defaultSettings, ls('settings') || {}); }
+// ---------- SETTINGS ----------
+
+async function sbLoadSettings() {
+  try {
+    const rows = await sbGet('mw_einstellungen?user_id=eq.' + USER_ID + '&limit=1');
+    if (rows && rows.length > 0) {
+      const daten = rows[0].daten || {};
+      lsSet('settings', daten);   // lokalen Cache aktualisieren
+      return daten;
+    }
+    return null;
+  } catch(e) {
+    console.warn('sbLoadSettings Fehler – nutze localStorage:', e);
+    return null;
+  }
+}
+
+async function sbSaveSettings(obj) {
+  try {
+    await sbFetch('mw_einstellungen?user_id=eq.' + USER_ID, {
+      method: 'POST',
+      body: JSON.stringify({ user_id: USER_ID, daten: obj }),
+      prefer: 'resolution=merge-duplicates,return=minimal',
+      headers: { 'Prefer': 'resolution=merge-duplicates,return=minimal' }
+    });
+  } catch(e) {
+    console.warn('sbSaveSettings Fehler – nur localStorage gespeichert:', e);
+  }
+}
+
+function getSettings() {
+  return Object.assign({}, defaultSettings, ls('settings') || {});
+}
 
 function saveSettings() {
   const s = getSettings();
-  s.start      = parseFloat(document.getElementById('set-start').value)    || s.start;
-  s.ziel       = parseFloat(document.getElementById('set-ziel').value)     || s.ziel;
-  s.kcalMax    = parseInt(document.getElementById('set-kcal').value)       || s.kcalMax;
-  s.wasserMax  = parseFloat(document.getElementById('set-wasser').value)   || s.wasserMax;
-  s.schritteMax= parseInt(document.getElementById('set-schritte').value)   || s.schritteMax;
-  lsSet('settings', s);
+  s.start       = parseFloat(document.getElementById('set-start').value)    || s.start;
+  s.ziel        = parseFloat(document.getElementById('set-ziel').value)     || s.ziel;
+  s.kcalMax     = parseInt(document.getElementById('set-kcal').value)       || s.kcalMax;
+  s.wasserMax   = parseFloat(document.getElementById('set-wasser').value)   || s.wasserMax;
+  s.schritteMax = parseInt(document.getElementById('set-schritte').value)   || s.schritteMax;
+  lsSet('settings', s);           // sofort lokal speichern (synchron, UI reagiert sofort)
+  sbSaveSettings(s);              // Supabase im Hintergrund (fire & forget)
   renderAll();
   toast('Einstellungen gespeichert ✓');
 }
 
-function getDayData(date) { return ls('day_'+date) || { kg: null, wasser: 0, schritte: 0, meals: [] }; }
-function saveDayData(date, data) { lsSet('day_'+date, data); }
+// ---------- TAGESLOG ----------
+
+const _dayCache = {};   // RAM-Cache: date → data (vermeidet doppelte SB-Calls pro Session)
+
+async function sbLoadDayData(date) {
+  try {
+    const rows = await sbGet('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + date + '&limit=1');
+    if (rows && rows.length > 0) {
+      const daten = rows[0].daten || { kg: null, wasser: 0, schritte: 0, meals: [] };
+      lsSet('day_' + date, daten);
+      _dayCache[date] = daten;
+      return daten;
+    }
+    return null;
+  } catch(e) {
+    console.warn('sbLoadDayData Fehler:', e);
+    return null;
+  }
+}
+
+async function sbSaveDayData(date, obj) {
+  try {
+    await sbFetch('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + date, {
+      method: 'POST',
+      body: JSON.stringify({ user_id: USER_ID, datum: date, daten: obj }),
+      prefer: 'resolution=merge-duplicates,return=minimal',
+      headers: { 'Prefer': 'resolution=merge-duplicates,return=minimal' }
+    });
+  } catch(e) {
+    console.warn('sbSaveDayData Fehler – nur localStorage gespeichert:', e);
+  }
+}
+
+function getDayData(date) {
+  // Gibt lokalen Cache / localStorage zurück (synchron für Render-Funktionen)
+  if (_dayCache[date]) return _dayCache[date];
+  const local = ls('day_' + date);
+  if (local) { _dayCache[date] = local; return local; }
+  return { kg: null, wasser: 0, schritte: 0, meals: [] };
+}
+
+function saveDayData(date, data) {
+  _dayCache[date] = data;
+  lsSet('day_' + date, data);   // sofort lokal (synchron)
+  sbSaveDayData(date, data);    // Supabase im Hintergrund
+}
+
+// ENDE ERSETZEN
 
 // ============================================================
 // LEBENSMITTEL-DATENBANK (localStorage)
@@ -1679,20 +1760,39 @@ function formatDate(d) {
 // GEWICHT
 // ============================================================
 
+// ANFANG ERSETZEN  (ersetzt: saveKg)
+
+async function sbSaveGewicht(date, kg) {
+  try {
+    await sbFetch('mw_gewicht?user_id=eq.' + USER_ID + '&datum=eq.' + date, {
+      method: 'POST',
+      body: JSON.stringify({ user_id: USER_ID, datum: date, kg: kg }),
+      prefer: 'resolution=merge-duplicates,return=minimal',
+      headers: { 'Prefer': 'resolution=merge-duplicates,return=minimal' }
+    });
+  } catch(e) {
+    console.warn('sbSaveGewicht Fehler – nur localStorage:', e);
+  }
+}
+
 function saveKg() {
   const v = parseFloat(document.getElementById('inp-kg').value);
   if (!v || v < 30 || v > 300) { toast('Ungültiger Wert'); return; }
   const d = getDayData(TODAY());
   d.kg = v;
-  saveDayData(TODAY(), d);
+  saveDayData(TODAY(), d);    // speichert auch in Supabase mw_tageslog
   const wlog = ls('wlog') || [];
   const ex = wlog.findIndex(e => e.date === TODAY());
-  if (ex >= 0) wlog[ex].kg = v; else wlog.push({date: TODAY(), kg: v});
+  if (ex >= 0) wlog[ex].kg = v; else wlog.push({ date: TODAY(), kg: v });
   wlog.sort((a,b) => a.date.localeCompare(b.date));
   lsSet('wlog', wlog);
+  sbSaveGewicht(TODAY(), v);  // zusätzlich in mw_gewicht (separates log)
   document.getElementById('inp-kg').value = '';
-  renderAll(); toast('Gewicht gespeichert ✓');
+  renderAll();
+  toast('Gewicht gespeichert ✓');
 }
+
+// ENDE ERSETZEN
 
 // ============================================================
 // WASSER
@@ -1725,8 +1825,56 @@ function saveSchritte() {
 
 let fastenInterval = null;
 
-function getFastenState() { return ls('fasten') || {active: false, start: null, zielH: 16}; }
-function saveFastenState(s) { lsSet('fasten', s); }
+// ANFANG ERSETZEN  (ersetzt: getFastenState, saveFastenState)
+
+async function sbLoadFastenState() {
+  try {
+    const rows = await sbGet('mw_fasten?user_id=eq.' + USER_ID + '&limit=1');
+    if (rows && rows.length > 0) {
+      const r = rows[0];
+      const state = {
+        active:  r.start_time !== null,
+        start:   r.start_time ? new Date(r.start_time).getTime() : null,
+        zielH:   r.ziel_stunden || 16
+      };
+      lsSet('fasten', state);
+      return state;
+    }
+    return null;
+  } catch(e) {
+    console.warn('sbLoadFastenState Fehler:', e);
+    return null;
+  }
+}
+
+async function sbSaveFastenState(s) {
+  try {
+    const payload = {
+      user_id:       USER_ID,
+      start_time:    s.active && s.start ? new Date(s.start).toISOString() : null,
+      ziel_stunden:  s.zielH || 16
+    };
+    await sbFetch('mw_fasten?user_id=eq.' + USER_ID, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      prefer: 'resolution=merge-duplicates,return=minimal',
+      headers: { 'Prefer': 'resolution=merge-duplicates,return=minimal' }
+    });
+  } catch(e) {
+    console.warn('sbSaveFastenState Fehler – nur localStorage:', e);
+  }
+}
+
+function getFastenState() {
+  return ls('fasten') || { active: false, start: null, zielH: 16 };
+}
+
+function saveFastenState(s) {
+  lsSet('fasten', s);       // sofort lokal
+  sbSaveFastenState(s);     // Supabase im Hintergrund
+}
+
+// ENDE ERSETZEN
 
 function setFastenZiel(h) {
   const s = getFastenState(); s.zielH = h; saveFastenState(s);
@@ -2142,26 +2290,53 @@ function initSyncUid() {
 // APP INIT
 // ============================================================
 
+// ANFANG ERSETZEN  (ersetzt: initApp)
+
 async function initApp() {
-  getFoodDB();   // localStorage-DB initialisieren falls leer
+  getFoodDB();
   renderAll();
   renderFastenPage();
 
-   // Versionsnummer und Sync-ID in Einstellungen anzeigen
   const verEl = document.getElementById('settings-app-version');
   if (verEl) verEl.textContent = 'v' + APP_VERSION;
   initSyncUid();
 
-  // Supabase-Verbindung prüfen und Daten laden (parallel, nicht-blockierend)
-  checkSbConnection().then(() => {
-    loadRezepteData().then(() => {
-      renderHomeFav();   // Favoriten auf Startseite
-    });
-  });
+  // Supabase-Verbindung prüfen, dann Daten laden
+  try {
+    await checkSbConnection();
 
-  // Update-Prüfung beim Start (respektiert 6h-Intervall)
+    if (sbOnline) {
+      // Settings aus Supabase laden (überschreibt localStorage falls vorhanden)
+      const sbSettings = await sbLoadSettings();
+      if (sbSettings) {
+        // UI neu rendern mit geladenen Settings
+        renderAll();
+      }
+
+      // Fasten-State aus Supabase laden
+      const sbFasten = await sbLoadFastenState();
+      if (sbFasten) {
+        renderFastenPage();
+      }
+
+      // Tageslog für heute vorausladen (Hintergrund)
+      sbLoadDayData(TODAY()).then(d => { if (d) renderAll(); });
+
+      // Rezepte laden
+      loadRezepteData().then(() => renderHomeFav());
+    } else {
+      // Offline: nur Rezepte-Cache-Versuch
+      loadRezepteData().then(() => renderHomeFav());
+    }
+  } catch(e) {
+    console.warn('initApp Supabase-Fehler:', e);
+    loadRezepteData().then(() => renderHomeFav());
+  }
+
   checkForUpdate(false);
 }
+
+// ENDE ERSETZEN
 
 // Beim Laden prüfen
 if (!isUnlocked()) {
