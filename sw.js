@@ -1,4 +1,4 @@
-const CACHE = 'meinweg-v1.3';
+const CACHE = 'meinweg-v1.4';
 const ASSETS = [
   '/',
   '/index.html'

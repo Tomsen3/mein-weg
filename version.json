@@ -1,7 +1,7 @@
 {
-  "version": "1.2",
+  "version": "1.4",
   "changelog": [
-    "Supabase-Sync für Tageslog, Gewicht, Einstellungen und Fasten",
-    "Offline-Fallback auf localStorage bleibt erhalten"
+    "Filter: Vegetarisch und Fleisch hinzugefügt",
+    "90 neue Rezepte"
   ]
 }

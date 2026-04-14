@@ -627,6 +627,8 @@ canvas { width: 100% !important; }
       <button class="btn btn-ghost btn-sm" id="rez-filter-if"     onclick="setRezFilter('if')">⏱ IF</button>
       <button class="btn btn-ghost btn-sm" id="rez-filter-low"    onclick="setRezFilter('low')">🥗 Low</button>
       <button class="btn btn-ghost btn-sm" id="rez-filter-vegan" onclick="setRezFilter('vegan')">🌱 Vegan</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-veg" onclick="setRezFilter('veg')">🥦 Vegetarisch</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-meat" onclick="setRezFilter('meat')">🥩 Fleisch</button>
     </div>
   </div>
   <input type="text" id="rezept-search" placeholder="🔍 Rezept oder Zutat suchen …"
@@ -905,7 +907,7 @@ const ACCESS_HASH = 'edc985dd86d2aa665e8969d567defee69970e1a7245e4292936e3efb105
 const UNLOCK_DAYS = 30;
 
 // VERSION
-const APP_VERSION        = '1.3';
+const APP_VERSION        = '1.4';
 const VERSION_URL        = 'https://raw.githubusercontent.com/tomsen3/mein-weg/main/version.json';
 const UPDATE_INTERVAL_MS = 6 * 60 * 60 * 1000; // 6 Stunden
 
@@ -1451,6 +1453,9 @@ async function renderRezepte() {
   if (_rezFilter === 'favs') list = list.filter(r => _favoritenCache.has(r.id));
   if (_rezFilter === 'if')   list = list.filter(r => (r.tags||[]).includes('if'));
   if (_rezFilter === 'low')  list = list.filter(r => (r.tags||[]).includes('low'));
+if (_rezFilter === 'vegan') list = list.filter(r => (r.tags||[]).includes('vegan'));
+if (_rezFilter === 'veg')  list = list.filter(r => (r.tags||[]).includes('veg'));
+if (_rezFilter === 'meat') list = list.filter(r => (r.tags||[]).includes('meat'));
 
   // Suche: Titel + Beschreibung + Anleitung
   if (q) {
