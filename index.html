@@ -2345,6 +2345,21 @@ if (!isUnlocked()) {
   hideLock();
   initApp();
 }
+// ANFANG EINFÜGEN (Service Worker Registrierung)
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/mein-weg/sw.js').then(reg => {
+    reg.onupdatefound = () => {
+      const w = reg.installing;
+      w.onstatechange = () => {
+        if (w.state === 'installed' && navigator.serviceWorker.controller) {
+          toast('Update verfügbar – App wird neu geladen …');
+          setTimeout(() => location.reload(), 2000);
+        }
+      };
+    };
+  });
+}
+// ENDE EINFÜGEN
 </script>
 </body>
 </html>
