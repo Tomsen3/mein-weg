@@ -1,7 +1,9 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "changelog": [
-    "Filter: Vegetarisch und Fleisch hinzugefügt",
-    "90 neue Rezepte"
+    "Mahlzeiten-Zeitstempel (Uhrzeit wird angezeigt)",
+    "Rezepte: Tag Vegetarisch hinzugefügt",
+    "Tageslog-Backup in Supabase",
+    "Datensicherheit: RLS für alle Tabellen aktiviert"
   ]
 }

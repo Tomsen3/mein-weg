@@ -879,6 +879,9 @@ canvas { width: 100% !important; }
         <label style="display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer;">
           <input type="checkbox" id="rm-tag-vegan"> 🌱 Vegan
         </label>
+        <label style="display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer;">
+          <input type="checkbox" id="rm-tag-veg"> 🥦 Vegetarisch
+        </label>
       </div>
     </div>
     <div class="modal-actions">
@@ -907,7 +910,7 @@ const ACCESS_HASH = 'edc985dd86d2aa665e8969d567defee69970e1a7245e4292936e3efb105
 const UNLOCK_DAYS = 30;
 
 // VERSION
-const APP_VERSION        = '1.4';
+const APP_VERSION        = '1.5';
 const VERSION_URL        = 'https://raw.githubusercontent.com/tomsen3/mein-weg/main/version.json';
 const UPDATE_INTERVAL_MS = 6 * 60 * 60 * 1000; // 6 Stunden
 
@@ -1042,7 +1045,35 @@ async function checkSbConnection() {
     setSbStatus(false, 'Nicht verbunden');
   }
 }
+// ============================================================
+// SUPABASE – TAGESLOG
+// ============================================================
 
+async function sbSaveDayData(datum, daten) {
+  try {
+    await sbFetch('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + datum, {
+      method: 'POST',
+      body: JSON.stringify({ user_id: USER_ID, datum: datum, daten: daten, updated_at: new Date().toISOString() }),
+      prefer: 'resolution=merge-duplicates,return=minimal',
+      headers: { 'Prefer': 'resolution=merge-duplicates,return=minimal' }
+    });
+  } catch(e) {
+    console.warn('sbSaveDayData Fehler:', e);
+  }
+}
+
+async function sbLoadDayData(datum) {
+  try {
+    const rows = await sbGet('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + datum + '&limit=1');
+    if (rows && rows.length > 0) {
+      return rows[0].daten;
+    }
+    return null;
+  } catch(e) {
+    console.warn('sbLoadDayData Fehler:', e);
+    return null;
+  }
+}
 // ============================================================
 // DATEN & SETTINGS (localStorage)
 // ============================================================
@@ -1484,6 +1515,7 @@ if (_rezFilter === 'meat') list = list.filter(r => (r.tags||[]).includes('meat')
       if (t === 'if')    return '<span class="tag tag-if">⏱️ IF-geeignet</span>';
       if (t === 'low')   return '<span class="tag tag-low">🥗 kalorienarm</span>';
       if (t === 'vegan') return '<span class="tag tag-user">🌱 Vegan</span>';
+if (t === 'veg')   return '<span class="tag tag-low">🥦 Vegetarisch</span>';
       return '';
     }).join('');
 
@@ -1546,6 +1578,7 @@ function openRezeptModal(id) {
   document.getElementById('rm-tag-if').checked    = tags.includes('if');
   document.getElementById('rm-tag-low').checked   = tags.includes('low');
   document.getElementById('rm-tag-vegan').checked = tags.includes('vegan');
+document.getElementById('rm-tag-veg').checked   = tags.includes('veg');
   document.getElementById('rezept-modal').classList.add('open');
 }
 
@@ -1560,6 +1593,7 @@ async function saveRezeptModal() {
   if (document.getElementById('rm-tag-if').checked)    tags.push('if');
   if (document.getElementById('rm-tag-low').checked)   tags.push('low');
   if (document.getElementById('rm-tag-vegan').checked) tags.push('vegan');
+if (document.getElementById('rm-tag-veg').checked)   tags.push('veg');
 
   const body = {
     user_id:     USER_ID,
@@ -2099,7 +2133,7 @@ function renderLog() {
       <div class="meal-item">
         <div style="flex:1;min-width:0;">
           <div class="meal-name">${escHtml(m.name)}</div>
-          <div class="meal-detail">${m.time} Uhr${m.gramm ? ' · '+m.gramm+'g' : ''}</div>
+          <div class="meal-detail">${m.time ? m.time+' Uhr · ' : ''}${m.gramm ? m.gramm+'g · ' : ''}${m.kcal} kcal</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
           <span class="meal-kcal">${m.kcal} kcal</span>
