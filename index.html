@@ -628,6 +628,11 @@ canvas { width: 100% !important; }
       <button class="btn btn-ghost btn-sm" id="rez-filter-low"    onclick="setRezFilter('low')">🥗 Low</button>
     </div>
   </div>
+  <input type="text" id="rezept-search" placeholder="🔍 Rezept oder Zutat suchen …"
+  oninput="renderRezepte()"
+  style="width:100%;margin-bottom:12px;padding:10px 14px;border-radius:12px;
+  border:1px solid var(--border);background:var(--bg3);font-size:14px;
+  font-family:'Nunito',sans-serif;color:var(--text);">
   <div id="rezept-list"><div class="loading-row"><div class="spinner"></div>Lade Rezepte…</div></div>
 </div>
 
@@ -1356,25 +1361,39 @@ async function renderRezepte() {
     listEl.innerHTML = '<div class="loading-row"><div class="spinner"></div>Lade Rezepte…</div>';
     await loadRezepteData();
   }
+
+  // Suchbegriff
+  const q = (document.getElementById('rezept-search')?.value || '').toLowerCase().trim();
+
   let list = _rezepteCache;
   if (_rezFilter === 'favs') list = list.filter(r => _favoritenCache.has(r.id));
   if (_rezFilter === 'if')   list = list.filter(r => (r.tags||[]).includes('if'));
   if (_rezFilter === 'low')  list = list.filter(r => (r.tags||[]).includes('low'));
 
+  // Suche: Titel + Beschreibung + Anleitung
+  if (q) {
+    list = list.filter(r =>
+      (r.titel||'').toLowerCase().includes(q) ||
+      (r.beschreibung||'').toLowerCase().includes(q) ||
+      (r.anleitung||'').toLowerCase().includes(q)
+    );
+  }
+
   if (list.length === 0) {
     listEl.innerHTML = `
       <div style="text-align:center;padding:32px 0;color:var(--muted);">
-        ${_rezFilter === 'favs' ? '⭐ Noch keine Favoriten.' : '🥗 Noch keine Rezepte.<br><br>'}
-        <button class="btn btn-primary btn-sm" style="margin-top:12px;" onclick="openRezeptModal()">+ Erstes Rezept anlegen</button>
+        ${q ? '🔍 Keine Treffer für „' + escHtml(q) + '".' :
+          _rezFilter === 'favs' ? '⭐ Noch keine Favoriten.' : '🥗 Noch keine Rezepte.<br><br>'}
+        ${!q ? '<button class="btn btn-primary btn-sm" style="margin-top:12px;" onclick="openRezeptModal()">+ Erstes Rezept anlegen</button>' : ''}
       </div>`;
     return;
   }
 
   listEl.innerHTML = list.map(r => {
-    const isFav    = _favoritenCache.has(r.id);
-    const sterne   = _bewertungenCache[r.id] || 0;
-    const tags     = (r.tags || []);
-    const tagHtml  = tags.map(t => {
+    const isFav  = _favoritenCache.has(r.id);
+    const sterne = _bewertungenCache[r.id] || 0;
+    const tags   = (r.tags || []);
+    const tagHtml = tags.map(t => {
       if (t === 'if')    return '<span class="tag tag-if">⏱️ IF-geeignet</span>';
       if (t === 'low')   return '<span class="tag tag-low">🥗 kalorienarm</span>';
       if (t === 'vegan') return '<span class="tag tag-user">🌱 Vegan</span>';
@@ -1382,28 +1401,45 @@ async function renderRezepte() {
     }).join('');
 
     return `
-    <div class="rezept">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+    <div class="rezept" id="rez-${r.id}">
+      <div style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;"
+        onclick="toggleRezeptBody('${r.id}')">
         <div style="flex:1;min-width:0;">
           <div class="rezept-title">${escHtml(r.titel)}</div>
           <div class="rezept-meta">${escHtml(r.beschreibung || '')}</div>
         </div>
-        <button class="fav-btn ${isFav ? 'aktiv' : ''}" onclick="toggleFavorit('${r.id}')" title="Favorit">⭐</button>
-      </div>
-      ${tagHtml ? '<div style="margin-bottom:8px;">'+tagHtml+'</div>' : ''}
-      ${r.anleitung ? '<div class="rezept-body">'+escHtml(r.anleitung)+'</div>' : ''}
-      <div class="rezept-actions">
-        <div class="sterne-row" id="sterne-${r.id}">
-          ${[1,2,3,4,5].map(n => `<span class="stern ${n <= sterne ? 'aktiv' : ''}" onclick="bewerte('${r.id}',${n})" title="${n} Stern${n>1?'e':{1:''}[n]||'e'}">★</span>`).join('')}
-          <span class="stern-label">${sterne ? sterne + '/5' : 'bewerten'}</span>
-        </div>
-        <div style="margin-left:auto;display:flex;gap:8px;">
-          <button class="btn btn-ghost btn-sm" onclick="openRezeptModal('${r.id}')">✏️</button>
-          <button class="btn btn-danger btn-sm" onclick="loescheRezept('${r.id}')">🗑️</button>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <button class="fav-btn ${isFav ? 'aktiv' : ''}" onclick="event.stopPropagation();toggleFavorit('${r.id}')"
+            title="Favorit">⭐</button>
+          <span id="rez-arrow-${r.id}" style="font-size:16px;color:var(--muted);transition:transform 0.2s;">▾</span>
         </div>
       </div>
-    </div>
-  `}).join('');
+      <div id="rez-body-${r.id}" style="display:none;margin-top:10px;">
+        ${tagHtml ? '<div style="margin-bottom:8px;">' + tagHtml + '</div>' : ''}
+        ${r.anleitung ? '<div class="rezept-body">' + escHtml(r.anleitung) + '</div>' : ''}
+        <div class="rezept-actions">
+          <div class="sterne-row" id="sterne-${r.id}">
+            ${[1,2,3,4,5].map(n => `<span class="stern ${n <= sterne ? 'aktiv' : ''}"
+              onclick="bewerte('${r.id}',${n})" title="${n} Stern${n>1?'e':''}">★</span>`).join('')}
+            <span class="stern-label">${sterne ? sterne + '/5' : 'bewerten'}</span>
+          </div>
+          <div style="margin-left:auto;display:flex;gap:8px;">
+            <button class="btn btn-ghost btn-sm" onclick="openRezeptModal('${r.id}')">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="loescheRezept('${r.id}')">🗑️</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleRezeptBody(id) {
+  const body  = document.getElementById('rez-body-' + id);
+  const arrow = document.getElementById('rez-arrow-' + id);
+  if (!body) return;
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  if (arrow) arrow.style.transform = open ? '' : 'rotate(180deg)';
 }
 
 // ============================================================
