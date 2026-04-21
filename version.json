@@ -1,9 +1,4 @@
 {
-  "version": "1.5",
-  "changelog": [
-    "Mahlzeiten-Zeitstempel (Uhrzeit wird angezeigt)",
-    "Rezepte: Tag Vegetarisch hinzugefügt",
-    "Tageslog-Backup in Supabase",
-    "Datensicherheit: RLS für alle Tabellen aktiviert"
-  ]
+  "version": "1.5.1",
+  "changelog": "Einstellungen (Sprachen, Länder, Kategorien) werden jetzt über Supabase synchronisiert"
 }

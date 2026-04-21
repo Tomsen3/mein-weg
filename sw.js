@@ -1,32 +1,29 @@
-const CACHE = 'meinweg-v1.5';
-const ASSETS = [
-  '/',
-  '/index.html'
-];
+var CACHE = "singleiter-v1.5.1";
+var URLS = ["/singleiter/", "/singleiter/index.html", "/singleiter/sw.js", "/singleiter/manifest.json", "/singleiter/version.json"];
 
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS))
-  );
+self.addEventListener("install", function(e) {
+  e.waitUntil(caches.open(CACHE).then(function(c) { return c.addAll(URLS); }));
   self.skipWaiting();
 });
 
-self.addEventListener('activate', e => {
-  e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    )
-  );
+self.addEventListener("activate", function(e) {
+  e.waitUntil(caches.keys().then(function(keys) {
+    return Promise.all(keys.filter(function(k) { return k !== CACHE; }).map(function(k) { return caches.delete(k); }));
+  }));
   self.clients.claim();
 });
 
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(cached => {
-      return fetch(e.request).then(fresh => {
-        caches.open(CACHE).then(c => c.put(e.request, fresh.clone()));
-        return fresh;
-      }).catch(() => cached);
-    })
-  );
+self.addEventListener("fetch", function(e) {
+  if (e.request.method !== "GET") return;
+  e.respondWith(fetch(e.request).then(function(r) {
+    var clone = r.clone();
+    caches.open(CACHE).then(function(c) { c.put(e.request, clone); });
+    return r;
+  }).catch(function() {
+    return caches.match(e.request);
+  }));
+});
+
+self.addEventListener("message", function(e) {
+  if (e.data === "skipWaiting") self.skipWaiting();
 });
