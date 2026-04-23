@@ -344,8 +344,8 @@
         <span id="sb-text-settings">Prüfe Verbindung …</span>
       </div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;">
-        Rezepte, Bewertungen und Favoriten werden in Supabase gespeichert.<br>
-        Tageslog und Gewicht bleiben lokal (localStorage).
+        Rezepte, Bewertungen und Favoriten werden mit Supabase synchronisiert.<br>
+        Tageslog, Gewicht, Fasten und Lebensmittel bleiben lokal auf diesem Gerät.
       </div>
     </div>
      <div class="card">
@@ -355,13 +355,13 @@
         <span style="font-size:14px;font-weight:600;color:var(--accent);" id="settings-app-version"></span>
       </div>
       <button class="btn btn-ghost" style="width:100%;font-size:13px;" onclick="checkForUpdate(true)">
-        🔄 Jetzt auf Updates prüfen
+        Nach Updates suchen
       </button>
     </div>
     <div class="card">
       <div class="card-label">Backup</div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px;">
-        Sichere deine lokalen Daten als JSON-Datei oder spiele ein früheres Backup wieder ein.
+        Speichere deine lokalen Daten als JSON-Datei oder spiele ein vorhandenes Backup wieder ein.
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
         <button class="btn btn-ghost btn-sm" onclick="downloadBackup()">Backup exportieren</button>
@@ -372,26 +372,26 @@
     <div class="card">
       <div class="card-label">Geräte-Sync</div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px;">
-        Damit alle Geräte dieselben Daten sehen, muss die Geräte-ID übereinstimmen.
-        Kopiere die ID vom Hauptgerät und füge sie auf dem anderen Gerät ein.
+        Wenn du dieselben Daten auf einem zweiten Gerät nutzen willst, muss dort dieselbe Geräte-ID hinterlegt sein.
+        Kopiere die ID von diesem Gerät und übertrage sie bei Bedarf auf das andere.
       </div>
       <div class="setting-row" style="margin-bottom:8px;">
-        <span class="setting-label" style="font-size:11px;color:var(--muted);">Meine Geräte-ID</span>
+        <span class="setting-label" style="font-size:11px;color:var(--muted);">Aktuelle Geräte-ID</span>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:12px;">
         <input type="text" id="sync-uid-display" readonly
           style="flex:1;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--muted);">
-        <button class="btn btn-ghost btn-sm" onclick="copyUserId()" style="white-space:nowrap;">📋 Kopieren</button>
+        <button class="btn btn-ghost btn-sm" onclick="copyUserId()" style="white-space:nowrap;">ID kopieren</button>
       </div>
-      <div style="margin-bottom:8px;font-size:12px;color:var(--muted);">Andere ID einfügen (neues Gerät):</div>
+      <div style="margin-bottom:8px;font-size:12px;color:var(--muted);">Geräte-ID auf diesem Gerät übernehmen:</div>
       <div style="display:flex;gap:8px;margin-bottom:8px;">
-        <input type="text" id="sync-uid-input" placeholder="UUID hier einfügen …"
+        <input type="text" id="sync-uid-input" placeholder="Geräte-ID hier einfügen ..."
           style="flex:1;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px;">
-        <button class="btn btn-primary btn-sm" onclick="applyUserId()" style="white-space:nowrap;">✓ Übernehmen</button>
+        <button class="btn btn-primary btn-sm" onclick="applyUserId()" style="white-space:nowrap;">ID übernehmen</button>
       </div>
       <div id="sync-uid-canvas" style="margin-top:12px;text-align:center;"></div>
       <button class="btn btn-ghost" style="width:100%;font-size:13px;margin-top:8px;" onclick="showQrCode()">
-        📱 QR-Code anzeigen
+        QR-Code anzeigen
       </button>
     </div>
   </div>
@@ -419,10 +419,10 @@
 <div class="toast" id="toast"></div>
 <div class="modal-overlay hidden" id="update-modal" style="z-index:999;">
   <div class="modal-box" style="max-width:360px;">
-    <div class="modal-title" style="color:var(--accent);">🎉 Update verfügbar</div>
+    <div class="modal-title" style="color:var(--accent);">Update verfügbar</div>
     <div style="margin-bottom:8px;font-size:14px;color:var(--muted);">
       Version <strong id="update-version" style="color:var(--text);"></strong> ist jetzt verfügbar.<br>
-      Deine Daten in Supabase bleiben vollständig erhalten.
+      Deine Daten bleiben dabei vollständig erhalten.
     </div>
     <ul id="update-changelog" style="font-size:13px;line-height:1.8;padding-left:18px;color:var(--text);margin-bottom:16px;"></ul>
     <div class="modal-actions">
