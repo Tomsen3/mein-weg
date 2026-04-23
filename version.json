@@ -1,6 +1,8 @@
 {
-  "version": "1.8",
+  "version": "1.9",
   "changelog": [
+    "Texte und Einstellungen verständlicher formuliert",
+    "Backup- und Geräte-Sync-Bereich sprachlich überarbeitet",
     "Backup als JSON exportieren und wieder importieren",
     "Service Worker cached jetzt auch styles.css sowie die neuen JS-Dateien",
     "Service Worker registriert sich jetzt relativ zum aktuellen Deploy-Pfad",
