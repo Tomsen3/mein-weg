@@ -57,9 +57,12 @@ function setSbStatus(ok, msg) {
 
 async function checkSbConnection() {
   try {
-    await sbGet('mw_rezepte?limit=1&select=id');
+    // Verwende einen user-spezifischen, harmlosen Read statt eines globalen Rezept-Reads.
+    // Das vermeidet false negatives bei RLS oder leerem Datenbestand.
+    await sbGet('mw_einstellungen?user_id=eq.' + encodeURIComponent(USER_ID) + '&select=user_id&limit=1');
     setSbStatus(true, 'Verbunden');
   } catch(e) {
+    console.warn('checkSbConnection Fehler:', e);
     setSbStatus(false, 'Nicht verbunden');
   }
 }
