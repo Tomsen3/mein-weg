@@ -5,45 +5,48 @@
 // ============================================================
 
 async function initApp() {
-  getFoodDB();
-  renderAll();
-  renderFastenPage();
-
   const verEl = document.getElementById('settings-app-version');
   if (verEl) verEl.textContent = 'v' + APP_VERSION;
   initSyncUid();
 
+  try {
+    getFoodDB();
+    renderAll();
+    renderFastenPage();
+  } catch (e) {
+    console.warn('initApp Render-Fehler:', e);
+  }
+
   // Supabase-Verbindung prüfen, dann Daten laden
   try {
     await checkSbConnection();
+  } catch (e) {
+    console.warn('initApp Supabase-Fehler:', e);
+    setSbStatus(false, 'Nicht verbunden');
+  }
 
-    if (sbOnline) {
+  if (sbOnline) {
+    try {
       // Settings aus Supabase laden (überschreibt localStorage falls vorhanden)
       const sbSettings = await sbLoadSettings();
-      if (sbSettings) {
-        // UI neu rendern mit geladenen Settings
-        renderAll();
-      }
+      if (sbSettings) renderAll();
 
       // Fasten-State aus Supabase laden
       const sbFasten = await sbLoadFastenState();
-      if (sbFasten) {
-        renderFastenPage();
-      }
+      if (sbFasten) renderFastenPage();
 
       // Tageslog für heute vorausladen (Hintergrund)
-      sbLoadDayData(TODAY()).then(d => { if (d) renderAll(); });
-
-      // Rezepte laden
-      loadRezepteData().then(() => renderHomeFav());
-    } else {
-      // Offline: nur Rezepte-Cache-Versuch
-      loadRezepteData().then(() => renderHomeFav());
+      sbLoadDayData(TODAY())
+        .then(d => { if (d) renderAll(); })
+        .catch(e => console.warn('sbLoadDayData Fehler:', e));
+    } catch (e) {
+      console.warn('initApp Supabase-Datenfehler:', e);
     }
-  } catch(e) {
-    console.warn('initApp Supabase-Fehler:', e);
-    loadRezepteData().then(() => renderHomeFav());
   }
+
+  loadRezepteData()
+    .then(() => renderHomeFav())
+    .catch(e => console.warn('loadRezepteData Fehler:', e));
 
   checkForUpdate(false);
 }
