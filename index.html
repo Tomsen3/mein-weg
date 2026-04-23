@@ -359,6 +359,17 @@
       </button>
     </div>
     <div class="card">
+      <div class="card-label">Backup</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px;">
+        Sichere deine lokalen Daten als JSON-Datei oder spiele ein früheres Backup wieder ein.
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="btn btn-ghost btn-sm" onclick="downloadBackup()">Backup exportieren</button>
+        <button class="btn btn-primary btn-sm" onclick="triggerBackupImport()">Backup importieren</button>
+      </div>
+      <input type="file" id="backup-import-input" accept="application/json,.json" onchange="importBackupFile(event)" style="display:none;">
+    </div>
+    <div class="card">
       <div class="card-label">Geräte-Sync</div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px;">
         Damit alle Geräte dieselben Daten sehen, muss die Geräte-ID übereinstimmen.
