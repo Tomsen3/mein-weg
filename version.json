@@ -1,6 +1,7 @@
 {
-  "version": "1.7",
+  "version": "1.8",
   "changelog": [
+    "Backup als JSON exportieren und wieder importieren",
     "Service Worker cached jetzt auch styles.css sowie die neuen JS-Dateien",
     "Service Worker registriert sich jetzt relativ zum aktuellen Deploy-Pfad",
     "Offline-Cache speichert nur noch passende statische GET-Anfragen der eigenen App",
