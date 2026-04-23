@@ -52,7 +52,7 @@ function saveSettings() {
   lsSet('settings', s);           // sofort lokal speichern (synchron, UI reagiert sofort)
   sbSaveSettings(s);              // Supabase im Hintergrund (fire & forget)
   renderAll();
-  toast('Einstellungen gespeichert ✓');
+  toast('Einstellungen aktualisiert.');
 }
 
 // ---------- TAGESLOG ----------
@@ -93,17 +93,17 @@ function saveFoodModal() {
   const name = document.getElementById('fm-name').value.trim();
   const kat  = document.getElementById('fm-kat').value;
   const kcal = parseInt(document.getElementById('fm-kcal').value);
-  if (!name) { toast('Name eingeben'); return; }
-  if (!kcal || kcal < 0) { toast('kcal/100g eingeben'); return; }
+  if (!name) { toast('Bitte einen Namen eingeben.'); return; }
+  if (!kcal || kcal < 0) { toast('Bitte kcal pro 100 g eingeben.'); return; }
   const db = getFoodDB();
   if (foodModalMode === 'edit') {
     const id = document.getElementById('food-modal-id').value;
     const idx = db.findIndex(f => f.id === id);
     if (idx >= 0) db[idx] = { id, name, kat, kcal };
-    toast('Lebensmittel aktualisiert ✓');
+    toast('Lebensmittel aktualisiert.');
   } else {
     db.push({ id: genFoodId(), name, kat, kcal });
-    toast('Lebensmittel gespeichert ✓');
+    toast('Lebensmittel gespeichert.');
   }
   saveFoodDB(db); closeFoodModal(); renderDB();
 }
@@ -111,7 +111,7 @@ function saveFoodModal() {
 function deleteFoodItem(id) {
   if (!confirm('Lebensmittel aus der Datenbank löschen?')) return;
   saveFoodDB(getFoodDB().filter(f => f.id !== id));
-  renderDB(); toast('Gelöscht');
+  renderDB(); toast('Lebensmittel gelöscht.');
 }
 
 // ============================================================
@@ -216,26 +216,26 @@ function updateKcalPreview() {
 function addMealFromDB() {
   if (!selectedFood) return;
   const g = parseFloat(document.getElementById('inp-food-gramm').value);
-  if (!g || g <= 0) { toast('Menge in Gramm eingeben'); return; }
+  if (!g || g <= 0) { toast('Bitte eine Menge in Gramm eingeben.'); return; }
   const kcal = Math.round((selectedFood.kcal * g) / 100);
   const d = getDayData(TODAY());
   d.meals = d.meals || [];
   d.meals.push({ name: selectedFood.name, gramm: g, kcal, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
   saveDayData(TODAY(), d);
-  clearFoodSelection(); renderAll(); toast(`${selectedFood.name} hinzugefügt ✓`);
+  clearFoodSelection(); renderAll(); toast(`${selectedFood.name} hinzugefügt.`);
 }
 
 function addMealManual() {
   const name = document.getElementById('inp-meal-name').value.trim();
   const kcal = parseInt(document.getElementById('inp-meal-kcal').value);
-  if (!name) { toast('Name eingeben'); return; }
+  if (!name) { toast('Bitte einen Namen eingeben.'); return; }
   const d = getDayData(TODAY());
   d.meals = d.meals || [];
   d.meals.push({ name, kcal: kcal || 0, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
   saveDayData(TODAY(), d);
   document.getElementById('inp-meal-name').value = '';
   document.getElementById('inp-meal-kcal').value = '';
-  renderAll(); toast('Mahlzeit hinzugefügt ✓');
+  renderAll(); toast('Mahlzeit hinzugefügt.');
 }
 
 function deleteMeal(idx) {
@@ -411,7 +411,7 @@ if (document.getElementById('rm-tag-veg').checked)   tags.push('veg');
   try {
     if (id) {
       await sbPatch('mw_rezepte?id=eq.'+id+'&user_id=eq.'+USER_ID, body);
-      toast('Rezept aktualisiert ✓');
+    toast('Rezept aktualisiert.');
     } else {
       const [neu] = await sbPost('mw_rezepte', body);
       if (neu) _rezepteCache = [neu, ...(_rezepteCache||[])];
@@ -420,7 +420,7 @@ if (document.getElementById('rm-tag-veg').checked)   tags.push('veg');
     await loadRezepteData(true);
     renderRezepte();
     renderHomeFav();
-    toast(id ? 'Rezept aktualisiert ✓' : 'Rezept gespeichert ✓');
+    toast(id ? 'Rezept aktualisiert.' : 'Rezept gespeichert.');
   } catch(e) {
     toast('Fehler: ' + e.message);
     console.error(e);
@@ -461,7 +461,7 @@ async function bewerte(rezeptId, sterne) {
       const label = row.querySelector('.stern-label');
       if (label) label.textContent = sterne + '/5';
     }
-    toast('Bewertung gespeichert ✓');
+    toast('Bewertung gespeichert.');
     renderHomeFav();
   } catch(e) { toast('Fehler: ' + e.message); }
 }
@@ -479,7 +479,7 @@ async function toggleFavorit(rezeptId) {
     } else {
       await sbPost('mw_favoriten', { user_id: USER_ID, rezept_id: rezeptId });
       _favoritenCache.add(rezeptId);
-      toast('⭐ Zu Favoriten hinzugefügt');
+      toast('Zu Favoriten hinzugefügt.');
     }
     // Stern-Button sofort umschalten
     const allFavBtns = document.querySelectorAll(`.fav-btn`);
@@ -596,7 +596,7 @@ function formatDate(d) {
 
 function saveKg() {
   const v = parseFloat(document.getElementById('inp-kg').value);
-  if (!v || v < 30 || v > 300) { toast('Ungültiger Wert'); return; }
+  if (!v || v < 30 || v > 300) { toast('Bitte einen gültigen Wert eingeben.'); return; }
   const d = getDayData(TODAY());
   d.kg = v;
   saveDayData(TODAY(), d);    // speichert auch in Supabase mw_tageslog
@@ -608,7 +608,7 @@ function saveKg() {
   sbSaveGewicht(TODAY(), v);  // zusätzlich in mw_gewicht (separates log)
   document.getElementById('inp-kg').value = '';
   renderAll();
-  toast('Gewicht gespeichert ✓');
+  toast('Gewicht gespeichert.');
 }
 
 // ============================================================
@@ -628,12 +628,12 @@ function addWasser(delta) {
 
 function saveSchritte() {
   const v = parseInt(document.getElementById('inp-schritte').value);
-  if (!v || v < 0) { toast('Ungültiger Wert'); return; }
+  if (!v || v < 0) { toast('Bitte einen gültigen Wert eingeben.'); return; }
   const d = getDayData(TODAY());
   d.schritte = v;
   saveDayData(TODAY(), d);
   document.getElementById('inp-schritte').value = '';
-  renderAll(); toast('Schritte gespeichert ✓');
+  renderAll(); toast('Schritte gespeichert.');
 }
 
 // ============================================================
@@ -987,7 +987,7 @@ async function checkForUpdate(manual = false) {
     if (isNewerVersion(APP_VERSION, data.version)) {
       showUpdateModal(data.version, data.changelog || []);
     } else if (manual) {
-      toast('App ist aktuell ✓ (v' + APP_VERSION + ')');
+      toast('Die App ist aktuell (v' + APP_VERSION + ').');
     }
   } catch (e) {
     if (manual) toast('Update-Prüfung fehlgeschlagen – bitte später erneut versuchen.');
@@ -1017,12 +1017,12 @@ async function applyUpdate() {
 function copyUserId() {
   const uid = localStorage.getItem('meinweg_uid') || '';
   navigator.clipboard.writeText(uid).then(() => {
-    toast('Geräte-ID kopiert ✓');
+    toast('Geräte-ID kopiert.');
   }).catch(() => {
     const el = document.getElementById('sync-uid-display');
     el.select();
     document.execCommand('copy');
-    toast('Geräte-ID kopiert ✓');
+    toast('Geräte-ID kopiert.');
   });
 }
 
@@ -1052,7 +1052,7 @@ function downloadBackup() {
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  toast('Backup exportiert ✓');
+  toast('Backup exportiert.');
 }
 
 function triggerBackupImport() {
@@ -1071,7 +1071,7 @@ function importBackupFile(event) {
     try {
       const payload = JSON.parse(String(reader.result || '{}'));
       applyBackupPayload(payload);
-      toast('Backup importiert – App wird neu geladen ...');
+      toast('Backup importiert. Die App wird neu geladen ...');
       setTimeout(() => location.reload(), 1200);
     } catch (e) {
       console.error('Backup-Import fehlgeschlagen:', e);
@@ -1089,12 +1089,12 @@ function applyUserId() {
   const input = document.getElementById('sync-uid-input').value.trim();
   const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   if (!uuidPattern.test(input)) {
-    toast('Ungueltige Geraete-ID - bitte pruefen');
+    toast('Bitte eine gültige Geräte-ID eingeben.');
     return;
   }
-  if (!confirm('Geraete-ID wirklich uebernehmen? Die App laedt danach neu.')) return;
+  if (!confirm('Geräte-ID wirklich übernehmen? Die App wird danach neu geladen.')) return;
   localStorage.setItem('meinweg_uid', input);
-  toast('Geraete-ID uebernommen - App wird neu geladen ...');
+  toast('Geräte-ID übernommen. Die App wird neu geladen ...');
   setTimeout(() => location.reload(), 1500);
 }
 // ============================================================
