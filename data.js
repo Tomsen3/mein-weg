@@ -6,6 +6,8 @@
 
 async function sbFetch(path, options = {}) {
   const url = SB_URL + '/rest/v1/' + path;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8000);
   const headers = {
     'apikey': SB_ANON,
     'Authorization': 'Bearer ' + SB_ANON,
@@ -15,13 +17,22 @@ async function sbFetch(path, options = {}) {
   };
   delete options.prefer;
   delete options.headers;
-  const res = await fetch(url, { ...options, headers });
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error('Supabase ' + res.status + ': ' + err);
+  try {
+    const res = await fetch(url, { ...options, headers, signal: controller.signal, cache: 'no-store' });
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error('Supabase ' + res.status + ': ' + err);
+    }
+    if (res.status === 204) return null;
+    return res.json();
+  } catch (e) {
+    if (e.name === 'AbortError') {
+      throw new Error('Supabase Timeout');
+    }
+    throw e;
+  } finally {
+    clearTimeout(timeoutId);
   }
-  if (res.status === 204) return null;
-  return res.json();
 }
 
 // GET mit Filter-String, z.B. 'mw_rezepte?user_id=eq.UUID&order=created_at.desc'
