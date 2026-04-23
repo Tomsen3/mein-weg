@@ -1,7 +1,12 @@
-const CACHE = 'meinweg-v1.6';
+const CACHE = 'meinweg-v1.7';
 const ASSETS = [
   './',
   './index.html',
+  './styles.css',
+  './config.js',
+  './data.js',
+  './ui.js',
+  './main.js',
   './manifest.json',
   './version.json',
   './icon-192.png',
