@@ -1,6 +1,7 @@
 {
-  "version": "1.6",
+  "version": "1.7",
   "changelog": [
+    "Service Worker cached jetzt auch styles.css sowie die neuen JS-Dateien",
     "Service Worker registriert sich jetzt relativ zum aktuellen Deploy-Pfad",
     "Offline-Cache speichert nur noch passende statische GET-Anfragen der eigenen App",
     "Einstellungen validieren Start-, Ziel- und Tagesziele defensiv",
