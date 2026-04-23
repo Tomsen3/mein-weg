@@ -1,4 +1,4 @@
-﻿function fillSettingsForm() {
+function fillSettingsForm() {
   const ss = getSettings();
   document.getElementById('set-start').value   = ss.start;
   document.getElementById('set-ziel').value    = ss.ziel;
@@ -52,7 +52,7 @@ function saveSettings() {
   lsSet('settings', s);           // sofort lokal speichern (synchron, UI reagiert sofort)
   sbSaveSettings(s);              // Supabase im Hintergrund (fire & forget)
   renderAll();
-  toast('Einstellungen gespeichert âœ“');
+  toast('Einstellungen gespeichert ✓');
 }
 
 // ---------- TAGESLOG ----------
@@ -100,18 +100,18 @@ function saveFoodModal() {
     const id = document.getElementById('food-modal-id').value;
     const idx = db.findIndex(f => f.id === id);
     if (idx >= 0) db[idx] = { id, name, kat, kcal };
-    toast('Lebensmittel aktualisiert âœ“');
+    toast('Lebensmittel aktualisiert ✓');
   } else {
     db.push({ id: genFoodId(), name, kat, kcal });
-    toast('Lebensmittel gespeichert âœ“');
+    toast('Lebensmittel gespeichert ✓');
   }
   saveFoodDB(db); closeFoodModal(); renderDB();
 }
 
 function deleteFoodItem(id) {
-  if (!confirm('Lebensmittel aus der Datenbank lÃ¶schen?')) return;
+  if (!confirm('Lebensmittel aus der Datenbank löschen?')) return;
   saveFoodDB(getFoodDB().filter(f => f.id !== id));
-  renderDB(); toast('GelÃ¶scht');
+  renderDB(); toast('Gelöscht');
 }
 
 // ============================================================
@@ -137,23 +137,23 @@ function renderDB() {
   const listEl = document.getElementById('db-list');
   if (!listEl) return;
   if (filtered.length === 0) {
-    listEl.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:12px 0;text-align:center;">Keine EintrÃ¤ge gefunden.</div>';
+    listEl.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:12px 0;text-align:center;">Keine Einträge gefunden.</div>';
   } else {
     listEl.innerHTML = filtered.map(f => `
       <div class="db-item">
         <div class="db-item-left">
           <div class="db-item-name">${f.name}</div>
-          <div class="db-item-meta">${f.kat} Â· ${f.kcal} kcal/100g</div>
+          <div class="db-item-meta">${f.kat} · ${f.kcal} kcal/100g</div>
         </div>
         <div class="db-item-actions">
-          <button class="btn btn-ghost btn-sm" onclick="openEditFoodModal('${f.id}')">âœï¸</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteFoodItem('${f.id}')">ðŸ—‘ï¸</button>
+          <button class="btn btn-ghost btn-sm" onclick="openEditFoodModal('${f.id}')">✏️</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteFoodItem('${f.id}')">🗑️</button>
         </div>
       </div>
     `).join('');
   }
   const countEl = document.getElementById('db-count');
-  if (countEl) countEl.textContent = `${filtered.length} von ${db.length} EintrÃ¤gen`;
+  if (countEl) countEl.textContent = `${filtered.length} von ${db.length} Einträgen`;
 }
 
 function setDBCat(cat) { dbActiveCat = cat; renderDB(); }
@@ -172,7 +172,7 @@ function onFoodSearch() {
   const matches = db.filter(f => f.name.toLowerCase().includes(q)).slice(0, 8);
   if (matches.length === 0) {
     suggBox.style.display = 'block';
-    suggBox.innerHTML = `<div class="food-not-found">â€ž${escHtml(q)}" nicht gefunden â€“ <a onclick="openAddFoodModal('${escHtml(q)}')">Neu anlegen?</a></div>`;
+    suggBox.innerHTML = `<div class="food-not-found">„${escHtml(q)}" nicht gefunden – <a onclick="openAddFoodModal('${escHtml(q)}')">Neu anlegen?</a></div>`;
     return;
   }
   suggBox.style.display = 'block';
@@ -222,7 +222,7 @@ function addMealFromDB() {
   d.meals = d.meals || [];
   d.meals.push({ name: selectedFood.name, gramm: g, kcal, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
   saveDayData(TODAY(), d);
-  clearFoodSelection(); renderAll(); toast(`${selectedFood.name} hinzugefÃ¼gt âœ“`);
+  clearFoodSelection(); renderAll(); toast(`${selectedFood.name} hinzugefügt ✓`);
 }
 
 function addMealManual() {
@@ -235,7 +235,7 @@ function addMealManual() {
   saveDayData(TODAY(), d);
   document.getElementById('inp-meal-name').value = '';
   document.getElementById('inp-meal-kcal').value = '';
-  renderAll(); toast('Mahlzeit hinzugefÃ¼gt âœ“');
+  renderAll(); toast('Mahlzeit hinzugefügt ✓');
 }
 
 function deleteMeal(idx) {
@@ -273,7 +273,7 @@ async function renderRezepte() {
   const listEl = document.getElementById('rezept-list');
   if (!listEl) return;
   if (!_rezepteCache) {
-    listEl.innerHTML = '<div class="loading-row"><div class="spinner"></div>Lade Rezepteâ€¦</div>';
+    listEl.innerHTML = '<div class="loading-row"><div class="spinner"></div>Lade Rezepte…</div>';
     await loadRezepteData();
   }
 
@@ -300,8 +300,8 @@ if (_rezFilter === 'meat') list = list.filter(r => (r.tags||[]).includes('meat')
   if (list.length === 0) {
     listEl.innerHTML = `
       <div style="text-align:center;padding:32px 0;color:var(--muted);">
-        ${q ? 'ðŸ” Keine Treffer fÃ¼r â€ž' + escHtml(q) + '".' :
-          _rezFilter === 'favs' ? 'â­ Noch keine Favoriten.' : 'ðŸ¥— Noch keine Rezepte.<br><br>'}
+        ${q ? '🔍 Keine Treffer für „' + escHtml(q) + '".' :
+          _rezFilter === 'favs' ? '⭐ Noch keine Favoriten.' : '🥗 Noch keine Rezepte.<br><br>'}
         ${!q ? '<button class="btn btn-primary btn-sm" style="margin-top:12px;" onclick="openRezeptModal()">+ Erstes Rezept anlegen</button>' : ''}
       </div>`;
     return;
@@ -312,10 +312,10 @@ if (_rezFilter === 'meat') list = list.filter(r => (r.tags||[]).includes('meat')
     const sterne = _bewertungenCache[r.id] || 0;
     const tags   = (r.tags || []);
     const tagHtml = tags.map(t => {
-      if (t === 'if')    return '<span class="tag tag-if">â±ï¸ IF-geeignet</span>';
-      if (t === 'low')   return '<span class="tag tag-low">ðŸ¥— kalorienarm</span>';
-      if (t === 'vegan') return '<span class="tag tag-user">ðŸŒ± Vegan</span>';
-if (t === 'veg')   return '<span class="tag tag-low">ðŸ¥¦ Vegetarisch</span>';
+      if (t === 'if')    return '<span class="tag tag-if">⏱️ IF-geeignet</span>';
+      if (t === 'low')   return '<span class="tag tag-low">🥗 kalorienarm</span>';
+      if (t === 'vegan') return '<span class="tag tag-user">🌱 Vegan</span>';
+if (t === 'veg')   return '<span class="tag tag-low">🥦 Vegetarisch</span>';
       return '';
     }).join('');
 
@@ -329,8 +329,8 @@ if (t === 'veg')   return '<span class="tag tag-low">ðŸ¥¦ Vegetarisch</span>
         </div>
         <div style="display:flex;align-items:center;gap:6px;">
           <button class="fav-btn ${isFav ? 'aktiv' : ''}" onclick="event.stopPropagation();toggleFavorit('${r.id}')"
-            title="Favorit">â­</button>
-          <span id="rez-arrow-${r.id}" style="font-size:16px;color:var(--muted);transition:transform 0.2s;">â–¾</span>
+            title="Favorit">⭐</button>
+          <span id="rez-arrow-${r.id}" style="font-size:16px;color:var(--muted);transition:transform 0.2s;">▾</span>
         </div>
       </div>
       <div id="rez-body-${r.id}" style="display:none;margin-top:10px;">
@@ -339,12 +339,12 @@ if (t === 'veg')   return '<span class="tag tag-low">ðŸ¥¦ Vegetarisch</span>
         <div class="rezept-actions">
           <div class="sterne-row" id="sterne-${r.id}">
             ${[1,2,3,4,5].map(n => `<span class="stern ${n <= sterne ? 'aktiv' : ''}"
-              onclick="bewerte('${r.id}',${n})" title="${n} Stern${n>1?'e':''}">â˜…</span>`).join('')}
+              onclick="bewerte('${r.id}',${n})" title="${n} Stern${n>1?'e':''}">★</span>`).join('')}
             <span class="stern-label">${sterne ? sterne + '/5' : 'bewerten'}</span>
           </div>
           <div style="margin-left:auto;display:flex;gap:8px;">
-            <button class="btn btn-ghost btn-sm" onclick="openRezeptModal('${r.id}')">âœï¸</button>
-            <button class="btn btn-danger btn-sm" onclick="loescheRezept('${r.id}')">ðŸ—‘ï¸</button>
+            <button class="btn btn-ghost btn-sm" onclick="openRezeptModal('${r.id}')">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="loescheRezept('${r.id}')">🗑️</button>
           </div>
         </div>
       </div>
@@ -406,12 +406,12 @@ if (document.getElementById('rm-tag-veg').checked)   tags.push('veg');
   };
 
   const btn = document.getElementById('rm-save-btn');
-  btn.disabled = true; btn.textContent = 'Speichern â€¦';
+  btn.disabled = true; btn.textContent = 'Speichern …';
 
   try {
     if (id) {
       await sbPatch('mw_rezepte?id=eq.'+id+'&user_id=eq.'+USER_ID, body);
-      toast('Rezept aktualisiert âœ“');
+      toast('Rezept aktualisiert ✓');
     } else {
       const [neu] = await sbPost('mw_rezepte', body);
       if (neu) _rezepteCache = [neu, ...(_rezepteCache||[])];
@@ -420,7 +420,7 @@ if (document.getElementById('rm-tag-veg').checked)   tags.push('veg');
     await loadRezepteData(true);
     renderRezepte();
     renderHomeFav();
-    toast(id ? 'Rezept aktualisiert âœ“' : 'Rezept gespeichert âœ“');
+    toast(id ? 'Rezept aktualisiert ✓' : 'Rezept gespeichert ✓');
   } catch(e) {
     toast('Fehler: ' + e.message);
     console.error(e);
@@ -430,13 +430,13 @@ if (document.getElementById('rm-tag-veg').checked)   tags.push('veg');
 }
 
 async function loescheRezept(id) {
-  if (!confirm('Rezept wirklich lÃ¶schen?')) return;
+  if (!confirm('Rezept wirklich löschen?')) return;
   try {
     await sbDelete('mw_rezepte?id=eq.'+id+'&user_id=eq.'+USER_ID);
     await loadRezepteData(true);
     renderRezepte();
     renderHomeFav();
-    toast('Rezept gelÃ¶scht');
+    toast('Rezept gelöscht');
   } catch(e) { toast('Fehler: ' + e.message); }
 }
 
@@ -461,7 +461,7 @@ async function bewerte(rezeptId, sterne) {
       const label = row.querySelector('.stern-label');
       if (label) label.textContent = sterne + '/5';
     }
-    toast('Bewertung gespeichert âœ“');
+    toast('Bewertung gespeichert ✓');
     renderHomeFav();
   } catch(e) { toast('Fehler: ' + e.message); }
 }
@@ -479,12 +479,12 @@ async function toggleFavorit(rezeptId) {
     } else {
       await sbPost('mw_favoriten', { user_id: USER_ID, rezept_id: rezeptId });
       _favoritenCache.add(rezeptId);
-      toast('â­ Zu Favoriten hinzugefÃ¼gt');
+      toast('⭐ Zu Favoriten hinzugefügt');
     }
     // Stern-Button sofort umschalten
     const allFavBtns = document.querySelectorAll(`.fav-btn`);
     allFavBtns.forEach(btn => {
-      // data-id wÃ¤re sauberer, wir matchen Ã¼ber onclick-String
+      // data-id wäre sauberer, wir matchen über onclick-String
       if (btn.getAttribute('onclick')?.includes(rezeptId)) {
         btn.className = 'fav-btn' + (_favoritenCache.has(rezeptId) ? ' aktiv' : '');
       }
@@ -517,15 +517,15 @@ async function renderHomeFav() {
 
   list.innerHTML = favRezepte.map(r => {
     const sterne = _bewertungenCache[r.id] || 0;
-    const sternStr = sterne ? 'â˜…'.repeat(sterne) : '';
-    const emojis = ['ðŸ¥—','ðŸ³','ðŸ«•','ðŸ¥˜','ðŸ²','ðŸ¥™','ðŸ«”'];
+    const sternStr = sterne ? '★'.repeat(sterne) : '';
+    const emojis = ['🥗','🍳','🫕','🥘','🍲','🥙','🫔'];
     const em = emojis[r.titel.charCodeAt(0) % emojis.length];
     return `
     <div class="fav-card" onclick="gotoPageById('rezepte')">
       <div class="fav-card-emoji">${em}</div>
       <div class="fav-card-body">
         <div class="fav-card-title">${escHtml(r.titel)}</div>
-        <div class="fav-card-meta">${escHtml(r.beschreibung||'')}${sternStr ? ' Â· <span class="fav-card-sterne">'+sternStr+'</span>' : ''}</div>
+        <div class="fav-card-meta">${escHtml(r.beschreibung||'')}${sternStr ? ' · <span class="fav-card-sterne">'+sternStr+'</span>' : ''}</div>
       </div>
     </div>
   `}).join('');
@@ -596,7 +596,7 @@ function formatDate(d) {
 
 function saveKg() {
   const v = parseFloat(document.getElementById('inp-kg').value);
-  if (!v || v < 30 || v > 300) { toast('UngÃ¼ltiger Wert'); return; }
+  if (!v || v < 30 || v > 300) { toast('Ungültiger Wert'); return; }
   const d = getDayData(TODAY());
   d.kg = v;
   saveDayData(TODAY(), d);    // speichert auch in Supabase mw_tageslog
@@ -605,10 +605,10 @@ function saveKg() {
   if (ex >= 0) wlog[ex].kg = v; else wlog.push({ date: TODAY(), kg: v });
   wlog.sort((a,b) => a.date.localeCompare(b.date));
   lsSet('wlog', wlog);
-  sbSaveGewicht(TODAY(), v);  // zusÃ¤tzlich in mw_gewicht (separates log)
+  sbSaveGewicht(TODAY(), v);  // zusätzlich in mw_gewicht (separates log)
   document.getElementById('inp-kg').value = '';
   renderAll();
-  toast('Gewicht gespeichert âœ“');
+  toast('Gewicht gespeichert ✓');
 }
 
 // ============================================================
@@ -628,12 +628,12 @@ function addWasser(delta) {
 
 function saveSchritte() {
   const v = parseInt(document.getElementById('inp-schritte').value);
-  if (!v || v < 0) { toast('UngÃ¼ltiger Wert'); return; }
+  if (!v || v < 0) { toast('Ungültiger Wert'); return; }
   const d = getDayData(TODAY());
   d.schritte = v;
   saveDayData(TODAY(), d);
   document.getElementById('inp-schritte').value = '';
-  renderAll(); toast('Schritte gespeichert âœ“');
+  renderAll(); toast('Schritte gespeichert ✓');
 }
 
 // ============================================================
@@ -656,10 +656,10 @@ function toggleFasten() {
     fastenLog[TODAY()] = {zielH: s.zielH, startedAt: s.start, endedAt: Date.now()};
     lsSet('fasten_log', fastenLog);
     s.active = false; s.start = null;
-    toast('Fasten beendet! Gut gemacht! ðŸŽ‰');
+    toast('Fasten beendet! Gut gemacht! 🎉');
   } else {
     s.active = true; s.start = Date.now();
-    toast('Fasten gestartet âœ“');
+    toast('Fasten gestartet ✓');
   }
   saveFastenState(s); renderFastenPage(); renderHome();
 }
@@ -696,11 +696,11 @@ function renderFastenPage() {
     const m   = String(Math.floor((elapsed%3600000)/60000)).padStart(2,'0');
     const sec = String(Math.floor((elapsed%60000)/1000)).padStart(2,'0');
     document.getElementById('timer-hms').textContent = h+':'+m+':'+sec;
-    label.textContent = 'Fasten lÃ¤uft ðŸ”¥';
+    label.textContent = 'Fasten läuft 🔥';
     ring.style.strokeDashoffset = circumf * (1 - pct);
     ring.style.stroke = pct >= 1 ? 'var(--green)' : 'var(--accent)';
     if (pct >= 1) {
-      sub.textContent = 'Ziel erreicht! ðŸŽ‰';
+      sub.textContent = 'Ziel erreicht! 🎉';
       btn.style.background = 'var(--green)';
     } else {
       const rh = Math.floor(rem/3600000);
@@ -709,7 +709,7 @@ function renderFastenPage() {
       btn.style.background = 'var(--red)';
     }
     btn.textContent = 'Fasten beenden';
-    info.textContent = `Gestartet: ${new Date(ss.start).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})} Uhr Â· Ziel: ${ss.zielH}h`;
+    info.textContent = `Gestartet: ${new Date(ss.start).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})} Uhr · Ziel: ${ss.zielH}h`;
   }
   tick();
   if (s.active) fastenInterval = setInterval(tick, 1000);
@@ -733,12 +733,12 @@ function renderFastenPage() {
 // ============================================================
 
 const MOTIVATIONS = [
-  {q:"Jeder Schritt zÃ¤hlt â€“ auch der kleinste.", a:"Mein Weg"},
-  {q:"Du bist stÃ¤rker als dein stÃ¤rkster Hunger.", a:"Mein Weg"},
+  {q:"Jeder Schritt zählt – auch der kleinste.", a:"Mein Weg"},
+  {q:"Du bist stärker als dein stärkster Hunger.", a:"Mein Weg"},
   {q:"Fortschritt, nicht Perfektion.", a:"Mein Weg"},
   {q:"Was du heute tust, macht dein Morgen leichter.", a:"Mein Weg"},
-  {q:"Kleine Gewohnheiten, groÃŸe VerÃ¤nderung.", a:"Mein Weg"},
-  {q:"Dein KÃ¶rper kann mehr, als du denkst.", a:"Mein Weg"},
+  {q:"Kleine Gewohnheiten, große Veränderung.", a:"Mein Weg"},
+  {q:"Dein Körper kann mehr, als du denkst.", a:"Mein Weg"},
   {q:"Heute ist der beste Tag, anzufangen.", a:"Mein Weg"},
 ];
 
@@ -752,10 +752,10 @@ function renderHome() {
 
   const idx = new Date().getDate() % MOTIVATIONS.length;
   const mv  = MOTIVATIONS[idx];
-  document.getElementById('motivator-box').innerHTML = `<div class="quote">"${mv.q}"</div><div class="author">â€” ${mv.a}</div>`;
+  document.getElementById('motivator-box').innerHTML = `<div class="quote">"${mv.q}"</div><div class="author">— ${mv.a}</div>`;
 
   const lastKg = wlog.length ? wlog[wlog.length-1].kg : null;
-  document.getElementById('home-kg').textContent   = lastKg ? lastKg.toFixed(1)+' kg' : 'â€“ kg';
+  document.getElementById('home-kg').textContent   = lastKg ? lastKg.toFixed(1)+' kg' : '– kg';
   document.getElementById('lbl-start').textContent = s.start+' kg';
   document.getElementById('lbl-ziel').textContent  = s.ziel+' kg';
 
@@ -766,9 +766,9 @@ function renderHome() {
     document.getElementById('home-prog').style.width = pct+'%';
     document.getElementById('home-pct').textContent  = pct.toFixed(1)+'% geschafft';
     const el = document.getElementById('home-kg-diff');
-    el.textContent = verloren > 0 ? 'âˆ’'+verloren.toFixed(1)+' kg' : verloren < 0 ? '+'+Math.abs(verloren).toFixed(1)+' kg' : '';
+    el.textContent = verloren > 0 ? '−'+verloren.toFixed(1)+' kg' : verloren < 0 ? '+'+Math.abs(verloren).toFixed(1)+' kg' : '';
     el.style.color = verloren > 0 ? 'var(--green)' : 'var(--red)';
-    document.getElementById('home-badge').innerHTML = `<span class="badge">${pct.toFixed(0)}% ðŸŽ¯</span>`;
+    document.getElementById('home-badge').innerHTML = `<span class="badge">${pct.toFixed(0)}% 🎯</span>`;
   } else {
     document.getElementById('home-prog').style.width = '0%';
     document.getElementById('home-pct').textContent  = '0% geschafft';
@@ -794,7 +794,7 @@ function renderHome() {
     document.getElementById('home-fasten-sub').textContent = 'aktiv';
     document.getElementById('dot-fasten').style.background = 'var(--accent)';
   } else {
-    document.getElementById('home-fasten-h').textContent   = 'â€“';
+    document.getElementById('home-fasten-h').textContent   = '–';
     document.getElementById('home-fasten-sub').textContent = 'inaktiv';
     document.getElementById('dot-fasten').style.background = 'var(--purple)';
   }
@@ -839,7 +839,7 @@ function renderLog() {
 
   const remEl = document.getElementById('kcal-remaining');
   if (remaining < 0) {
-    remEl.textContent = Math.abs(remaining)+' kcal Ã¼ber Ziel';
+    remEl.textContent = Math.abs(remaining)+' kcal über Ziel';
     remEl.style.color = 'var(--red)';
   } else {
     remEl.textContent = remaining+' kcal frei';
@@ -852,17 +852,17 @@ function renderLog() {
 
   const ml = document.getElementById('meal-list');
   if (meals.length === 0) {
-    ml.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:8px 0;">Noch keine EintrÃ¤ge heute.</div>';
+    ml.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:8px 0;">Noch keine Einträge heute.</div>';
   } else {
     ml.innerHTML = meals.map((m,i) => `
       <div class="meal-item">
         <div style="flex:1;min-width:0;">
           <div class="meal-name">${escHtml(m.name)}</div>
-          <div class="meal-detail">${m.time ? m.time+' Uhr Â· ' : ''}${m.gramm ? m.gramm+'g Â· ' : ''}${m.kcal} kcal</div>
+          <div class="meal-detail">${m.time ? m.time+' Uhr · ' : ''}${m.gramm ? m.gramm+'g · ' : ''}${m.kcal} kcal</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
           <span class="meal-kcal">${m.kcal} kcal</span>
-          <button class="meal-del" onclick="deleteMeal(${i})">âœ•</button>
+          <button class="meal-del" onclick="deleteMeal(${i})">✕</button>
         </div>
       </div>
     `).join('');
@@ -896,16 +896,16 @@ function renderProgress() {
   } else if (wlog.length === 1) {
     document.getElementById('p-verloren').textContent = (s.start-wlog[0].kg).toFixed(1);
     document.getElementById('p-noch').textContent     = Math.max(0,wlog[0].kg-s.ziel).toFixed(1);
-    document.getElementById('p-avg').textContent      = 'â€“';
+    document.getElementById('p-avg').textContent      = '–';
   } else {
     document.getElementById('p-verloren').textContent = '0';
     document.getElementById('p-noch').textContent     = (s.start-s.ziel).toFixed(1);
-    document.getElementById('p-avg').textContent      = 'â€“';
+    document.getElementById('p-avg').textContent      = '–';
   }
 
   const wll = document.getElementById('weight-log-list');
   if (wlog.length === 0) {
-    wll.innerHTML = '<div style="color:var(--muted);font-size:13px;">Noch keine EintrÃ¤ge.</div>';
+    wll.innerHTML = '<div style="color:var(--muted);font-size:13px;">Noch keine Einträge.</div>';
   } else {
     const rev = [...wlog].reverse();
     wll.innerHTML = rev.map((e,i) => {
@@ -950,8 +950,8 @@ function renderProgress() {
 }
 
 function clearWeightLog() {
-  if (!confirm('Wirklich den gesamten Gewichtsverlauf lÃ¶schen?')) return;
-  lsSet('wlog', []); renderProgress(); renderHome(); toast('Verlauf gelÃ¶scht');
+  if (!confirm('Wirklich den gesamten Gewichtsverlauf löschen?')) return;
+  lsSet('wlog', []); renderProgress(); renderHome(); toast('Verlauf gelöscht');
 }
 
 // ============================================================
@@ -987,10 +987,10 @@ async function checkForUpdate(manual = false) {
     if (isNewerVersion(APP_VERSION, data.version)) {
       showUpdateModal(data.version, data.changelog || []);
     } else if (manual) {
-      toast('App ist aktuell âœ“ (v' + APP_VERSION + ')');
+      toast('App ist aktuell ✓ (v' + APP_VERSION + ')');
     }
   } catch (e) {
-    if (manual) toast('Update-PrÃ¼fung fehlgeschlagen â€“ bitte spÃ¤ter erneut versuchen.');
+    if (manual) toast('Update-Prüfung fehlgeschlagen – bitte später erneut versuchen.');
     console.warn('Update-Check fehlgeschlagen:', e);
   }
 }
@@ -1011,18 +1011,18 @@ async function applyUpdate() {
   location.reload(true);
 }
 // ============================================================
-// GERÃ„TE-SYNC
+// GERÄTE-SYNC
 // ============================================================
 
 function copyUserId() {
   const uid = localStorage.getItem('meinweg_uid') || '';
   navigator.clipboard.writeText(uid).then(() => {
-    toast('GerÃ¤te-ID kopiert âœ“');
+    toast('Geräte-ID kopiert ✓');
   }).catch(() => {
     const el = document.getElementById('sync-uid-display');
     el.select();
     document.execCommand('copy');
-    toast('GerÃ¤te-ID kopiert âœ“');
+    toast('Geräte-ID kopiert ✓');
   });
 }
 
@@ -1031,7 +1031,7 @@ function showQrCode() {
   const uid = localStorage.getItem('meinweg_uid') || '';
   const canvas = document.getElementById('sync-uid-canvas');
   const url = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(uid);
-  canvas.innerHTML = '<img src="' + url + '" style="border-radius:8px;border:1px solid var(--border);" alt="QR-Code"><div style="font-size:11px;color:var(--muted);margin-top:6px;">UUID ablesen und auf anderem GerÃ¤t einfÃ¼gen</div>';
+  canvas.innerHTML = '<img src="' + url + '" style="border-radius:8px;border:1px solid var(--border);" alt="QR-Code"><div style="font-size:11px;color:var(--muted);margin-top:6px;">UUID ablesen und auf anderem Gerät einfügen</div>';
 }
 
 function initSyncUid() {
