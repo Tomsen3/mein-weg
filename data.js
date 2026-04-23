@@ -98,9 +98,51 @@ async function sbLoadDayData(datum) {
 
 const KEY   = 'meinweg_';
 const TODAY = () => new Date().toISOString().slice(0,10);
+const BACKUP_APP_ID = 'meinweg-backup';
+const BACKUP_EXCLUDE_KEYS = new Set(['meinweg_update_check', 'meinweg_known_version']);
 
 function ls(k)      { try { return JSON.parse(localStorage.getItem(KEY+k)); } catch(e) { return null; } }
 function lsSet(k,v) { localStorage.setItem(KEY+k, JSON.stringify(v)); }
+
+function getBackupPayload() {
+  const storage = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (!key) continue;
+    if (BACKUP_EXCLUDE_KEYS.has(key)) continue;
+    if (key === 'meinweg_uid' || key.startsWith(KEY)) {
+      storage[key] = localStorage.getItem(key);
+    }
+  }
+  return {
+    app: BACKUP_APP_ID,
+    version: APP_VERSION,
+    exportedAt: new Date().toISOString(),
+    storage
+  };
+}
+
+function applyBackupPayload(payload) {
+  if (!payload || payload.app !== BACKUP_APP_ID || typeof payload.storage !== 'object') {
+    throw new Error('Ungültiges Backup-Format');
+  }
+
+  const keysToRemove = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (!key) continue;
+    if (key === 'meinweg_uid' || key.startsWith(KEY)) {
+      keysToRemove.push(key);
+    }
+  }
+  keysToRemove.forEach(key => localStorage.removeItem(key));
+
+  Object.entries(payload.storage).forEach(([key, value]) => {
+    if (typeof value === 'string') {
+      localStorage.setItem(key, value);
+    }
+  });
+}
 
 const defaultSettings = { start: 104, ziel: 87, kcalMax: 1800, wasserMax: 2.5, schritteMax: 8000, fastenH: 16 };
 
