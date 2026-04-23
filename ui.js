@@ -1040,6 +1040,50 @@ function initSyncUid() {
   if (el) el.value = uid;
 }
 
+function downloadBackup() {
+  const payload = getBackupPayload();
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+  link.href = url;
+  link.download = `meinweg-backup-${stamp}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  toast('Backup exportiert ✓');
+}
+
+function triggerBackupImport() {
+  const input = document.getElementById('backup-import-input');
+  if (!input) return;
+  input.value = '';
+  input.click();
+}
+
+function importBackupFile(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const payload = JSON.parse(String(reader.result || '{}'));
+      applyBackupPayload(payload);
+      toast('Backup importiert – App wird neu geladen ...');
+      setTimeout(() => location.reload(), 1200);
+    } catch (e) {
+      console.error('Backup-Import fehlgeschlagen:', e);
+      toast('Backup konnte nicht importiert werden.');
+    }
+  };
+  reader.onerror = () => {
+    toast('Datei konnte nicht gelesen werden.');
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
 // Ueberschreibt aeltere Sync-Logik ohne Aktivierungscode.
 function applyUserId() {
   const input = document.getElementById('sync-uid-input').value.trim();
