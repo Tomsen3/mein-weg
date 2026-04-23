@@ -13,12 +13,12 @@ async function initApp() {
   if (verEl) verEl.textContent = 'v' + APP_VERSION;
   initSyncUid();
 
-  // Supabase-Verbindung prÃ¼fen, dann Daten laden
+  // Supabase-Verbindung prüfen, dann Daten laden
   try {
     await checkSbConnection();
 
     if (sbOnline) {
-      // Settings aus Supabase laden (Ã¼berschreibt localStorage falls vorhanden)
+      // Settings aus Supabase laden (überschreibt localStorage falls vorhanden)
       const sbSettings = await sbLoadSettings();
       if (sbSettings) {
         // UI neu rendern mit geladenen Settings
@@ -31,7 +31,7 @@ async function initApp() {
         renderFastenPage();
       }
 
-      // Tageslog fÃ¼r heute vorausladen (Hintergrund)
+      // Tageslog für heute vorausladen (Hintergrund)
       sbLoadDayData(TODAY()).then(d => { if (d) renderAll(); });
 
       // Rezepte laden
@@ -57,7 +57,7 @@ if ('serviceWorker' in navigator) {
       const w = reg.installing;
       w.onstatechange = () => {
         if (w.state === 'installed' && navigator.serviceWorker.controller) {
-          toast('Update verfÃ¼gbar â€“ App wird neu geladen â€¦');
+          toast('Update verfügbar – App wird neu geladen …');
           setTimeout(() => location.reload(), 2000);
         }
       };
