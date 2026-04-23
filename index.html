@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Mein Weg">
-<title>Mein Weg ðŸŒŸ</title>
+<title>Mein Weg 🌟</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,7 +19,7 @@
 <div id="p-home" class="page active">
   <div class="page-header">
     <div>
-      <h1 class="page-title">Mein Weg ðŸŒŸ</h1>
+      <h1 class="page-title">Mein Weg 🌟</h1>
       <div class="page-date" id="home-date"></div>
     </div>
     <div id="home-badge"></div>
@@ -28,16 +28,16 @@
   <div class="card">
     <div class="card-label">Gewicht heute</div>
     <div style="display:flex;align-items:flex-end;gap:10px;">
-      <div class="card-value" id="home-kg">â€“</div>
+      <div class="card-value" id="home-kg">–</div>
       <div class="card-sub" id="home-kg-diff" style="margin-bottom:8px;"></div>
     </div>
     <div class="progress-wrap">
       <div class="progress-bar" id="home-prog" style="background:linear-gradient(90deg,var(--accent),var(--accent2));"></div>
     </div>
     <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);">
-      <span>Start: <b style="color:var(--text)" id="lbl-start">â€“</b></span>
+      <span>Start: <b style="color:var(--text)" id="lbl-start">–</b></span>
       <span id="home-pct"></span>
-      <span>Ziel: <b style="color:var(--green)" id="lbl-ziel">â€“</b></span>
+      <span>Ziel: <b style="color:var(--green)" id="lbl-ziel">–</b></span>
     </div>
   </div>
   <div class="grid2">
@@ -62,20 +62,20 @@
     <div class="mini-card">
       <div class="mc-dot" id="dot-fasten" style="background:var(--purple);"></div>
       <div class="mc-label">Fasten</div>
-      <div class="mc-val" id="home-fasten-h">â€“</div>
-      <div class="mc-unit" id="home-fasten-sub">â€“</div>
+      <div class="mc-val" id="home-fasten-h">–</div>
+      <div class="mc-unit" id="home-fasten-sub">–</div>
     </div>
   </div>
   <!-- FAVORITEN auf Startseite -->
   <div class="card" id="home-fav-card" style="display:none;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-      <div class="card-label" style="margin-bottom:0;">â­ Meine Favoriten</div>
-      <button class="btn btn-ghost btn-sm" onclick="gotoPageById('rezepte')">alle â†’</button>
+      <div class="card-label" style="margin-bottom:0;">⭐ Meine Favoriten</div>
+      <button class="btn btn-ghost btn-sm" onclick="gotoPageById('rezepte')">alle →</button>
     </div>
-    <div id="home-fav-list"><div class="loading-row"><div class="spinner"></div>Ladeâ€¦</div></div>
+    <div id="home-fav-list"><div class="loading-row"><div class="spinner"></div>Lade…</div></div>
   </div>
   <div class="card">
-    <div class="card-label" style="margin-bottom:10px;">Diese Woche ðŸ”¥</div>
+    <div class="card-label" style="margin-bottom:10px;">Diese Woche 🔥</div>
     <div class="streak-row" id="streak-row"></div>
   </div>
 </div>
@@ -83,20 +83,20 @@
 <!-- TAGEBUCH -->
 <div id="p-log" class="page">
   <div class="page-header">
-    <h1 class="page-title">Heute ðŸ“</h1>
+    <h1 class="page-title">Heute 📝</h1>
     <div class="page-date" id="log-date"></div>
   </div>
   <div class="card">
-    <div class="card-label">âš–ï¸ Gewicht eintragen</div>
+    <div class="card-label">⚖️ Gewicht eintragen</div>
     <div class="input-row" style="margin-top:10px;">
       <input type="number" id="inp-kg" step="0.1" placeholder="z.B. 102.5" style="flex:1;">
       <button class="btn btn-primary btn-sm" onclick="saveKg()">Speichern</button>
     </div>
   </div>
   <div class="card">
-    <div class="card-label">ðŸ’§ Wasser (Liter heute)</div>
+    <div class="card-label">💧 Wasser (Liter heute)</div>
     <div style="display:flex;align-items:center;gap:10px;margin-top:10px;">
-      <button class="btn btn-ghost btn-sm" onclick="addWasser(-0.25)">âˆ’</button>
+      <button class="btn btn-ghost btn-sm" onclick="addWasser(-0.25)">−</button>
       <div style="flex:1;text-align:center;">
         <span class="card-value" id="log-wasser" style="font-size:28px;">0</span>
         <span style="color:var(--muted);font-size:14px;"> L</span>
@@ -105,13 +105,13 @@
     </div>
     <div class="progress-wrap"><div class="progress-bar" id="wasser-bar" style="background:var(--blue);"></div></div>
     <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
-      <button class="btn btn-ghost btn-sm" onclick="addWasser(0.25)">ðŸ¥› 0,25 L</button>
-      <button class="btn btn-ghost btn-sm" onclick="addWasser(0.5)">ðŸ¶ 0,5 L</button>
-      <button class="btn btn-ghost btn-sm" onclick="addWasser(1)">ðŸ«— 1 L</button>
+      <button class="btn btn-ghost btn-sm" onclick="addWasser(0.25)">🥛 0,25 L</button>
+      <button class="btn btn-ghost btn-sm" onclick="addWasser(0.5)">🍶 0,5 L</button>
+      <button class="btn btn-ghost btn-sm" onclick="addWasser(1)">🫗 1 L</button>
     </div>
   </div>
   <div class="card">
-    <div class="card-label">ðŸ¦¶ Schritte heute</div>
+    <div class="card-label">🦶 Schritte heute</div>
     <div class="input-row" style="margin-top:10px;">
       <input type="number" id="inp-schritte" placeholder="z.B. 6500" style="flex:1;">
       <button class="btn btn-green btn-sm" onclick="saveSchritte()">OK</button>
@@ -119,7 +119,7 @@
     <div class="progress-wrap"><div class="progress-bar" id="schritte-bar" style="background:var(--green);"></div></div>
   </div>
   <div class="card">
-    <div class="card-label">ðŸ½ï¸ Mahlzeiten & Kalorien</div>
+    <div class="card-label">🍽️ Mahlzeiten & Kalorien</div>
     <div id="meal-list" style="margin:10px 0;"></div>
     <div class="kcal-summary">
       <div class="kcal-numbers">
@@ -137,19 +137,19 @@
       <div style="font-size:12px;color:var(--muted);text-align:center;" id="kcal-goal-label">Ziel: 1800 kcal</div>
     </div>
     <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:14px;">
-      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Mahlzeit hinzufÃ¼gen</div>
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Mahlzeit hinzufügen</div>
       <div class="food-search-wrap">
-        <input type="text" id="inp-food-search" placeholder="ðŸ” Lebensmittel suchen â€¦" oninput="onFoodSearch()" autocomplete="off">
+        <input type="text" id="inp-food-search" placeholder="🔍 Lebensmittel suchen …" oninput="onFoodSearch()" autocomplete="off">
         <div class="food-suggestions" id="food-suggestions" style="display:none;"></div>
       </div>
       <div id="food-selected-row" style="display:none;">
         <div style="background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);border-radius:var(--radius-sm);padding:10px 14px;margin-bottom:10px;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <div>
-              <div style="font-size:14px;font-weight:600;" id="sel-food-name">â€“</div>
+              <div style="font-size:14px;font-weight:600;" id="sel-food-name">–</div>
               <div style="font-size:12px;color:var(--muted);" id="sel-food-kcal100">0 kcal / 100g</div>
             </div>
-            <button onclick="clearFoodSelection()" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;">âœ•</button>
+            <button onclick="clearFoodSelection()" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;">✕</button>
           </div>
         </div>
         <div class="food-entry-row">
@@ -176,7 +176,7 @@
 <!-- FASTEN -->
 <div id="p-fasten" class="page">
   <div class="page-header">
-    <h1 class="page-title">Intervallfasten â±ï¸</h1>
+    <h1 class="page-title">Intervallfasten ⏱️</h1>
   </div>
   <div class="card" style="text-align:center;">
     <div class="card-label" id="fasten-status-label">Kein aktives Fasten</div>
@@ -219,7 +219,7 @@
       </select>
     </div>
     <p style="font-size:13px;color:var(--muted);line-height:1.6;">
-      Beim Intervallfasten isst du nur in einem bestimmten Zeitfenster. Wasser, ungesÃ¼ÃŸter Tee und schwarzer Kaffee sind wÃ¤hrend der Fastenzeit erlaubt. ðŸ’ª
+      Beim Intervallfasten isst du nur in einem bestimmten Zeitfenster. Wasser, ungesüßter Tee und schwarzer Kaffee sind während der Fastenzeit erlaubt. 💪
     </p>
   </div>
 </div>
@@ -227,33 +227,33 @@
 <!-- REZEPTE -->
 <div id="p-rezepte" class="page">
   <div class="page-header">
-    <h1 class="page-title">Rezepte ðŸ¥—</h1>
+    <h1 class="page-title">Rezepte 🥗</h1>
     <button class="btn btn-primary btn-sm" onclick="openRezeptModal()">+ Neu</button>
   </div>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
-    <div id="sb-status-rez" class="sb-status"><div class="sb-dot" id="sb-dot-rez"></div><span id="sb-text-rez">â€“</span></div>
+    <div id="sb-status-rez" class="sb-status"><div class="sb-dot" id="sb-dot-rez"></div><span id="sb-text-rez">–</span></div>
     <div style="display:flex;gap:6px;">
       <button class="btn btn-ghost btn-sm" id="rez-filter-alle"   onclick="setRezFilter('alle')"   style="opacity:1;">Alle</button>
-      <button class="btn btn-ghost btn-sm" id="rez-filter-favs"   onclick="setRezFilter('favs')">â­</button>
-      <button class="btn btn-ghost btn-sm" id="rez-filter-if"     onclick="setRezFilter('if')">â± IF</button>
-      <button class="btn btn-ghost btn-sm" id="rez-filter-low"    onclick="setRezFilter('low')">ðŸ¥— Low</button>
-      <button class="btn btn-ghost btn-sm" id="rez-filter-vegan" onclick="setRezFilter('vegan')">ðŸŒ± Vegan</button>
-      <button class="btn btn-ghost btn-sm" id="rez-filter-veg" onclick="setRezFilter('veg')">ðŸ¥¦ Vegetarisch</button>
-      <button class="btn btn-ghost btn-sm" id="rez-filter-meat" onclick="setRezFilter('meat')">ðŸ¥© Fleisch</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-favs"   onclick="setRezFilter('favs')">⭐</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-if"     onclick="setRezFilter('if')">⏱ IF</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-low"    onclick="setRezFilter('low')">🥗 Low</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-vegan" onclick="setRezFilter('vegan')">🌱 Vegan</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-veg" onclick="setRezFilter('veg')">🥦 Vegetarisch</button>
+      <button class="btn btn-ghost btn-sm" id="rez-filter-meat" onclick="setRezFilter('meat')">🥩 Fleisch</button>
     </div>
   </div>
-  <input type="text" id="rezept-search" placeholder="ðŸ” Rezept oder Zutat suchen â€¦"
+  <input type="text" id="rezept-search" placeholder="🔍 Rezept oder Zutat suchen …"
   oninput="renderRezepte()"
   style="width:100%;margin-bottom:12px;padding:10px 14px;border-radius:12px;
   border:1px solid var(--border);background:var(--bg3);font-size:14px;
   font-family:'Nunito',sans-serif;color:var(--text);">
-  <div id="rezept-list"><div class="loading-row"><div class="spinner"></div>Lade Rezepteâ€¦</div></div>
+  <div id="rezept-list"><div class="loading-row"><div class="spinner"></div>Lade Rezepte…</div></div>
 </div>
 
 <!-- FORTSCHRITT + MEHR -->
 <div id="p-progress" class="page">
   <div class="page-header">
-    <h1 class="page-title">Mehr ðŸ“Š</h1>
+    <h1 class="page-title">Mehr 📊</h1>
   </div>
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('tab-progress',this)">Fortschritt</button>
@@ -272,29 +272,29 @@
     <div class="grid2">
       <div class="mini-card">
         <div class="mc-label">Abgenommen</div>
-        <div class="mc-val" id="p-verloren" style="color:var(--green);">â€“</div>
+        <div class="mc-val" id="p-verloren" style="color:var(--green);">–</div>
         <div class="mc-unit">kg gesamt</div>
       </div>
       <div class="mini-card">
         <div class="mc-label">Noch bis Ziel</div>
-        <div class="mc-val" id="p-noch" style="color:var(--accent2);">â€“</div>
+        <div class="mc-val" id="p-noch" style="color:var(--accent2);">–</div>
         <div class="mc-unit">kg</div>
       </div>
       <div class="mini-card">
-        <div class="mc-label">EintrÃ¤ge</div>
+        <div class="mc-label">Einträge</div>
         <div class="mc-val" id="p-eintraege">0</div>
         <div class="mc-unit">Messungen</div>
       </div>
       <div class="mini-card">
-        <div class="mc-label">Ã˜ pro Woche</div>
-        <div class="mc-val" id="p-avg">â€“</div>
-        <div class="mc-unit">kg Ã„nderung</div>
+        <div class="mc-label">Ø pro Woche</div>
+        <div class="mc-val" id="p-avg">–</div>
+        <div class="mc-unit">kg Änderung</div>
       </div>
     </div>
     <div class="card">
-      <div class="card-label" style="margin-bottom:10px;">Alle GewichtseintrÃ¤ge</div>
+      <div class="card-label" style="margin-bottom:10px;">Alle Gewichtseinträge</div>
       <div id="weight-log-list"></div>
-      <button class="btn btn-ghost" style="margin-top:12px;font-size:13px;" onclick="clearWeightLog()">ðŸ—‘ï¸ Verlauf lÃ¶schen</button>
+      <button class="btn btn-ghost" style="margin-top:12px;font-size:13px;" onclick="clearWeightLog()">🗑️ Verlauf löschen</button>
     </div>
   </div>
 
@@ -305,7 +305,7 @@
         <div class="card-label" style="margin-bottom:0;">Lebensmittel-Datenbank</div>
         <button class="btn btn-primary btn-sm" onclick="openAddFoodModal()">+ Neu</button>
       </div>
-      <input type="text" id="db-search" placeholder="ðŸ” Durchsuchen â€¦" oninput="renderDB()" style="margin-bottom:10px;">
+      <input type="text" id="db-search" placeholder="🔍 Durchsuchen …" oninput="renderDB()" style="margin-bottom:10px;">
       <div class="db-filter-row" id="db-cat-filter"></div>
       <div id="db-list"></div>
       <div style="margin-top:10px;font-size:12px;color:var(--muted);text-align:right;" id="db-count"></div>
@@ -341,7 +341,7 @@
       <div class="card-label">Supabase</div>
       <div id="sb-status-settings" class="sb-status" style="margin-bottom:10px;">
         <div class="sb-dot" id="sb-dot-settings"></div>
-        <span id="sb-text-settings">PrÃ¼fe Verbindung â€¦</span>
+        <span id="sb-text-settings">Prüfe Verbindung …</span>
       </div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;">
         Rezepte, Bewertungen und Favoriten werden in Supabase gespeichert.<br>
@@ -355,32 +355,32 @@
         <span style="font-size:14px;font-weight:600;color:var(--accent);" id="settings-app-version"></span>
       </div>
       <button class="btn btn-ghost" style="width:100%;font-size:13px;" onclick="checkForUpdate(true)">
-        ðŸ”„ Jetzt auf Updates prÃ¼fen
+        🔄 Jetzt auf Updates prüfen
       </button>
     </div>
     <div class="card">
-      <div class="card-label">GerÃ¤te-Sync</div>
+      <div class="card-label">Geräte-Sync</div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:12px;">
-        Damit alle GerÃ¤te dieselben Daten sehen, muss die GerÃ¤te-ID Ã¼bereinstimmen.
-        Kopiere die ID vom HauptgerÃ¤t und fÃ¼ge sie auf dem anderen GerÃ¤t ein.
+        Damit alle Geräte dieselben Daten sehen, muss die Geräte-ID übereinstimmen.
+        Kopiere die ID vom Hauptgerät und füge sie auf dem anderen Gerät ein.
       </div>
       <div class="setting-row" style="margin-bottom:8px;">
-        <span class="setting-label" style="font-size:11px;color:var(--muted);">Meine GerÃ¤te-ID</span>
+        <span class="setting-label" style="font-size:11px;color:var(--muted);">Meine Geräte-ID</span>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:12px;">
         <input type="text" id="sync-uid-display" readonly
           style="flex:1;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--muted);">
-        <button class="btn btn-ghost btn-sm" onclick="copyUserId()" style="white-space:nowrap;">ðŸ“‹ Kopieren</button>
+        <button class="btn btn-ghost btn-sm" onclick="copyUserId()" style="white-space:nowrap;">📋 Kopieren</button>
       </div>
-      <div style="margin-bottom:8px;font-size:12px;color:var(--muted);">Andere ID einfÃ¼gen (neues GerÃ¤t):</div>
+      <div style="margin-bottom:8px;font-size:12px;color:var(--muted);">Andere ID einfügen (neues Gerät):</div>
       <div style="display:flex;gap:8px;margin-bottom:8px;">
-        <input type="text" id="sync-uid-input" placeholder="UUID hier einfÃ¼gen â€¦"
+        <input type="text" id="sync-uid-input" placeholder="UUID hier einfügen …"
           style="flex:1;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px;">
-        <button class="btn btn-primary btn-sm" onclick="applyUserId()" style="white-space:nowrap;">âœ“ Ãœbernehmen</button>
+        <button class="btn btn-primary btn-sm" onclick="applyUserId()" style="white-space:nowrap;">✓ Übernehmen</button>
       </div>
       <div id="sync-uid-canvas" style="margin-top:12px;text-align:center;"></div>
       <button class="btn btn-ghost" style="width:100%;font-size:13px;margin-top:8px;" onclick="showQrCode()">
-        ðŸ“± QR-Code anzeigen
+        📱 QR-Code anzeigen
       </button>
     </div>
   </div>
@@ -389,33 +389,33 @@
 <!-- NAV -->
 <nav class="nav">
   <button class="nav-btn active" id="nav-home" onclick="gotoPage('home',this)">
-    <span class="icon">ðŸ </span><span>Ãœbersicht</span>
+    <span class="icon">🏠</span><span>Übersicht</span>
   </button>
   <button class="nav-btn" id="nav-log" onclick="gotoPage('log',this)">
-    <span class="icon">ðŸ“</span><span>Heute</span>
+    <span class="icon">📝</span><span>Heute</span>
   </button>
   <button class="nav-btn" id="nav-fasten" onclick="gotoPage('fasten',this)">
-    <span class="icon">â±ï¸</span><span>Fasten</span>
+    <span class="icon">⏱️</span><span>Fasten</span>
   </button>
   <button class="nav-btn" id="nav-rezepte" onclick="gotoPage('rezepte',this)">
-    <span class="icon">ðŸ¥—</span><span>Rezepte</span>
+    <span class="icon">🥗</span><span>Rezepte</span>
   </button>
   <button class="nav-btn" id="nav-progress" onclick="gotoPage('progress',this)">
-    <span class="icon">ðŸ“Š</span><span>Mehr</span>
+    <span class="icon">📊</span><span>Mehr</span>
   </button>
 </nav>
 
 <div class="toast" id="toast"></div>
 <div class="modal-overlay hidden" id="update-modal" style="z-index:999;">
   <div class="modal-box" style="max-width:360px;">
-    <div class="modal-title" style="color:var(--accent);">ðŸŽ‰ Update verfÃ¼gbar</div>
+    <div class="modal-title" style="color:var(--accent);">🎉 Update verfügbar</div>
     <div style="margin-bottom:8px;font-size:14px;color:var(--muted);">
-      Version <strong id="update-version" style="color:var(--text);"></strong> ist jetzt verfÃ¼gbar.<br>
-      Deine Daten in Supabase bleiben vollstÃ¤ndig erhalten.
+      Version <strong id="update-version" style="color:var(--text);"></strong> ist jetzt verfügbar.<br>
+      Deine Daten in Supabase bleiben vollständig erhalten.
     </div>
     <ul id="update-changelog" style="font-size:13px;line-height:1.8;padding-left:18px;color:var(--text);margin-bottom:16px;"></ul>
     <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="document.getElementById('update-modal').classList.add('hidden')">SpÃ¤ter</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('update-modal').classList.add('hidden')">Später</button>
       <button class="btn btn-primary" onclick="applyUpdate()">Jetzt aktualisieren</button>
     </div>
   </div>
@@ -433,11 +433,11 @@
     <div class="modal-row">
       <label class="input-label">Kategorie</label>
       <select id="fm-kat">
-        <option>GemÃ¼se</option><option>Obst</option><option>HÃ¼lsenfrÃ¼chte</option>
+        <option>Gemüse</option><option>Obst</option><option>Hülsenfrüchte</option>
         <option>Tofu/Tempeh/Fleischersatz</option><option>Fleisch/Fisch</option>
         <option>Milchprodukte</option><option>Brot/Getreide</option>
-        <option>NÃ¼sse/Samen</option><option>SÃ¼ÃŸigkeiten</option>
-        <option>Snacks</option><option>Ã–le/Fette</option><option>Sonstiges</option>
+        <option>Nüsse/Samen</option><option>Süßigkeiten</option>
+        <option>Snacks</option><option>Öle/Fette</option><option>Sonstiges</option>
       </select>
     </div>
     <div class="modal-row">
@@ -458,15 +458,15 @@
     <input type="hidden" id="rm-id">
     <div class="modal-row">
       <label class="input-label">Titel</label>
-      <input type="text" id="rm-titel" placeholder="z.B. GemÃ¼se-Omelette">
+      <input type="text" id="rm-titel" placeholder="z.B. Gemüse-Omelette">
     </div>
     <div class="modal-row">
       <label class="input-label">Kurzbeschreibung</label>
-      <input type="text" id="rm-beschreibung" placeholder="z.B. ca. 280 kcal Â· 20 min">
+      <input type="text" id="rm-beschreibung" placeholder="z.B. ca. 280 kcal · 20 min">
     </div>
     <div class="modal-row">
       <label class="input-label">Anleitung / Zubereitung</label>
-      <textarea id="rm-anleitung" rows="5" placeholder="Schritt fÃ¼r Schritt â€¦"></textarea>
+      <textarea id="rm-anleitung" rows="5" placeholder="Schritt für Schritt …"></textarea>
     </div>
     <div class="modal-row" style="display:flex;gap:12px;">
       <div style="flex:1;">
@@ -482,16 +482,16 @@
       <label class="input-label">Tags</label>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
         <label style="display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer;">
-          <input type="checkbox" id="rm-tag-if"> â± IF-geeignet
+          <input type="checkbox" id="rm-tag-if"> ⏱ IF-geeignet
         </label>
         <label style="display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer;">
-          <input type="checkbox" id="rm-tag-low"> ðŸ¥— Kalorienarm
+          <input type="checkbox" id="rm-tag-low"> 🥗 Kalorienarm
         </label>
         <label style="display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer;">
-          <input type="checkbox" id="rm-tag-vegan"> ðŸŒ± Vegan
+          <input type="checkbox" id="rm-tag-vegan"> 🌱 Vegan
         </label>
         <label style="display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer;">
-          <input type="checkbox" id="rm-tag-veg"> ðŸ¥¦ Vegetarisch
+          <input type="checkbox" id="rm-tag-veg"> 🥦 Vegetarisch
         </label>
       </div>
     </div>
