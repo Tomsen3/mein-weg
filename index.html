@@ -89,7 +89,7 @@
   <div class="card">
     <div class="card-label">Datum im Tagebuch</div>
     <div class="input-row" style="margin-top:10px;">
-      <input type="date" id="log-date-input" onchange="setLogDate(this.value)" style="flex:1;">
+      <input type="date" id="log-date-input" data-change-action="setLogDate" style="flex:1;">
       <button class="btn btn-ghost btn-sm" data-action="setLogToday">Heute</button>
     </div>
   </div>
@@ -146,7 +146,7 @@
     <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:14px;">
       <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Mahlzeit hinzufügen</div>
       <div class="food-search-wrap">
-        <input type="text" id="inp-food-search" placeholder="🔍 Lebensmittel suchen …" oninput="onFoodSearch()" autocomplete="off">
+        <input type="text" id="inp-food-search" placeholder="🔍 Lebensmittel suchen …" data-input-action="onFoodSearch" autocomplete="off">
         <div class="food-suggestions" id="food-suggestions" style="display:none;"></div>
       </div>
       <div id="food-selected-row" style="display:none;">
@@ -162,7 +162,7 @@
         <div class="food-entry-row">
           <div style="flex:1;">
             <label class="input-label">Menge (Gramm)</label>
-            <input type="number" id="inp-food-gramm" placeholder="z.B. 150" min="1" oninput="updateKcalPreview()">
+            <input type="number" id="inp-food-gramm" placeholder="z.B. 150" min="1" data-input-action="updateKcalPreview">
           </div>
           <div class="kcal-preview" id="kcal-preview">= 0 kcal</div>
         </div>
@@ -247,7 +247,7 @@
   <div class="card">
     <div class="card-label">Mein Ziel heute</div>
     <div style="margin:10px 0;">
-      <select id="fasten-plan" onchange="saveFastenPlan()" style="background:var(--card2);border:1px solid var(--border);">
+      <select id="fasten-plan" data-change-action="saveFastenPlan" style="background:var(--card2);border:1px solid var(--border);">
         <option value="14">14 Stunden fasten (14:10)</option>
         <option value="16" selected>16 Stunden fasten (16:8)</option>
         <option value="18">18 Stunden fasten (18:6)</option>
@@ -279,7 +279,7 @@
     </div>
   </div>
   <input type="text" id="rezept-search" placeholder="🔍 Rezept oder Zutat suchen …"
-  oninput="renderRezepte()"
+  data-input-action="renderRezepte"
   style="width:100%;margin-bottom:12px;padding:10px 14px;border-radius:12px;
   border:1px solid var(--border);background:var(--bg3);font-size:14px;
   font-family:'Nunito',sans-serif;color:var(--text);">
@@ -345,8 +345,8 @@
           <button class="btn btn-primary btn-sm" data-action="openAddFoodModal">+ Neu</button>
         </div>
       </div>
-      <input type="file" id="food-db-import-input" accept="application/json,.json" onchange="importFoodDBFile(event)" style="display:none;">
-      <input type="text" id="db-search" placeholder="🔍 Durchsuchen …" oninput="renderDB()" style="margin-bottom:10px;">
+      <input type="file" id="food-db-import-input" accept="application/json,.json" data-change-action="importFoodDBFile" style="display:none;">
+      <input type="text" id="db-search" placeholder="🔍 Durchsuchen …" data-input-action="renderDB" style="margin-bottom:10px;">
       <div class="db-filter-row" id="db-cat-filter"></div>
       <div id="db-list"></div>
       <div style="margin-top:10px;font-size:12px;color:var(--muted);text-align:right;" id="db-count"></div>
@@ -359,23 +359,23 @@
       <div class="card-label">Einstellungen</div>
       <div class="setting-row">
         <span class="setting-label">Startgewicht</span>
-        <input type="number" id="set-start" step="0.1" style="width:80px;text-align:right;background:transparent;border:none;color:var(--accent2);font-size:14px;font-weight:500;" onchange="saveSettings()">
+        <input type="number" id="set-start" step="0.1" style="width:80px;text-align:right;background:transparent;border:none;color:var(--accent2);font-size:14px;font-weight:500;" data-change-action="saveSettings">
       </div>
       <div class="setting-row">
         <span class="setting-label">Zielgewicht</span>
-        <input type="number" id="set-ziel" step="0.1" style="width:80px;text-align:right;background:transparent;border:none;color:var(--green);font-size:14px;font-weight:500;" onchange="saveSettings()">
+        <input type="number" id="set-ziel" step="0.1" style="width:80px;text-align:right;background:transparent;border:none;color:var(--green);font-size:14px;font-weight:500;" data-change-action="saveSettings">
       </div>
       <div class="setting-row">
         <span class="setting-label">Kalorienziel</span>
-        <input type="number" id="set-kcal" style="width:80px;text-align:right;background:transparent;border:none;color:var(--text);font-size:14px;font-weight:500;" onchange="saveSettings()">
+        <input type="number" id="set-kcal" style="width:80px;text-align:right;background:transparent;border:none;color:var(--text);font-size:14px;font-weight:500;" data-change-action="saveSettings">
       </div>
       <div class="setting-row">
         <span class="setting-label">Wasserziel (L)</span>
-        <input type="number" id="set-wasser" step="0.25" style="width:80px;text-align:right;background:transparent;border:none;color:var(--blue);font-size:14px;font-weight:500;" onchange="saveSettings()">
+        <input type="number" id="set-wasser" step="0.25" style="width:80px;text-align:right;background:transparent;border:none;color:var(--blue);font-size:14px;font-weight:500;" data-change-action="saveSettings">
       </div>
       <div class="setting-row">
         <span class="setting-label">Schrittziel</span>
-        <input type="number" id="set-schritte" style="width:80px;text-align:right;background:transparent;border:none;color:var(--text);font-size:14px;font-weight:500;" onchange="saveSettings()">
+        <input type="number" id="set-schritte" style="width:80px;text-align:right;background:transparent;border:none;color:var(--text);font-size:14px;font-weight:500;" data-change-action="saveSettings">
       </div>
     </div>
      <div class="card">
@@ -408,7 +408,7 @@
         <button class="btn btn-ghost btn-sm" data-action="downloadBackup">Backup exportieren</button>
         <button class="btn btn-primary btn-sm" data-action="triggerBackupImport">Backup importieren</button>
       </div>
-      <input type="file" id="backup-import-input" accept="application/json,.json" onchange="importBackupFile(event)" style="display:none;">
+      <input type="file" id="backup-import-input" accept="application/json,.json" data-change-action="importBackupFile" style="display:none;">
     </div>
     <div class="card">
       <div class="card-label">Geräte-Sync</div>
