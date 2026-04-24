@@ -52,7 +52,13 @@ async function initApp() {
 }
 
 // Beim Laden starten
-initApp();
+initApp().catch(e => {
+  console.error('initApp Fehler:', e);
+  if (typeof setSbStatus === 'function') setSbStatus(false, 'Nicht verbunden');
+  try {
+    toast('App-Start unvollst\u00e4ndig. Bitte Seite neu laden.');
+  } catch (_) {}
+});
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').then(reg => {
