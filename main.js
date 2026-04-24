@@ -17,7 +17,6 @@ async function initApp() {
     console.warn('initApp Render-Fehler:', e);
   }
 
-  // Supabase-Verbindung prüfen, dann Daten laden
   try {
     await checkSbConnection();
   } catch (e) {
@@ -27,15 +26,24 @@ async function initApp() {
 
   if (sbOnline) {
     try {
-      // Settings aus Supabase laden (überschreibt localStorage falls vorhanden)
       const sbSettings = await sbLoadSettings();
       if (sbSettings) renderAll();
 
-      // Fasten-State aus Supabase laden
+      const didLoadWeightLog = await syncWeightLog();
+      if (didLoadWeightLog) {
+        renderAll();
+        renderProgress();
+      }
+
+      const didLoadRecentDays = await syncRecentDayData(14);
+      if (didLoadRecentDays) {
+        renderAll();
+        renderFastenPage();
+      }
+
       const sbFasten = await sbLoadFastenState();
       if (sbFasten) renderFastenPage();
 
-      // Tageslog für heute vorausladen (Hintergrund)
       sbLoadDayData(TODAY())
         .then(d => { if (d) renderAll(); })
         .catch(e => console.warn('sbLoadDayData Fehler:', e));
@@ -51,7 +59,14 @@ async function initApp() {
   checkForUpdate(false);
 }
 
-// Beim Laden starten
+function notifyServiceWorkerUpdate(worker) {
+  window.__pendingServiceWorker = worker;
+  showUpdateModal(APP_VERSION, [
+    'Neue App-Dateien wurden installiert.',
+    'Tippe auf Jetzt aktualisieren, damit die neue Version aktiv wird.'
+  ]);
+}
+
 initApp().catch(e => {
   console.error('initApp Fehler:', e);
   if (typeof setSbStatus === 'function') setSbStatus(false, 'Nicht verbunden');
@@ -61,15 +76,28 @@ initApp().catch(e => {
 });
 
 if ('serviceWorker' in navigator) {
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (refreshing) return;
+    refreshing = true;
+    window.location.reload();
+  });
+
   navigator.serviceWorker.register('sw.js').then(reg => {
-    reg.onupdatefound = () => {
+    if (reg.waiting && navigator.serviceWorker.controller) {
+      notifyServiceWorkerUpdate(reg.waiting);
+    }
+
+    reg.addEventListener('updatefound', () => {
       const w = reg.installing;
-      w.onstatechange = () => {
+      if (!w) return;
+      w.addEventListener('statechange', () => {
         if (w.state === 'installed' && navigator.serviceWorker.controller) {
-          toast('Update verfügbar – App wird neu geladen …');
-          setTimeout(() => location.reload(), 2000);
+          notifyServiceWorkerUpdate(w);
         }
-      };
-    };
+      });
+    });
+  }).catch(e => {
+    console.warn('Service Worker Registrierung fehlgeschlagen:', e);
   });
 }
