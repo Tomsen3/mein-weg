@@ -1,5 +1,5 @@
 {
-  "version": "1.9",
+  "version": "1.10",
   "changelog": [
     "Texte und Einstellungen verständlicher formuliert",
     "Backup- und Geräte-Sync-Bereich sprachlich überarbeitet",
@@ -8,6 +8,7 @@
     "Service Worker registriert sich jetzt relativ zum aktuellen Deploy-Pfad",
     "Offline-Cache speichert nur noch passende statische GET-Anfragen der eigenen App",
     "Einstellungen validieren Start-, Ziel- und Tagesziele defensiv",
-    "App startet direkt ohne Aktivierungscode"
+    "App startet direkt ohne Aktivierungscode",
+    "Supabase-Verbindungsstatus bleibt nicht mehr auf Pr\u00fcfe Verbindung stehen"
   ]
 }
