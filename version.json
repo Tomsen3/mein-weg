@@ -1,5 +1,5 @@
 {
-  "version": "1.10",
+  "version": "1.16",
   "changelog": [
     "Texte und Einstellungen verständlicher formuliert",
     "Backup- und Geräte-Sync-Bereich sprachlich überarbeitet",
@@ -9,6 +9,19 @@
     "Offline-Cache speichert nur noch passende statische GET-Anfragen der eigenen App",
     "Einstellungen validieren Start-, Ziel- und Tagesziele defensiv",
     "App startet direkt ohne Aktivierungscode",
-    "Supabase-Verbindungsstatus bleibt nicht mehr auf Pr\u00fcfe Verbindung stehen"
+    "Supabase-Verbindungsstatus bleibt nicht mehr auf Pr\u00fcfe Verbindung stehen",
+    "Tagesdatum, Streaks und Fasten-Logs nutzen jetzt das lokale Datum statt UTC",
+    "Sync-Logik f\u00fcr Tageslog, Gewicht und Fasten klarer vereinheitlicht",
+    "Service-Worker-Updates werden kontrolliert aktiviert und robuster neu geladen",
+    "Chart.js wird lokal geladen und funktioniert dadurch auch offline",
+    "Supabase-Status unterscheidet Netzwerk, API-Key und Tabellen-/Rechtefehler",
+    "Tagebuch kann rückwirkend per Datumsauswahl bearbeitet werden",
+    "Mahlzeiten können nachträglich bearbeitet werden",
+    "Lebensmittel-Datenbank kann separat exportiert und importiert werden",
+    "Fasten-Historie zeigt Durchschnitt, Zielquote, beste Woche und Monatskalender",
+    "Riskante Aktionen erzeugen vorher automatisch ein Sicherheitsbackup",
+    "Kleine Testdatei prüft Datum, Version, Backup, kcal und Supabase-Status",
+    "Mahlzeiten-Aktionen nutzen Event-Delegation statt Inline-onclick",
+    "Tests prüfen typische Encoding-/Mojibake-Marker"
   ]
 }
