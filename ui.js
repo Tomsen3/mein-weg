@@ -297,6 +297,48 @@ document.addEventListener('click', e => {
   if (btn.dataset.mealAction === 'delete') deleteMeal(idx);
 });
 
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-action]');
+  if (!btn) return;
+
+  const value = btn.dataset.value;
+  const actions = {
+    gotoPageById: () => gotoPageById(value),
+    setLogToday: () => setLogDate(TODAY()),
+    saveKg: () => saveKg(),
+    addWasser: () => addWasser(parseFloat(value)),
+    saveSchritte: () => saveSchritte(),
+    clearFoodSelection: () => clearFoodSelection(),
+    addMealFromDB: () => addMealFromDB(),
+    addMealManual: () => addMealManual(),
+    setFastenZiel: () => setFastenZiel(parseInt(value, 10)),
+    toggleFasten: () => toggleFasten(),
+    openRezeptModal: () => openRezeptModal(value),
+    setRezFilter: () => setRezFilter(value),
+    switchTab: () => switchTab(value, btn),
+    clearWeightLog: () => clearWeightLog(),
+    downloadFoodDB: () => downloadFoodDB(),
+    triggerFoodDBImport: () => triggerFoodDBImport(),
+    openAddFoodModal: () => openAddFoodModal(),
+    checkForUpdate: () => checkForUpdate(value === 'true'),
+    downloadBackup: () => downloadBackup(),
+    triggerBackupImport: () => triggerBackupImport(),
+    copyUserId: () => copyUserId(),
+    applyUserId: () => applyUserId(),
+    showQrCode: () => showQrCode(),
+    gotoPage: () => gotoPage(value, btn),
+    hideModal: () => document.getElementById(value)?.classList.add('hidden'),
+    applyUpdate: () => applyUpdate(),
+    closeFoodModal: () => closeFoodModal(),
+    saveFoodModal: () => saveFoodModal(),
+    closeRezeptModal: () => closeRezeptModal(),
+    saveRezeptModal: () => saveRezeptModal()
+  };
+
+  const run = actions[btn.dataset.action];
+  if (run) run();
+});
+
 // ============================================================
 // SUPABASE: REZEPTE
 // ============================================================
