@@ -1,3 +1,17 @@
+let selectedLogDate = TODAY();
+
+function LOG_DATE() {
+  return selectedLogDate || TODAY();
+}
+
+function setLogDate(value) {
+  selectedLogDate = value || TODAY();
+  sbLoadDayData(selectedLogDate)
+    .then(d => { if (d) renderLog(); })
+    .catch(e => console.warn('sbLoadDayData Fehler:', e));
+  renderLog();
+}
+
 function fillSettingsForm() {
   const ss = getSettings();
   document.getElementById('set-start').value   = ss.start;
@@ -218,10 +232,10 @@ function addMealFromDB() {
   const g = parseFloat(document.getElementById('inp-food-gramm').value);
   if (!g || g <= 0) { toast('Bitte eine Menge in Gramm eingeben.'); return; }
   const kcal = Math.round((selectedFood.kcal * g) / 100);
-  const d = getDayData(TODAY());
+  const d = getDayData(LOG_DATE());
   d.meals = d.meals || [];
   d.meals.push({ name: selectedFood.name, gramm: g, kcal, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
-  saveDayData(TODAY(), d);
+  saveDayData(LOG_DATE(), d);
   clearFoodSelection(); renderAll(); toast(`${selectedFood.name} hinzugefügt.`);
 }
 
@@ -229,20 +243,41 @@ function addMealManual() {
   const name = document.getElementById('inp-meal-name').value.trim();
   const kcal = parseInt(document.getElementById('inp-meal-kcal').value);
   if (!name) { toast('Bitte einen Namen eingeben.'); return; }
-  const d = getDayData(TODAY());
+  const d = getDayData(LOG_DATE());
   d.meals = d.meals || [];
   d.meals.push({ name, kcal: kcal || 0, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
-  saveDayData(TODAY(), d);
+  saveDayData(LOG_DATE(), d);
   document.getElementById('inp-meal-name').value = '';
   document.getElementById('inp-meal-kcal').value = '';
   renderAll(); toast('Mahlzeit hinzugefügt.');
 }
 
 function deleteMeal(idx) {
-  const d = getDayData(TODAY());
+  const d = getDayData(LOG_DATE());
   d.meals.splice(idx, 1);
-  saveDayData(TODAY(), d);
+  saveDayData(LOG_DATE(), d);
   renderAll();
+}
+
+function editMeal(idx) {
+  const d = getDayData(LOG_DATE());
+  const meal = (d.meals || [])[idx];
+  if (!meal) return;
+
+  const name = prompt('Name der Mahlzeit', meal.name || '');
+  if (name === null) return;
+  const kcalInput = prompt('Kalorien', String(meal.kcal || 0));
+  if (kcalInput === null) return;
+  const kcal = parseInt(kcalInput, 10);
+  if (!name.trim() || !Number.isFinite(kcal) || kcal < 0) {
+    toast('Bitte gültige Mahlzeitendaten eingeben.');
+    return;
+  }
+
+  d.meals[idx] = { ...meal, name: name.trim(), kcal };
+  saveDayData(LOG_DATE(), d);
+  renderAll();
+  toast('Mahlzeit aktualisiert.');
 }
 
 document.addEventListener('click', e => {
@@ -250,6 +285,16 @@ document.addEventListener('click', e => {
     const s = document.getElementById('food-suggestions');
     if (s) s.style.display = 'none';
   }
+});
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-meal-action]');
+  if (!btn) return;
+  const idx = parseInt(btn.dataset.mealIndex, 10);
+  if (!Number.isInteger(idx)) return;
+
+  if (btn.dataset.mealAction === 'edit') editMeal(idx);
+  if (btn.dataset.mealAction === 'delete') deleteMeal(idx);
 });
 
 // ============================================================
@@ -597,15 +642,16 @@ function formatDate(d) {
 function saveKg() {
   const v = parseFloat(document.getElementById('inp-kg').value);
   if (!v || v < 30 || v > 300) { toast('Bitte einen gültigen Wert eingeben.'); return; }
-  const d = getDayData(TODAY());
+  const date = LOG_DATE();
+  const d = getDayData(date);
   d.kg = v;
-  saveDayData(TODAY(), d);    // speichert auch in Supabase mw_tageslog
+  saveDayData(date, d);    // speichert auch in Supabase mw_tageslog
   const wlog = ls('wlog') || [];
-  const ex = wlog.findIndex(e => e.date === TODAY());
-  if (ex >= 0) wlog[ex].kg = v; else wlog.push({ date: TODAY(), kg: v });
+  const ex = wlog.findIndex(e => e.date === date);
+  if (ex >= 0) wlog[ex].kg = v; else wlog.push({ date, kg: v });
   wlog.sort((a,b) => a.date.localeCompare(b.date));
   lsSet('wlog', wlog);
-  sbSaveGewicht(TODAY(), v);  // zusätzlich in mw_gewicht (separates log)
+  sbSaveGewicht(date, v);  // zusaetzlich in mw_gewicht (separates log)
   document.getElementById('inp-kg').value = '';
   renderAll();
   toast('Gewicht gespeichert.');
@@ -616,9 +662,9 @@ function saveKg() {
 // ============================================================
 
 function addWasser(delta) {
-  const d = getDayData(TODAY());
+  const d = getDayData(LOG_DATE());
   d.wasser = Math.max(0, Math.round((d.wasser + delta) * 100) / 100);
-  saveDayData(TODAY(), d);
+  saveDayData(LOG_DATE(), d);
   renderAll();
 }
 
@@ -629,9 +675,9 @@ function addWasser(delta) {
 function saveSchritte() {
   const v = parseInt(document.getElementById('inp-schritte').value);
   if (!v || v < 0) { toast('Bitte einen gültigen Wert eingeben.'); return; }
-  const d = getDayData(TODAY());
+  const d = getDayData(LOG_DATE());
   d.schritte = v;
-  saveDayData(TODAY(), d);
+  saveDayData(LOG_DATE(), d);
   document.getElementById('inp-schritte').value = '';
   renderAll(); toast('Schritte gespeichert.');
 }
@@ -653,8 +699,12 @@ function toggleFasten() {
   const s = getFastenState();
   if (s.active) {
     const fastenLog = ls('fasten_log') || {};
-    fastenLog[TODAY()] = {zielH: s.zielH, startedAt: s.start, endedAt: Date.now()};
+    const entry = {zielH: s.zielH, startedAt: s.start, endedAt: Date.now()};
+    fastenLog[TODAY()] = entry;
     lsSet('fasten_log', fastenLog);
+    const day = getDayData(TODAY());
+    day.fasten = entry;
+    saveDayData(TODAY(), day);
     s.active = false; s.start = null;
     toast('Fasten beendet! Gut gemacht! 🎉');
   } else {
@@ -662,6 +712,88 @@ function toggleFasten() {
     toast('Fasten gestartet ✓');
   }
   saveFastenState(s); renderFastenPage(); renderHome();
+}
+
+function getFastenEntries() {
+  const fastenLog = ls('fasten_log') || {};
+  const entries = Object.entries(fastenLog).map(([date, entry]) => ({ date, ...entry }));
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (!key || !key.startsWith(KEY + 'day_')) continue;
+    const date = key.slice((KEY + 'day_').length);
+    const day = ls('day_' + date);
+    if (day && day.fasten && !entries.some(e => e.date === date)) {
+      entries.push({ date, ...day.fasten });
+    }
+  }
+
+  return entries
+    .filter(e => e.startedAt && e.endedAt && e.endedAt > e.startedAt)
+    .map(e => {
+      const durationH = (e.endedAt - e.startedAt) / 3600000;
+      const zielH = Number(e.zielH || 16);
+      return { ...e, durationH, zielH, reached: durationH >= zielH };
+    })
+    .sort((a,b) => a.date.localeCompare(b.date));
+}
+
+function renderFastenStats(entries) {
+  const countEl = document.getElementById('fasten-count');
+  if (!countEl) return;
+
+  if (entries.length === 0) {
+    document.getElementById('fasten-avg').textContent = '–';
+    document.getElementById('fasten-goal-rate').textContent = '–';
+    document.getElementById('fasten-best-week').textContent = '–';
+    countEl.textContent = '0';
+    return;
+  }
+
+  const avg = entries.reduce((sum, e) => sum + e.durationH, 0) / entries.length;
+  const reached = entries.filter(e => e.reached).length;
+  const weeks = {};
+  entries.forEach(e => {
+    if (!e.reached) return;
+    const d = new Date(e.date + 'T00:00:00');
+    const monday = new Date(d);
+    monday.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+    const key = dateKey(monday);
+    weeks[key] = (weeks[key] || 0) + 1;
+  });
+  const best = Object.values(weeks).reduce((max, n) => Math.max(max, n), 0);
+
+  document.getElementById('fasten-avg').textContent = avg.toFixed(1) + 'h';
+  document.getElementById('fasten-goal-rate').textContent = Math.round((reached / entries.length) * 100) + '%';
+  document.getElementById('fasten-best-week').textContent = best ? String(best) : '–';
+  countEl.textContent = String(entries.length);
+}
+
+function renderFastenCalendar(entries) {
+  const cal = document.getElementById('fasten-calendar');
+  if (!cal) return;
+
+  const today = new Date();
+  const first = new Date(today.getFullYear(), today.getMonth(), 1);
+  const last = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+  const title = document.getElementById('fasten-calendar-title');
+  if (title) title.textContent = 'Fasten-Kalender ' + today.toLocaleDateString('de-DE', { month:'long', year:'numeric' });
+
+  const byDate = {};
+  entries.forEach(e => { byDate[e.date] = e; });
+  const heads = ['Mo','Di','Mi','Do','Fr','Sa','So'].map(d => `<div class="fasten-cal-head">${d}</div>`);
+  const cells = [];
+  for (let i = 0; i < ((first.getDay() + 6) % 7); i++) cells.push('<div class="fasten-cal-day empty"></div>');
+  for (let day = 1; day <= last.getDate(); day++) {
+    const dt = new Date(today.getFullYear(), today.getMonth(), day);
+    const key = dateKey(dt);
+    const entry = byDate[key];
+    const cls = entry ? (entry.reached ? ' done' : ' missed') : '';
+    const isToday = key === TODAY() ? ' today' : '';
+    const titleText = entry ? `${entry.durationH.toFixed(1)}h / Ziel ${entry.zielH}h` : 'Kein Eintrag';
+    cells.push(`<div class="fasten-cal-day${cls}${isToday}" title="${titleText}">${day}</div>`);
+  }
+  cal.innerHTML = heads.join('') + cells.join('');
 }
 
 function renderFastenPage() {
@@ -719,13 +851,18 @@ function renderFastenPage() {
   streakEl.innerHTML = '';
   for (let i=13; i>=0; i--) {
     const dt = new Date(); dt.setDate(dt.getDate()-i);
-    const key = dt.toISOString().slice(0,10);
+    const key = dateKey(dt);
     const dot = document.createElement('div');
-    dot.className = 'streak-dot' + (fastenLog[key]?' done':'') + (i===0?' today':'');
+    const syncedDay = getDayData(key);
+    dot.className = 'streak-dot' + ((fastenLog[key] || syncedDay.fasten)?' done':'') + (i===0?' today':'');
     dot.title = key;
     dot.textContent = dt.getDate();
     streakEl.appendChild(dot);
   }
+
+  const entries = getFastenEntries();
+  renderFastenStats(entries);
+  renderFastenCalendar(entries);
 }
 
 // ============================================================
@@ -748,7 +885,6 @@ function renderHome() {
   const wlog = ls('wlog') || [];
 
   document.getElementById('home-date').textContent = formatDate(TODAY());
-  document.getElementById('log-date').textContent  = formatDate(TODAY());
 
   const idx = new Date().getDate() % MOTIVATIONS.length;
   const mv  = MOTIVATIONS[idx];
@@ -804,7 +940,7 @@ function renderHome() {
   streakEl.innerHTML = '';
   for (let i=6; i>=0; i--) {
     const dt  = new Date(); dt.setDate(dt.getDate()-i);
-    const key = dt.toISOString().slice(0,10);
+    const key = dateKey(dt);
     const dd  = getDayData(key);
     const done= dd.kg !== null || (dd.meals||[]).length > 0 || dd.schritte > 0;
     const dot = document.createElement('div');
@@ -822,12 +958,18 @@ function renderHome() {
 
 function renderLog() {
   const s = getSettings();
-  const d = getDayData(TODAY());
+  const date = LOG_DATE();
+  const d = getDayData(date);
+  const dateInput = document.getElementById('log-date-input');
+  if (dateInput && dateInput.value !== date) dateInput.value = date;
+  document.getElementById('log-date').textContent = formatDate(date);
+  const selectedIsToday = date === TODAY();
 
   document.getElementById('log-wasser').textContent = d.wasser.toFixed(2);
   document.getElementById('wasser-bar').style.width = Math.min(100,(d.wasser/s.wasserMax)*100)+'%';
   document.getElementById('schritte-bar').style.width = Math.min(100,(d.schritte/s.schritteMax)*100)+'%';
-  if (d.schritte) document.getElementById('inp-schritte').placeholder = d.schritte.toLocaleString('de-DE')+' (aktuell)';
+  document.getElementById('inp-kg').placeholder = d.kg ? d.kg.toFixed(1) + ' kg (aktuell)' : 'z.B. 102.5';
+  document.getElementById('inp-schritte').placeholder = d.schritte ? d.schritte.toLocaleString('de-DE')+' (aktuell)' : 'z.B. 6500';
 
   const meals    = d.meals || [];
   const kcalTotal= meals.reduce((a,m)=>a+(m.kcal||0),0);
@@ -852,7 +994,7 @@ function renderLog() {
 
   const ml = document.getElementById('meal-list');
   if (meals.length === 0) {
-    ml.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:8px 0;">Noch keine Einträge heute.</div>';
+    ml.innerHTML = `<div style="color:var(--muted);font-size:13px;padding:8px 0;">Noch keine Einträge ${selectedIsToday ? 'heute' : 'an diesem Tag'}.</div>`;
   } else {
     ml.innerHTML = meals.map((m,i) => `
       <div class="meal-item">
@@ -862,7 +1004,8 @@ function renderLog() {
         </div>
         <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
           <span class="meal-kcal">${m.kcal} kcal</span>
-          <button class="meal-del" onclick="deleteMeal(${i})">✕</button>
+          <button class="meal-del" data-meal-action="edit" data-meal-index="${i}">✎</button>
+          <button class="meal-del" data-meal-action="delete" data-meal-index="${i}">✕</button>
         </div>
       </div>
     `).join('');
@@ -951,7 +1094,10 @@ function renderProgress() {
 
 function clearWeightLog() {
   if (!confirm('Wirklich den gesamten Gewichtsverlauf löschen?')) return;
-  lsSet('wlog', []); renderProgress(); renderHome(); toast('Verlauf gelöscht');
+  createSafetyBackup('vor-verlauf-loeschen');
+  lsSet('wlog', []);
+  sbClearWeightLog();
+  renderProgress(); renderHome(); toast('Verlauf gelöscht');
 }
 
 // ============================================================
@@ -1004,6 +1150,10 @@ function showUpdateModal(newVersion, changelog) {
 
 async function applyUpdate() {
   localStorage.setItem('meinweg_known_version', APP_VERSION);
+  if (window.__pendingServiceWorker) {
+    window.__pendingServiceWorker.postMessage({ type: 'SKIP_WAITING' });
+    return;
+  }
   if ('caches' in window) {
     const keys = await caches.keys();
     await Promise.all(keys.map(k => caches.delete(k)));
@@ -1041,18 +1191,27 @@ function initSyncUid() {
 }
 
 function downloadBackup() {
+  createBackupDownload('backup');
+  toast('Backup exportiert.');
+}
+
+function createBackupDownload(label = 'backup') {
   const payload = getBackupPayload();
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
   link.href = url;
-  link.download = `meinweg-backup-${stamp}.json`;
+  link.download = `meinweg-${label}-${stamp}.json`;
   document.body.appendChild(link);
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  toast('Backup exportiert.');
+}
+
+function createSafetyBackup(reason) {
+  createBackupDownload('sicherheitsbackup-' + reason);
+  toast('Sicherheitsbackup erstellt.');
 }
 
 function triggerBackupImport() {
@@ -1070,12 +1229,57 @@ function importBackupFile(event) {
   reader.onload = () => {
     try {
       const payload = JSON.parse(String(reader.result || '{}'));
+      createSafetyBackup('vor-backup-import');
       applyBackupPayload(payload);
       toast('Backup importiert. Die App wird neu geladen ...');
       setTimeout(() => location.reload(), 1200);
     } catch (e) {
       console.error('Backup-Import fehlgeschlagen:', e);
       toast('Backup konnte nicht importiert werden.');
+    }
+  };
+  reader.onerror = () => {
+    toast('Datei konnte nicht gelesen werden.');
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+function downloadFoodDB() {
+  const payload = getFoodDBPayload();
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+  link.href = url;
+  link.download = `meinweg-lebensmittel-${stamp}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  toast('Lebensmittel exportiert.');
+}
+
+function triggerFoodDBImport() {
+  const input = document.getElementById('food-db-import-input');
+  if (!input) return;
+  input.value = '';
+  input.click();
+}
+
+function importFoodDBFile(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const payload = JSON.parse(String(reader.result || '{}'));
+      applyFoodDBPayload(payload);
+      renderDB();
+      toast('Lebensmittel importiert.');
+    } catch (e) {
+      console.error('Lebensmittel-Import fehlgeschlagen:', e);
+      toast('Lebensmittel konnten nicht importiert werden.');
     }
   };
   reader.onerror = () => {
@@ -1093,6 +1297,7 @@ function applyUserId() {
     return;
   }
   if (!confirm('Geräte-ID wirklich übernehmen? Die App wird danach neu geladen.')) return;
+  createSafetyBackup('vor-geraete-id');
   localStorage.setItem('meinweg_uid', input);
   toast('Geräte-ID übernommen. Die App wird neu geladen ...');
   setTimeout(() => location.reload(), 1500);
