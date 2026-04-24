@@ -21,7 +21,10 @@ async function sbFetch(path, options = {}) {
     const res = await fetch(url, { ...options, headers, signal: controller.signal, cache: 'no-store' });
     if (!res.ok) {
       const err = await res.text();
-      throw new Error('Supabase ' + res.status + ': ' + err);
+      const error = new Error('Supabase ' + res.status + ': ' + err);
+      error.status = res.status;
+      error.details = err;
+      throw error;
     }
     if (res.status === 204) return null;
     return res.json();
@@ -33,6 +36,25 @@ async function sbFetch(path, options = {}) {
   } finally {
     clearTimeout(timeoutId);
   }
+}
+
+function classifySupabaseError(error) {
+  const status = error && error.status;
+  const msg = String((error && (error.message || error.details || error.name)) || '').toLowerCase();
+
+  if (status === 401 || status === 403 || msg.includes('jwt') || msg.includes('api key')) {
+    return 'Nicht verbunden: Supabase/API-Key';
+  }
+  if (status === 404 || status === 406 || status === 409 || msg.includes('relation') || msg.includes('permission') || msg.includes('policy') || msg.includes('rls')) {
+    return 'Nicht verbunden: Tabelle/Rechte';
+  }
+  if (msg.includes('timeout') || msg.includes('failed to fetch') || msg.includes('network') || msg.includes('load failed') || msg.includes('internet') || msg.includes('abort')) {
+    return 'Nicht verbunden: Netzwerk';
+  }
+  if (status && status >= 500) {
+    return 'Nicht verbunden: Supabase/API-Key';
+  }
+  return 'Nicht verbunden: Netzwerk';
 }
 
 // GET mit Filter-String, z.B. 'mw_rezepte?user_id=eq.UUID&order=created_at.desc'
@@ -78,46 +100,31 @@ async function checkSbConnection() {
     setSbStatus(true, 'Verbunden');
   } catch(e) {
     console.warn('checkSbConnection Fehler:', e);
-    setSbStatus(false, 'Nicht verbunden');
+    setSbStatus(false, classifySupabaseError(e));
   }
 }
 // ============================================================
 // SUPABASE – TAGESLOG
 // ============================================================
 
-async function sbSaveDayData(datum, daten) {
-  try {
-    await sbFetch('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + datum, {
-      method: 'POST',
-      body: JSON.stringify({ user_id: USER_ID, datum: datum, daten: daten, updated_at: new Date().toISOString() }),
-      prefer: 'resolution=merge-duplicates,return=minimal',
-      headers: { 'Prefer': 'resolution=merge-duplicates,return=minimal' }
-    });
-  } catch(e) {
-    console.warn('sbSaveDayData Fehler:', e);
-  }
-}
-
-async function sbLoadDayData(datum) {
-  try {
-    const rows = await sbGet('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + datum + '&limit=1');
-    if (rows && rows.length > 0) {
-      return rows[0].daten;
-    }
-    return null;
-  } catch(e) {
-    console.warn('sbLoadDayData Fehler:', e);
-    return null;
-  }
-}
 // ============================================================
 // DATEN & SETTINGS (localStorage)
 // ============================================================
 
 const KEY   = 'meinweg_';
-const TODAY = () => new Date().toISOString().slice(0,10);
+
+function dateKey(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+const TODAY = () => dateKey();
 const BACKUP_APP_ID = 'meinweg-backup';
+const FOOD_DB_EXPORT_APP_ID = 'meinweg-food-db';
 const BACKUP_EXCLUDE_KEYS = new Set(['meinweg_update_check', 'meinweg_known_version']);
+const emptyDayData = () => ({ kg: null, wasser: 0, schritte: 0, meals: [] });
 
 function ls(k)      { try { return JSON.parse(localStorage.getItem(KEY+k)); } catch(e) { return null; } }
 function lsSet(k,v) { localStorage.setItem(KEY+k, JSON.stringify(v)); }
@@ -204,7 +211,7 @@ async function sbLoadDayData(date) {
   try {
     const rows = await sbGet('mw_tageslog?user_id=eq.' + USER_ID + '&datum=eq.' + date + '&limit=1');
     if (rows && rows.length > 0) {
-      const daten = rows[0].daten || { kg: null, wasser: 0, schritte: 0, meals: [] };
+      const daten = Object.assign(emptyDayData(), rows[0].daten || {});
       lsSet('day_' + date, daten);
       _dayCache[date] = daten;
       return daten;
@@ -234,13 +241,39 @@ function getDayData(date) {
   if (_dayCache[date]) return _dayCache[date];
   const local = ls('day_' + date);
   if (local) { _dayCache[date] = local; return local; }
-  return { kg: null, wasser: 0, schritte: 0, meals: [] };
+  return emptyDayData();
 }
 
 function saveDayData(date, data) {
   _dayCache[date] = data;
   lsSet('day_' + date, data);   // sofort lokal (synchron)
   sbSaveDayData(date, data);    // Supabase im Hintergrund
+}
+
+async function syncRecentDayData(days = 14) {
+  const start = new Date();
+  start.setDate(start.getDate() - Math.max(0, days - 1));
+  const from = dateKey(start);
+  const to = TODAY();
+
+  try {
+    const rows = await sbGet(
+      'mw_tageslog?user_id=eq.' + USER_ID +
+      '&datum=gte.' + from +
+      '&datum=lte.' + to +
+      '&select=datum,daten'
+    );
+    (rows || []).forEach(row => {
+      if (!row.datum) return;
+      const daten = Object.assign(emptyDayData(), row.daten || {});
+      _dayCache[row.datum] = daten;
+      lsSet('day_' + row.datum, daten);
+    });
+    return true;
+  } catch(e) {
+    console.warn('syncRecentDayData Fehler:', e);
+    return false;
+  }
 }
 
 // ============================================================
@@ -294,6 +327,32 @@ function getFoodDB() {
 function saveFoodDB(db) { lsSet('food_db', db); }
 function genFoodId() { return 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2,5); }
 
+function getFoodDBPayload() {
+  return {
+    app: FOOD_DB_EXPORT_APP_ID,
+    version: APP_VERSION,
+    exportedAt: new Date().toISOString(),
+    foods: getFoodDB()
+  };
+}
+
+function applyFoodDBPayload(payload) {
+  if (!payload || payload.app !== FOOD_DB_EXPORT_APP_ID || !Array.isArray(payload.foods)) {
+    throw new Error('Ungültiges Lebensmittel-Format');
+  }
+
+  const cleaned = payload.foods
+    .filter(f => f && f.id && f.name && f.kat && Number.isFinite(Number(f.kcal)))
+    .map(f => ({
+      id: String(f.id),
+      name: String(f.name),
+      kat: String(f.kat),
+      kcal: Math.max(0, Math.round(Number(f.kcal)))
+    }));
+
+  saveFoodDB(cleaned);
+}
+
 // Cache (lebt nur für diese Sitzung, verhindert zu viele API-Calls)
 let _rezepteCache = null;
 let _bewertungenCache = {};   // rezept_id → sterne
@@ -331,6 +390,41 @@ async function sbSaveGewicht(date, kg) {
   }
 }
 
+async function sbLoadWeightLog() {
+  try {
+    const rows = await sbGet('mw_gewicht?user_id=eq.' + USER_ID + '&select=datum,kg&order=datum.asc');
+    return (rows || [])
+      .filter(r => r.datum && Number.isFinite(Number(r.kg)))
+      .map(r => ({ date: r.datum, kg: Number(r.kg) }));
+  } catch(e) {
+    console.warn('sbLoadWeightLog Fehler:', e);
+    return null;
+  }
+}
+
+async function syncWeightLog() {
+  const remote = await sbLoadWeightLog();
+  if (!remote) return false;
+
+  const local = ls('wlog') || [];
+  if (remote.length > 0) {
+    lsSet('wlog', remote);
+    return true;
+  }
+
+  if (local.length > 0) {
+    await Promise.all(local.map(e => sbSaveGewicht(e.date, e.kg)));
+  }
+  return false;
+}
+
+async function sbClearWeightLog() {
+  try {
+    await sbDelete('mw_gewicht?user_id=eq.' + USER_ID);
+  } catch(e) {
+    console.warn('sbClearWeightLog Fehler:', e);
+  }
+}
 
 let fastenInterval = null;
 
