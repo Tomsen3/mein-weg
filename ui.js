@@ -141,7 +141,7 @@ function renderDB() {
   const filterEl = document.getElementById('db-cat-filter');
   if (filterEl) {
     filterEl.innerHTML = cats.map(c =>
-      `<button class="cat-chip ${c === dbActiveCat ? 'active' : ''}" onclick="setDBCat('${c}')">${c}</button>`
+      `<button class="cat-chip ${c === dbActiveCat ? 'active' : ''}" data-action="setDBCat" data-value="${escHtml(c)}">${escHtml(c)}</button>`
     ).join('');
   }
   let filtered = db;
@@ -160,8 +160,8 @@ function renderDB() {
           <div class="db-item-meta">${f.kat} · ${f.kcal} kcal/100g</div>
         </div>
         <div class="db-item-actions">
-          <button class="btn btn-ghost btn-sm" onclick="openEditFoodModal('${f.id}')">✏️</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteFoodItem('${f.id}')">🗑️</button>
+          <button class="btn btn-ghost btn-sm" data-action="openEditFoodModal" data-value="${escHtml(f.id)}">✏️</button>
+          <button class="btn btn-danger btn-sm" data-action="deleteFoodItem" data-value="${escHtml(f.id)}">🗑️</button>
         </div>
       </div>
     `).join('');
@@ -186,12 +186,12 @@ function onFoodSearch() {
   const matches = db.filter(f => f.name.toLowerCase().includes(q)).slice(0, 8);
   if (matches.length === 0) {
     suggBox.style.display = 'block';
-    suggBox.innerHTML = `<div class="food-not-found">„${escHtml(q)}" nicht gefunden – <a onclick="openAddFoodModal('${escHtml(q)}')">Neu anlegen?</a></div>`;
+    suggBox.innerHTML = `<div class="food-not-found">„${escHtml(q)}" nicht gefunden – <a data-action="openAddFoodModal" data-value="${escHtml(q)}">Neu anlegen?</a></div>`;
     return;
   }
   suggBox.style.display = 'block';
   suggBox.innerHTML = matches.map(f => `
-    <div class="food-sugg-item" onclick="selectFood('${f.id}')">
+    <div class="food-sugg-item" data-action="selectFood" data-value="${escHtml(f.id)}">
       <div>
         <div class="food-sugg-name">${f.name}</div>
         <div class="food-sugg-kcal">${f.kcal} kcal/100g</div>
@@ -317,9 +317,13 @@ document.addEventListener('click', e => {
     setRezFilter: () => setRezFilter(value),
     switchTab: () => switchTab(value, btn),
     clearWeightLog: () => clearWeightLog(),
+    setDBCat: () => setDBCat(value),
     downloadFoodDB: () => downloadFoodDB(),
     triggerFoodDBImport: () => triggerFoodDBImport(),
-    openAddFoodModal: () => openAddFoodModal(),
+    openAddFoodModal: () => openAddFoodModal(value),
+    openEditFoodModal: () => openEditFoodModal(value),
+    deleteFoodItem: () => deleteFoodItem(value),
+    selectFood: () => selectFood(value),
     checkForUpdate: () => checkForUpdate(value === 'true'),
     downloadBackup: () => downloadBackup(),
     triggerBackupImport: () => triggerBackupImport(),
@@ -332,7 +336,11 @@ document.addEventListener('click', e => {
     closeFoodModal: () => closeFoodModal(),
     saveFoodModal: () => saveFoodModal(),
     closeRezeptModal: () => closeRezeptModal(),
-    saveRezeptModal: () => saveRezeptModal()
+    saveRezeptModal: () => saveRezeptModal(),
+    toggleRezeptBody: () => toggleRezeptBody(value),
+    toggleFavorit: () => toggleFavorit(value),
+    bewerte: () => bewerte(value, parseInt(btn.dataset.rating, 10)),
+    loescheRezept: () => loescheRezept(value)
   };
 
   const run = actions[btn.dataset.action];
@@ -389,7 +397,7 @@ if (_rezFilter === 'meat') list = list.filter(r => (r.tags||[]).includes('meat')
       <div style="text-align:center;padding:32px 0;color:var(--muted);">
         ${q ? '🔍 Keine Treffer für „' + escHtml(q) + '".' :
           _rezFilter === 'favs' ? '⭐ Noch keine Favoriten.' : '🥗 Noch keine Rezepte.<br><br>'}
-        ${!q ? '<button class="btn btn-primary btn-sm" style="margin-top:12px;" onclick="openRezeptModal()">+ Erstes Rezept anlegen</button>' : ''}
+        ${!q ? '<button class="btn btn-primary btn-sm" style="margin-top:12px;" data-action="openRezeptModal">+ Erstes Rezept anlegen</button>' : ''}
       </div>`;
     return;
   }
@@ -409,13 +417,13 @@ if (t === 'veg')   return '<span class="tag tag-low">🥦 Vegetarisch</span>';
     return `
     <div class="rezept" id="rez-${r.id}">
       <div style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;"
-        onclick="toggleRezeptBody('${r.id}')">
+        data-action="toggleRezeptBody" data-value="${escHtml(r.id)}">
         <div style="flex:1;min-width:0;">
           <div class="rezept-title">${escHtml(r.titel)}</div>
           <div class="rezept-meta">${escHtml(r.beschreibung || '')}</div>
         </div>
         <div style="display:flex;align-items:center;gap:6px;">
-          <button class="fav-btn ${isFav ? 'aktiv' : ''}" onclick="event.stopPropagation();toggleFavorit('${r.id}')"
+          <button class="fav-btn ${isFav ? 'aktiv' : ''}" data-action="toggleFavorit" data-value="${escHtml(r.id)}"
             title="Favorit">⭐</button>
           <span id="rez-arrow-${r.id}" style="font-size:16px;color:var(--muted);transition:transform 0.2s;">▾</span>
         </div>
@@ -426,12 +434,12 @@ if (t === 'veg')   return '<span class="tag tag-low">🥦 Vegetarisch</span>';
         <div class="rezept-actions">
           <div class="sterne-row" id="sterne-${r.id}">
             ${[1,2,3,4,5].map(n => `<span class="stern ${n <= sterne ? 'aktiv' : ''}"
-              onclick="bewerte('${r.id}',${n})" title="${n} Stern${n>1?'e':''}">★</span>`).join('')}
+              data-action="bewerte" data-value="${escHtml(r.id)}" data-rating="${n}" title="${n} Stern${n>1?'e':''}">★</span>`).join('')}
             <span class="stern-label">${sterne ? sterne + '/5' : 'bewerten'}</span>
           </div>
           <div style="margin-left:auto;display:flex;gap:8px;">
-            <button class="btn btn-ghost btn-sm" onclick="openRezeptModal('${r.id}')">✏️</button>
-            <button class="btn btn-danger btn-sm" onclick="loescheRezept('${r.id}')">🗑️</button>
+            <button class="btn btn-ghost btn-sm" data-action="openRezeptModal" data-value="${escHtml(r.id)}">✏️</button>
+            <button class="btn btn-danger btn-sm" data-action="loescheRezept" data-value="${escHtml(r.id)}">🗑️</button>
           </div>
         </div>
       </div>
@@ -608,7 +616,7 @@ async function renderHomeFav() {
     const emojis = ['🥗','🍳','🫕','🥘','🍲','🥙','🫔'];
     const em = emojis[r.titel.charCodeAt(0) % emojis.length];
     return `
-    <div class="fav-card" onclick="gotoPageById('rezepte')">
+    <div class="fav-card" data-action="gotoPageById" data-value="rezepte">
       <div class="fav-card-emoji">${em}</div>
       <div class="fav-card-body">
         <div class="fav-card-title">${escHtml(r.titel)}</div>
