@@ -1,6 +1,8 @@
 {
-  "version": "1.17",
+  "version": "1.18",
   "changelog": [
+    "Dynamisch gerenderte Lebensmittel- und Rezeptaktionen nutzen jetzt data-action",
+    "Tests sichern ab, dass index.html und ui.js frei von Inline-onclick bleiben",
     "Statische Buttons in index.html nutzen jetzt data-action statt Inline-onclick",
     "Zentrale Event-Delegation verarbeitet die statischen Button-Aktionen",
     "Texte und Einstellungen verständlicher formuliert",
