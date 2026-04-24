@@ -1,4 +1,4 @@
-const CACHE = 'meinweg-v1.10';
+const CACHE = 'meinweg-v1.16';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const ASSETS = [
   './data.js',
   './ui.js',
   './main.js',
+  './chart.umd.min.js',
   './manifest.json',
   './version.json',
   './icon-192.png',
@@ -29,18 +30,26 @@ function isCacheable(request) {
 
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS))
+    caches.open(CACHE).then(cache =>
+      Promise.all(ASSETS.map(asset =>
+        cache.add(asset).catch(err => console.warn('Cache failed:', asset, err))
+      ))
+    )
   );
-  self.skipWaiting();
 });
 
 self.addEventListener('activate', e => {
   e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-    )
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
+});
+
+self.addEventListener('message', e => {
+  if (e.data && e.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', e => {
