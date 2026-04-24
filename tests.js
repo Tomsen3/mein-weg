@@ -84,4 +84,6 @@ assert('text files do not contain common mojibake markers', textFiles.every(file
   const text = fs.readFileSync(file, 'utf8');
   return [...text].every(ch => !mojibakeCodepoints.has(ch.codePointAt(0)));
 }));
-assert('meal actions use data attributes instead of inline onclick', !fs.readFileSync('ui.js', 'utf8').includes('onclick="editMeal') && !fs.readFileSync('ui.js', 'utf8').includes('onclick="deleteMeal'));
+assert('static and dynamic app UI actions use data attributes instead of inline onclick',
+  !fs.readFileSync('index.html', 'utf8').includes('onclick=') &&
+  !fs.readFileSync('ui.js', 'utf8').includes('onclick='));
