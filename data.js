@@ -57,20 +57,24 @@ function setSbStatus(ok, msg) {
   ['settings'].forEach(ctx => {
     const dot  = document.getElementById('sb-dot-'+ctx);
     const text = document.getElementById('sb-text-'+ctx);
-    if (dot)  dot.className  = 'sb-dot' + (ok ? ' ok' : ' err');
+    if (dot)  dot.className  = 'sb-dot' + (ok === true ? ' ok' : ok === false ? ' err' : '');
     if (text) text.textContent = msg;
   });
   const dotR  = document.getElementById('sb-dot-rez');
   const textR = document.getElementById('sb-text-rez');
-  if (dotR)  dotR.className  = 'sb-dot' + (ok ? ' ok' : ' err');
+  if (dotR)  dotR.className  = 'sb-dot' + (ok === true ? ' ok' : ok === false ? ' err' : '');
   if (textR) textR.textContent = msg;
 }
 
 async function checkSbConnection() {
+  setSbStatus(null, 'Pr\u00fcfe Verbindung ...');
   try {
     // Verwende einen user-spezifischen, harmlosen Read statt eines globalen Rezept-Reads.
     // Das vermeidet false negatives bei RLS oder leerem Datenbestand.
-    await sbGet('mw_einstellungen?user_id=eq.' + encodeURIComponent(USER_ID) + '&select=user_id&limit=1');
+    await Promise.race([
+      sbGet('mw_einstellungen?user_id=eq.' + encodeURIComponent(USER_ID) + '&select=user_id&limit=1'),
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Supabase Status Timeout')), 10000))
+    ]);
     setSbStatus(true, 'Verbunden');
   } catch(e) {
     console.warn('checkSbConnection Fehler:', e);
@@ -377,4 +381,3 @@ function saveFastenState(s) {
   sbSaveFastenState(s);     // Supabase im Hintergrund
 }
 
-function setFastenZiel(h) {
