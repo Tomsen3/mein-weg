@@ -1,6 +1,8 @@
 {
-  "version": "1.16",
+  "version": "1.17",
   "changelog": [
+    "Statische Buttons in index.html nutzen jetzt data-action statt Inline-onclick",
+    "Zentrale Event-Delegation verarbeitet die statischen Button-Aktionen",
     "Texte und Einstellungen verständlicher formuliert",
     "Backup- und Geräte-Sync-Bereich sprachlich überarbeitet",
     "Backup als JSON exportieren und wieder importieren",
