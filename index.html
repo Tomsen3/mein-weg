@@ -87,6 +87,13 @@
     <div class="page-date" id="log-date"></div>
   </div>
   <div class="card">
+    <div class="card-label">Datum im Tagebuch</div>
+    <div class="input-row" style="margin-top:10px;">
+      <input type="date" id="log-date-input" onchange="setLogDate(this.value)" style="flex:1;">
+      <button class="btn btn-ghost btn-sm" onclick="setLogDate(TODAY())">Heute</button>
+    </div>
+  </div>
+  <div class="card">
     <div class="card-label">⚖️ Gewicht eintragen</div>
     <div class="input-row" style="margin-top:10px;">
       <input type="number" id="inp-kg" step="0.1" placeholder="z.B. 102.5" style="flex:1;">
@@ -209,6 +216,35 @@
     <div class="streak-row" id="fasten-streak" style="margin-top:10px;"></div>
   </div>
   <div class="card">
+    <div class="card-label">Fasten-Auswertung</div>
+    <div class="grid2" style="margin-top:10px;margin-bottom:0;">
+      <div class="mini-card">
+        <div class="mc-label">Durchschnitt</div>
+        <div class="mc-val" id="fasten-avg">–</div>
+        <div class="mc-unit">pro Fasten</div>
+      </div>
+      <div class="mini-card">
+        <div class="mc-label">Ziel erreicht</div>
+        <div class="mc-val" id="fasten-goal-rate">–</div>
+        <div class="mc-unit">Quote</div>
+      </div>
+      <div class="mini-card">
+        <div class="mc-label">Beste Woche</div>
+        <div class="mc-val" id="fasten-best-week">–</div>
+        <div class="mc-unit">erreichte Ziele</div>
+      </div>
+      <div class="mini-card">
+        <div class="mc-label">Einträge</div>
+        <div class="mc-val" id="fasten-count">0</div>
+        <div class="mc-unit">gesamt</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-label" id="fasten-calendar-title">Fasten-Kalender</div>
+    <div class="fasten-calendar" id="fasten-calendar"></div>
+  </div>
+  <div class="card">
     <div class="card-label">Mein Ziel heute</div>
     <div style="margin:10px 0;">
       <select id="fasten-plan" onchange="saveFastenPlan()" style="background:var(--card2);border:1px solid var(--border);">
@@ -303,8 +339,13 @@
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
         <div class="card-label" style="margin-bottom:0;">Lebensmittel-Datenbank</div>
-        <button class="btn btn-primary btn-sm" onclick="openAddFoodModal()">+ Neu</button>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;">
+          <button class="btn btn-ghost btn-sm" onclick="downloadFoodDB()">Export</button>
+          <button class="btn btn-ghost btn-sm" onclick="triggerFoodDBImport()">Import</button>
+          <button class="btn btn-primary btn-sm" onclick="openAddFoodModal()">+ Neu</button>
+        </div>
       </div>
+      <input type="file" id="food-db-import-input" accept="application/json,.json" onchange="importFoodDBFile(event)" style="display:none;">
       <input type="text" id="db-search" placeholder="🔍 Durchsuchen …" oninput="renderDB()" style="margin-bottom:10px;">
       <div class="db-filter-row" id="db-cat-filter"></div>
       <div id="db-list"></div>
@@ -344,8 +385,8 @@
         <span id="sb-text-settings">Prüfe Verbindung …</span>
       </div>
       <div style="font-size:12px;color:var(--muted);line-height:1.7;">
-        Rezepte, Bewertungen und Favoriten werden mit Supabase synchronisiert.<br>
-        Tageslog, Gewicht, Fasten und Lebensmittel bleiben lokal auf diesem Gerät.
+        Einstellungen, Tageslog, Gewicht, aktuelles Fasten, Rezepte, Bewertungen und Favoriten werden mit Supabase synchronisiert.<br>
+        Die lokale Lebensmittel-Datenbank und Backups bleiben auf diesem Gerät.
       </div>
     </div>
      <div class="card">
@@ -513,7 +554,7 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="chart.umd.min.js"></script>
 <script src="config.js"></script>
 <script src="data.js"></script>
 <script src="ui.js"></script>
