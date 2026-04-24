@@ -141,7 +141,7 @@ function renderDB() {
   const filterEl = document.getElementById('db-cat-filter');
   if (filterEl) {
     filterEl.innerHTML = cats.map(c =>
-      `<button class="cat-chip ${c === dbActiveCat ? 'active' : ''}" data-action="setDBCat" data-value="${escHtml(c)}">${escHtml(c)}</button>`
+      `<button class="cat-chip ${c === dbActiveCat ? 'active' : ''}" data-action="setDBCat" data-value="${escAttr(c)}">${escHtml(c)}</button>`
     ).join('');
   }
   let filtered = db;
@@ -156,12 +156,12 @@ function renderDB() {
     listEl.innerHTML = filtered.map(f => `
       <div class="db-item">
         <div class="db-item-left">
-          <div class="db-item-name">${f.name}</div>
-          <div class="db-item-meta">${f.kat} · ${f.kcal} kcal/100g</div>
+          <div class="db-item-name">${escHtml(f.name)}</div>
+          <div class="db-item-meta">${escHtml(f.kat)} · ${Number(f.kcal) || 0} kcal/100g</div>
         </div>
         <div class="db-item-actions">
-          <button class="btn btn-ghost btn-sm" data-action="openEditFoodModal" data-value="${escHtml(f.id)}">✏️</button>
-          <button class="btn btn-danger btn-sm" data-action="deleteFoodItem" data-value="${escHtml(f.id)}">🗑️</button>
+          <button class="btn btn-ghost btn-sm" data-action="openEditFoodModal" data-value="${escAttr(f.id)}">✏️</button>
+          <button class="btn btn-danger btn-sm" data-action="deleteFoodItem" data-value="${escAttr(f.id)}">🗑️</button>
         </div>
       </div>
     `).join('');
@@ -186,17 +186,17 @@ function onFoodSearch() {
   const matches = db.filter(f => f.name.toLowerCase().includes(q)).slice(0, 8);
   if (matches.length === 0) {
     suggBox.style.display = 'block';
-    suggBox.innerHTML = `<div class="food-not-found">„${escHtml(q)}" nicht gefunden – <a data-action="openAddFoodModal" data-value="${escHtml(q)}">Neu anlegen?</a></div>`;
+    suggBox.innerHTML = `<div class="food-not-found">„${escHtml(q)}" nicht gefunden – <a data-action="openAddFoodModal" data-value="${escAttr(q)}">Neu anlegen?</a></div>`;
     return;
   }
   suggBox.style.display = 'block';
   suggBox.innerHTML = matches.map(f => `
-    <div class="food-sugg-item" data-action="selectFood" data-value="${escHtml(f.id)}">
+    <div class="food-sugg-item" data-action="selectFood" data-value="${escAttr(f.id)}">
       <div>
-        <div class="food-sugg-name">${f.name}</div>
-        <div class="food-sugg-kcal">${f.kcal} kcal/100g</div>
+        <div class="food-sugg-name">${escHtml(f.name)}</div>
+        <div class="food-sugg-kcal">${Number(f.kcal) || 0} kcal/100g</div>
       </div>
-      <span class="food-sugg-cat">${f.kat}</span>
+      <span class="food-sugg-cat">${escHtml(f.kat)}</span>
     </div>
   `).join('');
 }
@@ -232,11 +232,12 @@ function addMealFromDB() {
   const g = parseFloat(document.getElementById('inp-food-gramm').value);
   if (!g || g <= 0) { toast('Bitte eine Menge in Gramm eingeben.'); return; }
   const kcal = Math.round((selectedFood.kcal * g) / 100);
+  const foodName = selectedFood.name;
   const d = getDayData(LOG_DATE());
   d.meals = d.meals || [];
-  d.meals.push({ name: selectedFood.name, gramm: g, kcal, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
+  d.meals.push({ name: foodName, gramm: g, kcal, time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) });
   saveDayData(LOG_DATE(), d);
-  clearFoodSelection(); renderAll(); toast(`${selectedFood.name} hinzugefügt.`);
+  clearFoodSelection(); renderAll(); toast(`${foodName} hinzugefügt.`);
 }
 
 function addMealManual() {
@@ -250,6 +251,31 @@ function addMealManual() {
   document.getElementById('inp-meal-name').value = '';
   document.getElementById('inp-meal-kcal').value = '';
   renderAll(); toast('Mahlzeit hinzugefügt.');
+}
+
+function addRecipeToLog(id) {
+  const r = (_rezepteCache || []).find(x => x.id === id);
+  if (!r) return;
+
+  const totalKcal = parseInt(r.kcal_gesamt, 10);
+  const portions = Math.max(1, parseInt(r.portionen, 10) || 1);
+  if (!Number.isFinite(totalKcal) || totalKcal <= 0) {
+    toast('Dieses Rezept hat noch keine Kalorienangabe.');
+    return;
+  }
+
+  const kcal = Math.round(totalKcal / portions);
+  const d = getDayData(LOG_DATE());
+  d.meals = d.meals || [];
+  d.meals.push({
+    name: 'Rezept: ' + (r.titel || 'Ohne Titel'),
+    portionen: 1,
+    kcal,
+    time: new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})
+  });
+  saveDayData(LOG_DATE(), d);
+  renderAll();
+  toast('Rezept zum Tagebuch hinzugefügt.');
 }
 
 function deleteMeal(idx) {
@@ -297,54 +323,100 @@ document.addEventListener('click', e => {
   if (btn.dataset.mealAction === 'delete') deleteMeal(idx);
 });
 
+const clickActions = {
+  gotoPageById: btn => gotoPageById(btn.dataset.value),
+  setLogToday: () => setLogDate(TODAY()),
+  saveKg: () => saveKg(),
+  addWasser: btn => addWasser(parseFloat(btn.dataset.value)),
+  saveSchritte: () => saveSchritte(),
+  clearFoodSelection: () => clearFoodSelection(),
+  addMealFromDB: () => addMealFromDB(),
+  addMealManual: () => addMealManual(),
+  setFastenZiel: btn => setFastenZiel(parseInt(btn.dataset.value, 10)),
+  toggleFasten: () => toggleFasten(),
+  openRezeptModal: btn => openRezeptModal(btn.dataset.value),
+  setRezFilter: btn => setRezFilter(btn.dataset.value),
+  switchTab: btn => switchTab(btn.dataset.value, btn),
+  clearWeightLog: () => clearWeightLog(),
+  setDBCat: btn => setDBCat(btn.dataset.value),
+  downloadFoodDB: () => downloadFoodDB(),
+  triggerFoodDBImport: () => triggerFoodDBImport(),
+  openAddFoodModal: btn => openAddFoodModal(btn.dataset.value),
+  openEditFoodModal: btn => openEditFoodModal(btn.dataset.value),
+  deleteFoodItem: btn => deleteFoodItem(btn.dataset.value),
+  selectFood: btn => selectFood(btn.dataset.value),
+  checkForUpdate: btn => checkForUpdate(btn.dataset.value === 'true'),
+  downloadBackup: () => downloadBackup(),
+  triggerBackupImport: () => triggerBackupImport(),
+  copyUserId: () => copyUserId(),
+  applyUserId: () => applyUserId(),
+  showQrCode: () => showQrCode(),
+  gotoPage: btn => gotoPage(btn.dataset.value, btn),
+  hideModal: btn => document.getElementById(btn.dataset.value)?.classList.add('hidden'),
+  applyUpdate: () => applyUpdate(),
+  closeFoodModal: () => closeFoodModal(),
+  saveFoodModal: () => saveFoodModal(),
+  closeRezeptModal: () => closeRezeptModal(),
+  saveRezeptModal: () => saveRezeptModal(),
+  toggleRezeptBody: btn => toggleRezeptBody(btn.dataset.value),
+  toggleFavorit: btn => toggleFavorit(btn.dataset.value),
+  bewerte: btn => bewerte(btn.dataset.value, parseInt(btn.dataset.rating, 10)),
+  addRecipeToLog: btn => addRecipeToLog(btn.dataset.value),
+  loescheRezept: btn => loescheRezept(btn.dataset.value)
+};
+
+const inputActions = {
+  onFoodSearch: () => onFoodSearch(),
+  updateKcalPreview: () => updateKcalPreview(),
+  renderRezepte: () => renderRezepte(),
+  renderDB: () => renderDB()
+};
+
+const changeActions = {
+  setLogDate: el => setLogDate(el.value),
+  saveFastenPlan: () => saveFastenPlan(),
+  importFoodDBFile: (el, e) => importFoodDBFile(e),
+  saveSettings: () => saveSettings(),
+  importBackupFile: (el, e) => importBackupFile(e)
+};
+
 document.addEventListener('click', e => {
   const btn = e.target.closest('[data-action]');
   if (!btn) return;
 
-  const value = btn.dataset.value;
-  const actions = {
-    gotoPageById: () => gotoPageById(value),
-    setLogToday: () => setLogDate(TODAY()),
-    saveKg: () => saveKg(),
-    addWasser: () => addWasser(parseFloat(value)),
-    saveSchritte: () => saveSchritte(),
-    clearFoodSelection: () => clearFoodSelection(),
-    addMealFromDB: () => addMealFromDB(),
-    addMealManual: () => addMealManual(),
-    setFastenZiel: () => setFastenZiel(parseInt(value, 10)),
-    toggleFasten: () => toggleFasten(),
-    openRezeptModal: () => openRezeptModal(value),
-    setRezFilter: () => setRezFilter(value),
-    switchTab: () => switchTab(value, btn),
-    clearWeightLog: () => clearWeightLog(),
-    setDBCat: () => setDBCat(value),
-    downloadFoodDB: () => downloadFoodDB(),
-    triggerFoodDBImport: () => triggerFoodDBImport(),
-    openAddFoodModal: () => openAddFoodModal(value),
-    openEditFoodModal: () => openEditFoodModal(value),
-    deleteFoodItem: () => deleteFoodItem(value),
-    selectFood: () => selectFood(value),
-    checkForUpdate: () => checkForUpdate(value === 'true'),
-    downloadBackup: () => downloadBackup(),
-    triggerBackupImport: () => triggerBackupImport(),
-    copyUserId: () => copyUserId(),
-    applyUserId: () => applyUserId(),
-    showQrCode: () => showQrCode(),
-    gotoPage: () => gotoPage(value, btn),
-    hideModal: () => document.getElementById(value)?.classList.add('hidden'),
-    applyUpdate: () => applyUpdate(),
-    closeFoodModal: () => closeFoodModal(),
-    saveFoodModal: () => saveFoodModal(),
-    closeRezeptModal: () => closeRezeptModal(),
-    saveRezeptModal: () => saveRezeptModal(),
-    toggleRezeptBody: () => toggleRezeptBody(value),
-    toggleFavorit: () => toggleFavorit(value),
-    bewerte: () => bewerte(value, parseInt(btn.dataset.rating, 10)),
-    loescheRezept: () => loescheRezept(value)
-  };
+  if (btn.tagName === 'A') e.preventDefault();
+  if (btn.dataset.stopPropagation === 'true') e.stopPropagation();
 
-  const run = actions[btn.dataset.action];
-  if (run) run();
+  const run = clickActions[btn.dataset.action];
+  if (run) {
+    run(btn, e);
+  } else {
+    console.warn('Unbekannte data-action:', btn.dataset.action);
+  }
+});
+
+document.addEventListener('input', e => {
+  const el = e.target.closest('[data-input-action]');
+  if (!el) return;
+
+  const run = inputActions[el.dataset.inputAction];
+  if (run) {
+    run(el, e);
+  } else {
+    console.warn('Unbekannte data-input-action:', el.dataset.inputAction);
+  }
+});
+
+document.addEventListener('change', e => {
+  const el = e.target.closest('[data-change-action]');
+  if (!el) return;
+
+  const run = changeActions[el.dataset.changeAction];
+  if (run) {
+    run(el, e);
+  } else {
+    console.warn('Unbekannte data-change-action:', el.dataset.changeAction);
+  }
 });
 
 // ============================================================
@@ -415,31 +487,32 @@ if (t === 'veg')   return '<span class="tag tag-low">🥦 Vegetarisch</span>';
     }).join('');
 
     return `
-    <div class="rezept" id="rez-${r.id}">
+    <div class="rezept" id="rez-${escAttr(r.id)}">
       <div style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;"
-        data-action="toggleRezeptBody" data-value="${escHtml(r.id)}">
+        data-action="toggleRezeptBody" data-value="${escAttr(r.id)}">
         <div style="flex:1;min-width:0;">
           <div class="rezept-title">${escHtml(r.titel)}</div>
           <div class="rezept-meta">${escHtml(r.beschreibung || '')}</div>
         </div>
         <div style="display:flex;align-items:center;gap:6px;">
-          <button class="fav-btn ${isFav ? 'aktiv' : ''}" data-action="toggleFavorit" data-value="${escHtml(r.id)}"
+          <button class="fav-btn ${isFav ? 'aktiv' : ''}" data-action="toggleFavorit" data-value="${escAttr(r.id)}" data-stop-propagation="true"
             title="Favorit">⭐</button>
-          <span id="rez-arrow-${r.id}" style="font-size:16px;color:var(--muted);transition:transform 0.2s;">▾</span>
+          <span id="rez-arrow-${escAttr(r.id)}" style="font-size:16px;color:var(--muted);transition:transform 0.2s;">▾</span>
         </div>
       </div>
-      <div id="rez-body-${r.id}" style="display:none;margin-top:10px;">
+      <div id="rez-body-${escAttr(r.id)}" style="display:none;margin-top:10px;">
         ${tagHtml ? '<div style="margin-bottom:8px;">' + tagHtml + '</div>' : ''}
         ${r.anleitung ? '<div class="rezept-body">' + escHtml(r.anleitung) + '</div>' : ''}
         <div class="rezept-actions">
-          <div class="sterne-row" id="sterne-${r.id}">
+          <div class="sterne-row" id="sterne-${escAttr(r.id)}">
             ${[1,2,3,4,5].map(n => `<span class="stern ${n <= sterne ? 'aktiv' : ''}"
-              data-action="bewerte" data-value="${escHtml(r.id)}" data-rating="${n}" title="${n} Stern${n>1?'e':''}">★</span>`).join('')}
+              data-action="bewerte" data-value="${escAttr(r.id)}" data-rating="${n}" title="${n} Stern${n>1?'e':''}">★</span>`).join('')}
             <span class="stern-label">${sterne ? sterne + '/5' : 'bewerten'}</span>
           </div>
           <div style="margin-left:auto;display:flex;gap:8px;">
-            <button class="btn btn-ghost btn-sm" data-action="openRezeptModal" data-value="${escHtml(r.id)}">✏️</button>
-            <button class="btn btn-danger btn-sm" data-action="loescheRezept" data-value="${escHtml(r.id)}">🗑️</button>
+            <button class="btn btn-primary btn-sm" data-action="addRecipeToLog" data-value="${escAttr(r.id)}">+ Tagebuch</button>
+            <button class="btn btn-ghost btn-sm" data-action="openRezeptModal" data-value="${escAttr(r.id)}">✏️</button>
+            <button class="btn btn-danger btn-sm" data-action="loescheRezept" data-value="${escAttr(r.id)}">🗑️</button>
           </div>
         </div>
       </div>
@@ -577,12 +650,8 @@ async function toggleFavorit(rezeptId) {
       toast('Zu Favoriten hinzugefügt.');
     }
     // Stern-Button sofort umschalten
-    const allFavBtns = document.querySelectorAll(`.fav-btn`);
-    allFavBtns.forEach(btn => {
-      // data-id wäre sauberer, wir matchen über onclick-String
-      if (btn.getAttribute('onclick')?.includes(rezeptId)) {
-        btn.className = 'fav-btn' + (_favoritenCache.has(rezeptId) ? ' aktiv' : '');
-      }
+    document.querySelectorAll(`.fav-btn[data-value="${cssAttr(rezeptId)}"]`).forEach(btn => {
+      btn.className = 'fav-btn' + (_favoritenCache.has(rezeptId) ? ' aktiv' : '');
     });
     renderHomeFav();
   } catch(e) { toast('Fehler: ' + e.message); }
@@ -841,7 +910,7 @@ function renderFastenCalendar(entries) {
     const cls = entry ? (entry.reached ? ' done' : ' missed') : '';
     const isToday = key === TODAY() ? ' today' : '';
     const titleText = entry ? `${entry.durationH.toFixed(1)}h / Ziel ${entry.zielH}h` : 'Kein Eintrag';
-    cells.push(`<div class="fasten-cal-day${cls}${isToday}" title="${titleText}">${day}</div>`);
+    cells.push(`<div class="fasten-cal-day${cls}${isToday}" title="${escAttr(titleText)}">${day}</div>`);
   }
   cal.innerHTML = heads.join('') + cells.join('');
 }
@@ -938,7 +1007,7 @@ function renderHome() {
 
   const idx = new Date().getDate() % MOTIVATIONS.length;
   const mv  = MOTIVATIONS[idx];
-  document.getElementById('motivator-box').innerHTML = `<div class="quote">"${mv.q}"</div><div class="author">— ${mv.a}</div>`;
+  document.getElementById('motivator-box').innerHTML = `<div class="quote">"${escHtml(mv.q)}"</div><div class="author">— ${escHtml(mv.a)}</div>`;
 
   const lastKg = wlog.length ? wlog[wlog.length-1].kg : null;
   document.getElementById('home-kg').textContent   = lastKg ? lastKg.toFixed(1)+' kg' : '– kg';
@@ -1050,10 +1119,10 @@ function renderLog() {
       <div class="meal-item">
         <div style="flex:1;min-width:0;">
           <div class="meal-name">${escHtml(m.name)}</div>
-          <div class="meal-detail">${m.time ? m.time+' Uhr · ' : ''}${m.gramm ? m.gramm+'g · ' : ''}${m.kcal} kcal</div>
+          <div class="meal-detail">${m.time ? escHtml(m.time)+' Uhr · ' : ''}${m.gramm ? Number(m.gramm)+'g · ' : ''}${Number(m.kcal) || 0} kcal</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-          <span class="meal-kcal">${m.kcal} kcal</span>
+          <span class="meal-kcal">${Number(m.kcal) || 0} kcal</span>
           <button class="meal-del" data-meal-action="edit" data-meal-index="${i}">✎</button>
           <button class="meal-del" data-meal-action="delete" data-meal-index="${i}">✕</button>
         </div>
@@ -1107,8 +1176,8 @@ function renderProgress() {
       const diffStr = diff !== null
         ? `<span class="wlog-diff" style="color:${diff>0?'var(--red)':'var(--green)'}">${diff>0?'+':''}${diff.toFixed(1)} kg</span>` : '';
       return `<div class="wlog-item">
-        <div><div class="wlog-date">${formatDate(e.date)}</div></div>
-        <div style="display:flex;align-items:center;gap:10px;">${diffStr}<span class="wlog-kg">${e.kg.toFixed(1)} kg</span></div>
+        <div><div class="wlog-date">${escHtml(formatDate(e.date))}</div></div>
+        <div style="display:flex;align-items:center;gap:10px;">${diffStr}<span class="wlog-kg">${Number(e.kg).toFixed(1)} kg</span></div>
       </div>`;
     }).join('');
   }
@@ -1157,6 +1226,15 @@ function clearWeightLog() {
 function escHtml(s) {
   if (!s) return '';
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function escAttr(s) {
+  return escHtml(String(s || '')).replace(/'/g,'&#39;');
+}
+
+function cssAttr(s) {
+  if (window.CSS && typeof window.CSS.escape === 'function') return window.CSS.escape(String(s || ''));
+  return String(s || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
 // ============================================================
@@ -1231,7 +1309,7 @@ function showQrCode() {
   const uid = localStorage.getItem('meinweg_uid') || '';
   const canvas = document.getElementById('sync-uid-canvas');
   const url = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(uid);
-  canvas.innerHTML = '<img src="' + url + '" style="border-radius:8px;border:1px solid var(--border);" alt="QR-Code"><div style="font-size:11px;color:var(--muted);margin-top:6px;">UUID ablesen und auf anderem Gerät einfügen</div>';
+  canvas.innerHTML = '<img src="' + escAttr(url) + '" style="border-radius:8px;border:1px solid var(--border);" alt="QR-Code"><div style="font-size:11px;color:var(--muted);margin-top:6px;">UUID ablesen und auf anderem Gerät einfügen</div>';
 }
 
 function initSyncUid() {
