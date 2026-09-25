@@ -6,7 +6,8 @@ Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
 **Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html` ·
 **Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html` ·
-**Mitglied sein** (Ziel des Buttons „Mitglied werden“) → `SEITE-mitglied-sein.md` + `vorschau-foto-mitglied-sein.html`
+**Mitglied sein** (Ziel des Buttons „Mitglied werden“) → `SEITE-mitglied-sein.md` + `vorschau-foto-mitglied-sein.html` ·
+**Termine** (Gesamtkalender) → `SEITE-termine.md` + `vorschau-foto-termine.html`
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
 Mittelpunkt, die Gestaltung drumherum ist ruhig. Es ist so geschrieben, dass eine Person
@@ -128,10 +129,13 @@ Regeln:
   Dazu Sprungleiste (statt Aufklappmenü), Formular-Karte und Ansprechperson ohne Foto: `SEITE-sing-mit.md`, Abschnitt 6.
   Zitat mit Porträt, Siegel-Reihe, Ablauf-Liste und Ansprechperson mit Foto: `SEITE-einrichtungen.md`, Abschnitt 6.
   Beitrags-Reihe, kompakte Terminliste und Aufklapptext: `SEITE-mitglied-sein.md`, Abschnitt 6.
+  Monatszeile im Kalender, Etikett nach Art und zweispaltige Jahresvorschau: `SEITE-termine.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
-  Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md` und `SEITE-mitglied-sein.md`, jeweils Abschnitt 2.
+  Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
+  Gesamtkalender, Schnupperkurse und Jahresvorschau → Termine; Module mit Zweig-Filter und Anmeldung → Weiterbildung –
+  beide Terminlisten kommen in Wix aus derselben Quelle, der Wix-Events-App, siehe `SEITE-termine.md`, Abschnitt 2).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md` und `SEITE-termine.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -158,7 +162,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | 1 | Titelfoto + Tiefgrün-Kasten | **Lebenskraft Singen** | Leitspruch, Zitat „Ein Lied kann keine Wunder vollbringen …“, Buttons „Zur Weiterbildung“ und „Singgruppe in deiner Nähe“ |
 | 2 | Leinen | **Begleitet dich auch schon ein Lied?** | die drei Fragen mit „Ja!“-Button: Singleiter:in werden · Mitglied werden (Mitgliedschaft = Voraussetzung fürs **Zertifikat**, nicht für die Weiterbildung – korrigiert 25.09.2026) · Singgruppe in der Nähe |
 | 3 | Salbei | **Singen wirkt – und wir zeigen dir wie** | Einleitungstext, Faktenliste (Zertifikate, Wochenenden, Mitgliedschaft, Schnupperkurs), Links „Wichtige Infos“ und „Dozent:innen“ |
-| 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“, Links Terminkalender und Terminvorschau 2027 |
+| 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“ (automatisch aus Wix-Events), Links „Alle Termine →“ und „Vorschau 2027 →“ auf die Seite Termine (`SEITE-termine.md`; geändert 25.09.2026, vorher Terminkalender und PDF) |
 | 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |
 | 6 | Leinen | **Aktuelles aus unserem Netzwerk** | drei Karten: Rückblick, Blog des Monats, MitgLIEDER im Fokus |
 | 7 | Tiefgrün | **Mitsingen. Mitmachen. Mitglied werden.** | Mitgliedschaft, Spenden (mit Rumänien-Projekt, Spendenbescheinigung), Newsletter |
@@ -171,7 +175,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | Menüpunkt JAHRESTAGUNG (9 Unterseiten) | Hinweisleiste oben + eigener Bereich | zeitlich begrenzt, sprengt das Menü |
 | Menüpunkte KONTAKT, SHOP | Fußzeile | selten gesucht, dort erwartet man sie |
 | Menüpunkt MITGLIED SEIN | gelber Button „Mitglied werden“ → Seite `/mitglied-sein` (`SEITE-mitglied-sein.md`) | wichtigste Handlung, soll auffallen |
-| Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“ | doppelte Information vermeiden |
+| Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“; Schnupperkurse: Seite Termine (`#schnuppern`) | doppelte Information vermeiden |
 | „Was wir wollen“ (Vision) | Seite „Über uns“ | Startseite zeigt Angebote, nicht Leitbild |
 | YouTube-Kanal | Fußzeile | ein Link reicht |
 | Feedback des Monats | Seite „Mitglied sein“, Bereich „MitgLIEDER im Fokus“ (`#fokus`) – „MitgLIEDER im Fokus“ ist keine eigene Seite, nur eine Sprungmarke | langer Text, passt dort besser |

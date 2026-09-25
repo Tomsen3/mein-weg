@@ -118,6 +118,24 @@ für die Mitgliedschaft; auf der Seite ist die ältere der zwei Flyer-Fassungen 
 Hinweis auf den Online-Zugang. Die Kontaktseite enthält Platzhalter-Links `info@website.com` aus der Wix-Vorlage.
 Wie der Bereich neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-mitglied-sein.md`.
 
+## Seite TERMINE (ausgelesen am 25.09.2026)
+
+`/termine` („UNSERE VERANSTALTUNGEN 2025/26“) hat keine Unterseiten.
+
+| Abschnitt auf `/termine` | Inhalt |
+|---|---|
+| Einleitung | „prall gefüllt mit spannenden sikra-internen Events“ – Module, Schnupperkurse, Supervision, Factory, Liedernächte |
+| Gratis-Schnupperkurs | freitags 18:00–18:45; PDF Schnupperkurstermine 2026; Teams-Link „zum Online-Schnupperkurs“ |
+| Guitar- & Ukulele-Factory & Singleiter im Gespräch | PDF Mitgliedertermine; **öffentlicher Teams-Link** „Zum Online-Angebot für Mitglieder“ |
+| Veranstaltungsliste (Wix-Events) | nur 3 Termine: Modul F, Modul P, Come-together; „Infos & Anmeldung“ |
+| Newsletter, Spenden, Kontakt | wie auf anderen Seiten |
+
+Auffällig: Nur 3 von 11 kommenden Terminen stehen in Wix-Events; Module in Österreich, Schnupperkurse und Jahrestagung
+fehlen. Die Anmeldung der Veranstaltungen führt auf `sonjaheim9.wixsite.com/my-site-3/anmeldung`. Es sind zwei
+Fassungen der Schnupperkurs-Liste im Umlauf (Zweig-Seiten: alte „Jahresplanung“). Der Flyer „Alle Termine 2026“ nennt
+ein falsches Modul F; die Terminvorschau 2027 siezt und enthält die Jahrestagung nicht.
+Wie die Seite neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-termine.md`.
+
 ## Beobachtungen
 
 - **Ansprache:** Du („Sei dabei!“, „Du willst …“). Gendern mit Doppelpunkt, teils Sternchen oder Unterstrich (uneinheitlich).

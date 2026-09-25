@@ -4,6 +4,7 @@ Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-einrichtungen.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, und `SEITE-sing-mit.md`, Abschnitt 6 ·
 Nachbarseiten: `vorschau-foto-sing-mit.html`, `vorschau-foto-weiterbildung.html`, `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`), `vorschau-foto.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Termine (Menüpunkt in der Vorschau verlinkt seit 25.09.2026): `SEITE-termine.md` + `vorschau-foto-termine.html`
 
 Dieses Dokument erklärt, **wie die neue Seite „Für Einrichtungen“ aufgebaut ist, woher jeder Inhalt stammt,
 was mit den Nachbarseiten zusammengelegt oder verlinkt wurde und warum**. Eine Person ohne Vorkenntnisse

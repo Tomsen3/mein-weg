@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-mitglied-sein.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, `SEITE-sing-mit.md` und `SEITE-einrichtungen.md`, jeweils Abschnitt 6 ·
-Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html`, `vorschau-foto-termine.html` (`SEITE-termine.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 
 Dieses Dokument erklärt, **wie die neue Seite „Mitglied sein“ aufgebaut ist, woher jeder Inhalt stammt,
 was mit den Nachbarseiten abgeglichen wurde und warum**. Eine Person ohne Vorkenntnisse soll die Seite damit in
@@ -70,7 +70,7 @@ einem Satz zusammen und verlinken dorthin.
 |---|---|---|---|---|
 | **Beiträge** (80 € / 40 € / Charity / 350 € / 175 €) | Sing mit (80 € / 40 €), Für Einrichtungen (350 € / 175 €), Beitrittserklärung | **Mitglied sein** (`#beitrag`) | Sing mit und Für Einrichtungen behalten je **einen** Satz mit dem Betrag ihrer Zielgruppe + Button hierher | Wer auf Sing mit oder Für Einrichtungen entscheiden muss, braucht die Zahl sofort. Vollständig (mit Charity-Stufe und Ermäßigung) steht sie nur hier. **Bei einer Beitragsänderung alle drei Stellen und die Beitrittserklärung ändern** (Checkliste Abschnitt 8). |
 | **15 % Rabatt** (auch für Mitarbeitende von Mitgliedseinrichtungen) | Weiterbildung (Tiefgrün-Band „Mitglied werden – und 15 % sparen“, Satz zu Mitgliedseinrichtungen), Sing mit, Für Einrichtungen, Startseite | **Mitglied sein** (`#vorteile`) | Weiterbildung: Satz „Arbeitest du in einer Mitgliedseinrichtung? Dann gilt der Rabatt auch für dich.“ verlinkt **jetzt hierher** („Alle Vorteile der Mitgliedschaft →“) statt auf Für Einrichtungen | Das Rabatt-Thema gehört zur Mitgliedschaft. Für Einrichtungen erklärt die Zertifizierung, nicht den Rabatt. |
-| **Unterstützungskultur** (Guitar- & Ukulele-Factory, „Singleiter:innen im Gespräch“, telefonische Beratung) | Sing mit (Spalte „Unterstützung für Mitglieder“) | **Mitglied sein** (`#unterstuetzung`) | Sing mit: Kurzfassung bleibt, Link „Mehr zur Mitgliedschaft →“ zeigt jetzt auf `#unterstuetzung` | behebt den heute toten Hinweis „Entdecke unsere Unterstützungskultur“ auf Sing mit |
+| **Unterstützungskultur** (Guitar- & Ukulele-Factory, „Singleiter:innen im Gespräch“, telefonische Beratung) | Sing mit (Spalte „Unterstützung für Mitglieder“), Termine (ein Hinweis ohne Daten und ohne Zugang) | **Mitglied sein** (`#unterstuetzung`) | Sing mit: Kurzfassung bleibt, Link „Mehr zur Mitgliedschaft →“ zeigt jetzt auf `#unterstuetzung` | behebt den heute toten Hinweis „Entdecke unsere Unterstützungskultur“ auf Sing mit |
 | Mitgliedschaft als **Voraussetzung fürs Singleiter-Zertifikat** | Sing mit, Weiterbildung | **Sing mit** (`#zertifikat`) für die Antragsbedingungen | hier ein Satz im Kasten „Gut zu wissen“ mit Link auf Sing mit | Die Bedingung gehört zum Antrag. |
 | Mitgliedschaft der **Einrichtung** als Voraussetzung für die **Zertifizierung** | Für Einrichtungen | **Für Einrichtungen** (`#voraussetzungen`) | hier in der Beitragskarte „Einrichtung“ ein Satz + Link „Zur Zertifizierung →“ | |
 | **Offene Frage:** Reicht die Mitgliedschaft der Einrichtung auch fürs Singleiter-Zertifikat der Mitarbeitenden? | Für Einrichtungen, offener Punkt 12 | – | **Platzhalter-Satz** in „Gut zu wissen“: „Ob die Mitgliedschaft deiner Einrichtung auch fürs Zertifikat reicht, klär bitte vor dem Antrag mit Sonja Heim.“ | So steht nichts Falsches auf der Seite. Nach der Entscheidung durch einen klaren Satz ersetzen – hier **und** auf Sing mit (`#zertifikat`). |
@@ -249,6 +249,8 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
    weder Teams-Link noch Hinweis. → Klären, wie Mitglieder den Link bekommen (Newsletter? E-Mail von Sandra?) und
    **einen** Satz im Bereich `#unterstuetzung` ergänzen. Den Link selbst **nicht öffentlich** auf die Seite stellen
    (sonst ist es kein Mitgliederangebot mehr).
+   **Nachtrag 25.09.2026:** Auf der Seite `/termine` steht der Teams-Link heute **öffentlich** („Zum Online-Angebot
+   für Mitglieder“). Die neue Seite Termine verweist nur noch hierher (`SEITE-termine.md`, Abschnitt 7, Punkt 1).
 5. **Namen der Reihen vereinheitlichen:** Webseite „Guitar- & Ukulele-Factory“ / „Singleiter:innen im Gespräch“, PDF
    „Gitarren-Factory“ / „Ukulele-Factory“ / „Singleiter im Gespräch – Supervision“. → Eine Schreibweise festlegen
    (Vorschlag: „Gitarren- & Ukulele-Factory“ und „Singleiter:innen im Gespräch“) und im nächsten Termin-PDF übernehmen.
