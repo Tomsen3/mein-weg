@@ -1,7 +1,7 @@
 # DESIGN.md – Singende Krankenhäuser e.V.
 
 Gestaltungsregeln für www.singende-krankenhaeuser.de (Wix).
-Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 25.09.2026 (Version 2: Logofarben) · Verantwortlich: Tom (Webseite/Marketing)
 
 Dieses Dokument ist so geschrieben, dass eine Person ohne Vorkenntnisse die Webseite
 im neuen Stil pflegen oder erweitern kann. Es enthält die Regeln **und** die Gründe dafür.
@@ -24,39 +24,57 @@ Gestaltungssysteme bekannter Webseiten als Textbeschreibung (DESIGN.md) bereitst
 
 Quelle Option 1: https://styles.refero.design/style/ab650279-aa18-43e5-a998-34190d7bedc7
 
-**Warum Fable:** warm und vertrauensvoll, aber fachlich seriös. Grün ist im
+**Warum Fable:** warm und vertrauensvoll, aber fachlich seriös. Das Grün aus unserem Logo ist im
 Gesundheitsbereich vertraut. Die Seite wird in farbige „Bänder“ gegliedert, was zu
 unseren Hauptthemen passt (Weiterbildung, Mitsingen, Mitglied werden, Spenden).
 
 **Was wir gegenüber dem Original bewusst geändert haben** (siehe Abschnitt 7):
-kostenlose Schriften statt Lizenzschrift, größere Grundschrift für ältere Leserinnen
-und Leser, dunkle statt weiße Schrift auf dem blauen Band (Kontrast).
+Farben aus dem Vereinslogo statt Fable-Grün/-Blau, kostenlose Schriften statt
+Lizenzschrift (Textschrift passend zum Logo), größere Grundschrift für ältere
+Leserinnen und Leser, Kontraste nach WCAG geprüft.
 
 ---
 
 ## 2. Farben
 
-| Name | Hex | Wofür | Wofür NICHT |
-|---|---|---|---|
-| **Waldgrün** | `#064C37` | Kopfbereich (Hero), Hauptband, Überschriften auf Creme | Buttonfläche |
-| **Himmelblau** | `#43A1D7` | zweites Farbband (z. B. „Sing mit“) | Button, Fließtext, weiße Schrift darauf |
-| **Papiercreme** | `#F7F4EE` | Standard-Hintergrund für Karten und Textbereiche | – |
-| **Tinte** | `#161015` | Überschriften, Schrift auf Blau | – |
-| **Pflaume** | `#292229` | Buttons (dunkel), dunkle Flächen | – |
-| **Graphit** | `#3F383D` | Fließtext | – |
-| **Kohle** | `#070607` | Fußzeile | – |
-| **Weiß** | `#FFFFFF` | Seitenhintergrund, Schrift auf Grün/Pflaume, helle Buttons auf Farbbändern | – |
-| **Nebel** | `#EDEDED` | Platzhalter, ruhige Flächen | – |
+**Grundlage ist das Vereinslogo.** Die drei Logofarben wurden direkt aus der Logodatei
+gemessen. Aus Fable übernommen sind nur der Aufbau (farbige Bänder, Papiercreme,
+Pillen-Buttons). Das Fable-Waldgrün und -Himmelblau wurden durch Logofarben ersetzt,
+damit Logo und Webseite zusammenpassen.
+
+| Name | Hex | Herkunft | Wofür | Wofür NICHT |
+|---|---|---|---|---|
+| **Anthrazit** | `#393434` | Logo (Notenschlüssel, Schriftzug) | Überschriften, Fließtext, dunkle Buttons | – |
+| **Logo-Gelb** | `#EFB110` | Logo („Internationales Netzwerk“) | zweites Farbband (z. B. „Sing mit“), Linie unter dem Kopfbereich, Kleinüberschriften auf Tiefgrün | Fließtext auf Weiß, weiße Schrift darauf |
+| **Logo-Grün** | `#96B839` | Logo (Kreis, Webadresse) | Schmuck: Kreise, Symbole, Illustrationen | Schriftfarbe, Button, weiße Schrift darauf |
+| **Tiefgrün** | `#2F4A14` | Logo-Grün, stark abgedunkelt | Kopfbereich (Hero), Band „Mitglied werden“ | – |
+| **Blattgrün-Schrift** | `#4D6B1F` | Logo-Grün, abgedunkelt | kleine Überschriften (Großbuchstaben) auf Creme/Weiß | große Flächen |
+| **Papiercreme** | `#F7F4EE` | Fable | Hintergrund für Karten und ruhige Bänder | – |
+| **Weiß** | `#FFFFFF` | – | Seitenhintergrund, Kopfleiste mit Logo, Schrift auf Tiefgrün/Anthrazit | – |
+| **Nebel** | `#ECEBE6` | – | Schlagwort-Etiketten, Platzhalter | – |
+| **Fußzeile** | `#262222` | Anthrazit, abgedunkelt | Fußzeile | – |
+
+**Warum ein abgedunkeltes Grün statt des Logo-Grüns für Flächen?**
+Das Logo-Grün ist hell. Weiße Schrift darauf erreicht nur 2,3 : 1 und ist damit
+schlecht lesbar. Das Tiefgrün hat denselben Farbton, trägt aber weiße Schrift gut.
 
 **Geprüfte Kontraste (WCAG, Mindestwert 4,5 : 1 für Text):**
 
 | Kombination | Kontrast | Erlaubt? |
 |---|---|---|
-| Weiß auf Waldgrün | 10,0 : 1 | ja |
-| Graphit auf Papiercreme | 10,4 : 1 | ja |
-| Tinte auf Himmelblau | 6,5 : 1 | ja |
-| Weiß auf Pflaume | 15,5 : 1 | ja |
-| **Weiß auf Himmelblau** | **2,9 : 1** | **nein** – nie verwenden |
+| Anthrazit auf Weiß | 12,3 : 1 | ja |
+| Anthrazit auf Papiercreme | 11,2 : 1 | ja |
+| Weiß auf Tiefgrün | 10,0 : 1 | ja |
+| Weiß auf Anthrazit (Button) | 12,3 : 1 | ja |
+| Anthrazit auf Logo-Gelb | 6,4 : 1 | ja |
+| Anthrazit auf Logo-Grün | 5,4 : 1 | ja (nur falls nötig) |
+| Logo-Gelb auf Tiefgrün | 5,2 : 1 | ja |
+| Blattgrün-Schrift auf Papiercreme | 5,6 : 1 | ja |
+| **Weiß auf Logo-Gelb** | **1,9 : 1** | **nein** – nie verwenden |
+| **Weiß auf Logo-Grün** | **2,3 : 1** | **nein** – nie verwenden |
+
+**Logo-Platzierung:** Das Logo hat dunkle Schrift und einen transparenten Hintergrund.
+Es steht deshalb immer auf Weiß oder Creme (Kopfleiste), nie auf Tiefgrün oder Gelb.
 
 ---
 
@@ -65,11 +83,16 @@ und Leser, dunkle statt weiße Schrift auf dem blauen Band (Kontrast).
 | Rolle | Schrift | Schnitt | Kosten |
 |---|---|---|---|
 | Überschriften | **Newsreader** (Google Fonts) | Regular 400, für kleine Überschriften Medium 500 | kostenlos (Open Font License) |
-| Text, Menü, Buttons | **Inter** (Google Fonts) | 400 Text, 500 Buttons, 600 Hervorhebung | kostenlos (Open Font License) |
+| Text, Menü, Buttons | **PT Sans** (Google Fonts) | Regular 400, Bold 700 | kostenlos (Open Font License) |
 
 **Warum Newsreader statt Heldane Display:** Heldane (Original bei Fable) kostet
 Lizenzgebühren bei der Schriftgießerei Klim. Newsreader hat denselben ruhigen,
 buchartigen Charakter und ist frei nutzbar – auch zum Hochladen in Wix.
+
+**Warum PT Sans statt Inter:** Der Schriftzug im Logo ist PT Sans sehr ähnlich
+(bitte bei der Person/Agentur, die das Logo erstellt hat, bestätigen lassen).
+Mit PT Sans als Textschrift wirken Logo und Webseite wie aus einem Guss.
+PT Sans ist gut lesbar und hat alle deutschen Sonderzeichen.
 
 **Schriftgrößen (Desktop / Handy):**
 
@@ -90,8 +113,8 @@ Fließtext nie unter 17 px (Zielgruppe: auch ältere Menschen).
 ## 4. Formen und Abstände
 
 - **Buttons:** immer Pille (Rundung 60 px), Innenabstand 16 px oben/unten, 28 px seitlich.
-  Dunkler Button = Pflaume mit weißer Schrift (auf Weiß/Creme).
-  Heller Button = Weiß mit Tinte-Schrift (auf Grün/Blau).
+  Dunkler Button = Anthrazit mit weißer Schrift (auf Weiß/Creme).
+  Heller Button = Weiß mit Anthrazit-Schrift (auf Tiefgrün/Gelb).
 - **Karten:** Papiercreme, Rundung 12 px, Innenabstand 24 px, ohne Rahmen.
 - **Große Feature-Karte:** Weiß, Rundung 48 px, Innenabstand 40 px, weicher Schatten.
 - **Abstand zwischen Abschnitten:** 80–120 px (Handy: 56–72 px).
@@ -107,13 +130,14 @@ Nie zwei gleichfarbige Bänder direkt untereinander.
 
 Empfohlene Reihenfolge der Startseite:
 
-1. **Waldgrün** – Kopfbereich: Kernaussage + Button „Zur Weiterbildung“
+0. **Weiß** – Kopfleiste mit Logo und Menü, darunter 6 px Linie in Logo-Gelb
+1. **Tiefgrün** – Kopfbereich: Kernaussage + Button „Zur Weiterbildung“
 2. **Papiercreme** – Was ist Heilsames Singen? (Erklärung)
 3. **Weiß** – Die zwei Zertifikate als Karten (Krankenhaus / Pflege & Senioren)
-4. **Himmelblau** – Sing mit: offene Singangebote (Schrift in Tinte!)
+4. **Logo-Gelb** – Sing mit: offene Singangebote (Schrift in Anthrazit!)
 5. **Papiercreme** – Termine / Zertifizierte Singleiter finden
-6. **Waldgrün** – Mitglied werden / Spenden
-7. **Kohle** – Fußzeile (Impressum, Datenschutz, Kontakt)
+6. **Tiefgrün** – Mitglied werden / Spenden
+7. **Fußzeile (#262222)** – Fußzeile (Impressum, Datenschutz, Kontakt)
 
 ---
 
@@ -123,7 +147,7 @@ Empfohlene Reihenfolge der Startseite:
   Warmes, natürliches Licht, keine gestellten Stockfotos.
 - Fotos mit 12 px Rundung oder vollbreit ohne Rundung.
 - Keine Texte ins Foto schreiben (schlecht lesbar, schlecht für Suchmaschinen).
-- Optional: flache Illustrationen in den Stilfarben (wie beim Original Fable).
+- Optional: flache Illustrationen in den Logofarben (Anthrazit, Gelb, Grün), z. B. Noten und Kreise wie im Logo.
 
 ---
 
@@ -135,12 +159,12 @@ Empfohlene Reihenfolge der Startseite:
 1. **Schriften hochladen** (falls nicht in der Wix-Auswahl):
    Editor → Text markieren → Schriftart → „Schriftarten hochladen“.
    Dateien: https://fonts.google.com/specimen/Newsreader und
-   https://fonts.google.com/specimen/Inter (jeweils „Get font“ → Download).
+   https://fonts.google.com/specimen/PT+Sans (jeweils „Get font“ → Download).
 2. **Website-Farben festlegen:** Editor → *Website-Design* → *Farben* →
    eigenes Farbschema mit den Hex-Werten aus Abschnitt 2.
 3. **Text-Themen festlegen:** Editor → *Website-Design* → *Text* →
-   Überschrift 1–3 = Newsreader, Absatz = Inter, Größen aus Abschnitt 3.
-4. **Button-Vorlage anlegen:** einen Button gestalten (Pflaume, Rundung 60 px),
+   Überschrift 1–3 = Newsreader, Absatz = PT Sans, Größen aus Abschnitt 3.
+4. **Button-Vorlage anlegen:** einen Button gestalten (Anthrazit, Rundung 60 px),
    dann „Design speichern“ – und nur noch diese Vorlage verwenden.
    Eine zweite Vorlage für den hellen Button (Weiß).
 5. **Abschnitte umbauen:** Abschnitt markieren → *Hintergrund ändern* → Farbe aus Abschnitt 2.
@@ -157,9 +181,10 @@ Beispiel-Startseite mit allen Farben, Schriften und Bausteinen.
 
 ## 8. Kurz-Checkliste für neue Seiten
 
-- [ ] Beginnt die Seite mit einem Waldgrün- oder Creme-Band?
+- [ ] Steht das Logo auf Weiß oder Creme?
+- [ ] Beginnt die Seite mit einem Tiefgrün- oder Creme-Band?
 - [ ] Wechseln sich die Bandfarben ab (nie zweimal dieselbe hintereinander)?
-- [ ] Überschriften in Newsreader, Text in Inter, Fließtext ≥ 17 px?
+- [ ] Überschriften in Newsreader, Text in PT Sans, Fließtext ≥ 17 px?
 - [ ] Buttons als Pille, dunkel auf hell / hell auf Farbe?
-- [ ] Keine weiße Schrift auf Himmelblau?
+- [ ] Keine weiße Schrift auf Logo-Gelb oder Logo-Grün?
 - [ ] Handy-Ansicht geprüft?
