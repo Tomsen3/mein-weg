@@ -49,6 +49,20 @@ ausgehen und was dabei verschoben oder gekürzt wurde. Wie die Struktur in der V
 Newsletter, Allgemeiner Infoflyer (PDF), Singen als Gesundheitserreger, Presse, Spenden, Kontakt;
 Social Media: YouTube, Instagram, Facebook.
 
+## Bereich WEITERBILDUNG (ausgelesen am 25.09.2026)
+
+| Seite | Inhalt |
+|---|---|
+| `/weiterbildung` | Begrüßung, Zitat Ya Beppo, zwei Zweige, „Gut zu wissen“, drei Stimmen, Newsletter, 5/4/2 Module, Mitbringen, Lernen, Aufbau |
+| `/wichtige-infos` | **exakt derselbe Inhalt wie `/weiterbildung`** |
+| `/kranken-und-gesundheitshäuser` | Zielgruppe, Termine-PDFs, Schnupperkurs, alle Module 2026 (auch vergangene), Beratung Vera Kimmig |
+| `/pflege-und-senioren` | wie oben für den Pflege-Zweig; viele Module doppelt mit der Krankenhaus-Seite |
+| `/anmeldung` | Formular: Module, Unterkunft (160–230 € Fr–So), Storno bis 4 Wochen vorher, Haftungsausschluss |
+| `/dozenten` | rund 20 Dozent:innen mit Kurzbiografie |
+
+Auffällig: E-Mail-Link der Beratung lautet `…@singende-krankenhauser.de` (ohne „e“) – vermutlich fehlerhaft.
+Wie der Bereich neu aufgebaut wird: `SEITE-weiterbildung.md`.
+
 ## Beobachtungen
 
 - **Ansprache:** Du („Sei dabei!“, „Du willst …“). Gendern mit Doppelpunkt, teils Sternchen oder Unterstrich (uneinheitlich).

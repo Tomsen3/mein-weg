@@ -3,6 +3,7 @@
 Stand: 25.09.2026 (überarbeitet: echte Seitenstruktur) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
+Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html`
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
 Mittelpunkt, die Gestaltung drumherum ist ruhig. Es ist so geschrieben, dass eine Person
@@ -119,6 +120,8 @@ Regeln:
   Keine Kartenfläche – das Foto *ist* die Karte.
 - **Wechselbänder:** Leinen → Salbei → Weizen → Tiefgrün, jeweils 80–120 px Abstand oben/unten.
 - **Faktenliste:** Begriff | Wert, getrennt durch 1-px-Linien in Anthrazit.
+- **Weitere Bausteine für Unterseiten** (aktiver Menüpunkt, Brotkrumen, Titelkasten rechts, große Zahl,
+  Häkchen-Liste, Etiketten, Filter, Hinweiskasten): beschrieben in `SEITE-weiterbildung.md`, Abschnitt 5.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
