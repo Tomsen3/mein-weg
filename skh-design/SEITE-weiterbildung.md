@@ -3,6 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-weiterbildung.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Startseite: `vorschau-foto.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseite: **Sing mit** (Zertifikat beantragen) → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html`
 
 Dieses Dokument erklärt, **wie die neue Weiterbildungsseite aufgebaut ist, woher jeder Inhalt
 stammt und warum er so angeordnet ist**. Eine Person ohne Vorkenntnisse soll die Seite damit in
@@ -38,13 +39,13 @@ für die vollständige Modulliste bestehen, werden aber von hier aus verlinkt.
 | – | Leinen | Brotkrumen | „Start › Weiterbildung“ | ältere Besucher:innen finden leichter zurück |
 | 1 | Titelfoto + Tiefgrün-Kasten | **Werde Singleiter:in** | Zitat Ya Beppo, Begrüßung, Buttons „Nächste Module“ und „Kostenlos reinschnuppern“ | die zwei häufigsten Absichten sofort erreichbar |
 | 2 | Leinen | **Wähle deinen Schwerpunkt** | die zwei Zweige als große Fotokarten mit „Zertifikat 1/2“, Kasten „Gut zu wissen“ (Module einzeln buchbar) | erste Entscheidung, die man treffen muss |
-| 3 | Salbei | **So viele Module brauchst du** | 5 / 4 / 2 Module mit Erklärung | beantwortet die häufigste Frage mit einer großen Zahl |
+| 3 | Salbei | **So viele Module brauchst du** (Sprungmarke `#modulzahl`) | 5 / 4 / 2 Module mit Erklärung, Pflichtmodul je Zweig, Link „Zertifikat beantragen“ auf die Seite Sing mit | beantwortet die häufigste Frage mit einer großen Zahl; der Antrag selbst steht auf Sing mit (siehe `SEITE-sing-mit.md`, Abschnitt 2) |
 | 4 | Leinen | **Was du mitbringst / Was du lernst** | zwei Fotos mit Häkchen-Listen | nimmt Unsicherheit („Kann ich das?“) |
 | 5 | Weizen | **So läuft die Weiterbildung** | Faktenliste: Form, Orte, Reihenfolge, Rhythmus, Mitgliedschaft, Unterkunft, Rücktritt | alle praktischen Fakten an einem Ort |
 | 6 | Leinen | **Die nächsten Module** | nur kommende Termine, Filter nach Zweig, Etiketten, Erklärung Buchstabe/römische Zahl, PDFs | ein Termin-Überblick statt zwei langer Listen |
 | 7 | Salbei | **Erst mal reinschnuppern** | kostenloser Online-Schnupperkurs | niedrige Einstiegshürde vor dem Buchen |
 | 8 | Leinen | **Das sagen Teilnehmende** | drei Stimmen (Martin, Jeanine, Martina), Link Dozent:innen | Vertrauen vor der Anmeldung |
-| 9 | Weizen | **Hast du Fragen?** | Weiterbildungsberatung Vera Kimmig mit Foto, Telefonnummer, Zeiten | persönliche Ansprechperson senkt die Hürde |
+| 9 | Weizen | **Hast du Fragen?** (Sprungmarke `#beratung`) | Weiterbildungsberatung Vera Kimmig mit Foto, Telefonnummer, Zeiten | persönliche Ansprechperson senkt die Hürde |
 | 10 | Tiefgrün | **Mitglied werden – und 15 % sparen** | Mitgliedschaft als Voraussetzung + Rabatt, Newsletter | Abschluss mit der wichtigsten Handlung |
 | – | Tiefgrün | Fußzeile | wie Startseite | auf allen Seiten gleich |
 
@@ -161,9 +162,9 @@ für Vorleseprogramme (`aria-current`).
 4. **Kursgebühren fehlen** auf allen öffentlichen Seiten (nur in den Modul-PDFs). Empfehlung:
    eine Zeile „Kursgebühr“ in die Faktenliste aufnehmen – das spart Rückfragen am Telefon.
    Wert bei Sandra erfragen.
-5. **Pflichtmodul:** Die Seite sagt „ein Pflichtmodul gemäß unserer Leitlinien“, nennt es aber
-   nicht. Wenn bekannt, konkret benennen (vermutlich Modul P „Singen als Dialog“ – **bitte
-   bestätigen lassen**, in der Vorschau nicht behauptet).
+5. ~~**Pflichtmodul benennen**~~ – **geklärt (25.09.2026):** Laut Antragsformularen ist es im Zweig
+   Krankenhaus „Singen als Dialog“ (Modul P), im Zweig Pflege „Mit dem Herzen pflegen“. Beide stehen jetzt
+   in der Vorschau (Bereich „So viele Module brauchst du“). Details und Folgefragen: `SEITE-sing-mit.md`, Abschnitt 7.
 6. **Einwilligungen** der fotografierten Personen (siehe Abschnitt 4).
 
 ---

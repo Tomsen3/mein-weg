@@ -3,7 +3,8 @@
 Stand: 25.09.2026 (überarbeitet: echte Seitenstruktur) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
-Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html`
+Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
+**Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html`
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
 Mittelpunkt, die Gestaltung drumherum ist ruhig. Es ist so geschrieben, dass eine Person
@@ -122,6 +123,9 @@ Regeln:
 - **Faktenliste:** Begriff | Wert, getrennt durch 1-px-Linien in Anthrazit.
 - **Weitere Bausteine für Unterseiten** (aktiver Menüpunkt, Brotkrumen, Titelkasten rechts, große Zahl,
   Häkchen-Liste, Etiketten, Filter, Hinweiskasten): beschrieben in `SEITE-weiterbildung.md`, Abschnitt 5.
+  Dazu Sprungleiste (statt Aufklappmenü), Formular-Karte und Ansprechperson ohne Foto: `SEITE-sing-mit.md`, Abschnitt 6.
+- **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
+  Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit).
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---

@@ -63,6 +63,24 @@ Social Media: YouTube, Instagram, Facebook.
 Auffällig: E-Mail-Link der Beratung lautet `…@singende-krankenhauser.de` (ohne „e“) – vermutlich fehlerhaft.
 Wie der Bereich neu aufgebaut wird: `SEITE-weiterbildung.md`.
 
+## Bereich SING MIT (ausgelesen am 25.09.2026)
+
+Die Menü-Unterpunkte „Singleiter:in werden“ und „Zertifikat beantragen“ sind **keine eigenen Seiten**,
+sondern Sprungmarken auf derselben Seite `/sing-mit`.
+
+| Abschnitt auf `/sing-mit` | Inhalt |
+|---|---|
+| SING MIT! | „Wie werde ich Singleiterin, Singleiter?“, „Ganz einfach“, Verweis auf Weiterbildung, Hinweis Unterstützungskultur (ohne Link) |
+| Zitat-Slideshows | 9 + 8 Folien, auslesbar nur Ursula 1964 und Simon 1958 |
+| Singleiter sein | Dialog, Freizeit/Therapie, Selbstregulation, Gruppendynamik, Leitlinien (PDF) |
+| Zertifikat | Modulzahl + Mitgliedschaft, Antrag Krankenhäuser / Pflege (PDF), Beitrittserklärung, Einreichen vor/nach letztem Modul, Sonja Heim |
+| Vielfalt unserer Mitglieder | Landkarte (Link zeigt fälschlich auf `/sing-mit`), Einrichtungen, Honorarempfehlung 90 €/Singstunde |
+| Sei dabei und sing mit! | offene Singkreise, Videoclips (YouTube), Forschung „demnächst“ (ohne Link), Zitat Wolfgang Bossinger |
+
+Auffällig: Pflichtmodule je Zweig und die verpflichtende Singprobe stehen **nur in den Antragsformularen**.
+Social-Media-Symbole in der Fußzeile verlinken auf die Profile von Wix statt auf die des Vereins.
+Wie der Bereich neu aufgebaut und mit der Weiterbildung abgestimmt wird: `SEITE-sing-mit.md`.
+
 ## Beobachtungen
 
 - **Ansprache:** Du („Sei dabei!“, „Du willst …“). Gendern mit Doppelpunkt, teils Sternchen oder Unterstrich (uneinheitlich).
