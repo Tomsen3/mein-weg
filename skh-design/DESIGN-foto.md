@@ -138,7 +138,7 @@ Regeln:
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
   Gesamtkalender, Schnupperkurse und Jahresvorschau → Termine; Module mit Zweig-Filter und Anmeldung → Weiterbildung –
   beide Terminlisten kommen in Wix aus derselben Quelle, der Wix-Events-App, siehe `SEITE-termine.md`, Abschnitt 2;
-  Vision, Geschichte, Personen mit Funktion, Beirat, Botschafter:innen, Singforschung und – als Vorschlag – Spenden → Über uns;
+  Vision, Geschichte, Personen mit Funktion, Beirat, Botschafter:innen, Singforschung und Spenden → Über uns;
   Telefonnummern und Sprechzeiten bleiben auf den Aufgabenseiten).
   Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md` und `SEITE-ueber-uns.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.

@@ -11,7 +11,7 @@ damit in Wix nachbauen und später pflegen können.
 
 **Rolle der Seite:** „Über uns“ beantwortet die Frage **„Wer steckt dahinter – und kann ich euch vertrauen?“**. Hauptort
 ist sie für: Vision und Anliegen, Geschichte, Personen (Vorstand, Geschäftsstelle, Ehrenvorsitzende, Schirmherrin,
-Beirat, Botschafter:innen), Singforschung, Kooperationspartner und – als **Vorschlag** – Spenden. Aufgaben wie
+Beirat, Botschafter:innen), Singforschung, Kooperationspartner und Spenden. Aufgaben wie
 Beratung, Anträge oder Beitritt stehen weiterhin auf den Seiten, wo man sie erledigt; „Über uns“ verlinkt dorthin
 (Grundregel aus `DESIGN-foto.md`, Abschnitt 4).
 
@@ -54,9 +54,9 @@ Singen“** mit Spendenkonto auf der Seite `/kontakt`.
 
 ---
 
-## 2. Gliederung – Vorschlag und Begründung
+## 2. Gliederung – Entscheidung und Begründung
 
-### Vorschlag: **eine Seite mit Sprungleiste** statt Übersichtsseite plus Unterseiten
+### Entscheidung: **eine Seite mit Sprungleiste** statt Übersichtsseite plus Unterseiten (entschieden am 25.09.2026 (Tom, Vorstand))
 
 Aus heute **sieben** Seiten (`/überuns` + sechs Unterseiten) wird **eine** Seite „Über uns“ mit acht Sprungzielen. Die
 Menü-Unterpunkte entfallen, wie schon bei Sing mit, Für Einrichtungen und Mitglied sein.
@@ -104,16 +104,16 @@ Geschäftsführung → `#geschaeftsstelle` · Ehrenvorsitzende → `#ehrenvorsit
 | **Zitate von Fachleuten** (Schömig, Hüther, Kreutz) | Für Einrichtungen | **Für Einrichtungen** (`#stimmen`) | Über uns: Kasten „Stimmen aus Klinik und Wissenschaft“ mit Link dorthin | Die Zitate sind Argumente für Einrichtungen. Kreutz steht im Beirat mit einem **anderen** Zitat (Foto-Ausnahme, Abschnitt 5). |
 | **Dozent:innen** | Weiterbildung (`/dozenten`), Jahrestagung | **Weiterbildung** (`/dozenten`) | Über uns: nur ein Satz „Tom Jansen und Paula Bieker unterrichten auch in der Weiterbildung“ mit Link | nicht doppeln |
 | **Kooperationspartner** (PDF) | Fußzeile | **Über uns** (`#netzwerk`) | Fußzeile „Kooperationspartner“ zeigt jetzt auf `#netzwerk`, dort liegt das PDF | gehört zum Netzwerk-Gedanken |
-| **Spenden** (Spendenbescheinigung, Rumänien-Projekt, Spendenkonto) | Startseite (Band 7), Kontakt (mit Konto), Mitglied sein (ein Satz) | **Vorschlag: Über uns** (`#spenden`) | Startseite und Mitglied sein: Link „Spenden für’s Singen →“ → `#spenden`; Fußzeile „Spenden“ → `#spenden`; Kontakt: Kasten durch einen Satz mit Link ersetzen | siehe unten |
+| **Spenden** (Spendenbescheinigung, Rumänien-Projekt, Spendenkonto) | Startseite (Band 7), Kontakt (mit Konto), Mitglied sein (ein Satz) | **Über uns** (`#spenden`) – entschieden 25.09.2026 | Startseite und Mitglied sein: Link „Spenden für’s Singen →“ → `#spenden`; Fußzeile „Spenden“ → `#spenden`; Kontakt: Kasten durch einen Satz mit Link ersetzen | siehe unten |
 | **Presse** | Kontakt | **Kontakt** (unverändert) | – | nicht Teil dieses Bereichs |
 
-**Vorschlag Hauptort Spenden – Begründung** (offener Punkt 10 in `SEITE-mitglied-sein.md`, dort bisher Vorschlag
+**Hauptort Spenden – Entscheidung und Begründung** (entschieden am 25.09.2026 (Tom, Vorstand); offener Punkt 10 in `SEITE-mitglied-sein.md`, dort bisher Vorschlag
 „eigene kleine Seite“): Eine eigene Seite hätte nur einen Kasten Inhalt und bräuchte einen weiteren Fußzeilen- oder
 Menüpunkt. Auf „Über uns“ steht dagegen schon alles, was Spender:innen vor einer Spende prüfen: wer den Verein führt,
 Schirmherrin, Beirat, Gemeinnützigkeit – und die Landesbotschafterin, die das Rumänien-Projekt trägt. Zuständig für
-Spenden ist laut Team-Seite Sonja Heim, die ebenfalls hier vorgestellt wird. **Entscheidung durch den Vorstand**
-(Abschnitt 7, Punkt 3). Fällt sie anders aus, wandert Bereich 9 unverändert auf eine eigene Seite und die Links
-`#spenden` werden umgestellt.
+Spenden ist laut Team-Seite Sonja Heim, die ebenfalls hier vorgestellt wird. Sollte später doch eine eigene Seite
+nötig werden (z. B. für mehrere Spendenprojekte), wandert Bereich 9 unverändert dorthin und die Links `#spenden`
+werden umgestellt.
 
 ### Kontaktdaten und Funktionen – Abgleich
 
@@ -133,7 +133,7 @@ die Funktionsbezeichnung soll aber nicht abweichen.
 | Seite | Stelle | Vorher | Nachher | Grund |
 |---|---|---|---|---|
 | alle sechs | Menüpunkt „Über uns“ | `#` | → `vorschau-foto-ueber-uns.html` | Seite gibt es jetzt |
-| alle sechs | Fußzeile „Spenden“ | `#` | → `vorschau-foto-ueber-uns.html#spenden` | Vorschlag Hauptort Spenden |
+| alle sechs | Fußzeile „Spenden“ | `#` | → `vorschau-foto-ueber-uns.html#spenden` | Hauptort Spenden |
 | alle sechs | Fußzeile „Kooperationspartner“ | `#` | → `vorschau-foto-ueber-uns.html#netzwerk` | Hauptort; dort liegt das PDF |
 | Startseite | Tiefgrün-Band „Spenden für's Singen →“ | `#` | → `#spenden`, Schreibweise „für’s“ wie auf den anderen Seiten | |
 | Mitglied sein | Tiefgrün-Band „Spenden für’s Singen →“ | `#` | → `#spenden` | |
@@ -161,7 +161,7 @@ Nicht geändert: Kontaktkästen mit Telefonnummern auf den Aufgabenseiten (bleib
 | 6 | Leinen | **Wer uns den Rücken stärkt** (`#schirmherrin`, darin `#beirat`) | Zitat mit Porträt: Schirmherrin, ganzes Grußwort aufklappbar; Beirat: Einleitung, 3 kleine Zitate mit Porträt, alle 33 Namen aufklappbar (Deutschland / International) | Rückhalt aus Politik und Wissenschaft |
 | 7 | Salbei | **Stimmen für das Singen** (`#botschafter`, darin `#landesbotschafter`) | Siegel „Musikalischer Botschafter“ mit Erklärung; 3 Karten (Lombardo, Matt, Puschban); alle 16 aufklappbar; Landesbotschafter:innen: 2 kleine Zitate (Juchem, Gazdag), Nachruf-Zeile Stillwater, 16 Länder aufklappbar **ohne Kontaktdaten** | Kultur und Ausland |
 | 8 | Weizen | **Was die Forschung sagt** (`#forschung`) | Einleitung (von der heutigen Seite), drei Wegweiser (Beirat, Stimmen auf Für Einrichtungen, Methodik → Weiterbildung), Hinweiskasten „Im Aufbau“; Foto | ehrlich statt leer; macht die Links von Nachbarseiten sinnvoll |
-| 9 | Leinen | **Spenden für’s Singen** (`#spenden`) – Vorschlag | Dank, Spendenbescheinigung, Rumänien-Projekt (Link zu Erzsébet Gazdag); Karte „Spendenkonto“ (IBAN, BIC, Zweck); Ansprechperson Sonja Heim ohne Foto | Handlung am Ende, nach allem, was Vertrauen schafft |
+| 9 | Leinen | **Spenden für’s Singen** (`#spenden`) | Dank, Spendenbescheinigung, Rumänien-Projekt (Link zu Erzsébet Gazdag); Karte „Spendenkonto“ (IBAN, BIC, Zweck); Ansprechperson Sonja Heim ohne Foto | Handlung am Ende, nach allem, was Vertrauen schafft |
 | 10 | Tiefgrün | **Werde Teil des Netzwerks.** (`#mitglied`) | ein Satz, Buttons „Mitglied werden“, „Alle Vorteile →“; Newsletter | Abschluss wie auf allen Seiten |
 | – | Tiefgrün | Fußzeile | wie Startseite; „Spenden“ und „Kooperationspartner“ verlinkt | |
 
@@ -292,7 +292,7 @@ Funktionszeilen, Quellenhinweis, Namenszusätze und Brotkrumen (wie auf allen Un
 6. **PDFs aufräumen:** Landesbotschafter-PDF **sofort** von der Seite nehmen (Abschnitt 7, Punkt 1). Beirats-PDFs und
    Botschafter-PDF entfallen, sobald die Listen auf der Seite stehen (in der Medienverwaltung lassen, bis alle Links
    umgestellt sind). Organigramm und Kooperationspartner bleiben verlinkt.
-7. **Spenden** (nach Entscheidung, Punkt 3): Bereich 9 anlegen; auf `/kontakt` den Spendenkasten durch einen Satz mit
+7. **Spenden:** Bereich 9 anlegen; auf `/kontakt` den Spendenkasten durch einen Satz mit
    Link auf `/überuns#spenden` ersetzen; Fußzeile „Spenden“ und alle Buttons „Spenden für’s Singen“ auf
    `/überuns#spenden` stellen.
 8. **Nachbarseiten** umstellen wie in Abschnitt 2 („Korrekturen auf den Nachbar-Vorschauen“); auf der Startseite den
@@ -323,9 +323,9 @@ Spenden frei.
 1. **Datenschutz Landesbotschafter-PDF:** enthält private Postadressen, Telefonnummern und E-Mail-Adressen von
    Ehrenamtlichen im Ausland. → **Sofort** von der Webseite nehmen, außer es liegen schriftliche Einwilligungen vor. Die
    Vorschau zeigt nur Land und Name. **Sofort umsetzbar.**
-2. **Gliederung bestätigen:** eine Seite mit Sprungleiste, Unterseiten per 301 auf `/überuns` (Abschnitt 2). → Vorstand.
-3. **Hauptort Spenden:** Vorschlag „Über uns“ `#spenden` statt eigener Seite (Abschnitt 2). → Vorstand; danach offenen
-   Punkt 10 in `SEITE-mitglied-sein.md` schließen.
+2. ~~Gliederung bestätigen~~ – **erledigt**, entschieden am 25.09.2026 (Tom, Vorstand): eine Seite mit Sprungleiste, Unterseiten per 301 auf `/überuns`.
+3. ~~Hauptort Spenden~~ – **erledigt**, entschieden am 25.09.2026 (Tom, Vorstand): „Über uns“ `#spenden`, keine eigene Seite. Punkt 10 in
+   `SEITE-mitglied-sein.md` ist geschlossen.
 4. **Funktionsbezeichnungen und Porträts vereinheitlichen** (Abschnitt 2 und 5): Bezeichnungen wie in der Vorschau?
    Studioporträts überall? Veras Festnetznummer nur auf der Team-Seite – soll sie überall stehen oder nirgends? → Sonja
    mit Vera und Sandra.
