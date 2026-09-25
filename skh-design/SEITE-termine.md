@@ -31,7 +31,7 @@ Auslesen am 25.09.2026 enthielt sie von oben nach unten:
 |---|---|---|
 | 1 | Titel, zwei Sätze: „Unser Veranstaltungskalender ist prall gefüllt mit spannenden sikra-internen Events! Freu dich auf Weiterbildungsmodule, Online-Schnupperkurse, Supervisions-Runden, die Gitarre- und Ukulele-Factory und unsere beliebten Liedernächte …“ | „sikra-intern“ ist Vereinsjargon; die Liedernacht steht gar nicht im Kalender |
 | 2 | „Gratis-Schnupperkurs“: zu jedem Modul vorher online, i. d. R. freitags 18:00–18:45 Uhr; Buttons **SCHNUPPERKURS-TERMINE** (PDF) und **zum Online-Schnupperkurs** (Teams-Link); „direkt über den Browser, ohne Installation und ohne Microsoft-Konto“ | gut – der einzige Ort mit dem aktuellen Schnupperkurs-PDF und dem Zugang |
-| 3 | „Guitar- & Ukulele-Factory & Singleiter im Gespräch“: Buttons **MITGLIEDERTERMINE** (PDF) und **Zum Online-Angebot für Mitglieder** (**Teams-Link, öffentlich sichtbar**); Satz „Dieses Online-Angebot ist ausschließlich für Mitglieder“ | **Der Teams-Link für Mitglieder steht öffentlich im Netz.** |
+| 3 | „Guitar- & Ukulele-Factory & Singleiter im Gespräch“: Buttons **MITGLIEDERTERMINE** (PDF) und **Zum Online-Angebot für Mitglieder**; Satz „Dieses Online-Angebot ist ausschließlich für Mitglieder“ | Doppelung mit „Mitglied sein“ (dort Hauptort) |
 | 4 | Veranstaltungsliste (Wix-Events): Modul F, Modul P, Come-together – je Datum, Ort, Untertitel, „Infos & Anmeldung“ | nur **drei** Termine; Module in Österreich, Schnupperkurse und Jahrestagung fehlen |
 | 5 | Newsletter, Spenden (Rumänien-Projekt), Kontakt Sonja Heim, Vera Kimmig, Sandra Roß-Lünenschloß | dieselben Kästen wie auf anderen Seiten |
 
@@ -96,7 +96,7 @@ an einer Stelle: der Vorschau aufs nächste Jahr auf „Termine“ (bis die Term
 | **Modul-Inhalte, Zweig, Zertifikat, Preis, Anmeldung** | Termine (eine Zeile je Modul) | **Weiterbildung** (`#module`) bzw. Veranstaltungsseite in Wix | Termine: Kasten „Gut zu wissen“ mit **einem** Satz + Link „Module nach Zweig filtern →“; je Modul „Details & anmelden →“ | Termine zeigt nur Datum, Ort, Leitung und Etiketten |
 | **Online-Schnupperkurse** (Termine, Zeit, Zugang, PDF) | Weiterbildung (Bereich „Erst mal reinschnuppern“), Zweig-Seiten („Jahresplanung“) | **Termine** (`#schnuppern`) | Weiterbildung: Bereich bleibt (wichtiger Schritt vor der Entscheidung), aber Button **„Termine & Zugang“ → Termine** statt „Jahresplanung & Online-Zugang“ (PDF) | Die Schnupperkurse sind Termine; ihr Zugang ist öffentlich. Heute liegen die aktuelle Liste und der Zugang schon auf `/termine`. |
 | **Vorschau aufs nächste Jahr** | Startseite, Zweig-Seiten, Weiterbildung (PDF-Links) | **Termine** (`#vorschau`) | Startseite und Weiterbildung: Link „Vorschau 2027 →“ statt direkt aufs PDF | Liste auf der Seite ist auf dem Handy lesbar, das PDF bleibt als Download |
-| **Online-Runden für Mitglieder** (Factory, Singleiter:innen im Gespräch) | Termine (heute mit öffentlichem Teams-Link) | **Mitglied sein** (`#unterstuetzung`) – wie festgelegt | Termine: **ein** Hinweis ohne Daten und ohne Zugang, Link „Zu den Online-Terminen für Mitglieder →“ | nur für Mitglieder; der Zugang gehört nicht auf eine öffentliche Seite |
+| **Online-Runden für Mitglieder** (Factory, Singleiter:innen im Gespräch) | Termine (heute eigener Kasten mit PDF und Zugang) | **Mitglied sein** (`#unterstuetzung`) – wie festgelegt | Termine: **ein** Hinweis ohne Daten, Link „Zu den Online-Terminen für Mitglieder →“ | nur für Mitglieder; Termine und Zugang werden an einer Stelle gepflegt |
 | **Jahrestagung** (Programm, Preise, Anmeldung, Liedernacht) | Termine, Startseite (Hinweisleiste) | **Jahrestagung-Bereich** | Termine: 3 Zeilen im Kalender (Tagung, Mitgliederversammlung, Liedernacht) + Bereich mit 5 Eckdaten, Buttons „Zur Jahrestagung“ / „Programm ansehen“; **keine Preise**, nur „Frühbucherpreis bis 31.01.2027 – Mitglieder zahlen weniger“ | Preise und Programm ändern sich; sie werden nur im Jahrestagung-Bereich gepflegt |
 | **Singgruppen vor Ort** (wöchentliche Singkreise) | Singende Landkarte | **Singende Landkarte** | Termine: ein Hinweis mit Link | Diese Termine pflegen die Singleiter:innen selbst; eine zweite Liste würde veralten |
 | **Weiterbildungsberatung** (Vera Kimmig) | Weiterbildung, Jahrestagung | **Weiterbildung** (`#beratung`) | Termine: ein Satz (Zeiten) + Link; Österreich: Sybille Mikula | Kontaktdaten nur an einer Stelle pflegen |
@@ -227,8 +227,8 @@ Etiketten, Monatszeilen, Datumszusätze und Brotkrumen (wie auf allen Unterseite
 4. **Seite `/termine` behalten** (Adresse nicht ändern) und nach Abschnitt 3 neu aufbauen. Das Element
    *Veranstaltungsliste* als **Liste**, nur **kommende** Veranstaltungen, Filter nach Kategorie einschalten.
 5. **Anker setzen:** `kalender`, `schnuppern`, `jahrestagung`, `vorschau`, `mehr`, `mitglied`.
-6. **Mitglieder-Kasten entfernen:** den Teams-Link „Zum Online-Angebot für Mitglieder“ und den Button
-   MITGLIEDERTERMINE von `/termine` nehmen und durch den Hinweis aus Bereich 6 ersetzen.
+6. **Mitglieder-Kasten ersetzen:** den Kasten „Guitar- & Ukulele-Factory & Singleiter im Gespräch“ auf `/termine`
+   durch den Hinweis aus Bereich 6 ersetzen (Hauptort ist „Mitglied sein“).
 7. **Vorschau 2027** als Text anlegen (zwei Listen). Sobald die 2027-Termine in Wix-Events stehen, den Bereich
    leeren bzw. auf das Jahr danach umstellen.
 8. **Nachbarseiten** umstellen wie in Abschnitt 2 („Korrekturen auf den Nachbar-Vorschauen“); auf den Zweig-Seiten
@@ -289,7 +289,7 @@ Hand** gepflegt werden. Zuständigkeit klären (Abschnitt 7, Punkt 7).
 - [ ] Alle kommenden Termine in Wix-Events, Kategorien gesetzt, Filter nach Art funktioniert?
 - [ ] Startseite, Weiterbildung und Termine zeigen dieselben Termine (dieselbe Quelle)?
 - [ ] Anmeldelink der Veranstaltungen zeigt auf `singende-krankenhaeuser.de/anmeldung`?
-- [ ] Teams-Link für Mitglieder von `/termine` entfernt; Schnupperkurs-Zugang funktioniert ohne Konto?
+- [ ] Schnupperkurs-Zugang funktioniert ohne Konto?
 - [ ] Nur **eine** Schnupperkurs-PDF im Umlauf, Button JAHRESPLANUNG entfernt?
 - [ ] Menüpunkt „Termine“ und alle Links „Alle Termine“ / „Vorschau“ auf allen Seiten → `/termine`?
 - [ ] Jahrestagung: Datum, Ort, Frühbucherfrist hier und im Jahrestagung-Bereich gleich?

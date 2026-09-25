@@ -126,7 +126,7 @@ Wie der Bereich neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-
 |---|---|
 | Einleitung | „prall gefüllt mit spannenden sikra-internen Events“ – Module, Schnupperkurse, Supervision, Factory, Liedernächte |
 | Gratis-Schnupperkurs | freitags 18:00–18:45; PDF Schnupperkurstermine 2026; Teams-Link „zum Online-Schnupperkurs“ |
-| Guitar- & Ukulele-Factory & Singleiter im Gespräch | PDF Mitgliedertermine; **öffentlicher Teams-Link** „Zum Online-Angebot für Mitglieder“ |
+| Guitar- & Ukulele-Factory & Singleiter im Gespräch | PDF Mitgliedertermine; Link „Zum Online-Angebot für Mitglieder“ |
 | Veranstaltungsliste (Wix-Events) | nur 3 Termine: Modul F, Modul P, Come-together; „Infos & Anmeldung“ |
 | Newsletter, Spenden, Kontakt | wie auf anderen Seiten |
 
