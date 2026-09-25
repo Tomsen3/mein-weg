@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-sing-mit.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5 ·
-Nachbarseiten: `vorschau-foto-weiterbildung.html`, `vorschau-foto-einrichtungen.html` (`SEITE-einrichtungen.md`), `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`) · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto-weiterbildung.html`, `vorschau-foto-einrichtungen.html` (`SEITE-einrichtungen.md`), `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`) · Über uns: `vorschau-foto-ueber-uns.html` (`SEITE-ueber-uns.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 Termine (Menüpunkt in der Vorschau verlinkt seit 25.09.2026): `SEITE-termine.md` + `vorschau-foto-termine.html`
 
 Dieses Dokument erklärt, **wie die neue Seite „Sing mit“ aufgebaut ist, woher jeder Inhalt stammt,
@@ -168,7 +168,7 @@ Gelb, Weiß und Gelb auf Tiefgrün) – alle über 4,5 : 1. Die gelbe Linie ist 
    genau wie in `vorschau-foto-weiterbildung.html`.
 5. **PDFs:** Die drei vorhandenen Dateien weiterverwenden (Antrag Krankenhäuser, Antrag Pflege,
    Beitrittserklärung) und die Leitlinien. Nichts neu hochladen, sonst ändern sich die Links.
-6. **Links reparieren:** „Singende Landkarte“ → `/singende-landkarte`; „Was die Forschung sagt“ → `/singforschung`;
+6. **Links reparieren:** „Singende Landkarte“ → `/singende-landkarte`; „Was die Forschung sagt“ → `/überuns#forschung` (die Seite `/singforschung` wird zusammengelegt, `SEITE-ueber-uns.md`);
    „Mehr zur Mitgliedschaft“ → `/mitglied-sein` (Anker `unterstuetzung`); Buttons „Mitglied werden“ → `/mitglied-sein`.
 7. **Telefonnummer** als Text **und** als Link `tel:+4975195865244`; E-Mail als `mailto:`-Link.
 8. **Zitat-Slideshows** durch je **ein** festes Zitat ersetzen (Ursula im Titel, Simon bei „Singleiter:in sein“).

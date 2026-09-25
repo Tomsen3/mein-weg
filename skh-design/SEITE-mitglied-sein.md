@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-mitglied-sein.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, `SEITE-sing-mit.md` und `SEITE-einrichtungen.md`, jeweils Abschnitt 6 ·
-Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html`, `vorschau-foto-termine.html` (`SEITE-termine.md`) · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html`, `vorschau-foto-termine.html` (`SEITE-termine.md`) · Über uns: `vorschau-foto-ueber-uns.html` (`SEITE-ueber-uns.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 
 Dieses Dokument erklärt, **wie die neue Seite „Mitglied sein“ aufgebaut ist, woher jeder Inhalt stammt,
 was mit den Nachbarseiten abgeglichen wurde und warum**. Eine Person ohne Vorkenntnisse soll die Seite damit in
@@ -76,7 +76,7 @@ einem Satz zusammen und verlinken dorthin.
 | **Offene Frage:** Reicht die Mitgliedschaft der Einrichtung auch fürs Singleiter-Zertifikat der Mitarbeitenden? | Für Einrichtungen, offener Punkt 12 | – | **Platzhalter-Satz** in „Gut zu wissen“: „Ob die Mitgliedschaft deiner Einrichtung auch fürs Zertifikat reicht, klär bitte vor dem Antrag mit Sonja Heim.“ | So steht nichts Falsches auf der Seite. Nach der Entscheidung durch einen klaren Satz ersetzen – hier **und** auf Sing mit (`#zertifikat`). |
 | **Feedback des Monats** | Startseite | **Mitglied sein** (`#fokus`) | Startseite: entfällt (war in der Foto-Vorschau schon nicht mehr enthalten) | laut `DESIGN-foto.md`, Abschnitt 5; langer Text, gehört zu „MitgLIEDER im Fokus“ |
 | **MitgLIEDER im Fokus** (Lied des Monats) | Startseite (Karte in „Aktuelles“) | **Mitglied sein** (`#fokus`) | Startseite: Karte mit einem Satz, „Weiterlesen →“ zeigt auf `#fokus` | Heute ist die Geschichte auf zwei Seiten zerteilt; jetzt steht sie vollständig hier (aufklappbar). |
-| **Spenden** | Startseite (Band 7), Seite Kontakt (mit Spendenkonto) | **nicht diese Seite** | hier nur ein Satz im Tiefgrün-Band + Link „Spenden für’s Singen →“ | Spenden sind kein Mitgliederthema. Wo der Hauptort für Spenden sein soll, ist noch offen (Abschnitt 7, Punkt 10). |
+| **Spenden** | Startseite (Band 7), Seite Kontakt (mit Spendenkonto) | **nicht diese Seite** (Vorschlag: Über uns, `#spenden`) | hier nur ein Satz im Tiefgrün-Band + Link „Spenden für’s Singen →“ | Spenden sind kein Mitgliederthema. Hauptort noch nicht entschieden (Abschnitt 7, Punkt 10). |
 | **Newsletter** | fast überall | Fußbereich des Tiefgrün-Bands | – | wie auf allen Unterseiten |
 | Ansprechperson **Sandra Roß-Lünenschloß** (Mitgliederverwaltung) | Kontakt, Team Geschäftsführung | **Mitglied sein** (`#kontakt`) für den Beitritt | – | Die Kontaktdaten stehen dort, wo das Formular steht (wie bei Sonja Heim auf Sing mit / Für Einrichtungen). |
 
@@ -241,8 +241,9 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
    **15 %**. → Flyer korrigieren (Canva, Autor laut PDF: Tom). Dabei nur **eine** Fassung behalten (die neuere mit
    Liedpostkarten-Set) und auf „Mitglied sein“ und in der Fußzeile dieselbe Datei verlinken. **Sofort umsetzbar.**
 2. **Ansprechperson im Infoflyer:** nennt **Vera Kimmig** für „Verein / Mitgliedschaft / Weiterbildung“; die Webseite
-   nennt für die Mitgliedschaft **Sandra Roß-Lünenschloß**. → Mit Sonja klären und angleichen. Im selben Zug:
-   Gründungsjahr **2009** (Flyer) oder **2010** (Startseite „Was wir wollen“)?
+   nennt für die Mitgliedschaft **Sandra Roß-Lünenschloß**. → Mit Sonja klären und angleichen. Das Gründungsjahr ist
+   **geklärt** (25.09.2026): 2009 entstand die Initiative, 2010 der eingetragene Verein – beides richtig
+   (`SEITE-ueber-uns.md`, Abschnitt 2). Einheitliche Funktionsbezeichnungen: dort Abschnitt 2.
 3. **Termin-PDF:** „Mi., 7. April 2026“ → „Di.“ (vergangen, aber das PDF wird weiter verlinkt). **Wichtiger:** Termine
    **2027** anlegen – die Vorschau zeigt nur noch bis 10.11.2026.
 4. **Wie kommt man in die Online-Runden?** Die Webseite verspricht „Termine & Online-Zugang“, das PDF enthält aber
@@ -263,8 +264,9 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
 9. **Mitgliedschaft der Einrichtung und Singleiter-Zertifikat** (offener Punkt 12 in `SEITE-einrichtungen.md`):
    Platzhalter-Satz im Kasten „Gut zu wissen“ nach der Entscheidung ersetzen, auch auf Sing mit (`#zertifikat`).
 10. **Hauptort für Spenden:** Spenden stehen heute auf der Startseite und auf der Kontaktseite (nur dort mit
-    Spendenkonto). → Entscheiden, wo der Hauptort ist (Vorschlag: eigene kleine Seite „Spenden“, in der Fußzeile
-    verlinkt), dann den Link „Spenden für’s Singen →“ hier und auf der Startseite dorthin setzen.
+    Spendenkonto). → Entscheiden, wo der Hauptort ist. **Neuer Vorschlag (25.09.2026):** Bereich „Spenden für’s Singen“
+    auf „Über uns“ (`#spenden`) statt einer eigenen Seite – Begründung in `SEITE-ueber-uns.md`, Abschnitt 2. In den
+    Vorschauen zeigen „Spenden für’s Singen →“ (hier und Startseite) und die Fußzeile „Spenden“ schon dorthin.
 11. **Sandras Funktion und Kontakt:** „Mitarbeiterin für Öffentlichkeitsarbeit und Mitgliederverwaltung“ (Mitglied
     sein) bzw. „Assistenz der Geschäftsführung“ (Kontakt, Team). Es ist **keine Telefonnummer** veröffentlicht – die
     Vorschau zeigt nur Post- und E-Mail-Adresse. → Mit Sandra klären, ob eine Nummer dazukommen soll.

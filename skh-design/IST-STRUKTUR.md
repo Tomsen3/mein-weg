@@ -14,8 +14,8 @@ ausgehen und was dabei verschoben oder gekürzt wurde. Wie die Struktur in der V
 | Menüpunkt | Unterseiten |
 |---|---|
 | START | – |
-| JAHRESTAGUNG | Programm, Dozenten, Workshops, Liedernacht, Organisation, Anmeldung, Teilnahmebedingungen, FAQ |
-| ÜBER UNS | Über uns, Team Vorstand, Team Geschäftsführung, Ehrenvorsitzende, Botschafter und Beirat, Singforschung |
+| JAHRESTAGUNG | Programm, Dozenten, Workshops, Liedernacht, Organisation, Anmeldung, Teilnahmebedingungen, FAQ – **bleibt, wie er ist** (nicht im Foto-Stil, Entscheidung 25.09.2026, `DESIGN-foto.md`, Abschnitt 5) |
+| ÜBER UNS | Über uns, Team Vorstand, Team Geschäftsführung, Ehrenvorsitzende, Botschafter und Beirat, Singforschung (**eigene Seiten**; `/überuns` enthält alle sechs noch einmal) |
 | WEITERBILDUNG | Wichtige Infos, Kranken- & Gesundheitshäuser, Pflege & Senioren, Anmeldung, Dozenten |
 | SING MIT | Singleiter:in werden, Zertifikat beantragen |
 | SINGENDE LANDKARTE | – |
@@ -135,6 +135,35 @@ fehlen. Die Anmeldung der Veranstaltungen führt auf `sonjaheim9.wixsite.com/my-
 Fassungen der Schnupperkurs-Liste im Umlauf (Zweig-Seiten: alte „Jahresplanung“). Der Flyer „Alle Termine 2026“ nennt
 ein falsches Modul F; die Terminvorschau 2027 siezt und enthält die Jahrestagung nicht.
 Wie die Seite neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-termine.md`.
+
+## Bereich ÜBER UNS (ausgelesen am 25.09.2026)
+
+Die sechs Menü-Unterpunkte sind **eigene Seiten**. Die Seite des Menüpunkts selbst, `/überuns`, zeigt den Inhalt aller
+sechs noch einmal untereinander – derselbe Inhalt liegt also doppelt in Wix, inzwischen mit unterschiedlichen Fotos.
+
+| Seite | Inhalt |
+|---|---|
+| `/überuns` | alle sechs Unterseiten hintereinander, zusätzlich ein Absatz zur Sprache (♥-Zeichen, „verzichten bewusst auf durchgängiges Gendern“) |
+| `/über-uns` | Anliegen, Entstehung 2009, Netzwerk, Göppinger Singgruppe (Wolfgang Bossinger), 2010 e.V., „zweite Generation“ (Elke Wünnenberg) |
+| `/team-vorstand` | Tom Jansen, Martin Hanke, Paula Bieker; Organigramm (PDF) |
+| `/team-geschäftsführung` | Sonja Heim, Vera Kimmig, Sandra Roß-Lünenschloß mit Aufgaben, Telefon, E-Mail |
+| `/ehrenvorsitzende` | Bossinger (2010–2013), Hermanns (2013–2016), Wünnenberg („seit 2016“); „über 700 Mitglieder und 100 zertifizierte Einrichtungen“ |
+| `/botschafter-und-beirat` | Schirmherrin Gerlinde Kretschmann; Beirat (3 + 2 PDFs); Musikalische Botschafter (3 + PDF); Landesbotschafter (3 + PDF), Nachruf Michael Stillwater |
+| `/singforschung` | zwei Sätze, „in Bearbeitung“ |
+
+Auffällig: Das Landesbotschafter-PDF enthält private Adressen und Telefonnummern; Sandras zweiter Mail-Link führt auf
+`info@website.com`; Link „WEB“ bei Suli Puschban führt auf `wecker.de`; Beschreibung der Schirmherrin veraltet. Das
+Gründungsjahr ist geklärt: 2009 entstand die Initiative, 2010 der eingetragene Verein (beides steht auf `/über-uns`).
+Spenden mit Spendenkonto stehen auf `/kontakt`.
+Wie der Bereich zu **einer** Seite zusammengefasst und mit den Nachbarseiten abgestimmt wird: `SEITE-ueber-uns.md`.
+
+## Bereich JAHRESTAGUNG – bleibt, wie er ist
+
+Die neun Seiten (`/jahrestagung2027`, `/programmjahrestagung`, `/dozentenjahrestagung`, `/workshops`, `/liedernacht`,
+`/organisation`, `/anmeldungjahrestagung`, `/teilnahmebedingungen`, `/faq`) wurden von unserer Webdesignerin gestaltet
+und werden **nicht** im Foto-Stil neu gebaut (Entscheidung vom 25.09.2026). Andere Seiten verlinken nur dorthin.
+Begründung und was trotzdem zu beachten ist (gemeinsame Kopf- und Fußzeile in Wix): `DESIGN-foto.md`, Abschnitt 5,
+„Entscheidung: Der Bereich Jahrestagung bleibt, wie er ist“.
 
 ## Beobachtungen
 

@@ -161,7 +161,8 @@ für Vorleseprogramme (`aria-current`).
    (Modul D, P); „Alwine Deege“ (Dozentenseite, Modul IV) vs. „Alwine Deegen“ (Startseite).
    In der Vorschau steht „Wünnenberg“. Bitte bei den Personen selbst nachfragen.
 3. **Porträt Vera Kimmig:** Die beiden Zweig-Seiten verwenden zwei unterschiedliche Fotos. Klären,
-   welches aktuell ist; die Vorschau nutzt das der Seite Krankenhäuser.
+   welches aktuell ist; die Vorschau nutzt das der Seite Krankenhäuser. **Vorschlag (25.09.2026):** überall das
+   Studioporträt der Team-Seite verwenden (`fotos/uu-vera-kimmig.jpg`), siehe `SEITE-ueber-uns.md`, Abschnitt 5.
 4. **Kursgebühren fehlen** auf allen öffentlichen Seiten (nur in den Modul-PDFs). Empfehlung:
    eine Zeile „Kursgebühr“ in die Faktenliste aufnehmen – das spart Rückfragen am Telefon.
    Wert bei Sandra erfragen. **Ergänzung 25.09.2026:** Modul-PDFs und Flyer 2026 nennen 320 € je Modul, 272 € für

@@ -7,7 +7,9 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html` ·
 **Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html` ·
 **Mitglied sein** (Ziel des Buttons „Mitglied werden“) → `SEITE-mitglied-sein.md` + `vorschau-foto-mitglied-sein.html` ·
-**Termine** (Gesamtkalender) → `SEITE-termine.md` + `vorschau-foto-termine.html`
+**Termine** (Gesamtkalender) → `SEITE-termine.md` + `vorschau-foto-termine.html` ·
+**Über uns** (eine Seite statt sieben) → `SEITE-ueber-uns.md` + `vorschau-foto-ueber-uns.html`
+Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
 Mittelpunkt, die Gestaltung drumherum ist ruhig. Es ist so geschrieben, dass eine Person
@@ -130,12 +132,15 @@ Regeln:
   Zitat mit Porträt, Siegel-Reihe, Ablauf-Liste und Ansprechperson mit Foto: `SEITE-einrichtungen.md`, Abschnitt 6.
   Beitrags-Reihe, kompakte Terminliste und Aufklapptext: `SEITE-mitglied-sein.md`, Abschnitt 6.
   Monatszeile im Kalender, Etikett nach Art und zweispaltige Jahresvorschau: `SEITE-termine.md`, Abschnitt 6.
+  Team-Karte, Zeitleiste und Namensliste im Aufklapptext: `SEITE-ueber-uns.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
   Gesamtkalender, Schnupperkurse und Jahresvorschau → Termine; Module mit Zweig-Filter und Anmeldung → Weiterbildung –
-  beide Terminlisten kommen in Wix aus derselben Quelle, der Wix-Events-App, siehe `SEITE-termine.md`, Abschnitt 2).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md` und `SEITE-termine.md`, jeweils Abschnitt 2.
+  beide Terminlisten kommen in Wix aus derselben Quelle, der Wix-Events-App, siehe `SEITE-termine.md`, Abschnitt 2;
+  Vision, Geschichte, Personen mit Funktion, Beirat, Botschafter:innen, Singforschung und – als Vorschlag – Spenden → Über uns;
+  Telefonnummern und Sprechzeiten bleiben auf den Aufgabenseiten).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md` und `SEITE-ueber-uns.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -172,15 +177,39 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 
 | Bisher auf der Startseite | Neuer Ort | Grund |
 |---|---|---|
-| Menüpunkt JAHRESTAGUNG (9 Unterseiten) | Hinweisleiste oben + eigener Bereich | zeitlich begrenzt, sprengt das Menü |
+| Menüpunkt JAHRESTAGUNG (9 Unterseiten) | Hinweisleiste oben + eigener Bereich, **der nicht neu gestaltet wird** (siehe „Entscheidung: Jahrestagung“ unten) | zeitlich begrenzt, sprengt das Menü |
 | Menüpunkte KONTAKT, SHOP | Fußzeile | selten gesucht, dort erwartet man sie |
 | Menüpunkt MITGLIED SEIN | gelber Button „Mitglied werden“ → Seite `/mitglied-sein` (`SEITE-mitglied-sein.md`) | wichtigste Handlung, soll auffallen |
 | Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“; Schnupperkurse: Seite Termine (`#schnuppern`) | doppelte Information vermeiden |
-| „Was wir wollen“ (Vision) | Seite „Über uns“ | Startseite zeigt Angebote, nicht Leitbild |
+| „Was wir wollen“ (Vision) | Seite „Über uns“ (`#anliegen`, `SEITE-ueber-uns.md`) | Startseite zeigt Angebote, nicht Leitbild |
 | YouTube-Kanal | Fußzeile | ein Link reicht |
 | Feedback des Monats | Seite „Mitglied sein“, Bereich „MitgLIEDER im Fokus“ (`#fokus`) – „MitgLIEDER im Fokus“ ist keine eigene Seite, nur eine Sprungmarke | langer Text, passt dort besser |
-| Unsere Zertifikate (6 Logos) | 3 Einrichtungs-Logos → „Für Einrichtungen“; 2 Singleiter-Logos → „Sing mit“ (Zertifikat); „Musikalischer Botschafter“ → „Über uns“ | jedes Logo dort, wo man das Zertifikat bekommt (Einzelheiten: `SEITE-einrichtungen.md`, Abschnitt 2) |
+| Unsere Zertifikate (6 Logos) | 3 Einrichtungs-Logos → „Für Einrichtungen“; 2 Singleiter-Logos → „Sing mit“ (Zertifikat); „Musikalischer Botschafter“ → „Über uns“ (`#botschafter`) | jedes Logo dort, wo man das Zertifikat bekommt (Einzelheiten: `SEITE-einrichtungen.md`, Abschnitt 2) |
 | Kontaktformular | Seite „Kontakt“ | Startseite kürzer |
+
+### Entscheidung: Der Bereich Jahrestagung bleibt, wie er ist (25.09.2026)
+
+**Entscheidung:** Die neun Seiten der Jahrestagung (Jahrestagung 2027, Programm, Dozenten, Workshops, Liedernacht,
+Organisation, Anmeldung, Teilnahmebedingungen, FAQ) werden **nicht** im Foto-Stil neu gebaut. Andere Seiten verlinken
+nur dorthin: Hinweisleiste auf allen Seiten („Zur Jahrestagung →“), Kurzfassung mit Eckdaten auf Termine (`#jahrestagung`,
+`SEITE-termine.md`).
+
+**Begründung:**
+1. Der Bereich wurde von unserer Webdesignerin (Fußzeile: „Webdesign: Die Gründerin“) eigens gestaltet und hat ein
+   eigenes Tagungs-Erscheinungsbild (Motiv „Flow“ in Türkis). Eine Tagung darf sich vom Alltag der Webseite abheben.
+2. Die Seiten sind zeitlich begrenzt und werden jedes Jahr neu befüllt. Ein Umbau lohnt den Aufwand (Zeit bzw. Kosten)
+   nicht, solange sie ihre Aufgabe erfüllen.
+3. Ein Umbau mitten in der laufenden Anmeldung würde Links, Formular (`/anmeldungjahrestagung`) und Abläufe gefährden.
+
+**Was trotzdem gilt:**
+- In Wix sind **Kopfleiste und Fußzeile für alle Seiten gemeinsam**. Wird die neue Kopfleiste (6 Menüpunkte, Button
+  „Mitglied werden“) eingerichtet, erscheint sie automatisch auch auf den Jahrestagung-Seiten. Nur der Inhalt dazwischen
+  bleibt unverändert. Nach der Umstellung die neun Seiten einmal durchklicken (Desktop und Handy).
+- Beim Klick von einer neuen Seite in den Tagungsbereich wechselt die Gestaltung. Das ist bewusst in Kauf genommen.
+- Inhaltliche Fehler im Bereich (z. B. Ort der Liedernacht, Mitgliederrabatt, siehe `SEITE-termine.md`, Abschnitt 7)
+  werden trotzdem korrigiert – nur die Gestaltung bleibt.
+- Die Entscheidung wird überprüft, wenn die Webdesignerin den Bereich ohnehin neu gestaltet oder wenn er nicht mehr
+  gepflegt wird.
 
 **Welche Fotos wo:** Die Vorschau verwendet Fotos, die schon auf der Webseite sind
 (heruntergeladen in `skh-design/fotos/`, nur für die Vorschau verkleinert). Der Dateiname sagt,

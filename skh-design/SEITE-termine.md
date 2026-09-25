@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-termine.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, `SEITE-sing-mit.md`, `SEITE-einrichtungen.md` und `SEITE-mitglied-sein.md`, jeweils Abschnitt 6 ·
-Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html`, `vorschau-foto-mitglied-sein.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html`, `vorschau-foto-mitglied-sein.html` · Über uns: `vorschau-foto-ueber-uns.html` (`SEITE-ueber-uns.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 
 Dieses Dokument erklärt, **wie die neue Seite „Termine“ aufgebaut ist, woher jeder Termin stammt, welche Seite
 für welche Termine zuständig ist und warum**. Eine Person ohne Vorkenntnisse soll die Seite damit in Wix nachbauen

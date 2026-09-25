@@ -1,4 +1,4 @@
-<title>SKH Sing mit</title>
+<title>SKH Über uns</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
 <style>
@@ -260,7 +260,6 @@ ol.grid3{list-style:none;margin:0;padding:0}
 .form{background:var(--white);border-radius:20px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:14px}
 .form .facts li{grid-template-columns:130px 1fr}
 .form .pill{align-self:flex-start;margin-top:auto}
-.form .seal{width:110px;height:auto;display:block}
 .cert-how{margin-top:clamp(40px,6vw,64px);align-items:start}
 .cert-how>div{display:flex;flex-direction:column;gap:14px}
 .cert-how .facts li{grid-template-columns:230px 1fr}
@@ -288,144 +287,734 @@ ol.grid3{list-style:none;margin:0;padding:0}
   .jump .wrap{gap:6px 18px}
   .cert .grid2{grid-template-columns:minmax(0,1fr)}
 }
+/* ===== Ergänzungen für die Unterseite „Für Einrichtungen“ (Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, und SEITE-sing-mit.md, Abschnitt 6) ===== */
+.pos-faces{object-position:30% 30%}
+
+/* Warum Singen: Häkchen-Liste in zwei Spalten */
+.why{background:var(--linen)}
+.why .wrap{grid-template-columns:1.15fr 1fr;align-items:start}
+.why .bond{display:flex}
+.why .photo{aspect-ratio:4/5}
+.why .facts li{grid-template-columns:170px 1fr}
+.bond{margin-top:clamp(40px,6vw,64px);display:flex;flex-direction:column;gap:18px}
+.bond h3{font-size:clamp(26px,2.6vw,32px);line-height:1.1}
+.checks.two{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px}
+
+/* Stimmen auf Salbei: ein großes Zitat mit Porträt, zwei kleinere */
+.voices{background:var(--sage)}
+.voice-main{display:grid;grid-template-columns:240px 1fr;gap:clamp(24px,4vw,48px);align-items:center}
+.voice-main .photo{aspect-ratio:1/1}
+.voice-main blockquote{margin:0;font-size:clamp(22px,2.4vw,28px);line-height:1.4}
+.voice-main cite,.voice-small cite{display:block;font-style:normal;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin-top:14px;line-height:1.4}
+.voice-main cite span,.voice-small cite span{display:block;font-weight:400;letter-spacing:0;text-transform:none;font-size:17px;margin-top:2px}
+.voice-small{margin-top:clamp(40px,6vw,64px)}
+.voice-small article{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:start;border-top:1px solid var(--anthra);padding-top:22px}
+.voice-small .photo{aspect-ratio:1/1}
+.voice-small blockquote{margin:0;font-size:19px;line-height:1.5}
+
+/* Zertifikat und Voraussetzungen auf Weizen */
+.logos{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.logos li{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-weight:700;font-size:17px;line-height:1.3}
+.logos img{width:100%;max-width:170px;height:auto;display:block}
+.req{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.req .text{display:flex;flex-direction:column;gap:18px}
+.req .photo{aspect-ratio:4/3}
+.req .good{margin-top:6px}
+
+/* Singleitung & Vergütung auf Leinen */
+.lead-way .branch .ghost{margin-top:auto}
+.pay{margin-top:clamp(48px,7vw,80px)}
+.pay h3.sub{font-size:clamp(28px,3vw,36px);line-height:1.1;margin-bottom:10px}
+.pay .intro{margin:0 0 28px}
+.pay .grid3 article{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--anthra);padding-top:18px}
+.pay .big{font-size:clamp(56px,6.5vw,84px)}
+.pay .grid3 h3{font-size:26px;line-height:1.15}
+.pay .good{margin-top:36px}
+
+/* Ablauf auf Salbei: nummerierte Schritte untereinander */
+.flow{list-style:none;margin:0;padding:0}
+.flow li{display:grid;grid-template-columns:110px 1fr;gap:clamp(16px,3vw,32px);padding:22px 0;border-bottom:1px solid var(--anthra);align-items:start}
+.flow li:first-child{border-top:1px solid var(--anthra)}
+.flow .big{font-size:clamp(56px,6vw,76px)}
+.flow div{display:flex;flex-direction:column;gap:8px}
+.flow h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+.flow .links{flex-direction:row;flex-wrap:wrap;gap:6px 24px}
+.apply .cert-forms{margin-top:clamp(40px,6vw,64px)}
+.apply .form{background:var(--white)}
+.apply .cert-how{margin-top:clamp(40px,6vw,64px)}
+.apply .cert-how .facts li{grid-template-columns:170px 1fr}
+
+/* Ansprechperson mit Foto (Variante zu SEITE-sing-mit.md, Abschnitt 6) */
+.person.pic{display:grid;grid-template-columns:150px 1fr;gap:20px 24px;align-items:start}
+.person.pic .photo{aspect-ratio:1/1}
+.person.pic>div{display:flex;flex-direction:column;gap:10px}
+.person.pic .tel{font-size:clamp(24px,2.4vw,30px);white-space:nowrap}
+
+@media (max-width:900px){
+  .why .wrap,.req{grid-template-columns:1fr}
+  .why .photo{aspect-ratio:4/3}
+  .pay .grid3{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .checks.two,.voice-main,.voice-small .grid2{grid-template-columns:1fr}
+  .voice-main .photo{max-width:200px}
+  .voice-small article{grid-template-columns:72px 1fr;gap:16px}
+  .logos{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .logos li{font-size:15px}
+  .why .facts li,.apply .cert-how .facts li{grid-template-columns:1fr;gap:4px}
+  .flow li{grid-template-columns:64px 1fr;gap:14px}
+  .person.pic{grid-template-columns:1fr}
+  .person.pic .photo{max-width:140px}
+  .apply .grid2{grid-template-columns:minmax(0,1fr)}
+  .person.pic .tel{font-size:24px}
+}
+/* ===== Ergänzungen für die Unterseite „Mitglied sein“ (Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, SEITE-sing-mit.md und SEITE-einrichtungen.md, jeweils Abschnitt 6) ===== */
+.pos-circle{object-position:50% 40%}
+.pos-women{object-position:40% 30%}
+
+
+/* Vorteile auf Leinen */
+.perks{background:var(--linen)}
+.perks .wrap{grid-template-columns:1.15fr 1fr;align-items:start}
+.perks .photo{aspect-ratio:4/5}
+.perks .good{margin-top:6px}
+
+/* Beiträge auf Salbei: Beitrags-Reihe */
+.fees{background:var(--sage)}
+.fee-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.fee-row li{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--anthra);padding-top:18px}
+.fee-row .big{font-size:clamp(46px,4.6vw,60px);white-space:nowrap}
+.fee-row h3{font-size:26px;line-height:1.15}
+.fee-row .ghost{margin-top:auto;padding-top:4px}
+
+/* Unterstützung auf Weizen */
+.support{background:var(--wheat)}
+.support-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.support-top .text{display:flex;flex-direction:column;gap:18px}
+.support-top .photo{aspect-ratio:4/3}
+.support .cert-forms{margin-top:clamp(40px,6vw,64px)}
+.support .form h3{font-size:clamp(26px,2.6vw,32px);line-height:1.1}
+.support .form .facts li{grid-template-columns:90px 1fr}
+.next{margin-top:clamp(40px,6vw,64px);display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(28px,5vw,72px)}
+.next .intro-col{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.next h3{font-size:clamp(26px,2.6vw,32px);line-height:1.1}
+.next ol{list-style:none;margin:0;padding:0}
+.next li{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--anthra)}
+.next li:first-child{border-top:1px solid var(--anthra)}
+.next .d{font-size:24px;font-variant-numeric:tabular-nums;line-height:1.2}
+.next .d small{display:block;font-size:16px}
+
+/* So wirst du Mitglied: Ablauf + Formular-Karte + Ansprechperson */
+.join-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.join-side{display:flex;flex-direction:column;gap:24px}
+.join-side .photo{aspect-ratio:3/2}
+.join .form{background:var(--white)}
+.join-bottom{margin-top:clamp(40px,6vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.join-bottom .text{display:flex;flex-direction:column;gap:14px}
+.join-bottom h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+.addr{font-style:normal}
+
+/* MitgLIEDER im Fokus auf Salbei */
+.focus{background:var(--sage)}
+.focus .voice-main{align-items:start}
+.focus .voice-main .photo{aspect-ratio:1/1}
+.focus .voice-main>div{display:flex;flex-direction:column;gap:16px}
+.focus h3{font-size:clamp(28px,3vw,36px);line-height:1.1}
+.focus blockquote{margin:0;font-size:clamp(19px,1.8vw,22px);line-height:1.5}
+.focus .songs{margin-top:4px}
+.focus .links{display:flex;gap:10px 28px;flex-wrap:wrap}
+.more{border-top:1px solid var(--anthra);padding-top:12px}
+.more summary{font-weight:700;cursor:pointer;list-style:none;display:inline-flex;gap:8px;align-items:center}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"+";font-size:22px;line-height:1}
+.more[open] summary::after{content:"–"}
+.more summary:hover{text-decoration:underline;text-underline-offset:4px}
+.more>div{display:flex;flex-direction:column;gap:14px;margin-top:14px;max-width:70ch}
+.feedback{margin-top:clamp(48px,7vw,80px);display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(28px,5vw,72px);align-items:start}
+.feedback .intro-col{display:flex;flex-direction:column;gap:12px}
+.feedback h3{font-size:clamp(28px,3vw,36px);line-height:1.1}
+.feedback .quote{font-size:clamp(21px,2.2vw,26px);line-height:1.45}
+.feedback .quote p+p{margin-top:12px}
+.feedback .right{display:flex;flex-direction:column;gap:18px}
+
+@media (max-width:900px){
+  .perks .wrap,.support-top,.join-grid,.join-bottom,.next,.feedback{grid-template-columns:minmax(0,1fr)}
+  .perks .photo{aspect-ratio:4/3}
+  .fee-row{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .fee-row{grid-template-columns:1fr}
+  .next li{grid-template-columns:1fr;gap:4px}
+  .support .form .facts li{grid-template-columns:1fr;gap:4px}
+  .support .grid2{grid-template-columns:minmax(0,1fr)}
+}
+/* ===== Ergänzungen für die Unterseite „Termine“ (Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, SEITE-sing-mit.md, SEITE-einrichtungen.md und SEITE-mitglied-sein.md, jeweils Abschnitt 6) ===== */
+.pos-hall{object-position:50% 35%}
+
+/* Gesamtkalender auf Leinen: Liste mit Monats-Zwischenzeilen und Filter nach Art */
+.cal .intro{margin:-12px 0 28px}
+.mods li.month{display:block;border-top:0;border-bottom:0;padding:34px 0 10px;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--leafink)}
+.mods li.month:first-child{padding-top:6px}
+.mods li.first{border-top:1px solid var(--anthra)}
+.cal .good{margin-top:32px}
+.cal .links{display:flex;gap:10px 28px;flex-wrap:wrap;margin-top:22px}
+.empty{padding:22px 0;border-top:1px solid var(--anthra);border-bottom:1px solid var(--anthra)}
+
+/* Schnupperkurse auf Salbei */
+.taster .facts li{grid-template-columns:120px 1fr}
+
+/* Jahrestagung auf Weizen */
+.meet{background:var(--wheat)}
+.meet .wrap{grid-template-columns:1fr 1.15fr}
+.meet .photo{aspect-ratio:4/3}
+.meet .facts li{grid-template-columns:170px 1fr}
+.meet .text{order:2}
+
+/* Vorschau 2027 auf Leinen: zwei kompakte Listen */
+.plan-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.plan-top .text{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.plan-top .photo{aspect-ratio:3/2}
+.plan-lists{margin-top:clamp(40px,6vw,64px);align-items:start}
+.plan-lists h3{font-size:clamp(26px,2.6vw,32px);line-height:1.1;margin-bottom:6px}
+.plan-lists .count{font-size:17px;margin-bottom:16px}
+.plan-lists ol{list-style:none;margin:0;padding:0}
+.plan-lists li{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--anthra)}
+.plan-lists li:first-child{border-top:1px solid var(--anthra)}
+.plan-lists .d{font-size:21px;font-variant-numeric:tabular-nums;line-height:1.25}
+.plan-lists .t{display:flex;flex-direction:column;gap:4px}
+.plan-lists .t b{line-height:1.35}
+.plan-lists .chips{margin-top:2px}
+
+/* Noch mehr singen auf Salbei: Foto + drei Hinweise */
+.others{background:var(--sage)}
+.others .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:start}
+.others .photo{aspect-ratio:4/5}
+.others .items{display:flex;flex-direction:column;gap:28px}
+.others .head{margin-bottom:8px}
+.others article{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--anthra);padding-top:18px}
+.others h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+
+@media (max-width:900px){
+  .meet .wrap,.plan-top,.others .wrap{grid-template-columns:minmax(0,1fr)}
+  .meet .text{order:0}
+  .others .photo{aspect-ratio:4/3}
+}
+@media (max-width:640px){
+  .taster .facts li,.meet .facts li,.plan-lists li{grid-template-columns:1fr;gap:4px}
+  .plan-lists.grid2{grid-template-columns:minmax(0,1fr)}
+}
+/* ===== Ergänzungen für die Seite „Über uns“ (Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, SEITE-sing-mit.md, SEITE-einrichtungen.md, SEITE-mitglied-sein.md und SEITE-termine.md, jeweils Abschnitt 6) ===== */
+.pos-uu{object-position:60% 30%}
+
+/* Anliegen auf Leinen: Vision groß, Häkchen-Liste mit Links, Foto */
+.aim{background:var(--linen)}
+.aim .wrap{grid-template-columns:1.15fr 1fr;align-items:start}
+.aim .photo{aspect-ratio:4/5}
+.vision{font-size:clamp(22px,2.4vw,28px);line-height:1.4;border-left:4px solid var(--gold);padding-left:18px}
+.checks a{font-weight:700}
+.netz{margin-top:clamp(48px,7vw,80px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center}
+.netz .photo{aspect-ratio:3/2}
+.netz .text{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.netz h3{font-size:clamp(28px,3vw,36px);line-height:1.1}
+
+/* Geschichte auf Salbei: Zeitleiste (Ablauf-Liste mit Jahreszahl) + Zahlen */
+.story{background:var(--sage)}
+.story-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(28px,5vw,72px);align-items:start}
+.story-top .text{display:flex;flex-direction:column;gap:18px}
+.story-top .quote{margin-top:6px}
+.years li{grid-template-columns:150px 1fr}
+.years .big{font-size:clamp(34px,3.6vw,46px);line-height:1;white-space:nowrap}
+.story .fee-row{margin-top:clamp(40px,6vw,64px);grid-template-columns:repeat(3,minmax(0,1fr))}
+.story .fee-row .big{font-size:clamp(52px,5.6vw,72px)}
+.story .src{font-size:17px;margin-top:18px}
+
+/* Team auf Leinen: Team-Karten mit Porträt hochkant */
+.team .sub{font-size:clamp(28px,3vw,36px);line-height:1.1;margin:0 0 8px}
+.team .sub-intro{max-width:62ch;margin-bottom:28px}
+.team .grid3+.sub{margin-top:clamp(48px,7vw,80px)}
+.card{display:flex;flex-direction:column;gap:12px}
+.card .photo{aspect-ratio:4/5}
+.card h3{font-size:28px;line-height:1.1}
+.card .fn{font-size:17px;font-weight:700}
+.card blockquote{margin:0;border-left:4px solid var(--gold);padding-left:16px;font-size:18px;line-height:1.5}
+.card .facts{margin-top:2px}
+.card .facts li{grid-template-columns:1fr;padding:8px 0}
+.card .mail{font-weight:700;overflow-wrap:anywhere}
+.card .ghost{margin-top:auto;padding-top:4px}
+.team .good{margin-top:clamp(40px,6vw,56px)}
+
+/* Ehrenvorsitzende auf Weizen: kleinere Karten mit quadratischem Porträt */
+.honor{background:var(--wheat)}
+.honor .card .photo,.amb .card .photo{aspect-ratio:1/1}
+.honor .card h3{font-size:26px}
+
+/* Schirmherrin, Beirat und Botschafter: Zitat mit Porträt, Aufklapptext mit Namensliste */
+.patron .voice-main{align-items:start}
+.patron .voice-main>div{display:flex;flex-direction:column;gap:14px}
+.patron h3.sub,.amb h3.sub,.give h3.sub{font-size:clamp(28px,3vw,36px);line-height:1.1}
+.board{margin-top:clamp(48px,7vw,80px)}
+.board>p{max-width:62ch;margin:8px 0 0}
+.board .voice-small{margin-top:28px}
+.board .voice-small.grid3{gap:28px;margin-top:28px}
+.voice-small .web{display:inline-block;margin-top:8px;font-weight:700;text-decoration:none}
+.voice-small .web:hover{text-decoration:underline}
+.names{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.names li{padding:10px 0;border-bottom:1px solid var(--anthra)}
+.names b{display:block;line-height:1.35}
+.names span{font-size:17px}
+.more.wide>div{max-width:none}
+.patron .more,.amb .more{margin-top:28px}
+
+.amb{background:var(--sage)}
+.amb-top{display:grid;grid-template-columns:180px minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center}
+.amb-top img{width:100%;max-width:180px;height:auto;display:block}
+.amb-top .text{display:flex;flex-direction:column;gap:14px}
+.amb .grid3{margin-top:clamp(32px,5vw,48px)}
+.amb .card blockquote{font-size:18px}
+.land{margin-top:clamp(48px,7vw,80px)}
+.land>p{max-width:62ch;margin:8px 0 0}
+.land .grid2{margin-top:28px}
+.land .voice-small article{border-top:1px solid var(--anthra)}
+.memo{margin-top:24px;font-size:17px;max-width:70ch}
+
+/* Forschung auf Weizen */
+.research{background:var(--wheat)}
+.research .wrap{grid-template-columns:1fr 1.15fr}
+.research .photo{aspect-ratio:4/3}
+.research .items{display:flex;flex-direction:column;gap:22px;margin-top:6px}
+.research article{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--anthra);padding-top:16px}
+.research h3{font-size:clamp(22px,2.2vw,26px);line-height:1.15}
+
+/* Spenden auf Leinen */
+.give-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.give-grid .text{display:flex;flex-direction:column;gap:18px}
+.give .form h3{font-size:clamp(26px,2.6vw,32px);line-height:1.1}
+.give .form .facts li{grid-template-columns:110px 1fr}
+.give .iban{font-variant-numeric:tabular-nums;user-select:all;overflow-wrap:anywhere}
+.give .person{margin-top:28px}
+
+@media (max-width:900px){
+  .aim .wrap,.netz,.story-top,.research .wrap,.give-grid{grid-template-columns:minmax(0,1fr)}
+  .aim .photo,.research .photo{aspect-ratio:4/3}
+  .team .grid3,.honor .grid3,.amb .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .story .fee-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .board .voice-small.grid3{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .team .grid3,.honor .grid3,.amb .grid3,.names,.story .fee-row{grid-template-columns:minmax(0,1fr)}
+  .years li{grid-template-columns:1fr;gap:4px}
+  .amb-top{grid-template-columns:1fr}
+  .amb-top img{max-width:140px}
+  .card .photo{max-width:320px}
+  .honor .card .photo,.amb .card .photo{max-width:220px}
+  .give .form .facts li{grid-template-columns:1fr;gap:4px}
+  .land .grid2{grid-template-columns:minmax(0,1fr)}
+}
 </style>
 
-<div class="note">Stilvorschau „Foto“ – Unterseite Sing mit. Texte und Fotos von singende-krankenhaeuser.de (Seiten „Sing mit“ und „Mitglied sein“, Antragsformulare Zertifikat, Stand 25.09.2026), gestrafft und mit der Weiterbildungsseite abgestimmt.</div>
+<div class="note">Stilvorschau „Foto“ – Seite Über uns. Inhalte von singende-krankenhaeuser.de (Seiten „Über uns“, „Team Vorstand“, „Team Geschäftsführung“, „Ehrenvorsitzende“, „Botschafter und Beirat“, „Singforschung“, „Kontakt“ und Startseite; PDFs Organigramm, Beiräte Deutschland und International, Botschafter, Landesbotschafter, Infoflyer, Kooperationspartner; Stand 25.09.2026), die sechs Seiten zu einer zusammengefasst und mit den Nachbarseiten abgestimmt. Der Bereich Spenden ist ein Vorschlag (noch nicht entschieden).</div>
 
 <div class="notice"><b>Jahrestagung 2027:</b> Programm, Workshops, Liedernacht und Anmeldung · <a href="#">Zur Jahrestagung →</a></div>
 
 <header class="top"><div class="wrap">
   <a href="vorschau-foto.html"><img src="data:image/webp;base64,UklGRoyQAABXRUJQVlA4WAoAAAAQAAAAfwIAXQEAQUxQSGZXAAAB/yckSPD/eGtEpO45agKmYYh/40DHHREToGeCRRha/WHbv8hp/3+PWcvG3ROc4MHdobhbkeJWoBQrWlzaUqS00EJxK+5Q3N2DW7C4u+1m7f5jZp4zuwmU134+n+83ov8TQEfbtuWZgkPlXru7LoHKWyqHFbAEp6NiOtzdoXJ3t/zz5XP3198b+57ke8dTRfR/Auj/L7zKw8/BnkfT8u8TZzb29LDbcf8xGgDSfve201GMyICgbpHWPifkFkTf1rTP6ZEjlv+tXY76b7MYFtjlBN6BeOEPdjnNohmyh9jljNYxxDSzx1H/Bsb7gfY4wWdYtmvtcepGMxgmKOxx+hcyZDUnO1zVUgtDRFl7HP+LYNzmbm+j8qv17b5clllkV8uV6jz3TIIOzIdbuNvRBE+8ng3p8QeH+NrJBI+4lAd5M0/29rSDcex9Sgf5szbXsnvxmJMC6z7+xtG+JfTPXFg7Zb6nPUu1A0ZYP3eFr/1K7cuwyYLfPOxVQo/ARnNmaO1TXH432AqSenP2KKpxmbDd22H2KO3fw4ZNvzjYn5S7Cpt+38zuxHGFUZKFJevAE4sU/KaxN+mSCKkRT1gela22IlHK6zA7kxLnIdF4sNNJlp0OpBnwVkL+t5xdiWp+oQTD5qDqUQymyQoiRddINhx2sitp/QESDwRR70KG7K+IiLiJuWxPy9iT+B+BxKtVSbHYwvCkIo98D7NFNbQjUUzOlxDVjsjxGBj3eArQ4DymtC52JA1egV0/R01U+jnLfE4o7BWTfrj9iNdOi4RjQUTULZkhqy8Je+xjwky7EW5kDtjftyYimm9keFlTxHkN23KlvUh4BNjzZ6iIyHEvGC+4izj8zLZUYSfistYs4VwwEVHZuwzmPxQi2mVs08k+lOuXComLlLxmyQy5Q0jU6zCTYZSdSPmbkDqJ+CNMDAk1xUq+ZMrqYx+iXWaUNILn/CcYbwSK9cpiSvzKPqRrPKQae/OCbrOsdRJx3GFhiqxuFxJ6FpLjW/DqpjKYx5Foyygwn3GzB1HPLZR2pyJvWAFDUlsRz51g1k3h7EFafYT0na68VRaGm+VFhmaxRYeTHaj/IUjPGUJE5HYajDu0Qg2fgP2wux0INyZfhivBvFrPGYw/kmCFs2C3TOLsQEKvQ3pCT+L3z2JI6yLgv90s4VU9sgPtmSktZ5aWp1gIxrfleC6/6sFuXKSxBxlfIClxujvxvfaxnHQnIofJ2ZB4vwLZg7ZNk2C41s+BBMs/YzAvUhM5jE2BxNyRCrsQr516BnPGzcmlSbRVFoOuB5F6bBKkHvUj+9DgmR8A5H24f3bXz12ClSSqmGxgeF+dNKMSIDWhM9mLqn424fXYZhW9FMTsuMvCcDqABiZAqv5nRzsRTUi3K5b8SSQ9KAKMvysr3oFU4+YAsg+ttuxCGnAyQIaWcQy6MTTZKMVypAzZh6p+BgDLCJJxvI7hQ1PnPZB6NZzsRBVjY19FGjFNKU31Jxhv+oQ8lfKoEdmN+rSq1ysBO12kBZ9lsGzlmqZLiOxCdqUuB/KXOUhr8IFBP4GbqGNLGqSwL6Gyg6uR9P6FDJnNFTssTJkTtGT/qvkZjE9L+twBa+5iF7KD9TrFssulURRL/goPsoet8J5lJg3PZ9Ct8ia72O6ZDFndueUQ163xIfvY+UaGp9V8josVrvUl+1jtfjAed67+VsSwPoDsZMPuMVhWUHedkGFLINnLdkpiyB6omGcRMG0PIrvZSRaGmOqOh8E37SxBdrPO68F4wyv0Oc+8pyTZz4bcYLCs1rRLAmA+UIbsaOsmMRiH0bRCwHK4HNnRcsMKGJIaKbYBOBpG9rSav8wMN0uEXANOViI7Wj9Xr+tg3KZuFoczlcmONmxl2RrvGYwzaQTOh5MdbfnD5336ZjMkdlKvulKT7GjDDmOFw0IwPirlPase2dFWPmYxfuOxn+WwRhNAdrRVTgAx9Ss+YzAv4MiettppAFeDOuQz6HqQPW2NcwCwxWE6GKOr2dPUPg8A+qnaXSz/BtjR1LkMfmIb/8csP2nsZxpcheDTkKaJDPpvyG620XUIH3ScVMDwsaHdTNNbEDb/qNkKxhsB9jLN70BU1yngGss2pZ1Mg9sQj6zcIIohfyLZx9a6BsZjXt8YGBIa28dUOwfWX7S/gPGhv11M2HGwFgz2OsWyw7G4UCg5O4ZShyxM7+tVjGGZyhUDqqCqHYeMnzKqZ4salUp7sjlVrldG9ZnCufp4+7grvpCF7DKD+YZ3jzyGvM5U5F3a/Ho5Nq9AX6jLz8mIeXJgZrsATsT/56icp2NdPk+0s48dPbbE88tYwCYjmC2b1YtMDI/Di1y1v2IhNf54ZSHF9zoAKd0+T1xOAbgW+EXM508D2HXfOR4D4z7Potb6rgXSn5YR8joA/kqHz5MTAC5/EfP4TQeJ6Y3KPGGwLKQi3igC/MKMt9cvPPiYkVtgBrDSQWSfwIr/7bn+nAepDwM7JjFk9S9iPgcAoPDBD/UrhgaVrlS3/dDfbiVn9iRhxegcALEd6X95znNyINW8QDndxPC+RhEbmAVA/0cFBYmrA7uODhEhz4lXHh//Wvu/PMdpGZB8vqx2KxivehYth50AzDv9SX5l6aoB9Jn6hUw7PgWSb9WjMrcYzKs1RavcXQDvG9Jn+ZcxxcAESH7QlKhpGoNuCFe0GkQCOOljv9DmDSQ/bUvEjTIxJNalot0qDsB2td1C9ZuQ/KYrEWnXgvFaaBFr8gHAUY+iwKmdA4Od1UrZVGqNg1ql4GRSatxDgp3VKvmUGvcQPweVQi6lWuOgUStJe1welda7pL+jWvllqOQRi6SPfRVE5HOLZZ1TEavyCMDz6lbQNOnVo1d9jVjZbr1aOhCRa60pey/dvXdh5y8DQjlpXGCDsX/sOH5m71+LJgyoG6CWFNLplxPX7t27tP+P4ZU0LKqGPXtW4QW0W3bi2v1b/67/sbW7DG5VB63YfuLMwS1L+9Q5L4NDpUHrzt18cPvszl+6BX8B8lxjhNS4oUoiotoxDOaJVMQDLgEwLXOUz/t4fk7+Lh+xMel5T8uRot7GmEIImnKvdFNKKfv95RSdGQAsRl1e0vnFnTyY/EddzzZB0FLwcm5JBpe9uXlr1eTa/0KGGYKGpI0VpTi13RqVbwbflPsxU1rlRW/yIWzKvjLI9UuPemYupKaMURN/WA5DYoeiplxqBJA+w1M2n4sAjvqKTTAiu5tm1Aswv+vFpv76mh5SXzVhqbw7D8yGI5XFXE8A10sG/5kGVsvxMLaQFXGQzKTofMsM5oxfPL7wNI+C1IxJGhL8zcJwr1xRo/ofASB/axXZzgM4zPB9IQyrJyYCQE5MnF4AdyqwOE2Ig6A+K88sEteGodppC/jZUR8yecCBILFjQPy3m0wATGlRKRYezCsdWcrvMUIwP0svh6LXG/BNqe9j8nnIn+nwRcf3EKRm/+hEgp7/gnG/Q5Fz+NkA/s0eTraC5BTAcG32wK/ajVr2lGecwYkpRqQDQNbphSP7D/l+7vZXBgAxX4n57AEA/ZkZA1o26zfnrhmAbqqCxRylA9J2je/VssekbSkAEF2HwW+nBQA+bp82ZMDo6cuv66TUfQYAKdu+79m0zdBVUQAQ1eJLDjc6T0r+YhcSrvmcwTCPin7QHgEkbfvK1UYAxMwoTXxF/YsAcCZIrOELALg/IJAE3SpvZlOOywPw5rtgEqy0vgDAgwos/Cs9PYjvOjwegOFHhYhqWgGA/G2N3IivKPVdFJvHDgDmc11cia9pcwkANjl8wal6HxILV3iQaI9choyuxQBV3G/kAUlb2rvYSPwQFYl2TQSQ0lDEZSMAXK5FjDPYykYASOrLkWjQKQC6ryVcrkGiDivNAM46i9R4A6DgZ28Sdz3J1iMdwK2qJN40GsDz8l9uFFMtEix7A0lUOQuMb8sXBxT6e5oAkLC5scYWCqeqSNz7PADD1yJNowFEtiLWH9mG6wDjMi0xfpMNYLkD0+vGxNgyFcDT0kLcAiNg2eNLjM7HmVz+BpDclxi1ayxAev8vNx7HIfFODRL33MtywqtYINeeR7MEgPdLKtvAxRLEyM0pBMwzlQLqBQCMS5SyafcAeFWLWEMjAPzrxWJYoGAJOgMgqqlQyWsAYlsRq8sJpqqRAA65slDPdMA878tNzRgJsd2IscwLliWa4oHId+j5fAGY7431sZZ+PDF3yAAsKx0EPM4CiG9IsoU9AHDYh8nrXwC3/Fgiw4lVvRJAchehdkkADrrL110HGGdxTI0jAfz2xYabqGMrmKpmaZ3JUNifis/gUVdzeED+5jJWSuvCVicFwDpHgfLvAFz2la9DHIBfiNlxA4AXgSzX/ZhoDoCMPkJjzIBxDsmm/NEE5LYn5rC7ADYovtSodoP9cgixTtEzvGtQjBAFDT2WzYP5WGXrpEoIiwOw3VmgUyqA7a7yjTEA+l9r12Os22QHgHfBLNf82SZagJxBAg6/AcgeLp/DdgApA2rXY6zT8T6ArZovNQ7n2PLGEqt6BxjPBBUrRP59zxjA3x1kQyVfAtgjNDIHwDKtfLMAmOJevGR88TIFwOMA+YYVAPnDBTx2AkjsIp/TKQD6ty9eMr54nQtgLfelxuMq29UQpqBbLGsUxQxRiRXpPMMCje2EPGSZUgBYpijkWwyZL/vINyCbwecIgA8N5HO+BpmX0pfa4DtsfxFzyyiG/LFU/LoMewkAkdVt6AHL/ELAPIBkU67kWWQ86C5f/yyGwPMAXpSRz+M+zyK9cMaXDyfv0LJlSoYE+nk7SrjLZFnGNlbPENe8GCKuzRsAxrlckVhiAEy95FP9BiD/xKo/JA90sIngKwCeBMnn+RBA0pZVf0hcvbzZlwx16XbDf/hp3f4Ld25dOXfy6L61swa1KOvECTmdYsJuJYvmDzBGBBVHpJheCOCkQ5GYUwiYR8hHPwHIHKxSS1aSTQScAfCqgnwutwC8rqRSS1Z8qXAv03b6nrux+ZCY8+H+6dVfl3MmIsVqM9Pr+izBZxksOx2LJaoZCeBWQJGYUgBYpivlmwPAMJFkt5bvEQAf6svndA5ASjh9GVWGDdr2MqsQcuc+/6tfVS2Ny2eyrNYy1IpmMExUFE/BpwE8qVwkRucC+FUr3/dmAIuLiucuAPHt5NPuBZDX+ouIS4uV9wtg5YJn6yvWiWVCTDOGPnqGrBZUPPvs51UqEl1SAfzjJl/3FADrNEXEYSWArCES/mVRLTIDuoFfQEqMPBprgQ2md3baxYbjZUTUP5kZnpQrpkpeBnAnsEhUjgbwqiKTw1qm6s8AXCpRRGgCAMsaNVPoIwBXhWhAIWBeqfzS4fX1GQNs80UVGpDDZtrkL+R6Cox7PYqpr5IBHHMsEr73ABSMZqr4kMntGIDMrkWlZzaA+2FMX6cDuB4kVDsOwP1SXzYcW+/PgK2ecqaQ02zQLfcUCHvNspArnnz/AWCYQUVC+xcAHHBhGapjoikGAId8ikiVRwAKvmFx2GoBcDNYyHMvAN0sxZeM2qvjYLPmXxREX6ezIe+3QF6vNIbM/lQslg+U4rW6AMDHekWD+ukApAxhCL8NtpofAOTOd2Fy97EZzVYAuFBejOubBAC3RWhkAYB3Pdl8Xb8kOH4TARsu6E1ELn+Z2KDfWpaIxhYwPKtZLPjvPD+zroeDiMKzzbZ8AJalDkWk3A0AeNXHSUBZ7ZBZgnaJCUDmL+WUIi5t/vnF0VaoTwYA0z+VhBy7PAf/fohI6FkAeD3cR0ThN/xEvy8IQYtTYMvR1YiIKt2TANPp+kQV9+nFTrkUCx1SURj179KhbZs1bPjV11OOJ1sA4HwFKiKKMfkAkPBH+2rlqzWd/tQECVTuGgAU3p31VdVypWu0GbE5HrGtbcZzNwCYboytU6ZUta9WxwGRkcDr0iLULREAso+NalSpdLm6nSefysG50C8GdfYXwqZPBfC43tESgEe91RS0JFnIvJKKQ8cVEDTpMuMT8o1mCF6vT0WFfHeawc98fut5uhnIjjKyUftn4Fsyn928+jrXBACbXGyFGj8Hv/D99cvPMwFE9VgGJFUV005LA9+YEHH1VrTODEA/gvsyoO7zCDa+VMMj9dh0KYj9wZ0cv3kmkD+4WChxTYg9Z2d1YrkA4AiLAUiT8pCNyu8z8kQLV/1UKIE63jdDYtxsseMArkvJBgoYlF2e88Q/Dlf0z0ZGSzFymhrLYzVHdP8yoB4RCxvXDyZh53m5UpDzZymiBkeNAJJqFwuuX/91r0BC+onhXmSFCUYgvasMexmo5MK3DHGLfMYbpHDVfotmsbzZ2NaRrDAgB9CNECNF8z3ZYgVn2yup6kvk9WMgTfuDWSy6O0uqqehLoHpoHGz9XSMR8vwpSwpMx+sTlfg1DbgRVCwQqSv1X7rv9se4hKTkhNhnB+d38Sd2p2/mzZnXx0ms7qw5c6eUZ3MdMXfOnB5qBlI1mHrgaXR8XOSln1o50A9mKUSOTaceehmblBT/8cb67+o7krjm67lz5g52Zqsybe6cGdUZiLx7rboRnZAU+2zPkFJEpJ2wdmVjFiK/rj9dfBuflBgXeWbFwAocfRFUD46HzV/0EyPXaSlSgIgeanIc/gp/OhcTRKRx9y9ZsWajpjXLBbkrSbJCqVAqSJxTKBQKjo0USoVCQeyce2DpahVDfdREtBDSiDiPoHL1GlUt6edE7AqFQqkgdk6hUCg4JiIHv9I1GlUKciNBtaNWxUak9gmt1Kh+xVAvB/pCqBwSC9v/m2Mg7bCPkhA7xZ245ieG0GexYhWA982kfFFXDoiG7eePIWZlz2eSkLO6FFGg5+eR81YAL2p9wWv1DkUwsQEbUYvbkmA6Vpc+l0tcBHC75Je7smdQFO8FSqFaJ0xSgIfdlJ9JXTMA7NV8sXP53VQk1jtLojJ/5krCx5GOnysKtvKnARROoS/13MhMFEXLGE4aeUyMkoSUWe6fJy6jZtV3d9QoSKHWenb41wjgWZUvdk1eoEimtiQ5VZ1vSULuSv/PknKPjVGXd66cNmry0q0XEwGgYKr6S53fERTNO+VlIQrfo5eCws2BnyPd8gDAYjQYzRAsXOtLX+i5UXlFZIeTTOS/KFkKCtf7f36oFph4rHELA+hLfakbKJqGWSS748DnUqBf7fPZoWj664VYg1jWkw1ttfSlXjFFX0QSO8tH1Pi0SQIKVnh8bhBRQKsBo6cuXrPpz18md6+moS/3VR7AysbEl7cvnj525ubjOBPbk9LWoDJrsiUg50ft54eg2tnN2YG+6Kvmm62SF7H1h641/bUatYN3WLtpO9+ZGQ45yufRyIXcJsVJQNI33OfJ/wCrPIcV04/3K+9MzC51lry2CJnmKORr9XCJH6kGfJCAF03sFKbp5EvY0d2bpKtrbtcJ5HUi+Sca9TurkqL7Mwk4X94uwesk5E7b1N6F5PWdncR7U1k+9ToAV9ty1OauBNMat6Ll0LpXj57NtVICOvXs0bN7SDEV3KVnz24hxVGdXj16tXC1Tsmhk1pqhUIGTWnv/FlUvlvPHj2bauThyvXo0bNLCbmax8tkufeNK8mumZoL4KCvfKEXACDyayU1uMiGzMFFy+d6RnrGGX8JLivS0tMzj5QpprpGZ6Qn9CiGuPUZ6Rnny1ml7NFcffRoJS9kX7Y+cbrD51CbdxnpGQ8ryuPyR3p6xtM6MqnnWOTJ3ViNrOm+3gQsUMrXKIqHqCFqCj9uYcLdSkXK7zmAO4FsitGZAKI7UjHdJx8w9iuO9gC4X8EqY0wArpTiDc8D8DbscyjoBgDdWHkqvgFwwlOmkrcga9JsT7JutQjk9if5BxoFED/agapcZDOtcylSTwHcktDiNYCsccriqncOoO9bHO0CcNcqysUA8KIWb5EJQFrDzyHlLDOAA66yDC8AjN9yMnXLk+XtEC1ZWb0Er2rLp1kK0ZRxGmr5ignpfYqXMmcAGFa50X8NGlIA4HQgr28WgMelP4eocRSAj83k0P4D4GV1kvkXixwf+3Bk9dZJFzzk8z4jhqjmxA1LY8L50OLE5Q8zgOMl6L+H/5qE9Htdie+1Ii7j6TeqzyK33QAss5Uy1HkFYL2jTJqjkDF5pJKs739hLSdfhY8MmEjktFjHpP+uGFGOyQDwtB79ByG3Bm3LKATIpW77Ckr6PB6ZA+BSkAyTDEBGX5K59AMZsqc6kg1qtowk+XtmsnxLRAH7LCy4Wab4aPEOQGI/7j/JZ3rZxwAy2kvzPAjgdrBc7WOlFSx1IVtUzqhhhUVGhuR2RETVbjLpf1QWF+XPAyiYq6X/HahXWQDzGrWkunGA+SeFXBMLJRk3epFNclWc5XM8BMa7YTzqmcKCiIrFhNsaM2DZ4U3/Q6C26QAel5einG4EkpuRzKo1kHw9jIp8hQcse7UCLn8zFY5VFAuK77IBXKtE/1MIPA0gd7gU7ysAjvrI5XtcUtZQKvqdkhkMc0m4yUcWXPAvFr56C+BdB2JXOLu5qXllW3bv0ijMnUXrW7ZGszbN65ZUsnFObm4aAacaHfuNHtypYQVH66jc3NzcXZVMAY27DxozuEvzqs5sSlc3F4VAQNNug0d//VXtELnUldp/PWp416ZVPOTQ+JQOb9KmRb2yGjalq5ubmwOb0sXNzU3LpCzfpPOQUX3aNazqJ0NA4+6Dxgzp0ryqC5vSxc1FQUSaqm17dqhb2tEaXvW6DPh2WPdWNT3l4X4wAtjuJuGrJMAwnpOr1E1JB7yspnEr2eSbaXMX/vTz9H6NSzjJMtnCkNpVRLPcyJLZuzgofwFAzjiFBN8FB/d15ShkxrXEwrz3d0YLOVcdvnLHsWtPY1LjXl9a3cWFxWXagYODiMhv8NZn2WYg+/2dv1uprOA66cC+/fuHqsVUdRadjtIDyIt9uH2gF0ulDYfW1yRShP94MkYHGFNenptVVg5t+7/uZZqB/OiHu3u7sGnDBvy67cjlx1Gp8W+ur+/ryVJy64H9e75WMpVffWD/vkEMyqoLb0TnAab09w+Pz27sxrGoai089VEPID8uYscgb5ZKaw9tqklUY2VEmiHz9YWmsinKTzv8Oh+APvHZwfGhclC9SAAf6rJxi83Ay5okd9gjKfFtyLrOYV2Wnn8Zm2MBAEt27PPt3YOlOW8A45syIlT1CQt2Ohc993UmwLDSjSSWugFs1pTaVQi+eSoRcX7dd7/NAWvyX6UZPP8FDntxzQ5lg/H9KAf5BmcCeNGYRAPmvLKAMWtXDYbmGTBOII8xT4wQN5ypI6lcyPI4MKYu8mTwbLvpZSZYM3ZVYahRAOAnNVPDaAC/izmNf2YEozFmlRdDwKyXZjBm7a3B0DwJponU7AYE01vJ5TrqXiEYC8634WRw3AXAPEXJVPIiYNnuIFvVSAnm3xytEjxg/aMCAOa4W+eOHTp17XkOkHdhfICUEjdZjruJKWcWsrypW+RU47MBnChBUkteBu5U3mSGYHI7IlJNyoJU8w5vhqPAi7rd3oA9vrtsdR8DSOrPiZTeWgiJ56uJNUsC/g5YmQv2f0Ml3Om21wTm3B9UYkOSIfnfsmLVswDTIrYG7wCsFFGOToPELU5iJTYVQuKlmmLNYoEN1a5B+G45mbyWZELi03Yy0IBsABd8mLplApn9SPbacRJe1iT5lZWmXc0Gct6d+qlfvbLBvt6Bpaq0GrcrBsZdlSTUS2GwLFCJUdnrLIYxXFFr8wHA43okS/I/2UBhenK2ObIMEXFD8wGYMuIiHz54F6cDgNzBbAVbXwFIf35q64lXaTxcCJQp4IAF0C/QknDAdjMApDw59vfue0k87PZkergnDzDF3tm37XpUPk//g5ot4akJyHt7buuJF8kWAHhVS6xLCgBzVvy7iPuRsXk843SbqRgBAOm3923Yc+VVXD6M35Go71YTAKQ8Pb5+190kHvZ4Mj06YQQK0lJycdBZHscl+QCQ+fLMxu3XY0wAcK28DCXuAUhuw+LwG4B7IfI1zGSz/K2SL+SHp4VA7D/9y3lqiNW1/s+RuNKKY+GG6xh0PYl1so4Buz2KWIVLABL7kTxmIwyXpvf86psFPzgTEZW+g3eH5veuFeznV7LO5HsWAP96McEA5BzqHuTp4hHa+YQJQHYfeRzm6QHL3gASVs/QA0jb1ibAw9nNt+XeXABZ3zCZzMC7X2v5urn4VP7+PQDcDGGzAKZbY8p4uXiEtNpdAMDyg1LE81/EnPipf71QP7/QGqOvGABcLWUrg3MA3OsT4Obs5h1ca9yBs/VFVJMLAKTvbBvo4ezq23x3LoCsYUwmM7L2j+vcbtSv/UjePskA8k70CfF0dvGpuToVgHG+Rpr6JwDm5QqGEg8B/KSSr7WOLaMXye3S7aQe+LiqtStJVzQ/a3nWgkWz1swQWZOp+geWj9WLkj+5bzADubO1MgH6VaWJVTF2UVM3Em/8GED8V2xAxiwfEq5wCYDlb6UsvRIA3KtJovUiASSMdiNhn9+NAPZ4sgC4105FwoNSAGR2ZAMMGyqScMBuC4DjniLc17+08SLxKlcA5A+0lXlmIO1rEner6CRS7zWA5DHuJOyz3ADgsCcLkPC9F1kx9AqAnMUBJOw0KQvAvXLS6KtEALfKMvTLApLbkPyd9GwRoTJx1f5MBXIOtnQgeUttx9VyDF43wHjcn8ltN4tuVFEKqzAnB0ia50lyWfb4E7tWRazcbAOgGyIhf54TiY80ALjoJ0eVWwASepCoaqkZKFyiIfFKDwFE1mR78RWJux4FUDhTgmlXIIm3ywDwPFiENBpiHpkN4Ecb0awHEFGWgZFbYgIMv2hJPOwugDe1mfTz1GTNwfkA9niRuNe/FiCnowzeRwDkDxDTbLEAR/2s0LqA7Q8HedR9IizA01E+JHu585YlDmK137MsUzBxwwsZLJtURSf+8LNCIHqgA8mW1I6s2jEBwEQJx3yJscYLAE9ryuC11QLkzXIQK/MAwKXSxKiYVwgU9mHKH0us480ANirYHlYmxsAbAKLLi0mtEQlgudo2vA8CuOEvR6kbAK6XIUZuth7Q92F6WJas6XIQwJtGxNo7CzDPVkmjCToAm5xFqj4BCieTFRukM+X1Jlmdx8cApjONyZpfxb2rL/ZNNkPuMGIPf8aAa35FRzhhtJN8V4OsU+cNgHlsaX2I1XkHgLh20tSTcwHLVh8S75UOYDYxd8gALBM4lqslmBrGATipZTLPVbJoFluAxPpyBT4CsNHZNlz/AfCmphw90gHLL8TcMRXA90x/Olql5hsA212YykQB+NtJhqpvALytLDJcB7yraY0a0Uy3K8ji/VMGoNtSnqyq/d08TyWyGIzvGkhw2sjyrnFRQ/rSYNmOaq0T9gTAArb7fkz0K4C0ntLafgRwswoxzrAAWX3YaiYDljkqlrkqpgr3AFz0YIptTMwjTEBaR7lcbgHY7GIbit8AGNeGyPADgIyBbLVjAcxVscwiq36dAVh+JOaABwB2u8jguAmAbgIn4LYNsOxyskal50w7nOQosbEAKPzDj2T0/WrEkLquAtQq47KXkNd+luveEmhwNkPeyKLzfuqwnzMAGDYFyuZgnUrPAMxmu+7B9qMZyOknqexFAFEdidFxPYDIBio1o7LCRwDLNAyWSQqmEucBXAtguleBrY8RyB4sl9tdAH872Qb1zQSgO9PLXYrTOgBv66vUjKpy7wAs19rMLAuQMUCpZlQFnAFw0l0G6pED4IynQI33QF4fsmaZ20wrSUbfTSbAsCGApGu6nU3TFcRvr83xSj+IqSYU/pTBsl4lpdwLBixXFJmbvuS0vBCAYZG2SFR/DWCaBE+273SAfgjb1+Sy2gSkTlSxBP4LIH7VgoWM81clAfhFzTKZzfcggNslme5KaF8I5E+Qy+sRgDVaG/E9An7qrq/LKJj8TgBIWLFgIeP8FckAltqMag2AjG3zFzIu+PU5gOOylLgKIL4ljxtfCNwrZZWg8yymGTI4/aQHTHtLkHTVkFg827E7Fg8a87yOprYW6pLPoB/NSXE+w7LbvcjcCiQKPgAAqUM5m+G0pRq17z184uz5P65OBTDFGoOzgcJhbKOar8yG5e0YJ2ItdQUALBIBWGYoZHPbBuBuaSu0zAF0PzBxmpD6bXsNm/Dj/NmL4wGs0tgI1b3DA/JvLqqtZgi+DAAWiQAwQ2krzlsAwCIRALY7y6FcYAYs85RE5HYcwDK1VTz2s+QOk6Yamw7gRkWSsc4ry/46ru5NTuBMKSJy35fZTUAxHYypDUiqwxozw8XQIkW17gPAy2Y24lRr6uFHH+LTcg0AzBYAE6wxIFOS+W20CUgbQuwV7vHk/JZkc95kreZZEjRVx+998C4uNacQgNkCYJnKVqj+sXweYHm9tKZKpNQ9npzfkq147uXJ+YdWDmoWDeBqKSJqHAUkdiKrKpazpHSSxHX7CCC2G8moWIpTJYmIwu8mtCEi35OprQSc/mG5U0KSYmIhw/PKRYu6xgDA+TCbqLrqgwESLeNsSrhwZyW2Kk8B6GKipcZ86FxclF70Sg+pPylshoLGncvlAebX37sKlX0KQB8TLTXmYxeb8TsCoDAhWmrMx8lqWVyPAMjvScTNMgAnva1DI3IZoupKqnQXgO5HjRzuVwwDSLDxYB8iCnsRVUUg4BHLBhdJ1CmPIbV+EVNPyQZg2eBpA1/dgmB+ekpifHxChgkwjrYpS2ZishGwXG3JsVR8COBJh0aNpTbyKibqnTaBr8tISYqPT0g1AlhItkMUPOBAnBH8rAXOAqUjALxo26ixZG+b8T4IIGpEw8aSQzhZaFQBgL81FHgSKJxKVm4YyRAZJsVhhQnAQX+SM+xlbAMh4b4FFz0FmiUwmCeQ9BoJDLpORYw8/jICyJ2psVqtuwCQd3vzd+0bhZcvX3FUAqAfZlOF06rU22MB8LAeS5nrAO6HkOxFrcwpACh8uHNKp8bVy5er2PU9gDlsi61F5NFw4R0jAKQPV/JCrwN4FECy24Drdl4zstWw5wCelKTmSUBUTWt5X2V4X01KqxgAH5uQrBVfJjdj8j+HeSqByfkMyR1kKHWXwTCwqFHpUwAQ19Na6rUAEDWtpJKEm3wA8gfZlL4PUbW7AHAwiCHkDIA3dYop1RwTgOQlYSoSLvkcwAwm80qN1Yi4cktiAeBGaV7AGQCRtYuQwzoAGX1tRvsHgKRONNoC7HCzlmITQ0wjCd67AJhXOMgT9MDYnYX7Vve2HvGV28F4L0wG7wMso4ocNX4MABH1rFT9BYDIbioSb/YByOlvW32JqHc8AP1CrZjbdgDxbYup0PsAkoY4kngZ3hSRqikANmqZ6r+Vh8ih01MA+X14btsAxHUoQrQQgHGszVC3NEA/S7MWKOhPVp9oFEtqx8YNzAbwtCbJq96GP53FlD1eG+erBYKus+x3lEG7jsE4QVHkaEASABwLtc7gTAC/qoix6Qcgs4/taebqACR9LUYLAeQNKaZaJQHY7kJSvhepGAVgvxNT2yS5iEblA+a5KiJSzAWQ+21RGpoLYLHCZgLPAtgefAO4V956LbLEMnqzeZ0BUDhbKRP1ykrrK+I46AOOhJJgo48Mhvkkx18Mppmqoufwow6A4TdXq0w1AMYRxNoyGkjrbnvkvxcAHtQQG5oHYI1j8dQvE8AMYg17CWCsSLmXAC65s2hXWOQLiwIsa7RERAMLAGxyLELNogCcCbAZ+tEAXO3zEZZVKusFXRDLHcbWLgnA84okt8dqy7M+HkTk1f6vZJytRsLf6BlSu8rhuJbBvFBd9Mh3mwlA1jilNeYBMH/PovhRD6R2KQJU+wEAyy4/kfBXAF7VL56G5wJYrGQZkQVYRosEXwTwvhZLo48A8Ic8pd4Clt8ceNWeAHjbsAj5XASQ0dN26sUA0TvTkNyJrK/8wSJSOIFJucoMYJVWNiqxPj/tyE8zlhxJQ/b6MBLW/ATGN2VlWccyvzigChcB4EMHa0zWA9jgxNDmFYCMnkWB+qUA0P2oEdJuB2DZ7Fks9ckAcNyPoc49ABgn4rYBQMF4hpKHLLx18jRJA4zjOJ56AwBs8y463AwDgEtlZXP29VSxue4FDCkGXPRhcfD20cpCjaJFsIxjCbsHIL0zWdFr9LVUgwm6qP3d3Uk04F+WY+5yOP3NYJqqLA6odSQA3KxmhS6JABK/5oQcOkUAQE6/IuG4QA8gtrsQdUkBkLfUj6VU39BionY0gMzvVEKqplcsvMkiiikWACf8REL+NoK/RaRcJTWD07JCoKA9CXZOBpC/3I+lRL8ytkTVXgIw7SzP4tOjuoii1f4nN+f4M1G/AgAwTlUwVFzz4OFfVWXxOC72bwDLoHwA5wKtQRTUfsLcH4c1cCPGatEsC1SyrGcwjuWKBcXwdACW3f7yBV4GgFfjg5UKlU/zlR9hKQQKhhQJCjoMALeqCrmuB4D8fZ29FUSk0JYecjFztrJ4cD8CADEzyyoVKq/6i14BegAzRahFAoCC1WWURJxT+2OF0F1JB3YKuW16uqx9oEZBRIqSs1MBvKgs5PoXAOQf6OKjICKFQ6nB53LmKm1JPU0PwHxhYLCSiDhNULf9GVtdhGo+AlD4i5ap7ANeVF0S99sHACeC5aDROSLRjRlc1gMwLSJb71HAUNibZNnAYBhCxQI5/6IHoF/kKBt9kw4Aubd2/nXw2kcAxzYXwjSmaFC9JwAsW70EqOZt8BMu/TF11IQ//r2fBTyrXjxwbaIAQPdgz597r0Sagat/6IDFChGvIwBQ+GDnzPErjscCOFz3LnDQUaDuWyD+5rE/p42auuZWLgDTEo0QVbsFfuKlP6aO+v6PE/cygec1bYmCDlkAIPPWhhnfjvn10K0kILGL0PcWAHhdkkn9mwXATneGZpm8vPayBF0TMY/ixELuAEjvbWvcAjNDZG1rFfYqJihwLwCkDlXI5rLMCEEL+OerN0sDFnBFgxuYAiB3qlqAa36fB1h0eQUW8PMGFQ+knl4AQQv4D5rU+AhsdhGhDjEQ1BeYAeBqLfUm4GIgTzERghZ9ns4C/okyJMo1u80DLLq8Agv4eaNsiiod5wHQ5+ebILhIyVMuAD+xMhN1iAfyRhBjFwPP1E8WboJRCOsdxWokAnhf1dYcjoDxeIAsHrsY8loViZcA7kmh6rcBIPIrjohKXQNwQgKFLI8X4KdvqUpBt4FdniInANySMDAXMI8Q6VMAmPqLkdMvRgBxXTgeUcNDOTxx/fOZJUSapwH4QcJWAA/LiOwF8LAiW4s8wDhNiHx+fC/AzzlQn7wOAFcDxdSTEgQEdYdrEn1rwdMqPM3kKANPPG9PVWJtsD+LJ65/+WMpkeaJAGZbjcLWJQuIGqNWVuV4NMzAuxfI5nkKeBDGUieel9pMFqp4T+RBoFjvXABXPW2tzCOWZSRr0AWG6JpFwfvE2zeR+3ylUMe7kW/evF3rQ0RBO9++ebtWI4G07Y++TTEgL/n1jm5uRNqF8fEHSwi5r418E7nbja3Lg8jI571E2kdERj7ryEAhuyPfvHm32VeIvEdeiDII5X28NKWSkkTr3oqMfDOMzfGnt2/eHggRWfH2zduDpdnqPYiMfDZchNRNdr1O0qMg9e3B/j5E3LjY+Bulxcih7+VEnUDW7alBRFT3/tsLNXicW+25txJ0Quaka2N8id1r2Pkog1Dex8tTKytJtO7Vt28iv7UeOXc78rZASBd7d0ldLQmXPGoGUkYq2WgysEbJ4vJLPlDwu7s8yikFQintRLh5BsCyVmtrnRMYCmZqZAl7znCnbFFQVageXr2cWpKyfPXw8OpVXIhIU7ZGeI2SnBQizxqdR08Y1KGqE/FDW7as6yykLFU9vHo5JZtnlerVq3mJeFStXr2aBwsFhoeHV6/iIkLk2Wj0vN82rlv24zf1vRXE6Fy5eni4L8ekCKkeXqO8RohKVA+vXt6Bzblq9erVfMWIXKu2HzFxSOearsT3b9ayiTMDkX/bYTN+W//LD31CFURE2oo1KrvwiEgZ1Hr4vBVrt6z9dWL7AI4kezQcPW/lxr+X/TiwgY+CGJ0rVQ+v7mcDRC41hsxevmH9yvkjmgWqiLHcD2uXdXEkieVWrW5AzN5D//hjuB/JHHJeyLTeUUi9B4BprsrWZhgYcu9v6+IrQ+0UhqO+ReFzVeXiqKBPsdKJrKh0dHUk+ZUuTgoq0gonZyVJ1ypIutaRYyNSq0n+XqkCiGoq5HIJgHGSwsYct0Dckl+IzCP9AyX1ymf4W/Pf4cuw63ohrHIU8L4OwDCcbLz0dQZjjAlAzqkuDmzqn0xi5plkZ1grQuhjA4Gg2wD0fWytUSKD4YMR/PjllZhcT0E8qZu9AfVPFjCvUvNKP+D1trWhRobCXIsALLcHuzJUeMXwsKzdgeOSQh4i6/IqPgZQOJKzLe0fFoakAoinLw8S65/JcMDB7oBCDwiYN3gQUfhzAMZpStvyuQrG2FwGGHdWElKvgbjhR87+gKpf4yF7ooqo4mMA5l80tlUjmsGcY2SB5WJjjlf+NkN6K7JHbPiAh6iORP63AGCzo20NzGLITIPEp515vXIZzgfaJVC7FzzcrkPas7xrXra1zMyQligFT1oROW+EuGWm0j6B6/KShxv1FP/wPlS3KbejELfkF0jC3bpUN5ohugXZKXKt7/Fwq8VvZgCZ/W0q/DGDPsEiDRdrLjIyHPO0VyBqcImHewd0AMyLbaprBoPuoxyWs08gnj+O7Bir7tcDsMQaAOCIpw0ppoJRnw0ZjWmFDHdL2TNQ4MJkALpMXkwzG3LfzmBJKpQjJx3ihslKuwbS9n0I5EfzLDOVtlP6McuHAhlMcQaGiEpk71h7WxayDQBwyc92mmUwmDONMmRkWsSMC5V2D+Q5+G5yJi+tu5PNjNczZORAuj7JCPH7lcgessLsSJ7p/squgbah3GhhSEiVZknJhnjBWLKP1MzKB4CctIxzM2s42YDvNTDmFkjLSwXj4QA7CSpxg2dMNaLw7fZh9YIUVmryjqEgFZIL4/QM8W3JXpL7Vg8AWYkWAIa4M8sGVXNRKeS7ZSC021cyaYtpve2wjQkKPcdDekxSIfjZLy5sXzSyTdXSJUKCTjz+6BNPvuyaG2+6/aarrzzzpEP3ux9EVq9U55i29XPHbU7QkGye+er4mdsuPovLAwBLYV7Sk1uXzz617ZHXfyr6kTHW1d7bd9/yLkEnepUuUISmLG/YoPDeZQEA3VoPRVD15l2HTv/5t3Xb9uzetGbTw7rBim1KUL/LFcZQYHoMBJ48ZnOCaj/moWCFO/EVDo4ubh6uPp0PplmsaBpN0Lmm8YRhWicjUF61QcENTechb54LT7jCkveQLv6gVAxklfaYtnlpATx04OYEuawx85Ax1VnEbdR9E2RUgSEsG5LKGjtl89gAwFen7p4pHT9dLiVc/rtRuQsCSF9WUiBoRRZk7RmIFafwrLGYLiKD/3a37Sglps0f6vrpCp31V3eHIldxytze6qLQ4fYCZ7Ye82eU/tT4jJg/2ucTRQ3vCMBwuoWCqPwuPeT1BkJfgTjEA4hVbPD/jx++gzTNw93gT5ZypgGv6hW5Xpk44lIUBiFjCMe0F4VtPjVVH+NllU8VtXoiALwZ51X/vBkyx4yQLQlNyECsEoXJX87bQZrk4NanS70eyOxa5Hqm41CRGGjBo1pMu6H76lNT5SGeVf5kUddIIWTtOG2CzLyzhK6aUFUoQCwThWl2w46SbR3Ou9XY8sWNX7tRJUS4dncT1gcVvbSig91+bAVWcG0wst5/Dq7/eyEgLybbKE8SY1oX5v94UGkQ88iAaO8/tDhy/yM5uV0x47Iz9UMDEVKVruZFnzLddJVtaKbGZIz9z0GKTvdEYEhLzLTIUWQEvrD/MVncgWjTyID8wfHFkc8xZLYtZtzvIra+WPFYdKBLx8dOtqFdDf2Y/x5E9U+ZhICC1Pg8vSTTKoLMAKgmziWIPEsN6MsLiwulmsX9IDJaSVGoZOAkqJXWcbqB6NrycWpODk7N2ZpakkolU8rBFFwuI5+aRbkSBaOKkkolA/d5QGW25InAUpgel5FtaaMHYimgqySVoHZBb7FieUMR4wIbVVCQc91BM+eO7lyCpyzXqONV5Eyu37hxAw+h0Ma9fvhxZLsAkYCGFVVc5QETBjVwJFXVRr5EQW3Hzp0+sKkzg3OVJu37DWxb00ugYuO2T5E8qmHjJnXdiMilftOqKjG/el2/nzehW5hSxKluHUdSVOg5ad6kPtWVDD61WnQe+HWLSo4yedXpOHbOdz0rKMQ8Ww+fPWtk94beMuTO2mcx/uEii1ftjmPnju9ZUUFEXEiDlvugX96gceOGQaSu3KQxY0M/KtGoSUVOxKdBHWcRh6pNw7U8Zbnm/WbMGNrCU6Rkk7KkrjPk+361OCZteJPGoZ8iqngu2yQEwJKdFsVS6SkWEOzvVZJlDFRVRRwri7uKmGJY1H6P6uvfWwAUnO+iInJeFp+ggzk1Ni4+shnP/bsrcUYA2WeGOAgMeHcssMN9EyxHA8ljb8wobd8zGQAsiWvDBLjgwTsfJxQA2W921eOIuI0JCYUwpcTGJUTUI6LqL5L2uglpep34qAOQd29WoFCFhy9q+kx/oAdgevmDl4Cy6pQTb1INMKc8WlpCDmWHA2/zARgezA8WarIvFQBMMUfac5LMs1onInMoJ03Vfv/bfACGh/NCiZQTP8TnwpIZGxf3fiT57EiME42N+9CTer9JOOor8l3U6zYi1a4krXcnouA5d5ItAJIPdFLxuGlJf7sMe2OBeYOKqc+zxBsNP0kdYrIS8swiAMahXURj3YwGQM8J2B4OAlTbhZXGGh/mitgExI67BnP8uyQT8LwhkcsmiOvaEpH3imwg7d27TCBhkII3ujB1yn3AjPVa8rqEgzMTkRf1IQvA3+48l2W5gDEtKRPA/fpE3FGIpzQjonq5uOQh4PBdHFAQG50P6LaEClRLMi3eWIi09zEFQO53HK/0BQNQkJKcBxh2eUtTD34P5EVFJgGG31x55S8CuR/exuXAMpSkWLBU85cZT+pLUg36AORHRSYBhtWupJxrgqhhMvmdAat5CFX5gJQuQj7HgNUaoUEmyxyOqOQ/hUBy5Ic84HVrgZ/waOZHwILZHEu1e9BNc/gUue0FdMnJBQyA1aZb+qUc0qWnKdaAzNOEYa0vuRax7wuN6Xgyu139zitSgeVa0nSc8/ML6LbOmj1nemki9ZR8JK3rXb/+oON6PKnFG5Vnycg7MXfqqs5EXheQn1t4ZFizxgNPmpHSkacYn3H9j+97dRnwcyTwh5q43nMXRyPr7x9nz50USkR1s3BBqGs8zOfHftVi1J4CGOYreVXjkGFJ/qtXw5aTngA3SvM8tqUeXzKye7dhGzOQNUhay3fQnRjZtFbnP1ORMUJBRDOMiBjTsG67IasOVpJhBVW+Cez3l9LyLXQnRjWt1XlNCjKHKbkmMxbehPHYrNlzZtQlp37zZgvO3JyJ1LbkuhWWFUqB9knA0/IC2rWIaUrkvNqM90u71m707XULTpfkLUZBXuaemTNW1CMGnx1m00ZP+hT3TgFgyUvOKDCLTVpeFwPWzcqos1jve0FFDrjakCMip0V6vCxFROR+EBmtSLjma6R/50xEVPokME8tAMNvAUSkFIB+eSARUdhFYKWGiCi0XRklEZFySBZulyEicrqBmNokyuD1L8z7yxER+fxWgMfVRBA/zJmIqOtH5PfhUbXWfsR3X2XCDqUU990wbQgmInJeaMDZACLNFhhHEF8dpJGFeiRCN1vN5r4Tpg2hREROi/W4GEhEypUoGEVSg3foTb+5EjdAh2sleepfkKzPGy8Q8gjnPYk6JeFDdzURUe1HyBsthOwpHkQKBYNqaj4uh9Gn2PsIBE15cWmZZglzjkXYKqz707CiF92eBGu8QVptns9hZLQVUkyBZYszCQ7OxClvofulSJh3zJ8EpxhwyIXHWPIuXjfgud9ETH0ZOiUjuiEJBp+BeaZKSL9ARXznvTD/oOAxNs/BGXcpDRPwuDIJVnmEhBpEXkeQ85WAjELaRYWI6cJWPx6Pq5JgucdIrUtE2lUoGCPF/S8jzpUhoipPkNmJF3pPv/0ZjnvzumWYZylI8xcsc1XE52aYsUEhdMCbhEU6ROF9O/oUc72zhADkpyemGkzWs5L5WWOx/h9qF71djkIu55HVXpLDP8gZQMLVX+NJMC8f29UsmUNIuHUSrnpI8DuOqJbWmGvGDmchmqrHGW+hV1VIeLYRS9USqsfhsr+UsQVYxwk5HEJBCyKXPTDNc7IKBR0HrpZn4YYXYj2JHkVuJ5kUY3PwoTURkXYzsExLRL1zM3vtQ1IbIuJWmZMbE4VcRFIDEm6jwyEXoZkkofwVZI1TfpI8DoJZnxuXnlPKWVRdL8tBY84/Gxe9FSSs2YO8QZKcLyGlb7kwfrlWr/CuhNBaptiWIjWi8NxfgucRfGhujbWwjOdEmnzAi2Chu54io3KxxVFClRhc9JWyxGz8uUL5sLCwsPJhR6DrQsRNMyL1zwaO1qDmr2Ba68agnG8yLCtfPiwsLKx8xcPI7ytTs9fIm6Tk0bBsPChB5LAVT0PnmLHUgSjwCk75E1V7jKftyobxy/TPwEkfoYls5R3Xms1r3OmTXD2ODTCbUv02TrXW2q5ktC7CMmyMxbx/Nik+VOugGyfJ/wn0T+4KR+TjZYjQOrZWImXf4l1JEaey9Vp26TU8ApGNrOCyH6ZeJFr2MeIqS+qbgQPOQgqPyg3bdO85JQtnvSRwm2F5d1c0Bfq2RFRytxl4u66ntxW48bnIHMmJOWyA+f1d4XvJyO8uT+gJWLZ4kWDZR8jsQRT+En+qm33E47JEXyVa5iiImsYhK+Ku4J0XRhxzF5rE9KLTrKyCraH0af5WJ4Wvm65Z/Lqo1MhIIvmjHGqJ+Xcqv0M/XlL4O1gMBqOgQV940c8qoa/xrpRAuTEHnn5ISM/ONuBVPSuEXEReazHP20htJal7Gg4JaOrNOfcqKikzO8eCU+4SHE4ARnG9PrkuEVHp9SkA0v/t7iAbeW0y42VDMeeTgMkoqtcnN5PF8RcD7lYlYfXfsPyppHGFGT3JeT8KRhI33RLXlog6F8BsMAob9MatajnyP+bjdiX6NGu2QWYjhNAs8jnBLJnQcHJnV/s90hZOmCQ6uYejTXBt7+qB3KhXT98W4FktK4Syud9CalvZHCd8MAFp7188izbjhLMEx1Mo3Dpxkujk0X48cu2w/pUZiJvoIBtVuwPs8dgi5HIWuh0TJ4lOHhsgB/dNMhJ6kHgfHW6X9jyAs4FEg3U44uxzFOd8iKhbIZ7PnTBJdGobkqPwQ6wld2OZT1Plh3L9v20FJdJw9LcGxVvoC0RXJqnWa/kUpmvTOjeuXa3jQzwJt4LbQZh6ipWKQHy4XMoJacg9MLptg1pVh+TgqIMExT/QDyM5tXWmRZiR0I+TjfqmIGPArxYB7Q7kjSapkmo8hH6BliEsAlldayeaZhFR2YeIalQ13ryIiKhlMi6FkERp73q1vwvzDp9P0qBc66gtTehGuPp1teLN7RaSW9maw3ZYDoQRP+ACHla2ArcB5vGcSK3XeBkqV9kI6OZ5E79mBg6qJNAKi2m2Qg4irvp+I066yuf0cyHOrcjT8dS/mI0LrOS7BzgcSIyOvwHTR5pj6xCRZhGME3ro01vyar3E0yrWehpGveJRMEPzCVItg5V8Q/BqZ94vVTxldxByPATdRFsLvoucbiQYfBl3y4vENZZGSyzY4yLSPwOXfOXqlIiXZUmwbgb2kchBoSmF2OciD1GtGDwtKx+FnkbezVwB7nsD9rnIoP9OTDMjH88aEHPvLGz5B3tciYhaxGLLMuPVAF6ZG8jsbK1nlclhrg4x3T5B7rusNIwgJp0zr3sXQ577YBoopJhuxrlgGyv9EJlNhJpE4XYZnttlpPWSoWsyYhoIOW4G1jjK1SsFd/0FuDF67BY7JtQsHnFt5Ap8gWflrECtI2Gw5POocRzi2klx+BWWhWKdYpAxnGMrfRcPogv6Ed/tIJ4+MM1V87RrgW3O1iP/PRbcrPTpCThnJa8niM4685SmGHLYDMwVompPkPezj1BoadtwOQfDQg2vygngXhjP5QgKp8vgcRjmfSV5ygGxyOxOctV/j7SuPGXn18B+jtc1FQ98BVw3A8erCHlWUhAR5+8i1DYVV92soZhcAAi5bgKOVxPyrKTiKWcBW9RCFa4ge64jsSv/NBtwt6wAjcozGFO+IsHW8Ugf4yLAhfnKR7UjYNrs9ckp9chKAaUK4ap9kIohWg5cqulbqmtjJalmmZC/p2vFgOBa4y6v97AJ7icTkhfVKt1oyr38VDwO5zmsA05W9i3TowEb9cyC8VCPsgHVpn4AtnrK5nUaeDKqQlibZVH5mTjiwGuUgLRhAaGl1URtE2C5NbJWcECl3nvP1SAi7zV7B9cK8Qvpet1i/FlpDfLZZhGh9nGw3BxVMzigUq8956vzaLgZz9v5BrfrqHZYacK1Yd16CnYvIUBd02FZphIq8wi4GCTkvAVI/7NtOf/QhjPvztbIR32TkDtJ9ampHGsd2RtClzkz3FlEcnFbaIIRK8X+gOF7ga8zYXp/723WPy5EpQ+bgcyYiOdJOrypxRutw98MFxHH8AbvSxFRxWuAMTEmxWDZPEv/sSmPG6KH4e299zlr1UR1c3BRyH1ZPpAV+ThOD1wIJ4EE3BPrkYHDzkTUNR7Ij4tNR8bcrbjowwu+D6Q/eLnLn8hpbjaQl/AsIiYbhd8SUZMU5CW+vv0iE7geRhIHAStZqPpDFAg5zskG8hKfRcRmwzBUoMEHWOLvvs68XMLrNJCXmSWYndpXKPgu4tqQsOYXmJdyQlTrBmBO+/jgdYoBV4N4S4DJDBF4LqBdrEd0h09N4yzr5AmmTaOcSWm7YzRKMV4RGpejWyq2Qpc1VsB3mx4AdHs9iKjMilgTAJhzTnzjxRueoV/DcNrwroVIyFPji5JERA0PZpkB47tFgeFPs77mUciBQgAoWOtJVCfZeNpdgLx/eGkAAGPyhqokWPm98bpY1/jCvTxt/9s6C6C7NVw7JCeiEk81OhkA7pQhIrcxjwrBL3wwvTwRhR9ONYGfva8RSe1fYFzKRN+kGdoIkNuYCD0AWAwPZ5TjeM4LsgCg8EqY11GDrtAgmjdASPMrTnqIUIvU1I4kXmtrmhkAzGm7Ojvx5hsKvxerdNvwsBKPgvbrDKfLfGJ65lmnTAn8L+PMu3I7hl/fIe2ceFyF/gNri3B1B/avIECh47Yc3bKoW0klEZFT/Smbj+xfMaF9AAmW6zewvkLE4avBPf1FnLoO6ebCI78uM35fPDxcS449JlQVoJKTth/ZPL9TiJLI++shX2mESFV19N+H9/8yvJEbCXv0HNLBQSS0z+BmKiIirvw3C3+f3as0RyFDhwTwyKnLn0f3LO3gSESkqDBkzYGja2d+XUFBRMT5tZiwdNvRLfO6+5Lk0t8Mqc3mNP1QDSFShA1Zc+DouplfV1CQsOegdUd2/jogTOPQavBAxv6lhajZ/n6cmPdPf/owkEfL2duP7146tqUnCVYfPLiimHvHIZ3dBahC/8F9S31ielnHdJIgA3dOeOwYNshpnbQqEldonRzVHNm0QqMiPqfghEihdXJQkawOTo5qskGVRkl8juMEiDROjmoS1zg6OSiIkVNrnbQqskWVk1KEiDSOTg5KYnZw0qpJfoWjkhg1WmJXap0c1RzZIveJaZNjFeZZQs/gqnm6cif1v+r6WdZZUraPzqS3pI3KaqlWGUcQQ+bMtZL2FRWjrGGXgsB768watX1F2RdW2eKENIOrmQPJvjLgvDVkZwhF4czNEDsLze/WSCtM6065Yp5N9pYj9VZISkLvwdX3tewuGr6Rz3SSMAbO/O5kd+F5Wr4uBLFnriS3IfvLFRbZWo9gtqQjll2udhhdsuSyw0BZuvKuMdlh+hyTSweawHvrhvknpT0G9cqWa6EIQQU3b1ciu0zfkzLJ1hIiR3JHkZ3m0Cx54h7TutNOWLZ722v4nZHHawhtBCdvVqFPtmN51yKjDg5SyKMu4aewDc4/VGMlRUCIuthxCPXl/mNQ52g5TCMpsRMfu9Cne8DDGYqiErpxo6s8oScWONuGdsnBMlZyXrGrRLFT8chc9X8N9eQcGZoc07bnLuT+oPqEfZe4QllUwh488JSnQtpeN9twOhJbzUpuZ99ULHbqJu5y+K9BHutM0oqQIBfaAfPfnvQJ920aQkW13J07MoUl7rKVAx+qWuvkiwrFTu2YHf89qPw5af3glnl7CSraSo1CQC3AaTQaBY9TCSg0Go1CQCWgUCsElH5BHhwREccRkUpB5B7oKqb19tSIaAP81Tylikjj76sUUXp5VrktxHkGeciiduBIqSCVtzNHRM5eTgJKJZFTgCfHotQqea5BPhxPqSByDvAUKUeuge4iGg93TkTjF+jIU6oVPKVawfMK8lELOQb4q3lKFZGnu0JE4+3RIHq7gNI70OW/AzV/JUVElsA6O5tpT0kq4mUWDdMQUflF9XjtZ/Zc0EdFRDVn1yEiZZc57X/upiSiegsrEZFy0OQAXoV5R07+M7sSUY0FbYgcv+1QevLWfzd2UfNKjVm9d9dvI4KIyLnXmqNHf6nPETUaU7LziiOHZpbkOXVeunvPtphbvEqz/jm5Y5iPtEa/9FE69OpT5+fD32rc289dt3vdKD8i6jnMf9Bfx3eP9hQLmjXFjyhwzOZ/908vS6Tu3r/E0HUndg/14D1vNmrLye19nYlU1cf+tmPH/DocEalbLz90Yk07NVH9BS2IiOuyKIzI99u9p/cva64kcunz57GjP9fjiJqOqzx+7+oAAc/+v+3dtSN7qwORot7ivf9u7OX8n0HZ/bUE9pchBCPmthwoTUW9/JPXpYm4GdjkQqQ99KDHu5uliZRL8LuSyPf01d6xVzyJNH9jjpIo8OEpDyLy+ccYcfj6qx5E/TIXEnnejDjx+tjlgvfNiajh+exnl98UZPUgcl6Q8vrA+ey79YjGvj367NrR94V/ORG5LE5OvHYpxnLTk6jRtbRL+17lLHaUUvZqVFty3fjqZlL0IkXbZ9E37qTn/6YlWvf+4Jszp5KzxiuFtMuz5zpS6J6Me/vu5u8JJMc/X514dfZUatYYjtxOpNyIunExO6EPkefu+MdX3hvuhhMpR0VFHTuR/L47R2OyZvBWZbcl1ay8D0fPRc5Tk+ui1JcHLmTfqUU08cP5uOiTIbzg9VnRl64lYosDUbfnSacOR6eMVv5XIEWnJ2y8tgR/mMtyIIyKvGZN3mAin5O576sT1Xj6t+uO7C5EZa5l3alEVDt+vt+h5BZEFe7l3wwkahczi4ioafTl0u5+Vb2J+qbOJ/K8hjN13P2XYo2SvA9lzijhXWK5rj9Rh4QDld18JuatVNOo3PTv/d1bvfpYi6h/6sVGPt7t3tz2JPedSYN9XMOvfKzL5uy8Jm2cklw34FjDEt5UpldlX7+2L99UI1qNNz28PIdkXffmVaF+KTu8STEr/adg1xLrcgeQ4+942cnLc0TuKX9yO46nnXx9pul2OJFD52ZBPhU2mL7nqPrzWw3dPXolHPGi0WnTeCvT21DQxahG7t5hJTjqmrynkpvPD3m/Kmic7nm/EoEqIlL9oN8Z7u3TP32bA4VcfdXR063Vi0dB/xmIml0yMdhEYFp1Zqa8v8tQMfh15jYH6vzwQNJ0olHxfegb/XIV9YnZkjSa6PvY9jSlYB7RdxEHkvoSNzu+Ia9ZzFlPEhS6ntyRiNplnHWgDum7nIhoQkE/clqT3oyIAl6c8KVR+ZtdiBz+yepKboeS2hJRmdt3PKlh/A5HIpqc15NUrm5ubi4KCkvc6ToydbUbkevG3A7EuD2hNdEa3XQFUdm77yrxwmo+u1mFKOTmvRAi+irlF0672vA9EQW9fF6J3E7kDiaiUi8vBpJwu/ylam6ibigROf77pLKEy+8rE99pfXJjIgqJPOpF3+Uv4UgwMOJlFSKqGbNDQ/3TFxMRtyal0X8IKrcum+GvkZBnmDdxlgcVh6H3X1bmVj3q8uSit8OG5yWo0qsHAaqt1zq/P+bhcOxiMNWJOefvfOBiz6jdGr9j57x4AYcN/7T3Zbl1rzQRVXt+25PG6r8jIppU0I/8ziT+OHL0yAkfbpWi0TkTiIiW5AyhchF3PYio/J07ntRTf/jbUaNHbjaNpmb/3rpx60AohSUc6B1xtCQRuW5KrSbkFFquwq7Y1kR/JnYgItd9cQ3J6UBU910v2xJR3chH344aPeLn9K0q7ZrcukTkciq6FrmdfF2RiJzv3CtLRJx/mfL9c39Vaf/K/3XE6FFjb0c1YNMsMVwbWIqIvC/FzRoxeuSE2GslaXzGWBKunfKPKxHV4c3N2Tp89Ojh/2Z1/y9B7mOeiJhKEdJ4nhffaKhYVKwq6F/2zjrnv1K7h0Ss1ZLTpqyuYS+Xum9ObVz55TKOXI6ltqwbOcP96Psa9WImK3lUd19G1rEOKoa7vNBb9325BXm9xEIjCp4/jIiIeLHRn0ZnC0xOH0m1353SCHnQt6aYiIiIiMdPulCjvWdPn90WTGFxCR+SupNQOM+1z4ZztyMyPjYn+jOBR+sSm5HTXt2LnJUaIvoqISMiIiLi8ZMfFSKO2+LqktvJ5xWIyOnawwrE1Vl8/Pr9SNMihcsBw+uHERERz05UZqOQ5bG626NdKeBZwbOHERERL9b50fiMcSIds1apxP6wvH8YERHx7HLj/xTE1VyXIlC3mLY9n0P3b3MFFZOdcteNiO9MX6X92S2+HxENyVk98WUb+jpjyYi3nYi4Mfr5M97VppG5k8fHNCBhn/Z/Z7xtIyXk5n1fbn5eH97Egn4UfP91u2rh4eHhJVVik9JGUq13p3nlbt/xpBH6X6uHh4eHV3UnrV9AQICvisIS7iyNOV+JRTM1+cFP3w678aERw1revvQlN6J6c0Qt409VrxYeHl4tgByFtFsFXghcfViBGt5J2DJpyK/6eQrnvRkDqoaHh4eX19KotOlERCt45NRwwbvMiQq/x8/aVQsPDw8vqWTqIFQ7eoeGfsuZVjU8PDy8ovN/CyLn3uf1AKKUwELMGDk9kIrNErce7TsTQp5nH627UpmIyj+9dvKEG4Vcv77pTgARhb+/cGGLK5V7euL4cR8RIsfvctfI4EffGaYQETe7oB95H4utTKJM5R898CGiKs/ueFKnguUkOSxxp88c/XZvhhJPH1VXEW14X1fKgQ+V2sQ9rUtU4/V5LQnLFUbLcyY4ETXOm8lpVua3J9Fv0hcSkfpvASJV2/e3PNxOf6hIoix1U/a6E1GLpO0amp4zgf6rlpx0z4DcfIaCGPlydjVWUvGpWVwQNV1B3Pjc96s0RKTcmB47jojmJX5cqiIi952Z0QOIHH5KiZvDkYuvipQqIqofvZ+To0vOcS+ikMu6fqSeXThbQ0QapQT3o+k9ibhvDXc9qfKLp1WISKFh2+XkuzdvqlqsYvKNQKJSV9/VllZZOSH/YAB5Hk3pxXNQyFae25nbn0gz1TiVo/75mzyISK0mapu6Q0NU/1VaO+LUROR/7m2gcqF+moaINAoxZ181hTz+UI9I9atlm5ZaJZ0KISKV+j8IceVn300Eoy5PLt2tUV5UrHbIfF+fiMKf5w0g/te6yCpEVDsqty3xx5rvlSGilimxzclt5Z121Hhe57ot1ubOIuqXvoDI8/Y9gVsP/CjgnGF1sw7r8wr6ElV/lLawad3uy5oTfZs7kTc5YxTRqJz7/RqOvZH22JvUCwrP967bZPoMV5bk3a5U80lcR3LdnM7zv1q4/Kue+5LeNCL6K6kjb11yM3I6GFWV3LfqFzlS3+RXoxvUH7q0NDn+mS+wLaEuuZ16KXAtIoxmmq71br3wZe5cFQWfzF/buk7bn/oSlY5IGlOn95mX73pQiR+/adBwRspBF6r9NGV+k7o9lzcm+j7rOyKHxfe7cer5pjMdG894nL3LhVy26vZ2rNNy3kjNfxAiRYPbDObYQnn0VyeUoWI2+Mo+RyLS/PG8nEC5J6udiMj5n6slBWpFrFQQkdeJs24UcNY0mvpEZ0enZuwoQdQnfg6Rx9UbpYgo+MotP6LWV3Vpaff+ze1HpOx0Iy8lKu1KC6IRqd/xvk8YTuT9c0pOQuyiOQ9DiYJ/TcqNSYxZ7MlQPnq7K1Hf+AtlnP6Or0ZEis6PdFmxmyfc7UL0e1Q73uroJuS053UVokpXo7tyTt+9yU+IS95dihxXpdfhbfxQh9yOPgrjXbgTRiW35+SlXv/uyBotUb1jORlRqY8HECm/jcmL+bipw5kRVOV2bnxi7tWGRKout/JTotIuNiMamzSGyPmoeYqSSm3JyUx8N231AV+iClszsqNTXk/4b0IVIlk+6OXIvvJtKSp2FR0aE79GL42AY9fqRERc/Q4aAW33asRv2YZI2XhgEHk2/GbqhA6+RBTQsiyRql4DRyLS1mugIaLS3cb3r/xDfl8iorJdJnzXuYySKKR1CV7JliFE5NJ09Jimrv7NXYnIueGQHwY2cCdG5xbVlETaBq19FVVauhARKSv1GdrK27lFKFGl5j68Si08SVm9qQsRVWwXxpG62tdTRrbyJ1JUau1ORIqqzd1JVauRMxEp6jZwJvJrO7xnmDK8roqIAtuMm9izioaIHJt+N66Fj6pWKXIM7zXhhz5liV+2y8RxnUoriEq0KkGkqDc4lIi823w3vK5jqYaOROTdfNTkvjUd6b9pl1wGYw4kp99YNzCYimOOhDkS5kiYI2GOBDmOGBUcWXdlXmseEUc2qKBiUUG2zZGcnILEObK+gv6rcvOMDB8XLtx5/WNKWnpmdnZ60psbB+d1Kauiz1+vMB83z7ZvXpYR+p+r9ggYzwYo3fzL123WpnPv3q2qlAzwVNJncb8Xt49fSUwar/ofTZknLGtV9Fle5+fdxw780dmZ/kfbJZFBP5E+05We/t4a+p/tLCNDbJvPtf/tOm8H48NQe5xyt1n2O9jjNEtlMM5V2OFwo00M+V3JDtfpbzBGVbHH8bvLcjLAHqd+HMsyB3ucUXkMhuFkh8utAeOHJvY4PmdYLvrZ49R7zWBZzdnjDNEx5AwmO1znDWCMqmqPE/aS5bSXPc43eSzz1XY4mi0WhrxuZIdb8QkYn1S1x5lYwLLPzQ6nzA0wGueQ/a1yioHlY2N7D0W5xi42V/EJWHc52Xt47optYGuKeQaWnN5k7+l3saCzrTV8CdaLwXYfXofy+9hY4CGw6idydh+uW/Qjbcvpl0Kmq6XJ7lO1yLJObUuKwWlgzRxIdqADzY9L2VLT52D+x8MepElM7jc2VOMCmD80J3tQ/9M4V9pmGl4Bc8EsjV0IzTKYFqltg2t9B8zmLT5kH1rnPeIGqGxB0fUp2C9VJDtR7XIzogaqrefz/Vuwv2lJdqPhz4CYcW5WUjfdnwv2qP4K+xHl+Gwga1N1q5Sc8xES3/dVkR2p2xoTgAeTSitkUpceeaEQEt/0VJBdaZnDJgAFdyeHu8rg02Lpo1xIfdyZIzvTsgdMAGB48893jfxUHCfAKT3Du0w9kmSB1MJ99cj+tNSqVAgWvL21Z8XiOdMmfDtm8e5rzxMMkB4zL5DsUR373Tbz+BazyWgoLDRDVt3lriqyU62wKlXEmsb740qS/apL9+1vLNbR35sZxpFdq7b+nCtZJrkKP+4dX4nsYEO7/vTvy0S9lNyEVye+q+VBdrJq1zLtJ6/ecfjszcevnt67cfHUrqXftinnqiA7W61ncLnw2tUrlS0R4ET/v///T3VWUDggADkAADDvAJ0BKoACXgE+MRiJQ6IhoRKY1TggAwSxt2kOVvxNhmTJs4FtDeQz+JdUb6AHmuw1/HfoAzYHiXxz+m/8lxQCzo/3b8E/0A/lHA5fgB7oH4V/oB/M9vt2crMEv3L8M7uOi389+O3ivx76v+x/3r9kvyq+du0v1L+4/m7+7/tV8xv7x9sHtr115VPjf5T/ef7Z+4P90////a+6H+y/y39y/bz+S/Ur+1f3f/N+4F+jv91/sf+R/53+D////z+pr/I/3b3lf1X/C/8f2B/y7+Zf57+u/ux+/////F3/E/1f/E+5z9dP+//kP9r8gH9D/oP+3/Of5Xf8h/3Pcp/r3/D9gH+Tf2L/Z/m58sn+A/5P+M/fb6GP2U/8f+V/13//+gj+a/0v/p/tR/+/9t9AH72+wB/tP/n/4Pgv/gH7xdzl/jPxJ/C/0G/1X+B/XT94Pff8c8qX8TtTD7EaA+z3gBfkP9X3cfSf9L6Bfq/8982H77zT/OP737AH8h/sPpp3t/2H/h+wB/Dv7H/7P877w3+l+1HnN/Qf9R7Af8e/tP7H+3L65P3Z/+/uG/q5/8f3MKFp96/DV8vbMVl1rJ96/lsLjLYmDyrk37T71/LJOJBlxgi9xyNKHEW3SYPKuTftPvX8thcZbEweVcm/EJ+uFrJcGNmUQuATHnM9fy2FxlsTB5Vyb9p96/lsLetA5pTgLV7PXcORmHT/BVyb9p96/lsLjLYmDyrk37T6KBJuTfrrwT83yZw3d/rhFy/lsLjLYmDyrk37T71/LYXGWw3/NRtxyBNe+zv9xZv2n3r+WwuMtiYPKuTftPvX8sqxD9UQIhN/49u1AQuQ/L/3EZCoMyGv+XM9fhrya+bKl3A6yfev5bC4y1bNXlwZEmbFajoRxF5d4cZISYyE8CK6IpcPeckc9DGGQzhqUIHAlnw+054RRgbU4HRN6coFid1bUuy7W4WvOOBe8LjLYmDyrknrwJYFpTofT+gVEoV2I6iGJGT6SBvVy8qMjV+Wweh7XQR3x42YWnXK2C2lANxTfqP4qQ9fiKHx2AF7mzA/K1xM/GQQ41ODBfmJPvX8thcXlgSJl58yihtTrn+jdHB8TvjSIRegveRNi5Hp9d9sRksjebZtYjF//Tm/kNbVSQB70IA4GKVYXjvFf0BNvZAVqu98Oz0lIn/4Xt/UZpuoad/nlXJv2n3cjyDG0C4dNOhG9iZ2krS6R6z0Pjb8m0PDC79v9JvUoJ2IT7an4iMxzk7E9A5yAs3+yXeiErd9SavhHJh36HZork6MYd5DiSvjTVOK0leIiA2WS3jj6nHUIQueRe7Q39lTzKjhjObFhlEJb/N9RxXnq8wANuLgTpFuYEH1ecSGmm6zO3LLO0GCWdUV4fjfHb6JrurLfoe1e2nzi7oqtpu7bw2JxzN75KxSAoY4C3HIXsymBXW1MhqhccBUn2lAEwVQDKuSrM/oPxYEVCj9eP3twUTj3ZiyzF9coIDU/l3/yWnYwXdGffMIfftuhQZ+YdOY0s5Z2EfVdoq+hKwbSaVOViNBdORAfpELryvOKsqt1nOW2eEmhT1ooqiQ3amVhak1XGbvMul8bu6OU+XfHzB2dEkg4F4E8ZwRt5nGxLR31adNA/7fapTkOFGQ4a5no2S1Wt91GaS89W5snv4JdcCshI+4Zqe1gwZhMPegbY0ShE6i14gjfkl+MzqZyP9fsZ+FFuLBO1huKiSONPljW5vgIipStiuI33cEavzFj4pmTz7C2somWfkxlhlqX6yLX2+y1K9XhfDfVoyZUxewbJ+JXHKNoGbeyp/Y1GLPCVkHxPwur/9eB8dlWCXbiERRCk0SNEY64b/f23fBA+/zXy8K8fK3r5UTx4SIBSTgnkaua/WNtEh4btxVVrytNk8IOp7JzX1C3B18aVTqNu6y+0+XE304Py//tmUcJeYobVWYEHIaeJnY3y2rbuD1M+6oUNE3YjIjNEQi2FN+eBef6lciRXnEeMU4tUL1puc0DCVoBnxKUji8ceHThj2y2BAUTUEKR12t3qgaFIE/CQ5AAD/2HoLQAkV3U+xjFURdzgdunF+0z3627ai5F6vebv08ZJLnmdJy2+Z/ZO0JV9u+52gEp9IXqUdI2Q4Hsez/UdacnF1WE5txOES7PovYBhaUT23dvZKL3mhdffWlhUfMCIC834+SZ5k47mTN7WnBEtbmnpq97VXT1j6ilkGt8k0CBTPVZP118YU7/ZrtlBrQq70Y8iSFAPkNVMV/D4KvoNQ4z4SU6MBHAdskuS17HZfPKKt4afMUEKLv1VYK0GAxN/hTfI8TrWT71/GIIYQJzH86gt/ivRmsuWKYaGKwzs14WJq6DMQGsDd3+QrQS969E+7+owCLUv8uQjs5IOKpuaUbHtwcrWpRPQa0X0huvlvmZzWHXLqrCTNzlYI9RvKMZbEsZnOi74EhQF+gt+9fy2FSobyrk37T71/LYXGWrap3IBMgD4oBKIfz87duMDdObs9fy2FxlsTB5Vyb9p96/lsLi79cDJ7wPbfkKfDZo1HbB5Vyb9p96/lsLjLYmDyrk33QAP7NS0S4UYXl+HKn6Y/43CKRAG4wVuYIoatwV0zru6b4AAAAAHhWSlKk/DUdMrbkrBDDGoA7Oc1c3LjUDzhz6Ca0Xk+BWCMKzQQv4ZMsgAAAABW7BLxdACNI6I/buAIF5XO+RygviNhroTCuB/9Ow3wOfWTiD/4a0cHqzH3HEEyBKnajigjkIHAEtsIa99WKbgW7TH6bPpZUQamofz4XEvMtO570qqa+6wkHW1VvgqpRtadcv26iNJ49GtvzrLhmNp9F1RPLbT7fY0fB7vDWpxhMQ0sjSiqwdfAAAAAGL2XBtkbs7B+/zJhOeR/GWtJVKQNU3NAgtjjLi6oGwA6Jh6IxCuiocC7B2NFbwDq+yCPDjMpXwaW2brmE2MWW+D0CGtpZTS//iW2G0y/9EFkgATgSN5oVA5pxfJ+2G4HHTEUCxzxmlYGWZ+iwAAAAALbPV+3vafRFJlWzub0KxEuVT27AlMWGIU6NGYe3ylQ0KgTQ3PkK4rK3RVez59cLBEi99OQoWXuMrpx2GFrdUNLPchJfKq0K8ZVraXT/nRk7lTPBTiAAAAAAMV7iv6ZeW3VXICKQ0kqKXskm94Xmh4W/wimITweW40Nyb9g1RBd8FkJ6AKeF3tXEJa0U8q6SGrkAAAAAAxfNo274Zc2Off98YQeai+lkA3a6gBwallzFJlCvUxSU6vlLOtkBlnhOPdmDlZQFkEz11vPcVQSFEgF39lxSm8q1NeUVVR40oOSdtrW0VzjRODlqSkGgTq1zZ+BXH2e17lwtdWNW8pnAE/o4pq6OQw29gOHICt+OLFYDrFtELAnGwXUWORwHLWhAbc119jn9uM9geUngAABieIK4KtbwKPPnAdcrURjzstusmTR5RoG3c8CvMu/LfDDQgF813YU0bYAGaRSWa29IE/W+FkB3Y2BZfoLQlK6u+Xxrc1aspjZ2/GVg+apc+kqWwzPt7bQQ5I+n4Nvut/ffzayyvSlOmuz5ROhx2E/p2K+ovQ5I9t3a35W/JxucRP2RbfnoR8cGPSFrQ8VcXQjRn6392QYHT35+C78ynWjz5hUIx40y4Py2rpFhNXd2Wm73vfzf/z0jpq/bfr+t93tCSOI+tLFtWgCvQhERhpmfOH0lx5nR9ngOwG5IiXIn/M98qnnVDudAWUMT5ArJt52ybk+shFbojWDcURi6QoVBezK3ahVn8VcSLe9Kz1cKwCrAC/zHBHuSdJKi9gY0FX7dahmyPulhHsxgTTL40uvn835Zk49Aj3x0OGbAh/Z8fPpErDC6CrOQJDQOoupxtmJotIeGoI4jHVmCgm2lPJynR4lVX0MTpmEXrmcx1ZLDxoTm+lqMRQQH1nlqOi6dVov1mQnr0/8oR4a83s3qfU5j27sbFEou/GW0ESQj5b05JFs81FVgJo1RnSpAJ6DIK817jnTR+urTav7DJOIOVrdpLqUKqPGi5+zjPFIAAOv/dbX+GgYcfhk10aqBd8cStjOPuWFjDW08+Zb1/sM66cpDABbQj+XNbrktOZDs43+S5wWTY0HVsbUDV+UPfKHsNYEeon1BTIri0evv9/LXTk66nJjK0cx13HiVoYYGEaV/2qrBq5586g0xmqYJ7xhWo4mtnNQZ7csJHme7uCWqtCOXJ6rnNgYGSSVlEG5HGBNpAAc11KuQev6Z31NC/2whaaFDcqLAOQzSPmmxW4+ON3F71TiOkJEnON4dN1AUusCsSrfhqZc4ZqkSv8W7fi7ldngADaEc72oaS3+rVllVVrYDK3raROV/B4DzkWRi816jFzKjdpDDnbNe5LfQHONen8VjFzCZe+pxAW1Faw1ox/+/yuDfXJ+lmMROPO3j6xlljt8VcFIzQ5Hn/RLq41KApj3NzRBmv0vLIPdwfL+ojDrDtZBLGHGIgFRRN60KejFNvsChXflqM8TvTEO2bZDcRaopGp2uJ38jhSB2o4dF9MAxYDG0wG/gUW4DMO4IG3DS3tbVO7FgRonofs/e9g4W5MIR+VkOOAGJAGsUY2ih6WW0p32HPTdkXXFW1vZmxwIBmLzNgSkc5ZoXUasfr4AXtnlO5HRGAKsxcACvoa5ScxVTUbd+575zspO9oRns9TDplGsNYstbV/eJFQl/cIGcRH2eOJ7lSOIm+iBhiH2FLS/DrWODuhkp3OWr2PaFa6Dl/mnARyugAHj/s8GKCl2Zm2Y9aYbCzuRl8NXE5Wlkz9nvFwcRjf4W2iODJQpkP2DKLzZtqbGWDr9Cel0auMRHuhmIuvGSWSObIdNfcUaKss2stKO7RzLY4UJ1rUAe30doPb/puMXifAHIWQgA00XUDpw4+VFbwMGN+woajVxg8Bncb5LvS75ZyMSrfRAd1Eglm6dRvGFjP++cwi10Kxdv/HM8qcB4FgRe03OpQQxaUVbrTDBr4t+7ror1u53VmL5hkZFVGRL0dt/AM9Aga1tonyQ9v4Wa3iVrTFKKQDnY3/wzKS5wERPQ7fNFUyeBYnDh9uFPbWx/oTslMs+yNqrg/afoFNf5QDv4wnrgXhv1FLg0fnAkLP41/x8F30/EDdJlntOEjumU05LPFPhbgM2uLS/akC+RWdgQCM0EBGGBDGBonS3TCu/E8dmlv73RFDr1DvumIdMPYuN7Wr0FRFzXAVvd74o4iCp7bIpXQaWzn0ubpkhCU2diWOQqFwPym8gz+Abuc5TQtnsAWKr/wBN1dLBpN/BPFatBLihcnmP+pl1RF8V0VnRfMe4glN0E+G2dbs/n4KYyX9qRbJZcCKVSMWSQ2KAE4ldWOKKc7Rk1Cp592Il5UU5e0etyF1LVh16QzHs8JBXCVh8LxDIPnCr4ninFrcGSNS4SO4gk7dwqX1JomR9XjHVmgzffHvScoJ/pHkxOQf0h8cmHrWBgbKZIvEfjEzSoIUNGr4+SpfJT8aKd2H5kj1yU5lEofDhWRivHTVeR3Y269rdAQczUUseYxo+0PI1M6A3NbcWC14AyMvGO/q4DT+rHej+Yl+av/X91qqZxTuPycphtJ5FnCKUlqmOWH92hxHp9HL0eycG34hYYzNzMUyXSG32CQKPXTHEJ4f64QtWnnApo8CxCzSmI+G5LVuADDUDs5J1crT2HrLRmg/N+cxaoCz0pHqx6L/ef+iluk28JuqwAL9q2rwxwo1R2O+1U+4eEfJSdBVFaSoBG9IV3SKze93DE8f5kUhBbAfvN7V/WjSdHu3zpnm0vsVN2G41qww03NgbljlZj6m6ugKe+5k5p/9LYMj4Rm/g3c1uoeX3yS4g6E5xePxUMToC4eGPX1xS76Vsa5iqz3OYdYME7x/OSaty8ywHG+IIEfgyHZigAIvNk9BZGDeeaA1IIyQBBe2FjhlEw9Yd9N9LK3qmbTzKEl4hFwnJkb5EEvzzqr+IP7VXtN/B71pHlfNdmgwM95uC0PYoJu4xo/oZQcH/Zyq228/COD/Hd4LX6gFLBGTteYnkF1/JIsADkI0wWt/DZAIYDv1RtpZgN+1it9+TLjxW+zJ56SGbbmFTQoKGQIDJoqLp2emQLuUNWl0rthoB9XUppZb6Q5/EUYs3b8rPHEHBaUDtySY4fLMueRRMc5+76bMYnVnAXxUAQHSEWK2RkXptU8oV/HA+DtvM6BVyH1ZLHroZHpUh9ZW3zUGdFGwDPMzk18ZMxjnKftLQWk9OzEYtuju3AO+vFVZQpBFIizq1szPrd2epgBAXCtdwyCWTjccX/ni+ohK//bvrCaLnRZaDNlBW5I/40MkNRDzfizzxfrC9X8IWS7uuz+JktjKLJ+9S0TV7rJP+fGHf8pEEPDqo1efTDXzxPA8v6C++bRAn1oPdo5b9bkBfRk9N/O3oJt/frZzHjobpToFrNo1z1HnB/Z8XSHYzaiMf3Cr0YQjufIDo752cZaFBwuvuxr+vLRgO314zMmtqY7SI/Q59Yqhz2j+YwTtbiBEV05g8xr3FyVjgVBLHEYCRACHOSxcbmOAcf9xlItWf5k5oDmD9MrZViC+pHPXWa/IC+29e2COJdLHzzVH/u9hUx0R4XMY3pXuNfbS9QhRS1o+uVhqpE//NTGSPsJr4KvyUp6OldupxiHy2UxuKKH4NmVtuKBFm+APojhTcLa9xzQ/qBvtRP5Nn2pWZyzm/1+cc+Pgdv1QvA/ZWqRMwtc08GVZqrdSV9GZ4gOGkwX2mGMbQoVnOYKhejopflcnrTQMkCj99bbx7ljJzE5KZF5U+V6UzWlQokAK4hbMOal+RBXu4KLCO8qenOf4A3Y9kpGQlTuiwCgMjUWdwB+okdg/u8lkARA49EusCyMFTcoYwqKlepqjQwAN3VB522/lQ1BixCtcEtnj1iX7wFyHzG+XZAaO5D6do/7sqOT3eXhL/+Y3rZ2GW/aQ9JMhxtwXw1uqoYntki4MwEAv8Ctv9GwL9sgi5/MZnre6x3LcYS+YEp6dVXCRBsrTnjGVcGcO3pLO5W779CnqFUIgAmM1B5fbjib9WPU6JHluC5q+BHXOtZWbiZB1vtB35LWhaxoE9wARuKQT8U09mtW0zcqCWi0n63W5xf7iC/c1ylpnHQPd4+PrVd5mjrJP3xZ9DQhRoJzsBdK3+NT2FqDu7+rJJimXVA9TC/FgjfbNQZMM/wAbJnUH+98Ea8Hq8IMRW8fQY5aqxkJB7U4pqD1y4wnhG9H1RkRBgX7Z0hTNM+AUK5navQtVLvU+uAu2o2dLjIWLdb955REnMzvHwAZCefoFy4xjp88GvO1f1Vd3V1aBi/QAtgyuXnTjms1ND7EvDG2R7rSmKB+BTQ03HOx3Izxy1p2KaCWJkG0R3f4NmWltmX9qI4C/6y6T3jlqrDfQ3cM61SgR/tbWu/gFpMNP9jcJQG/64SbYJoX5IpGOv0GiQfZbLO5AKXGDcTeW3EDAjjfTXR+Y3gNBqzgIkvYFP7QNEXRepwi2jWUuX5mekFD3ZM/1QJPrRY5O/Kkv2Ixe5R7u3eqNMkVrfA8HbIDhxJRHwG0h/Yk87r4xILBxnX8HnI/2P56U40rL+xFcu6KWsyq9RC9IxedalHCUjbxo4HaeMaZUhgqKGQEwhAhCLMfkAcvr5/ilYFsiKQqd1FoHBRu2m3L0YzXr7wJJHp7KDqcFKLgEhRcZiU9zBaKtq747rvZjyfgRA8zCVSjA9wlqAFLl38HzOAJSCnlLwmIEdEwCyQc7mZaTrmULWkwXz1jAMU+jO8JU61C8NVV+zR5AI5DgxCG2gSbhCqug4qQQKc4E1WcBzskc4Z1zP9U/RERudSwpMzA3u8DbnudStlEO3eQFK3jemvET+H99Ty3RAaOfroU/uxHV3RkoCgwgw5hI5ydGa10zXHAKNz6TlgbmHdFJSMfefUC3xljUuqehGr5noCZGkbQAAx1fiq/poqJGfCU1W3OVPp9ofPE/YZmMSLlgWjNULlwFEw3TW4TFl+5bXA4W95qpVQWtfSsCSEnEF6u38AqQN07ZyVyTNQwl506ITiGFgxCy3xY4aZVky3IApOXEc/X2+A55JgD5Uczi5aucLtpD61lARP/Fl4onsy5rbgsnszN4XdEc2YaC+Ol/6eKLU1bMcTnMaWucXlMqk7j2UMK00XljylWCkUbe4RS20Bg6FEWsnPL8yW4AcqKZSEI5dK1qiMqi3N6CjcllKtpyt3cHztqnRjlKQV+5jaPR6oa2A4LjBz9Mn1t2agzOqdT7dcntN6k9Ts4yXlgshijKAVLECZjKiAO8gTXOYAm0VtFM3S/n+5uwITVIkq8gLVQM9SVLPoo0od9NNZocbp0OpPxHpykncrFEIB1lnn/mBvlWENvit0whBVP2r/27j10PQxPiLQHYXFqU8pK2O5IeFMNX3Qdvv8EkVlGOj8zP4Rh8HqAceLSOicqRZOlg3qGj/WZA3JabAaHe1+2dr9QV+m6qJ+V+WVsF13BiWPyCkR812tskFEqwgFWTIjqqi3Lr8rSQ0wgkcmzxjzm4278dKDv5W4d5Vx799m3gmSEwNY+hjO55Vmisaasrf5bLaoZv+0+7QgU52USbI/yc0aioExgPw4iQIQAGCO+9sBdtjtcUR2UjqSu+ZQqo1DcCsB2neBr5VQWDDEMaqFRlHOyuZpYTcbI2shuje6bpUBCsHMRTMRRG3NomeW+OisnTVkoRQvi7Cj9TEcKKhfV4ru/353UE9Xq77I5yHvnxwerbFXU3mufrmShTQiQn8KRVzkIPS3lCnPb4AhRoBVkRCVxx0vf8HpXkR83qU4cgXewfIeMWnOcmZBpqLV/Z7Hf1XH9rr/h4+c/bLVE0m33JCWSOkwu3NtEmk5HWZp+hoc0RqpZhacwJ966GV0x7WR+QGfWLqOz2UoZbW9uVU3AiopdVlHpFgIosectpecTg/wEBBGnflsV6+7QjJOhl2KFjrJqOytpXNlG8xz2Xphct45cDiBiXe2WNIu0gRDDOo/CsQ+A/8Occ6nIHfO0mDhZOMYthvbRrVF/yFJR4MjT+xLBWd3c44f3NICzZ7S+DdEURZzmDfRu0WWfDx4UZFrRX5Cqpsv75ztMua7dMRGGdOKsl8VYjomLH8ahv8dUVNrCUEPXjFsJBIGrA/e1K/XBagVNwAAAAAAAAAAAAAAAH01+d/jfLgfNbqWupuTXA+k23A8iJN2uWQUjNnHftxbvmRkAuhLYjUgEYN8BEuGVTUVaWe5l+3kb64PAUQwjH76mGEbcHk1a0twm05W+VQC6xP2g7tpNVQ168F9GYQND9kbJ36O5RSr+/e8ZiEMicuPGg0PtIif/c5kd3+XPdT6QasLs2WO4Ma8J8IxWn5n8mPSxfTS2UHghS8f4dpfD7iFcRXKrr3q1xXMp+UzF2GfaQMeUbOh3k3vkVhFdbIr9LO5nmG36kyLN7VUlsg9uNE50zNjk1srrWxrLHpMsosrDOSYcPsBdKcm015NJ1Jj177044oEmCykkw0KRD87XE3frPXE3J9f/y/FGM2tPRWe5VXD3uZ8hLuwdf3V2jWim21Rw4GKqnXrezxqrPYnnwJV9NLc6SZSsyxVXtT+74H5TeQqILZv80XfjCQd9+K3MoX8OqfVNzW1m7P+Ta9iS0fd9o/deZrApF4I4abcxK8phIE/0ktfCRP5vgNXQomFQDq/zj+hCj2dOE6GJ9dlr+r7mlV1M7xR5SqDo2p2/8ZKj1uan35gPOaqDKi/qrIRPq3gc0cnYVlm+rUBBXCbSzioZdbJ0OU25PPPtjSNlrPfx4o55kmDIFqoFLYRYQbhtMQoOpXtSxsgs9BFqh6vR928wkzVHNnOBWbqsftcVRf2o1PJoLY6kve2Jc7CgeGJsSgpKx5Y0sMMvjksWUvPdiZvtJBhIf+BmBkxRRCXU5GQPbtAgO1GiA1GZSqOwQ3fpeNpLUlB6thcjj++xnXkL7Yz+CdrSu5uCK0fZ9BGKqE6zVPNY6MFk+ISL+aKH4p9R2Gl4ByLLQs98AZVgPSu3+PXIlQdsma6su3KkQwPud25fBdwnl/Nsyvi4QFkoMeedfJ0g6Mo7Y202O/svF7KRHckc6FstgzVLvhtyabTJfVc+OhjxfHvtQJ82d6mYjMpsuE/LXkR5gTR67k/lkUvvwI4NLLkBiFr3YCyGj/zxcjPIj9rpZ184IGVU3xiC2pcdqW+9sQv9CtxzKbhdaY/jjyxWWAt1bKJLhq61YZyAIjI6vYHqwnq7R/jgig9cvIuWhXtTkBPDswvfaHqq21niAoVQQLwkQfzF7iQYtqwLOwELkjUVNy+yYj2lzPdAwtOfgRbWp2T3JPBLRLJ/XTSm5GyeCbPSDvtvRCH0/q6PaqhGjg7BHKAOi3xIoy+ERPh5cD6HdNXvHhzdn9VRO9X6QHn6larI85LzEICktdipW6nV6GD5yuYU01zaLUeUqg6NgFdM4xaFYn/dNywbhVb/EyhBslF518mZKGxK+N4MTvd6lf1lvReVU5RRKBvCvvQEmfP9g27NiJDDIdPltRTbjiNXjv9WJII/C9lZJh1VTrKbFAfsY0jYnIUxbdwZrT93/wcGAs/ro8X3p5JK4jiqATaPhb4tJd8Ae6vghOg1BKnolfEIrupneKPKVQdGvEFQHnNVMgOTDZ9d8EZikfG/5xW5FvyzlmOAzosnP3lgnSSpOaQvUzvFHlKoOjbsdqYtZvKvcYLluUNDXx9wa1tnlClp/R/aTFCQ2etiU6MXsmVJvNuVC7RFdpLgv0p2MwNDh0VZPP2JK1Z6RgcGM8W0Jkxuvx3blFljBO/hMBBpUPRmTMHxWkQL6UTxI8bxQPLUI2UrsQiJyWhYG6/tYXANWYZnReYzQfJcINAxgKqP3P1z5oNlLJyR1oQlkvPALihmOKuXMQzpwh8afudMDrN3nEEKPlhirkRNSExUlC2KGxNPOP9Lq67dcHacqvzX1Cv+xMcFr815iiGIQ/cEPCn9Ppsy53xODA7bnNOLXzgVBCsuP/PGZ9breYW6mLFiWDYN7Mlh5zjoXQH18+IjXpI3V5TWWo0oxer8eqJFLZAcPN8TUSPI2+RoirlK9NU3mBuQRb9bFU6eKjMRBX/2KkyeypSigRCBtfMkDF3aGfa3+AkQB9CUQLQphS95m3gVpA1LQUgZoA6hhLHXIr5wN2luPIYzr11K31e+zCEoUgwOoL95d09Nb0SaK60ukFdm9e0/vYxi8Kgx0bNpN3fAhDs7C68r73WoDdgkCmSukz48ruPLH2h6z1/fCJUuh6lR8uZQa2NEISlQCvR1j9hzRSE4bNzKrmbmxUVhvJCkxQ4emCjR+G5cnVHKOiZxl7pcb2yDgRYcw0fr3qYwyX2PnjqMHo9gtHjiOVWcU5Aw+guq0eRFT/sQ/GNx36AwuHX/5xgUF1HmF8hEb3cl/rERG2tYAIbH7Bxjs+3IIbOsbXv4O+NYb8hdn7nZeI6/0DA5kJmTcKtoWFuyH5dQEQ11kn9W8ebPrMDzYOHTpmhFswwgJGL6h6LFZXi+9e2qaeH1doPMQ0/LJLUyJa+g/Q0eEzu8u0bzmq/OuM7u3NK9ujtSg6lqELbflS6ZDRXAj+/86Wgp7j92OBM02LPnozMoTgqOVyPI0hgjaR4XnTJdh7qCnsgumVLhqwXIkBlElNzDJkWtQ0rw2O7DobdVfT42oDnbuWZSsI/Zr+FlVYQFIalmmODG4DHXI66imDyxqWrT3AJk5kSvoCS46uWk7blo0j0nzqq8ZjBLg6MPr0kjEX+NkzaRKvd8nTB0AXMl8NceJcnjq8/LF50MQ+wkRrCip5ZdluJi6CtkV16pIpYNlQKDdketrjkjoQk44joRw3O6FozF5b1+jKYlWZtm9eEbOdQxowXkMUATHQoUoxHv0Va4+2iXMgHEXCB3PrxDuVzvMJ1Bu/t29YlmhHydGeI4r8NBnJ/whBokXR5yPMwA8e7qd1HUmeFZnS6mcpH5IlSrl/pBwSiTgVzMIbNwYTbwyQUyAQU0F2nNI+dS5Qw+D/1BtqQC/sPGctlBGYyHHv8hdATC+mROfbBryWd+YjnduUYDdAnCX4+waBGg0I8Qu81qEvcAJ/LVRBE8fSbvfZ+BjgCKpamHSEw3Img+i2qispfzwrcUueQspf0I7cvDo2jbWZf8bZgzwAnswmLTCWuP3k0+fm3Nj60HVnAPm6Av0Nj5OBcl/0hhGl3jpHEtQsS/BW4mK1nz3X+16EGMgFDY+3bvjcSfGkKVuL9w8S9I28bhajo4BxHzAFz7u/5Y1Vu9dn3TN6QvGK09zikxtYe74d8sIkMdf7y1qBIGl4WEJdtvIkTsxHN4cxCG4fea8ldwreEC1V6xPl74uzlgMqxpZROMRHzGDnpYG6ArvstPe6R8Io0kRgD0R1nrW27FhhNC7xFpPLjSojzX5yHX+jktVyby32eI1PdNbqI5VscnBMxl84N1pl4s+LDVqvNWdmmV8WCZxTjiMro0ikqCiEma2ftpVFbVlDP78zMgrlcQsdnXMqY73GTVE4SSOch9MPtzZEd1FBxPt4bnrFLdDfL0/vXgc9OzCAL3tNGdz58e4y+WThMqnpdqzcB8IqbVSNn5+jzMaAlw60kAoGn1ek6pU7i93ED53VeMTTdB0HyNK2RmE5sOgiaIb9/Nlb/bRV9wOM+f9XFOvI3781gi3ByC8KuNvmALL/XuJzOSuluw2Jvc4zxDNZ5mgfIqOn9oyhuhgw668S8zwh0i7qoz9bCtI4tCAjPLVLvK61995eaMBfjuBEOa/EgS43RA20VPJs2k1/dvq9mK8PcG0x5Tt7JN2Gul+EcWnIGkXJnGBW/9kViVmmt2+aSBSFJAOaHJbdAj1TXWN0bfN1r6tEOU3c/ihRY/7UzSezGGr3IgkD05NULCSx2Z049YX75lLBMyI61VetX0KxEMM8q8iXBA3H4VIxNlSlDY4qjZv1RZQTUzFbvjXI8+P+lqH2+CE3z2MQL4eZZHgRwz5rOIk4h5eNpWHdKTSGDaegwl40FcfUVR1wWP1bXd9HQts2dnFb78EybYdVAdLAyMUBhtwYJ2fxt6BAKfHkUxyjSrqH0UQ4f0wIkOvQlwBzJnyIjp8Fdd6qgSTRbyLdCpMjXHlafvLVRPQWFw8gpvXAn5XCobw6CyFU3sQrFOl+8UOmsuM4KKRT6SHyQxXyzuPl2m2oJV6o+z8yM0n80UqKM3Th7azZAyf916H5m+450XzE+gnvGMRGiPxRpPq6jt0A8oX4kTxdHHB7vHCsVu1SIVDzoAHPvglqFnLk0m9EjQxH2EKdqBQ8kh2cWw15HM1W83A8lrnnfYEMm64CsRjovrSYj4hSxzEYiAVag66IE8RPm+QM5NK/mTDNjf/JPbLOoaGxXV1dnRTFnhz8N87Ddvc4Xn0c3kx/QKlK6kHCEB0Gi0/3CeAoz4vYLmHJifds2jcWea9w8rqFOceO3hVAcGGuryk1VzGdqa0Olow6gFBqcw/pI72CF/dBDgTgeeUIuNgMYFvSB5r/+JZBnRIyIC+qBBbLDRP6K5cRLIoC1PWf1g1u0zv/wqU2UlElD+sVNLUGQT8f7zaHEO2eajY/a684a0ueTaywoe/+pSMBNXvhp1gTlGPgoMovmkU4r8XoGzDqt59JNvw9fsA4s6Fci4U0CeeNVxVpQwPaeWVMIZ2NEFV42Ob/fcEmk7D18Yy0gvj9/v288pYlj/5u2nFpXDV9iGWtgZzaigirb30eJublm8Xs/lhDwM4NTFXTbsfoEL+9EgP5J11WEYlgwlSNyDKhFo0XECOs+DKHlDPVvyXDoDSuRddHsRwVeWB16yqpS/NJ9QAiJtpraY7OdIbTqWy8rzfghOvKiqMI3VWUDJbynIgAY13jq8F1Ubzca9eDOBeqw/+kuLtOxzqsanBNEVyESJqoHt9QeFg3+i2bWdjWLfmgpBIzhAJ0H80T0Qrp1FCMmjgmLYJRsvusUy8V8eVunWMdtCOxMoL+XRniWjJt6MUqOfwVYiFQo2thvU1azWzfVP4CKudP5CqmRBSd1sJF6vwXxy1nYxKnz9Ra2xyO+cyZ5mWEkQ48Qx+Yut++CjctYAdos5PDaeHEdKm/wLh/Pxttjg/182X/JqlfKzVAxfTBlalQjz4DTkciq98PTGNprzjU1gQMjezxKrkEQY6+M6q4IDCp/1xJTKo5CD+hCwi+rtziPwAjpwDYjS0QyBkmGYelMFosJh9WTgzj2us9bgsNHwyx3hec5haJmXedSO5l3cc85BhYroPIdkRgsQycAnF7ToEmwVCtLWnMQn8w8p2sBYjC/1gGvFfKWUAA117wTIInv1gu2zVYwCBb3McticuZ6vKX0KBvyDX4MxGn5G3u0A4ecyd2JRRq0B961yWcGLaU0nUIkob2WyeWf/vgFTDzwdmz8IASUcTmrXtQZly8zAcNyXt9pnEsbavxHlpE7kdBPZpJuRTbmh6KwVTJzZ/wPHQq5aKhPCdfzmNTr7jNDoDxh5ovXfMdGl2jolnx80nF1X+bQyHnfUscw7cz/pEXZHhvDm5jZRlhbTCBv7wXGIqhcOHO1PuBMZvhlNa+E7Omk+11f6kKK1i9QbBF4alOVhPL3r2tn5fUcEoVVbNufS8lM/kVzEbxQKiJzCdxOT1sPlBOhI/yNyaQ0/t5BqGxGjK8A2SoBdba829skivnse4y5TvJDuw2aPf9X9o0/iBiag/Rdn7gNlyyavzl2hPzkB5HhTs4z/Yx1yZnI/MIFwNW46++0A05hbCZSrAN9Q3VaRKnWmt+Ax3A27zLMeA8bPIqyy2fYspZ9aFW7/ItWKbzIRn81fpGx3sq19Qxr9guaAezbadG0KngBrpheZEDA3QP/jLwxxZ7ybG/U+L2gqkRL4EfmXMlpBBT1cJSxbI/CXqMxUN6QzaiDuJ/fkr7aK3laFMDApPtBQfpVXxfaxAL6/WUsDgRfq94/jKe8Te7LKipuzoYZyN0JLfFZuQW6HD4TWTMvyxVlXKeeQA5Wpc3AKoE+yjQ8vbnbetjVxZ18hK1u5OcPDm/LUsNmFNNVeioRX8Ou+QT3K8fMEkV7UDybxkUXw85MWVldFA0sfq7ewybaJH9qk/x/1PUk/pWr7Ffdx2gFoGqzPuM2QBRI4XpShhrfl1r+a3/M1uY9QDtk8T0WeR46n7FXc1Bgwa4WyWWRygUNW5OAjAWtS1yhzguXr4jPNxVn8NP/S+PkWrx/3ZVgnKTyWPALzxzaQjx5NcMz5uC6OKQZCzdq/YmCcQ1zEZoifSvFMtjc+geoOM8nWYadg4WYgyNyueoaIxz4CzDp6ZWrBK5X53zaUvnmYIZJ9wxV53Z3CsvHkQR3EBg5tJzfrIRHHnQ6AxSG8aJHjjRLI653aOegWXxXNTlRpLuDH1uWGMiM0xDmDuFbQ33MQaUGgnTLwh+GArC5MCiUY0zGdNXcq2mXziQJKZGZT66g1EnR+IawX9y/hnO8zgEVN3TFrNHVZOZc5Om8kTgCYLnqfXvy0ULzwkR/8H8faGcsIW6ryS4TkN7vv91/0eU/jlaJ7XUG2VGK9eDhwu8lHmIzEpU4LOi+BKL9nsO3GR8li9Pj6/Lgd2mqa7APn4eTPNOkbRHGm0XLJF5R7cfNXREuQevo8oK64hyXW3yXVXnBCbv34IILjfmoOh1cHrApovI0O9aV3MaODgS4Iw2yCo95fDgBtQS4R/jp/044Hh1p9KD6zCL8w+XDiKNQiYDa96hHylyjKLMwTwFAsz8ULTuW6XMs4dOXrEHwFxORQA5xg8MtrZtfQZW27ajZ862Q+I1MApOxsT1six8XX7VHNvSRc4Trwxj/jwiep6B1WcGKVagq10lMQdMobkO1/gQlfdk5u0sgI5PDDJlM5fGe9/dleUwDbRbDHTt6ordzIKBPAycqAAsY9AkGphHIG6ffCRLWxLY78imLfZcQlTntP6rdpwiDA8yWSbjrY4C1Ca3aDoo5nBvJravo5wEVbeCSxWPFFwy0zqpCamnv1dHe3SBCTyXFf+r2J1Sqcxfuq+9rgCl/5a9XixXn5iaOYII0MqA6sjwN3zWk/JfQy3omxHgzusqFEU4qHb13DLmuIze9GXqdGT228BTs3crC9WU6XaORite3jceDnad0UdIvW1QbcPG3CqsyF+YALFUFhCUO9Gbtf5SCvu7p9R4uHCtcfsJkIPOp1qGayJlkudQiYDZzkDcImM2hhuFtxtxpwZUd4zqdtzAa/bX/3KfV/ryXam1P11wBrZrbR/mBvtByyteWgbcg4Xy6Ub6V/99NPjjCBb8mU9Cme4nHXU5edNZvbW0UU2amzpuxdKomMeoPbCjJEoCJohQXoQpVxlcistPfIoBDJ1uh0eZMaPveIxWb9dYdOX9VizfTE7uYk79dtojYegZKbaH4DLDyeCT8AsiecckG5rQFS6AzGoLxGBxheMqIkXNcZv0OI1I84DH8hHS+/P/JF/MzOR6XO+KgMQ24N0tCUl2yW4PSliJCisIqLCiALN3bXZWTLMnbHtJxUNowe8ITdYa+XLDGbgrkp/Suuy+JPVAmQRPI95IoQyTfTyiAg0c+F7EsdDpIhEJVr279O0hPWKzwvgzqP0Q41FwTrG2EJ1hOUHfgoUt41kSD7L3c65nyTxS8XhCWDKGuQYYdce4u6Xo0do839iJTyw+Oio44N1RFgBOvuq9fRPIjuch0qF6hd4p9EjHeCvwy4nSV5gEXzXe5Xt8DIIkfE12yu75BvFyz7oUeKD5dNMm1a+AjZj3+IwqhV1B+9150E0+9omo8V1ees4bWY6Lc89ICgfZNaf/h8wRE+2xwmnb0kuXG8Fc6HbTpc/eg/E5a1uCucpZdE5F9TIdZVn5jxFkvpbUDiiFYP2d+qv5VzjvCpVLPRnpPlF5ZnqEbomRYLt7oR70wxo157X70wmcAnc9G+JX5RH+xLhR4D/2XcRHVpQVAUnD/rEli8ElnyJCwg+dgZl0QgVsBl3j4ZrY9bOhwBq17k+WjhjOexdgz0YJmMRzofMJuueN0HInSqqlBIRPl3g9NILA3Q79J43tVtCG2l78H+O2u/AH710/YrCrT9+7rj7kXaRbnI3FQPiz1OXT/k/vIcJ6Tuyqp5UUtY/IQg90w3607op2ydEH1NlVSHQJeNi41qnyQKBYpP0q1xIEbbOyhTXALbPVTnxjim3YK5sExhWJQL0V1Of5jdY6UyA24OenlWSsfmmWysbla3QT2lgadk3sjIUDinqB/tO/efWZjeTUUbS5aT7HYED0CxEVQ2102x36Ao/QZmy2p92ACc10t7wyDvh0vNls22TDLBkP1ah6LoBc2icmdLtFYD9W8sRs6xRuYuVZbKbObmNrCgaV17+QFFhScGhUXA6NWmQL5OegaEVeVTX72exEWlZOkIDccsO79WVyOl/7w83POHPM7kuJxoZIpdwFBMjR8uUdLRHANvxbmRQhlBkoVw+RRGLnXgvICMqkgxGqy28F0nKHPn64blE0htk1Poow4SI1og3fyH7QsREJ01e+7VUx/rNL0DktNN+QOeaJpAx8oEAzfCzsQuaDt+k5N/spfQ1cNPKlvBLHVKtSgOjUtSYFoJiOpNtV2gEgnP7XXcZ6fDlpxkyIme4TG2lGKY+mvuLT63vBo6gD47NS87sEqGf9oycCaR1OXrnJvbeovaFfecuukDuDF+DX/np0FLR95VjnxxCyDlGZa9TKhOX4DvGXXM40aOkEjBvSJY1cMpS2Xklm24dvIxffSQxSkECFJ9fBnelt6wuttEqy+7eQqk4hScj76Imh0GpjqmC2wVKcGbq8k51PGcaxwA90EH+jEoTY3IuKIWk2FhrmM27CCTKxqWceNtnUCLg1M7Eexk++UJXwAAAw2lkiPn3Q2gaz2QVJF4zaD8qj7CStLoV7HM+bzdWeGzm/82I4r+NZ90+34Bif59Y4M3NdMzcYB8DeVQUDuwcJsF+ZKgUkvD7Y/bnhrkp3jZlJpWM7///RhRLBlVgmFHKSYKdWF19P79GeR9DugAT5qEJ5wwVVe7/fuIE8ML2Rll0l9pIDNyrej9ht7GVCIbt3tDrh6ZiBtFOIKQeCf550Qxr2ovATy/7uQ3Gtat7Vw9cLImOvjMJG9HV0YQUCbdo3yx5J+D5slx584b2p3Gl841RmP6w5Hy5tVx/erTJi/4wvgYxx/58zwteTx4QLrAA9WD/rCWo+c6SiaNO4gV0Wx45n5tO2eLUw5nVqd3Xy6P71Q4eQi5fz/Pz+Dn/7tTvn/6v2jBNCeZKXNR+1REyc8ths8ewXGXmjmtkJd8P2MyPX3ZKc4lwWwMpdW0TBkPk6qN6w3RBzI23BwHmRIsrKuWCRHjAxHjauSJp2M1qotDtSOYGf6HQXWoxqp1xurWpo864dDAirigt9hW6QGLR13yFKpUnTz1JjSArlagR0x/+KyLYU5eiYnL4QqtP4iHHddoiR9/GMf34mgpvlgFxzW4RRUQWdA3yba4WGcqr1i5cIny16fEw2+63eReK1TtzwsLnOfwfVtwC0wBLwAmDxnuG0xGclwT+V0gJDuSm8XCkleybrCjT3rPf5Qao7jDqXM5IRVGUUxMisU7ydMsetbBgBGSiBP/iShtCHq/m8ryyqMqynh6zxCi0AbOfzi70whmYMVuq0N77Oz8JIus75c2wX0Yn1CBQKMo6mWcxknM8JGIAdvmqqJiv0pdaBXmddKDpm6JpkC/GhzdD7+4SXrXAdinZMc8LWaXEazmJJq4503ri6dhBF6n1gwF+nCfJ/JQrVNeNmYQg+lQw15FQWDOOoz3fxF14ckfoGuiTM/DxyrQLMKUtwp2OXH6hSoow5eKjem1R64+VKKPlh4x19vD7HRbyUamWfaNVrQ3E2JFHAA7N27900wiKoqOswDTWDuAHgKKiro98Yt2WcY3SIoBVIM+s57k1ir6e6ZqTsinyid/sySpXnb7Sx04v8iC54zWJ2wEV+lmUAGSWSaUU/OVqeIW65kWHmT3f5vHK9MComPLuL+akSEXs1wy0WctR9+d8Sud9R/gaO6N8WV4BvA8v2NFsCWf2OhFAw61SG1fQIxOLwc2Jf4+DKJv9EwaUlfjbzN+44/fpoAC/sIkxqqYXT5puwBb/GYErFGSSvlonj0KbE/wYfg17NXkSW5zxuc1NBO2wgFhL7gsfsu+2suwAAAAAAAAAAlg9cvQwLdEDzH7EiynW0iZM7bJUqDl6+c/ALcLyU67scxXv6+mFvHR0R3AykJUy07zqnX/XliInTCTapE+4TisRr4fGBGdT3fMWdWAXd1y7+4hnpkNuPfscGrBgbn7bsXjLw8RvNBefHH1PacSXi1F8+wXVVfjgnCVEcNNP0qLryFn6uNycLGzrcADUXga9vsk9B0AAAABPAxiqsp70HUhVMYTeDji8Rouf/BNhjJci7YPOjNNOflAi0Uw4UUxfAwRNAYvxWAAAAAAAAAAA==" alt="Singende Krankenhäuser e.V. – Internationales Netzwerk"></a>
-  <nav aria-label="Hauptmenü"><a href="vorschau-foto-weiterbildung.html">Weiterbildung</a><a href="#" aria-current="page">Sing mit</a><a href="#">Singende Landkarte</a><a href="vorschau-foto-einrichtungen.html">Für Einrichtungen</a><a href="vorschau-foto-termine.html">Termine</a><a href="vorschau-foto-ueber-uns.html">Über uns</a></nav>
+  <nav aria-label="Hauptmenü"><a href="vorschau-foto-weiterbildung.html">Weiterbildung</a><a href="vorschau-foto-sing-mit.html">Sing mit</a><a href="#">Singende Landkarte</a><a href="vorschau-foto-einrichtungen.html">Für Einrichtungen</a><a href="vorschau-foto-termine.html">Termine</a><a href="vorschau-foto-ueber-uns.html" aria-current="page">Über uns</a></nav>
   <a class="pill gold" href="vorschau-foto-mitglied-sein.html">Mitglied werden</a>
 </div></header>
 
-<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="#">Start</a></li><li>Sing mit</li></ol></nav>
+<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li>Über uns</li></ol></nav>
 
 <div class="hero sub"><div class="wrap">
-  <div class="photo">
-    <img class="pos-top" src="fotos/sm-titel.jpg" alt="Singkreis im Freien: Menschen stehen im Kreis auf einer Wiese und heben beim Singen die Arme">
+  <div class="photo w">
+    <img class="pos-uu" src="fotos/uu-titel.jpg" alt="Heller Saal: Eine Gruppe steht im Kreis und singt, in der Mitte leitet ein Mann mit bunter Jacke an">
     <div class="panel">
-      <span class="kicker">Singleitung &amp; Mitsingen</span>
-      <h1>Sing mit!</h1>
-      <p>„Es fühlt sich schön an, Teil einer Gruppe zu sein, die gemeinsam so etwas Schönes hervorbringt.“ <span class="src">– Ursula, Jahrgang 1964</span></p>
-      <p>Hier erfährst du, was Singleiter:innen tun, wie du dein Zertifikat beantragst – und wo du selbst mitsingen kannst.</p>
-      <div class="acts"><a class="pill gold" href="#zertifikat">Zertifikat beantragen</a><a class="ghost light" href="#mitsingen">Selbst mitsingen →</a></div>
+      <span class="kicker">Über uns</span>
+      <h1>Ein Netzwerk, das singt.</h1>
+      <p>Seit 2009 bringen wir heilsames Singen in Krankenhäuser, Psychiatrien, Pflegeeinrichtungen und Hospize – getragen von über 700 Mitgliedern, einem ehrenamtlichen Vorstand und einer kleinen Geschäftsstelle.</p>
+      <div class="acts"><a class="pill gold" href="#anliegen">Was wir wollen</a><a class="ghost light" href="#team">Wer wir sind →</a></div>
     </div>
   </div>
 </div></div>
 
 <nav class="jump" aria-label="Auf dieser Seite"><div class="wrap">
   <span>Auf dieser Seite:</span>
-  <a href="#sein">Singleiter:in sein</a><a href="#werden">So wirst du Singleiter:in</a><a href="#zertifikat">Zertifikat beantragen</a><a href="#netzwerk">Im Netzwerk</a><a href="#mitsingen">Mitsingen</a>
+  <a href="#anliegen">Was wir wollen</a><a href="#geschichte">Geschichte</a><a href="#team">Team</a><a href="#ehrenvorsitz">Ehrenvorsitzende</a><a href="#schirmherrin">Schirmherrin &amp; Beirat</a><a href="#botschafter">Botschafter:innen</a><a href="#forschung">Singforschung</a><a href="#spenden">Spenden</a>
 </div></nav>
 
-<section class="split role" id="sein"><div class="wrap">
-  <div class="photo w"><img class="pos-guitar" src="fotos/sm-singleiterin.jpg" alt="Singleiterin mit Gitarre und Mikrofon singt inmitten einer Gruppe, die im Kreis sitzt"></div>
+<section class="aim split" id="anliegen"><div class="wrap">
   <div class="text">
-    <span class="eyebrow">Die Aufgabe</span>
-    <h2 class="h2">Singleiter:in sein</h2>
-    <p class="lead">Als Singleiter:in führst du einen lebendigen Dialog – zwischen dir, den Menschen in deiner Singgruppe und der Musik. Lieder können dabei heilsame Erfahrungsräume öffnen.</p>
-    <ul class="facts">
-      <li><b>Wo</b><span>im Schnittfeld zwischen Freizeit- und Therapieangebot: in Kliniken, Pflegeheimen, Hospizen und offenen Singkreisen</span></li>
-      <li><b>Was du brauchst</b><span>theoretische Grundlagen zu Selbstregulation und Gruppendynamik – die vermittelt dir unsere Weiterbildung</span></li>
-      <li><b>Was es nicht ist</b><span>Musiktherapie. Die Weiterbildung ersetzt keine musiktherapeutische Ausbildung.</span></li>
-      <li><b>Deine Haltung</b><span>beschrieben in unseren Leitlinien für das gesundheitsfördernde Singen</span></li>
+    <span class="eyebrow">Unser Anliegen</span>
+    <h2 class="h2">Was wir wollen</h2>
+    <p class="vision">Unsere Vision ist ein Gesundheitswesen, in dem Menschen die gesundheitsfördernde Kraft des gemeinsamen Singens erleben und spüren, wie Singen Resilienz, Zugehörigkeit und Lebensfreude stärkt.</p>
+    <p>Wir sind überzeugt von den körperlichen, psychischen und sozialen Wirkungen des Singens. Unser Repertoire schöpft aus vielen Ländern und Traditionen. Gesungen wird ohne Leistungsanspruch – mit dem Ziel, in Musik und Text einzutauchen, Resonanz zu erleben und eigene wie gemeinsame Erfahrungen lebendig auszudrücken. Unser Singen ist elementar, frei von Bewertung und erlebnisorientiert. Unser Netzwerk bleibt weltanschaulich offen.</p>
+    <p><b>So setzen wir das um:</b></p>
+    <ul class="checks">
+      <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Weiterbildung:</b> Wir bilden Singleiter:innen aus, die niedrigschwellige Singangebote in Einrichtungen umsetzen – qualitätsgesichert, präventiv und gemeinschaftsstärkend. <a href="vorschau-foto-weiterbildung.html">Zur Weiterbildung</a></span></li>
+      <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Zertifizierung:</b> Kliniken und Einrichtungen mit Singgruppen können wir als „Singendes Krankenhaus“ oder „Singende Pflegeeinrichtung“ auszeichnen. <a href="vorschau-foto-einrichtungen.html">Für Einrichtungen</a></span></li>
+      <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Netzwerk:</b> Wir begleiten unsere Singleiter:innen auch nach dem Zertifikat – mit Austausch, Beratung und Online-Runden. <a href="vorschau-foto-sing-mit.html">Sing mit</a></span></li>
+      <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Wissen teilen:</b> Unser Ansatz geht in Publikationen, Workshops und Vorträge ein; ein wissenschaftlicher Beirat begleitet uns. <a href="#forschung">Singforschung</a></span></li>
     </ul>
-    <blockquote class="quote">„Es ist für mich immer noch überraschend, wenn depressive Menschen zu lachen beginnen.“<cite>Simon, Jahrgang 1958</cite></blockquote>
-    <div class="acts"><a class="ghost" href="#">Unsere Leitlinien (PDF) →</a></div>
   </div>
-</div></section>
-
-<section class="steps" id="werden"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Der Weg</span><h2 class="h2">So wirst du Singleiter:in</h2></div><a class="ghost" href="vorschau-foto-weiterbildung.html">Alles zur Weiterbildung →</a></div>
-  <p class="intro">Ganz einfach: üben, ausprobieren und selbst tun. Unsere Weiterbildung stärkt deine musikalischen Fähigkeiten und lässt dich in die Rolle der Singleitung hineinwachsen – für die Einrichtung, in der du vielleicht schon arbeitest, oder als neben- oder freiberufliche Honorarkraft.</p>
-  <ol class="grid3">
-    <li><p class="big">1<small>Weiterbilden</small></p><h3>Module besuchen</h3><p>In der Regel fünf Wochenend-Module, darunter ein Pflichtmodul. Wie viele du genau brauchst, hängt von deinen Vorkenntnissen ab.</p><a class="ghost" href="vorschau-foto-weiterbildung.html#modulzahl">So viele Module brauchst du →</a></li>
-    <li><p class="big">2<small>Mitglied werden</small></p><h3>Ins Netzwerk kommen</h3><p>Die Mitgliedschaft ist Voraussetzung für das Zertifikat. Dafür sparst du 15 % bei allen Modulen.</p><a class="ghost" href="#mitglied">Zur Mitgliedschaft →</a></li>
-    <li><p class="big">3<small>Beantragen</small></p><h3>Zertifikat erhalten</h3><p>Mit dem Antragsformular deines Zweigs bekommst du deine Urkunde – per Post oder direkt im letzten Modul.</p><a class="ghost" href="#zertifikat">Zertifikat beantragen →</a></li>
-  </ol>
-</div></section>
-
-<section class="cert" id="zertifikat"><div class="wrap">
-  <div class="cert-top">
+  <div class="photo"><img src="fotos/uu-anliegen.jpg" alt="Eine Frau mit rotem Schal und ein Mann singen und bewegen sich gemeinsam, die Arme ausgestreckt"></div>
+  <div class="netz" id="netzwerk" style="grid-column:1/-1">
+    <div class="photo g"><img src="fotos/uu-netzwerk.jpg" alt="Jahrestagung: Zwei Teilnehmende singen einander mit offenen Armen zu, im Hintergrund die Begrüßungsfolie"></div>
     <div class="text">
-      <span class="eyebrow">Zertifikat</span>
-      <h2 class="h2">Zertifikat beantragen</h2>
-      <p class="lead">Du kannst dein Singleiter-Zertifikat beantragen, wenn diese drei Punkte erfüllt sind:</p>
-      <ul class="checks">
-        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Du hast die nötigen Module besucht</b> – einschließlich des Pflichtmoduls deines Zweigs (siehe unten).</span></li>
-        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Du hast eine Singprobe gemacht:</b> In einem beliebigen Modul hast du einmal selbst ein Lied angeleitet und dazu Rückmeldung von den Dozent:innen bekommen.</span></li>
-        <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#2f4a14"/><path d="m8 14.5 4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Du bist Mitglied</b> in unserem Netzwerk (<a href="vorschau-foto-mitglied-sein.html">Mitglied werden</a>).</span></li>
-      </ul>
-    </div>
-    <div class="photo g"><img src="fotos/sm-zertifikat.jpg" alt="Lachende Teilnehmende stehen im Freien im Kreis, eine Frau klatscht fröhlich in die Hände"></div>
-  </div>
-
-  <div class="grid2 cert-forms">
-    <article class="form">
-      <img class="seal" src="fotos/sm-logo-singleiter-krankenhaus.png" alt="Siegel: zertifizierte:r Singleiter:in für Gesundheitseinrichtungen und Krankenhäuser">
-      <span class="tag">Zertifikat 1</span>
-      <h3>Krankenhäuser &amp; Gesundheits&shy;einrichtungen</h3>
-      <ul class="facts"><li><b>Pflichtmodul</b><span>„Singen als Dialog – Theorie und Methodik des heilsamen Singens – Rolle der Singleitung“ (Modul P)</span></li></ul>
-      <a class="pill gold" href="#">Antrag Krankenhäuser (PDF)</a>
-    </article>
-    <article class="form">
-      <img class="seal" src="fotos/sm-logo-singleiter-pflege.png" alt="Siegel: zertifizierte:r Singleiter:in für Pflegeeinrichtungen und Senioren">
-      <span class="tag">Zertifikat 2</span>
-      <h3>Pflegeeinrichtungen &amp; Senior:innen</h3>
-      <ul class="facts"><li><b>Pflichtmodul</b><span>„Mit dem Herzen pflegen – singend in Begegnung gehen und selbst gesund bleiben“</span></li></ul>
-      <a class="pill gold" href="#">Antrag Pflege (PDF)</a>
-    </article>
-  </div>
-
-  <div class="grid2 cert-how">
-    <div>
-      <h3>Wann schicke ich den Antrag?</h3>
-      <ul class="facts">
-        <li><b>Nach dem letzten Modul</b><span>Du bekommst deine Urkunde per Post.</span></li>
-        <li><b>2 Wochen vor dem letzten Modul</b><span>Du bekommst deine Urkunde direkt im Modul.</span></li>
-      </ul>
-      <p class="good"><b>Gut zu wissen:</b> Im Antrag kannst du zustimmen, dass du auf der <a href="#">Singenden Landkarte</a> erscheinst – so finden dich Einrichtungen in deiner Region. Willst du weniger Module anrechnen lassen, kläre das bitte vorher telefonisch.</p>
-    </div>
-    <div class="person">
-      <h3>Antrag an Sonja Heim</h3>
-      <p>Geschäftsführung – sie nimmt deinen Antrag entgegen und bearbeitet ihn.</p>
-      <p class="tel">+49 751 9586 5244</p>
-      <p><a class="mail" href="mailto:sonja.heim@singende-krankenhaeuser.de">sonja.heim@singende-krankenhaeuser.de</a></p>
-      <p class="small">Fragen zu Modulen und Anrechnung? <a href="vorschau-foto-weiterbildung.html#beratung"><b>Weiterbildungsberatung Vera Kimmig →</b></a></p>
+      <span class="eyebrow">Das Netzwerk</span>
+      <h3>Viele Berufe, ein gemeinsames Anliegen</h3>
+      <p>Unser Sing-Netzwerk ist multiprofessionell und verbunden mit allen, die das Gesundheitswesen mitgestalten: mit Patient:innen, Behandelnden, Forschenden, Lehrenden, Seelsorgenden und vielen Singbegeisterten.</p>
+      <p>Wir kooperieren insbesondere mit Initiativen der Patient:innen-Selbsthilfe, Verantwortlichen aus der Politik und Ausbildungsstätten für Medizin, Musik und Therapien.</p>
+      <a class="ghost" href="#">Unsere Kooperationspartner (PDF) →</a>
     </div>
   </div>
 </div></section>
 
-<section class="net" id="netzwerk"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Nach dem Zertifikat</span><h2 class="h2">Die Vielfalt unserer Mitglieder</h2></div></div>
-  <p class="intro">Unser internationales Netzwerk hat seine Wurzeln im deutschsprachigen Europa, doch unsere Mitglieder leben in vielen Ländern. Krankenhäuser, Reha-Einrichtungen, Psychiatrien, Pflegeheime, Begegnungsstätten, Selbsthilfegruppen und Nachbarschaftshilfen – sie alle profitieren von zertifizierten Singleiter:innen in ihrer Region.</p>
+<section class="story" id="geschichte"><div class="wrap">
+  <div class="story-top">
+    <div class="text">
+      <span class="eyebrow">Unsere Geschichte</span>
+      <h2 class="h2">Wie alles begann</h2>
+      <p>Das Herzstück unserer Vereinsgründung war eine offene Singgruppe an der psychiatrischen Klinik Christophsbad in Göppingen, geleitet von Wolfgang Bossinger. Dort trafen sich aktuelle und ehemalige Patient:innen, Behandelnde sowie Bewohner:innen der Stadt auf Augenhöhe, um gemeinsam zu singen. Viele von ihnen singen bis heute im Sing-to-be-Happy-Chor von Katharina Bossinger.</p>
+      <p class="quote">„Es gab keine Fehler – nur Variationen!“<cite>Aus der Gründungszeit in Göppingen</cite></p>
+    </div>
+    <ol class="flow years">
+      <li><span class="big">2009</span><div><h3>Die Initiative entsteht</h3><p>Patient:innen wünschen sich, dass die guten Erfahrungen mit dem Singen dauerhaft in Einrichtungen verankert werden. Das Netzwerk entsteht – zunächst unter dem Dach von Il Canto del Mondo (Dr. Karl Adamek).</p></div></li>
+      <li><span class="big">2010</span><div><h3>Wir werden ein eingetragener Verein</h3><p>Singende Krankenhäuser e.V. wird ein gemeinnütziger Verein. Katharina und Wolfgang Bossinger leiten ihn bis 2013.</p></div></li>
+      <li><span class="big">2011</span><div><h3>Eine Schirmherrin</h3><p>Gerlinde Kretschmann übernimmt die Schirmherrschaft.</p></div></li>
+      <li><span class="big">2013</span><div><h3>Norbert Hermanns übernimmt</h3><p>Er führt den Verein bis 2016. In diese Jahre fallen die ersten Musikalischen Botschafter:innen.</p></div></li>
+      <li><span class="big">2016</span><div><h3>Die zweite Generation</h3><p>Unter Elke Wünnenberg entstehen eine theoretisch fundierte Methodik des gesundheitsfördernden Singens und die Unterstützungskultur unseres Netzwerks.</p></div></li>
+      <li><span class="big">Heute</span><div><h3>Ein Team an der Spitze</h3><p>Ein dreiköpfiges Vorstandsteam und drei hauptamtliche Mitarbeiterinnen tragen den Verein. Unser Ansatz lebt in der Weiterbildung, in Publikationen, Workshops und Vorträgen weiter.</p></div></li>
+    </ol>
+  </div>
+  <ul class="fee-row">
+    <li><span class="big">700+<small>Mitglieder</small></span><h3>Einzelpersonen und Einrichtungen</h3><p>Sie tragen das Netzwerk mit ihren Beiträgen.</p></li>
+    <li><span class="big">100<small>Einrichtungen</small></span><h3>zertifiziert</h3><p>Kliniken, Pflegeeinrichtungen und Praxen, in denen regelmäßig gesungen wird.</p></li>
+    <li><span class="big">16<small>Länder</small></span><h3>mit Landesbotschafter:innen</h3><p>Von Österreich bis Südafrika bereiten sie den Boden fürs heilsame Singen.</p></li>
+  </ul>
+  <p class="src">Mitglieder und Einrichtungen: Stand laut unserer bisherigen Webseite, die Zahlen werden gerade aktualisiert.</p>
+</div></section>
+
+<section class="team" id="team"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Unser Team</span><h2 class="h2">Wer das Netzwerk trägt</h2></div><a class="ghost" href="#">So sind wir organisiert (PDF) →</a></div>
+  <h3 class="sub" id="vorstand">Das Vorstandsteam</h3>
+  <p class="sub-intro">Drei Ehrenamtliche leiten den Verein gemeinsam. Tom Jansen und Paula Bieker unterrichten auch in der Weiterbildung – mehr über sie bei <a href="#"><b>unseren Dozent:innen</b></a>.</p>
   <div class="grid3">
-    <article><p class="big">90&nbsp;€<small>pro Stunde, brutto</small></p><h3>Unsere Honorar­empfehlung</h3><p>So viel empfehlen wir Einrichtungen als Honorar für externe Singleiter:innen. Wie Singstunde und Vorbereitung vergütet werden, steht auf der Seite für Einrichtungen.</p><a class="ghost" href="vorschau-foto-einrichtungen.html#verguetung">Vergütung im Detail →</a></article>
-    <article><p class="big">3<small>Länder auf der Karte</small></p><h3>Singende Landkarte</h3><p>Singleiter:innen, Singkreise und zertifizierte Einrichtungen in Deutschland, Österreich und der Schweiz. Vielleicht wohnt ganz in deiner Nähe ein Mitglied, mit dem du Projekte starten kannst.</p><a class="ghost" href="#">Zur Singenden Landkarte →</a></article>
-    <article><p class="big">1×<small>im Monat</small></p><h3>Unterstützung für Mitglieder</h3><p>Kostenlos online: einmal im Monat die „Guitar- &amp; Ukulele-Factory“ zum Üben der Liedbegleitung, dazu die Austauschrunde „Singleiter:innen im Gespräch“ für Praxisfragen, Supervision und Beratung am Telefon.</p><a class="ghost" href="vorschau-foto-mitglied-sein.html#unterstuetzung">Mehr zur Mitgliedschaft →</a></article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-tom-jansen.jpg" alt="Porträt Tom Jansen"></div>
+      <h3>Tom Jansen</h3>
+      <p class="fn">Diplom-Musiktherapeut (DMtG) und Musiker, hypnosystemischer Coach</p>
+      <ul class="facts"><li><b>Schwerpunkt</b><span>Inhaltliche und technische Prozesssteuerung</span></li></ul>
+      <blockquote>„Singen ist für mich ein Schlüssel – zu Lebendigkeit, Verbindung und innerer Ruhe. […] Doch genauso wichtig ist, dass Singen Menschen zusammenführt, Isolation überwindet und ein Gefühl von Zugehörigkeit entstehen lässt, das in jeder Lebenssituation trägt.“</blockquote>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-martin-hanke.jpg" alt="Porträt Martin Hanke"></div>
+      <h3>Martin Hanke</h3>
+      <p class="fn">Kantor und Kirchenmusiker</p>
+      <ul class="facts"><li><b>Schwerpunkt</b><span>Netzwerkarbeit, Unterstützungskultur für Singleiter:innen</span></li></ul>
+      <blockquote>„Singen macht glücklich. Gibt es Schöneres, als anderen zu diesem Glück zu verhelfen?“</blockquote>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-paula-bieker.jpg" alt="Porträt Paula Bieker"></div>
+      <h3>Paula Bieker</h3>
+      <p class="fn">Musiktherapeutin (DMtG)</p>
+      <ul class="facts"><li><b>Schwerpunkt</b><span>wird ergänzt</span></li></ul>
+      <blockquote>„Die gesundheitsfördernde Wirkung des (gemeinsamen!) Singens ist wissenschaftlich belegt. Mit meiner Arbeit bei den Singenden Krankenhäusern möchte ich dazu beitragen, niedrigschwellige Singangebote als einen Baustein psychosozialer Versorgung in Gesundheitseinrichtungen zu etablieren.“</blockquote>
+    </article>
+  </div>
+  <h3 class="sub" id="geschaeftsstelle">Die Geschäftsstelle</h3>
+  <p class="sub-intro">Drei hauptamtlich angestellte Frauen halten das Netzwerk am Laufen – mit gut erreichbarer Betreuung und vielen Kennenlern- und Singaktivitäten für unsere Mitglieder. Wir begleiten dich gern auf dem Weg ins Netzwerk und im Netzwerk.</p>
+  <div class="grid3">
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-sonja-heim.jpg" alt="Porträt Sonja Heim"></div>
+      <h3>Sonja Heim, M.A.</h3>
+      <p class="fn">Geschäftsführerin · Krankenschwester und Geisteswissenschaftlerin</p>
+      <ul class="facts"><li><b>Zuständig für</b><span>Zertifizierung von Singleiter:innen und Einrichtungen, Sponsoring und Spenden, Presse, Projektmanagement, Finanzen</span></li></ul>
+      <blockquote>„Ich freue mich, das immer größer werdende SiKra-Schiff auf Kurs zu halten und den gemeinschafts- und friedensstiftenden Sing-Gedanken in die Welt zu tragen.“</blockquote>
+      <a class="mail" href="mailto:sonja.heim@singende-krankenhaeuser.de">sonja.heim@singende-krankenhaeuser.de</a>
+      <a class="ghost" href="vorschau-foto-einrichtungen.html#kontakt">Fragen zur Zertifizierung →</a>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-vera-kimmig.jpg" alt="Porträt Vera Kimmig"></div>
+      <h3>Vera Kimmig</h3>
+      <p class="fn">Leiterin der Geschäftsstelle · Freiberufliche Sängerin, Gesangspädagogin und zertifizierte Singleiterin</p>
+      <ul class="facts"><li><b>Zuständig für</b><span>Weiterbildungsberatung, allgemeine Anfragen, Kooperationspartner</span></li></ul>
+      <blockquote>„Egal wo ich bin oder was ich mache: Ich trage Singende Krankenhäuser e.V. einfach in meinem Herzen – und die Flyer immer in meiner Handtasche!“</blockquote>
+      <a class="mail" href="mailto:vera.kimmig@singende-krankenhaeuser.de">vera.kimmig@singende-krankenhaeuser.de</a>
+      <a class="ghost" href="vorschau-foto-weiterbildung.html#beratung">Zur Weiterbildungsberatung →</a>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/mg-sandra.jpg" alt="Porträt Sandra Roß-Lünenschloß"></div>
+      <h3>Sandra Roß-Lünenschloß</h3>
+      <p class="fn">Assistenz der Geschäftsführung · Grafische Gestalterin und ehemalige Musikschulleiterin</p>
+      <ul class="facts"><li><b>Zuständig für</b><span>Mitgliederverwaltung, Weiterbildungsorganisation, Öffentlichkeitsarbeit (Flyer und Broschüren), Webshop</span></li></ul>
+      <blockquote>„Es erfüllt mich, in diesem wertschätzenden Team dazu beizutragen, Musik und Gesang als positive Veränderung ins Leben der Menschen zu bringen.“</blockquote>
+      <a class="mail" href="mailto:sandra.ross-luenenschloss@singende-krankenhaeuser.de">sandra.ross-luenenschloss@singende-krankenhaeuser.de</a>
+      <a class="ghost" href="vorschau-foto-mitglied-sein.html#kontakt">Fragen zur Mitgliedschaft →</a>
+    </article>
+  </div>
+  <p class="good"><b>Gut zu wissen:</b> Telefonnummern und Sprechzeiten findest du auf der <a href="#"><b>Kontaktseite</b></a> und dort, wo die jeweilige Aufgabe steht – so sind sie immer aktuell.</p>
+</div></section>
+
+<section class="honor" id="ehrenvorsitz"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Ehrenvorsitzende</span><h2 class="h2">Sie haben den Verein geprägt</h2></div></div>
+  <p class="intro">Unsere Ehrenvorsitzenden haben als Vorstandsvorsitzende den Weg von der ersten Singgruppe zum Netzwerk mit über 700 Mitgliedern und rund 100 zertifizierten Einrichtungen im deutschsprachigen Europa gestaltet.</p>
+  <div class="grid3">
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-bossinger.jpg" alt="Porträt Katharina und Wolfgang Bossinger"></div>
+      <span class="tag">Vorsitz 2010–2013</span>
+      <h3>Katharina und Wolfgang Bossinger</h3>
+      <p>Er Diplom-Musiktherapeut (FH), sie Sängerin und Gesangslehrerin. Wolfgang Bossinger leitete die Göppinger Singgruppe, aus der der Verein entstand, Katharina Bossinger war 2. Vorsitzende. Gemeinsam leiten sie ihre Akademie für Singen und Gesundheit.</p>
+      <a class="ghost" href="https://www.healingsongs.de/">Website →</a>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-hermanns.jpg" alt="Porträt Norbert Hermanns"></div>
+      <span class="tag">Vorsitz 2013–2016</span>
+      <h3>Norbert Hermanns</h3>
+      <p>Musiktherapeut (DMtG), Heilpraktiker (Psychotherapie), Diplom-Sänger, Stimmbildner und Diplom-Religionspädagoge.</p>
+      <a class="ghost" href="https://www.norbert-hermanns.net/">Website →</a>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-wuennenberg.jpg" alt="Porträt Elke Wünnenberg"></div>
+      <span class="tag">Vorsitz ab 2016</span>
+      <h3>Elke Wünnenberg</h3>
+      <p>Diplom-Psychologin, Psychologische Psychotherapeutin und Diplom-Musikerzieherin. Unter ihrer konzeptionellen Arbeit entstanden unsere Methodik und die Unterstützungskultur des Netzwerks.</p>
+      <a class="ghost" href="https://www.hfmsaar.de/alumni-statements-details/articles/elke-wuennenberg">Website →</a>
+    </article>
   </div>
 </div></section>
 
-<section class="split sing" id="mitsingen"><div class="wrap">
-  <div class="text">
-    <span class="eyebrow">Für alle</span>
-    <h2 class="h2">Sei dabei und sing mit!</h2>
-    <p>Viele unserer Mitglieder leiten offene Singkreise, die an keine Einrichtung gebunden sind. Dort finden auch ehemalige Patient:innen nach dem Klinikaufenthalt wieder Anschluss. Beim Singen entstehen schnell tiefe Verbindungen – unsere Gesellschaft braucht solche Orte gegen die Einsamkeit.</p>
-    <p>Singen ist beides: Ausdruck deiner selbst und ein soziales Band. Keine Kultur kommt ohne Gesang aus. Probier es mit unseren Videoclips einfach aus.</p>
-    <blockquote class="quote">„Es gibt keine Fehler, sondern nur Variationen.“<cite>Wolfgang Bossinger, Vereinsgründer</cite></blockquote>
-    <div class="acts"><a class="pill gold" href="#">Videoclips zum Mitsingen</a><a class="ghost" href="#">Singkreis in deiner Nähe →</a><a class="ghost" href="vorschau-foto-ueber-uns.html#forschung">Was die Forschung sagt →</a></div>
+<section class="patron" id="schirmherrin"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Schirmherrin und Beirat</span><h2 class="h2">Wer uns den Rücken stärkt</h2></div></div>
+  <div class="voice-main">
+    <div class="photo"><img src="fotos/uu-kretschmann.jpg" alt="Porträt Gerlinde Kretschmann am Rednerpult"></div>
+    <div>
+      <blockquote>„Singen kann wirksam dabei helfen, im Alltag Stress abzubauen und wieder neue Kräfte zu schöpfen. Doch Singen vermag noch mehr. […] Aus diesem Grunde unterstütze ich mit großer Begeisterung die Arbeit von Singende Krankenhäuser e.V. und wünsche dem Netzwerk viel Erfolg.“</blockquote>
+      <cite>Gerlinde Kretschmann<span>Schirmherrin seit 2011</span></cite>
+      <details class="more">
+        <summary>Ganzes Grußwort lesen</summary>
+        <div>
+          <p>„Schon ein kleines Lied kann viel Dunkel erhellen.“ Das wusste bereits Franz von Assisi. Die große Bedeutung des gemeinsamen Singens für das menschliche Wohlbefinden ist mir aus eigener Erfahrung als langjähriges Kirchenchormitglied und aus meiner Berufstätigkeit als Grundschullehrerin bewusst und vertraut.</p>
+          <p>Singen kann wirksam dabei helfen, im Alltag Stress abzubauen und wieder neue Kräfte zu schöpfen. Doch Singen vermag noch mehr. Es kann Menschen, die an körperlichen oder psychischen Erkrankungen leiden, ermöglichen, wieder in Kontakt mit ihren Selbstheilungskräften zu kommen und Angst, Ohnmacht und Isolation zu überwinden. Aus diesem Grunde unterstütze ich mit großer Begeisterung die Arbeit von Singende Krankenhäuser e.V. und wünsche dem Netzwerk viel Erfolg.</p>
+        </div>
+      </details>
+    </div>
   </div>
-  <div class="photo"><img src="fotos/sm-mitsingen.jpg" alt="Gruppe in einem hellen Saal hebt beim Singen fröhlich die Arme"></div>
+
+  <div class="board" id="beirat">
+    <h3 class="sub">Wissenschaftlicher Beirat</h3>
+    <p>Unsere Beirät:innen unterstützen mit ihrem Wissen unsere wissenschaftlich fundierte Arbeit und teilen unsere Vision flächendeckender gesundheitsfördernder Singangebote.</p>
+    <div class="grid3 voice-small">
+      <article>
+        <div class="photo"><img src="fotos/uu-decker-voigt.jpg" alt="Porträt Prof. Dr. Hans-Helmut Decker-Voigt"></div>
+        <div><blockquote>„Und oft, hoffentlich sehr oft, spielt besonders deutlich in der Welt des Fetus vor seiner Geburt die erste Geige mit im Delta aller Schallwellen: Die Stimme der Mutter. Sie begleitet in das ‚Höchste der späteren Gefühlswelten‘: Das eigene Singen.“</blockquote>
+        <cite>Prof. Dr. Dr. h. c. mult. Hans-Helmut Decker-Voigt<span>Musik- und Ausdruckstherapeut, Supervisor, Autor – aus: „Lehrbuch Musiktherapie“, 2021</span></cite>
+        <a class="web" href="http://www.decker-voigt.de/">Website →</a></div>
+      </article>
+      <article>
+        <div class="photo"><img src="fotos/ein-kreutz.jpg" alt="Porträt Prof. Dr. Gunter Kreutz"></div>
+        <div><blockquote>„Singen ist sozial, gesund, bildet und macht Spaß. Und damit viel zu wertvoll für Wettbewerbe.“</blockquote>
+        <cite>Prof. Dr. Gunter Kreutz<span>Musikwissenschaftler, Universität Oldenburg, Autor von „Warum Singen glücklich macht“</span></cite>
+        <a class="web" href="https://uol.de/gunter-kreutz">Website →</a></div>
+      </article>
+      <article>
+        <div class="photo"><img src="fotos/uu-spitz.jpg" alt="Porträt Prof. Dr. Jörg Spitz"></div>
+        <div><blockquote>„Singen ist als heilsam bekannt und damit ein essentieller Bestandteil einer dringend erforderlichen neuen Gesundheitskultur.“</blockquote>
+        <cite>Prof. Dr. Jörg Spitz<span>Nuklearmediziner und Präventionsexperte</span></cite>
+        <a class="web" href="https://spitzen-praevention.com/">Website →</a></div>
+      </article>
+    </div>
+    <details class="more wide">
+      <summary>Alle Beirät:innen anzeigen (33)</summary>
+      <div>
+        <p><b>Deutschland</b></p>
+        <ul class="names">
+          <li><b>Prof. Dr. med. Peer Abilgaard</b><span>Psychiatrie und Musikermedizin, Duisburg und Köln</span></li>
+          <li><b>Dr. Karl Adamek</b><span>Musikpsychologe, Il Canto del Mondo, Deutsche Stiftung Singen</span></li>
+          <li><b>Prof. Dr. Winfried Adelmann</b><span>Stimmwissenschaftler, Hochschule für Musik und Theater Hamburg</span></li>
+          <li><b>Prof. Dr. med. Eckart Altenmüller</b><span>Musikphysiologie und Musikermedizin, Hannover</span></li>
+          <li><b>Prof. Dr. Dr. h. c. mult. Hans-Helmut Decker-Voigt</b><span>Musiktherapie, Hamburg</span></li>
+          <li><b>Prof. Dr. med. Tobias Esch</b><span>Integrative Gesundheitsversorgung, Universität Witten/Herdecke</span></li>
+          <li><b>Prof. Dr. med. Michael Fuchs</b><span>Phoniatrie und Audiologie, Universitätsklinikum Leipzig</span></li>
+          <li><b>Dr. phil. Barbara Gindl</b><span>Musikpsychotherapeutin, Zürich</span></li>
+          <li><b>PD Dr. Leopold Hermle</b><span>ehem. Ärztlicher Direktor, Klinikum Christophsbad</span></li>
+          <li><b>Dr. Ellis Huber</b><span>ehem. Präsident der Berliner Ärztekammer</span></li>
+          <li><b>Prof. Dr. Gerald Hüther</b><span>Neurobiologe, Präventionsforschung</span></li>
+          <li><b>Prof. Dr. Gunter Kreutz</b><span>Systematische Musikwissenschaft, Oldenburg</span></li>
+          <li><b>Prof. Dr. Walter Möbius</b><span>Autor</span></li>
+          <li><b>Prof. Dr. med. Luise Reddemann</b><span>Universität Klagenfurt</span></li>
+          <li><b>Dr. Dr. Frank Rodden</b><span>Arzt und Neurochemiker</span></li>
+          <li><b>Sabine Rittner</b><span>Musik-Psychotherapeutin, Hamburg und Heidelberg</span></li>
+          <li><b>Prof. Dr. Jörg Spitz</b><span>Nuklearmedizin, Prävention</span></li>
+          <li><b>Dr. med. Jochen von Wahlert</b><span>Psychosomatische Medizin, Bad Grönenbach</span></li>
+          <li><b>Prof. Dr. Jörg Zimmermann</b><span>Psychiatrie und Psychotherapie, Klinikum Bremen-Ost</span></li>
+        </ul>
+        <p><b>International</b></p>
+        <ul class="names">
+          <li><b>Prof. Dr. David Aldridge</b><span>Musiktherapieforschung, Großbritannien und Deutschland</span></li>
+          <li><b>Prof. Dr. Gertraud Berka-Schmid</b><span>Universität für Musik und darstellende Kunst Wien</span></li>
+          <li><b>Prof. Dr. Stephen Clift</b><span>Gesundheitsbildung, Canterbury, Großbritannien</span></li>
+          <li><b>Prof. Dr. Annabel J. Cohen</b><span>Psychologie, University of Prince Edward Island, Kanada</span></li>
+          <li><b>Prof. André de Quadros</b><span>Musik, Boston University, USA</span></li>
+          <li><b>Komm.-Rat Prof. Hans Hammerer</b><span>Kur- und Gesundheitszentrum Lingenau, Österreich</span></li>
+          <li><b>Prof. Dr. Grenville Hancox</b><span>Musik, Canterbury, Großbritannien</span></li>
+          <li><b>Prof. Dr. Fritz Hegi</b><span>Musiktherapie, Zürich, Schweiz</span></li>
+          <li><b>Prof. Dr. med. Horst Hildebrandt</b><span>Musikermedizin, Schweiz</span></li>
+          <li><b>Prof. Dr. Jukka Louhivuori</b><span>Musik, Universität Jyväskylä, Finnland</span></li>
+          <li><b>Prof. Dr. Maximilian Moser</b><span>Chronomedizin, Universität Graz, Österreich</span></li>
+          <li><b>Dr. Stephen W. Porges</b><span>Psychiatrie, Polyvagal-Theorie, USA</span></li>
+          <li><b>Prof. Dr. Daniela Stieff Tostes</b><span>HNO-Ärztin und Gesangsprofessorin, Brasilien</span></li>
+          <li><b>Mag. Dr. Gerhard Tucek</b><span>Musiktherapie, IMC Fachhochschule Krems, Österreich</span></li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div></section>
+
+<section class="amb" id="botschafter"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Botschafter:innen</span><h2 class="h2">Stimmen für das Singen</h2></div></div>
+  <div class="amb-top">
+    <img src="fotos/uu-logo-botschafter.png" alt="Siegel „Musikalischer Botschafter“ von Singende Krankenhäuser e.V.">
+    <div class="text">
+      <p class="lead">Wer unsere Ziele teilt, kann unsere Arbeit mit Wissen, Können oder Bekanntheit unterstützen. Musiker:innen, die uns in Kunst und Kultur bekannter machen, ernennen wir zu <b>Musikalischen Botschafter:innen</b> – sie erhalten eine Urkunde und dieses Siegel.</p>
+    </div>
+  </div>
+  <div class="grid3">
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-lombardo.jpg" alt="Porträt Marco Lombardo mit Gitarre"></div>
+      <h3>Marco Lombardo</h3>
+      <p class="fn">Journalist, TV-Moderator, Singer-Songwriter</p>
+      <blockquote>„Singen ist für mich vor allem Verbindung. Mit mir selbst, aber natürlich auch mit meinen Mitmenschen. Nicht nur deshalb ist das heilsame Singen aus meiner Sicht so wichtig und wohltuend für uns alle.“</blockquote>
+      <a class="ghost" href="https://wirstimmen.jimdofree.com/">Website →</a>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-matt.jpg" alt="Nicol Matt beim Dirigieren"></div>
+      <h3>Nicol Matt</h3>
+      <p class="fn">Dirigent, Komponist, Gründer des Worldchoir for Peace</p>
+      <blockquote>„Singen ist die allumfassende Form der menschlichen Kommunikation. Singen verbindet, schafft Nähe und berührt die Seele in ihrem tiefsten Sein.“</blockquote>
+      <a class="ghost" href="https://worldchoirforpeace.org/">Website →</a>
+    </article>
+    <article class="card">
+      <div class="photo"><img src="fotos/uu-puschban.jpg" alt="Porträt Suli Puschban vor einem Bücherregal"></div>
+      <h3>Suli Puschban</h3>
+      <p class="fn">Kinderliedermacherin, Singer-Songwriterin, Autorin, Schauspielerin</p>
+      <blockquote>„[…] ich kenne kein Mittel, das so gemeinschaftsfördernd auf einer seelisch erfahrbaren Ebene ist wie gemeinsames Singen, du nimmst, du gibst, du bist Teil von einem größeren Ganzen. Ich bin mir ganz sicher, dass wir das in diesen Zeiten dringender brauchen denn je!“</blockquote>
+    </article>
+  </div>
+  <details class="more wide">
+    <summary>Alle Musikalischen Botschafter:innen anzeigen (16)</summary>
+    <div>
+      <ul class="names">
+        <li><b>Michael Betzner-Brandt</b><span>Dirigent, Vokalist, Autor – seit 2014</span></li>
+        <li><b>Nadia Birkenstock</b><span>Harfenistin und Sängerin</span></li>
+        <li><b>Christian Bollmann</b><span>Obertonsänger, Trompeter</span></li>
+        <li><b>Hagara Feinbier</b><span>Musikpädagogin, Chorleiterin, Come-Together-Songs</span></li>
+        <li><b>Cornelius Hauptmann</b><span>Konzert- und Opernsänger</span></li>
+        <li><b>Andreas Martin Hofmeir</b><span>Tubist und Kabarettist</span></li>
+        <li><b>Reinhard Horn</b><span>Kinderliedermacher, Komponist – seit 2012</span></li>
+        <li><b>Marco Lombardo</b><span>Journalist, TV-Moderator, Singer-Songwriter</span></li>
+        <li><b>Nicol Matt</b><span>Dirigent – seit 2013</span></li>
+        <li><b>Suli Puschban</b><span>Kinderliedermacherin</span></li>
+        <li><b>Dalia Schaechter</b><span>Mezzosopranistin, Oper Köln</span></li>
+        <li><b>Johanna Seiler</b><span>Pianistin, Komponistin, Vocal Artist</span></li>
+        <li><b>Franz-Josef Selig</b><span>Opernsänger (Bass) – seit 2012</span></li>
+        <li><b>Ludger Vollmer</b><span>Komponist – seit 2013</span></li>
+        <li><b>Konstantin Wecker</b><span>Liedermacher</span></li>
+        <li><b>Samuel Youn</b><span>Opernsänger (Bassbariton) – seit 2012</span></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="land" id="landesbotschafter">
+    <h3 class="sub">Landesbotschafter:innen</h3>
+    <p>Sie leben nicht in Deutschland, sondern wirken in einem anderen Land und bereiten dort den Boden für die Idee des gesundheitsfördernden Singens.</p>
+    <div class="grid2 voice-small">
+      <article>
+        <div class="photo"><img src="fotos/uu-juchem.jpg" alt="Porträt Karin Juchem"></div>
+        <div><blockquote>„Heilsames Singen schenkt Lebenssinn und Lebensfreude, ein Gefühl der Weite und Freiheit bei gleichzeitiger Geborgenheit. Es ist spirituelle Nahrung und macht Herz und Seele glücklich.“</blockquote>
+        <cite>Karin Juchem (K. Elejna)<span>Österreich, Wien · Sängerin, Liedermacherin und Fotografin</span></cite>
+        <a class="web" href="https://givingbirth.at/">Website →</a></div>
+      </article>
+      <article>
+        <div class="photo"><img src="fotos/uu-gazdag.jpg" alt="Porträt Erzsébet Gazdag mit rotem Schal"></div>
+        <div><blockquote>„Ich habe hier die Art des Singens entdeckt, wonach ich mich immer gesehnt habe: Singen voller Freude und in Gemeinschaft. Ich wusste gleich, dass ich dieses Singen allen Menschen zeigen will, um dadurch Heilsames zu erfahren.“</blockquote>
+        <cite>Erzsébet Gazdag<span>Ungarische Landesbotschafterin in Rumänien · Schauspielerin und zertifizierte Singleiterin</span></cite>
+        <a class="web" href="#spenden">Ihr Singprojekt unterstützen →</a></div>
+      </article>
+    </div>
+    <p class="memo">In Erinnerung: Unser Landesbotschafter für die USA, der Liedermacher <b>Michael Stillwater</b>, ist am 15. Februar 2026 überraschend gestorben. Seine Songs werden uns weiter begleiten.</p>
+    <details class="more wide">
+      <summary>Alle Landesbotschafter:innen anzeigen (16 Länder)</summary>
+      <div>
+        <ul class="names">
+          <li><b>Argentinien</b><span>Franziska Binanzer</span></li>
+          <li><b>China und Kanada</b><span>Dr. George Kam Wing Ho</span></li>
+          <li><b>Finnland</b><span>Irma Heiskanen</span></li>
+          <li><b>Frankreich</b><span>Beate Dechelotte</span></li>
+          <li><b>Großbritannien</b><span>Catherine Pestano</span></li>
+          <li><b>Iran</b><span>Shamein A. Tabari</span></li>
+          <li><b>Niederlande</b><span>Madeleine Ingen Housz</span></li>
+          <li><b>Österreich</b><span>Komm.-Rat Prof. Hans Hammerer, Karin Juchem (Stellvertreterin)</span></li>
+          <li><b>Rumänien</b><span>Edith H. Toth</span></li>
+          <li><b>Schweiz</b><span>Doris Hauser</span></li>
+          <li><b>Sri Lanka</b><span>Lina Daniel</span></li>
+          <li><b>Südafrika</b><span>Dr. Annemarie Oberholzer</span></li>
+          <li><b>Türkei</b><span>Andrea Azize Güvenc</span></li>
+          <li><b>Ungarn</b><span>Erzsébet-Kinga Wenzel-Gazdag</span></li>
+          <li><b>USA</b><span>Torito Keoni LeBord, Crista Orefice</span></li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div></section>
+
+<section class="research split" id="forschung"><div class="wrap">
+  <div class="photo w"><img src="fotos/uu-forschung.jpg" alt="Vortrag auf der Jahrestagung: Eine Referentin spricht am Rednerpult, dahinter die Leinwand mit dem Vereinslogo"></div>
+  <div class="text">
+    <span class="eyebrow">Singforschung</span>
+    <h2 class="h2">Was die Forschung sagt</h2>
+    <p>Wichtige Erkenntnisse aus der Musik- und Singforschung, den Neurowissenschaften, der Verhaltens- und der Präventionsforschung wollen wir hier sammeln und verlinken. Wir führen auch eigene Forschungsprojekte durch.</p>
+    <div class="items">
+      <article><h3>Unser wissenschaftlicher Beirat</h3><p>Über 30 Fachleute aus Medizin, Psychologie, Musiktherapie und Musikwissenschaft begleiten unsere Arbeit.</p><a class="ghost" href="#beirat">Zum Beirat →</a></article>
+      <article><h3>Stimmen aus Klinik und Wissenschaft</h3><p>Was ein Klinikdirektor, ein Neurobiologe und ein Musikwissenschaftler über das Singen im Krankenhaus sagen.</p><a class="ghost" href="vorschau-foto-einrichtungen.html#stimmen">Was Fachleute sagen →</a></article>
+      <article><h3>Unsere Methodik</h3><p>Wie wir gesundheitsförderndes Singen anleiten, lernst du in der Weiterbildung.</p><a class="ghost" href="vorschau-foto-weiterbildung.html">Zur Weiterbildung →</a></article>
+    </div>
+    <p class="good"><b>Im Aufbau:</b> Studien, Veröffentlichungen und unsere eigenen Forschungsprojekte stellen wir hier vor, sobald sie aufbereitet sind.</p>
+  </div>
+</div></section>
+
+<section class="give" id="spenden"><div class="wrap">
+  <div class="head"><div><span class="eyebrow">Unterstützen</span><h2 class="h2">Spenden für’s Singen</h2></div></div>
+  <div class="give-grid">
+    <div class="text">
+      <p class="lead">Mit einer Spende machst du Singen dort möglich, wo kein Budget dafür da ist. Wir danken dir herzlich für jede Spende zugunsten unserer Arbeit.</p>
+      <p>Als gemeinnütziger Verein dürfen wir <b>Spendenbescheinigungen</b> für das Finanzamt ausstellen. Bitte gib dafür im Verwendungszweck deine vollständige Adresse an.</p>
+      <h3 class="sub">Zweckgebunden: Singen in Rumänien</h3>
+      <p>Es ist Tradition bei uns, über unsere Landesbotschafter:innen ein Singprojekt in Rumänien zu fördern. Seit 2023 singt unser Mitglied und Botschafterin <a href="#landesbotschafter"><b>Erzsébet Gazdag</b></a> begeistert und mit großem Erfolg mit Menschen mit Behinderung in einer Einrichtung. Bitte gib im Verwendungszweck „Rumänien“ an.</p>
+    </div>
+    <div>
+      <div class="form">
+        <span class="tag">Spendenkonto</span>
+        <h3>Singende Krankenhäuser e.V.</h3>
+        <ul class="facts">
+          <li><b>IBAN</b><span class="iban">DE81 6305 0000 0021 1606 13</span></li>
+          <li><b>BIC</b><span class="iban">SOLADES1ULM</span></li>
+          <li><b>Zweck</b><span>„Spende“ und deine Adresse – oder „Rumänien“</span></li>
+        </ul>
+      </div>
+      <div class="person">
+        <h3>Fragen zu Spenden und Sponsoring</h3>
+        <p>Sonja Heim, Geschäftsführerin</p>
+        <p><a class="mail" href="mailto:sonja.heim@singende-krankenhaeuser.de">sonja.heim@singende-krankenhaeuser.de</a></p>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <section class="member" id="mitglied"><div class="wrap">
-  <h2 class="h2">Mitglied werden – <span>und dazugehören.</span></h2>
+  <h2 class="h2">Werde Teil <span>des Netzwerks.</span></h2>
   <div class="col">
-    <p>Die Mitgliedschaft ist Voraussetzung für dein Zertifikat. Du sparst 15 % bei allen Modulen und Jahrestagungen und bist Teil eines lebendigen Netzwerks. Einzelpersonen zahlen 80 € im Jahr, ermäßigt 40 €.</p>
-    <div class="acts"><a class="pill gold" href="vorschau-foto-mitglied-sein.html">Mitglied werden</a><a class="ghost light" href="#">Beitrittserklärung (PDF) →</a></div>
-    <p class="small">Bekommst du schon unseren Newsletter? <a href="#"><b>Newsletter anmelden →</b></a></p>
+    <p>Über 700 Mitglieder tragen unsere Arbeit – als Einzelperson oder als Einrichtung. Als Mitglied sparst du 15 % bei allen Modulen und zahlst bei der Jahrestagung den Mitgliederpreis.</p>
+    <div class="acts"><a class="pill gold" href="vorschau-foto-mitglied-sein.html">Mitglied werden</a><a class="ghost light" href="vorschau-foto-mitglied-sein.html#vorteile">Alle Vorteile →</a></div>
+    <p class="small">Neuigkeiten aus dem Netzwerk und das Lied des Monats: <a href="#"><b>Newsletter anmelden →</b></a></p>
   </div>
 </div></section>
 

@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-einrichtungen.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, und `SEITE-sing-mit.md`, Abschnitt 6 ·
-Nachbarseiten: `vorschau-foto-sing-mit.html`, `vorschau-foto-weiterbildung.html`, `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`), `vorschau-foto.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto-sing-mit.html`, `vorschau-foto-weiterbildung.html`, `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`), `vorschau-foto.html` · Über uns: `vorschau-foto-ueber-uns.html` (`SEITE-ueber-uns.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 Termine (Menüpunkt in der Vorschau verlinkt seit 25.09.2026): `SEITE-termine.md` + `vorschau-foto-termine.html`
 
 Dieses Dokument erklärt, **wie die neue Seite „Für Einrichtungen“ aufgebaut ist, woher jeder Inhalt stammt,
@@ -86,7 +86,7 @@ in einem Satz zusammen und verlinken dorthin.
 | Zertifizierte Singende Pflegeeinrichtung | Für Einrichtungen, `#voraussetzungen` | `ein-logo-pflege.png` |
 | zertifizierte/r Singleiter:in für Gesundheitseinrichtungen und Krankenhäuser | Sing mit, Formular-Karte „Zertifikat 1“ | `sm-logo-singleiter-krankenhaus.png` |
 | zertifizierte/r Singleiter:in für Pflegeeinrichtungen und Senioren | Sing mit, Formular-Karte „Zertifikat 2“ | `sm-logo-singleiter-pflege.png` |
-| Musikalischer Botschafter | Seite „Über uns“ → Botschafter und Beirat (noch nicht im Foto-Stil) | – |
+| Musikalischer Botschafter | Seite „Über uns“, `#botschafter` (`SEITE-ueber-uns.md`) | `uu-logo-botschafter.png` |
 
 **Menü:** Die drei Unterpunkte fallen weg. Stattdessen hat die Seite direkt unter dem Titelfoto eine
 **Sprungleiste** (Baustein aus `SEITE-sing-mit.md`, Abschnitt 6). Begründung wie bei Sing mit: Das neue Menü hat
@@ -239,7 +239,9 @@ Name nicht daneben steht (auf dieser Seite steht er daneben, deshalb `alt=""`).
 1. **Briefkopf der vier Einrichtungs-PDFs veraltet:** Anträge, Vereinbarung und Richtlinien nennen Elke Wünnenberg,
    Kordula Voss und Vera Kimmig als Vorstand; die Vereinbarung lässt Elke Wünnenberg unterschreiben. Laut Seite
    „Team Vorstand“ sind es heute Tom Jansen, Martin Hanke und Paula Bieker. Auch Schirmherrin, Präsident und
-   Beirat prüfen. → Sonja / Vorstand.
+   Beirat prüfen. → Sonja / Vorstand. **Abgleich 25.09.2026:** Maßgeblich ist das Vorstandsteam Tom Jansen, Martin Hanke,
+   Paula Bieker (Team-Seite und Infoflyer Mai 2025); Hauptort für Vorstand, Schirmherrin und Beirat ist jetzt „Über uns“
+   (`SEITE-ueber-uns.md`, Abschnitt 2). Die Link-Ziele „Unsere Singforschung →“ zeigen auf `#forschung` dort.
 2. **Mitgliedsbeitrag in den Richtlinien veraltet:** dort 250 € / 125 €, gültig sind 350 € / 175 €. → Richtlinien korrigieren.
 3. **Kontaktdaten auf der heutigen Seite falsch:** Der Kontaktkasten wurde offenbar von der Weiterbildungsseite kopiert
    und nur Name und Foto getauscht: Telefon `+49 1520 4301191` ist die Nummer der **Weiterbildungsberatung (Vera Kimmig)**,
