@@ -19,7 +19,7 @@ ausgehen und was dabei verschoben oder gekürzt wurde. Wie die Struktur in der V
 | WEITERBILDUNG | Wichtige Infos, Kranken- & Gesundheitshäuser, Pflege & Senioren, Anmeldung, Dozenten |
 | SING MIT | Singleiter:in werden, Zertifikat beantragen |
 | SINGENDE LANDKARTE | – |
-| FÜR EINRICHTUNGEN | Wie Singende Einrichtung werden?, Voraussetzungen Zertifizierung, Antrag auf Zertifizierung |
+| FÜR EINRICHTUNGEN | Wie Singende Einrichtung werden?, Voraussetzungen Zertifizierung, Antrag auf Zertifizierung (nur Sprungmarken auf `/unsere-einrichtungen`) |
 | MITGLIED SEIN | Wie werde ich Mitglied?, MitgLIEDER im Fokus |
 | TERMINE | – |
 | KONTAKT | – |
@@ -80,6 +80,26 @@ sondern Sprungmarken auf derselben Seite `/sing-mit`.
 Auffällig: Pflichtmodule je Zweig und die verpflichtende Singprobe stehen **nur in den Antragsformularen**.
 Social-Media-Symbole in der Fußzeile verlinken auf die Profile von Wix statt auf die des Vereins.
 Wie der Bereich neu aufgebaut und mit der Weiterbildung abgestimmt wird: `SEITE-sing-mit.md`.
+
+## Bereich FÜR EINRICHTUNGEN (ausgelesen am 25.09.2026)
+
+Die Menü-Unterpunkte „Wie Singende Einrichtung werden?“, „Voraussetzungen Zertifizierung“ und „Antrag auf
+Zertifizierung“ sind **keine eigenen Seiten**, sondern Sprungmarken auf derselben Seite `/unsere-einrichtungen`.
+
+| Abschnitt auf `/unsere-einrichtungen` | Inhalt |
+|---|---|
+| Kopf | Titel, drei Zertifikats-Logos (Krankenhaus, Gesundheitseinrichtung, Pflegeeinrichtung) |
+| Warum Singendes Krankenhaus? | Zitat Gerald Hüther, „Singen hellt auf“ (Orte des Singens), „Was alle Singangebote verbindet“ (8 Punkte), Zitat Gunter Kreutz |
+| Wie kann meine Einrichtung … werden? | Vereinsauftrag, Zertifikat als Unterscheidungsmerkmal, Button Leitlinien (PDF), Zitat Edgar Schömig (Uniklinik Köln) |
+| Voraussetzungen | Mitgliedschaft (Beitrittserklärung), zertifizierte Singleitung, wöchentlich/zweiwöchentlich, Öffentlichkeitsarbeit |
+| Ablauf | Antrag Krankenhäuser / Pflege, Vereinbarung, Richtlinien (4 PDFs); Urkundenübergabe, Pressearbeit, Veröffentlichung mit Logos |
+| Fragen | Sonja Heim mit Foto, Mo–Do 9–12 Uhr |
+
+Auffällig: Telefonnummer weicht von den PDFs ab, der E-Mail-Button geht an Vera Kimmig (mit Tippfehler); alle vier
+Einrichtungs-PDFs nennen den früheren Vorstand, die Richtlinien einen veralteten Beitrag (250 €/125 € statt 350 €/175 €),
+die Anträge verlinken tote Adressen der alten Webseite. Zwei Wix-Stockfotos ohne Bezug.
+Die Startseite zeigt unter „Unsere Zertifikate“ sechs Logos, davon nur drei für Einrichtungen.
+Wie der Bereich neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-einrichtungen.md`.
 
 ## Beobachtungen
 

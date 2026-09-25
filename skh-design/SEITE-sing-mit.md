@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-sing-mit.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5 ·
-Nachbarseite: `vorschau-foto-weiterbildung.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto-weiterbildung.html`, `vorschau-foto-einrichtungen.html` (`SEITE-einrichtungen.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 
 Dieses Dokument erklärt, **wie die neue Seite „Sing mit“ aufgebaut ist, woher jeder Inhalt stammt,
 was mit der Weiterbildungsseite zusammengelegt oder verlinkt wurde und warum**. Eine Person ohne
@@ -61,6 +61,8 @@ zusammen und verlinken dorthin. So muss bei einer Änderung (z. B. Modulzahl) nu
 | Ansprechperson | Weiterbildung: Vera Kimmig; Sing mit: Sonja Heim | getrennt nach Aufgabe | Sing mit verlinkt auf die Beratung (`#beratung`) | **Vera** = Fragen zu Modulen und Anrechnung; **Sonja** = Antrag entgegennehmen und Urkunde. So steht es auch im Antragsformular. |
 | Unterstützung für Mitglieder (Supervision, Guitar- & Ukulele-Factory, „Singleiter:innen im Gespräch“) | Mitglied sein; Sing mit nur Satz ohne Link | **Mitglied sein** | Sing mit: Kurzfassung + Link „Mehr zur Mitgliedschaft →“ | behebt den toten Hinweis (Nr. 2 oben) |
 | Newsletter | fast überall | Fußbereich des Tiefgrün-Bands | – | wie Weiterbildung |
+| Honorarempfehlung 90 € und Vergütung der Singleitung | Sing mit („pro Singstunde“) und Richtlinien für Einrichtungen | **Für Einrichtungen** (`#verguetung`) | Sing mit: Zahl bleibt, jetzt „pro Stunde, brutto“ wie in den Richtlinien, Link „Vergütung im Detail →“ | Die Einrichtung zahlt; Einzelheiten (Vorbereitungszeit, Angestellte) stehen nur dort (ergänzt 25.09.2026, siehe `SEITE-einrichtungen.md`) |
+| Singleiter-Logos (bisher Startseite „Unsere Zertifikate“) | Startseite | **Sing mit**, je Formular-Karte | – | Logo dort, wo man das Zertifikat beantragt |
 
 **Menü:** Die Unterpunkte „Singleiter:in werden“ und „Zertifikat beantragen“ fallen weg.
 Stattdessen hat die Seite direkt unter dem Titelfoto eine **Sprungleiste** („Auf dieser Seite: …“).
@@ -126,6 +128,7 @@ In Wix immer das **Original** aus der Medienverwaltung verwenden (Dateinamen in 
 | `sm-singleiterin.jpg` | Singleiter:in sein | Singleiterin mit Gitarre und Mikrofon in der Gruppe | Ausschnitt auf die Singleiterin (links der Mitte) |
 | `sm-zertifikat.jpg` | Zertifikat beantragen | lachende Gruppe im Freien, Frau klatscht | |
 | `sm-mitsingen.jpg` | Sei dabei und sing mit! | Gruppe im Saal mit erhobenen Armen | Hochformat-Ausschnitt aus einem Querfoto |
+| `sm-logo-singleiter-krankenhaus.png`, `sm-logo-singleiter-pflege.png` | Formular-Karten Zertifikat 1 und 2 | Singleiter-Logos | von der Startseite („Unsere Zertifikate“) hierher verschoben; in der Karte 110 px breit |
 
 **Warum das Titelfoto im Freien?** Es zeigt einen offenen Singkreis ohne Klinikumgebung – das passt zu
 „Sing mit“ als Einladung an alle. **Datenschutz:** Vor der Veröffentlichung prüfen, ob die Einwilligungen
@@ -190,7 +193,10 @@ Gelb, Weiß und Gelb auf Tiefgrün) – alle über 4,5 : 1. Die gelbe Linie ist 
    (`instagram.com/wix`, `facebook.com/wix`, `youtube.com/user/Wix`) – das betrifft vermutlich die ganze
    Webseite. Sofort auf die Vereinsprofile umstellen.
 6. **Honorarempfehlung 90 €:** Ist der Betrag aktuell? Er steht öffentlich und wird von Einrichtungen zitiert.
-7. **Foto von Sonja Heim?** Wenn gewünscht, kann der Kontaktbereich wie bei Vera Kimmig ein Porträt bekommen.
+   Hauptort ist jetzt „Für Einrichtungen“ – siehe dort offener Punkt 6 (gilt der Satz auch für die Vorbereitungszeit?).
+7. **Foto von Sonja Heim?** Auf der heutigen Seite „Für Einrichtungen“ gibt es eins (`fotos/ein-sonja-heim.jpg`). Wenn gewünscht,
+   kann der Kontaktbereich hier dasselbe Porträt bekommen (Baustein „Ansprechperson mit Foto“, `SEITE-einrichtungen.md`, Abschnitt 6).
+   **Achtung:** Die Telefonnummer von Sonja steht auf „Für Einrichtungen“ heute anders – auf beiden Seiten gleich halten.
 8. **Einwilligungen** der fotografierten Personen (siehe Abschnitt 5).
 
 Damit ist offener Punkt 5 aus `SEITE-weiterbildung.md` („Pflichtmodul benennen“) geklärt: Quelle sind die

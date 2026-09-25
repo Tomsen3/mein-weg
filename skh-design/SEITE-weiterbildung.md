@@ -3,7 +3,8 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-weiterbildung.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Startseite: `vorschau-foto.html` · Ist-Zustand: `IST-STRUKTUR.md`
-Nachbarseite: **Sing mit** (Zertifikat beantragen) → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html`
+Nachbarseite: **Sing mit** (Zertifikat beantragen) → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html` ·
+**Für Einrichtungen** (Mitarbeitende weiterbilden, 15 % für Mitgliedseinrichtungen) → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html`
 
 Dieses Dokument erklärt, **wie die neue Weiterbildungsseite aufgebaut ist, woher jeder Inhalt
 stammt und warum er so angeordnet ist**. Eine Person ohne Vorkenntnisse soll die Seite damit in
@@ -46,7 +47,7 @@ für die vollständige Modulliste bestehen, werden aber von hier aus verlinkt.
 | 7 | Salbei | **Erst mal reinschnuppern** | kostenloser Online-Schnupperkurs | niedrige Einstiegshürde vor dem Buchen |
 | 8 | Leinen | **Das sagen Teilnehmende** | drei Stimmen (Martin, Jeanine, Martina), Link Dozent:innen | Vertrauen vor der Anmeldung |
 | 9 | Weizen | **Hast du Fragen?** (Sprungmarke `#beratung`) | Weiterbildungsberatung Vera Kimmig mit Foto, Telefonnummer, Zeiten | persönliche Ansprechperson senkt die Hürde |
-| 10 | Tiefgrün | **Mitglied werden – und 15 % sparen** | Mitgliedschaft als Voraussetzung + Rabatt, Newsletter | Abschluss mit der wichtigsten Handlung |
+| 10 | Tiefgrün | **Mitglied werden – und 15 % sparen** | Mitgliedschaft als Voraussetzung + Rabatt; Satz „Arbeitest du in einer Mitgliedseinrichtung? Dann gilt der Rabatt auch für dich.“ mit Link auf Für Einrichtungen (ergänzt 25.09.2026, siehe `SEITE-einrichtungen.md`, Abschnitt 2); Newsletter | Abschluss mit der wichtigsten Handlung |
 | – | Tiefgrün | Fußzeile | wie Startseite | auf allen Seiten gleich |
 
 Die Reihenfolge folgt den Fragen, die sich Interessierte nacheinander stellen:

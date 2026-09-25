@@ -4,7 +4,8 @@ Stand: 25.09.2026 (überarbeitet: echte Seitenstruktur) · Verantwortlich: Tom (
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
-**Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html`
+**Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html` ·
+**Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html`
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
 Mittelpunkt, die Gestaltung drumherum ist ruhig. Es ist so geschrieben, dass eine Person
@@ -124,8 +125,10 @@ Regeln:
 - **Weitere Bausteine für Unterseiten** (aktiver Menüpunkt, Brotkrumen, Titelkasten rechts, große Zahl,
   Häkchen-Liste, Etiketten, Filter, Hinweiskasten): beschrieben in `SEITE-weiterbildung.md`, Abschnitt 5.
   Dazu Sprungleiste (statt Aufklappmenü), Formular-Karte und Ansprechperson ohne Foto: `SEITE-sing-mit.md`, Abschnitt 6.
+  Zitat mit Porträt, Siegel-Reihe, Ablauf-Liste und Ansprechperson mit Foto: `SEITE-einrichtungen.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
-  Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit).
+  Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
+  Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge → Mitglied sein).
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -169,7 +172,7 @@ Menüpunkt „Mitglied sein“).
 | „Was wir wollen“ (Vision) | Seite „Über uns“ | Startseite zeigt Angebote, nicht Leitbild |
 | YouTube-Kanal | Fußzeile | ein Link reicht |
 | Feedback des Monats | Seite „MitgLIEDER im Fokus“ | langer Text, passt dort besser |
-| Unsere Zertifikate (Logos) | Seite „Für Einrichtungen“ | richtet sich an Einrichtungen |
+| Unsere Zertifikate (6 Logos) | 3 Einrichtungs-Logos → „Für Einrichtungen“; 2 Singleiter-Logos → „Sing mit“ (Zertifikat); „Musikalischer Botschafter“ → „Über uns“ | jedes Logo dort, wo man das Zertifikat bekommt (Einzelheiten: `SEITE-einrichtungen.md`, Abschnitt 2) |
 | Kontaktformular | Seite „Kontakt“ | Startseite kürzer |
 
 **Welche Fotos wo:** Die Vorschau verwendet Fotos, die schon auf der Webseite sind
