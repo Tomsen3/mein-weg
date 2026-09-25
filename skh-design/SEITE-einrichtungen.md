@@ -172,7 +172,7 @@ Medienverwaltung nehmen.
 | `ein-atmosphaere.jpg` | Warum Singen | zwei Menschen singen mit geschlossenen Augen, Hand auf der Brust | Workshops (Jahrestagung) |
 | `ein-schoemig.jpg`, `ein-huether.jpg`, `ein-kreutz.jpg` | Stimmen | Porträts der drei Zitierten | Für Einrichtungen (Kreutz auch auf „Botschafter und Beirat“ – dort bleibt es) |
 | `ein-logo-krankenhaus.png`, `ein-logo-gesundheit.png`, `ein-logo-pflege.png` | Zertifikat | Zertifikats-Logos | Start + Für Einrichtungen |
-| `ein-netzwerk.jpg` | Voraussetzungen | viele Menschen im Saal, Hände auf den Schultern | Zweig-Seite „Pflege & Senioren“ (noch nicht im Foto-Stil; wird sie neu gestaltet, dort ein anderes Foto wählen) |
+| `ein-netzwerk.jpg` | Voraussetzungen | viele Menschen im Saal, Hände auf den Schultern | Zweig-Seite „Pflege & Senioren“ (wird laut Entscheidung vom 25.09.2026 auf `/weiterbildung` umgeleitet – keine Doppelung mehr) |
 | `ein-singleitung.jpg` | Weg 1 | Singleiterin mit Mikrofon leitet an | Jahrestagung 2027 (Rückblick-Fotos) |
 | `ein-mitarbeitende.jpg` | Weg 2 | Kolleg:innen mit Namensschildern, Hände auf den Schultern | Zweig-Seite „Pflege & Senioren“ (siehe oben) |
 | `ein-sonja-heim.jpg` | Kontakt | Porträt Sonja Heim | Für Einrichtungen und Termine |

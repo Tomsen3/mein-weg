@@ -57,6 +57,9 @@ Social Media: YouTube, Instagram, Facebook.
 | `/wichtige-infos` | **exakt derselbe Inhalt wie `/weiterbildung`** |
 | `/kranken-und-gesundheitshäuser` | Zielgruppe, Termine-PDFs, Schnupperkurs, alle Module 2026 (auch vergangene), Beratung Vera Kimmig |
 | `/pflege-und-senioren` | wie oben für den Pflege-Zweig; viele Module doppelt mit der Krankenhaus-Seite |
+
+Entscheidung 25.09.2026, Tom (Vorstand): Beide Zweig-Seiten werden per 301 auf `/weiterbildung` umgeleitet, nicht neu gestaltet
+(Begründung in `SEITE-weiterbildung.md`, Abschnitt 1).
 | `/anmeldung` | Formular: Module, Unterkunft (160–230 € Fr–So), Storno bis 4 Wochen vorher, Haftungsausschluss |
 | `/dozenten` | rund 20 Dozent:innen mit Kurzbiografie |
 

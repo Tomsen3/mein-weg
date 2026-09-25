@@ -231,8 +231,10 @@ Etiketten, Monatszeilen, Datumszusätze und Brotkrumen (wie auf allen Unterseite
    durch den Hinweis aus Bereich 6 ersetzen (Hauptort ist „Mitglied sein“).
 7. **Vorschau 2027** als Text anlegen (zwei Listen). Sobald die 2027-Termine in Wix-Events stehen, den Bereich
    leeren bzw. auf das Jahr danach umstellen.
-8. **Nachbarseiten** umstellen wie in Abschnitt 2 („Korrekturen auf den Nachbar-Vorschauen“); auf den Zweig-Seiten
-   den Button JAHRESPLANUNG (alte PDF) entfernen oder auf `/termine#schnuppern` setzen.
+8. **Nachbarseiten** umstellen wie in Abschnitt 2 („Korrekturen auf den Nachbar-Vorschauen“). Die Zweig-Seiten werden
+   per 301 auf `/weiterbildung` umgeleitet (Entscheidung 25.09.2026, Tom (Vorstand), `SEITE-weiterbildung.md`, Abschnitt 1) – damit
+   verschwinden auch der Button JAHRESPLANUNG (alte PDF) und die Hinweise „nächster Termin …“. Bis dahin den Button
+   entfernen oder auf `/termine#schnuppern` setzen.
 9. **Fotos** nach Abschnitt 5 einsetzen (Ecken 20 px, kein Rahmen, kein Schatten).
 10. **Handy-Ansicht prüfen**, dann Vorschau an Vera (Termine, Anmeldung), Sonja (Geschäftsführung) und Martin und
     Paula (Vorstand) zur Abnahme.

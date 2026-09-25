@@ -261,7 +261,7 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
         <li><b>Module</b><span>mit Buchstaben: A, B, C … F, P</span></li>
         <li><b>Themen z. B.</b><span>belastete Kinder und Jugendliche, Trauma, psychische Gesundheit</span></li>
       </ul>
-      <a class="ghost" href="#">Alle Module dieses Zweigs →</a>
+      <a class="ghost" href="#module" data-zweig="kh">Alle Module dieses Zweigs →</a>
     </article>
     <article class="branch">
       <div class="photo g"><img src="fotos/wb-zweig-pflege.jpg" alt="Teilnehmende legen sich beim Singen die Hände auf die Schultern"></div>
@@ -272,7 +272,7 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
         <li><b>Module</b><span>mit römischen Zahlen: I, II, III, IV</span></li>
         <li><b>Themen z. B.</b><span>Demenz, Biografiearbeit, Sterbe- und Trauerbegleitung</span></li>
       </ul>
-      <a class="ghost" href="#">Alle Module dieses Zweigs →</a>
+      <a class="ghost" href="#module" data-zweig="pf">Alle Module dieses Zweigs →</a>
     </article>
   </div>
   <p class="good"><b>Gut zu wissen:</b> Du kannst jedes Modul auch einzeln buchen – ganz ohne vollständige Weiterbildung. Das ist z. B. für Betreuungskräfte und Pflegepersonal interessant. Module aus dem anderen Zweig kannst du dazuwählen, solange dein Schwerpunkt erkennbar bleibt.</p>
@@ -413,6 +413,13 @@ document.querySelectorAll('.filter button').forEach(function(b){
     var f=b.dataset.f;
     document.querySelectorAll('.filter button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
     document.querySelectorAll('.mods li').forEach(function(li){li.hidden=!(f==='alle'||li.dataset.z.split(' ').indexOf(f)>-1)});
+  });
+});
+// „Alle Module dieses Zweigs →“: springt zur Modulliste und stellt den Filter auf den Zweig
+// (ersetzt die früheren Zweig-Seiten, die auf /weiterbildung umgeleitet werden).
+document.querySelectorAll('a[data-zweig]').forEach(function(a){
+  a.addEventListener('click',function(){
+    var b=document.querySelector('.filter button[data-f="'+a.dataset.zweig+'"]'); if(b) b.click();
   });
 });
 </script>

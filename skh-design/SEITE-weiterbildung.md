@@ -28,8 +28,25 @@ Beim Auslesen am 25.09.2026 ist aufgefallen:
 
 **Entscheidung:** Eine einzige Übersichtsseite „Weiterbildung“ beantwortet alle Grundfragen
 (Welcher Zweig? Wie viele Module? Was lerne ich? Was kostet die Unterkunft? Wann ist das
-nächste Modul?). „Wichtige Infos“ geht in dieser Seite auf. Die beiden Zweig-Seiten bleiben
-für die vollständige Modulliste bestehen, werden aber von hier aus verlinkt.
+nächste Modul?). „Wichtige Infos“ geht in dieser Seite auf.
+
+**Entscheidung Zweig-Seiten (25.09.2026, Tom (Vorstand)):** Die Seiten `/kranken-und-gesundheitshäuser` und `/pflege-und-senioren`
+werden **nicht** neu gestaltet, sondern per 301 auf `/weiterbildung` umgeleitet (ursprünglich sollten sie für die
+vollständige Modulliste bestehen bleiben). Begründung:
+1. **Doppelte Pflege:** Viele Module stehen heute auf beiden Seiten; jede Änderung muss zweimal gemacht werden, und
+   die Hinweise „nächster Termin …“ widersprechen schon jetzt der Terminvorschau 2027 (`SEITE-termine.md`, Abschnitt 1).
+2. **Der Filter ersetzt sie:** Die Modulliste auf „Weiterbildung“ (`#module`) zeigt nach Zweig gefiltert alle
+   kommenden Module aus Wix-Events – das ist genau der Inhalt der Zweig-Seiten, nur ohne vergangene Termine.
+3. **Alles andere hat schon einen Hauptort:** Zielgruppen-Texte und Buchstabe/römische Zahl → Weiterbildung
+   (Bereich „Wähle deinen Schwerpunkt“ und Modulliste); Schnupperkurse, Vorschau und Österreich-Module mit
+   Sybille Mikula → Termine; Beratung Vera Kimmig → Weiterbildung (`#beratung`); Modulbeschreibung und Preis → jeweilige
+   Veranstaltungsseite in Wix-Events.
+4. **Veraltete PDFs verschwinden mit:** „Jahresplanung“ (alte Schnupperkurs-Liste) und „Alle Termine 2026“ (Flyer mit
+   falschem Modul F) sind nur dort verlinkt.
+
+**Reihenfolge ist wichtig:** Erst umleiten, wenn **alle** Module beider Zweige (auch Österreich) als Veranstaltungen mit
+Zweig-Kategorie in Wix-Events stehen (`SEITE-termine.md`, Abschnitt 6, Schritte 1–2). Sonst fehlen nach der Umleitung
+Module. In der Vorschau führen die Links „Alle Module dieses Zweigs →“ jetzt zur gefilterten Modulliste.
 
 ---
 
@@ -145,7 +162,12 @@ für Vorleseprogramme (`aria-current`).
    Anthrazit (Wix: *Linie* einfügen).
 6. **Kontakt:** Telefonnummer als Text **und** als Link `tel:+4915204301191`; E-Mail-Button
    erst nach Klärung von Punkt 7.1 verlinken.
-7. **Handy-Ansicht prüfen** und Vorschau an Sandra (Weiterbildung), Vera und Sonja zur
+7. **Zweig-Seiten umleiten** (erst nach Schritt 4 und wenn alle Module in Wix-Events stehen): beide Zweig-Seiten aus
+   dem Menü nehmen und im URL-Weiterleitungsmanager `/kranken-und-gesundheitshäuser` und `/pflege-und-senioren` mit
+   **301** auf `/weiterbildung` leiten; erst danach löschen. Die Links „Alle Module dieses Zweigs →“ zeigen auf die
+   Modulliste (Anker `module`) – Wix kann den Filter nicht per Link vorwählen, deshalb dort den Hinweis „Filter oben
+   auf deinen Zweig stellen“ als kleinen Text ergänzen oder zwei Veranstaltungslisten mit festem Filter verwenden.
+8. **Handy-Ansicht prüfen** und Vorschau an Sandra (Weiterbildung), Vera und Sonja zur
    inhaltlichen Abnahme schicken.
 
 ---
@@ -180,5 +202,6 @@ für Vorleseprogramme (`aria-current`).
 
 - [ ] Nur kommende Module sichtbar, Filter funktioniert?
 - [ ] „Wichtige Infos“ leitet auf „Weiterbildung“ weiter?
+- [ ] Alle Module beider Zweige in Wix-Events, danach beide Zweig-Seiten per 301 auf „Weiterbildung“ umgeleitet?
 - [ ] Alle Punkte aus Abschnitt 7 geklärt?
 - [ ] Checkliste aus `DESIGN-foto.md`, Abschnitt 7, erfüllt?
