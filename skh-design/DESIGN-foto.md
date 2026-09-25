@@ -1,6 +1,6 @@
 # DESIGN-foto.md – Alternative „Foto“ für Singende Krankenhäuser e.V.
 
-Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 25.09.2026 (überarbeitet: echte Seitenstruktur) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 
@@ -125,13 +125,53 @@ Regeln:
 
 ## 5. Seitenaufbau Startseite
 
-0. **Weiß** – Kopfleiste: Logo, Menü, gelber Button „Mitglied werden“
-1. **Titelfoto** (Singgruppe auf Station) mit Tiefgrün-Kasten „Singen tut gut.“
-2. **Leinen** – „Wo wir singen“: drei Angebote mit quadratischem Foto (Zertifikat 1, Zertifikat 2, Mitsingen)
-3. **Salbei** – Weiterbildung: Text + Faktenliste links, Porträt einer Singleiterin rechts
-4. **Weizen** – Termine als Linienliste
-5. **Tiefgrün** – „Mitsingen. Mitmachen. *Mitglied werden.*“ (letzter Teil in Logo-Gelb), Buttons
-6. **Tiefgrün** – Fußzeile
+Grundlage ist die **echte Startseite** von www.singende-krankenhaeuser.de (Stand 25.09.2026,
+vollständig festgehalten in `IST-STRUKTUR.md`). Die heutige Startseite hat 17 Abschnitte und
+11 Menüpunkte. Für die neue Fassung ist sie auf **8 Abschnitte und 6 Menüpunkte** gestrafft,
+weil lange Seiten und breite Menüs gerade ältere Besucher überfordern. Nichts geht verloren:
+Inhalte, die von der Startseite verschwinden, stehen in der Tabelle unten mit ihrem neuen Ort.
+
+**Ansprache:** Die Seite **duzt** („Sei dabei!“, „Du willst …“). Das bleibt so.
+Gendern wie auf der bestehenden Seite mit Doppelpunkt (Singleiter:in, Patient:innen).
+
+**Menü (6 Punkte):** Weiterbildung · Sing mit · Singende Landkarte · Für Einrichtungen ·
+Termine · Über uns – rechts daneben der gelbe Button **„Mitglied werden“** (ersetzt den
+Menüpunkt „Mitglied sein“).
+
+| Nr. | Fläche | Abschnitt | Inhalt (von der bestehenden Seite) |
+|---|---|---|---|
+| – | Weizen | schmale Hinweisleiste | „Jahrestagung 2027“ mit Link (ersetzt den Menüpunkt mit 9 Unterseiten) |
+| 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte, Button „Mitglied werden“ |
+| 1 | Titelfoto + Tiefgrün-Kasten | **Lebenskraft Singen** | Leitspruch, Zitat „Ein Lied kann keine Wunder vollbringen …“, Buttons „Zur Weiterbildung“ und „Singgruppe in deiner Nähe“ |
+| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | die drei Fragen mit „Ja!“-Button: Singleiter:in werden · Mitglied werden · Singgruppe in der Nähe |
+| 3 | Salbei | **Singen wirkt – und wir zeigen dir wie** | Einleitungstext, Faktenliste (Zertifikate, Wochenenden, Mitgliedschaft, Schnupperkurs), Links „Wichtige Infos“ und „Dozent:innen“ |
+| 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“, Links Terminkalender und Terminvorschau 2027 |
+| 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |
+| 6 | Leinen | **Aktuelles aus unserem Netzwerk** | drei Karten: Rückblick, Blog des Monats, MitgLIEDER im Fokus |
+| 7 | Tiefgrün | **Mitsingen. Mitmachen. Mitglied werden.** | Mitgliedschaft, Spenden (mit Rumänien-Projekt, Spendenbescheinigung), Newsletter |
+| 8 | Tiefgrün | Fußzeile | Mitmachen · Service · Rechtliches & Kanäle (alle bisherigen Fußzeilen-Links + Shop, Presse, YouTube …) |
+
+**Was von der Startseite wegzieht – und wohin:**
+
+| Bisher auf der Startseite | Neuer Ort | Grund |
+|---|---|---|
+| Menüpunkt JAHRESTAGUNG (9 Unterseiten) | Hinweisleiste oben + eigener Bereich | zeitlich begrenzt, sprengt das Menü |
+| Menüpunkte KONTAKT, SHOP | Fußzeile | selten gesucht, dort erwartet man sie |
+| Menüpunkt MITGLIED SEIN | gelber Button „Mitglied werden“ | wichtigste Handlung, soll auffallen |
+| Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“ | doppelte Information vermeiden |
+| „Was wir wollen“ (Vision) | Seite „Über uns“ | Startseite zeigt Angebote, nicht Leitbild |
+| YouTube-Kanal | Fußzeile | ein Link reicht |
+| Feedback des Monats | Seite „MitgLIEDER im Fokus“ | langer Text, passt dort besser |
+| Unsere Zertifikate (Logos) | Seite „Für Einrichtungen“ | richtet sich an Einrichtungen |
+| Kontaktformular | Seite „Kontakt“ | Startseite kürzer |
+
+**Welche Fotos wo (vorhandene Bilder der Webseite prüfen):** Titelfoto: Singgruppe in einer
+Klinik (quer, warmes Licht). Frage 1–3: Singleiterin mit Gruppe, Mitgliedertreffen, Ausschnitt
+Singende Landkarte. Weiterbildung: Porträt einer Dozentin/eines Dozenten (hochkant).
+Aktuelles: die Bilder der jeweiligen Beiträge (z. B. „Martina und Uwe“, „Alwine“, „Nicole“).
+
+**Hinweis Hörbeispiele:** In der Vorschau sind die Abspiel-Knöpfe ohne Funktion. In Wix
+bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 px Rundung) anpassen.
 
 ---
 
@@ -140,21 +180,24 @@ Regeln:
 > Vorher: Website duplizieren (Wix-Dashboard → Website → „Website duplizieren“) und den
 > Stil zuerst an der Kopie testen.
 
-1. **Fotos zuerst:** Fotos sammeln, Einwilligungen prüfen, in Wix hochladen
+1. **Menü straffen:** Editor → *Menüs & Seiten* → Seiten „Jahrestagung“, „Kontakt“, „Shop“,
+   „Mitglied sein“ aus dem Hauptmenü nehmen („Im Menü ausblenden“ – die Seiten bleiben erhalten).
+   Dann den Button „Mitglied werden“ in die Kopfleiste setzen.
+2. **Fotos zuerst:** Fotos sammeln, Einwilligungen prüfen, in Wix hochladen
    (*Medien* → *Hochladen*). Ohne gute Fotos diesen Stil **nicht** umsetzen.
-2. **Schrift:** PT Sans wählen (in Wix meist vorhanden, sonst hochladen:
+3. **Schrift:** PT Sans wählen (in Wix meist vorhanden, sonst hochladen:
    https://fonts.google.com/specimen/PT+Sans).
-3. **Farben:** *Website-Design* → *Farben* → Farbschema mit den Werten aus Abschnitt 2.
-4. **Text-Themen:** Überschrift 1–2 = PT Sans **Regular** (nicht fett), Größen aus Abschnitt 3;
+4. **Farben:** *Website-Design* → *Farben* → Farbschema mit den Werten aus Abschnitt 2.
+5. **Text-Themen:** Überschrift 1–2 = PT Sans **Regular** (nicht fett), Größen aus Abschnitt 3;
    Absatz = PT Sans 18 px.
-5. **Button-Vorlage:** Logo-Gelb, Anthrazit-Schrift fett, Ecken 100 px. „Design speichern“.
-6. **Titelbereich:** Abschnitt mit Hintergrundbild **innerhalb** eines Containers mit 20 px Ecken
+6. **Button-Vorlage:** Logo-Gelb, Anthrazit-Schrift fett, Ecken 100 px. „Design speichern“.
+7. **Titelbereich:** Abschnitt mit Hintergrundbild **innerhalb** eines Containers mit 20 px Ecken
    (nicht als Abschnittshintergrund, sonst keine Rundung). Darauf eine Box Tiefgrün, Ecken 20 px,
    unten links; darin Titel (Weiß), Text (Weiß), Button.
-7. **Fotos rund:** Bild anklicken → *Design* → *Ecken* 20 px. Kein Rahmen, kein Schatten.
-8. **Bänder:** Abschnitt → *Hintergrund ändern* → Farbe Salbei bzw. Weizen.
-9. **Handy-Ansicht prüfen:** Titelkasten unter das Foto rutschen lassen, Größen aus Abschnitt 3.
-10. **Abnahme:** Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen.
+8. **Fotos rund:** Bild anklicken → *Design* → *Ecken* 20 px. Kein Rahmen, kein Schatten.
+9. **Bänder:** Abschnitt → *Hintergrund ändern* → Farbe Salbei bzw. Weizen.
+10. **Handy-Ansicht prüfen:** Titelkasten unter das Foto rutschen lassen, Größen aus Abschnitt 3.
+11. **Abnahme:** Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen.
 
 ---
 
@@ -167,4 +210,6 @@ Regeln:
 - [ ] Alle Fotos mit 20 px Rundung, ohne Rahmen und Schatten?
 - [ ] Keine weiße Schrift auf Gelb oder Grün?
 - [ ] Fließtext mindestens 18 px?
+- [ ] Du-Ansprache und Gendern mit Doppelpunkt eingehalten?
+- [ ] Höchstens 6 Menüpunkte, Startseite höchstens 8 Abschnitte?
 - [ ] Handy-Ansicht geprüft?
