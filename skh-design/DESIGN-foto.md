@@ -165,10 +165,22 @@ Menüpunkt „Mitglied sein“).
 | Unsere Zertifikate (Logos) | Seite „Für Einrichtungen“ | richtet sich an Einrichtungen |
 | Kontaktformular | Seite „Kontakt“ | Startseite kürzer |
 
-**Welche Fotos wo (vorhandene Bilder der Webseite prüfen):** Titelfoto: Singgruppe in einer
-Klinik (quer, warmes Licht). Frage 1–3: Singleiterin mit Gruppe, Mitgliedertreffen, Ausschnitt
-Singende Landkarte. Weiterbildung: Porträt einer Dozentin/eines Dozenten (hochkant).
-Aktuelles: die Bilder der jeweiligen Beiträge (z. B. „Martina und Uwe“, „Alwine“, „Nicole“).
+**Welche Fotos wo:** Die Vorschau verwendet Fotos, die schon auf der Webseite sind
+(heruntergeladen in `skh-design/fotos/`, nur für die Vorschau verkleinert). Der Dateiname sagt,
+wo das Foto steht:
+
+| Datei | Abschnitt | Motiv |
+|---|---|---|
+| `titel-singen-im-saal.jpg` | Titelfoto | große Singgruppe mit erhobenen Armen, warmes Licht |
+| `frage1-singleiterin.jpg` | Frage 1 (Singleiter:in werden) | Singleiterin singt mitten in der Gruppe |
+| `frage2-mitglieder.jpg` | Frage 2 (Mitglied werden) | lachende Mitgliedergruppe |
+| `frage3-singgruppe.jpg` | Frage 3 (Singgruppe finden) | Singkreis von hinten |
+| `weiterbildung-monika-ananda.jpg` | Weiterbildung | Porträt Dozentin Monika Ananda Wiese |
+| `aktuell-martina-uwe.jpg`, `aktuell-alwine.jpg`, `aktuell-nicole.jpg` | Aktuelles | Fotos der jeweiligen Beiträge |
+
+In Wix sind diese Fotos bereits in der Medienverwaltung – dort das **Original** verwenden, nicht
+die verkleinerten Dateien aus diesem Ordner. **Vor der Veröffentlichung prüfen:** Liegt für jede
+erkennbare Person eine Einwilligung vor, die auch die neue Verwendung (z. B. als Titelfoto) abdeckt?
 
 **Hinweis Hörbeispiele:** In der Vorschau sind die Abspiel-Knöpfe ohne Funktion. In Wix
 bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 px Rundung) anpassen.

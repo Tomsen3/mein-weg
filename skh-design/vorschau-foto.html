@@ -39,6 +39,8 @@ h1,h2,h3{margin:0;font-weight:400;letter-spacing:-.015em;text-wrap:balance}
 /* photo placeholder: warm light, rounded 20px */
 .photo{border-radius:20px;overflow:hidden;position:relative;max-width:100%;
   background:radial-gradient(120% 90% at 78% 18%,#f6d27a 0%,rgba(246,210,122,0) 45%),linear-gradient(150deg,#b99c64,#7b6a44 55%,#4a4430)}
+.photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero .panel{position:relative}
 .photo .cap{position:absolute;right:14px;top:14px;max-width:calc(100% - 28px);background:var(--white);color:var(--anthra);font-size:14px;line-height:1.3;padding:5px 12px;border-radius:9999px}
 .photo.g{background:radial-gradient(110% 80% at 20% 20%,#e9ecb2 0%,rgba(233,236,178,0) 45%),linear-gradient(160deg,#9fb07a,#64754a 55%,#3a4a2a)}
 .photo.w{background:radial-gradient(110% 80% at 70% 25%,#fbe3b0 0%,rgba(251,227,176,0) 50%),linear-gradient(170deg,#d5b89a,#a58466 55%,#6d5540)}
@@ -131,7 +133,7 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 }
 </style>
 
-<div class="note">Stilvorschau „Foto“ (nach Refero-Stil sweetgreen, in den Logo-Farben) mit Struktur und Texten von singende-krankenhaeuser.de, gestrafft. Die Farbflächen stehen für eure Fotos.</div>
+<div class="note">Stilvorschau „Foto“ (nach Refero-Stil sweetgreen, in den Logo-Farben) mit Struktur und Texten von singende-krankenhaeuser.de, gestrafft. Fotos von der bestehenden Webseite.</div>
 
 <div class="notice"><b>Jahrestagung 2027:</b> Programm, Workshops, Liedernacht und Anmeldung · <a href="#">Zur Jahrestagung →</a></div>
 
@@ -142,8 +144,8 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 </div></header>
 
 <div class="hero"><div class="wrap">
-  <div class="photo" role="img" aria-label="Platzhalter: großes Foto einer Singgruppe im warmen Licht">
-    <span class="cap">Hier Foto: Singgruppe in einer Klinik, warmes Licht</span>
+  <div class="photo">
+    <img src="fotos/titel-singen-im-saal.jpg" alt="Große Singgruppe mit erhobenen Armen in einem hellen Saal">
     <div class="panel">
       <span class="kicker">Gemeinnütziges Netzwerk seit 2010</span>
       <h1>Lebenskraft Singen</h1>
@@ -156,9 +158,9 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 <section class="ask"><div class="wrap">
   <div class="head"><div><span class="eyebrow">Sei dabei</span><h2 class="h2">Begleitet dich auch schon ein Lied?</h2></div></div>
   <div class="grid3">
-    <article><div class="photo" role="img" aria-label="Platzhalter-Foto"><span class="cap">Foto: Singleiterin mit Gruppe</span></div><span class="num">Frage 1</span><h3>Du willst Singleiter:in werden?</h3><p>Zwei Zertifikate, berufsbegleitend an Wochenenden – für Menschen aus Musik, Pflege, Therapie und Seelsorge.</p><a class="pill gold" href="#">Ja!</a></article>
-    <article><div class="photo g" role="img" aria-label="Platzhalter-Foto"><span class="cap">Foto: Mitglieder beim Treffen</span></div><span class="num">Frage 2</span><h3>Du willst Mitglied werden?</h3><p>Trag das Netzwerk mit. Die Mitgliedschaft ist auch Voraussetzung für die Weiterbildung.</p><a class="pill gold" href="#">Ja!</a></article>
-    <article><div class="photo w" role="img" aria-label="Platzhalter-Foto"><span class="cap">Foto: Ausschnitt Singende Landkarte</span></div><span class="num">Frage 3</span><h3>Du suchst eine Singgruppe in deiner Nähe?</h3><p>Auf der Singenden Landkarte findest du offene Gruppen – ohne Noten, ohne Vorkenntnisse.</p><a class="pill gold" href="#">Ja!</a></article>
+    <article><div class="photo"><img src="fotos/frage1-singleiterin.jpg" alt="Singleiterin singt mit Freude inmitten einer Gruppe"></div><span class="num">Frage 1</span><h3>Du willst Singleiter:in werden?</h3><p>Zwei Zertifikate, berufsbegleitend an Wochenenden – für Menschen aus Musik, Pflege, Therapie und Seelsorge.</p><a class="pill gold" href="#">Ja!</a></article>
+    <article><div class="photo g"><img src="fotos/frage2-mitglieder.jpg" alt="Gruppe von Mitgliedern lacht gemeinsam in die Kamera"></div><span class="num">Frage 2</span><h3>Du willst Mitglied werden?</h3><p>Trag das Netzwerk mit. Die Mitgliedschaft ist auch Voraussetzung für die Weiterbildung.</p><a class="pill gold" href="#">Ja!</a></article>
+    <article><div class="photo w"><img src="fotos/frage3-singgruppe.jpg" alt="Singgruppe sitzt im Kreis"></div><span class="num">Frage 3</span><h3>Du suchst eine Singgruppe in deiner Nähe?</h3><p>Auf der Singenden Landkarte findest du offene Gruppen – ohne Noten, ohne Vorkenntnisse.</p><a class="pill gold" href="#">Ja!</a></article>
   </div>
 </div></section>
 
@@ -175,7 +177,7 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
     </ul>
     <div class="acts"><a class="pill gold" href="#">Wichtige Infos</a><a class="ghost" href="#">Unsere Dozent:innen →</a></div>
   </div>
-  <div class="photo g" role="img" aria-label="Platzhalter: Porträt einer Dozentin"><span class="cap">Hier Foto: Dozent:in im Porträt</span></div>
+  <div class="photo g"><img src="fotos/weiterbildung-monika-ananda.jpg" alt="Porträt der Dozentin Monika Ananda Wiese"></div>
 </div></section>
 
 <section class="dates"><div class="wrap">
@@ -204,9 +206,9 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 <section class="news"><div class="wrap">
   <div class="head"><div><span class="eyebrow">Aus unserem Netzwerk</span><h2 class="h2">Aktuelles</h2></div><a class="ghost" href="#">Alle Beiträge →</a></div>
   <div class="grid3">
-    <article><div class="photo w" role="img" aria-label="Platzhalter-Foto"><span class="cap">Foto: Martina und Uwe</span></div><span class="eyebrow">Rückblick</span><h3>Rhythmus, der weiterklingt</h3><p>Sommerakademie in Bad Herrenalb mit Martina Baumann und Uwe Loda: Bodypercussion, Bodysongs und viel Spielfreude.</p><a class="ghost" href="#">Weiterlesen →</a></article>
-    <article><div class="photo" role="img" aria-label="Platzhalter-Foto"><span class="cap">Foto: Alwine Deegen</span></div><span class="eyebrow">Blog des Monats</span><h3>Singen mit Trauernden und Sterbenden</h3><p>Der Händedruck wird fester, das Gesicht entspannt sich, die Atmung beruhigt sich – Singleitungen berichten.</p><a class="ghost" href="#">Weiterlesen →</a></article>
-    <article><div class="photo g" role="img" aria-label="Platzhalter-Foto"><span class="cap">Foto: Nicole</span></div><span class="eyebrow">MitgLIEDER im Fokus</span><h3>Nicole Rubinstein-Groß: „Ich will mich spüren“</h3><p>Eine Psychotherapeutin verbindet Psyche und Singen – und singt einmal im Monat mit Senior:innen.</p><a class="ghost" href="#">Weiterlesen →</a></article>
+    <article><div class="photo w"><img src="fotos/aktuell-martina-uwe.jpg" alt="Martina Baumann und Uwe Loda mit Instrumenten"></div><span class="eyebrow">Rückblick</span><h3>Rhythmus, der weiterklingt</h3><p>Sommerakademie in Bad Herrenalb mit Martina Baumann und Uwe Loda: Bodypercussion, Bodysongs und viel Spielfreude.</p><a class="ghost" href="#">Weiterlesen →</a></article>
+    <article><div class="photo"><img src="fotos/aktuell-alwine.jpg" alt="Alwine Deegen mit Gitarre"></div><span class="eyebrow">Blog des Monats</span><h3>Singen mit Trauernden und Sterbenden</h3><p>Der Händedruck wird fester, das Gesicht entspannt sich, die Atmung beruhigt sich – Singleitungen berichten.</p><a class="ghost" href="#">Weiterlesen →</a></article>
+    <article><div class="photo g"><img src="fotos/aktuell-nicole.jpg" alt="Nicole Rubinstein-Groß mit Ukulele"></div><span class="eyebrow">MitgLIEDER im Fokus</span><h3>Nicole Rubinstein-Groß: „Ich will mich spüren“</h3><p>Eine Psychotherapeutin verbindet Psyche und Singen – und singt einmal im Monat mit Senior:innen.</p><a class="ghost" href="#">Weiterlesen →</a></article>
   </div>
 </div></section>
 
