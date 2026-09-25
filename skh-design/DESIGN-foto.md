@@ -5,7 +5,8 @@ Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante:
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
 **Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html` ·
-**Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html`
+**Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html` ·
+**Mitglied sein** (Ziel des Buttons „Mitglied werden“) → `SEITE-mitglied-sein.md` + `vorschau-foto-mitglied-sein.html`
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
 Mittelpunkt, die Gestaltung drumherum ist ruhig. Es ist so geschrieben, dass eine Person
@@ -126,9 +127,11 @@ Regeln:
   Häkchen-Liste, Etiketten, Filter, Hinweiskasten): beschrieben in `SEITE-weiterbildung.md`, Abschnitt 5.
   Dazu Sprungleiste (statt Aufklappmenü), Formular-Karte und Ansprechperson ohne Foto: `SEITE-sing-mit.md`, Abschnitt 6.
   Zitat mit Porträt, Siegel-Reihe, Ablauf-Liste und Ansprechperson mit Foto: `SEITE-einrichtungen.md`, Abschnitt 6.
+  Beitrags-Reihe, kompakte Terminliste und Aufklapptext: `SEITE-mitglied-sein.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
-  Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge → Mitglied sein).
+  Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md` und `SEITE-mitglied-sein.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -146,14 +149,14 @@ Gendern wie auf der bestehenden Seite mit Doppelpunkt (Singleiter:in, Patient:in
 
 **Menü (6 Punkte):** Weiterbildung · Sing mit · Singende Landkarte · Für Einrichtungen ·
 Termine · Über uns – rechts daneben der gelbe Button **„Mitglied werden“** (ersetzt den
-Menüpunkt „Mitglied sein“).
+Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe `SEITE-mitglied-sein.md`).
 
 | Nr. | Fläche | Abschnitt | Inhalt (von der bestehenden Seite) |
 |---|---|---|---|
 | – | Weizen | schmale Hinweisleiste | „Jahrestagung 2027“ mit Link (ersetzt den Menüpunkt mit 9 Unterseiten) |
 | 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte, Button „Mitglied werden“ |
 | 1 | Titelfoto + Tiefgrün-Kasten | **Lebenskraft Singen** | Leitspruch, Zitat „Ein Lied kann keine Wunder vollbringen …“, Buttons „Zur Weiterbildung“ und „Singgruppe in deiner Nähe“ |
-| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | die drei Fragen mit „Ja!“-Button: Singleiter:in werden · Mitglied werden · Singgruppe in der Nähe |
+| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | die drei Fragen mit „Ja!“-Button: Singleiter:in werden · Mitglied werden (Mitgliedschaft = Voraussetzung fürs **Zertifikat**, nicht für die Weiterbildung – korrigiert 25.09.2026) · Singgruppe in der Nähe |
 | 3 | Salbei | **Singen wirkt – und wir zeigen dir wie** | Einleitungstext, Faktenliste (Zertifikate, Wochenenden, Mitgliedschaft, Schnupperkurs), Links „Wichtige Infos“ und „Dozent:innen“ |
 | 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“, Links Terminkalender und Terminvorschau 2027 |
 | 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |
@@ -167,11 +170,11 @@ Menüpunkt „Mitglied sein“).
 |---|---|---|
 | Menüpunkt JAHRESTAGUNG (9 Unterseiten) | Hinweisleiste oben + eigener Bereich | zeitlich begrenzt, sprengt das Menü |
 | Menüpunkte KONTAKT, SHOP | Fußzeile | selten gesucht, dort erwartet man sie |
-| Menüpunkt MITGLIED SEIN | gelber Button „Mitglied werden“ | wichtigste Handlung, soll auffallen |
+| Menüpunkt MITGLIED SEIN | gelber Button „Mitglied werden“ → Seite `/mitglied-sein` (`SEITE-mitglied-sein.md`) | wichtigste Handlung, soll auffallen |
 | Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“ | doppelte Information vermeiden |
 | „Was wir wollen“ (Vision) | Seite „Über uns“ | Startseite zeigt Angebote, nicht Leitbild |
 | YouTube-Kanal | Fußzeile | ein Link reicht |
-| Feedback des Monats | Seite „MitgLIEDER im Fokus“ | langer Text, passt dort besser |
+| Feedback des Monats | Seite „Mitglied sein“, Bereich „MitgLIEDER im Fokus“ (`#fokus`) – „MitgLIEDER im Fokus“ ist keine eigene Seite, nur eine Sprungmarke | langer Text, passt dort besser |
 | Unsere Zertifikate (6 Logos) | 3 Einrichtungs-Logos → „Für Einrichtungen“; 2 Singleiter-Logos → „Sing mit“ (Zertifikat); „Musikalischer Botschafter“ → „Über uns“ | jedes Logo dort, wo man das Zertifikat bekommt (Einzelheiten: `SEITE-einrichtungen.md`, Abschnitt 2) |
 | Kontaktformular | Seite „Kontakt“ | Startseite kürzer |
 

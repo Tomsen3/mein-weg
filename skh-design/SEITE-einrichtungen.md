@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-einrichtungen.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, und `SEITE-sing-mit.md`, Abschnitt 6 ·
-Nachbarseiten: `vorschau-foto-sing-mit.html`, `vorschau-foto-weiterbildung.html`, `vorschau-foto.html` · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto-sing-mit.html`, `vorschau-foto-weiterbildung.html`, `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`), `vorschau-foto.html` · Ist-Zustand: `IST-STRUKTUR.md`
 
 Dieses Dokument erklärt, **wie die neue Seite „Für Einrichtungen“ aufgebaut ist, woher jeder Inhalt stammt,
 was mit den Nachbarseiten zusammengelegt oder verlinkt wurde und warum**. Eine Person ohne Vorkenntnisse
@@ -67,7 +67,7 @@ in einem Satz zusammen und verlinken dorthin.
 |---|---|---|---|---|
 | Zertifizierung einer Einrichtung (Voraussetzungen, Ablauf, Anträge, Vereinbarung, Richtlinien) | nur Für Einrichtungen | **Für Einrichtungen** (`#voraussetzungen`, `#antrag`) | – | eindeutig |
 | **Vergütung / Honorarempfehlung 90 €** | Sing mit („90 € pro Singstunde“) **und** Richtlinien (90 €/Std. brutto + Vorbereitungszeit + 3 Std. bei Angestellten) | **Für Einrichtungen** (`#verguetung`) | Sing mit: große Zahl bleibt, Text gekürzt, Link „Vergütung im Detail →“ | Die Einrichtung zahlt, und die Vergütung ist Zertifizierungsvoraussetzung. Die Zahl darf auf Sing mit stehen bleiben (Singleiter:innen suchen genau sie), die Einzelheiten nur hier. „pro Singstunde“ wurde an die Richtlinien angeglichen: „pro Stunde, brutto“. |
-| Mitgliedschaft als Einrichtung (350 € / 175 €, 15 % für Mitarbeitende) | Mitglied sein, Beitrittserklärung | **Mitglied sein** | Für Einrichtungen: Tiefgrün-Band mit **einem** Satz zu Beitrag und Rabatt + Button; Weiterbildung: neuer Satz „Arbeitest du in einer Mitgliedseinrichtung? Dann gilt der Rabatt auch für dich.“ mit Link hierher | Der Beitrag ist für Leitungen eine Entscheidungsgröße und muss hier sichtbar sein; gepflegt wird er auf „Mitglied sein“. |
+| Mitgliedschaft als Einrichtung (350 € / 175 €, 15 % für Mitarbeitende) | Mitglied sein, Beitrittserklärung | **Mitglied sein** | Für Einrichtungen: Tiefgrün-Band mit **einem** Satz zu Beitrag und Rabatt + Button; Weiterbildung: neuer Satz „Arbeitest du in einer Mitgliedseinrichtung? Dann gilt der Rabatt auch für dich.“ – verlinkt seit 25.09.2026 auf **Mitglied sein** (`#vorteile`) statt hierher; Button „Mitglied werden“ → Mitglied sein | Der Beitrag ist für Leitungen eine Entscheidungsgröße und muss hier sichtbar sein; gepflegt wird er auf „Mitglied sein“ (`SEITE-mitglied-sein.md`). |
 | Liste der zertifizierten Einrichtungen | Singende Landkarte | **Singende Landkarte** | Für Einrichtungen: zwei Links („Zertifizierte Einrichtungen auf der Singenden Landkarte“, „Singleiter:in aus der Region finden“) | Die Landkarte wird gepflegt, eine zweite Liste würde veralten. |
 | Singleiter:in werden (für eigene Mitarbeitende) | Weiterbildung | **Weiterbildung** | Für Einrichtungen: Karte „Weg 2 – Eigene Mitarbeitende weiterbilden“ mit Link | eine Weiterbildungsseite |
 | Singleiter-Zertifikat beantragen | Sing mit | **Sing mit** | – (hier nicht nötig) | Einrichtungs- und Singleiter-Zertifikat sind verschiedene Dinge – nicht vermischen |
@@ -220,7 +220,8 @@ Name nicht daneben steht (auf dieser Seite steht er daneben, deshalb `alt=""`).
    (Anker `verguetung`) setzen und „pro Singstunde“ durch „pro Stunde, brutto“ ersetzen; die beiden Singleiter-Logos
    in die Formular-Karten setzen – genau wie in `vorschau-foto-sing-mit.html`.
 5. **Weiterbildung ergänzen:** im Tiefgrün-Band den Satz „Arbeitest du in einer Mitgliedseinrichtung? …“ mit Link
-   hierher (wie in `vorschau-foto-weiterbildung.html`).
+   auf `/mitglied-sein` (Anker `vorteile`), wie in `vorschau-foto-weiterbildung.html`. Die Buttons „Mitglied werden“
+   dieser Seite verlinken auf `/mitglied-sein`.
 6. **Startseite:** Abschnitt „Unsere Zertifikate“ löschen – **erst nachdem** die Logos hier und auf Sing mit stehen.
 7. **PDFs:** vorhandene Dateien weiterverwenden (Antrag Krankenhäuser, Antrag Pflege, Vereinbarung, Richtlinien,
    Beitrittserklärung). Werden sie korrigiert (Abschnitt 7), in Wix über *Datei ersetzen* austauschen, damit die
@@ -265,7 +266,8 @@ Name nicht daneben steht (auf dieser Seite steht er daneben, deshalb `alt=""`).
     zertifiziert ist; sonst Funktion mit „damals“ kennzeichnen oder ein neueres Zitat einholen.
 12. **Rabatt ohne eigene Mitgliedschaft – und Singleiter-Zertifikat?** Mitarbeitende von Mitgliedseinrichtungen bekommen
     15 %. Reicht die Mitgliedschaft der Einrichtung auch als Voraussetzung für ihr **Singleiter-Zertifikat**, oder
-    brauchen sie eine eigene? → Klären und auf Sing mit (`#zertifikat`) einen Satz ergänzen.
+    brauchen sie eine eigene? → Klären und auf Sing mit (`#zertifikat`) einen Satz ergänzen. Auf „Mitglied sein“ steht bis
+    dahin ein Platzhalter-Satz (`SEITE-mitglied-sein.md`, Abschnitt 7, Punkt 9).
 13. **Ansprache:** Empfehlung „du“ (Abschnitt 4) bestätigen lassen.
 14. **Einwilligungen** der fotografierten Personen und **größeres Titelfoto** (Abschnitt 5).
 

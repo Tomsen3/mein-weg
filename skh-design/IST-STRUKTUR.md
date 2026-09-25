@@ -20,7 +20,7 @@ ausgehen und was dabei verschoben oder gekürzt wurde. Wie die Struktur in der V
 | SING MIT | Singleiter:in werden, Zertifikat beantragen |
 | SINGENDE LANDKARTE | – |
 | FÜR EINRICHTUNGEN | Wie Singende Einrichtung werden?, Voraussetzungen Zertifizierung, Antrag auf Zertifizierung (nur Sprungmarken auf `/unsere-einrichtungen`) |
-| MITGLIED SEIN | Wie werde ich Mitglied?, MitgLIEDER im Fokus |
+| MITGLIED SEIN | Wie werde ich Mitglied?, MitgLIEDER im Fokus (nur Sprungmarken auf `/mitglied-sein`) |
 | TERMINE | – |
 | KONTAKT | – |
 | SHOP | – |
@@ -100,6 +100,23 @@ Einrichtungs-PDFs nennen den früheren Vorstand, die Richtlinien einen veraltete
 die Anträge verlinken tote Adressen der alten Webseite. Zwei Wix-Stockfotos ohne Bezug.
 Die Startseite zeigt unter „Unsere Zertifikate“ sechs Logos, davon nur drei für Einrichtungen.
 Wie der Bereich neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-einrichtungen.md`.
+
+## Bereich MITGLIED SEIN (ausgelesen am 25.09.2026)
+
+Die Menü-Unterpunkte „Wie werde ich Mitglied?“ und „MitgLIEDER im Fokus“ sind **keine eigenen Seiten**, sondern
+Sprungmarken auf derselben Seite `/mitglied-sein`.
+
+| Abschnitt auf `/mitglied-sein` | Inhalt |
+|---|---|
+| Was bringt’s? | 6 Vorteile: 15 % Rabatt (auch für Mitarbeitende von Mitgliedseinrichtungen), News, Netzwerk, kostenlose Online-Angebote, telefonische Beratung, gemeinnütziger Auftrag |
+| Guitar- & Ukulele-Factory & Singleiter im Gespräch | Online-Angebote für Mitglieder; Buttons „Guitar- Ukulele-Factory 2026“ und „Austauschrunden 2026“ (**beide auf dieselbe PDF**, die beide Reihen enthält) |
+| Wie werde ich Mitglied? | Beiträge 80 €/40 € und 350 €/175 €, Sandra Roß-Lünenschloß, Beitrittsformular (PDF), Infoflyer (PDF) |
+| MitgLIEDER im Fokus | Lied des Monats (Nicole Rubinstein-Gross, „Ich will mich spüren“, Text & Noten, Audio); Anfang der Geschichte steht auf der Startseite |
+
+Auffällig: Beide Fassungen des Infoflyers nennen 10 % statt 15 % Rabatt und Vera Kimmig statt Sandra als Ansprechperson
+für die Mitgliedschaft; auf der Seite ist die ältere der zwei Flyer-Fassungen verlinkt. Das Termin-PDF enthält keinen
+Hinweis auf den Online-Zugang. Die Kontaktseite enthält Platzhalter-Links `info@website.com` aus der Wix-Vorlage.
+Wie der Bereich neu aufgebaut und mit den Nachbarseiten abgestimmt wird: `SEITE-mitglied-sein.md`.
 
 ## Beobachtungen
 

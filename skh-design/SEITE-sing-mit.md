@@ -3,7 +3,7 @@
 Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto-sing-mit.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5 ·
-Nachbarseiten: `vorschau-foto-weiterbildung.html`, `vorschau-foto-einrichtungen.html` (`SEITE-einrichtungen.md`) · Ist-Zustand: `IST-STRUKTUR.md`
+Nachbarseiten: `vorschau-foto-weiterbildung.html`, `vorschau-foto-einrichtungen.html` (`SEITE-einrichtungen.md`), `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`) · Ist-Zustand: `IST-STRUKTUR.md`
 
 Dieses Dokument erklärt, **wie die neue Seite „Sing mit“ aufgebaut ist, woher jeder Inhalt stammt,
 was mit der Weiterbildungsseite zusammengelegt oder verlinkt wurde und warum**. Eine Person ohne
@@ -57,9 +57,9 @@ zusammen und verlinken dorthin. So muss bei einer Änderung (z. B. Modulzahl) nu
 | Wie viele Module (5 / 4 / 2) | Weiterbildung; Sing mit nur „erforderliche Modulzahl“ | **Weiterbildung** (Bereich bekommt die Sprungmarke `#modulzahl`) | Sing mit: Link „So viele Module brauchst du →“ | eine Zahl, ein Ort |
 | Pflichtmodul | Weiterbildung: „ein Pflichtmodul“ (ohne Namen); nur im Antrag benannt | **beide** nennen den Namen | – | ist Bedingung fürs Zertifikat *und* Planungshilfe für die Weiterbildung – ein kurzer Name darf doppelt stehen |
 | Zertifikat beantragen | nur Sing mit | **Sing mit** (Sprungmarke `#zertifikat`) | Weiterbildung: neuer Link „Module geschafft? So beantragst du dein Zertifikat →“ | Wer die Module fertig hat, landet meist auf der Weiterbildungsseite und muss den Antrag finden |
-| Mitgliedschaft als Voraussetzung, 15 % Rabatt | beide | **Mitglied sein** | beide Seiten: je ein kurzes Band in Tiefgrün mit Button | ist die wichtigste Handlung auf beiden Seiten |
+| Mitgliedschaft als Voraussetzung, 15 % Rabatt | beide | **Mitglied sein** | beide Seiten: je ein kurzes Band in Tiefgrün mit Button; Button „Mitglied werden“ (Kopfleiste und Band) → Mitglied sein | ist die wichtigste Handlung auf beiden Seiten (Seite ausgearbeitet 25.09.2026: `SEITE-mitglied-sein.md`) |
 | Ansprechperson | Weiterbildung: Vera Kimmig; Sing mit: Sonja Heim | getrennt nach Aufgabe | Sing mit verlinkt auf die Beratung (`#beratung`) | **Vera** = Fragen zu Modulen und Anrechnung; **Sonja** = Antrag entgegennehmen und Urkunde. So steht es auch im Antragsformular. |
-| Unterstützung für Mitglieder (Supervision, Guitar- & Ukulele-Factory, „Singleiter:innen im Gespräch“) | Mitglied sein; Sing mit nur Satz ohne Link | **Mitglied sein** | Sing mit: Kurzfassung + Link „Mehr zur Mitgliedschaft →“ | behebt den toten Hinweis (Nr. 2 oben) |
+| Unterstützung für Mitglieder (Supervision, Guitar- & Ukulele-Factory, „Singleiter:innen im Gespräch“) | Mitglied sein; Sing mit nur Satz ohne Link | **Mitglied sein** (`#unterstuetzung`) | Sing mit: Kurzfassung + Link „Mehr zur Mitgliedschaft →“ auf `#unterstuetzung` | behebt den toten Hinweis (Nr. 2 oben) |
 | Newsletter | fast überall | Fußbereich des Tiefgrün-Bands | – | wie Weiterbildung |
 | Honorarempfehlung 90 € und Vergütung der Singleitung | Sing mit („pro Singstunde“) und Richtlinien für Einrichtungen | **Für Einrichtungen** (`#verguetung`) | Sing mit: Zahl bleibt, jetzt „pro Stunde, brutto“ wie in den Richtlinien, Link „Vergütung im Detail →“ | Die Einrichtung zahlt; Einzelheiten (Vorbereitungszeit, Angestellte) stehen nur dort (ergänzt 25.09.2026, siehe `SEITE-einrichtungen.md`) |
 | Singleiter-Logos (bisher Startseite „Unsere Zertifikate“) | Startseite | **Sing mit**, je Formular-Karte | – | Logo dort, wo man das Zertifikat beantragt |
@@ -168,7 +168,7 @@ Gelb, Weiß und Gelb auf Tiefgrün) – alle über 4,5 : 1. Die gelbe Linie ist 
 5. **PDFs:** Die drei vorhandenen Dateien weiterverwenden (Antrag Krankenhäuser, Antrag Pflege,
    Beitrittserklärung) und die Leitlinien. Nichts neu hochladen, sonst ändern sich die Links.
 6. **Links reparieren:** „Singende Landkarte“ → `/singende-landkarte`; „Was die Forschung sagt“ → `/singforschung`;
-   „Mehr zur Mitgliedschaft“ → `/mitglied-sein`.
+   „Mehr zur Mitgliedschaft“ → `/mitglied-sein` (Anker `unterstuetzung`); Buttons „Mitglied werden“ → `/mitglied-sein`.
 7. **Telefonnummer** als Text **und** als Link `tel:+4975195865244`; E-Mail als `mailto:`-Link.
 8. **Zitat-Slideshows** durch je **ein** festes Zitat ersetzen (Ursula im Titel, Simon bei „Singleiter:in sein“).
    Grund: Automatisch wechselnde Folien lassen sich schlecht lesen, stören Vorleseprogramme und
