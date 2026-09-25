@@ -31,7 +31,7 @@ Auslesen am 25.09.2026 enthielt sie von oben nach unten:
 |---|---|---|
 | 1 | Titel, zwei Sätze: „Unser Veranstaltungskalender ist prall gefüllt mit spannenden sikra-internen Events! Freu dich auf Weiterbildungsmodule, Online-Schnupperkurse, Supervisions-Runden, die Gitarre- und Ukulele-Factory und unsere beliebten Liedernächte …“ | „sikra-intern“ ist Vereinsjargon; die Liedernacht steht gar nicht im Kalender |
 | 2 | „Gratis-Schnupperkurs“: zu jedem Modul vorher online, i. d. R. freitags 18:00–18:45 Uhr; Buttons **SCHNUPPERKURS-TERMINE** (PDF) und **zum Online-Schnupperkurs** (Teams-Link); „direkt über den Browser, ohne Installation und ohne Microsoft-Konto“ | gut – der einzige Ort mit dem aktuellen Schnupperkurs-PDF und dem Zugang |
-| 3 | „Guitar- & Ukulele-Factory & Singleiter im Gespräch“: Buttons **MITGLIEDERTERMINE** (PDF) und **Zum Online-Angebot für Mitglieder** (**Teams-Link, öffentlich sichtbar**); Satz „Dieses Online-Angebot ist ausschließlich für Mitglieder“ | **Der Teams-Link für Mitglieder steht öffentlich im Netz.** Siehe Abschnitt 7, Punkt 1. |
+| 3 | „Guitar- & Ukulele-Factory & Singleiter im Gespräch“: Buttons **MITGLIEDERTERMINE** (PDF) und **Zum Online-Angebot für Mitglieder** (**Teams-Link, öffentlich sichtbar**); Satz „Dieses Online-Angebot ist ausschließlich für Mitglieder“ | **Der Teams-Link für Mitglieder steht öffentlich im Netz.** |
 | 4 | Veranstaltungsliste (Wix-Events): Modul F, Modul P, Come-together – je Datum, Ort, Untertitel, „Infos & Anmeldung“ | nur **drei** Termine; Module in Österreich, Schnupperkurse und Jahrestagung fehlen |
 | 5 | Newsletter, Spenden (Rumänien-Projekt), Kontakt Sonja Heim, Vera Kimmig, Sandra Roß-Lünenschloß | dieselben Kästen wie auf anderen Seiten |
 
@@ -40,7 +40,7 @@ Auslesen am 25.09.2026 enthielt sie von oben nach unten:
 | Terminart | Quelle heute | Automatisch? |
 |---|---|---|
 | Module in Deutschland, Come-together | **Wix-Events-App** (Veranstaltungen mit eigener Seite `/event-details/…`). Nur **3 Veranstaltungen** angelegt: Modul F, Modul P, Come-together. Dieselben 3 erscheinen auf `/termine` und auf der Startseite. | ja (vergangene fallen weg) |
-| Anmeldung zu diesen Modulen | Wix-Events ist auf **externe Anmeldung** gestellt: „Anmelden“ führt nach `https://sonjaheim9.wixsite.com/my-site-3/anmeldung` (kostenlose Wix-Adresse statt `singende-krankenhaeuser.de/anmeldung`) | – (Abschnitt 7, Punkt 2) |
+| Anmeldung zu diesen Modulen | Wix-Events ist auf **externe Anmeldung** gestellt: „Anmelden“ führt nach `https://sonjaheim9.wixsite.com/my-site-3/anmeldung` (kostenlose Wix-Adresse statt `singende-krankenhaeuser.de/anmeldung`) | – (Abschnitt 7, Punkt 1) |
 | Alle Module 2026 beider Zweige (auch vergangene) | **handgepflegte** Kästen auf den Zweig-Seiten `/kranken-und-gesundheitshäuser` und `/pflege-und-senioren`, je mit Modul-PDF | nein |
 | Module in Österreich | nur auf den Zweig-Seiten und im Flyer; Anmeldung über Sybille Mikula (singende-krankenhaeuser.at) | nein |
 | Schnupperkurse | nur als **PDF** („Schnupperkurstermine 2026“) | nein |
@@ -68,10 +68,10 @@ handgepflegte Kästen auf vier Seiten verteilt.
 | Fund | Wo | Folge |
 |---|---|---|
 | Hinweise „regelmäßig wiederkehrend (nächster Termin …)“ auf den Zweig-Seiten widersprechen der Terminvorschau 2027 in mehreren Fällen: Modul B „Juni 2027“ (PDF: März), Tönender Atem „März 2027“ (PDF: Juni), Mit der Stimme zur Stärke „November 2027“ (PDF: Juli), Modul P „Oktober 2027“ (PDF: November), Musik als Brücke „Juli 2027“ (steht 2027 gar nicht im Plan) | Zweig-Seiten | ein Grund mehr für **eine** Terminquelle (Abschnitt 2) |
-| Liedernacht-Ort: „Evangelische Stellinger Kirche“ (Programm) und „**Stellenberger** Kirche, Molkenbuhrstraße 8“ (Seite Liedernacht) | Jahrestagung | Vorschau schreibt „Stellinger Kirche“; Abschnitt 7, Punkt 6 |
+| Liedernacht-Ort: „Evangelische Stellinger Kirche“ (Programm) und „**Stellenberger** Kirche, Molkenbuhrstraße 8“ (Seite Liedernacht) | Jahrestagung | Vorschau schreibt „Stellinger Kirche“; Abschnitt 7, Punkt 5 |
 | Tagungshotel „Hagenbecker**straße** 150“ | Jahrestagung | Schreibweise prüfen (vermutlich „Hagenbeckstraße“); Vorschau nennt nur „Parkhotel Hagenbeck, Hamburg“ |
-| Jahrestagung: Mitglieder zahlen 210 € statt 280 € (Frühbucher) bzw. 250 € statt 320 € – das sind **25 % bzw. 22 %** weniger, nicht 15 % | Anmeldung Jahrestagung | „Mitglied sein“ und Startseite sagen „15 % auf Module **und Jahrestagungen**“. Abschnitt 7, Punkt 7 |
-| Modul V „Mit dem Herzen pflegen“ (Pflichtmodul Pflege, 23.–25.10.2026, Einbeck) steht **weder** auf der Pflege-Seite **noch** in Wix-Events | Flyer, alte Jahresplanung | Findet es statt? Abschnitt 7, Punkt 3 – **wichtig**, weil es das Pflichtmodul des Pflege-Zweigs ist |
+| Jahrestagung: Mitglieder zahlen 210 € statt 280 € (Frühbucher) bzw. 250 € statt 320 € – das sind **25 % bzw. 22 %** weniger, nicht 15 % | Anmeldung Jahrestagung | „Mitglied sein“ und Startseite sagen „15 % auf Module **und Jahrestagungen**“. Abschnitt 7, Punkt 6 |
+| Modul V „Mit dem Herzen pflegen“ (Pflichtmodul Pflege, 23.–25.10.2026, Einbeck) steht **weder** auf der Pflege-Seite **noch** in Wix-Events | Flyer, alte Jahresplanung | Findet es statt? Abschnitt 7, Punkt 2 – **wichtig**, weil es das Pflichtmodul des Pflege-Zweigs ist |
 
 ---
 
@@ -161,7 +161,7 @@ berichtigt: „Tönener Atem“ → „Tönender Atem“, „Jan Hennig Foh“ �
 SängerInnen“ → gekürzt auf „Stimmcoaching“. Die Vorschau 2027 ist nach Datum sortiert (im PDF steht das Online-Modul
 vor Modul A). Titel einheitlich wie auf der Webseite (z. B. Österreich-Online-Modul „Die heilende Kraft des Singens
 in der Trauer- und Sterbebegleitung“; Flyer und Schnupperkurs-PDF nennen es „Lieder der Liebe und der Hoffnung“).
-Namen wie in der Quelle („Alwine Deege“ – Schreibweise offen, siehe `SEITE-weiterbildung.md`, Abschnitt 7, Punkt 2).
+Namen wie in der Quelle („Alwine Deege“ – Schreibweise offen, siehe `SEITE-weiterbildung.md`, Abschnitt 7, Punkt 1).
 
 **Selbst formuliert** (bitte bei der Abnahme gegenlesen): Titel „Wann singen wir zusammen?“ und Titeltext,
 „Alle Veranstaltungen, zu denen du dich anmelden oder einfach dazukommen kannst. Vergangene Termine verschwinden von
@@ -223,12 +223,12 @@ Etiketten, Monatszeilen, Datumszusätze und Brotkrumen (wie auf allen Unterseite
    Art, auf „Weiterbildung“ nach Zweig – eine Datenquelle, zwei Ansichten.
 3. **Anmeldelink korrigieren:** in jeder Veranstaltung unter *Anmeldung → externer Link* die Adresse
    `https://sonjaheim9.wixsite.com/my-site-3/anmeldung` durch `https://www.singende-krankenhaeuser.de/anmeldung`
-   ersetzen (Abschnitt 7, Punkt 2).
+   ersetzen (Abschnitt 7, Punkt 1).
 4. **Seite `/termine` behalten** (Adresse nicht ändern) und nach Abschnitt 3 neu aufbauen. Das Element
    *Veranstaltungsliste* als **Liste**, nur **kommende** Veranstaltungen, Filter nach Kategorie einschalten.
 5. **Anker setzen:** `kalender`, `schnuppern`, `jahrestagung`, `vorschau`, `mehr`, `mitglied`.
 6. **Mitglieder-Kasten entfernen:** den Teams-Link „Zum Online-Angebot für Mitglieder“ und den Button
-   MITGLIEDERTERMINE von `/termine` nehmen und durch den Hinweis aus Bereich 6 ersetzen (Abschnitt 7, Punkt 1).
+   MITGLIEDERTERMINE von `/termine` nehmen und durch den Hinweis aus Bereich 6 ersetzen.
 7. **Vorschau 2027** als Text anlegen (zwei Listen). Sobald die 2027-Termine in Wix-Events stehen, den Bereich
    leeren bzw. auf das Jahr danach umstellen.
 8. **Nachbarseiten** umstellen wie in Abschnitt 2 („Korrekturen auf den Nachbar-Vorschauen“); auf den Zweig-Seiten
@@ -248,44 +248,39 @@ Etiketten, Monatszeilen, Datumszusätze und Brotkrumen (wie auf allen Unterseite
 | Terminänderung | **nur** in Wix-Events ändern; PDFs bei der nächsten Gelegenheit nachziehen | Wix-Events |
 
 Solange Schritt 1 nicht umgesetzt ist, müssen Schnupperkurse, Österreich-Module und Jahrestagung auf „Termine“ **von
-Hand** gepflegt werden. Zuständigkeit klären (Abschnitt 7, Punkt 8).
+Hand** gepflegt werden. Zuständigkeit klären (Abschnitt 7, Punkt 7).
 
 ---
 
 ## 7. Offene Punkte – vor der Veröffentlichung klären
 
-1. **Teams-Link für Mitglieder ist öffentlich:** Auf `/termine` steht der Link zu den Online-Runden für Mitglieder
-   offen für alle, obwohl daneben „ausschließlich für Mitglieder“ steht. Damit ist auch offener Punkt 4 in
-   `SEITE-mitglied-sein.md` teilweise beantwortet (so kommt man heute hinein). → Mit Sonja klären, wie Mitglieder den
-   Link künftig bekommen (Newsletter, E-Mail von Sandra), dann **Link von der Seite nehmen** und in Teams neu erzeugen.
-   **Sofort umsetzbar.**
-2. **Anmeldelink der Veranstaltungen:** zeigt auf `sonjaheim9.wixsite.com/my-site-3/anmeldung` (kostenlose
+1. **Anmeldelink der Veranstaltungen:** zeigt auf `sonjaheim9.wixsite.com/my-site-3/anmeldung` (kostenlose
    Wix-Adresse). Konnte in dieser Umgebung nicht geöffnet werden; vermutlich leitet sie auf die eigene Domain um. →
    In Wix-Events auf `singende-krankenhaeuser.de/anmeldung` ändern (Schritt 3). **Sofort umsetzbar.**
-3. **Pflichtmodul Pflege 2026:** Modul V „Mit dem Herzen pflegen“, 23.–25.10.2026, Einbeck (Melanie Wilde, Paula
+2. **Pflichtmodul Pflege 2026:** Modul V „Mit dem Herzen pflegen“, 23.–25.10.2026, Einbeck (Melanie Wilde, Paula
    Bieker) steht nur im Flyer und in der alten Jahresplanung, nicht auf der Pflege-Seite und nicht in Wix-Events.
    Findet es statt? Wenn ja: anlegen und in die Vorschau aufnehmen (fehlt dort bewusst). Wenn nein: Flyer korrigieren.
    → Vera.
-4. **Flyer „Weiterbildung Singleitung 2026“** (PDF „Alle Termine 2026“): Modul F falsch, „Zoom“ statt Teams,
+3. **Flyer „Weiterbildung Singleitung 2026“** (PDF „Alle Termine 2026“): Modul F falsch, „Zoom“ statt Teams,
    Schnupperkurs „18–19 Uhr“ statt 18:00–18:45; reine Bilddatei (für Vorleseprogramme nicht lesbar). → Korrigieren
    (Gestaltung: Die Gründerin) und dann nur auf „Weiterbildung“ verlinken.
-5. **Zwei Fassungen der Schnupperkurs-Liste:** Zweig-Seiten verlinken die alte („Jahresplanung“, Dez. 2025),
+4. **Zwei Fassungen der Schnupperkurs-Liste:** Zweig-Seiten verlinken die alte („Jahresplanung“, Dez. 2025),
    `/termine` die neue. → Alte Datei entfernen. In der neuen: „Fr., 14. Mai“ → „Do.“ (bzw. Termin prüfen) und den
    Termin des Wiener Moduls (27.–29.11. statt 30.10.–01.11.) korrigieren.
-6. **Ort der Liedernacht:** „Stellinger Kirche“ oder „Stellenberger Kirche“, Adresse Molkenbuhrstraße 8? Und
+5. **Ort der Liedernacht:** „Stellinger Kirche“ oder „Stellenberger Kirche“, Adresse Molkenbuhrstraße 8? Und
    „Hagenbeckerstraße“ oder „Hagenbeckstraße“ (Hotel)? → Auf den Jahrestagung-Seiten vereinheitlichen.
-7. **Mitgliederrabatt Jahrestagung:** tatsächlich 25 % (Frühbucher) bzw. 22 % – „Mitglied sein“ und Startseite
+6. **Mitgliederrabatt Jahrestagung:** tatsächlich 25 % (Frühbucher) bzw. 22 % – „Mitglied sein“ und Startseite
    sprechen von 15 % auf Module **und Jahrestagungen**. Die Vorschau „Termine“ sagt deshalb nur „Mitgliederpreis“.
    → Entscheiden, ob die Formulierung auf „Mitglied sein“ (`#vorteile`) und der Startseite (Band 7) angepasst wird
    (Vorschlag: „15 % auf alle Module, Mitgliederpreis bei der Jahrestagung“).
-8. **Wer pflegt die Termine?** Heute verteilen sich Termine auf Wix-Events (3), zwei Zweig-Seiten und vier PDFs.
+7. **Wer pflegt die Termine?** Heute verteilen sich Termine auf Wix-Events (3), zwei Zweig-Seiten und vier PDFs.
    → Eine zuständige Person festlegen (naheliegend: Vera, Geschäftsstelle) und Schritt 1 der Wix-Umsetzung
    umsetzen, damit nur noch an einer Stelle gepflegt wird.
-9. **Terminvorschau 2027:** auf du umstellen, Tippfehler berichtigen, Jahrestagung ergänzen, nach Datum sortieren;
+8. **Terminvorschau 2027:** auf du umstellen, Tippfehler berichtigen, Jahrestagung ergänzen, nach Datum sortieren;
    die Hinweise „nächster Termin …“ auf den Zweig-Seiten an die Vorschau angleichen oder löschen.
-10. **Schnupperkurse offen oder mit Anmeldung?** Das PDF sagt „öffentlich“; ob man sich vorher melden soll, steht
+9. **Schnupperkurse offen oder mit Anmeldung?** Das PDF sagt „öffentlich“; ob man sich vorher melden soll, steht
     nirgends. Die Vorschau sagt „für alle Interessierten“. → Vera bestätigt.
-11. **Einwilligungen** der fotografierten Personen (Abschnitt 5); besseres Titelfoto (Originalbreite 1594 px).
+10. **Einwilligungen** der fotografierten Personen (Abschnitt 5); besseres Titelfoto (Originalbreite 1594 px).
 
 ---
 

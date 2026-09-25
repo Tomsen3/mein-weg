@@ -250,7 +250,7 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
    **einen** Satz im Bereich `#unterstuetzung` ergänzen. Den Link selbst **nicht öffentlich** auf die Seite stellen
    (sonst ist es kein Mitgliederangebot mehr).
    **Nachtrag 25.09.2026:** Auf der Seite `/termine` steht der Teams-Link heute **öffentlich** („Zum Online-Angebot
-   für Mitglieder“). Die neue Seite Termine verweist nur noch hierher (`SEITE-termine.md`, Abschnitt 7, Punkt 1).
+   für Mitglieder“). Die neue Seite Termine verweist nur noch hierher (`SEITE-termine.md`, Abschnitt 1).
 5. **Namen der Reihen vereinheitlichen:** Webseite „Guitar- & Ukulele-Factory“ / „Singleiter:innen im Gespräch“, PDF
    „Gitarren-Factory“ / „Ukulele-Factory“ / „Singleiter im Gespräch – Supervision“. → Eine Schreibweise festlegen
    (Vorschlag: „Gitarren- & Ukulele-Factory“ und „Singleiter:innen im Gespräch“) und im nächsten Termin-PDF übernehmen.
