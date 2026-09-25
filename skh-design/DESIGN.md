@@ -21,6 +21,9 @@ Gestaltungssysteme bekannter Webseiten als Textbeschreibung (DESIGN.md) bereitst
 | 1 | **Fable** – „Leseecke mit cremefarbenem Papier“ (hell, ruhig) | **gewählt** |
 | 2 | Patrick Miller – Plakatstil mit riesiger Schrift (mutig) | verworfen: für textreiche Seiten (Module, Termine) ungeeignet, schwarze Schrift auf Orange schlecht lesbar |
 | 3 | MasterClass – dunkle Bühne mit Magenta (dunkel) | verworfen: wirkt im Gesundheitswesen kühl, helle Schrift auf Dunkel für ältere Menschen schwerer lesbar, Schrift teuer |
+| 4 | Headspace – weich, rund, illustriert | als Alternative „Rund“ ausgearbeitet: `DESIGN-rund.md` (braucht Illustrationen) |
+| 5 | Monocle – Qualitätszeitung auf Cremepapier | als Alternative „Zeitung“ ausgearbeitet: `DESIGN-zeitung.md` (Fable recht ähnlich, sehr seriös) |
+| 6 | sweetgreen – große Fotos, Waldgrün, ein gelber Knopf | als Alternative „Foto“ ausgearbeitet: `DESIGN-foto.md` (braucht gute Fotos) |
 
 Quelle Option 1: https://styles.refero.design/style/ab650279-aa18-43e5-a998-34190d7bedc7
 
