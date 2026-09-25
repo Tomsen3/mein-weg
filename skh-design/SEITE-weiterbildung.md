@@ -160,6 +160,8 @@ für Vorleseprogramme (`aria-current`).
 2. **Schreibweise von Namen vereinheitlichen:** „Elke Wünneberg“ (Modul C) vs. „Elke Wünnenberg“
    (Modul D, P); „Alwine Deege“ (Dozentenseite, Modul IV) vs. „Alwine Deegen“ (Startseite).
    In der Vorschau steht „Wünnenberg“. Bitte bei den Personen selbst nachfragen.
+   **Geklärt (25.09.2026, Tom):** Richtig ist **„Alwine Deege“**. Auf der Live-Startseite (Blog des Monats)
+   „Deegen“ korrigieren; in der Startseiten-Vorschau ist es berichtigt.
 3. **Porträt Vera Kimmig:** Die beiden Zweig-Seiten verwenden zwei unterschiedliche Fotos. Klären,
    welches aktuell ist; die Vorschau nutzt das der Seite Krankenhäuser. **Vorschlag (25.09.2026):** überall das
    Studioporträt der Team-Seite verwenden (`fotos/uu-vera-kimmig.jpg`), siehe `SEITE-ueber-uns.md`, Abschnitt 5.

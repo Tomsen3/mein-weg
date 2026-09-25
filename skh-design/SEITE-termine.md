@@ -161,7 +161,7 @@ berichtigt: „Tönener Atem“ → „Tönender Atem“, „Jan Hennig Foh“ �
 SängerInnen“ → gekürzt auf „Stimmcoaching“. Die Vorschau 2027 ist nach Datum sortiert (im PDF steht das Online-Modul
 vor Modul A). Titel einheitlich wie auf der Webseite (z. B. Österreich-Online-Modul „Die heilende Kraft des Singens
 in der Trauer- und Sterbebegleitung“; Flyer und Schnupperkurs-PDF nennen es „Lieder der Liebe und der Hoffnung“).
-Namen wie in der Quelle („Alwine Deege“ – Schreibweise offen, siehe `SEITE-weiterbildung.md`, Abschnitt 7, Punkt 1).
+Namen wie in der Quelle („Alwine Deege“ – Schreibweise am 25.09.2026 von Tom bestätigt, siehe `SEITE-weiterbildung.md`, Abschnitt 7, Punkt 2).
 
 **Selbst formuliert** (bitte bei der Abnahme gegenlesen): Titel „Wann singen wir zusammen?“ und Titeltext,
 „Alle Veranstaltungen, zu denen du dich anmelden oder einfach dazukommen kannst. Vergangene Termine verschwinden von
