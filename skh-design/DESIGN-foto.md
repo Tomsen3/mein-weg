@@ -8,7 +8,9 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html` ·
 **Mitglied sein** (Ziel des Buttons „Mitglied werden“) → `SEITE-mitglied-sein.md` + `vorschau-foto-mitglied-sein.html` ·
 **Termine** (Gesamtkalender) → `SEITE-termine.md` + `vorschau-foto-termine.html` ·
-**Über uns** (eine Seite statt sieben) → `SEITE-ueber-uns.md` + `vorschau-foto-ueber-uns.html`
+**Über uns** (eine Seite statt sieben) → `SEITE-ueber-uns.md` + `vorschau-foto-ueber-uns.html` ·
+**Dozent:innen** (gehört zu Weiterbildung) → `SEITE-dozenten.md` + `vorschau-foto-dozenten.html` ·
+**Kontakt** (in der Fußzeile) → `SEITE-kontakt.md` + `vorschau-foto-kontakt.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
@@ -133,14 +135,17 @@ Regeln:
   Beitrags-Reihe, kompakte Terminliste und Aufklapptext: `SEITE-mitglied-sein.md`, Abschnitt 6.
   Monatszeile im Kalender, Etikett nach Art und zweispaltige Jahresvorschau: `SEITE-termine.md`, Abschnitt 6.
   Team-Karte, Zeitleiste und Namensliste im Aufklapptext: `SEITE-ueber-uns.md`, Abschnitt 6.
+  Porträt-Raster mit Zweig-Filter und kompakte Personenzeile (Handy): `SEITE-dozenten.md`, Abschnitt 6.
+  Wegweiser-Liste, Kontakt-Karte, Formular-Felder und Dokument-Vorschau: `SEITE-kontakt.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
   Gesamtkalender, Schnupperkurse und Jahresvorschau → Termine; Module mit Zweig-Filter und Anmeldung → Weiterbildung –
   beide Terminlisten kommen in Wix aus derselben Quelle, der Wix-Events-App, siehe `SEITE-termine.md`, Abschnitt 2;
   Vision, Geschichte, Personen mit Funktion, Beirat, Botschafter:innen, Singforschung und Spenden → Über uns;
-  Telefonnummern und Sprechzeiten bleiben auf den Aufgabenseiten).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md` und `SEITE-ueber-uns.md`, jeweils Abschnitt 2.
+  Telefonnummern und Sprechzeiten bleiben auf den Aufgabenseiten; Porträts und Werdegänge der Dozent:innen → Dozent:innen;
+  Übersicht aller Telefonnummern, Wegweiser, Kontaktformular und Presse → Kontakt).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md` und `SEITE-kontakt.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---

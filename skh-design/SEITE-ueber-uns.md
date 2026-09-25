@@ -105,7 +105,7 @@ Geschäftsführung → `#geschaeftsstelle` · Ehrenvorsitzende → `#ehrenvorsit
 | **Dozent:innen** | Weiterbildung (`/dozenten`), Jahrestagung | **Weiterbildung** (`/dozenten`) | Über uns: nur ein Satz „Tom Jansen und Paula Bieker unterrichten auch in der Weiterbildung“ mit Link | nicht doppeln |
 | **Kooperationspartner** (PDF) | Fußzeile | **Über uns** (`#netzwerk`) | Fußzeile „Kooperationspartner“ zeigt jetzt auf `#netzwerk`, dort liegt das PDF | gehört zum Netzwerk-Gedanken |
 | **Spenden** (Spendenbescheinigung, Rumänien-Projekt, Spendenkonto) | Startseite (Band 7), Kontakt (mit Konto), Mitglied sein (ein Satz) | **Über uns** (`#spenden`) – entschieden 25.09.2026 | Startseite und Mitglied sein: Link „Spenden für’s Singen →“ → `#spenden`; Fußzeile „Spenden“ → `#spenden`; Kontakt: Kasten durch einen Satz mit Link ersetzen | siehe unten |
-| **Presse** | Kontakt | **Kontakt** (unverändert) | – | nicht Teil dieses Bereichs |
+| **Presse** | Kontakt | **Kontakt** (`#presse`, `SEITE-kontakt.md`) | – | nicht Teil dieses Bereichs |
 
 **Hauptort Spenden – Entscheidung und Begründung** (entschieden am 25.09.2026 (Tom, Vorstand); offener Punkt 10 in `SEITE-mitglied-sein.md`, dort bisher Vorschlag
 „eigene kleine Seite“): Eine eigene Seite hätte nur einen Kasten Inhalt und bräuchte einen weiteren Fußzeilen- oder
@@ -139,6 +139,8 @@ die Funktionsbezeichnung soll aber nicht abweichen.
 | Mitglied sein | Tiefgrün-Band „Spenden für’s Singen →“ | `#` | → `#spenden` | |
 | Für Einrichtungen | „Unsere Singforschung →“ | `#` | → `#forschung` | |
 | Sing mit | „Was die Forschung sagt →“ | `#` | → `#forschung` | |
+| Über uns | „unseren Dozent:innen“, „Kontaktseite“ | `#` | → `vorschau-foto-dozenten.html` bzw. `vorschau-foto-kontakt.html` | Seiten gibt es jetzt (Nachtrag 25.09.2026, `SEITE-dozenten.md`, `SEITE-kontakt.md`) |
+| alle | Fußzeile „Kontakt“, „Presse“ | `#` | → `vorschau-foto-kontakt.html` bzw. `#presse` | Nachtrag 25.09.2026 |
 
 Nicht geändert: Kontaktkästen mit Telefonnummern auf den Aufgabenseiten (bleiben Hauptort für Telefon und Sprechzeiten),
 „Infoflyer (PDF) →“ auf Mitglied sein, Hinweisleiste Jahrestagung (Bereich bleibt, wie er ist – `DESIGN-foto.md`, Abschnitt 5).
