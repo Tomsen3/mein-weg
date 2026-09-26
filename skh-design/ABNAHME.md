@@ -14,7 +14,7 @@ abschließen können – auch bei einer späteren Überarbeitung.
 ## 1. Ausgangslage
 
 - Alle Seiten außerhalb der Jahrestagung haben eine Vorschau und eine Doku (`DESIGN-foto.md`, Übersicht). Das sind 16 Vorschauen im
-  Ordner `skh-design/` plus die Vergleichsvariante „Fable“ (`vorschau.html`).
+  Ordner `skh-design/`. Die frühere Vergleichsvariante „Fable“ (`vorschau.html`) ist nicht Teil der Abnahme (Entscheidung 7).
 - Jede Seiten-Doku nennt in Abschnitt 6 die Personen, die „ihre“ Seite abnehmen sollen, und in Abschnitt 7 offene Fragen – zusammen
   über 100 Punkte, verteilt auf 17 Dokumente. Einzeln verschickt wären das 16 Abnahme-Runden.
 - `DESIGN-foto.md`, Abschnitt 6, Schritt 11, sieht vor: „Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen.“
@@ -69,11 +69,12 @@ zusammen bleibt. Einzelne Dateien per Mail zu schicken geht deshalb nicht.
 | **C: Gemeinsamer Termin** | Vorstandssitzung (Teams), Tom teilt den Bildschirm | nichts zu verschicken, Fragen sofort geklärt | Geschäftsstelle braucht trotzdem A oder B für ihre Seiten |
 
 **Gewählt (Tom, 26.09.2026): A** – veröffentlicht als privater Link https://claude.ai/artifact/XsCqKTCemUZxgFSVAPuG9V
-(Übersicht, 17 Vorschauen, 101 Fotos, Vorschaubilder). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen, Rolle **„Mitwirkende:r“** (Contributor) – nur damit können sie im
+(Übersicht, 16 Vorschauen, Link auf die heutige Jahrestagung-Seite, 101 Fotos, Vorschaubilder). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen, Rolle **„Mitwirkende:r“** (Contributor) – nur damit können sie im
 Bogen speichern; als „Betrachter:in“ sehen sie nur den Bogen zum Abschreiben bzw. den Hinweis „Nur lesen“; ohne Freigabe
 können Martin, Paula, Sonja, Vera und Sandra die Seite **nicht** öffnen. Für den Vorstand zusätzlich C.
 **Nach Änderungen an Vorschauen** den Link aktualisieren (Claude: dieselbe Adresse neu veröffentlichen; die Vorschau-Dateien bekommen
-dabei nur für die Veröffentlichung einen HTML-Rahmen `<!doctype html>` mit Zeichensatz – die Dateien im Repo bleiben unverändert).
+dabei nur für die Veröffentlichung einen HTML-Rahmen `<!doctype html>` mit Zeichensatz und ein kleines Skript, das jede Seite beim
+Öffnen oben anzeigt statt an der zuletzt gescrollten Stelle – die Dateien im Repo bleiben unverändert).
 
 **Empfehlung:** **A für alle, C für den Vorstand.** Der Link macht es für Vera und Sandra am einfachsten; im Vorstand geht die
 Diskussion im Termin schneller als per Mail.
@@ -92,6 +93,16 @@ Diskussion im Termin schneller als per Mail.
 **Frist:** zwei Wochen sind realistisch; für den Vorstand die nächste reguläre Sitzung nutzen (kein Extratermin).
 
 ---
+
+### Entscheidung 7: **Benennung und Umfang nach Toms Durchsicht** (26.09.2026)
+
+- Der Stil heißt in der Abnahme **„Vorschlag Tom“** (in den Dokus weiter „Foto“ – gleicher Stil). Der Hinweisbalken oben auf jeder
+  Vorschau beginnt deshalb mit „Abnahme-Paket „Vorschlag Tom““.
+- Teil 1 richtet sich an das **Leitungsteam** (statt „Vorstand mit Sonja“).
+- Die Vergleichsvariante „Fable“ ist aus der Abnahme entfernt – es wird nur ein Vorschlag abgenommen.
+- Die **heutige Jahrestagung-Seite** ist in Teil 2 als Karte „Live-Seite“ verlinkt, unverändert, nur zum Ansehen; alle Links
+  „Zur Jahrestagung“ in den Vorschauen führen jetzt auf die echte Seite (`/jahrestagung2027`, Dozent:innen auf `/dozentenjahrestagung`).
+- Jede Seite öffnet sich im veröffentlichten Link oben (Skript im HTML-Rahmen, Abschnitt 3).
 
 ## 4. Rückmeldungen sammeln und einarbeiten
 
