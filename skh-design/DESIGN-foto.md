@@ -18,7 +18,7 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Shop** (Wix Stores, Übersicht `/category/all-products` und Vorlage für alle 93 `/product-page/…`, in der Fußzeile) → `SEITE-shop.md` + `vorschau-foto-shop.html` ·
 **Rechtliches** (eine Vorlage für Impressum, Datenschutz, AGB, Widerrufsrecht, in der Fußzeile) → `SEITE-rechtliches.md` + `vorschau-foto-rechtliches.html` ·
 **Häufige Fragen** (neu, `/haeufige-fragen`, in der Fußzeile statt des toten Links „FAQ“) → `SEITE-faq.md` + `vorschau-foto-faq.html` ·
-**Aus dem Netzwerk** (neu, Wix Blog, `/aus-dem-netzwerk`: Rückblicke, Blog des Monats, MitgLIEDER im Fokus als Beiträge; in der Fußzeile, Startseite zeigt die drei neuesten) → `SEITE-netzwerk.md` + `vorschau-foto-netzwerk.html`
+**Aus dem Netzwerk** (neu, Wix Blog, `/aus-dem-netzwerk`: Rückblicke, Blog des Monats, MitgLIEDER im Fokus als Beiträge; im Menü unter „Über uns“ und in der Fußzeile, Startseite zeigt die drei neuesten) → `SEITE-netzwerk.md` + `vorschau-foto-netzwerk.html`
 Ohne Vorschau: **Aufräumen** (Vorlagenseiten löschen, vollständige Weiterleitungsliste, Seitentitel für Google, Wix-Apps) → `SEITE-aufraeumen.md` ·
 **Abnahme-Paket** (Übersicht für Vorstand und Geschäftsstelle, Ablauf der Freigabe) → `ABNAHME.md` + `abnahme.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
@@ -185,7 +185,8 @@ Regeln:
   automatisch; Termine und Preise im Beitrag nur als Verweis-Kasten auf den Hauptort).
   Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md`, `SEITE-faq.md` und `SEITE-netzwerk.md`, jeweils Abschnitt 2.
 - **Untermenü (seit 26.09.2026):** Es bleibt bei **sechs Hauptpunkten**; Unterpunkte sind erlaubt, wo eine Seite sonst nicht
-  auffindbar wäre. Einziges Untermenü: **Weiterbildung › Dozent:innen, Anmeldung**. Computer: kleines Aufklappmenü (weiße Fläche,
+  auffindbar wäre. Zwei Untermenüs: **Weiterbildung › Dozent:innen, Anmeldung** und **Über uns › Aus dem Netzwerk** (seit 26.09.2026, Frage Tom
+  „wo ist die Seite Netzwerk zu finden?“, `SEITE-netzwerk.md`, Entscheidung 2; beim letzten Menüpunkt öffnet das Aufklappmenü rechtsbündig). Computer: kleines Aufklappmenü (weiße Fläche,
   1 px Anthrazit, 14 px Rundung, „▾“ am Menüpunkt); Handy: eingerückt unter „Weiterbildung“ im aufgeklappten Menü. Die aktive
   Unterseite ist gelb unterstrichen. Anlass: Hinweis Tom „wo finde ich die Dozenten auf dem Handy?“ – heute gibt es dafür
   „WEITERBILDUNG ▸ Dozenten“.
@@ -333,6 +334,7 @@ Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11; Paket
    „Mitglied sein“ aus dem Hauptmenü nehmen („Im Menü ausblenden“ – die Seiten bleiben erhalten).
    Unter „Weiterbildung“ die Seiten „Dozent:innen“ und „Anmeldung“ als **Unterseiten** anlegen (*Menüs & Seiten* → Seite auf
    „Weiterbildung“ ziehen → „Als Unterseite“); Wix zeigt sie am Computer als Aufklappmenü und am Handy eingerückt.
+   Ebenso „Aus dem Netzwerk“ als Unterseite von „Über uns“.
    Dann den Button „Mitglied werden“ in die Kopfleiste setzen und links daneben einen Textlink „Shop“ mit Tüten-Symbol
    (PT Sans fett 17 px, Anthrazit, Symbol 22 px, Link auf die Shop-Übersicht; auf den Shop-Seiten gelb unterstrichen wie der aktive Menüpunkt).
 2. **Fotos zuerst:** Fotos sammeln, Einwilligungen prüfen, in Wix hochladen

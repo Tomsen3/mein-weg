@@ -75,9 +75,12 @@ gefunden; ein Link aus Newsletter oder Instagram zeigt genau auf diese Geschicht
   Besucher:innen nicht geläufig.
 - **Adresse** `/aus-dem-netzwerk` (Blog-Seite). Beiträge bekommen von Wix die Form `/post/<titel>`, Kategorien
   `/aus-dem-netzwerk/categories/<name>` – genaue Form nach dem Anlegen prüfen und in Abschnitt 6 eintragen.
-- **Kein Menüpunkt:** Es bleibt bei sechs Hauptpunkten (`DESIGN-foto.md`, Abschnitt 4). Erreichbar über: Startseite
-  („Alle Beiträge →“), Fußzeile „Mitmachen“ → „Aus dem Netzwerk“ (alle Seiten), „Mitglied sein“ (`#fokus`, „Alle MitgLIEDER im
-  Fokus →“), Newsletter und Social Media. Wer Neuigkeiten sucht, landet ohnehin zuerst auf der Startseite.
+- **Im Menü als Unterpunkt „Über uns › Aus dem Netzwerk“** (Entscheidung Tom, 26.09.2026 – Korrektur: zuerst war „kein
+  Menüpunkt“ geplant; Anlass: Frage Tom „wo ist die Seite Netzwerk zu finden?“). Es bleibt bei sechs Hauptpunkten
+  (`DESIGN-foto.md`, Abschnitt 4, Untermenü). **Warum unter „Über uns“:** Dort geht es darum, wer das Netzwerk ist; die Beiträge
+  zeigen, wie es lebt. Unter „Mitglied sein“ ginge nicht – das ist kein Menüpunkt, sondern der gelbe Knopf.
+  Außerdem erreichbar über: Startseite („Alle Beiträge →“), Fußzeile „Mitmachen“ → „Aus dem Netzwerk“ (alle Seiten), „Mitglied sein“
+  (`#fokus`, „Alle MitgLIEDER im Fokus →“), Newsletter und Social Media.
 
 ### Entscheidung 3: **Wo die Beiträge erscheinen – und wo ihr Hauptort ist**
 
@@ -153,6 +156,7 @@ von selbst, ein Titelfoto müsste gepflegt werden.
 |---|---|---|---|---|
 | Startseite | Abschnitt 6 „Aktuelles“ (jetzt `#netzwerk`) | drei feste Karten (Rückblick, Blog des Monats, MitgLIEDER im Fokus), „Alle Beiträge →“ und zwei „Weiterlesen“ auf `#` | die **drei neuesten** Beiträge mit Datum (Schnupperkurs, Sommerakademie, Blog des Monats), alle Links auf die Beiträge, „Alle Beiträge →“ auf die neue Seite, Randnotiz | Entscheidung 3 |
 | Mitglied sein | `#fokus` | ganze Geschichte (aufklappbar), Audio, Noten, Mail-Link, Feedback des Monats | Anriss des neuesten Fokus-Beitrags: Datum, Foto, Name, Kurzzitat, „Ganze Geschichte, Lied und Noten →“, „Alle MitgLIEDER im Fokus →“, Randnotiz | Entscheidung 3 – ein Hauptort |
+| alle 17 Foto-Vorschauen | Kopfleiste, Menüpunkt „Über uns“ | ohne Untermenü | Untermenü „Aus dem Netzwerk“ (Computer: Aufklappmenü rechtsbündig, weil letzter Menüpunkt; Handy: eingerückt) | Entscheidung 2 (Korrektur Tom) |
 | alle 17 Foto-Vorschauen | Fußzeile „Mitmachen“ | Mitglied sein · Spenden · Newsletter · Shop | … Spenden · **Aus dem Netzwerk** · Newsletter … | Entscheidung 2 |
 | `SEITE-mitglied-sein.md` | Abschnitte 2, 3, 6, 8 | Geschichte vollständig auf „Mitglied sein“, Pflege an zwei Stellen | Nachtrag mit Verweis auf diese Doku | Doku passend zur Vorschau |
 | `DESIGN-foto.md` | Kopf, Abschnitte 4, 5, Übersicht | – | neue Seite, Baustein, Hauptort-Regel, Startseiten-Zeile 6, Fotoliste | Übersicht aktuell halten |
@@ -172,8 +176,8 @@ Rechtstexte; Bereich Jahrestagung; die anderen Stilvarianten. Kopfleiste, Fußze
 
 | Nr. | Fläche | Bereich | Inhalt | Warum |
 |---|---|---|---|---|
-| – | Weizen / Weiß | Hinweisleiste, Kopfleiste | wie alle Seiten; **kein** Menüpunkt unterstrichen | Seite liegt nicht im Menü |
-| – | Leinen | Brotkrumen | „Start › Aus dem Netzwerk“ | Rückweg |
+| – | Weizen / Weiß | Hinweisleiste, Kopfleiste | wie alle Seiten; im Untermenü „Über uns“ ist „Aus dem Netzwerk“ gelb unterstrichen | Entscheidung 2 |
+| – | Leinen | Brotkrumen | „Start › Über uns › Aus dem Netzwerk“ | Rückweg, passend zum Menü |
 | 1 | Leinen | **Kopf ohne Titelfoto** | kleine Überschrift „Aus unserem Netzwerk“, Titel, ein Satz | Entscheidung 6 |
 | 2 | Leinen | **Kategorien** | Alle · Rückblicke · Blog des Monats · MitgLIEDER im Fokus, jeweils mit Anzahl; aktive Kategorie gelb unterstrichen | wer nur das Lied des Monats sucht, findet es mit einem Klick |
 | 3 | Leinen | **Neuester Beitrag groß** | Foto 3 : 2 links; rechts Kategorie, Überschrift (bis 44 px), Datum, Auszug, „Weiterlesen →“ | Entscheidung 6 |
@@ -186,7 +190,7 @@ Rechtstexte; Bereich Jahrestagung; die anderen Stilvarianten. Kopfleiste, Fußze
 
 | Nr. | Fläche | Bereich | Inhalt |
 |---|---|---|---|
-| 1 | Leinen | Brotkrumen | „Start › Aus dem Netzwerk › <Kategorie>“ |
+| 1 | Leinen | Brotkrumen | „Start › Über uns › Aus dem Netzwerk › <Kategorie>“ |
 | 2 | Leinen | **Kopf in der Lesespalte** (880 px) | Kategorie (Link), Überschrift (64 px, Handy 34 px), Datum · Kategorie, Einleitungssatz 21 px |
 | 3 | Leinen | **Titelbild** 3 : 2 mit Bildunterschrift; bei zwei Personen zwei Porträts nebeneinander | |
 | 4 | Leinen | **Text** 18 px, höchstens 70 Zeichen breit; Zwischenüberschrift 28 px mit Linie darüber (z. B. „Feedback des Monats“); weitere Fotos mit Bildunterschrift; bei MitgLIEDER im Fokus: Lied-Karte (Abspielknopf Tiefgrün, weiße Karte) und Links „Text & Noten (PDF) →“, „<Name> schreiben →“ | |
@@ -256,7 +260,7 @@ Lied-Karte wie Mitglied sein; Randnotiz „Vor Veröffentlichung“ und Ansicht-
    zwei Seiten an: **„Blog“** (Übersicht) und **„Beitrag“** (Vorlage, `/post/…`). Fragt Wix nach Mitgliederseiten für Autor:innen:
    ablehnen bzw. nicht einrichten.
 3. **Blog-Seite einrichten:** *Menüs & Seiten* → „Blog“ umbenennen in **„Aus dem Netzwerk“**, *SEO-Grundlagen → URL-Endung*
-   `aus-dem-netzwerk`, **nicht** im Menü anzeigen. Seitentitel für Google „Aus dem Netzwerk | Singende Krankenhäuser e.V.“,
+   `aus-dem-netzwerk`; im Menü als **Unterseite von „Über uns“** (*Menüs & Seiten* → Seite auf „Über uns“ ziehen → „Als Unterseite“). Seitentitel für Google „Aus dem Netzwerk | Singende Krankenhäuser e.V.“,
    Beschreibung: „Rückblicke, Blog des Monats und MitgLIEDER im Fokus – Geschichten aus dem Netzwerk für heilsames Singen.“
    Oben Kopf (Leinen, kleine Überschrift, Titel, ein Satz) wie auf Downloads; darunter das Blog-Element.
 4. **Blog-Element gestalten** (Element anklicken → *Einstellungen*): Layout „Seite an Seite“ bzw. „Hervorgehoben“ für den ersten
@@ -327,7 +331,7 @@ Lied-Karte wie Mitglied sein; Randnotiz „Vor Veröffentlichung“ und Ansicht-
 ## 8. Checkliste für diese Seite
 
 Einmalig:
-- [ ] Wix Blog installiert, Blog-Seite heißt „Aus dem Netzwerk“, Adresse `/aus-dem-netzwerk`, nicht im Menü, Seitentitel gesetzt?
+- [ ] Wix Blog installiert, Blog-Seite heißt „Aus dem Netzwerk“, Adresse `/aus-dem-netzwerk`, im Menü unter „Über uns“ (Computer und Handy), Seitentitel gesetzt?
 - [ ] Kommentare, Likes, Aufrufe, Lesezeit und Autor:in aus?
 - [ ] Drei Kategorien angelegt, vier Beiträge mit Titelbild, Auszug, Kategorie und echtem Datum übertragen?
 - [ ] Startseite: „Beitragsliste“ mit 3 neuesten, „Alle Beiträge →“; alte Abschnitte 5, 13, 14 **erst danach** gelöscht?
