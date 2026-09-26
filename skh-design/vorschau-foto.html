@@ -208,6 +208,9 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 /* ===== Startseite: vier Fragen statt drei (26.09.2026 – Einstieg für Einrichtungen) ===== */
 .ask .grid4{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .ask .grid4 h3{font-size:24px}
+/* ohne „Frage 1–4“ und ohne gelbe „Ja!“-Knöpfe (Hinweis Tom 26.09.2026: „wie im Kasperletheater“) – ruhiger Textlink mit Ziel */
+.ask .grid4 article{display:flex;flex-direction:column;gap:12px}
+.ask .grid4 .ghost{margin-top:auto;padding-top:4px}
 @media (max-width:1000px){.ask .grid4{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.ask .grid4{grid-template-columns:minmax(0,1fr)}}
 /* ===== Kopfleiste rechts zweizeilig (alle Seiten, 26.09.2026 – Navigation für die Zielgruppen, DESIGN-foto.md, Abschnitt 4):
@@ -275,10 +278,10 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 <section class="ask"><div class="wrap">
   <div class="head"><div><span class="eyebrow">Sei dabei</span><h2 class="h2">Begleitet dich auch schon ein Lied?</h2></div></div>
   <div class="grid3 grid4">
-    <article><div class="photo"><img src="fotos/frage1-singleiterin.jpg" alt="Singleiterin singt mit Freude inmitten einer Gruppe"></div><span class="num">Frage 1</span><h3>Du willst Singleiter:in werden?</h3><p>Zwei Zertifikate, berufsbegleitend an Wochenenden – für Menschen aus Musik, Pflege, Therapie und Seelsorge.</p><a class="pill gold" href="vorschau-foto-weiterbildung.html">Ja!</a></article>
-    <article><div class="photo g"><img src="fotos/frage2-mitglieder.jpg" alt="Gruppe von Mitgliedern lacht gemeinsam in die Kamera"></div><span class="num">Frage 2</span><h3>Du willst Mitglied werden?</h3><p>Trag das Netzwerk mit und spar 15 % bei allen Modulen. Fürs Singleiter-Zertifikat ist die Mitgliedschaft Voraussetzung.</p><a class="pill gold" href="vorschau-foto-mitglied-sein.html">Ja!</a></article>
-    <article><div class="photo w"><img src="fotos/frage3-singgruppe.jpg" alt="Singgruppe sitzt im Kreis"></div><span class="num">Frage 3</span><h3>Du suchst eine Singgruppe in deiner Nähe?</h3><p>Auf der Singenden Landkarte findest du offene Gruppen – ohne Noten, ohne Vorkenntnisse.</p><a class="pill gold" href="vorschau-foto-landkarte.html#karte">Ja!</a></article>
-    <article><div class="photo"><img src="fotos/ein-mitarbeitende.jpg" alt="Vier Menschen stehen hintereinander, die Hände auf den Schultern der vorderen, und lachen"></div><span class="num">Frage 4</span><h3>Ihr wollt Singen in eure Einrichtung bringen?</h3><p>Krankenhäuser, Pflegeeinrichtungen und Hospize: So wird euer Haus zur Singenden Einrichtung – mit zertifizierter Singleitung.</p><a class="pill gold" href="vorschau-foto-einrichtungen.html">Ja!</a></article>
+    <article><div class="photo"><img src="fotos/frage1-singleiterin.jpg" alt="Singleiterin singt mit Freude inmitten einer Gruppe"></div><h3>Du willst Singleiter:in werden?</h3><p>Zwei Zertifikate, berufsbegleitend an Wochenenden – für Menschen aus Musik, Pflege, Therapie und Seelsorge.</p><a class="ghost" href="vorschau-foto-weiterbildung.html">Zur Weiterbildung →</a></article>
+    <article><div class="photo g"><img src="fotos/frage2-mitglieder.jpg" alt="Gruppe von Mitgliedern lacht gemeinsam in die Kamera"></div><h3>Du willst Mitglied werden?</h3><p>Trag das Netzwerk mit und spar 15 % bei allen Modulen. Fürs Singleiter-Zertifikat ist die Mitgliedschaft Voraussetzung.</p><a class="ghost" href="vorschau-foto-mitglied-sein.html">Alles zur Mitgliedschaft →</a></article>
+    <article><div class="photo w"><img src="fotos/frage3-singgruppe.jpg" alt="Singgruppe sitzt im Kreis"></div><h3>Du suchst eine Singgruppe in deiner Nähe?</h3><p>Auf der Singenden Landkarte findest du offene Gruppen – ohne Noten, ohne Vorkenntnisse.</p><a class="ghost" href="vorschau-foto-landkarte.html#karte">Zur Landkarte →</a></article>
+    <article><div class="photo"><img src="fotos/ein-mitarbeitende.jpg" alt="Vier Menschen stehen hintereinander, die Hände auf den Schultern der vorderen, und lachen"></div><h3>Ihr wollt Singen in eure Einrichtung bringen?</h3><p>Krankenhäuser, Pflegeeinrichtungen und Hospize: So wird euer Haus zur Singenden Einrichtung – mit zertifizierter Singleitung.</p><a class="ghost" href="vorschau-foto-einrichtungen.html">Für Einrichtungen →</a></article>
   </div>
 </div></section>
 
