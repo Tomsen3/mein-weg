@@ -218,7 +218,7 @@ Bänder: Leinen → Salbei → Weizen → Leinen → Tiefgrün.
 | Widerrufs-Ablauf (zwei Knöpfe, Eingangsbestätigung) | § 356a BGB (gültig seit 19.06.2026) |
 
 **Selbst formuliert** (bitte bei der Abnahme gegenlesen): Titel „Melde dich an.“ und Titeltext, alle Überschriften, die
-Kurzfassung der Bedingungen, der Ablauf „So geht es weiter“ (Punkte 2 und 3 beruhen auf Annahmen – Abschnitt 7, Punkt 4),
+Kurzfassung der Bedingungen, der Ablauf „So geht es weiter“ (Punkt 3 beruht auf einer Annahme – Abschnitt 7, Punkt 4; Punkt 2 „Sandra schickt dir die Rechnung“ ist bestätigt),
 alle Hinweistexte im Formular, „Zahlungspflichtig anmelden“, der ganze Widerrufs-Bereich, „Eine schon gezahlte Kursgebühr
 bekommst du innerhalb von 14 Tagen zurück“ (gesetzliche Frist nach Widerruf).
 
@@ -292,7 +292,7 @@ wie Für Einrichtungen; Sprungleiste wie Sing mit. **Neu auf dieser Seite:**
 | nach Beginn eines Moduls | Modul aus der Liste löschen | Vera |
 | bei Preisänderung | Zahlen in `#vorher`, AGB 12.2, Tipp-Text im Formular, Modul-PDFs | Sandra, Tom |
 | bei neuem Seminarhaus mit Selbstbuchung | Hinweis unter „Übernachtung“ und in `#danach` | Vera |
-| laufend | Anmeldungen bearbeiten, Teilnehmerliste an die Dozent:innen schicken | Sandra |
+| laufend | Anmeldungen bearbeiten, Rechnung schicken, Zahlungseingang prüfen, Teilnehmerliste an die Dozent:innen schicken | Sandra |
 | laufend (Benachrichtigung) | Widerrufe bearbeiten, Erstattung innerhalb von 14 Tagen | Sandra, Sonja (Erstattung) |
 | nach dem Modul | Teilnehmerlisten bei den Dozent:innen löschen lassen (Speicherbegrenzung) | Sandra |
 | halbjährlich | Test-Anmeldung und Test-Widerruf | Tom |
@@ -317,8 +317,8 @@ Zuständigkeit: Sandra bekommt und bearbeitet Anmeldungen und Widerrufe (Formula
    und Jahrestagung mitdenken. *Das ist eine fachliche Einschätzung, keine Rechtsberatung.* **Spartipp:** Zuerst fragen, ob
    der Verein über einen Dachverband kostenlose Rechtsberatung bekommt; sonst die Rechtstexte (AGB, Widerruf, Impressum
    nach DDG, `SEITE-kontakt.md`, Punkt 9) **in einem Auftrag** prüfen lassen statt einzeln. → Vorstand (Martin, Paula), Tom.
-4. **Ablauf nach der Anmeldung bestätigen** (die Anmeldungen landen bei Sandra): Die Vorschau nimmt an, (a) dass die Geschäftsstelle die Zahlungsangaben schickt
-   (oder zahlt man sofort nach AGB 12.2 auf das dort genannte Konto?), (b) dass der **Verein** die Zimmer im Seminarhaus
+4. **Ablauf nach der Anmeldung bestätigen** (die Anmeldungen landen bei Sandra): Die Vorschau nimmt an, ~~(a) wer die Zahlungsangaben schickt~~ – **geklärt (26.09.2026, Tom): Sandra schickt die Rechnung**, so steht es jetzt
+   in `#danach` (Schritt 2) und bei „Vorher wissen“ (Zahlung); (b) dass der **Verein** die Zimmer im Seminarhaus
    reserviert (heutiger Text „Ich reserviere im Seminarhaus …“ ist doppeldeutig), außer in Einbeck, (c) wie hoch die
    Verpflegungspauschale ist. → Sandra, Vera.
 5. **Anschrift Pflicht?** Wird für Rechnung oder Teilnahmebescheinigung eine Postanschrift gebraucht? Wenn ja, Pflichtfeld
