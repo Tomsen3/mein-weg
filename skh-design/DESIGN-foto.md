@@ -193,7 +193,38 @@ Regeln:
   Unterseite ist gelb unterstrichen. Anlass: Hinweis Tom „wo finde ich die Dozenten auf dem Handy?“ – heute gibt es dafür
   „WEITERBILDUNG ▸ Dozenten“.
 - **Shop-Link in der Kopfleiste:** schlichter Textlink mit Tüten-Symbol links neben „Mitglied werden“ – kein Menüpunkt, kein
-  zweiter Button (Entscheidung 26.09.2026, Abnahme-Hinweis Tom: „der Shop taucht nicht im Header auf“).
+  zweiter Button (Entscheidung 26.09.2026, Abnahme-Hinweis Tom: „der Shop taucht nicht im Header auf“). Seit der Navigation nach
+  Zielgruppen steht er mit Suche und Kontakt in einer kleinen Zeile **über** „Mitglied werden“ (siehe nächster Punkt).
+- **Navigation nach Zielgruppen (Entscheidung Tom, 26.09.2026):** Anlass war die Frage „Hast du noch Verbesserungsvorschläge für
+  die Navigation – auch im Hinblick auf die Zielgruppen?“. Prüfung je Zielgruppe:
+
+  | Zielgruppe | sucht | Weg (neu) |
+  |---|---|---|
+  | Mitsingende (oft älter, Patient:innen, Angehörige) | Singgruppe in der Nähe | Menü **Landkarte**, Startseite Frage 3 |
+  | künftige Singleiter:innen | Weiterbildung, Schnupperkurs, Kosten | Menü **Weiterbildung**, Startseite Frage 1 |
+  | zertifizierte Singleiter:innen | Zertifikat, Austausch | Menü **Für Singleiter:innen** (vorher „Sing mit“) |
+  | Mitglieder | Online-Termine, Teams-Raum, Lied des Monats | Fußzeile **Für Mitglieder** → Mitglied sein `#unterstuetzung`; dort Hinweis „Schon Mitglied?“ |
+  | Einrichtungen | Zertifizierung, Singleitung, Kosten | Menü **Für Einrichtungen**, Startseite **Frage 4** (neu) |
+  | Presse, Förderer | Kontakt, Spenden | Kopfleiste **Kontakt** (neu), Fußzeile |
+
+  Umgesetzt in allen 17 Foto-Vorschauen:
+  1. **„Sing mit“ heißt im Menü „Für Singleiter:innen“.** Grund: Der Name klang nach „hier kann ich mitsingen“, die Seite richtet
+     sich aber an Singleiter:innen; wer mitsingen will, landete falsch. Adresse `/sing-mit` bleibt (keine Weiterleitung nötig).
+     Auf der Seite selbst: Brotkrumen und kleine Überschrift „Für Singleiter:innen“, Titel „Sing mit!“ bleibt als Motto.
+  2. **Startseite: vierte Frage „Ihr wollt Singen in eure Einrichtung bringen?“** (Foto `ein-mitarbeitende.jpg`, „Ja!“ → Für
+     Einrichtungen); Einrichtungen hatten keinen Einstieg. Ansprache „ihr“ wie auf der Einrichtungsseite. Nebenbei korrigiert:
+     „Ja!“ bei Frage 1 zeigte auf `#`, jetzt auf Weiterbildung.
+  3. **Kopfleiste rechts zweizeilig:** oben kleine Service-Links **Suche (Lupe) · Kontakt (Telefon-Symbol) · Shop**, darunter
+     „Mitglied werden“. Grund: Ältere Besucher:innen suchen Kontakt oben rechts. Kein zusätzlicher Menüpunkt.
+  4. **Kopfleiste in einer Zeile ab 1280 px** (vorher rutschten Shop und „Mitglied werden“ bis 1440 px in eine zweite Zeile):
+     Menüschrift 16 statt 17 px, Abstand 11 px, Logo 66 statt 78 px hoch, Suche nur als Symbol, **„Singende Landkarte“ im Menü
+     kurz „Landkarte“** (Seite und Seitentitel behalten den vollen Namen). Gemessen mit Playwright bei 1280 und 1440 px, alle Seiten.
+  5. **Fußzeile „Mitmachen“ → „Für Mitglieder“** (auf Mitglied sein `#unterstuetzung`), dort in der Sprungleiste
+     „Schon Mitglied? Deine Online-Termine und Angebote →“.
+  6. **Suche vorbereitet, noch nicht freischalten:** Die Wix-Suche (App „Wix Site Search“, schon installiert) zeigt alle Seiten,
+     die Wix kennt – solange das Aufräumen nicht umgesetzt ist, auch Vorlagenseiten und Titel mit „Sikra Deutschland“
+     (`SEITE-aufraeumen.md`). **Erst nach** `SEITE-aufraeumen.md`, Abschnitt 6, Schritte 1–4 in Wix die Suchleiste bzw. das
+     Lupen-Symbol einblenden (*Hinzufügen → Suche → Suchleiste*, Darstellung „nur Symbol“).
 - **Handy (bis 640 px Breite, seit 26.09.2026):** Kopfleiste in einer Zeile – Logo 46 px hoch, rechts Knopf „☰ Menü“; Menü,
   Shop-Link und „Mitglied werden“ klappen darunter auf (entspricht dem Wix-Handy-Menü). Titelfoto 210 px hoch **über** dem
   Tiefgrün-Kasten (Kasten ragt 26 px ins Foto), Abschnitte 40 px Abstand oben/unten statt 56 px, Fotos in Abschnitten im Format
@@ -214,8 +245,8 @@ Inhalte, die von der Startseite verschwinden, stehen in der Tabelle unten mit ih
 **Ansprache:** Die Seite **duzt** („Sei dabei!“, „Du willst …“). Das bleibt so.
 Gendern wie auf der bestehenden Seite mit Doppelpunkt (Singleiter:in, Patient:innen).
 
-**Menü (6 Punkte):** Weiterbildung · Sing mit · Singende Landkarte · Für Einrichtungen ·
-Termine · Über uns – rechts daneben der gelbe Button **„Mitglied werden“** (ersetzt den
+**Menü (6 Punkte):** Weiterbildung · Für Singleiter:innen · Landkarte · Für Einrichtungen ·
+Termine · Über uns (Namen seit 26.09.2026, vorher „Sing mit“ und „Singende Landkarte“ – Abschnitt 4, Navigation nach Zielgruppen) – rechts daneben der gelbe Button **„Mitglied werden“** (ersetzt den
 Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe `SEITE-mitglied-sein.md`).
 
 | Nr. | Fläche | Abschnitt | Inhalt (von der bestehenden Seite) |
@@ -224,7 +255,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte, Button „Mitglied werden“ |
 | 1 | Titelfoto + Tiefgrün-Kasten | **Lebenskraft Singen** | Leitspruch, Zitat „Ein Lied kann keine Wunder vollbringen …“, Buttons „Zur Weiterbildung“ und „Singgruppe in deiner Nähe“ |
 | 1a | Leinen | **Aktuell** (`#aktuell`, seit 26.09.2026) | wechselnde Ankündigung: links **Video** (16 : 9, 20 px Rundung) oder Foto, rechts kleine Überschrift „Aktuell“, Titel, Datum fett, 1–2 Sätze, gelber Knopf + Textlink auf den Hauptort (z. B. Termine `#schnuppern`). Wunsch Tom: „oben lege ich oft ein Video ab, z. B. für kommende Schnupperkurse“. Video in Wix hochladen (Wix-Video) statt YouTube einbetten – kein Google-Cookie, keine Einwilligung nötig. Ist nichts anzukündigen: Abschnitt ausblenden. Die Hinweisleiste bleibt für die Jahrestagung. |
-| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | die drei Fragen mit „Ja!“-Button: Singleiter:in werden · Mitglied werden (Mitgliedschaft = Voraussetzung fürs **Zertifikat**, nicht für die Weiterbildung – korrigiert 25.09.2026) · Singgruppe in der Nähe |
+| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | **vier** Fragen mit „Ja!“-Button: Singleiter:in werden · Mitglied werden (Mitgliedschaft = Voraussetzung fürs **Zertifikat**, nicht für die Weiterbildung – korrigiert 25.09.2026) · Singgruppe in der Nähe · **Einrichtung** (neu 26.09.2026, Abschnitt 4) |
 | 3 | Salbei | **Singen wirkt – und wir zeigen dir wie** | Einleitungstext, Faktenliste (Zertifikate, Wochenenden, Mitgliedschaft, Schnupperkurs), Links „Wichtige Infos“ und „Dozent:innen“ |
 | 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“ (automatisch aus Wix-Events), Links „Alle Termine →“ und „Vorschau 2027 →“ auf die Seite Termine (`SEITE-termine.md`; geändert 25.09.2026, vorher Terminkalender und PDF) |
 | 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |

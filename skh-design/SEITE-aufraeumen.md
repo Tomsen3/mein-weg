@@ -271,6 +271,7 @@ Geschätzter Aufwand für Schritte 1–5: **1 bis 2 Stunden**. Alles geht **vor*
 - [ ] Alle Titel im Muster „Seitenname | Singende Krankenhäuser e.V.“, keine Großbuchstaben?
 - [ ] `/anmeldung-erfolgreich` nicht indexiert?
 - [ ] App-Status-Tabelle ausgefüllt, ungenutzte Apps entfernt, ungenutzte Abos gekündigt?
+- [ ] **Danach** Suche (Lupe) in der Kopfleiste einblenden und testen: Tauchen nur echte Seiten auf, keine Vorlagenseiten und kein „Sikra Deutschland“? (`DESIGN-foto.md`, Abschnitt 4, Navigation nach Zielgruppen, Punkt 6)
 - [ ] Übrig gebliebene Apps an die Dienste-Liste (`SEITE-rechtliches.md`, Abschnitt 4) gegeben?
 - [ ] Sitemap enthält keine Vorlagenseiten mehr?
 - [ ] Gruppe C jeweils beim Umbau der Zielseite erledigt und hier abgehakt?

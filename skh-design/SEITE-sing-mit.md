@@ -1,6 +1,10 @@
 # SEITE-sing-mit.md – Unterseite „Sing mit“ im Stil „Foto“
 
-Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 25.09.2026, Nachtrag 26.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
+
+> **Nachtrag 26.09.2026:** Der Menüpunkt heißt jetzt **„Für Singleiter:innen“** (Brotkrumen und kleine Überschrift im Titel
+> ebenso; Titel „Sing mit!“ und Adresse `/sing-mit` bleiben). Grund: „Sing mit“ klang nach einem Angebot zum Mitsingen, die Seite
+> richtet sich aber an Singleiter:innen. Begründung und Übersicht: `DESIGN-foto.md`, Abschnitt 4, „Navigation nach Zielgruppen“.
 Vorschau: `skh-design/vorschau-foto-sing-mit.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5 ·
 Nachbarseiten: `vorschau-foto-weiterbildung.html`, `vorschau-foto-einrichtungen.html` (`SEITE-einrichtungen.md`), `vorschau-foto-mitglied-sein.html` (`SEITE-mitglied-sein.md`) · Über uns: `vorschau-foto-ueber-uns.html` (`SEITE-ueber-uns.md`) · Ist-Zustand: `IST-STRUKTUR.md`
