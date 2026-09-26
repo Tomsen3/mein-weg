@@ -43,7 +43,7 @@ oder was nach dem Absenden passiert.
 | Adresse (Land, Straße, Zusatz, Stadt, PLZ) | nein | Anschriftfeld | – |
 | Festnetz, Handy | nein | Telefon | zwei Felder für eine Telefonnummer |
 | E-Mail-Adresse | ja | E-Mail | – |
-| Geburtstag (Tag/Monat/Jahr) | nein | Datum | wofür? Das Geburtsdatum wird ohnehin im **Zertifikatsantrag** abgefragt (Datensparsamkeit, Abschnitt 7) |
+| Geburtstag (Tag/Monat/Jahr) | nein | Datum | wird für die **Teilnehmerliste der Dozent:innen** gebraucht, damit sie sich auf die Gruppe vorbereiten können (geklärt 26.09.2026, Tom) – der Zweck stand bisher nirgends |
 | Beruf | nein | Text | intern als „Firma“ gespeichert (`CONTACTS_COMPANY`) |
 | Mitglied | ja | Auswahlliste „kein Mitglied“ / „Mitglied“ | Mitarbeitende von **Mitgliedseinrichtungen** (bekommen auch 15 %) haben keine passende Antwort |
 | „Bitte bestätige, dass du ein oder mehrere Module ausgewählt hast“ | ja | eine Option „Ja“ | **Behelf**, weil die Modul-Listen selbst nicht Pflicht sind – man kann „Ja“ klicken, ohne ein Modul zu wählen |
@@ -55,6 +55,9 @@ oder was nach dem Absenden passiert.
 | „Ich akzeptiere die AGB.“ | ja | Häkchen | **Link führt auf `sonjaheim9.wixsite.com/my-site-3/agb`** – die alte kostenlose Wix-Adresse statt der Vereinsseite |
 | „Was Du uns sonst noch mitteilen möchtest“ | nein | Textfeld | – |
 | Knopf „Anmeldung senden“ | – | – | keine Datenschutz-Information; Beschriftung erfüllt nicht die „Button-Lösung“ (Abschnitt 7, Punkt 2) |
+
+**Wer bekommt die Anmeldungen?** Die Benachrichtigung über jede Einsendung geht an **Sandra Roß-Lünenschloß** (geklärt 26.09.2026, Tom).
+Sandra bearbeitet also die Anmeldung; Vera Kimmig bleibt Ansprechperson für **Fragen zur Weiterbildung** (Beratung, Kasten auf der Seite).
 
 **Nach dem Absenden:** Das Formular leitet auf `/anmeldung-erfolgreich` weiter – eingestellt als **„in neuem Tab öffnen“**
 (`target: BLANK`). Die Besucherin hat danach zwei Tabs, im alten steht das ausgefüllte Formular noch da. Die Erfolgsseite sagt
@@ -158,6 +161,9 @@ Beginn, AGB 12.3) ist die Regel des Vereins. Beide stehen getrennt bei „Vorher
 | Weiterbildung | Tiefgrün-Band, „Zur Anmeldung →“ | `#` | → `vorschau-foto-anmeldung.html` |
 | alle zwölf Vorschauen | Fußzeile „Rechtliches & Kanäle“ | – | neuer Link **„Vertrag widerrufen“** → `vorschau-foto-anmeldung.html#widerruf` |
 
+Zu prüfen (nicht geändert): Der Wegweiser auf Kontakt nennt für „Weiterbildung, Module und Anmeldung“ nur Vera Kimmig. Da die
+Anmeldungen bei Sandra landen, ggf. aufteilen („Beratung: Vera · Anmeldung und Rechnungen: Sandra“) – mit beiden abstimmen.
+
 Nicht geändert: „Details & anmelden“ auf Start, Termine, Weiterbildung (führt in Wix auf die Veranstaltungsseite, von dort
 „Anmelden“ → `/anmeldung`).
 
@@ -170,7 +176,7 @@ Nicht geändert: „Details & anmelden“ auf Start, Termine, Weiterbildung (fü
 | – | Weizen | Hinweisleiste | Jahrestagung 2027 | auf allen Seiten gleich |
 | 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte (**Weiterbildung** unterstrichen), Button „Mitglied werden“ | Anmeldung gehört zu Weiterbildung |
 | – | Leinen | Brotkrumen | „Start › Weiterbildung › Anmeldung“ | |
-| 1 | Leinen | Kopf ohne Titelfoto: **Melde dich an.** | ein Satz (fünf Minuten, Bestätigung, Vera meldet sich); Knöpfe „Zum Formular“, „Erst das Wichtigste lesen →“; Hinweiskasten Österreich | Entscheidung 2 |
+| 1 | Leinen | Kopf ohne Titelfoto: **Melde dich an.** | ein Satz (fünf Minuten, Bestätigung, die Geschäftsstelle meldet sich); Knöpfe „Zum Formular“, „Erst das Wichtigste lesen →“; Hinweiskasten Österreich | Entscheidung 2 |
 | – | Leinen | Sprungleiste | Vorher wissen · Formular · Nach dem Absenden · Fragen · Widerrufen | |
 | 2 | Leinen | **Das Wichtigste auf einen Blick** (`#vorher`) | Beitrags-Reihe mit 4 großen Zahlen (320 € · 272 € · 160–230 € · 4 Wochen); Faktenliste: Zahlung, späterer Rücktritt, ohne Zimmer, Zeiten, Eigenverantwortung, **Widerrufsrecht**, Mitgliedschaft; Links AGB und Weiterbildung | man soll wissen, was man zusagt, **bevor** man ankreuzt |
 | 3 | Salbei | **Deine Anmeldung** (`#formular`) | links: 4 Schritte, Hinweis Pflichtfelder, Kasten Vera Kimmig (`#fragen`); rechts: Formular-Karte in 4 nummerierten Teilen (Module + Zweig · Übernachtung · Über dich · Bedingungen + Nachricht), Knopf **„Zahlungspflichtig anmelden“**; nach dem Absenden: Bestätigung mit Zusammenfassung | Handy: Formular zuerst, Vera darunter, die 4 Schritte entfallen |
@@ -192,11 +198,11 @@ Bänder: Leinen → Salbei → Weizen → Leinen → Tiefgrün.
 | 3 | Telefon | nein | **ein** Feld statt Festnetz + Handy | einfacher |
 | 3 | Anschrift (Straße, PLZ, Ort, Land) | nein | unverändert freiwillig | ob Pflicht (z. B. für Rechnung), Abschnitt 7, Punkt 5 |
 | 3 | Beruf | nein | mit Beispiel und Zweck | man versteht, wozu |
-| 3 | Geburtstag | – | **entfällt** (Vorschlag) | Datensparsamkeit; steht im Zertifikatsantrag (Abschnitt 7, Punkt 6) |
+| 3 | Geburtsdatum | nein | bleibt, **mit Zweck** unter dem Feld („kommt auf die Teilnehmerliste für die Dozent:innen …“) | wer den Grund kennt, gibt es eher an; Informationspflicht (Abschnitt 7, Punkt 6) |
 | 3 | Mitglied (Ja / Meine Einrichtung ist Mitglied / Nein) | ja | dritte Antwort neu; bei „Nein“ erscheint ein Tipp (272 € statt 320 €) | Rabatt gilt auch für Mitarbeitende von Mitgliedseinrichtungen |
 | 4 | Teilnahmebedingungen (AGB 12) akzeptiert | ja | fasst „Stornobedingungen“ und „AGB“ zusammen, Link auf die **Vereinsseite** | ein Häkchen weniger; Text steht vorher bei `#vorher` |
 | 4 | Haftung/Eigenverantwortung | ja | „Unterzeichnung“ entfällt, sonst inhaltlich gleich | stimmt online |
-| 4 | Datenschutz | – | Satz mit Link (kein Häkchen) | Rechtsgrundlage ist die Anmeldung selbst (Vertrag); ein Pflicht-Häkchen ist dafür nicht nötig – nur die Information |
+| 4 | Datenschutz | – | Satz mit Link (kein Häkchen), nennt die **Weitergabe an die Dozent:innen** (Name, Geburtsdatum, Beruf) | Rechtsgrundlage ist die Anmeldung selbst (Vertrag); ein Pflicht-Häkchen ist dafür nicht nötig – nur die Information |
 | 4 | Nachricht | nein | Beispiele (Einrichtung, Essen, Anreise) | |
 | – | Knopf | – | **„Zahlungspflichtig anmelden“** statt „Anmeldung senden“ | Button-Lösung, Abschnitt 7, Punkt 2 |
 
@@ -257,7 +263,7 @@ wie Für Einrichtungen; Sprungleiste wie Sing mit. **Neu auf dieser Seite:**
 3. **Seite `/anmeldung` neu aufbauen** nach Abschnitt 3 (Adresse nicht ändern): Kopf, Bereich „Vorher wissen“, Formular auf
    Salbei, „So geht es weiter“, Tiefgrün-Band.
 4. **Formular umbauen** nach der Feldtabelle in Abschnitt 3: zwei Modul-Listen zu einer zusammenlegen und auf *Pflichtfeld*
-   stellen; Behelfsfeld „Bitte bestätige …“ und (nach Rückmeldung von Vera) „Geburtstag“ löschen; Festnetz + Handy zu
+   stellen; Behelfsfeld „Bitte bestätige …“ löschen; beim „Geburtstag“ den Zweck als Hilfetext ergänzen; Festnetz + Handy zu
    „Telefon“; Mitglied-Auswahl um „Meine Einrichtung ist Mitglied“ ergänzen; Stornobedingungen und AGB zu einem Häkchen;
    Knopftext **„Zahlungspflichtig anmelden“**; interne Feldnamen umbenennen (`how_did_you_hear_about_us` → `module`,
    `what_are_you_interested_in` → entfällt), damit Exporte lesbar sind. *Formular-Logik*: bei Mitglied = „Nein“ Tipptext
@@ -268,7 +274,7 @@ wie Für Einrichtungen; Sprungleiste wie Sing mit. **Neu auf dieser Seite:**
 7. **Automatische E-Mails** (*Automatisierungen → Neue Automatisierung → Auslöser „Formular abgeschickt“ → Aktion „E-Mail
    senden“*; prüfen, ob im Wix-Tarif enthalten):
    – an die angemeldete Person: Bestätigung mit ihren Angaben, Hinweis Zahlung, Link „Vertrag widerrufen“;
-   – beim Widerrufsformular: Eingangsbestätigung mit Inhalt, **Datum und Uhrzeit** an die angegebene Adresse, Kopie an Vera.
+   – beim Widerrufsformular: Eingangsbestätigung mit Inhalt, **Datum und Uhrzeit** an die angegebene Adresse, Kopie an Sandra.
 8. **Seite „Vertrag widerrufen“** (`/vertrag-widerrufen`) anlegen, im Menü ausblenden: Text aus `#widerruf`, Knopf „Vertrag
    widerrufen“ öffnet das neue Formular „Widerruf“ (Felder Vorname, Nachname, E-Mail, „Welcher Vertrag?“ – Modul **oder**
    Bestellnummer/Jahrestagung); Absende-Knopf „Widerruf bestätigen“. In die **Fußzeile** (gilt für alle Seiten, auch
@@ -276,9 +282,9 @@ wie Für Einrichtungen; Sprungleiste wie Sing mit. **Neu auf dieser Seite:**
 9. **Wix-Events:** in jeder Veranstaltung *Anmeldung → externer Link* auf `https://www.singende-krankenhaeuser.de/anmeldung`
    (so schon `SEITE-termine.md`, Schritt 3).
 10. **Handy-Ansicht prüfen:** Formular vor dem Vera-Kasten, Auswahl-Karten gut antippbar, Telefonnummer anrufbar.
-11. **Test-Anmeldung** (Desktop und Handy) mit einer eigenen Adresse: Kommt die Einsendung bei Vera an? Kommt die
+11. **Test-Anmeldung** (Desktop und Handy) mit einer eigenen Adresse: Kommt die Einsendung bei Sandra an? Kommt die
     Bestätigung? Öffnet die Erfolgsseite im selben Fenster? Danach Test-Einsendung löschen.
-12. **Abnahme:** Vera (Ablauf, Felder), Sonja (Bedingungen, Widerruf), Vorstand (Rechtstexte).
+12. **Abnahme:** Sandra (Anmeldungen, Teilnehmerlisten), Vera (Beratung, Modul-Liste), Sonja (Bedingungen, Widerruf), Vorstand (Rechtstexte).
 
 ### Pflege-Ablauf
 
@@ -288,10 +294,12 @@ wie Für Einrichtungen; Sprungleiste wie Sing mit. **Neu auf dieser Seite:**
 | nach Beginn eines Moduls | Modul aus der Liste löschen | Vera |
 | bei Preisänderung | Zahlen in `#vorher`, AGB 12.2, Tipp-Text im Formular, Modul-PDFs | Sandra, Tom |
 | bei neuem Seminarhaus mit Selbstbuchung | Hinweis unter „Übernachtung“ und in `#danach` | Vera |
-| jeden Monat | Widerrufs-Einsendungen prüfen und bearbeiten (Erstattung innerhalb von 14 Tagen) | Vera, Sonja (Erstattung) |
+| laufend | Anmeldungen bearbeiten, Teilnehmerliste an die Dozent:innen schicken | Sandra |
+| laufend (Benachrichtigung) | Widerrufe bearbeiten, Erstattung innerhalb von 14 Tagen | Sandra, Sonja (Erstattung) |
+| nach dem Modul | Teilnehmerlisten bei den Dozent:innen löschen lassen (Speicherbegrenzung) | Sandra |
 | halbjährlich | Test-Anmeldung und Test-Widerruf | Tom |
 
-Zuständigkeit (Vorschlag): Vera pflegt die Modul-Liste und bearbeitet Anmeldungen und Widerrufe, Sonja gibt Bedingungen frei.
+Zuständigkeit: Sandra bekommt und bearbeitet Anmeldungen und Widerrufe (Formular-Benachrichtigung geht an sie); Vorschlag: Vera pflegt die Modul-Liste und berät, Sonja gibt Bedingungen frei.
 
 ---
 
@@ -311,18 +319,21 @@ Zuständigkeit (Vorschlag): Vera pflegt die Modul-Liste und bearbeitet Anmeldung
    und Jahrestagung mitdenken. *Das ist eine fachliche Einschätzung, keine Rechtsberatung.* **Spartipp:** Zuerst fragen, ob
    der Verein über einen Dachverband kostenlose Rechtsberatung bekommt; sonst die Rechtstexte (AGB, Widerruf, Impressum
    nach DDG, `SEITE-kontakt.md`, Punkt 9) **in einem Auftrag** prüfen lassen statt einzeln. → Vorstand (Martin, Paula), Tom.
-4. **Ablauf nach der Anmeldung bestätigen:** Die Vorschau nimmt an, (a) dass die Geschäftsstelle die Zahlungsangaben schickt
+4. **Ablauf nach der Anmeldung bestätigen** (die Anmeldungen landen bei Sandra): Die Vorschau nimmt an, (a) dass die Geschäftsstelle die Zahlungsangaben schickt
    (oder zahlt man sofort nach AGB 12.2 auf das dort genannte Konto?), (b) dass der **Verein** die Zimmer im Seminarhaus
    reserviert (heutiger Text „Ich reserviere im Seminarhaus …“ ist doppeldeutig), außer in Einbeck, (c) wie hoch die
-   Verpflegungspauschale ist. → Vera.
+   Verpflegungspauschale ist. → Sandra, Vera.
 5. **Anschrift Pflicht?** Wird für Rechnung oder Teilnahmebescheinigung eine Postanschrift gebraucht? Wenn ja, Pflichtfeld
-   und Satz „für die Rechnung“. → Vera.
-6. **Geburtsdatum:** Wofür wird es bei der Anmeldung erhoben? Wenn es nur für das Zertifikat gebraucht wird: streichen
-   (steht im Zertifikatsantrag; Grundsatz der Datensparsamkeit, Art. 5 DSGVO). → Vera.
+   und Satz „für die Rechnung“. → Sandra.
+6. ~~**Geburtsdatum:** Wofür wird es erhoben?~~ **Geklärt (26.09.2026, Tom):** für die Teilnehmerliste der Dozent:innen.
+   Folgen: (a) Die Weitergabe an die Dozent:innen muss in der Datenschutzerklärung stehen (mit Punkt 8 erledigen);
+   (b) Dozent:innen sollten die Liste nach dem Modul löschen – kurze schriftliche Bitte mit der Liste mitschicken;
+   (c) Anregung (nicht nötig): Reicht den Dozent:innen das **Geburtsjahr**? Das wäre datensparsamer und genauso
+   aussagekräftig für die Vorbereitung. → Sandra.
 7. **Modul V „Mit dem Herzen pflegen“** (Pflichtmodul Pflege, 23.–25.10.2026, Einbeck) fehlt im Formular und in Wix-Events –
    findet es statt? Dann in die Liste aufnehmen (`SEITE-termine.md`, Punkt 2). → Vera.
 8. **Datenschutzerklärung:** Enthält sie das Anmeldeformular (Zweck, Speicherdauer der Einsendungen, Wix als
-   Auftragsverarbeiter) und künftig das Widerrufsformular? → Tom.
+   Auftragsverarbeiter, **Weitergabe von Name, Geburtsdatum und Beruf an die Dozent:innen**) und künftig das Widerrufsformular? → Tom.
 9. **Wix-Tarif:** Sind automatische E-Mails (Schritt 7) im aktuellen Tarif enthalten? Falls nicht: Bestätigung vorerst von
    Hand aus dem Postfach der Geschäftsstelle – die Eingangsbestätigung beim **Widerruf** muss aber unverzüglich kommen. → Tom.
 
