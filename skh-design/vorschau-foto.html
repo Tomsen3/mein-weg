@@ -209,8 +209,11 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 .ask .grid4{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .ask .grid4 h3{font-size:24px}
 /* ohne „Frage 1–4“ und ohne gelbe „Ja!“-Knöpfe (Hinweis Tom 26.09.2026: „wie im Kasperletheater“) – ruhiger Textlink mit Ziel */
-.ask .grid4 article{display:flex;flex-direction:column;gap:12px}
-.ask .grid4 .ghost{margin-top:auto;padding-top:4px}
+/* Karten aneinander ausrichten (Hinweis Tom 26.09.2026): Foto, Überschrift, Text und Link je in derselben Zeile aller Karten –
+   Erklärtexte beginnen auf gleicher Höhe, Links stehen auf gleicher Höhe (CSS-Subgrid; in Wix: Überschriften-Textfeld je Karte gleich hoch) */
+.ask .grid4{grid-template-rows:auto auto 1fr auto;row-gap:0}
+.ask .grid4 article{display:grid;grid-row:span 4;grid-template-rows:subgrid;gap:12px;margin-bottom:28px}
+.ask .grid4 .ghost{align-self:end;padding-top:4px}
 @media (max-width:1000px){.ask .grid4{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.ask .grid4{grid-template-columns:minmax(0,1fr)}}
 /* ===== Kopfleiste rechts zweizeilig (alle Seiten, 26.09.2026 – Navigation für die Zielgruppen, DESIGN-foto.md, Abschnitt 4):
@@ -281,7 +284,7 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
     <article><div class="photo"><img src="fotos/frage1-singleiterin.jpg" alt="Singleiterin singt mit Freude inmitten einer Gruppe"></div><h3>Du willst Singleiter:in werden?</h3><p>Zwei Zertifikate, berufsbegleitend an Wochenenden – für Menschen aus Musik, Pflege, Therapie und Seelsorge.</p><a class="ghost" href="vorschau-foto-weiterbildung.html">Zur Weiterbildung →</a></article>
     <article><div class="photo g"><img src="fotos/frage2-mitglieder.jpg" alt="Gruppe von Mitgliedern lacht gemeinsam in die Kamera"></div><h3>Du willst Mitglied werden?</h3><p>Trag das Netzwerk mit und spar 15 % bei allen Modulen. Fürs Singleiter-Zertifikat ist die Mitgliedschaft Voraussetzung.</p><a class="ghost" href="vorschau-foto-mitglied-sein.html">Alles zur Mitgliedschaft →</a></article>
     <article><div class="photo w"><img src="fotos/frage3-singgruppe.jpg" alt="Singgruppe sitzt im Kreis"></div><h3>Du suchst eine Singgruppe in deiner Nähe?</h3><p>Auf der Singenden Landkarte findest du offene Gruppen – ohne Noten, ohne Vorkenntnisse.</p><a class="ghost" href="vorschau-foto-landkarte.html#karte">Zur Landkarte →</a></article>
-    <article><div class="photo"><img src="fotos/ein-mitarbeitende.jpg" alt="Vier Menschen stehen hintereinander, die Hände auf den Schultern der vorderen, und lachen"></div><h3>Ihr wollt Singen in eure Einrichtung bringen?</h3><p>Krankenhäuser, Pflegeeinrichtungen und Hospize: So wird euer Haus zur Singenden Einrichtung – mit zertifizierter Singleitung.</p><a class="ghost" href="vorschau-foto-einrichtungen.html">Für Einrichtungen →</a></article>
+    <article><div class="photo"><img src="fotos/ein-mitarbeitende.jpg" alt="Vier Menschen stehen hintereinander, die Hände auf den Schultern der vorderen, und lachen"></div><h3>Ihr wollt Singen in eure Einrichtung bringen?</h3><p>Ob Klinik, Pflegeheim, Hospiz oder Begegnungsstätte: Mit einer zertifizierten Singleitung kommt heilsames Singen zu euren Menschen.</p><a class="ghost" href="vorschau-foto-einrichtungen.html">Für Einrichtungen →</a></article>
   </div>
 </div></section>
 
@@ -344,7 +347,7 @@ footer a{text-decoration:none} footer a:hover{text-decoration:underline}
 </div></section>
 
 <footer><div class="wrap">
-  <div><h3>Singende Krankenhäuser e.V.</h3><p>Gemeinnütziges Netzwerk für heilsames Singen in Krankenhäusern, Psychiatrien, Pflegeeinrichtungen und Hospizen.</p></div>
+  <div><h3>Singende Krankenhäuser e.V.</h3><p>Gemeinnütziges Netzwerk für heilsames Singen – in Krankenhäusern, Psychiatrien, Pflegeeinrichtungen und Hospizen ebenso wie im sozialen Raum.</p></div>
   <div><h3>Mitmachen</h3><ul><li><a href="vorschau-foto-mitglied-sein.html">Mitglied sein</a></li><li><a href="vorschau-foto-mitglied-sein.html#unterstuetzung">Für Mitglieder</a></li><li><a href="vorschau-foto-ueber-uns.html#spenden">Spenden</a></li><li><a href="vorschau-foto-netzwerk.html">Aus dem Netzwerk</a></li><li><a href="#">Newsletter</a></li><li><a href="vorschau-foto-shop.html">Shop</a></li></ul></div>
   <div><h3>Service</h3><ul><li><a href="vorschau-foto-kontakt.html">Kontakt</a></li><li><a href="vorschau-foto-kontakt.html#presse">Presse</a></li><li><a href="vorschau-foto-downloads.html">Downloads &amp; Formulare</a></li><li><a href="vorschau-foto-faq.html">Häufige Fragen</a></li><li><a href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_0a02510ad2b54ed2a89952a79481d677.pdf" target="_blank" rel="noopener">Allgemeiner Infoflyer</a></li><li><a href="vorschau-foto-ueber-uns.html#netzwerk">Kooperationspartner</a></li></ul></div>
   <div><h3>Rechtliches &amp; Kanäle</h3><ul><li><a href="vorschau-foto-rechtliches.html#impressum">Impressum</a></li><li><a href="vorschau-foto-rechtliches.html#datenschutz">Datenschutz</a></li><li><a href="vorschau-foto-rechtliches.html#agb">AGB</a> · <a href="vorschau-foto-rechtliches.html#widerrufsrecht">Widerrufsrecht</a></li><li><a href="vorschau-foto-anmeldung.html#widerruf">Vertrag widerrufen</a></li><li><a href="#">YouTube · Instagram · Facebook</a></li></ul></div>

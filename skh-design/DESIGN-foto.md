@@ -192,6 +192,19 @@ Regeln:
   1 px Anthrazit, 14 px Rundung, „▾“ am Menüpunkt); Handy: eingerückt unter „Weiterbildung“ im aufgeklappten Menü. Die aktive
   Unterseite ist gelb unterstrichen. Anlass: Hinweis Tom „wo finde ich die Dozenten auf dem Handy?“ – heute gibt es dafür
   „WEITERBILDUNG ▸ Dozenten“.
+- **Wirkungsbereich „auch sozialer Raum“ (Hinweis Tom, 26.09.2026):** Der Verein beschränkt sich nicht mehr auf Krankenhaus,
+  Pflege und Gesundheit, sondern geht auch in den erweiterten sozialen Raum. Beispiele nur aus eigenen Texten: Begegnungsstätten,
+  Selbsthilfegruppen, Nachbarschaftshilfen (Seite Für Singleiter:innen). **Angepasst** (beschreibende Texte): Fußzeilen-Satz auf
+  allen Seiten („… ebenso wie im sozialen Raum“), Startseite Frage 4 („Ob Klinik, Pflegeheim, Hospiz oder Begegnungsstätte …“),
+  Über uns Titel („… und heute auch in den sozialen Raum“), Für Einrichtungen (kleine Überschrift „Gesundheit · Pflege · sozialer
+  Raum“, Satz im Abschnitt Singleitung), Landkarte (Singleiter:innen-Karte), Weiterbildung (Einleitung), Termine („Begegnungsstätten“).
+  **Bewusst nicht geändert – Entscheidung Vorstand nötig:** (1) die drei Zertifikate „Singendes Krankenhaus / Singende
+  Gesundheitseinrichtung / Singende Pflegeeinrichtung“ – gibt es eins für soziale Einrichtungen, oder zählen sie zu
+  „Gesundheitseinrichtung“? (2) die Weiterbildungszweige „Krankenhaus & Gesundheit“ und „Pflege & Senior:innen“ – welcher Zweig
+  bereitet auf den sozialen Raum vor? (3) Mitgliedsbeitrag „Einrichtung“ (heute „für Krankenhäuser, Pflege- und
+  Gesundheitseinrichtungen“) – gilt er für Begegnungsstätten, Vereine, Gemeinden? (4) die Vision auf Über uns („ein
+  Gesundheitswesen, in dem …“) ist ein Vereinstext – anpassen? (5) Anträge, Richtlinien und Infoflyer (PDFs) nennen nur Gesundheit
+  und Pflege. Bis zur Entscheidung versprechen die Texte für den sozialen Raum **Singleitung**, aber **kein Zertifikat**.
 - **Shop-Link in der Kopfleiste:** schlichter Textlink mit Tüten-Symbol links neben „Mitglied werden“ – kein Menüpunkt, kein
   zweiter Button (Entscheidung 26.09.2026, Abnahme-Hinweis Tom: „der Shop taucht nicht im Header auf“). Seit der Navigation nach
   Zielgruppen steht er mit Suche und Kontakt in einer kleinen Zeile **über** „Mitglied werden“ (siehe nächster Punkt).
@@ -255,7 +268,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte, Button „Mitglied werden“ |
 | 1 | Titelfoto + Tiefgrün-Kasten | **Lebenskraft Singen** | Leitspruch, Zitat „Ein Lied kann keine Wunder vollbringen …“, Buttons „Zur Weiterbildung“ und „Singgruppe in deiner Nähe“ |
 | 1a | Leinen | **Aktuell** (`#aktuell`, seit 26.09.2026) | wechselnde Ankündigung: links **Video** (16 : 9, 20 px Rundung) oder Foto, rechts kleine Überschrift „Aktuell“, Titel, Datum fett, 1–2 Sätze, gelber Knopf + Textlink auf den Hauptort (z. B. Termine `#schnuppern`). Wunsch Tom: „oben lege ich oft ein Video ab, z. B. für kommende Schnupperkurse“. Video in Wix hochladen (Wix-Video) statt YouTube einbetten – kein Google-Cookie, keine Einwilligung nötig. Ist nichts anzukündigen: Abschnitt ausblenden. Die Hinweisleiste bleibt für die Jahrestagung. |
-| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | **vier** Fragen, je mit Textlink zum Ziel („Zur Weiterbildung →“, „Alles zur Mitgliedschaft →“, „Zur Landkarte →“, „Für Einrichtungen →“) – seit 26.09.2026 **ohne** „Frage 1–4“ und ohne gelbe „Ja!“-Knöpfe (Hinweis Tom: „plakativ wie im Kasperletheater“; die gelbe Pille bleibt dem einen Hauptknopf je Bereich vorbehalten): Singleiter:in werden · Mitglied werden (Mitgliedschaft = Voraussetzung fürs **Zertifikat**, nicht für die Weiterbildung – korrigiert 25.09.2026) · Singgruppe in der Nähe · **Einrichtung** (neu 26.09.2026, Abschnitt 4) |
+| 2 | Leinen | **Begleitet dich auch schon ein Lied?** | **vier** Fragen (Foto, Überschrift, Text und Link jeder Karte auf gleicher Höhe – in Wix die Überschriften-Textfelder gleich hoch einstellen), je mit Textlink zum Ziel („Zur Weiterbildung →“, „Alles zur Mitgliedschaft →“, „Zur Landkarte →“, „Für Einrichtungen →“) – seit 26.09.2026 **ohne** „Frage 1–4“ und ohne gelbe „Ja!“-Knöpfe (Hinweis Tom: „plakativ wie im Kasperletheater“; die gelbe Pille bleibt dem einen Hauptknopf je Bereich vorbehalten): Singleiter:in werden · Mitglied werden (Mitgliedschaft = Voraussetzung fürs **Zertifikat**, nicht für die Weiterbildung – korrigiert 25.09.2026) · Singgruppe in der Nähe · **Einrichtung** (neu 26.09.2026, Abschnitt 4) |
 | 3 | Salbei | **Singen wirkt – und wir zeigen dir wie** | Einleitungstext, Faktenliste (Zertifikate, Wochenenden, Mitgliedschaft, Schnupperkurs), Links „Wichtige Infos“ und „Dozent:innen“ |
 | 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“ (automatisch aus Wix-Events), Links „Alle Termine →“ und „Vorschau 2027 →“ auf die Seite Termine (`SEITE-termine.md`; geändert 25.09.2026, vorher Terminkalender und PDF) |
 | 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |
