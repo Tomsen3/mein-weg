@@ -1,6 +1,6 @@
 # DESIGN-foto.md – Alternative „Foto“ für Singende Krankenhäuser e.V.
 
-Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Aufräumen) · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Abnahme-Paket) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
@@ -18,7 +18,8 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Shop** (Wix Stores, Übersicht `/category/all-products` und Vorlage für alle 93 `/product-page/…`, in der Fußzeile) → `SEITE-shop.md` + `vorschau-foto-shop.html` ·
 **Rechtliches** (eine Vorlage für Impressum, Datenschutz, AGB, Widerrufsrecht, in der Fußzeile) → `SEITE-rechtliches.md` + `vorschau-foto-rechtliches.html` ·
 **Häufige Fragen** (neu, `/haeufige-fragen`, in der Fußzeile statt des toten Links „FAQ“) → `SEITE-faq.md` + `vorschau-foto-faq.html`
-Ohne Vorschau: **Aufräumen** (Vorlagenseiten löschen, vollständige Weiterleitungsliste, Seitentitel für Google, Wix-Apps) → `SEITE-aufraeumen.md`
+Ohne Vorschau: **Aufräumen** (Vorlagenseiten löschen, vollständige Weiterleitungsliste, Seitentitel für Google, Wix-Apps) → `SEITE-aufraeumen.md` ·
+**Abnahme-Paket** (Übersicht für Vorstand und Geschäftsstelle, Ablauf der Freigabe) → `ABNAHME.md` + `abnahme.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
@@ -297,7 +298,7 @@ die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 Doku oder sind als Weiterleitung bzw. Löschung dokumentiert (`SEITE-aufraeumen.md`, Abschnitt 1, Tabelle „Die 38 Seiten“).
 **Noch offen – keine Gestaltungsaufgaben:** (1) der **Rechtstexte-Auftrag** (Impressum, Datenschutz, AGB, Widerruf, Weiterbildung, Shop –
 alles in einem Auftrag, gesammelt in `SEITE-rechtliches.md`, Abschnitt 7, Punkt 1); (2) die offenen Punkte in Abschnitt 7 der einzelnen
-Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11) und danach die Umsetzung in Wix. Vorschlag für den Anfang:
+Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11; Paket und Ablauf: `ABNAHME.md`, Übersicht `abnahme.html`) und danach die Umsetzung in Wix. Vorschlag für den Anfang:
 `SEITE-aufraeumen.md`, Abschnitt 6, Schritte 1–4 – geht sofort, ohne Neugestaltung, in 1–2 Stunden.
 
 ## 6. Umsetzung in Wix – Schritt für Schritt
@@ -322,7 +323,8 @@ Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11) und d
 8. **Fotos rund:** Bild anklicken → *Design* → *Ecken* 20 px. Kein Rahmen, kein Schatten.
 9. **Bänder:** Abschnitt → *Hintergrund ändern* → Farbe Salbei bzw. Weizen.
 10. **Handy-Ansicht prüfen:** Titelkasten unter das Foto rutschen lassen, Größen aus Abschnitt 3.
-11. **Abnahme:** Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen.
+11. **Abnahme:** Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen. Ablauf, Zuständigkeiten
+    und Übersichtsseite: `ABNAHME.md` und `abnahme.html`.
 
 ---
 
