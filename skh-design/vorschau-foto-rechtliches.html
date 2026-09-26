@@ -1,4 +1,4 @@
-<title>SKH Downloads</title>
+<title>SKH Rechtliches</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
 <style>
@@ -610,47 +610,436 @@ ol.grid3{list-style:none;margin:0;padding:0}
   .give .form .facts li{grid-template-columns:1fr;gap:4px}
   .land .grid2{grid-template-columns:minmax(0,1fr)}
 }
-/* ===== Ergänzungen für die Seite „Downloads & Formulare“ (Bausteine aus SEITE-sing-mit.md, SEITE-einrichtungen.md und SEITE-kontakt.md, jeweils Abschnitt 6) ===== */
-/* Kopf ohne Titelfoto: Service-Seite, man will schnell zum Dokument */
+/* ===== Ergänzungen für die Seite „Kontakt“ (Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, SEITE-sing-mit.md, SEITE-einrichtungen.md und SEITE-ueber-uns.md, jeweils Abschnitt 6) ===== */
+.pos-kt{object-position:50% 45%}
+
+/* Wegweiser auf Leinen: Thema | zuständig | Link */
+.guide .intro{margin:-12px 0 28px}
+.route{list-style:none;margin:0;padding:0}
+.route li{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--anthra)}
+.route li:first-child{border-top:1px solid var(--anthra)}
+.route .topic{font-size:20px;line-height:1.35}
+.route .who{font-size:17px}
+.route .who b{font-size:18px}
+.route .ghost{justify-self:end;text-align:right}
+
+/* Ansprechpersonen auf Salbei: drei Kontakt-Karten mit Porträt */
+.people-k{background:var(--sage)}
+.kcard{display:flex;flex-direction:column;gap:10px}
+.kcard .photo{aspect-ratio:1/1;max-width:240px}
+.kcard h3{font-size:28px;line-height:1.1}
+.kcard .fn{font-size:17px;font-weight:700}
+.kcard .tel{font-size:clamp(24px,2.4vw,28px);font-variant-numeric:tabular-nums;line-height:1.2;text-decoration:none;white-space:nowrap}
+.kcard .tel:hover{text-decoration:underline}
+.kcard .when{font-size:17px}
+.kcard .mail{font-weight:700;overflow-wrap:anywhere}
+.kcard .facts{margin-top:4px}
+.kcard .facts li{grid-template-columns:1fr;padding:8px 0}
+.people-k .good{margin-top:clamp(36px,5vw,52px)}
+
+/* Kontaktformular auf Leinen: Erklärung links, Formular-Karte rechts */
+.write-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:start}
+.write-grid .text{display:flex;flex-direction:column;gap:18px}
+form.form{gap:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label,.field legend{font-size:17px;font-weight:700}
+.field input,.field textarea{font:inherit;font-size:18px;color:var(--anthra);background:var(--white);border:1px solid var(--anthra);border-radius:12px;padding:12px 14px;width:100%}
+.field textarea{min-height:150px;resize:vertical}
+.field input:focus-visible,.field textarea:focus-visible,.check input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.row-plz{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px}
+.check{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;font-size:18px;line-height:1.45}
+.check input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--deep)}
+fieldset.addr-f{border:0;margin:0;padding:16px 0 0;border-top:1px solid var(--anthra);display:flex;flex-direction:column;gap:14px}
+fieldset.addr-f[hidden]{display:none}
+.req-note{font-size:17px}
+form.form .pill{border:0;cursor:pointer;font-family:inherit}
+.sent{background:var(--sage);border-radius:12px;padding:14px 18px}
+.sent[hidden]{display:none}
+
+/* Presse auf Weizen */
+.press{background:var(--wheat)}
+.press .wrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.press .doc{border-radius:20px;overflow:hidden;max-width:360px;justify-self:center}
+.press .doc img{display:block;width:100%;height:auto}
+.press .facts li{grid-template-columns:1fr auto;align-items:baseline}
+.press .person{margin-top:10px}
+
+/* Anschrift auf Leinen: drei kurze Blöcke */
+.post .grid3 article{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--anthra);padding-top:18px}
+.post h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+
+@media (max-width:900px){
+  .write-grid,.press .wrap{grid-template-columns:minmax(0,1fr)}
+  .people-k .grid3,.post .grid3{grid-template-columns:minmax(0,1fr)}
+  .people-k .kcard{display:grid;grid-template-columns:160px minmax(0,1fr);gap:8px 24px;align-items:start}
+  .people-k .kcard .photo{grid-row:1/span 7;width:100%}
+  .people-k .kcard>:not(.photo){grid-column:2}
+  .route li{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .route .ghost{grid-column:1/-1;justify-self:start;text-align:left}
+  .press .doc{justify-self:start;max-width:260px}
+}
+@media (max-width:640px){
+  .route li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .people-k .kcard{grid-template-columns:96px minmax(0,1fr);gap:6px 16px}
+  .kcard .photo{border-radius:14px}
+  .kcard h3{font-size:24px}
+  .row2,.row-plz{grid-template-columns:minmax(0,1fr)}
+  .press .facts li{grid-template-columns:1fr;gap:4px}
+}
+/* ===== Ergänzungen für die Seite „Singende Landkarte“ (Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, SEITE-sing-mit.md, SEITE-einrichtungen.md, SEITE-ueber-uns.md und SEITE-kontakt.md, jeweils Abschnitt 6) ===== */
+.pos-lk{object-position:50% 35%}
+
+/* Karten-Rahmen: Filterspalte links, Karte rechts (in Wix: das HTML-Element mit der Netzwerkkarte) */
+.lkmap{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);background:var(--white);border-radius:20px;overflow:hidden;min-height:640px}
+.lk-side{display:flex;flex-direction:column;gap:16px;padding:22px;border-right:1px solid var(--sage)}
+.lk-side .lbl{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--leafink)}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:inherit;font-size:16px;font-weight:700;color:var(--anthra);background:var(--linen);border:1px solid var(--anthra);border-radius:9999px;padding:7px 14px;cursor:pointer;line-height:1.2}
+.seg button[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:var(--white)}
+.seg button .n{font-weight:400;font-variant-numeric:tabular-nums}
+.lk-search{display:flex;flex-direction:column;gap:8px}
+.lk-search .row-plz{grid-template-columns:minmax(0,1fr) 110px;gap:10px}
+.lk-search input,.lk-search select{font:inherit;font-size:18px;color:var(--anthra);background:var(--white);border:1px solid var(--anthra);border-radius:12px;padding:10px 12px;width:100%}
+.lk-search input:focus-visible,.lk-search select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.lk-hint{font-size:16px;line-height:1.45;background:var(--sage);border-radius:12px;padding:10px 14px}
+.lk-hint[hidden]{display:none}
+.lk-count{font-size:17px;border-top:1px solid var(--anthra);padding-top:12px}
+.lk-count b{font-variant-numeric:tabular-nums}
+.lk-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.lk-list li{padding:12px 0;border-bottom:1px solid var(--sage);display:flex;flex-direction:column;gap:3px;font-size:16px;line-height:1.4}
+.lk-list b{font-size:18px}
+.lk-list .ex{font-size:14px;font-style:italic}
+.lk-print{margin-top:auto;display:flex;flex-direction:column;gap:8px}
+.lk-print .pill{border:0;cursor:pointer;font-family:inherit;align-self:flex-start;padding:12px 22px}
+.lk-print p{font-size:16px;line-height:1.4}
+.lk-canvas{position:relative;background:#eef0e4;min-height:420px}
+.lk-canvas svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lk-canvas .lab{font-family:var(--sans);font-size:15px;font-weight:700;fill:var(--grey);letter-spacing:.08em;text-transform:uppercase}
+.lk-pop{position:absolute;right:4%;top:5%;background:var(--white);border-radius:14px;padding:14px 16px;max-width:270px;font-size:16px;line-height:1.4;display:flex;flex-direction:column;gap:4px;box-shadow:0 0 0 1px var(--sage)}
+.lk-pop b{font-size:18px}
+.lk-pop .tag{font-size:13px;padding:2px 10px}
+.lk-pop a{font-weight:700;text-decoration:none}
+.lk-note{position:absolute;left:14px;bottom:14px;right:14px;font-size:14px;color:var(--grey)}
+.legend-lk{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:17px}
+.legend-lk li{display:flex;align-items:center;gap:10px}
+.legend-lk i{width:16px;height:16px;border-radius:9999px;display:inline-block}
+.tips{margin-top:clamp(40px,6vw,64px)}
+.tips article{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--anthra);padding-top:18px}
+.tips h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+
+/* Was du findest (Salbei): drei Foto-Karten mit Anzahl */
+.kinds{background:var(--sage)}
+.kinds .photo{aspect-ratio:4/3}
+.kinds .grid3 article .ghost{margin-top:auto}
+.kinds .online{margin-top:clamp(36px,5vw,52px)}
+
+/* Noch keine Gruppe (Weizen): Foto hochkant + drei Wege */
+.nearby{background:var(--wheat)}
+.nearby .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:center}
+.nearby .photo{aspect-ratio:4/5}
+.nearby .items{display:flex;flex-direction:column;gap:22px}
+.nearby article{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--anthra);padding-top:18px}
+.nearby h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+
+/* Auf die Karte (Leinen): drei Wege + Ansprechperson mit Foto */
+.entry .grid3 article{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--anthra);padding-top:18px}
+.entry .grid3 h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+.entry .grid3 .ghost{margin-top:auto}
+.entry .contact{background:none;padding:0;margin-top:clamp(44px,6vw,72px)}
+.entry .contact .wrap{grid-template-columns:220px 1fr;align-items:start}
+.entry .contact h3{font-size:clamp(26px,2.6vw,32px);line-height:1.1}
+
+/* Datenschutz (Salbei): zwei Häkchen-Listen */
+.privacy{background:var(--sage)}
+.privacy .grid2 article{display:flex;flex-direction:column;gap:14px}
+.privacy h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+.checks .no circle{fill:var(--anthra)}
+
+@media (max-width:900px){
+  .lkmap{grid-template-columns:minmax(0,1fr)}
+  .lk-canvas{order:-1;min-height:0;aspect-ratio:1/1.05}
+  .lk-side{border-right:0;border-top:1px solid var(--sage)}
+  .nearby .wrap{grid-template-columns:minmax(0,1fr)}
+  .nearby .photo{aspect-ratio:4/3;max-width:560px}
+  .kinds .grid3,.entry .grid3{grid-template-columns:minmax(0,1fr)}
+  .tips.grid3{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .lk-pop{display:none}
+  .lk-canvas{aspect-ratio:auto;display:flex;flex-direction:column}
+  .lk-canvas svg{position:static;height:auto;aspect-ratio:780/980}
+  .lk-note{position:static;padding:0 14px 12px}
+  .entry .contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .entry .contact .photo{max-width:180px}
+  .privacy .grid2{grid-template-columns:minmax(0,1fr)}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ===== Ergänzungen für die Seite „Downloads & Formulare“: Kopf ohne Titelfoto (aus SEITE-downloads.md, Abschnitt 6) ===== */
 .dl-head{padding:clamp(32px,5vw,64px) var(--gutter) clamp(20px,3vw,32px)}
 .dl-head .wrap{display:flex;flex-direction:column;gap:16px}
 .dl-head h1{font-size:clamp(44px,6.2vw,76px);line-height:.98}
 .dl-head .lead{max-width:62ch}
 .dl-head .good{margin-top:8px}
+.dl-head .acts{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
 
-/* Dokumentliste: PDF-Marke | Titel, Beschreibung, Angaben | Link */
-.docs{list-style:none;margin:0;padding:0}
-.docs>li{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:18px 24px;align-items:start;padding:22px 0;border-bottom:1px solid var(--anthra)}
-.docs>li:first-child{border-top:1px solid var(--anthra)}
-.pdf{width:64px;height:80px;border-radius:10px;background:var(--white);border:1px solid var(--anthra);display:grid;place-items:center;font-size:15px;font-weight:700;letter-spacing:.06em;position:relative}
-.pdf::before{content:"";position:absolute;right:-1px;top:-1px;width:18px;height:18px;background:var(--wheat);border-left:1px solid var(--anthra);border-bottom:1px solid var(--anthra);border-radius:0 10px 0 6px}
-.docs .t{display:flex;flex-direction:column;gap:6px}
-.docs h3{font-size:clamp(22px,2.2vw,26px);line-height:1.15}
-.docs .meta{font-size:17px;font-variant-numeric:tabular-nums}
-.docs .act{display:flex;flex-direction:column;gap:8px;align-items:flex-end;text-align:right}
-.docs .act .pill{padding:12px 22px}
-.vh{font-size:16px;line-height:1.45;border-left:3px solid var(--anthra);padding-left:12px;margin-top:4px}
+/* ===== Ergänzungen für die Seite „Anmeldung Weiterbildung“ (Bausteine aus SEITE-mitglied-sein.md, SEITE-einrichtungen.md, SEITE-kontakt.md und SEITE-downloads.md, jeweils Abschnitt 6) ===== */
+/* Vorher wissen: Beitrags-Reihe + Faktenliste */
+.know .fee-row{margin-bottom:clamp(36px,5vw,56px)}
+.know .fee-row .big{font-size:clamp(44px,4.4vw,58px)}
+.know .facts li{grid-template-columns:210px 1fr}
+.know .links{display:flex;gap:10px 28px;flex-wrap:wrap;margin-top:22px}
+
+/* Formular auf Salbei: links Ablauf + Ansprechperson, rechts Formular-Karte */
+.reg{background:var(--sage)}
+.reg-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:clamp(28px,5vw,64px);align-items:start}
+.reg-side{display:flex;flex-direction:column;gap:28px;position:sticky;top:20px}
+.mini{list-style:none;margin:0;padding:0;counter-reset:s}
+.mini li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--anthra)}
+.mini li:first-child{border-top:1px solid var(--anthra)}
+.mini li::before{content:counter(s);font-size:32px;line-height:1;font-variant-numeric:tabular-nums}
+.reg .person.pic{grid-template-columns:110px 1fr;gap:16px 20px}
+.reg .person.pic h3{font-size:24px;line-height:1.15}
+.reg .person.pic .tel{font-size:clamp(22px,2vw,26px)}
+
+/* Formular-Abschnitte: große Nummer + Überschrift */
+form.form.reg-form{gap:0;padding:clamp(22px,3.4vw,40px)}
+fieldset.part{border:0;margin:0;padding:26px 0;border-top:1px solid var(--anthra);display:flex;flex-direction:column;gap:16px;min-width:0}
+fieldset.part:first-of-type{border-top:0;padding-top:0}
+fieldset.part>legend{float:left;width:100%;padding:0;margin:0 0 4px;display:flex;gap:14px;align-items:baseline}
+fieldset.part>legend+*{clear:both}
+fieldset.part>legend .no{font-size:34px;line-height:1;font-variant-numeric:tabular-nums;color:var(--leafink)}
+fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+.hint{font-size:17px;line-height:1.5}
+.field .hint{font-weight:400}
+.field select{font:inherit;font-size:18px;color:var(--anthra);background:var(--white);border:1px solid var(--anthra);border-radius:12px;padding:12px 14px;width:100%}
+.field select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row-3{display:grid;grid-template-columns:140px minmax(0,1fr) minmax(0,1fr);gap:16px}
+.sub-q{font-size:17px;font-weight:700;margin-top:6px}
+
+/* Auswahl-Karten für Module und Übernachtung: ganze Fläche anklickbar */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:grid;grid-template-columns:24px minmax(0,1fr);gap:14px;align-items:start;background:var(--white);border:1px solid var(--anthra);border-radius:12px;padding:14px 16px;cursor:pointer;font-size:18px;line-height:1.45}
+.opt input{width:22px;height:22px;margin:3px 0 0;accent-color:var(--deep);cursor:pointer}
+.opt input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.opt:has(input:checked){border:2px solid var(--deep);padding:13px 15px;background:var(--linen)}
+.opt .mod{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.opt .d{font-size:21px;line-height:1.2;font-variant-numeric:tabular-nums}
+.opt .d small{display:block;font-size:15px}
+.opt .t{display:flex;flex-direction:column;gap:6px}
+.opt .t b{font-size:19px;line-height:1.3}
+.opt .t span{font-size:17px}
+.opts.inline{flex-direction:row;flex-wrap:wrap}
+.opts.inline .opt{flex:1 1 200px}
+.tip{background:var(--linen);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:12px 16px;font-size:17px}
+.tip[hidden]{display:none}
+.err{font-weight:700;font-size:17px}
+.err[hidden]{display:none}
+.err::before{content:"! ";display:inline-block;width:22px;height:22px;border-radius:9999px;background:var(--anthra);color:var(--white);text-align:center;line-height:22px;font-size:15px;margin-right:8px}
+.send{display:flex;flex-direction:column;gap:12px;padding-top:26px;border-top:1px solid var(--anthra)}
+.send .pill{align-self:flex-start}
+
+/* Bestätigung nach dem Absenden (in Wix: Seite /anmeldung-erfolgreich) */
+.done{background:var(--white);border-radius:20px;padding:clamp(22px,3.4vw,40px);display:flex;flex-direction:column;gap:16px}
+.done[hidden]{display:none}
+.done h3{font-size:clamp(28px,3vw,36px);line-height:1.1}
+.done .facts li{grid-template-columns:150px 1fr}
+
+/* Nach dem Absenden auf Weizen */
+.after{background:var(--wheat)}
+.after .flow{max-width:900px}
+
+/* Widerrufs-Knopf (§ 356a BGB): eigener Bereich, zwei Schritte */
+.wd-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.wd-grid .text{display:flex;flex-direction:column;gap:18px}
+#widerruf .form{background:var(--white)}
+#widerruf .form[hidden]{display:none}
+#widerruf .form h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
+#widerruf button.pill{border:0;cursor:pointer;font-family:inherit;align-self:flex-start}
+
+@media (max-width:900px){
+  .wd-grid{grid-template-columns:minmax(0,1fr)}
+  .reg-grid{grid-template-columns:minmax(0,1fr)}
+  .reg-side{position:static;order:2}
+  .reg-side .mini,.reg-side>.hint{display:none}
+}
+@media (max-width:640px){
+  .know .facts li,.done .facts li{grid-template-columns:1fr;gap:4px}
+  .opt .mod{grid-template-columns:1fr}
+  .row-3{grid-template-columns:minmax(0,1fr)}
+  .reg .person.pic{grid-template-columns:1fr}
+  fieldset.part>legend .no{font-size:28px}
+}
+
+/* ===== Ergänzungen für die Seite „Veranstaltungsseite“ (Wix-Events-Vorlage /event-details/…; Bausteine aus SEITE-weiterbildung.md, Abschnitt 5, SEITE-sing-mit.md, SEITE-einrichtungen.md, SEITE-kontakt.md und SEITE-anmeldung.md, jeweils Abschnitt 6) ===== */
+/* Zustands-Schalter: nur in der Vorschau, gibt es in Wix nicht */
+.state{background:var(--white);border-bottom:1px solid var(--anthra);padding:10px var(--gutter);font-size:16px}
+.state .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline}
+.state button{font:inherit;font-weight:700;color:var(--anthra);background:none;border:0;border-bottom:3px solid transparent;padding:4px 0;cursor:pointer}
+.state button[aria-pressed="true"]{border-bottom-color:var(--gold)}
+[data-show][hidden]{display:none!important}
+
+/* Kopf der Veranstaltung: Titelfoto + Tiefgrün-Kasten rechts (Wix-Events: Kopfbereich der Vorlage) */
+.hero .panel .when{font-size:clamp(19px,1.8vw,22px);line-height:1.4;border-top:1px solid #56703a;padding-top:14px}
+.hero .panel .when b{font-weight:700}
+.hero .panel .tag.off{background:var(--white)}
+
+/* Über die Veranstaltung: links Zeit & Ort (klebt beim Scrollen), rechts der Text */
+.ev .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.ev-side{display:flex;flex-direction:column;gap:22px;position:sticky;top:20px}
+.ev-side h2{font-size:clamp(30px,3vw,38px);line-height:1.05}
+.ev-side .facts li{grid-template-columns:70px 1fr}
+.ev-side .links{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.ev-side .share{font-size:17px;border-top:1px solid var(--anthra);padding-top:14px}
+.ev-side .share a{font-weight:700;margin-right:14px}
+.ev-text{display:flex;flex-direction:column;gap:18px;max-width:68ch}
+.ev-text .meta{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:19px}
+.ev-text .meta b{font-weight:700}
+.ev-text h3{font-size:clamp(24px,2.4vw,28px);line-height:1.15;margin-top:10px}
+.ev-text .quote{margin:6px 0}
+
+/* Anmeldung & Kosten auf Salbei: fester Bereich unter jeder Veranstaltung */
+.evreg{background:var(--sage)}
+.evreg .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.evreg .text{display:flex;flex-direction:column;gap:18px}
+.evreg .acts{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.evreg .good{margin-top:6px}
+
+/* Weitere Termine auf Leinen (.evnext – nicht .more, das ist der Aufklapptext): kompakte Liste wie Startseite, Band 4 */
+.evnext .mods li{grid-template-columns:170px 1fr auto}
+.evnext .links{display:flex;gap:10px 28px;flex-wrap:wrap;margin-top:22px}
+
+@media (max-width:900px){
+  .ev .wrap,.evreg .wrap{grid-template-columns:1fr}
+  .ev-side{position:static}
+}
+@media (max-width:640px){
+  .evnext .mods li{grid-template-columns:1fr;gap:6px}
+  .ev-side .facts li{grid-template-columns:1fr;gap:2px}
+}
+
+/* ===== Ergänzungen für die Seite „Shop“ (Wix Stores: Vorlagen „Kategorieseite“ /category/… und „Produktseite“ /product-page/…; Bausteine aus SEITE-downloads.md, SEITE-veranstaltung.md, SEITE-mitglied-sein.md und SEITE-sing-mit.md, jeweils Abschnitt 6) ===== */
+/* Ansicht-Schalter: nutzt .state aus der Veranstaltungsseite, nur Vorschau */
+[data-view][hidden]{display:none!important}
+
+/* Kopf ohne Titelfoto (wie Downloads) mit Versand-Satz */
+.sh-head .good{max-width:900px}
+
+/* Übersicht: links Kategorien, rechts Raster */
+.shop{padding-top:clamp(24px,3vw,40px)}
+.shop .wrap{display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.cats{display:flex;flex-direction:column;gap:10px;position:sticky;top:20px}
+.cats h2{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--leafink)}
+.cats ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--anthra)}
+.cats li{border-bottom:1px solid var(--anthra)}
+.cats button{font:inherit;font-size:17px;color:var(--anthra);background:none;border:0;padding:10px 0;width:100%;display:flex;justify-content:space-between;gap:10px;cursor:pointer;text-align:left}
+.cats button span{font-variant-numeric:tabular-nums}
+.cats button[aria-pressed="true"]{font-weight:700;text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--gold);text-underline-offset:6px}
+.cats button:hover{text-decoration:underline;text-underline-offset:6px}
+.bar{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 20px;margin-bottom:20px;font-size:17px}
+.bar b{font-weight:700}
+
+/* Produktkarte: Bild ist die Karte (keine Kartenfläche, kein Knopf) */
+.products{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 24px}
+.prod a{display:flex;flex-direction:column;gap:10px;text-decoration:none}
+.prod .tile{aspect-ratio:1/1;border-radius:20px;background:var(--white);display:grid;place-items:center;padding:14%;overflow:hidden}
+.prod .tile img{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
+.prod .kind{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--leafink)}
+.prod h3{font-size:20px;line-height:1.25}
+.prod a:hover h3{text-decoration:underline;text-underline-offset:4px}
+.prod .price{font-weight:700;font-variant-numeric:tabular-nums}
+.pages{display:flex;gap:6px 18px;flex-wrap:wrap;margin-top:40px;font-size:17px;border-top:1px solid var(--anthra);padding-top:16px}
+.pages b{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--gold);text-underline-offset:6px}
+.pages a{font-weight:700;text-decoration:none}
+
+/* Service-Band unter dem Shop (Salbei): Sandra + Verweise */
+.sh-help{background:var(--sage)}
+.sh-help .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.sh-help .text{display:flex;flex-direction:column;gap:18px}
+.note-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--anthra)}
+.note-list li{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-bottom:1px solid var(--anthra)}
+.note-list b{font-weight:700}
+
+/* Produktseite: Bild links, Kaufbereich rechts */
+.pd .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.pd .tile{aspect-ratio:1/1;border-radius:20px;background:var(--white);display:grid;place-items:center;padding:10%}
+.pd .tile img{max-width:100%;max-height:100%;display:block}
+.buy{display:flex;flex-direction:column;gap:16px}
+.buy h1{font-size:clamp(40px,4.6vw,60px);line-height:1}
+.buy .cost{font-size:clamp(30px,3vw,38px);font-variant-numeric:tabular-nums;line-height:1.1}
+.buy .cost small{display:block;font-size:16px;margin-top:6px}
+.buy .sku{font-size:16px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--anthra);border-radius:9999px;align-self:flex-start}
+.qty button{font:inherit;font-size:22px;width:48px;height:48px;border:0;background:none;color:var(--anthra);cursor:pointer;border-radius:9999px}
+.qty output{min-width:32px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.buy .row{display:flex;gap:16px 22px;align-items:center;flex-wrap:wrap}
+.buy .pill{border:0;cursor:pointer;font-family:inherit}
+.buy .ship{font-size:17px;border-top:1px solid var(--anthra);padding-top:14px}
+.pd-text{display:flex;flex-direction:column;gap:16px;max-width:68ch}
+.pd-text h2{font-size:clamp(30px,3vw,38px);line-height:1.05}
+.pd-text ol{margin:0;padding-left:1.6em;display:grid;gap:4px}
+.pd-info{display:flex;flex-direction:column;gap:0;margin-top:10px}
+.pd-info .more:last-child{border-bottom:1px solid var(--anthra);padding-bottom:12px}
+.pd-info .more{padding-bottom:12px}
+.share{font-size:17px}
+.share a{font-weight:700;margin-right:14px}
+.related .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+@media (max-width:900px){
+  .shop .wrap,.sh-help .wrap,.pd .wrap{grid-template-columns:1fr}
+  .cats{position:static}
+  .cats ul{display:flex;flex-wrap:wrap;gap:4px 18px;border:0}
+  .cats li{border:0}
+  .cats button{width:auto;padding:6px 0;gap:6px}
+  .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .products,.related .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
+  .prod h3{font-size:18px}
+  .prod .tile{padding:10%}
+}
+
+/* ===== Ergänzungen für die Seiten „Rechtliches“ (Impressum, Datenschutz, AGB, Widerrufsrecht; Bausteine aus SEITE-downloads.md, SEITE-sing-mit.md und SEITE-kontakt.md, jeweils Abschnitt 6) ===== */
+.lg-tabs{padding:18px var(--gutter) 0}
+.lg-tabs ul{list-style:none;margin:0 auto;padding:0 0 12px;max-width:1200px;display:flex;flex-wrap:wrap;gap:6px 26px;border-bottom:1px solid var(--anthra);font-size:17px}
+.lg-tabs a{font-weight:700;text-decoration:none;padding-bottom:4px}
+.lg-tabs a:hover{text-decoration:underline}
+.lg-tabs a[aria-current="page"]{border-bottom:3px solid var(--gold)}
+.lg-head .stand{font-size:16px;color:var(--anthra)}
+.lg-head .stand b{font-weight:700}
+.lg-body{padding:clamp(20px,3vw,36px) var(--gutter) clamp(64px,8vw,104px)}
+.lg-body>.wrap{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.lg-toc{position:sticky;top:20px;font-size:16px;line-height:1.4}
+.lg-toc p{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--leafink);margin-bottom:10px}
+.lg-toc ol{margin:0;padding:0 0 0 22px;display:flex;flex-direction:column;gap:7px}
+.lg-toc a{text-decoration:none}
+.lg-toc a:hover{text-decoration:underline}
+.lg-text{min-width:0;max-width:70ch;display:flex;flex-direction:column;gap:14px}
+.lg-text h2{font-size:clamp(26px,2.6vw,28px);line-height:1.1;margin-top:26px;padding-top:18px;border-top:1px solid var(--anthra);scroll-margin-top:20px}
+.lg-text h2:first-child{margin-top:0}
+.lg-text h3{font-size:19px;font-weight:700;letter-spacing:0;margin-top:6px}
+.lg-text ul{margin:0;padding-left:22px}
+.lg-text address{font-style:normal}
+.lg-text .facts li{grid-template-columns:200px 1fr}
+.lg-text .short{color:var(--grey);font-style:italic}
+.lg-guide{background:var(--white);border-radius:20px;padding:20px 24px;display:flex;flex-direction:column;gap:10px}
+.lg-guide h2{border:0;padding:0;margin:0;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--leafink)}
+.lg-guide ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.lg-guide li b{display:block;font-weight:700}
+.lg-revoke{background:var(--deep);color:var(--white);border-radius:20px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between}
+.lg-revoke p{max-width:52ch}
+.vh{font-size:16px;line-height:1.45;border-left:3px solid var(--anthra);padding-left:12px}
 .vh b{font-weight:700}
-.group .intro{margin:-12px 0 24px}
-.group .how{margin:0 0 28px;max-width:70ch}
-.group .foot{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:22px}
-.band-s{background:var(--sage)} .band-w{background:var(--wheat)}
-.band-s .pdf::before{background:var(--sage)}
-.band-w .pdf::before{background:var(--linen)}
-.note-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
-.note-list li{padding:14px 0;border-bottom:1px solid var(--anthra);display:flex;flex-direction:column;gap:4px}
-.note-list b{font-size:19px}
-
-@media (max-width:760px){
-  .docs>li{grid-template-columns:48px minmax(0,1fr);gap:10px 16px}
-  .pdf{width:48px;height:60px;font-size:13px;border-radius:8px}
-  .pdf::before{width:14px;height:14px}
-  .docs .act{grid-column:2;align-items:flex-start;text-align:left}
-  .note-list{grid-template-columns:minmax(0,1fr)}
+.vh code,.lg-text a{overflow-wrap:anywhere}
+@media (max-width:900px){
+  .lg-body>.wrap{grid-template-columns:1fr}
+  .lg-toc{position:static;background:var(--white);border-radius:20px;padding:18px 22px}
+  .lg-guide ul{grid-template-columns:1fr}
+  .lg-text .facts li{grid-template-columns:1fr;gap:4px}
 }
 </style>
 
-<div class="note">Stilvorschau „Foto“ – neue Seite Downloads &amp; Formulare. Alle Links führen auf die PDFs, die heute auf singende-krankenhaeuser.de liegen (Stand 25.09.2026). Randnotizen „Vor Veröffentlichung“ sind nur für die Abnahme und kommen nicht auf die echte Seite.</div>
+<div class="note">Stilvorschau „Foto“ – Rechtliches: eine Vorlage für die vier Textseiten <code>/impressum</code>, <code>/datenschutz</code>, <code>/agb</code> und <code>/widerrufsrecht</code>. Die Reiter unter der Kopfleiste wechseln zwischen den Seiten. Texte von singende-krankenhaeuser.de, Stand 26.09.2026 – der Wortlaut ist <b>nicht</b> neu geschrieben (Ausnahme: Vorschlag Impressum). Randnotizen „Vor Veröffentlichung“ kommen nicht auf die echte Seite. Fachliche Einschätzung, keine Rechtsberatung.</div>
 
 <div class="notice"><b>Jahrestagung 2027:</b> Programm, Workshops, Liedernacht und Anmeldung · <a href="#">Zur Jahrestagung →</a></div>
 
@@ -660,131 +1049,220 @@ ol.grid3{list-style:none;margin:0;padding:0}
   <a class="pill gold" href="vorschau-foto-mitglied-sein.html">Mitglied werden</a>
 </div></header>
 
-<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li>Downloads &amp; Formulare</li></ol></nav>
+<nav class="lg-tabs" aria-label="Rechtliches"><ul>
+  <li><a href="#impressum" data-v="impressum">Impressum</a></li>
+  <li><a href="#datenschutz" data-v="datenschutz">Datenschutz</a></li>
+  <li><a href="#agb" data-v="agb">AGB</a></li>
+  <li><a href="#widerrufsrecht" data-v="widerrufsrecht">Widerrufsrecht</a></li>
+  <li><a href="vorschau-foto-anmeldung.html#widerruf">Vertrag widerrufen</a></li>
+</ul></nav>
 
-<div class="dl-head"><div class="wrap">
-  <span class="eyebrow">Service</span>
-  <h1>Downloads &amp; Formulare</h1>
-  <p class="lead">Alle Anträge, Formulare und Infoblätter an einem Ort. Wie die einzelnen Schritte ablaufen, erklären die verlinkten Seiten.</p>
-  <p class="good"><b>So geht’s:</b> Formular öffnen, ausdrucken, ausfüllen und unterschreiben. Dann per Post schicken oder eingescannt per E-Mail – an wen, steht jeweils im Formular.</p>
-</div></div>
-
-<nav class="jump" aria-label="Auf dieser Seite"><div class="wrap">
-  <span>Ich möchte …</span>
-  <a href="#singleitung">mein Singleiter-Zertifikat</a><a href="#einrichtung">meine Einrichtung zertifizieren</a><a href="#mitglied">Mitglied werden</a><a href="#termine">Termine</a><a href="#verein">mehr über den Verein</a>
-</div></nav>
-
-<section class="group " id="singleitung"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Zertifikat für Singleiter:innen</span><h2 class="h2">Mein Singleiter-Zertifikat beantragen</h2></div></div>
-  <p class="intro">Du hast die Module deines Zweigs abgeschlossen und bist Mitglied? Dann beantragst du hier dein Zertifikat. Welcher Antrag passt, hängt vom Zweig ab, in dem du die Weiterbildung gemacht hast.</p>
-  <p class="how">Den Antrag schickst du an Sonja Heim, Geschäftsführerin. Noch kein Mitglied? Dann leg die <a href="#mitglied"><b>Beitrittserklärung</b></a> bei.</p>
-  <ul class="docs">
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Antrag Singleiter-Zertifikat – Krankenhäuser &amp; Gesundheitseinrichtungen</h3><p>Für alle, die die Module im Zweig Krankenhaus &amp; Gesundheit abgeschlossen haben. Enthält die Bedingungen (Pflichtmodul, Singprobe) und die Zustimmung zur Singenden Landkarte.</p><p class="meta">4 Seiten · Stand März 2026 · zum Ausdrucken</p></div>
-      <div class="act"><a class="pill gold" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_4addfbfe86c94062a4e3b517bd3c318d.pdf" rel="noopener" target="_blank">PDF öffnen</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Antrag Singleiter-Zertifikat – Pflegeeinrichtungen &amp; Senior:innen</h3><p>Dasselbe für den Zweig Pflege &amp; Senior:innen.</p><p class="meta">4 Seiten · Stand März 2026 · zum Ausdrucken</p></div>
-      <div class="act"><a class="pill gold" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_550a2965ab5343f29e0c1148e74974c1.pdf" rel="noopener" target="_blank">PDF öffnen</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Leitbild und Leitlinien für zertifizierte Singleiter:innen</h3><p>Wofür wir stehen und wie Singleiter:innen mit Gruppen, Einrichtungen und Krisen umgehen. Bitte vor dem Antrag lesen.</p><p class="meta">25 Seiten · Stand Februar 2025</p><p class="vh"><b>Vor Veröffentlichung:</b> Binnen-I „SingleiterInnen“ im Titel; beim nächsten Überarbeiten auf „Singleiter:innen“ umstellen.</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_55a28d31e92649b2aa8e5ddb85ef120d.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-  </ul>
-  <div class="foot"><a class="ghost" href="vorschau-foto-sing-mit.html#zertifikat">Alles zum Zertifikat →</a><a class="ghost" href="vorschau-foto-weiterbildung.html#modulzahl">So viele Module brauchst du →</a></div>
+<!-- ============ Seite 1: Impressum /impressum ============ -->
+<div data-view="impressum">
+<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li>Rechtliches</li><li>Impressum</li></ol></nav>
+<section class="dl-head lg-head"><div class="wrap">
+  <span class="eyebrow">Rechtliches</span>
+  <h1>Impressum</h1>
+  <p class="lead">Wer hinter dieser Webseite steht und wie du uns erreichst.</p>
+  <p class="stand"><b>Stand:</b> [Datum der Prüfung eintragen]</p>
 </div></section>
-
-<section class="group band-s" id="einrichtung"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Für Einrichtungen</span><h2 class="h2">Unsere Einrichtung zertifizieren</h2></div></div>
-  <p class="intro">Krankenhäuser, Pflege- und Gesundheitseinrichtungen mit regelmäßigem Singangebot können sich als „Singende Einrichtung“ zertifizieren lassen. Voraussetzung ist eine Mitgliedschaft als Einrichtung.</p>
-  <p class="how">Den Antrag unterschreibt die Geschäftsführung der Einrichtung; er geht an Sonja Heim. Vereinbarung und Richtlinien bitte vorher lesen.</p>
-  <ul class="docs">
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Antrag – Singendes Krankenhaus / Singende Gesundheitseinrichtung</h3><p>Angaben zur Einrichtung, zum Singangebot und zur Singleitung; von der Geschäftsführung unterschrieben.</p><p class="meta">3 Seiten · Stand September 2022 · zum Ausdrucken</p><p class="vh"><b>Vor Veröffentlichung:</b> nennt im Briefkopf den früheren Vorstand und verlinkt eine tote Adresse der alten Webseite (<code>SEITE-einrichtungen.md</code>, Abschnitt 7).</p></div>
-      <div class="act"><a class="pill gold" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_e63b5b078a2a4dbb9929278ffd366751.pdf" rel="noopener" target="_blank">PDF öffnen</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Antrag – Singende Pflegeeinrichtung</h3><p>Dasselbe für Pflegeeinrichtungen und Einrichtungen für Senior:innen.</p><p class="meta">3 Seiten · Stand September 2022 · zum Ausdrucken</p><p class="vh"><b>Vor Veröffentlichung:</b> wie oben: früherer Vorstand, tote Adresse <code>…/singende-altersheime.html</code>.</p></div>
-      <div class="act"><a class="pill gold" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_0cab0d221ea04e87bcf7696cb635b0e9.pdf" rel="noopener" target="_blank">PDF öffnen</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Vereinbarung zur Zertifizierung</h3><p>Was das Zertifikat bedeutet, welche Pflichten die Einrichtung übernimmt und wann es aberkannt werden kann.</p><p class="meta">2 Seiten · Stand Oktober 2022</p><p class="vh"><b>Vor Veröffentlichung:</b> Unterschrift durch die frühere Vorsitzende; Vorstand im Briefkopf veraltet.</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_558e8548f8a146cca4eeac854a5e1275.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Richtlinien für die Zertifizierung</h3><p>Die Bedingungen im Einzelnen, Sonderfälle und die Vergütungsempfehlung für die Singleitung.</p><p class="meta">2 Seiten · Stand März 2024</p><p class="vh"><b>Vor Veröffentlichung:</b> nennt den alten Mitgliedsbeitrag 250 € / 125 € statt heute 350 € / 175 €.</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_afb0c08f41624163b28fd47b3da114f9.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-  </ul>
-  <div class="foot"><a class="ghost" href="vorschau-foto-einrichtungen.html#antrag">So läuft die Zertifizierung ab →</a><a class="ghost" href="vorschau-foto-einrichtungen.html#verguetung">Vergütung der Singleitung →</a></div>
-</div></section>
-
-<section class="group band-w" id="mitglied"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Mitgliedschaft</span><h2 class="h2">Mitglied werden</h2></div></div>
-  <p class="intro">Als Mitglied trägst du unsere Arbeit mit, sparst 15 % bei allen Modulen und kannst dein Zertifikat beantragen.</p>
-  
-  <ul class="docs">
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Beitrittserklärung</h3><p>Für Einzelpersonen und Einrichtungen, mit allen Beiträgen und dem SEPA-Lastschriftmandat. Ausgefüllt per Post oder E-Mail an Sandra Roß-Lünenschloß.</p><p class="meta">1 Seite · Stand Mai 2025 · zum Ausdrucken</p></div>
-      <div class="act"><a class="pill gold" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_53d75037efd241419236f7f8a18731e6.pdf" rel="noopener" target="_blank">PDF öffnen</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Infoflyer Singende Krankenhäuser e.V.</h3><p>Der Verein auf zwei Seiten: Vision, Ansprechpersonen, Schirmherrin, Vorstand – mit eingebauter Beitrittserklärung.</p><p class="meta">2 Seiten · Stand Mai 2025, geändert Oktober 2025</p><p class="vh"><b>Vor Veröffentlichung:</b> nennt 10 % statt 15 % Mitgliederrabatt; ältere zweite Fassung (<code>7530fd_4ff0e4af…</code>) von der Webseite nehmen.</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_0a02510ad2b54ed2a89952a79481d677.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-  </ul>
-  <div class="foot"><a class="ghost" href="vorschau-foto-mitglied-sein.html#beitrag">Beiträge im Überblick →</a><a class="ghost" href="vorschau-foto-mitglied-sein.html#beitritt">So wirst du Mitglied →</a></div>
-</div></section>
-
-<section class="group " id="termine"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Weiterbildung</span><h2 class="h2">Termine zum Mitnehmen</h2></div></div>
-  <p class="intro">Die aktuellen Termine stehen immer auf der Seite Termine. Hier findest du sie zusätzlich als Liste zum Ausdrucken.</p>
-  <p class="how">Die Beschreibung eines einzelnen Moduls (Inhalt, Ort, Preis) findest du direkt beim Termin unter „Details &amp; anmelden“.</p>
-  <ul class="docs">
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Terminvorschau 2027</h3><p>Alle geplanten Module 2027 beider Zweige auf einer Seite – zum Planen und Weitergeben.</p><p class="meta">1 Seite · Stand August 2026</p><p class="vh"><b>Vor Veröffentlichung:</b> siezt („finden Sie“) und nennt die Jahrestagung 2027 nicht (<code>SEITE-termine.md</code>, Abschnitt 7).</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_cdbbfb8526e5406a8f45418187ee423f.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Schnupperkurse 2026</h3><p>Kostenlose Online-Schnupperkurse, meist freitags 18:00–18:45 Uhr über Teams.</p><p class="meta">2 Seiten · Stand September 2026</p><p class="vh"><b>Vor Veröffentlichung:</b> „Fr., 14. Mai 2026“ ist ein Donnerstag; Termin 23.10. nennt falsche Modul-Daten.</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_7014b5c28ad2448e93c1e5b92b508d9d.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Online-Termine 2026 für Mitglieder</h3><p>Guitar- &amp; Ukulele-Factory und „Singleiter:innen im Gespräch“ – meist dienstags 18:00–19:15 Uhr.</p><p class="meta">1 Seite · Stand September 2026</p><p class="vh"><b>Vor Veröffentlichung:</b> „Mi., 7. April 2026“ ist ein Dienstag; kein Hinweis, wie man den Teams-Link bekommt.</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_6b186319fe16490ab08f3447a7ed495b.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-  </ul>
-  <div class="foot"><a class="ghost" href="vorschau-foto-termine.html#kalender">Alle Termine →</a><a class="ghost" href="vorschau-foto-termine.html#schnuppern">Schnupperkurse →</a></div>
-</div></section>
-
-<section class="group band-s" id="verein"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Verein &amp; Presse</span><h2 class="h2">Mehr über den Verein</h2></div></div>
-  <p class="intro">Für Förderer, Kooperationspartner und Presse: wie wir organisiert sind und mit wem wir zusammenarbeiten.</p>
-  
-  <ul class="docs">
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Organigramm</h3><p>So ist der Verein aufgebaut: Vorstand, Geschäftsstelle, Beirat, Botschafter:innen, Mitglieder.</p><p class="meta">1 Seite · Stand Februar 2025</p><p class="vh"><b>Vor Veröffentlichung:</b> nennt Regionalbeauftragte, Ethikrat, Arbeitskreise – gibt es sie? (<code>SEITE-ueber-uns.md</code>, Punkt 12).</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_e33a181de734493d998b9d95f8bb8018.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Unsere Kooperationspartner</h3><p>22 Partnerorganisationen, mit denen wir zusammenarbeiten.</p><p class="meta">8 Seiten · Stand Februar 2025</p><p class="vh"><b>Vor Veröffentlichung:</b> Aktualität prüfen (Vera).</p></div>
-      <div class="act"><a class="ghost" href="https://www.singende-krankenhaeuser.de/_files/ugd/7530fd_4324337de50e4aa3b1c353d349279801.pdf" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-    <li><span class="pdf" aria-hidden="true">PDF</span>
-      <div class="t"><h3>Broschüre „Singen als Gesundheitserreger“</h3><p>Für Patient:innen und Presse: was Singen bewirkt, Stimmen von Teilnehmenden, Lieder zum Mitsingen.</p><p class="meta">Stand März 2018</p><p class="vh"><b>Vor Veröffentlichung:</b> liegt auf SharePoint statt in Wix; Inhalt von 2018 (siezt, alte Kontonummer) – überarbeiten oder ersetzen (<code>SEITE-kontakt.md</code>, Punkt 5).</p></div>
-      <div class="act"><a class="ghost" href="https://singendekrankenhaeuser.sharepoint.com/:b:/s/SingendekrankenhuserHomepage/EUYadQAWfy5Anps_RKuq010BP9_cmicBptYjZ2BGUkNqZQ?e=kyvmUw" rel="noopener" target="_blank">PDF öffnen ↗</a></div></li>
-  </ul>
-  <div class="foot"><a class="ghost" href="vorschau-foto-ueber-uns.html">Über uns →</a><a class="ghost" href="vorschau-foto-kontakt.html#presse">Presse →</a></div>
-</div></section>
-
-<section class="group band-w" id="nicht-hier"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Nicht dabei?</span><h2 class="h2">Was du an anderer Stelle findest</h2></div></div>
-  <ul class="note-list">
-    <li><b>Modulbeschreibungen</b><span>beim jeweiligen Termin unter „Details &amp; anmelden“ – <a href="vorschau-foto-termine.html#kalender"><b>Termine</b></a></span></li>
-    <li><b>Text &amp; Noten zum Lied des Monats</b><span>wechselt jeden Monat – <a href="vorschau-foto-mitglied-sein.html#fokus"><b>MitgLIEDER im Fokus</b></a></span></li>
-    <li><b>Jahrestagung 2027</b><span>Programm, Anmeldung und Teilnahmebedingungen stehen im Bereich der Jahrestagung – <a href="#"><b>Zur Jahrestagung</b></a></span></li>
-    <li><b>Listen der Singleiter:innen und Singkreise</b><span>keine eigene PDF mehr – auf der Karte deine Auswahl treffen und „PDF / Drucken“ wählen – <a href="vorschau-foto-landkarte.html#karte"><b>Singende Landkarte</b></a></span></li>
-    <li><b>Liedblätter zur Guitar- und Ukulele-Factory, Liederbücher, CDs</b><span>kostenpflichtig, zum Bestellen – <a href="vorschau-foto-shop.html"><b>Shop</b></a></span></li>
-    <li><b>Wissenschaftlicher Beirat, Botschafter:innen</b><span>die Namenslisten stehen jetzt direkt auf <a href="vorschau-foto-ueber-uns.html#beirat"><b>Über uns</b></a></span></li>
-  </ul>
-  <p class="good"><b>Formular nicht gefunden?</b> Im <a href="vorschau-foto-kontakt.html#wegweiser"><b>Wegweiser auf der Kontaktseite</b></a> steht, wer dir weiterhilft.</p>
-</div></section>
-
-<section class="member" id="mitglied-band"><div class="wrap">
-  <h2 class="h2">Werde Teil <span>des Netzwerks.</span></h2>
-  <div class="col">
-    <p>Über 700 Mitglieder tragen unsere Arbeit – als Einzelperson oder als Einrichtung. Als Mitglied sparst du 15 % bei allen Modulen und zahlst bei der Jahrestagung den Mitgliederpreis.</p>
-    <div class="acts"><a class="pill gold" href="vorschau-foto-mitglied-sein.html">Mitglied werden</a><a class="ghost light" href="vorschau-foto-mitglied-sein.html#vorteile">Alle Vorteile →</a></div>
-    <p class="small">Neuigkeiten aus dem Netzwerk und das Lied des Monats: <a href="#"><b>Newsletter anmelden →</b></a></p>
+<section class="lg-body"><div class="wrap">
+  <aside class="lg-toc" aria-label="Inhalt"><p>Inhalt</p><ol>
+    <li><a href="#imp-anbieter">Anbieter</a></li><li><a href="#imp-kontakt">Kontakt</a></li><li><a href="#imp-register">Register</a></li>
+    <li><a href="#imp-verantwortlich">Verantwortlich für den Inhalt</a></li><li><a href="#imp-streit">Streitbeilegung</a></li><li><a href="#imp-haftung">Haftung und Urheberrecht</a></li>
+  </ol></aside>
+  <div class="lg-text">
+    <p class="vh"><b>Vor Veröffentlichung:</b> Dieser Impressums-Text ist ein <b>Vorschlag</b> (heutiger Text mit den Korrekturen aus <code>SEITE-rechtliches.md</code>, Abschnitt 1). Vor dem Einsetzen im Rechtstexte-Auftrag prüfen lassen.</p>
+    <h2 id="imp-anbieter">Angaben gemäß § 5 DDG</h2>
+    <address>Singende Krankenhäuser e.V.<br>Rostocker Str. 2<br>88250 Weingarten</address>
+    <p><b>Vertreten durch:</b> Sonja Heim und Tom Jansen</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> heute „Angaben gemäß § 5 TMG“ – das TMG gilt seit Mai 2024 nicht mehr. Prüfen, ob Sonja Heim und Tom Jansen die im Vereinsregister eingetragenen vertretungsberechtigten Vorstandsmitglieder (§ 26 BGB) sind; genannt werden muss der Vorstand laut Register.</p>
+    <h2 id="imp-kontakt">Kontakt</h2>
+    <ul class="facts"><li><b>Telefon</b><span>+49 751 958 65 244</span></li><li><b>E-Mail</b><span><a href="mailto:sonja.heim@singende-krankenhaeuser.de">sonja.heim@singende-krankenhaeuser.de</a></span></li></ul>
+    <p class="vh"><b>Vor Veröffentlichung:</b> heute mit Klammerfehler „+49 (0) 751/958 65 244)“. Alle Ansprechpersonen stehen auf der Seite Kontakt – hier nur die eine Adresse für rechtliche Anliegen.</p>
+    <h2 id="imp-register">Register</h2>
+    <ul class="facts"><li><b>Vereinsregister</b><span>Amtsgericht Stuttgart, VR 720762</span></li></ul>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Die Steuernummer ist im Impressum nicht vorgeschrieben und steht heute zweimal <b>verschieden</b> auf der Webseite (Impressum: 77052/17622, AGB: 109/153/03302). Vorschlag: im Impressum weglassen, in den AGB nur die richtige – vorher mit dem Steuerbüro klären, welche gilt.</p>
+    <h2 id="imp-verantwortlich">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p>[Vor- und Nachname], Anschrift wie oben</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> heute „Redaktionell verantwortlich: Singende Krankenhäuser e.V.“ – gemeint ist eine <b>natürliche Person</b> mit Name und Anschrift. Wer übernimmt das? (Vorschlag: die Person, die die Webseite verantwortet.)</p>
+    <h2 id="imp-streit">Verbraucherstreitbeilegung</h2>
+    <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Den Absatz „EU-Streitschlichtung“ mit dem Link auf die OS-Plattform der EU-Kommission <b>streichen</b> – die Plattform wurde am 20.07.2025 abgeschaltet.</p>
+    <h2 id="imp-haftung">Haftung und Urheberrecht</h2>
+    <h3>Urheberrecht</h3>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. […]</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Die Absätze „Haftung für Inhalte“ und „Haftung für Links“ berufen sich auf §§ 7–10 TMG. Nicht selbst auf neue Paragrafen umschreiben, sondern im Rechtstexte-Auftrag klären: streichen (sie sind nicht vorgeschrieben) oder neu fassen. Hinweis für die Fotos: Urheber:innen der Fotos nennen, wo das vereinbart ist.</p>
+    <div class="lg-guide"><h2>Du suchst …</h2><ul>
+      <li><b>eine Ansprechperson oder Telefonnummer?</b><a class="ghost" href="vorschau-foto-kontakt.html">Zur Seite Kontakt →</a></li>
+      <li><b>Informationen für die Presse?</b><a class="ghost" href="vorschau-foto-kontakt.html#presse">Presse →</a></li>
+    </ul></div>
   </div>
 </div></section>
+</div>
+
+<!-- ============ Seite 2: Datenschutz /datenschutz ============ -->
+<div data-view="datenschutz" hidden>
+<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li>Rechtliches</li><li>Datenschutz</li></ol></nav>
+<section class="dl-head lg-head"><div class="wrap">
+  <span class="eyebrow">Rechtliches</span>
+  <h1>Datenschutz&shy;erklärung</h1>
+  <p class="lead">Welche Daten wir erheben, wenn du diese Webseite nutzt, wofür wir sie brauchen und welche Rechte du hast.</p>
+  <p class="stand"><b>Stand:</b> [Datum der Prüfung eintragen]</p>
+</div></section>
+<section class="lg-body"><div class="wrap">
+  <aside class="lg-toc" aria-label="Inhalt"><p>Inhalt</p><ol>
+    <li><a href="#ds-1">Datenschutz auf einen Blick</a></li><li><a href="#ds-2">Hosting</a></li><li><a href="#ds-3">Allgemeine Hinweise und Pflichtinformationen</a></li>
+    <li><a href="#ds-4">Datenerfassung auf dieser Website</a></li><li><a href="#ds-5">Soziale Medien</a></li><li><a href="#ds-6">Newsletter</a></li>
+    <li><a href="#ds-7">Plugins und Tools</a></li><li><a href="#ds-8">eCommerce und Zahlungsanbieter</a></li><li><a href="#ds-9">Audio- und Videokonferenzen</a></li>
+  </ol></aside>
+  <div class="lg-text">
+    <p class="vh"><b>Vor Veröffentlichung:</b> Die heutige Erklärung ist ein allgemeiner Generator-Text. Sie nennt Dienste, die der Verein vermutlich nicht nutzt (Tumblr, Kommentarfunktion, Bonitätsprüfung, zwölf Zahlungsdienste, obwohl die AGB „ausschließlich Vorkasse“ sagen), und es fehlen Dienste, die er nutzt (Newsletter über CleverReach, Anmeldeformular, Singende Landkarte). <b>Neu erstellen lassen</b> – Vorbereitung mit der Dienste-Liste in <code>SEITE-rechtliches.md</code>, Abschnitt 4. In der Vorschau ist der Text gekürzt.</p>
+    <h2 id="ds-1">1. Datenschutz auf einen Blick</h2>
+    <h3>Allgemeine Hinweise</h3>
+    <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. […]</p>
+    <p class="short">Weiter wie heute: Datenerfassung auf dieser Website · Wofür nutzen wir Ihre Daten? · Welche Rechte haben Sie? · Analyse-Tools</p>
+    <h2 id="ds-2">2. Hosting</h2>
+    <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter: WIX. Anbieter ist die Wix.com Ltd., 40 Namal Tel Aviv St., Tel Aviv 6350671, Israel. […]</p>
+    <h2 id="ds-3">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+    <h3>Hinweis zur verantwortlichen Stelle</h3>
+    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+    <address>Sonja Heim<br>Rostocker Str. 288250 Weingarten<br>Telefon: +49 (0) 751/958 65 244)</address>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Verantwortlich im Sinne der DSGVO ist der <b>Verein</b> (Singende Krankenhäuser e.V., vertreten durch den Vorstand), nicht eine einzelne Person. Außerdem fehlt der Zeilenumbruch („Str. 288250“), und die Telefonnummer hat denselben Klammerfehler wie das Impressum.</p>
+    <p class="short">Weiter wie heute: Speicherdauer · Rechtsgrundlagen · Datenweitergabe in die USA · Widerruf der Einwilligung · Beschwerderecht · Datenübertragbarkeit · Auskunft, Löschung, Berichtigung · Einschränkung · SSL/TLS · Zahlungsverkehr · Werbe-E-Mails</p>
+    <h2 id="ds-4">4. Datenerfassung auf dieser Website</h2>
+    <p class="short">Cookies · Server-Log-Dateien · Kontaktformular · Anfrage per E-Mail, Telefon · Kommentarfunktion</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Hier fehlen das <b>Anmeldeformular Weiterbildung</b> samt Weitergabe von Name, Geburtsdatum und Beruf an die Dozent:innen (<code>SEITE-anmeldung.md</code>, Abschnitt 7, Punkt 8), das <b>Widerrufsformular</b> und die <b>Singende Landkarte</b> (<code>SEITE-landkarte.md</code>, Abschnitt 7, Punkt 5). Eine Kommentarfunktion gibt es auf der Webseite nicht.</p>
+    <h2 id="ds-5">5. Soziale Medien</h2>
+    <p class="short">Facebook · Instagram · Tumblr</p>
+    <h2 id="ds-6">6. Newsletter</h2>
+    <p class="short">Newsletterdaten – ohne Namen des Versanddienstes</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Der Newsletter läuft über <b>CleverReach</b> (Link in der Fußzeile) – der Anbieter muss genannt werden.</p>
+    <h2 id="ds-7">7. Plugins und Tools</h2>
+    <p class="short">YouTube · Vimeo · Google Maps · Google reCAPTCHA</p>
+    <h2 id="ds-8">8. eCommerce und Zahlungsanbieter</h2>
+    <p class="short">Kunden- und Vertragsdaten · Bonitätsprüfungen · PayPal, Apple Pay, Google Pay, Stripe, Klarna, Paydirekt, Sofortüberweisung, Amazon Pay, giropay, American Express, Mastercard, VISA</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Nur die Zahlungsarten nennen, die die Wix-Kasse wirklich anbietet (<code>SEITE-shop.md</code>, Abschnitt 7, Punkt 5). Paydirekt und giropay gibt es nicht mehr.</p>
+    <h2 id="ds-9">9. Audio- und Videokonferenzen</h2>
+    <p class="short">Zoom</p>
+    <div class="lg-guide"><h2>Du suchst …</h2><ul>
+      <li><b>welche Angaben die Landkarte von dir zeigt?</b><a class="ghost" href="vorschau-foto-landkarte.html#datenschutz">Singende Landkarte →</a></li>
+      <li><b>eine Auskunft über deine Daten?</b><span>Schreib an die Adresse im <a href="#impressum" data-v="impressum"><b>Impressum</b></a>.</span></li>
+    </ul></div>
+  </div>
+</div></section>
+</div>
+
+<!-- ============ Seite 3: AGB /agb ============ -->
+<div data-view="agb" hidden>
+<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li>Rechtliches</li><li>AGB</li></ol></nav>
+<section class="dl-head lg-head"><div class="wrap">
+  <span class="eyebrow">Rechtliches</span>
+  <h1>Allgemeine Geschäfts&shy;bedingungen</h1>
+  <p class="lead">Die Bedingungen für Bestellungen im Shop (Abschnitte 1–11) und für die Weiterbildung (Abschnitt 12).</p>
+  <p class="stand"><b>Stand:</b> [Datum der Prüfung eintragen]</p>
+</div></section>
+<section class="lg-body"><div class="wrap">
+  <aside class="lg-toc" aria-label="Inhalt"><p>Inhalt</p><ol>
+    <li><a href="#agb-1">Geltungsbereich</a></li><li><a href="#agb-2">Vertragspartner</a></li><li><a href="#agb-3">Angebot und Vertragsschluss</a></li>
+    <li><a href="#agb-4">Vertragstext</a></li><li><a href="#agb-5">Widerrufsrecht</a></li><li><a href="#agb-6">Preise und Versandkosten</a></li>
+    <li><a href="#agb-7">Lieferung</a></li><li><a href="#agb-8">Zahlung</a></li><li><a href="#agb-9">Eigentumsvorbehalt</a></li>
+    <li><a href="#agb-10">Gewährleistung</a></li><li><a href="#agb-11">Allgemeine Informationen zum Versand</a></li><li><a href="#agb-12">Informationen zur Weiterbildung</a></li>
+    <li><a href="#agb-13">Datenschutzrechtliche Hinweise</a></li>
+  </ol></aside>
+  <div class="lg-text">
+    <div class="lg-guide"><h2>Du suchst …</h2><ul>
+      <li><b>das Wichtigste zur Anmeldung in einfachen Worten?</b><a class="ghost" href="vorschau-foto-anmeldung.html#vorher">Zur Anmeldung →</a></li>
+      <li><b>Versand und Zahlung im Shop auf einen Blick?</b><a class="ghost" href="vorschau-foto-shop.html">Zum Shop →</a></li>
+    </ul></div>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Heute ist die „Übersicht“ eine Liste ohne Links. In Wix jede Überschrift mit einem Anker versehen (<code>agb-1</code> … <code>agb-13</code>), dann funktioniert das Inhaltsverzeichnis – und andere Seiten können direkt auf „AGB, Abschnitt 12“ verlinken.</p>
+    <h2 id="agb-1">1. Geltungsbereich</h2>
+    <p>Für alle Lieferungen von Singende Krankenhäuser e.V. an Verbraucher (§ 13 BGB) gelten diese Allgemeinen Geschäftsbedingungen (AGB).</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Abschnitt 12 regelt die Weiterbildung – das ist keine „Lieferung“, und Module buchen auch Einrichtungen (keine Verbraucher). Geltungsbereich im Rechtstexte-Auftrag anpassen lassen.</p>
+    <h2 id="agb-2">2. Vertragspartner</h2>
+    <p>Der Kaufvertrag kommt zustande mit:</p>
+    <address>Singende Krankenhäuser e.V.<br>Rostocker Str. 2, 88250 Weingarten<br>St.-Nr.: 109/153/03302</address>
+    <p>Sie erreichen unseren Kundendienst für Fragen, Reklamationen und Beanstandungen zu Bestellungen unter Sandra Roß-Lünenschloß, E-Mail: <a href="mailto:sandra.ross-luenenschloss@singende-krankenhaeuser.de">Sandra.ross-luenenschloss@singende-krankenhaeuser.de</a></p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> andere Steuernummer als im Impressum (77052/17622) – welche stimmt?</p>
+    <h2 id="agb-3">3. Angebot und Vertragsschluss</h2>
+    <p>3.1 Die Darstellung der Produkte im Online-Shop stellt kein rechtlich bindendes Angebot, sondern eine Aufforderung zur Bestellung dar. Alle Angebote gelten „solange der Vorrat reicht“, wenn nicht bei den Produkten etwas anderes vermerkt ist. Irrtümer vorbehalten.</p>
+    <p>3.2 Durch Anklicken des Buttons „Kaufen“ im letzten Schritt des Bestellprozesses geben Sie eine verbindliche Bestellung der im Warenkorb enthaltenen Waren ab. Der Kaufvertrag kommt zustande, wenn wir Ihre Bestellung durch eine Auftragsbestätigung per E-Mail unmittelbar nach dem Erhalt Ihrer Bestellung annehmen.</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Name des Bestellknopfs – bekannt, siehe <code>SEITE-anmeldung.md</code>, Abschnitt 7, Punkt 2, und <code>SEITE-shop.md</code>, Abschnitt 7, Punkt 5.</p>
+    <h2 id="agb-4">4. Vertragstext</h2>
+    <p>Der Vertragstext wird auf unseren internen Systemen gespeichert. Die Allgemeinen Geschäftsbedingungen können Sie jederzeit auf dieser Seite einsehen. Die Bestelldaten und die AGB werden Ihnen per E-Mail zugesendet. Nach Abschluss der Bestellung ist der Vertragstext aus Sicherheitsgründen nicht mehr über das Internet zugänglich.</p>
+    <h2 id="agb-5">5. Widerrufsrecht</h2>
+    <p>Verbraucher (§ 13 BGB) haben ein gesetzliches Widerrufsrecht.</p>
+    <p class="short">Es folgen „Widerrufsbelehrung“ und „Widerrufsfolgen“ – eine zweite, <b>abweichende</b> Fassung des Textes auf der Seite <a href="#widerrufsrecht" data-v="widerrufsrecht">Widerrufsrecht</a>. In der Vorschau nicht wiederholt.</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Die Belehrung steht zweimal und in zwei Fassungen auf der Webseite (<code>SEITE-rechtliches.md</code>, Abschnitt 1). Vorschlag für den Rechtstexte-Auftrag: nur <b>eine</b> Belehrung auf der Seite Widerrufsrecht, hier ein Satz mit Link. Inhaltlich bekannt: <code>SEITE-anmeldung.md</code>, Abschnitt 7, Punkt 3; <code>SEITE-shop.md</code>, Fund 7.</p>
+    <h2 id="agb-6">6. Preise und Versandkosten</h2>
+    <p>6.1 Die auf den Produktseiten genannten Preise enthalten die gesetzliche Mehrwertsteuer und sonstige Preisbestandteile.</p>
+    <p>6.2 Die Versandkosten hängen von der Menge der bestellten Waren sowie der Versandart ab und werden Ihnen vor Abgabe Ihrer verbindlichen Bestellung deutlich mitgeteilt. Sie finden eine Übersicht auf der Seite Versand.</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Die „Seite Versand“ gibt es nicht (<code>SEITE-shop.md</code>, Fund 5).</p>
+    <h2 id="agb-7">7. Lieferung</h2>
+    <p>7.1 Die Lieferung erfolgt nur innerhalb Deutschlands.</p>
+    <p>7.2 Die Lieferzeit beträgt im Regelfall in Deutschland 3–5 Werktage. Auf evtl. abweichende Lieferzeiten weisen wir auf der jeweiligen Produktseite hin.</p>
+    <h2 id="agb-8">8. Zahlung</h2>
+    <p>8.1 Die Zahlung erfolgt ausschließlich über Vorkasse. Eine Rechnung legen wir der Bestellung bei.</p>
+    <p>8.2 Ein Recht zur Aufrechnung steht Ihnen nur dann zu, wenn Ihre Gegenansprüche rechtskräftig gerichtlich festgestellt oder unbestritten sind oder schriftlich durch uns anerkannt wurden.</p>
+    <p>8.3 Sie können ein Zurückbehaltungsrecht nur ausüben, soweit die Ansprüche aus dem gleichen Vertragsverhältnis resultieren.</p>
+    <h2 id="agb-9">9. Eigentumsvorbehalt</h2>
+    <p>Bis zur vollständigen Zahlung bleibt die Ware unser Eigentum.</p>
+    <h2 id="agb-10">10. Gewährleistung</h2>
+    <p>Die Gewährleistung erfolgt nach den gesetzlichen Bestimmungen.</p>
+    <h2 id="agb-11">11. Allgemeine Informationen zum Versand</h2>
+    <p>Versand erfolgt über DHL oder Post. Die Standardversandkosten beziehen sich auf ein Gewicht bis zu 1 kg in Deutschland. Bei höherem Gewicht werden die Preise entsprechend berechnet.</p>
+    <h2 id="agb-12">12. Informationen zur Weiterbildung</h2>
+    <h3>12.1 Module</h3>
+    <p>Beinhalten 14 Lehrstunden über das Wochenende verteilt. Beginn ca. 18.00 Abendessen, Ende ca. 13.00 (nach Mittagessen).</p>
+    <p>Online finden sie entweder kompakt an einem Wochenende mit etwas reduzierter Stundenzahl statt oder auf 6 Termine über einen längeren Zeitraum verteilt.</p>
+    <p>Für Unterkunft und Verpflegung kommen die Teilnehmer selbst auf und schließen hierfür einen Vertrag mit dem Seminarhaus ab.</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Der letzte Satz widerspricht dem geklärten Ablauf: Der Verein reserviert die Zimmer, nur in Einbeck buchen die Teilnehmenden selbst (<code>SEITE-anmeldung.md</code>, Abschnitt 7, Punkt 4). AGB angleichen.</p>
+    <h3>12.2 Teilnahmegebühr und Zahlungsbedingungen</h3>
+    <p>Die Teilnahmegebühr beträgt 320 € oder 272 € für Mitglieder (ohne Übernachtung und Verpflegung). Die Vergabe der Weiterbildungsplätze erfolgt in der Reihenfolge des Eingangs des Betrags auf das Konto von Singende Krankenhäuser e.V. bei der Sparkasse Ulm, IBAN DE81 6305 0000 0021 1606 13, BIC SOLADES1ULM, und sollte spätestens drei Wochen vor Modulbeginn erfolgen.</p>
+    <h3>12.3 Rücktritt/Stornierung</h3>
+    <p>Sie können bis zu vier Wochen vor Beginn der Weiterbildung schriftlich von Ihrer Anmeldung zurücktreten. Bei einem späteren Rücktritt ist die Gesamtkursgebühr fällig.</p>
+    <p>Sollten im Einzelfall schwerwiegende und von Ihnen nicht zu verantwortende Umstände den Abbruch der Weiterbildung erzwingen, ist auf schriftlichen Antrag eine Ermäßigung bis zu 70 % möglich.</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Storno-Regel – bekannt, siehe <code>SEITE-anmeldung.md</code>, Abschnitt 7, Punkt 1.</p>
+    <h3>12.4 Haftungsausschluss und Eigenverantwortung</h3>
+    <p>Der Teilnehmer, die Teilnehmerin nimmt zur Kenntnis, dass die Ausbildung keine therapeutische Maßnahme darstellt. Die Verantwortung für die eigene psychische und physische Eignung zur Teilnahme liegt ausschließlich bei ihr bzw. ihm.</p>
+    <p>Mit der Unterzeichnung der Anmeldung erklärt der Teilnehmer, die Teilnehmerin für für sein eigenes Wohlbefinden sowie für sämtliche Handlungen während der gesamten Dauer des Seminars eigenverantwortlich zu sein. […]</p>
+    <p class="vh"><b>Vor Veröffentlichung:</b> „Unterzeichnung“ – online wird nichts unterzeichnet (<code>SEITE-anmeldung.md</code>, Abschnitt 1); Tippfehler „für für“; „Ausbildung“ statt „Weiterbildung“.</p>
+    <h2 id="agb-13">13. Datenschutzrechtliche Hinweise</h2>
+    <p><a href="#datenschutz" data-v="datenschutz"><b>Informationen zum Datenschutz →</b></a></p>
+    <p class="vh"><b>Vor Veröffentlichung – sofort:</b> Der Link führt heute über einen Outlook-Schutzlink (<code>emea01.safelinks.protection.outlook.com</code>) auf <b>healingsongs.de/datenschutz</b>, also die Datenschutzerklärung einer anderen Webseite. Durch den Link auf <code>/datenschutz</code> ersetzen.</p>
+    <div class="lg-revoke"><p><b>Du möchtest einen Vertrag widerrufen?</b> Eine Bestellung oder eine Anmeldung zur Weiterbildung kannst du online widerrufen.</p><a class="pill gold" href="vorschau-foto-anmeldung.html#widerruf">Vertrag widerrufen</a></div>
+  </div>
+</div></section>
+</div>
+
+<!-- ============ Seite 4: Widerrufsrecht /widerrufsrecht ============ -->
+<div data-view="widerrufsrecht" hidden>
+<nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li>Rechtliches</li><li>Widerrufsrecht</li></ol></nav>
+<section class="dl-head lg-head"><div class="wrap">
+  <span class="eyebrow">Rechtliches</span>
+  <h1>Widerrufsrecht</h1>
+  <p class="lead">Wann du einen Vertrag mit uns widerrufen kannst und was dann passiert.</p>
+  <p class="stand"><b>Stand:</b> [Datum der Prüfung eintragen]</p>
+</div></section>
+<section class="lg-body"><div class="wrap">
+  <aside class="lg-toc" aria-label="Inhalt"><p>Inhalt</p><ol>
+    <li><a href="#wr-belehrung">Widerrufsbelehrung</a></li><li><a href="#wr-folgen">Widerrufsfolgen</a></li><li><a href="#wr-online">Online widerrufen</a></li>
+  </ol></aside>
+  <div class="lg-text">
+    <p class="vh"><b>Vor Veröffentlichung:</b> Text unverändert von der heutigen Seite übernommen. Er ist veraltet und wird im Rechtstexte-Auftrag ersetzt (<code>SEITE-anmeldung.md</code>, Abschnitt 7, Punkt 3; <code>SEITE-shop.md</code>, Fund 7). Die Gestaltung bleibt.</p>
+    <p>Verbraucher (§ 13 BGB) haben ein gesetzliches Widerrufsrecht.</p>
+    <h2 id="wr-belehrung">Widerrufsbelehrung</h2>
+    <p>Sie können Ihre Vertragserklärung innerhalb von zwei Wochen ohne Angabe von Gründen in Textform (z. B. Brief, Fax, E-Mail) oder durch Rücksendung der Sache widerrufen. Bitte an folgende Adresse richten oder durch Rücksendung der original verpackten und unbenutzten Sache widerrufen und nur an die schriftlich genannte Lieferadresse:</p>
+    <address>Sandra Roß-Lünenschloß<br>Malzstr. 1<br>42119 Wuppertal<br>E-Mail: <a href="mailto:sandra.ross-luenenschloss@singende-krankenhaeuser.de">Sandra.Ross-Luenenschloss@singende-krankenhaeuser.de</a></address>
+    <h2 id="wr-folgen">Widerrufsfolgen</h2>
+    <p>Im Falle eines wirksamen Widerrufs sind die beiderseits empfangenen Leistungen zurückzugewähren und ggf. gezogene Nutzungen (z. B. Zinsen) herauszugeben. Können Sie uns die empfangene Leistung ganz oder teilweise nicht oder nur in verschlechtertem Zustand zurückgewähren, müssen Sie uns insoweit ggf. Wertersatz leisten. […] Sie haben die Kosten der Rücksendung zu tragen. Verpflichtungen zur Erstattung von Zahlungen müssen Sie innerhalb von 30 Tagen nach Absendung ihrer Widerrufserklärung erfüllen.</p>
+    <p><i>Ende der Widerrufsbelehrung</i></p>
+    <h2 id="wr-online">Online widerrufen</h2>
+    <div class="lg-revoke"><p><b>Du möchtest einen Vertrag widerrufen?</b> Das geht auch online – für Bestellungen im Shop und für Anmeldungen zur Weiterbildung. Du bekommst sofort eine Eingangsbestätigung per E-Mail.</p><a class="pill gold" href="vorschau-foto-anmeldung.html#widerruf">Vertrag widerrufen</a></div>
+    <p class="vh"><b>Vor Veröffentlichung:</b> Knopf und Ablauf beschreibt <code>SEITE-anmeldung.md</code>, Entscheidung 4 (Seite <code>/vertrag-widerrufen</code>, gibt es heute noch nicht). Ob der Knopf auch für Shop und Jahrestagung gilt, klärt der Rechtstexte-Auftrag; bis dahin „für Bestellungen im Shop“ nur stehen lassen, wenn das bestätigt ist.</p>
+  </div>
+</div></section>
+</div>
 
 <footer><div class="wrap">
   <div><h3>Singende Krankenhäuser e.V.</h3><p>Gemeinnütziges Netzwerk für heilsames Singen in Krankenhäusern, Psychiatrien, Pflegeeinrichtungen und Hospizen.</p></div>
@@ -792,3 +1270,23 @@ ol.grid3{list-style:none;margin:0;padding:0}
   <div><h3>Service</h3><ul><li><a href="vorschau-foto-kontakt.html">Kontakt</a></li><li><a href="vorschau-foto-kontakt.html#presse">Presse</a></li><li><a href="vorschau-foto-downloads.html">Downloads &amp; Formulare</a></li><li><a href="#">FAQ</a></li><li><a href="#">Allgemeiner Infoflyer</a></li><li><a href="vorschau-foto-ueber-uns.html#netzwerk">Kooperationspartner</a></li></ul></div>
   <div><h3>Rechtliches &amp; Kanäle</h3><ul><li><a href="vorschau-foto-rechtliches.html#impressum">Impressum</a></li><li><a href="vorschau-foto-rechtliches.html#datenschutz">Datenschutz</a></li><li><a href="vorschau-foto-rechtliches.html#agb">AGB</a> · <a href="vorschau-foto-rechtliches.html#widerrufsrecht">Widerrufsrecht</a></li><li><a href="vorschau-foto-anmeldung.html#widerruf">Vertrag widerrufen</a></li><li><a href="#">YouTube · Instagram · Facebook</a></li></ul></div>
 </div></footer>
+
+<script>
+// Nur Vorschau: In Wix sind das vier eigene Seiten. Hier wechseln die Reiter (und Adressen wie #agb-12) die Ansicht.
+(function(){
+  var views=['impressum','datenschutz','agb','widerrufsrecht'];
+  var pre={imp:'impressum',ds:'datenschutz',agb:'agb',wr:'widerrufsrecht'};
+  function viewFor(h){ if(views.indexOf(h)>=0) return h; var p=h.split('-')[0]; return pre[p]||null; }
+  function show(v,target){
+    document.querySelectorAll('[data-view]').forEach(function(el){el.hidden=el.getAttribute('data-view')!==v});
+    document.querySelectorAll('.lg-tabs a[data-v]').forEach(function(a){ if(a.getAttribute('data-v')===v) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+    var t=target&&document.getElementById(target);
+    if(t) t.scrollIntoView(); else window.scrollTo(0,0);
+  }
+  function fromHash(){ var h=location.hash.slice(1); var v=viewFor(h)||'impressum'; show(v, views.indexOf(h)>=0?null:h); }
+  window.addEventListener('hashchange',fromHash);
+  fromHash();
+})();
+</script>
+</body>
+</html>
