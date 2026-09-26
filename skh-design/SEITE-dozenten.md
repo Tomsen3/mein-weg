@@ -290,7 +290,10 @@ Zuständigkeit (Vorschlag): Sandra (Weiterbildungsorganisation) pflegt die Samml
    hochladen. → Tom.
 9. **Externe Links** (16 Websites der Dozent:innen) konnten in der Arbeitsumgebung nicht aufgerufen werden (Netzwerk
    gesperrt). → Vor der Veröffentlichung einmal durchklicken.
-10. **Nebenbefund Fußzeile (alle Seiten):** Instagram, Facebook und YouTube führen auf die Konten von **Wix**, nicht auf
+10. ~~**Nebenbefund Fußzeile (alle Seiten):**~~ – **in den Vorschauen erledigt** 26.09.2026: Tom hat die Vereinskonten genannt – YouTube
+    `youtube.com/channel/UCysB4BomnVmc2wxAQ_ocPrw`, Instagram `instagram.com/singende_krankenhaeuser`, Facebook
+    `facebook.com/p/Singende-Krankenhäuser-eV-Singing-Hospitals-100063704313360`; Newsletter-Anmeldung `seu.cleverreach.com/f/9825-7390/`.
+    In Wix die Fußzeile genauso verlinken. Ursprünglicher Befund: Instagram, Facebook und YouTube führen auf die Konten von **Wix**, nicht auf
     die des Vereins. **Sofort korrigieren**, unabhängig von der Neugestaltung. → Tom.
 11. ~~Modul E „Neurologische Stimulation“ mit Lisa Jantzen~~ – **erledigt** 26.09.2026 (Tom: Termin ist vorbei). Hinweis: Die
     Vorschau Termine führt den Termin unter „Vorschau 2027“ (30.07.–01.08., aus der Terminvorschau 2027) – beim nächsten Abgleich
