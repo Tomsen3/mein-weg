@@ -254,7 +254,9 @@ Zuständigkeit (Vorschlag): Sandra pflegt die Seite, Sonja gibt Änderungen frei
    → Sonja.
 9. **Nebenbefund Impressum:** beruft sich auf „§ 5 TMG“ und „§§ 7–10 TMG“; das Telemediengesetz wurde im Mai 2024 durch das
    Digitale-Dienste-Gesetz (DDG) ersetzt. Außerdem Klammerfehler in der Telefonnummer „…244)“. Bei Gelegenheit anpassen
-   (Wix-Rechtstexte oder Generator). → Tom, ggf. mit Andy.
+   (Wix-Rechtstexte oder Generator). → Tom, ggf. mit Andy. **Nachtrag 26.09.2026:** mit weiteren Impressum-Funden (Steuernummer,
+   OS-Plattform, Vertretung, verantwortliche Person) gesammelt in `SEITE-rechtliches.md`, Abschnitt 1, Funde 2–6; Vorschlag in
+   `vorschau-foto-rechtliches.html#impressum`.
 10. **Einwilligung/Rechte Titelfoto** `kt-titel.jpg`: keine Gesichter, aber Urheber:in der Jahrestagungsfotos nennen,
     falls vereinbart. → Tom.
 

@@ -143,6 +143,9 @@ Jede der vier Seiten zeigt „Stand: [Datum]“ – das Datum der letzten Prüfu
 | Weiterbildung | „Teilnahmebedingungen & AGB →“ | `#` | → `…#agb-12` | Teilnahmebedingungen = AGB 12 |
 | Anmeldung | „Alle Teilnahmebedingungen (AGB, Abschnitt 12) →“ | `#` | → `…#agb-12` | nur der Link in der Vorschau-HTML; `SEITE-anmeldung.md` bleibt unverändert |
 | Kontakt | Bereich Post: „Impressum →“ | `#` | → `…#impressum` | – |
+| `DESIGN-foto.md` | Kopf, Abschnitte 2–4, Übersicht, Abschnitt 7 | Zeile „Rechtliches“ unter „Noch offen“ | Rechtliches unter „fertig“ (nur Gestaltung); Rechtstexte-Auftrag als eigener offener Punkt; Gelb-Linie für Reiter (Abschnitt 2), Überschriftgröße Rechtstexte (Abschnitt 3), Bausteine und Hauptorte (Abschnitt 4), Checklisten-Punkt Fußzeile (Abschnitt 7) | Übersicht aktuell halten |
+| `SEITE-shop.md` | Abschnitt 1, Fund 7, und Abschnitt 7, Punkt 1 | „Zeile ‚Rechtliches‘ in `DESIGN-foto.md`“ | „`SEITE-rechtliches.md`, Abschnitt 7, Punkt 1“ | die Zeile gibt es nicht mehr |
+| `SEITE-kontakt.md` | Abschnitt 7, Punkt 9 | – | Nachtrag mit Verweis auf die weiteren Impressum-Funde | Punkt 9 bleibt Hauptort für TMG → DDG, Details jetzt hier |
 
 Die anderen Stilvarianten (`vorschau.html`, `-plakat`, `-rund`, `-zeitung`) sind nicht angepasst – sie sind Entwürfe, keine
 Seitensammlung. Kopfleiste und Fußzeile sowie das gesamte CSS sind aus `vorschau-foto-shop.html` übernommen; angehängt ist der
