@@ -49,7 +49,7 @@ oder was nach dem Absenden passiert.
 | „Bitte bestätige, dass du ein oder mehrere Module ausgewählt hast“ | ja | eine Option „Ja“ | **Behelf**, weil die Modul-Listen selbst nicht Pflicht sind – man kann „Ja“ klicken, ohne ein Modul zu wählen |
 | Kranken- & Gesundheitseinrichtungen | nein | Häkchen: Online Modul 1/26, Modul A, B, C, D, Sommerakademie, E, F, IV/26, P, Come-together | intern heißt das Feld **`how_did_you_hear_about_us`** („Wie hast du von uns gehört?“ – Rest der Wix-Vorlage); am 26.09.2026 liegen **8 von 11** Terminen in der Vergangenheit |
 | Pflege & Senioren | nein | Häkchen: Online Modul 1/26, Modul I, II, III, C, D, Sommerakademie, IV/26, Come-together | intern **`what_are_you_interested_in`**; Modul C, D, Sommerakademie, IV/26 und Come-together stehen in **beiden** Listen (wer beide Zweige anklickt, meldet sich scheinbar doppelt an); **Modul V** (Pflichtmodul Pflege, 23.–25.10.2026) fehlt |
-| Unterkunft & Verpflegung | ja | 3 Optionen: Einzelzimmer / Doppelzimmer „Ich reserviere im Seminarhaus … und bezahle es dort beim Check-in (160–230 € für Fr.–So.) Hinweis: Im Seminarhaus Sonnenberg in Einbeck bitte selbst reservieren“ / kein Zimmer, Verpflegungspauschale | lange Sätze, Hinweis zu Einbeck steht zweimal in den Optionen und ein drittes Mal darunter; unklar, **wer** reserviert (Abschnitt 7, Punkt 4) |
+| Unterkunft & Verpflegung | ja | 3 Optionen: Einzelzimmer / Doppelzimmer „Ich reserviere im Seminarhaus … und bezahle es dort beim Check-in (160–230 € für Fr.–So.) Hinweis: Im Seminarhaus Sonnenberg in Einbeck bitte selbst reservieren“ / kein Zimmer, Verpflegungspauschale | lange Sätze, Hinweis zu Einbeck steht zweimal in den Optionen und ein drittes Mal darunter; unklar, **wer** reserviert – geklärt: der Verein, außer in Einbeck (Abschnitt 7, Punkt 4) |
 | Stornobedingungen | ja | Häkchen | „Bis zu vier Wochen vor Beginn … schriftlicher Rücktritt … Danach ist die Gesamtkursgebühr fällig **oder bei schwerwiegenden Gründen 70 % der Gebühr**.“ – **widerspricht den AGB** (siehe unten) |
 | Haftungsausschluss | ja | Häkchen | „Mit der **Unterzeichnung** dieser Anmeldung …“ – online wird nichts unterzeichnet |
 | „Ich akzeptiere die AGB.“ | ja | Häkchen | **Link führt auf `sonjaheim9.wixsite.com/my-site-3/agb`** – die alte kostenlose Wix-Adresse statt der Vereinsseite |
@@ -218,7 +218,7 @@ Bänder: Leinen → Salbei → Weizen → Leinen → Tiefgrün.
 | Widerrufs-Ablauf (zwei Knöpfe, Eingangsbestätigung) | § 356a BGB (gültig seit 19.06.2026) |
 
 **Selbst formuliert** (bitte bei der Abnahme gegenlesen): Titel „Melde dich an.“ und Titeltext, alle Überschriften, die
-Kurzfassung der Bedingungen, der Ablauf „So geht es weiter“ (Punkt 3 beruht auf einer Annahme – Abschnitt 7, Punkt 4; Punkt 2 „Sandra schickt dir die Rechnung“ ist bestätigt),
+Kurzfassung der Bedingungen, der Ablauf „So geht es weiter“ (Punkte 2 und 3 sind bestätigt: Sandra schickt die Rechnung, der Verein reserviert die Zimmer außer in Einbeck),
 alle Hinweistexte im Formular, „Zahlungspflichtig anmelden“, der ganze Widerrufs-Bereich, „Eine schon gezahlte Kursgebühr
 bekommst du innerhalb von 14 Tagen zurück“ (gesetzliche Frist nach Widerruf).
 
@@ -318,8 +318,9 @@ Zuständigkeit: Sandra bekommt und bearbeitet Anmeldungen und Widerrufe (Formula
    der Verein über einen Dachverband kostenlose Rechtsberatung bekommt; sonst die Rechtstexte (AGB, Widerruf, Impressum
    nach DDG, `SEITE-kontakt.md`, Punkt 9) **in einem Auftrag** prüfen lassen statt einzeln. → Vorstand (Martin, Paula), Tom.
 4. **Ablauf nach der Anmeldung bestätigen** (die Anmeldungen landen bei Sandra): Die Vorschau nimmt an, ~~(a) wer die Zahlungsangaben schickt~~ – **geklärt (26.09.2026, Tom): Sandra schickt die Rechnung**, so steht es jetzt
-   in `#danach` (Schritt 2) und bei „Vorher wissen“ (Zahlung); (b) dass der **Verein** die Zimmer im Seminarhaus
-   reserviert (heutiger Text „Ich reserviere im Seminarhaus …“ ist doppeldeutig), außer in Einbeck, (c) wie hoch die
+   in `#danach` (Schritt 2) und bei „Vorher wissen“ (Zahlung); ~~(b) wer die Zimmer reserviert~~ – **geklärt (26.09.2026, Tom): Der Verein reserviert die Zimmer**, außer wenn keins
+   gebraucht wird; im Seminarhaus Sonnenberg in **Einbeck** reservieren die Teilnehmenden selbst. So steht es jetzt unter
+   „Übernachtung“, bei „Vorher wissen“ und in `#danach` (Schritt 3); (c) wie hoch die
    Verpflegungspauschale ist. → Sandra, Vera.
 5. **Anschrift Pflicht?** Wird für Rechnung oder Teilnahmebescheinigung eine Postanschrift gebraucht? Wenn ja, Pflichtfeld
    und Satz „für die Rechnung“. → Sandra.
