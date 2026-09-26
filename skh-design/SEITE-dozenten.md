@@ -84,7 +84,7 @@ Johanna Seiler, Silke Willmann, Sybille Mikula, Tom Jansen. Unterschiede:
 ### Entscheidung: eine Seite, **Porträt-Raster mit Zweig-Filter und Aufklapptext** (Vorschlag 25.09.2026)
 
 Aus 26 langen Einträgen untereinander (heute rund 8 Bildschirmhöhen, jede Beschreibung als fette Überschrift) wird ein
-Raster mit 24 Karten (26 Personen; zwei Paare je eine Karte). Jede Karte zeigt nur **Porträt, Name, eine Zeile
+Raster mit 22 Karten (23 Personen; ein Paar auf einer Karte – seit 26.09.2026, vorher 24 Karten mit 26 Personen, siehe Korrekturen). Jede Karte zeigt nur **Porträt, Name, eine Zeile
 Kurzprofil und die Zweige**; der vollständige Werdegang und die Website stehen unter „Mehr erfahren +“.
 
 **Gründe:**
@@ -101,11 +101,11 @@ jedes Jahr und stehen nur auf Termine (Hauptort). Zuordnung in der Vorschau:
 
 | Zweig | Dozent:innen |
 |---|---|
-| Krankenhaus & Gesundheit | Bossinger (A), Engelhardt (Online ME/CFS), Sauter de Beltré (B, C), Käpernik (B), Wünnenberg (C, E, P), Foh (F 2026, D, Sommerakademie), Wiese (F 2026, D), Jantzen (E), Jüchter (F 2027), Voss (P, F 2027), Eisterer (Wien), Jansen (Sommerakademie) |
+| Krankenhaus & Gesundheit | Bossinger (A), Engelhardt (Online ME/CFS), Sauter de Beltré (B, C), Käpernik (B), Wünnenberg (C, E, P), Foh (F 2026, D, Sommerakademie), Wiese (F 2026, D), Jüchter (F 2027), Voss (P, F 2027), Eisterer (Wien), Jansen (Sommerakademie) |
 | Pflege & Senior:innen | Kimmig (I, II), Wortmann (I), Jansen (II), Wilde (III), Bieker (III), Rachl (IV), Deege (IV); Foh und Wiese (Modul F 2026, „beide Zweige“) |
 | Österreich | Mikula, Eisterer, Voss (Österreich-Modul C) |
 | Jahrestagung 2027 | Jansen, Mikula, Ohlwein, Sauter de Beltré, Seiler, Willmann, Wünnenberg |
-| ohne Etikett | Baumann und Loda, Hermanns (Abschnitt 7, Punkt 3) |
+| ohne Etikett | Hermanns (Abschnitt 7, Punkt 3) |
 
 ### Hauptorte – was abgeglichen wurde
 
@@ -128,6 +128,7 @@ jedes Jahr und stehen nur auf Termine (Hauptort). Zuordnung in der Vorschau:
 | Weiterbildung | „Das sagen Teilnehmende“: „Unsere Dozent:innen →“ | `#` | → `vorschau-foto-dozenten.html` |
 | Über uns | Vorstandsteam: „unseren Dozent:innen“ | `#` | → `vorschau-foto-dozenten.html` |
 | Weiterbildung, Sing mit | Brotkrumen „Start“ | `#` | → `vorschau-foto.html` (Nebenbei gefunden, wie auf den anderen Unterseiten) |
+| Dozent:innen (26.09.2026, Hinweise Tom) | Karten Martina Baumann/Uwe Loda und Lisa Jantzen | vorhanden | entfernt; Titelkasten „26“ → „23 Dozent:innen“; 19 Karten mit der neuen Porträtserie (Abschnitt 5) |
 
 Die Fußzeilen-Links „Kontakt“ und „Presse“ sind in `SEITE-kontakt.md`, Abschnitt 2, beschrieben.
 
@@ -140,7 +141,7 @@ Die Fußzeilen-Links „Kontakt“ und „Presse“ sind in `SEITE-kontakt.md`, 
 | – | Weizen | Hinweisleiste | Jahrestagung 2027 | auf allen Seiten gleich |
 | 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte, „Weiterbildung“ **gelb unterstrichen**, Button „Mitglied werden“ | die Seite gehört zur Weiterbildung |
 | – | Leinen | Brotkrumen | „Start › Weiterbildung › Dozent:innen“ | Rückweg zur Weiterbildung |
-| 1 | Titelfoto + Tiefgrün-Kasten rechts | **Lernen aus der Praxis.** | ein Satz (26 Dozent:innen, Berufe, wo sie singen); Buttons „Alle Dozent:innen“, „Zu den Modulen →“ | Kasten rechts wie auf Weiterbildung (gleicher Bereich) |
+| 1 | Titelfoto + Tiefgrün-Kasten rechts | **Lernen aus der Praxis.** | ein Satz (23 Dozent:innen, Berufe, wo sie singen); Buttons „Alle Dozent:innen“, „Zu den Modulen →“ | Kasten rechts wie auf Weiterbildung (gleicher Bereich) |
 | – | Leinen | Sprungleiste | Dozent:innen · So unterrichten wir · Fragen | |
 | 2 | Leinen | **Wer bei uns unterrichtet** (`#dozentinnen`) | Erklärsatz, Filter (5 Knöpfe), 24 Karten, Hinweis zu Terminen, Links „Alle Termine →“, „Vorschau 2027 →“ | Kern der Seite |
 | 3 | Salbei | **Aus der Praxis, für die Praxis** (`#unterricht`) | zwei Absätze (Praxis, meist zu zweit), Zitat Menuhin, Button „Zur Weiterbildung“, Link „Kostenlos reinschnuppern →“; Foto | Warum diese Leute – und der Weg zur Anmeldung |
@@ -190,24 +191,22 @@ Bildvergleich geprüft: keines ist auf einer anderen Foto-Vorschau verwendet. In
 |---|---|---|---|
 | `dz-titel.jpg` | Titelfoto | Workshopleiterin mit Headset breitet singend die Arme aus, Gruppe macht mit | Jahrestagung 2027, `7530fd_4b42ccd1…jpg` („24_workshopleitung-offene-arme.jpg“), Original **1280 × 720 px** – deutlich unter der Empfehlung 2400 px; reicht für die Vorschau, für die echte Seite höher aufgelöstes Original bei der Fotografin/dem Fotografen der Jahrestagung erfragen |
 | `dz-praxis.jpg` | So unterrichten wir | Hände klatschen, daneben Gitarre | `/dozenten`, Standbild des Hintergrundvideos beim zweiten Menuhin-Zitat, `7530fd_cd450b85…f000.jpg` (eigenes Video des Vereins) |
-| `dz-baumann-loda.jpg` | Karte Baumann/Loda | Paarfoto | `/dozenten`, `7530fd_ffcc7252…jpg` |
-| `dz-deege.jpg`, `dz-eisterer.jpg`, `dz-engelhardt.jpg`, `dz-foh.jpg`, `dz-jantzen.jpg`, `dz-juechter.jpg`, `dz-kaepernik.jpg`, `dz-mikula.jpg`, `dz-ohlwein.jpg`, `dz-rachl.jpg`, `dz-sauter.jpg`, `dz-seiler.jpg`, `dz-voss.jpg`, `dz-wilde.jpg` | Karten | Porträts, quadratisch zugeschnitten (Gesicht im oberen Drittel) | `/dozenten`, je das dort gezeigte Foto |
-| `dz-willmann.jpg`, `dz-wortmann.jpg` | Karten | kein Porträt: Hände am Klavier, Hand mit Windspiel | `/dozenten` – Porträt erfragen (Abschnitt 7, Punkt 5) |
+| `dz-bieker.jpg`, `dz-bossinger.jpg`, `dz-deege.jpg`, `dz-eisterer.jpg`, `dz-engelhardt.jpg`, `dz-foh.jpg`, `dz-hermanns.jpg`, `dz-jansen.jpg`, `dz-juechter.jpg`, `dz-kimmig.jpg`, `dz-mikula.jpg`, `dz-ohlwein.jpg`, `dz-rachl.jpg`, `dz-sauter.jpg`, `dz-voss.jpg`, `dz-wiese.jpg`, `dz-wilde.jpg`, `dz-wortmann.jpg`, `dz-wuennenberg.jpg` | Karten | **neue Porträtserie** (einheitlicher warmer Hintergrund), quadratisch 600 × 600 px zugeschnitten, oben bündig | seit 26.09.2026: Vereins-OneDrive (Tom), `000_Neu/05_Marketing_und_Social_Media/06_Materialien_Grafiken/02_Fotos/Neue Dozentenporträts`, Dateien nach Vornamen (z. B. `Alwine.png`, `Elke.png` = Elke Wünnenberg, `Katharina und Wolfgang.png`). Zuordnung per Bildvergleich mit den bisherigen Fotos geprüft – alle 19 sind dieselben Personen. Nicht verwendet: `Monika Ananda 2.png`, `Tom2.png`, `Vera3.png` (zweite Fassungen), `Martin.png`, `Sandra.png`, `Sonja.png` (keine Dozent:innen), Unterordner „Foto Moni Ananda Wiese“ |
+| `dz-kaepernik.jpg`, `dz-seiler.jpg` | Karten | bisherige Porträts | `/dozenten` – kein neues Foto im Ordner |
+| `dz-willmann.jpg` | Karte | kein Porträt: Hände am Klavier | `/dozenten` – Porträt erfragen (Abschnitt 7, Punkt 5) |
 
-**Begründete Ausnahmen (Foto auf zwei Seiten)** – Regel „Porträts überall gleich“ aus `SEITE-ueber-uns.md`, Abschnitt 5:
-- `uu-tom-jansen.jpg`, `uu-paula-bieker.jpg`, `uu-vera-kimmig.jpg`, `uu-bossinger.jpg`, `uu-hermanns.jpg`, `uu-wuennenberg.jpg`
-  – wie auf Über uns (Studioserie bzw. Porträt der Ehrenvorsitzenden). Auf `/dozenten` stehen heute teils **andere**
-  Fotos (Vera mit Gitarre, Tom und Paula in anderer Aufnahme, Bossingers einzeln, Hermanns im Grünen).
-- `weiterbildung-monika-ananda.jpg` – wie auf der Startseite (Band Weiterbildung). Auf `/dozenten` heute ein anderes
-  Foto (sitzend am Strand).
+**Porträts auf mehreren Seiten (Stand 26.09.2026):** Die Regel „Porträts überall gleich“ (`SEITE-ueber-uns.md`, Abschnitt 5) ist
+mit der neuen Serie **vorübergehend verletzt**: Tom, Paula, Vera, die Bossingers, Norbert Hermanns und Elke Wünnenberg zeigen auf
+Dozent:innen die neue Serie (`dz-…`), auf Über uns (`uu-…`), Kontakt und Anmeldung noch die bisherigen Fotos; Monika Ananda Wiese
+auf der Startseite (`weiterbildung-monika-ananda.jpg`) ebenso. → Abschnitt 7, Punkt 12.
 
-**Nicht verwendet:** die Einzelfotos von Katharina und Wolfgang Bossinger und Uwe Loda (Paarfotos stattdessen), die zwei
+**Nicht verwendet:** die Einzelfotos von Katharina und Wolfgang Bossinger (Paarfoto stattdessen), die zwei
 Stockvideos hinter den Menuhin-Zitaten (Singende in einer Kirche; Klangschale im Gras – Wix-Medien `11062b_…` bzw. ohne
 Vereinsbezug).
 
 **Datenschutz:** `dz-titel.jpg` zeigt erkennbare Teilnehmende einer Jahrestagung – Einwilligung für die Verwendung als
-Titelfoto prüfen. Porträts: Die Dozent:innen haben sie selbst geliefert; beim Wechsel auf die Studioserie (Tom, Paula,
-Vera) kurz Bescheid geben.
+Titelfoto prüfen. Porträts: Die neue Serie liegt im Vereins-OneDrive; vor der Veröffentlichung klären, ob alle Abgebildeten der Verwendung auf
+der Webseite zugestimmt haben und wer Urheber:in ist (Nennung im Bildnachweis).
 
 ---
 
@@ -268,11 +267,12 @@ Zuständigkeit (Vorschlag): Sandra (Weiterbildungsorganisation) pflegt die Samml
    gegendert). → Sandra verschickt die Karten.
 2. **Fehlende Dozent:innen:** Simone Behr und Tina Elay unterrichten 2027, stehen aber nicht auf der Seite. Porträt,
    Werdegang und Website anfragen. → Vera.
-3. **Noch aktiv?** Martina Baumann und Uwe Loda sowie Norbert Hermanns haben 2026/2027 kein Modul (Hermanns ist
-   Ehrenvorsitzender). Weiter zeigen, oder auf Aktiv = Nein? → Vera.
-4. **Zusammengelegte Karten** (Baumann/Loda, Bossinger/Bossinger) – einverstanden? Alternative: getrennte Karten mit je
-   eigenem Text; dann bei Uwe Loda den Satz „Beide sind …“ umschreiben. → Vera, betroffene Personen.
-5. **Porträts fehlen:** Silke Willmann (Klavier) und Friederike Wortmann (Windspiel) zeigen kein Gesicht. Porträt
+3. **Noch aktiv?** ~~Martina Baumann und Uwe Loda~~ – **erledigt** 26.09.2026 (Tom): keine Dozent:innen, Karte entfernt.
+   ~~Lisa Jantzen~~ – **erledigt** 26.09.2026 (Tom): Karte entfernt. Johanna Seiler bleibt (Jahrestagung 2027, Tom). Offen nur
+   noch Norbert Hermanns (2026/2027 kein Modul, Ehrenvorsitzender): weiter zeigen? → Vera.
+4. **Zusammengelegte Karte** Bossinger/Bossinger – einverstanden (die neue Serie hat ebenfalls ein Paarfoto)? → Vera, Bossingers.
+5. **Porträt fehlt:** Silke Willmann (Klavier) zeigt kein Gesicht (Friederike Wortmann: neues Porträt seit 26.09.2026); für Andrea
+   Käpernik und Johanna Seiler gibt es noch kein Foto der neuen Serie. Porträt
    erbitten – auf einer Seite, die Vertrauen in Personen schaffen soll, ist ein Gesicht wichtig. → Sandra.
 6. **Andrea Käpernik:** „WEB“ führt auf ein privates Facebook-Profil. Gewünscht, oder gibt es eine Website? → Sandra.
 7. **Titelfoto:** höhere Auflösung und Einwilligung für `dz-titel.jpg` (Abschnitt 5). → Tom.
@@ -282,12 +282,18 @@ Zuständigkeit (Vorschlag): Sandra (Weiterbildungsorganisation) pflegt die Samml
    gesperrt). → Vor der Veröffentlichung einmal durchklicken.
 10. **Nebenbefund Fußzeile (alle Seiten):** Instagram, Facebook und YouTube führen auf die Konten von **Wix**, nicht auf
     die des Vereins. **Sofort korrigieren**, unabhängig von der Neugestaltung. → Tom.
+11. **Modul E „Neurologische Stimulation“** (30.07.–01.08.2027, Zell am Main) nennt in Wix-Events als Leitung „Elke Wünnenberg
+    und Lisa Jantzen“. Lisa Jantzen ist laut Tom keine Dozentin mehr (Karte entfernt) – Leitung des Moduls klären und den Termin
+    in Wix-Events anpassen (Hauptort Termine, `SEITE-termine.md`). → Vera.
+12. **Neue Porträtserie überall einsetzen?** Die neuen Fotos von Tom, Paula, Vera, Bossingers, Hermanns, Wünnenberg und Monika
+    Ananda Wiese auch auf Über uns, Kontakt, Anmeldung und Startseite verwenden (dann gilt wieder „Porträts überall gleich“);
+    dazu ggf. `Martin.png`, `Sandra.png`, `Sonja.png` aus demselben Ordner für Vorstand und Geschäftsstelle. → Tom.
 
 ---
 
 ## 8. Checkliste für diese Seite
 
-- [ ] Datensammlung angelegt, alle 24 Karten (26 Personen) übernommen, sortiert nach Nachname?
+- [ ] Datensammlung angelegt, alle 22 Karten (23 Personen) übernommen, sortiert nach Nachname?
 - [ ] Filter zeigt je Zweig die richtigen Personen (Tabelle in Abschnitt 2)?
 - [ ] Porträts von Personen mit Amt im Verein gleich wie auf Über uns?
 - [ ] Elke Wünnenberg als Ehrenvorsitzende, Vera Kimmig als Leiterin der Geschäftsstelle bezeichnet?
