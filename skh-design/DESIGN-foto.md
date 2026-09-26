@@ -12,7 +12,8 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Über uns** (eine Seite statt sieben) → `SEITE-ueber-uns.md` + `vorschau-foto-ueber-uns.html` ·
 **Dozent:innen** (gehört zu Weiterbildung) → `SEITE-dozenten.md` + `vorschau-foto-dozenten.html` ·
 **Kontakt** (in der Fußzeile) → `SEITE-kontakt.md` + `vorschau-foto-kontakt.html` ·
-**Downloads & Formulare** (neu, in der Fußzeile) → `SEITE-downloads.md` + `vorschau-foto-downloads.html`
+**Downloads & Formulare** (neu, in der Fußzeile) → `SEITE-downloads.md` + `vorschau-foto-downloads.html` ·
+**Anmeldung Weiterbildung** (gehört zu Weiterbildung, mit Widerrufs-Knopf) → `SEITE-anmeldung.md` + `vorschau-foto-anmeldung.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
@@ -141,6 +142,7 @@ Regeln:
   Wegweiser-Liste, Kontakt-Karte, Formular-Felder und Dokument-Vorschau: `SEITE-kontakt.md`, Abschnitt 6.
   Kopf ohne Titelfoto (Service-Seiten), Dokumentzeile und Verweisliste: `SEITE-downloads.md`, Abschnitt 6.
   Karten-Rahmen (Filter + Karte), Filter-Pillen, Punkte nach Art, Eintrags-Kasten und Datenschutz-Doppelliste: `SEITE-landkarte.md`, Abschnitt 6.
+  Formular in nummerierten Teilen, Auswahl-Karte, Tipp-Kasten, Fehlermeldung und Widerrufs-Bereich: `SEITE-anmeldung.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
@@ -151,8 +153,10 @@ Regeln:
   Übersicht aller Telefonnummern, Wegweiser, Kontaktformular und Presse → Kontakt; Verzeichnis aller öffentlichen PDFs → Downloads,
   dort nur Links auf dieselben Dateien, keine Erklärungen; Verzeichnis aller Singleiter:innen, Singkreise und zertifizierten
   Einrichtungen mit Druckliste, „Wie komme ich auf die Karte?“ und welche Personendaten gezeigt werden → Singende Landkarte –
-  die alten Singleiter-Listen als PDF entfallen; wie ein Singkreis abläuft bleibt auf Sing mit).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md` und `SEITE-landkarte.md`, jeweils Abschnitt 2.
+  die alten Singleiter-Listen als PDF entfallen; wie ein Singkreis abläuft bleibt auf Sing mit; Anmeldeformular der Module,
+  Kurzfassung der Teilnahmebedingungen, Ablauf nach der Anmeldung → Anmeldung – rechtlich verbindlich bleiben die AGB, Abschnitt 12;
+  Widerruf online („Vertrag widerrufen“, Pflicht seit 19.06.2026) → eigene Seite, in der Fußzeile aller Seiten verlinkt).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md` und `SEITE-anmeldung.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -245,11 +249,12 @@ bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 
 
 ---
 
-### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026)
+### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Anmeldung)
 
 **Im Foto-Stil fertig (Vorschau + Doku):** Startseite, Weiterbildung, Dozent:innen, Sing mit, Für Einrichtungen,
 Mitglied sein, Termine, Über uns, Kontakt, Downloads & Formulare (neu), Singende Landkarte (26.09.2026; Karte technisch unverändert,
-neu gestaltet und mit Datenschutz-Prüfung – `SEITE-landkarte.md`, Abschnitte 2 und 7).
+neu gestaltet und mit Datenschutz-Prüfung – `SEITE-landkarte.md`, Abschnitte 2 und 7), Anmeldung Weiterbildung (26.09.2026; bleibt
+ein Wix-Formular statt Wix-Events, mit Widerrufs-Knopf nach § 356a BGB – `SEITE-anmeldung.md`, Abschnitt 2).
 **Bewusst nicht:** Jahrestagung (9 Seiten, siehe oben); Zweig-Seiten und `/wichtige-infos` (werden auf `/weiterbildung` umgeleitet);
 die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
@@ -257,10 +262,9 @@ die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
 | Seite | Adresse | Was dort heute ist | Vorschlag |
 |---|---|---|---|
-| **Anmeldung Weiterbildung** | `/anmeldung` (+ `/anmeldung-erfolgreich`) | Wix-Formular (Module, Unterkunft, Storno, Haftung) | Formular im Foto-Stil (Bausteine von Kontakt); klären, ob künftig Wix-Events die Anmeldung übernimmt (`SEITE-termine.md`) |
 | **Veranstaltungsseiten** | Wix-Events (40 Seiten) + Liste `/veranstaltungen` | Details & Anmeldung je Termin; Liste doppelt zu Termine | nur Vorlage gestalten; `/veranstaltungen` auf `/termine` umleiten |
 | **Shop** | `/category/all-products` (93 Produktseiten) | Wix Stores | nur Farben/Schrift der Shop-Vorlage anpassen |
-| **Rechtliches** | `/impressum`, `/datenschutz`, `/agb`, `/widerrufsrecht` | Textseiten | Kopf ohne Titelfoto; Impressum inhaltlich aktualisieren (TMG → DDG, `SEITE-kontakt.md`, Punkt 9) |
+| **Rechtliches** | `/impressum`, `/datenschutz`, `/agb`, `/widerrufsrecht` + neu `/vertrag-widerrufen` | Textseiten | Kopf ohne Titelfoto; Impressum aktualisieren (TMG → DDG, `SEITE-kontakt.md`, Punkt 9); AGB: Storno-Widerspruch, Widerrufsbelehrung für die Weiterbildung, Widerrufs-Knopf auch für Shop und Jahrestagung (`SEITE-anmeldung.md`, Punkte 1–3) – **alles in einem Auftrag prüfen lassen** |
 | **FAQ** | Fußzeilen-Link `singende-krankenhaeuser.de/haeufige-fragen.html` | **Link ist tot** (alte Webseite); `/faq` gehört zur Jahrestagung | entscheiden: eigene FAQ-Seite oder Fußzeilen-Link entfernen |
 | **Aufräumen ohne Neugestaltung** | `/inquiry-services-page`, `/lp-singing-family`, `/book-online` | Wix-Vorlagenseiten: Werbetext für „Webgestaltung, SEO“, leere Landingpage, „nichts zu buchen“ – stehen in der Sitemap | **sofort löschen** (oder auf „nicht indexieren“ + ausblenden) |
 

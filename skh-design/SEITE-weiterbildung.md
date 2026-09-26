@@ -191,6 +191,8 @@ für Vorleseprogramme (`aria-current`).
    eine Zeile „Kursgebühr“ in die Faktenliste aufnehmen – das spart Rückfragen am Telefon.
    Wert bei Sandra erfragen. **Ergänzung 25.09.2026:** Modul-PDFs und Flyer 2026 nennen 320 € je Modul, 272 € für
    Mitglieder, ohne Unterkunft und Verpflegung (`SEITE-termine.md`, Abschnitt 1) – nur noch bestätigen lassen.
+   **Ergänzung 26.09.2026:** Die Gebühr steht auch öffentlich in den AGB, Abschnitt 12.2 (mit Zahlungsfrist); auf der neuen
+   Anmeldeseite steht sie groß im Bereich „Vorher wissen“ (`SEITE-anmeldung.md`). Beide Knöpfe „Zur Anmeldung“ zeigen jetzt dorthin.
 5. ~~**Pflichtmodul benennen**~~ – **geklärt (25.09.2026):** Laut Antragsformularen ist es im Zweig
    Krankenhaus „Singen als Dialog“ (Modul P), im Zweig Pflege „Mit dem Herzen pflegen“. Beide stehen jetzt
    in der Vorschau (Bereich „So viele Module brauchst du“). Details und Folgefragen: `SEITE-sing-mit.md`, Abschnitt 7.
