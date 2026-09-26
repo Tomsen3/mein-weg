@@ -123,6 +123,14 @@ Viele PDF-Knöpfe außerhalb von „Downloads“ waren noch Platzhalter (`#`). J
 Weiterhin Platzhalter (bewusst): Newsletter, Social Media (Konten falsch, `SEITE-dozenten.md`, Punkt 10), „Details & anmelden“ der
 Beispieltermine, Modulbeschreibung auf der Veranstaltungsvorlage, Shop-Produkte der Beispielansicht.
 
+### Direktlinks (26.09.2026)
+
+Jede Vorschau lässt sich direkt aufrufen: Adresse des Abnahme-Links + `#` + Seitenname, z. B.
+`https://claude.ai/artifact/XsCqKTCemUZxgFSVAPuG9V#dozenten`. Namen: `start`, `weiterbildung`, `dozenten`, `anmeldung`, `sing-mit`,
+`landkarte`, `einrichtungen`, `termine`, `veranstaltung`, `ueber-uns`, `mitglied-sein`, `kontakt`, `downloads`, `shop`, `faq`,
+`rechtliches`. Technik: ein kleines Skript am Anfang von `abnahme.html` leitet bei diesen Namen auf die Vorschau weiter (der
+Link-Viewer gibt nur `#…` an die Seite weiter, keine Unterpfade).
+
 ## 4. Rückmeldungen sammeln und einarbeiten
 
 ### Entscheidung 6: **Bogen zum Ankreuzen direkt auf der Seite** (Tom, 26.09.2026)

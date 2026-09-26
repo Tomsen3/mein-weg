@@ -195,10 +195,12 @@ Bildvergleich geprüft: keines ist auf einer anderen Foto-Vorschau verwendet. In
 | `dz-kaepernik.jpg`, `dz-seiler.jpg` | Karten | bisherige Porträts | `/dozenten` – kein neues Foto im Ordner |
 | `dz-willmann.jpg` | Karte | kein Porträt: Hände am Klavier | `/dozenten` – Porträt erfragen (Abschnitt 7, Punkt 5) |
 
-**Porträts auf mehreren Seiten (Stand 26.09.2026):** Die Regel „Porträts überall gleich“ (`SEITE-ueber-uns.md`, Abschnitt 5) ist
-mit der neuen Serie **vorübergehend verletzt**: Tom, Paula, Vera, die Bossingers, Norbert Hermanns und Elke Wünnenberg zeigen auf
-Dozent:innen die neue Serie (`dz-…`), auf Über uns (`uu-…`), Kontakt und Anmeldung noch die bisherigen Fotos; Monika Ananda Wiese
-auf der Startseite (`weiterbildung-monika-ananda.jpg`) ebenso. → Abschnitt 7, Punkt 12.
+**Porträts auf mehreren Seiten:** Seit 26.09.2026 (Entscheidung Tom) zeigen **alle** Seiten die neue Serie – Regel „Porträts
+überall gleich“ (`SEITE-ueber-uns.md`, Abschnitt 5) erfüllt. Neu erzeugt im Format der bisherigen Dateien: `uu-tom-jansen`,
+`uu-paula-bieker`, `uu-vera-kimmig`, `uu-martin-hanke`, `uu-sonja-heim`, `mg-sandra` (je 600 × 750), `uu-bossinger` (350 × 350),
+`uu-hermanns`, `uu-wuennenberg` (400 × 400), `ein-sonja-heim` (600 × 600), `wb-vera-kimmig` (700 × 700),
+`weiterbildung-monika-ananda` (880 × 1100). Sichtbar anders als vorher: Elke Wünnenberg (Über uns), Monika Ananda Wiese
+(Startseite), Sonja Heim (Für Einrichtungen), Vera Kimmig (Weiterbildung); die übrigen zeigten schon Fotos dieser Serie.
 
 **Nicht verwendet:** die Einzelfotos von Katharina und Wolfgang Bossinger (Paarfoto stattdessen), die zwei
 Stockvideos hinter den Menuhin-Zitaten (Singende in einer Kirche; Klangschale im Gras – Wix-Medien `11062b_…` bzw. ohne
@@ -282,10 +284,10 @@ Zuständigkeit (Vorschlag): Sandra (Weiterbildungsorganisation) pflegt die Samml
    gesperrt). → Vor der Veröffentlichung einmal durchklicken.
 10. **Nebenbefund Fußzeile (alle Seiten):** Instagram, Facebook und YouTube führen auf die Konten von **Wix**, nicht auf
     die des Vereins. **Sofort korrigieren**, unabhängig von der Neugestaltung. → Tom.
-11. **Modul E „Neurologische Stimulation“** (30.07.–01.08.2027, Zell am Main) nennt in Wix-Events als Leitung „Elke Wünnenberg
-    und Lisa Jantzen“. Lisa Jantzen ist laut Tom keine Dozentin mehr (Karte entfernt) – Leitung des Moduls klären und den Termin
-    in Wix-Events anpassen (Hauptort Termine, `SEITE-termine.md`). → Vera.
-12. **Neue Porträtserie überall einsetzen?** Die neuen Fotos von Tom, Paula, Vera, Bossingers, Hermanns, Wünnenberg und Monika
+11. ~~Modul E „Neurologische Stimulation“ mit Lisa Jantzen~~ – **erledigt** 26.09.2026 (Tom: Termin ist vorbei). Hinweis: Die
+    Vorschau Termine führt den Termin unter „Vorschau 2027“ (30.07.–01.08., aus der Terminvorschau 2027) – beim nächsten Abgleich
+    der Termine prüfen, ob das Datum stimmt.
+12. ~~**Neue Porträtserie überall einsetzen?**~~ – **erledigt** 26.09.2026 (Tom), siehe Abschnitt 5. Die neuen Fotos von Tom, Paula, Vera, Bossingers, Hermanns, Wünnenberg und Monika
     Ananda Wiese auch auf Über uns, Kontakt, Anmeldung und Startseite verwenden (dann gilt wieder „Porträts überall gleich“);
     dazu ggf. `Martin.png`, `Sandra.png`, `Sonja.png` aus demselben Ordner für Vorstand und Geschäftsstelle. → Tom.
 

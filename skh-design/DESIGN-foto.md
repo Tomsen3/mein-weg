@@ -260,7 +260,7 @@ wo das Foto steht:
 | `frage1-singleiterin.jpg` | Frage 1 (Singleiter:in werden) | Singleiterin singt mitten in der Gruppe |
 | `frage2-mitglieder.jpg` | Frage 2 (Mitglied werden) | lachende Mitgliedergruppe |
 | `frage3-singgruppe.jpg` | Frage 3 (Singgruppe finden) | Singkreis von hinten |
-| `weiterbildung-monika-ananda.jpg` | Weiterbildung | Porträt Dozentin Monika Ananda Wiese |
+| `weiterbildung-monika-ananda.jpg` | Weiterbildung | Porträt Dozentin Monika Ananda Wiese (seit 26.09.2026 aus der neuen Porträtserie, `SEITE-dozenten.md`, Abschnitt 5) |
 | `aktuell-martina-uwe.jpg`, `aktuell-alwine.jpg`, `aktuell-nicole.jpg` | Aktuelles | Fotos der jeweiligen Beiträge |
 
 In Wix sind diese Fotos bereits in der Medienverwaltung – dort das **Original** verwenden, nicht
