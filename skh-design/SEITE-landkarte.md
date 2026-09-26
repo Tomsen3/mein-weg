@@ -90,7 +90,8 @@ Angaben je Eintrag: E-Mail 497 ×, Telefon 280 ×, Webseite 229 ×, **Beruf 50 �
    persönlichem OneDrive (Pfad oben). Für eine Nachfolge müssen sie in eine Vereinsablage. → Offener Punkt 6.
 8. **Neu (26.09.2026, Hinweis Tom): Die Straßenkarte lädt nicht mehr.** Statt der Karte erscheinen Kacheln mit „API KEY REQUIRED –
    carto.com/basemaps/apikey“; die Punkte werden weiter angezeigt. Ursache: Der Kartenanbieter **CARTO** liefert seine Kacheln
-   (`basemaps.cartocdn.com/light_all`) nicht mehr ohne Schlüssel aus. **Sofortmaßnahme** (kostenlos, ohne Anmeldung): in
+   (`basemaps.cartocdn.com/light_all`) nicht mehr ohne Schlüssel aus. **Sofortmaßnahme** (kostenlos, ohne Anmeldung) – **überholt**, siehe Umbau unten: OpenStreetMap sperrt Aufrufe ohne
+   Herkunftsangabe („403 Access blocked“, Test Tom 26.09.2026); die neue Vorlage nimmt die Karte des BKG (TopPlusOpen). Ursprünglich: in
    `Netzwerk_Vorlage.html` die Kachel-Zeile auf **OpenStreetMap** umstellen, Makro ausführen, neue Datei hochladen:
    ```
    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
@@ -279,7 +280,7 @@ im Ordner `04_Gemeinsame Karte`). Testbilder mit erfundenen Daten: `landkarte/te
 
 | Was | vorher | jetzt | Grund |
 |---|---|---|---|
-| Kartenhintergrund | CARTO „light_all“ – zeigt seit 2026 „API KEY REQUIRED“ | **OpenStreetMap**, leicht entsättigt | Karte lädt wieder; kostenlos, ohne Anmeldung (Befund 8) |
+| Kartenhintergrund | CARTO „light_all“ – zeigt seit 2026 „API KEY REQUIRED“ | **TopPlusOpen „grau“ des Bundesamts für Kartographie und Geodäsie (BKG)**; nur wenn diese Kacheln nicht laden, schaltet die Karte automatisch auf OpenStreetMap um | kostenlos, ohne Schlüssel, Server in Deutschland (datenschutzfreundlich); **Korrektur 26.09.2026:** zuerst nur OpenStreetMap – Test Tom: „403 Access blocked – App is not following the tile usage policy“. Die freien OSM-Server sperren Aufrufe ohne Herkunftsangabe (z. B. Datei direkt vom Computer geöffnet), deshalb nur noch als Ersatz |
 | Punktfarbe | nach **Land** (Grün/Rot/Gold) | nach **Art**: Tiefgrün = Singleiter:innen, Logo-Grün = Singkreise, Logo-Gelb = Einrichtungen; Symbole (Sänger, Note, Kreuz) bleiben | man sucht nach Art, nicht nach Land; Rot ist keine Vereinsfarbe (Befund 3) |
 | Legende | keine | unten links in der Karte | Farben erklären sich |
 | Schrift | Nunito + Source Sans 3 von **Google Fonts** | **PT Sans**, in die Datei eingebettet (Lizenz SIL OFL) | Vereinsschrift; keine Verbindung zu Google (Abschnitt 7, Punkt 2) |
@@ -304,13 +305,15 @@ Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
 2. Die neue `Netzwerk_Vorlage.html` (aus dem Repo bzw. von Claude geschickt) in `04_Gemeinsame Karte` legen – **gleicher Name**,
    damit das Makro sie findet. Excel-Datei und Vorlage offline im selben Ordner (Anleitung, Abschnitt 2).
 3. Excel öffnen, **Makro „Karte aktualisieren“** ausführen. Die neue `netzwerkkarte.html` im Browser öffnen und prüfen: Karte
-   sichtbar, Zahl oben rechts stimmt (26.09.2026: 82 Einrichtungen), Klick auf einen Punkt, „Suchen“ mit einer PLZ, „PDF / Drucken“.
+   sichtbar (unten rechts steht „Bundesamt für Kartographie und Geodäsie“; steht dort „OpenStreetMap“, hat die
+   Karte auf den Ersatz umgeschaltet – dann kurz Bescheid geben), Zahl oben rechts stimmt (26.09.2026: 82 Einrichtungen), Klick auf einen Punkt, „Suchen“ mit einer PLZ, „PDF / Drucken“.
 4. **Falls die Karte leer bleibt** („Karte wird geladen …“ bleibt stehen): Das Makro sucht die Zeile `var EMBEDDED_DATA = [];`.
    Prüfen, ob es im VBA-Code eine andere Suchzeile verwendet (VBA-Editor mit Alt + F11, nach `EMBEDDED_DATA` suchen) – dann Tom/Andy.
    Zurück zur alten Vorlage geht jederzeit über Schritt 1.
 5. In Wix wie gewohnt hochladen, die Adresse im HTML-Element tauschen, **alte Datei in den Wix-Medien löschen**.
    Größe des HTML-Elements: Computer volle Inhaltsbreite, ca. 700 px hoch; Handy ca. 1100 px hoch.
-6. **Datenschutzerklärung:** „CARTO“ durch „OpenStreetMap Foundation (Kartenkacheln)“ ersetzen, Google Fonts und
+6. **Datenschutzerklärung:** „CARTO“ ersetzen durch „Bundesamt für Kartographie und Geodäsie, Frankfurt am Main (Kartenkacheln
+   TopPlusOpen); ersatzweise OpenStreetMap Foundation“, Google Fonts und
    Google-Favicon-Dienst für die Karte streichen (Rechtstexte-Auftrag, `SEITE-rechtliches.md`, Abschnitt 4).
 
 Damit sind die Schritte 1–4 unten erledigt (in der Vorlage umgesetzt); Schritt 1 „alte Dateien löschen“ bleibt bei jedem Hochladen.

@@ -111,8 +111,9 @@ button,input,select{font:inherit;color:inherit}
 /* Karte */
 #map{flex:1;z-index:1;background:#EEF0E4}
 .leaflet-container{font-family:var(--sans)}
-/* OpenStreetMap-Kacheln etwas zurücknehmen, damit die Punkte wirken */
-.leaflet-tile-pane{filter:grayscale(.55) brightness(1.04) contrast(.95)}
+/* Hintergrund leicht aufhellen, damit die Punkte wirken; Ersatzkarte OpenStreetMap zusätzlich entsättigen */
+.leaflet-tile-pane{filter:brightness(1.05)}
+#map.karte-osm .leaflet-tile-pane{filter:grayscale(.55) brightness(1.04) contrast(.95)}
 .leaflet-control-attribution{font-size:12px}
 .leaflet-bar a{color:var(--anthra)}
 
@@ -388,12 +389,30 @@ function makeIcon(d, active){
 // Map + State
 // ------------------------------------------------------------
 const map = L.map("map",{center:[48.8,10.5],zoom:5});
-// Kartenkacheln: OpenStreetMap (kostenlos, ohne Schlüssel). CARTO verlangt seit 2026 einen API-Schlüssel
-// („API KEY REQUIRED“). Nutzungsbedingungen: Namensnennung (unten rechts) und geringe Last – erfüllt.
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+// Kartenhintergrund (Umbau 26.09.2026):
+// 1. Wahl: TopPlusOpen „grau“ des Bundesamts für Kartographie und Geodäsie (BKG) – kostenlos, ohne Schlüssel,
+//    Server in Deutschland, Lizenz dl-de/by-2-0 (Namensnennung unten rechts).
+//    CARTO verlangt seit 2026 einen API-Schlüssel („API KEY REQUIRED“); die freien OpenStreetMap-Server sperren
+//    Aufrufe ohne Herkunftsangabe („Access blocked“, z. B. beim Öffnen der Datei direkt vom Computer).
+// 2. Wahl (automatisch, nur wenn die BKG-Kacheln nicht laden): OpenStreetMap.
+const KARTE_BKG = L.tileLayer("https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",{
+  attribution:'&copy; <a href="https://www.bkg.bund.de" target="_blank" rel="noopener">Bundesamt für Kartographie und Geodäsie</a> (2026), <a href="https://sg.geodatenzentrum.de/web_public/Datenquellen_TopPlus_Open.pdf" target="_blank" rel="noopener">Datenquellen</a>',
+  maxZoom:18
+});
+const KARTE_OSM = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende',
-  maxZoom:19
-}).addTo(map);
+  maxZoom:19, referrerPolicy:"strict-origin-when-cross-origin"
+});
+let kartenFehler = 0;
+KARTE_BKG.on("tileerror",function(){
+  kartenFehler++;
+  if(kartenFehler===4 && map.hasLayer(KARTE_BKG)){
+    map.removeLayer(KARTE_BKG);
+    document.getElementById("map").classList.add("karte-osm");
+    KARTE_OSM.addTo(map);
+  }
+});
+KARTE_BKG.addTo(map);
 // Legende unten links
 (function(){
   const Leg=L.Control.extend({options:{position:"bottomleft"},onAdd:function(){
