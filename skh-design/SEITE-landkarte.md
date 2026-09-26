@@ -299,6 +299,17 @@ im Ordner `04_Gemeinsame Karte`). Testbilder mit erfundenen Daten: `landkarte/te
 `einrichtung_typ`, `zertifizierung_datum`), Suche, Umkreissuche (Nominatim), Filter Region und Art der Einrichtung, Liste,
 Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
 
+**Nachbesserungen nach Toms Test (26.09.2026):**
+- **Zoom auf die Treffer:** Nach jeder Auswahl (Art, Land, Region, Art der Einrichtung, Suche ab 3 Zeichen) zoomt die Karte auf
+  die gefundenen Einträge; beim Start auf alle Punkte. Am Handy scrollt die Seite danach zur Karte hoch, weil die Filter dort unter
+  der Karte stehen. Anlass: Hinweis Tom „Österreich und Schweiz werden mir gar nicht angezeigt, wenn sie ausgewählt sind“.
+- **Zwei falsche Koordinaten in der Excel-Datei** (Ursache, warum „Österreich“ bis nach Deutschland/Schweiz herauszoomte):
+  Zeile 199 (Singkreis, 3400 Klosterneuburg) lag bei Burgdorf in der **Schweiz** (47,058 / 7,619 – dort gibt es auch die PLZ 3400);
+  Zeile 636 (Einrichtung, 4924 Waldzell) lag in **Unterfranken** (49,938 / 9,626). Richtig: Klosterneuburg **48,3057 / 16,3256**
+  (Ortsmitte), Waldzell **48,1415 / 13,4236** (wie Zeile 385). In der von Claude erzeugten Karte korrigiert; **in der Excel-Datei
+  bitte ebenso eintragen**, sonst kommt der Fehler beim nächsten Makro-Lauf zurück. Vorbeugung: nach „Koordinaten abfragen“ die
+  neuen Punkte einmal mit dem Land-Filter ansehen – ein Punkt außerhalb des Landes fällt sofort auf.
+
 **So setzt du die neue Vorlage ein (ca. 20 Minuten):**
 1. Im Ordner `04_Gemeinsame Karte` die bisherige `Netzwerk_Vorlage.html` nach `Alt/` verschieben und umbenennen in
    `Netzwerk_Vorlage_bis_2026-09-26.html` (Rückweg, falls etwas nicht klappt).

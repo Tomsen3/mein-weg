@@ -473,6 +473,7 @@ function resetUmkreis(){
   setUmkreisStatus("");
   el("plz-input").value="";
   applyFilter();
+  zoomAufTreffer(false);
 }
 
 async function geocodePLZ(plz){
@@ -755,6 +756,7 @@ Array.from(document.querySelectorAll("#tabs .tab")).forEach(t=>{
     activeTab=t.getAttribute("data-tab")==="alle"?"alle":t.getAttribute("data-tab");
     setEinrichtungTypVisibility();
     applyFilter();
+    zoomAufTreffer(true);
   });
 });
 
@@ -767,16 +769,26 @@ Array.from(document.querySelectorAll("#land-btns .land-btn")).forEach(b=>{
     activeBL="alle";
     updateRegionSelect();
     applyFilter();
+    zoomAufTreffer(true);
   });
 });
 
-el("bl-select").addEventListener("change",()=>{ activeBL=el("bl-select").value; applyFilter(); });
-el("typ2-select").addEventListener("change",()=>{ activeEinrTyp=el("typ2-select").value; applyFilter(); });
+// Nach jeder Filter-Auswahl die Karte auf die Treffer zoomen; am Handy (Filter unter der Karte) zur Karte hochscrollen.
+function zoomAufTreffer(scrollen){
+  if(umkreisCircle) return; // Umkreissuche hat ihren eigenen Ausschnitt
+  const pts=filteredIdx.map(i=>markers[i]).filter(Boolean).map(m=>m.getLatLng());
+  if(pts.length) map.fitBounds(L.latLngBounds(pts),{padding:[30,30],maxZoom:10,animate:true});
+  if(scrollen && window.matchMedia("(max-width:780px)").matches){
+    el("map").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+}
+el("bl-select").addEventListener("change",()=>{ activeBL=el("bl-select").value; applyFilter(); zoomAufTreffer(true); });
+el("typ2-select").addEventListener("change",()=>{ activeEinrTyp=el("typ2-select").value; applyFilter(); zoomAufTreffer(true); });
 
 let searchTimer=null;
 el("search").addEventListener("input",()=>{
   if(searchTimer) clearTimeout(searchTimer);
-  searchTimer=setTimeout(()=>applyFilter(),120);
+  searchTimer=setTimeout(()=>{ applyFilter(); if(el("search").value.trim().length>=3) zoomAufTreffer(false); },300);
 });
 
 // ------------------------------------------------------------
