@@ -333,6 +333,8 @@ Zuständigkeit: Sandra bekommt und bearbeitet Anmeldungen und Widerrufe (Formula
    aussagekräftig für die Vorbereitung. → Sandra.
 7. **Modul V „Mit dem Herzen pflegen“** (Pflichtmodul Pflege, 23.–25.10.2026, Einbeck) fehlt im Formular und in Wix-Events –
    findet es statt? Dann in die Liste aufnehmen (`SEITE-termine.md`, Punkt 2). → Vera.
+   **Nachtrag 26.09.2026:** Es steht in Wix-Events als **abgesagt** (`SEITE-veranstaltung.md`, Abschnitt 1, Fund 3) –
+   bleibt also voraussichtlich aus dem Formular draußen; Vera bestätigt.
 8. **Datenschutzerklärung:** Enthält sie das Anmeldeformular (Zweck, Speicherdauer der Einsendungen, Wix als
    Auftragsverarbeiter, **Weitergabe von Name, Geburtsdatum und Beruf an die Dozent:innen**) und künftig das Widerrufsformular? → Tom.
 9. **Wix-Tarif:** Sind automatische E-Mails (Schritt 7) im aktuellen Tarif enthalten? Falls nicht: Bestätigung vorerst von

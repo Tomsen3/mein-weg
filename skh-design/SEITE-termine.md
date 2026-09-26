@@ -263,6 +263,10 @@ Hand** gepflegt werden. Zuständigkeit klären (Abschnitt 7, Punkt 7).
    Bieker) steht nur im Flyer und in der alten Jahresplanung, nicht auf der Pflege-Seite und nicht in Wix-Events.
    Findet es statt? Wenn ja: anlegen und in die Vorschau aufnehmen (fehlt dort bewusst). Wenn nein: Flyer korrigieren.
    → Vera.
+   **Nachtrag 26.09.2026** (`SEITE-veranstaltung.md`, Abschnitt 1, Fund 3): Modul V **steht** in Wix-Events – als
+   **abgesagt**; abgesagte Veranstaltungen erscheinen in keiner Liste, deshalb war es nicht zu sehen. Vera bestätigt nur
+   noch die Absage; dann Flyer korrigieren. Ebenso abgesagt: ein früher geplantes Modul F „Kraftquelle“ am selben
+   Wochenende (16.–18.10.2026) – daher stammt der falsche Modul-F-Eintrag im Flyer (Punkt 3).
 3. **Flyer „Weiterbildung Singleitung 2026“** (PDF „Alle Termine 2026“): Modul F falsch, „Zoom“ statt Teams,
    Schnupperkurs „18–19 Uhr“ statt 18:00–18:45; reine Bilddatei (für Vorleseprogramme nicht lesbar). → Korrigieren
    (Gestaltung: Die Gründerin) und dann nur auf „Weiterbildung“ verlinken.
