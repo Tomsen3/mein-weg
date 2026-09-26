@@ -233,6 +233,7 @@ Geschätzter Aufwand für Schritte 1–5: **1 bis 2 Stunden**. Alles geht **vor*
 | Countdown Timer | evtl. Jahrestagung – prüfen | | |
 | Wix Music | evtl. Hörbeispiele – prüfen | | |
 | Old Wix Forms and Payments | evtl. alte Formulare – prüfen | | |
+| **Wix Blog (neu, 26.09.2026)** | **bleibt** – Seite „Aus dem Netzwerk“, Elemente auf Startseite und Mitglied sein (`SEITE-netzwerk.md`); Kommentare aus | wird installiert, kostenlos | – |
 
 ### Pflege
 

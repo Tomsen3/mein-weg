@@ -1,6 +1,13 @@
 # SEITE-mitglied-sein.md – Unterseite „Mitglied sein“ im Stil „Foto“
 
-Stand: 25.09.2026 · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 25.09.2026, Nachtrag 26.09.2026 (MitgLIEDER im Fokus wird Blog-Beitrag) · Verantwortlich: Tom (Webseite/Marketing)
+
+> **Nachtrag 26.09.2026 – gilt vor allen Angaben unten zu „MitgLIEDER im Fokus“ und „Feedback des Monats“:** Mit der neuen Seite
+> „Aus dem Netzwerk“ (Wix Blog, Entscheidung Tom) ist jedes Lied des Monats ein **Blog-Beitrag** der Kategorie „MitgLIEDER im Fokus“ –
+> dort stehen ganze Geschichte, Audio, Text & Noten und das Feedback des Monats (**Hauptort**). Diese Seite zeigt unter `#fokus` nur
+> noch automatisch den **neuesten** Fokus-Beitrag als Anriss (Foto, Name, Kurzzitat, Link). Die monatliche Pflege an zwei Stellen
+> entfällt. Begründung, Umsetzung und Pflege: `SEITE-netzwerk.md`, Entscheidung 3 und Abschnitt 6. Die betroffenen Stellen unten
+> sind mit „→ Nachtrag“ markiert.
 Vorschau: `skh-design/vorschau-foto-mitglied-sein.html` (im Browser öffnen, Ordner `fotos/` muss daneben liegen)
 Stilregeln: `DESIGN-foto.md` · Bausteine für Unterseiten: `SEITE-weiterbildung.md`, Abschnitt 5, `SEITE-sing-mit.md` und `SEITE-einrichtungen.md`, jeweils Abschnitt 6 ·
 Nachbarseiten: `vorschau-foto.html` (Start), `vorschau-foto-weiterbildung.html`, `vorschau-foto-sing-mit.html`, `vorschau-foto-einrichtungen.html`, `vorschau-foto-termine.html` (`SEITE-termine.md`) · Über uns: `vorschau-foto-ueber-uns.html` (`SEITE-ueber-uns.md`) · Ist-Zustand: `IST-STRUKTUR.md`
@@ -111,7 +118,7 @@ einem Satz zusammen und verlinken dorthin.
 | 3 | Salbei | **Was kostet die Mitgliedschaft?** (`#beitrag`) | Einleitung (Beiträge als tragende Säule, jährlich per Lastschrift); **Beitrags-Reihe** mit 4 großen Zahlen: 80 €, 40 €, 80–180 €, 350 € (175 €) | Alle Beiträge auf einen Blick, bisher auf Seite und Formular verteilt |
 | 4 | Weizen | **Gelebte Unterstützungskultur** (`#unterstuetzung`) | Einleitung mit Uhrzeit und Teams, Link Weiterbildungsberatung; Foto; zwei weiße Karten (Factory / Singleiter:innen im Gespräch); „Die nächsten Online-Termine“ (3 Termine) + Button „Alle Termine 2026 (PDF)“ | Für Interessierte ein Argument, für Mitglieder der meistgesuchte Inhalt |
 | 5 | Leinen | **So wirst du Mitglied** (`#beitritt`, darin `#kontakt`) | Ablauf-Liste mit 3 Schritten; Foto; Formular-Karte „Beitrittserklärung“; Infoflyer; Ansprechperson Sandra Roß-Lünenschloß **mit Foto** | alles zum Beitritt an einem Ort |
-| 6 | Salbei | **MitgLIEDER im Fokus** (`#fokus`) | Lied des Monats: Nicole Rubinstein-Gross mit Foto, Kurzzitat, Hörbeispiel, Text & Noten, Mail-Link, ganze Geschichte **aufklappbar**; darunter **Feedback des Monats** (Zitat Brigitta, ganzer Bericht aufklappbar) | Für Mitglieder zum Wiederkommen; zeigt Interessierten, wie das Netzwerk lebt |
+| 6 | Salbei | **MitgLIEDER im Fokus** (`#fokus`) | Lied des Monats: Nicole Rubinstein-Gross mit Foto, Kurzzitat, Hörbeispiel, Text & Noten, Mail-Link, ganze Geschichte **aufklappbar**; darunter **Feedback des Monats** (Zitat Brigitta, ganzer Bericht aufklappbar) → Nachtrag: nur noch Anriss des neuesten Fokus-Beitrags (Datum, Foto, Name, Kurzzitat, „Ganze Geschichte, Lied und Noten →“, „Alle MitgLIEDER im Fokus →“) | Für Mitglieder zum Wiederkommen; zeigt Interessierten, wie das Netzwerk lebt |
 | 7 | Tiefgrün | **Sei dabei – werde Mitglied.** (`#mitglied`) | ein Satz zum Beitritt, ein Satz zu Spenden; Button Beitrittserklärung, Link Spenden; Newsletter | Abschluss mit der Handlung |
 | – | Tiefgrün | Fußzeile | wie Startseite | |
 
@@ -211,7 +218,8 @@ Gelb auf Tiefgrün) – alle über 4,5 : 1. Fließtext 18 px, auch in den Karten
    (`DESIGN-foto.md`, Abschnitt 6, Schritt 1).
 4. **Buttons auf den Nachbarseiten** umstellen wie in Abschnitt 2 („Korrekturen auf den Nachbar-Vorschauen“).
 5. **Startseite:** „Feedback des Monats“ dort löschen – **erst nachdem** es hier steht. Karte „MitgLIEDER im Fokus“
-   auf `/mitglied-sein` (Anker `fokus`) verlinken.
+   auf `/mitglied-sein` (Anker `fokus`) verlinken. → Nachtrag: ersetzt durch `SEITE-netzwerk.md`, Abschnitt 6, Schritte 5, 7 und 8
+   (Feedback in den Fokus-Beitrag, hier das Blog-Element „Beitragsliste“).
 6. **Termin-Buttons zusammenlegen:** die zwei Buttons „GUITAR- UKULELE-FACTORY 2026“ und „AUSTAUSCHRUNDEN 2026“ durch
    **einen** Button „Alle Termine 2026 (PDF)“ ersetzen; darunter die drei nächsten Termine als Text.
 7. **PDFs:** Beitrittserklärung und Termin-PDF weiterverwenden. Den **Infoflyer** auf dieser Seite auf die **neuere
@@ -226,7 +234,7 @@ Gelb auf Tiefgrün) – alle über 4,5 : 1. Fließtext 18 px, auch in den Karten
 
 | Wann | Was | Wo |
 |---|---|---|
-| monatlich | neues Lied: Foto, Name, Kurzzitat, Audio, Text & Noten (PDF), ganze Geschichte; ggf. neues Feedback des Monats | hier `#fokus` **und** Karte auf der Startseite („Aktuelles“) – beide gleichzeitig |
+| monatlich | neues Lied: Foto, Name, Kurzzitat, Audio, Text & Noten (PDF), ganze Geschichte; ggf. neues Feedback des Monats | ~~hier `#fokus` und Karte auf der Startseite~~ → Nachtrag: nur noch **ein Blog-Beitrag** (`SEITE-netzwerk.md`, Pflege-Ablauf); `#fokus` und Startseite aktualisieren sich selbst |
 | nach jedem Termin | Liste „Die nächsten Online-Termine“ weiterrücken (immer die nächsten drei) | hier `#unterstuetzung` |
 | jährlich (Dezember) | neues Termin-PDF hochladen (*Datei ersetzen* oder neuer Button-Text „… 2027“) | hier `#unterstuetzung` |
 | bei Beitragsänderung | Beträge ändern | hier `#beitrag`, Sing mit `#mitglied`, Für Einrichtungen `#mitglied`, Beitrittserklärung, Infoflyer, Richtlinien (Einrichtungen) |
@@ -262,7 +270,8 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
 7. **Feedback des Monats – Wortwahl:** Das Zitat enthält zweimal „Scheiße“ („eine schöne Scheiße“). Es steht heute
    so auf der Startseite und bleibt als wörtliches Zitat stehen. → Sonja entscheidet, ob es auf der Mitgliederseite
    so bleiben soll oder ob ein anderes Feedback gewählt wird.
-8. **Wer pflegt „MitgLIEDER im Fokus“?** Laut Seite „jeden Monat“ neu, das aktuelle Lied ist von Ende Juli 2026.
+8. **Wer pflegt „MitgLIEDER im Fokus“?** (→ Nachtrag: Archiv entsteht mit dem Blog von selbst; Zuständigkeit jetzt in
+   `SEITE-netzwerk.md`, Abschnitt 7, Punkt 1) Laut Seite „jeden Monat“ neu, das aktuelle Lied ist von Ende Juli 2026.
    → Zuständigkeit festlegen (naheliegend: Sandra, Öffentlichkeitsarbeit) und entscheiden, ob frühere Lieder in einem
    kleinen Archiv (Liste mit Noten-PDFs) erhalten bleiben – das wäre ein weiteres Argument für die Mitgliedschaft.
 9. **Mitgliedschaft der Einrichtung und Singleiter-Zertifikat** (offener Punkt 12 in `SEITE-einrichtungen.md`):
@@ -290,8 +299,8 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
 - [ ] Beiträge hier, auf Sing mit, Für Einrichtungen, in Beitrittserklärung und Infoflyer identisch?
 - [ ] Rabatt überall 15 % (auch im Infoflyer)?
 - [ ] Nur **ein** Button zum Termin-PDF, die drei nächsten Termine aktuell?
-- [ ] „Feedback des Monats“ von der Startseite entfernt, Startseiten-Karte verlinkt auf `#fokus`?
-- [ ] Lied des Monats hier und auf der Startseite gleich?
+- [ ] „Feedback des Monats“ von der Startseite entfernt, steht im Fokus-Beitrag (→ Nachtrag)?
+- [ ] `#fokus` zeigt per Blog-Element den neuesten Fokus-Beitrag (→ Nachtrag)?
 - [ ] Links Sing mit (`#zertifikat`), Für Einrichtungen (`#voraussetzungen`), Weiterbildungsberatung, PDFs geprüft?
 - [ ] Alle Punkte aus Abschnitt 7 geklärt?
 - [ ] Checkliste aus `DESIGN-foto.md`, Abschnitt 7, erfüllt?

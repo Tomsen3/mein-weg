@@ -1,6 +1,6 @@
 # DESIGN-foto.md – Alternative „Foto“ für Singende Krankenhäuser e.V.
 
-Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Abnahme-Paket) · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Seite „Aus dem Netzwerk“) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
@@ -17,7 +17,8 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Veranstaltungsseiten** (Wix-Events-Vorlage für alle `/event-details/…`, gehört zu Termine; `/veranstaltungen` → `/termine`) → `SEITE-veranstaltung.md` + `vorschau-foto-veranstaltung.html` ·
 **Shop** (Wix Stores, Übersicht `/category/all-products` und Vorlage für alle 93 `/product-page/…`, in der Fußzeile) → `SEITE-shop.md` + `vorschau-foto-shop.html` ·
 **Rechtliches** (eine Vorlage für Impressum, Datenschutz, AGB, Widerrufsrecht, in der Fußzeile) → `SEITE-rechtliches.md` + `vorschau-foto-rechtliches.html` ·
-**Häufige Fragen** (neu, `/haeufige-fragen`, in der Fußzeile statt des toten Links „FAQ“) → `SEITE-faq.md` + `vorschau-foto-faq.html`
+**Häufige Fragen** (neu, `/haeufige-fragen`, in der Fußzeile statt des toten Links „FAQ“) → `SEITE-faq.md` + `vorschau-foto-faq.html` ·
+**Aus dem Netzwerk** (neu, Wix Blog, `/aus-dem-netzwerk`: Rückblicke, Blog des Monats, MitgLIEDER im Fokus als Beiträge; in der Fußzeile, Startseite zeigt die drei neuesten) → `SEITE-netzwerk.md` + `vorschau-foto-netzwerk.html`
 Ohne Vorschau: **Aufräumen** (Vorlagenseiten löschen, vollständige Weiterleitungsliste, Seitentitel für Google, Wix-Apps) → `SEITE-aufraeumen.md` ·
 **Abnahme-Paket** (Übersicht für Vorstand und Geschäftsstelle, Ablauf der Freigabe) → `ABNAHME.md` + `abnahme.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
@@ -156,6 +157,7 @@ Regeln:
   Produktkarte (Bild auf weißer Kachel, ohne Knopf), Kategorienliste mit Anzahl und Kaufbereich: `SEITE-shop.md`, Abschnitt 6.
   Reiterleiste, Stand-Zeile, Inhaltsverzeichnis mit Lesespalte, „Du suchst …“-Kasten und Widerrufs-Kasten: `SEITE-rechtliches.md`, Abschnitt 6.
   Aufklappliste für Fragen (Frage fett, weißer Plus-Kreis): `SEITE-faq.md`, Abschnitt 6.
+  Beitrags-Karte (mit Datum), großer Beitrag, Beitrag in der Lesespalte und Verweis-Kasten (Wix Blog): `SEITE-netzwerk.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
@@ -177,8 +179,11 @@ Regeln:
   Shop-Bedingungen → AGB, Abschnitte 6–8 und 11 – die leicht verständlichen Fassungen bleiben auf Anmeldung und Shop, die Rechtsseiten
   verweisen nur dorthin; Widerrufsbelehrung → nur noch auf Widerrufsrecht (Vorschlag für den Rechtstexte-Auftrag), AGB 5 verlinkt;
   Häufige Fragen → ist für **kein** Thema Hauptort: je Frage ein bis zwei Sätze und genau ein Link, ohne Preise, Zahlen, Fristen,
-  Termine oder Namen – Tagungsfragen bleiben auf `/faq` der Jahrestagung).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md` und `SEITE-faq.md`, jeweils Abschnitt 2.
+  Termine oder Namen – Tagungsfragen bleiben auf `/faq` der Jahrestagung;
+  Rückblicke, Blog des Monats, MitgLIEDER im Fokus (Geschichte, Lied, Noten) und Feedback des Monats → je ein Beitrag auf
+  „Aus dem Netzwerk“ (Wix Blog) – Startseite (drei neueste) und Mitglied sein `#fokus` (neuester Fokus-Beitrag) zeigen sie
+  automatisch; Termine und Preise im Beitrag nur als Verweis-Kasten auf den Hauptort).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md`, `SEITE-faq.md` und `SEITE-netzwerk.md`, jeweils Abschnitt 2.
 - **Untermenü (seit 26.09.2026):** Es bleibt bei **sechs Hauptpunkten**; Unterpunkte sind erlaubt, wo eine Seite sonst nicht
   auffindbar wäre. Einziges Untermenü: **Weiterbildung › Dozent:innen, Anmeldung**. Computer: kleines Aufklappmenü (weiße Fläche,
   1 px Anthrazit, 14 px Rundung, „▾“ am Menüpunkt); Handy: eingerückt unter „Weiterbildung“ im aufgeklappten Menü. Die aktive
@@ -220,7 +225,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | 3 | Salbei | **Singen wirkt – und wir zeigen dir wie** | Einleitungstext, Faktenliste (Zertifikate, Wochenenden, Mitgliedschaft, Schnupperkurs), Links „Wichtige Infos“ und „Dozent:innen“ |
 | 4 | Weizen | **Die nächsten Termine** | drei nächste Termine mit „Details & anmelden“ (automatisch aus Wix-Events), Links „Alle Termine →“ und „Vorschau 2027 →“ auf die Seite Termine (`SEITE-termine.md`; geändert 25.09.2026, vorher Terminkalender und PDF) |
 | 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |
-| 6 | Leinen | **Aktuelles aus unserem Netzwerk** | drei Karten: Rückblick, Blog des Monats, MitgLIEDER im Fokus |
+| 6 | Leinen | **Aktuelles aus unserem Netzwerk** (`#netzwerk`) | die **drei neuesten Beiträge** von „Aus dem Netzwerk“ (Rückblick, Blog des Monats, MitgLIEDER im Fokus – was gerade am neuesten ist), automatisch per Wix-Blog-Element; „Alle Beiträge →“ auf `/aus-dem-netzwerk` (Entscheidung Tom 26.09.2026, `SEITE-netzwerk.md`, Entscheidung 3; vorher drei feste Karten) |
 | 7 | Tiefgrün | **Mitsingen. Mitmachen. Mitglied werden.** | Mitgliedschaft, Spenden (mit Rumänien-Projekt, Spendenbescheinigung), Newsletter |
 | 8 | Tiefgrün | Fußzeile | Mitmachen · Service · Rechtliches & Kanäle (alle bisherigen Fußzeilen-Links + Shop, Presse, YouTube …; „FAQ“ heißt „Häufige Fragen“ und führt auf `/haeufige-fragen`) |
 
@@ -234,7 +239,8 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“; Schnupperkurse: Seite Termine (`#schnuppern`) | doppelte Information vermeiden |
 | „Was wir wollen“ (Vision) | Seite „Über uns“ (`#anliegen`, `SEITE-ueber-uns.md`) | Startseite zeigt Angebote, nicht Leitbild |
 | YouTube-Kanal | Fußzeile | ein Link reicht |
-| Feedback des Monats | Seite „Mitglied sein“, Bereich „MitgLIEDER im Fokus“ (`#fokus`) – „MitgLIEDER im Fokus“ ist keine eigene Seite, nur eine Sprungmarke | langer Text, passt dort besser |
+| Feedback des Monats | im Beitrag „MitgLIEDER im Fokus“ des Monats auf „Aus dem Netzwerk“ (seit 26.09.2026; vorher geplant: Mitglied sein `#fokus`) | langer Text, gehört zur Geschichte der Singleitung |
+| Blog des Monats, Rückblicke, MitgLIEDER im Fokus | Seite „Aus dem Netzwerk“ (Wix Blog), auf der Startseite nur die drei neuesten als Karte | Archiv, Datum, einmal schreiben statt an zwei Stellen pflegen (`SEITE-netzwerk.md`) |
 | Unsere Zertifikate (6 Logos) | 3 Einrichtungs-Logos → „Für Einrichtungen“; 2 Singleiter-Logos → „Sing mit“ (Zertifikat); „Musikalischer Botschafter“ → „Über uns“ (`#botschafter`) | jedes Logo dort, wo man das Zertifikat bekommt (Einzelheiten: `SEITE-einrichtungen.md`, Abschnitt 2) |
 | Kontaktformular | Seite „Kontakt“ | Startseite kürzer |
 
@@ -273,7 +279,7 @@ wo das Foto steht:
 | `frage2-mitglieder.jpg` | Frage 2 (Mitglied werden) | lachende Mitgliedergruppe |
 | `frage3-singgruppe.jpg` | Frage 3 (Singgruppe finden) | Singkreis von hinten |
 | `weiterbildung-monika-ananda.jpg` | Weiterbildung | Porträt Dozentin Monika Ananda Wiese (seit 26.09.2026 aus der neuen Porträtserie, `SEITE-dozenten.md`, Abschnitt 5) |
-| `aktuell-martina-uwe.jpg`, `aktuell-alwine.jpg`, `aktuell-nicole.jpg` | Aktuelles | Fotos der jeweiligen Beiträge |
+| `nw-schnupperkurs.jpg`, `aktuell-martina-uwe.jpg`, `aktuell-alwine.jpg` (und `aktuell-nicole.jpg`, wenn der Fokus-Beitrag unter den drei neuesten ist) | Aktuelles | Beitragsbilder – kommen in Wix automatisch aus dem Blog (`SEITE-netzwerk.md`, Abschnitt 5) |
 
 In Wix sind diese Fotos bereits in der Medienverwaltung – dort das **Original** verwenden, nicht
 die verkleinerten Dateien aus diesem Ordner. **Vor der Veröffentlichung prüfen:** Liegt für jede
@@ -301,7 +307,10 @@ Rechtliches (26.09.2026; eine Vorlage für `/impressum`, `/datenschutz`, `/agb`,
 führt auf healingsongs.de, zwei verschiedene Steuernummern, Widerrufsbelehrung zweimal in abweichender Fassung, Datenschutzerklärung ist ein
 Generator-Text mit Diensten, die die Seite nicht nutzt – `SEITE-rechtliches.md`, Abschnitte 1, 2 und 7),
 Häufige Fragen (26.09.2026; neue Seite `/haeufige-fragen` statt Fußzeilen-Link entfernen, Weiterleitung von der toten Adresse
-`haeufige-fragen.html`; 23 Fragen in 7 Themen, jede Antwort nur Wegweiser zum Hauptort; Tagungs-FAQ `/faq` bleibt – `SEITE-faq.md`, Abschnitte 1 und 2).
+`haeufige-fragen.html`; 23 Fragen in 7 Themen, jede Antwort nur Wegweiser zum Hauptort; Tagungs-FAQ `/faq` bleibt – `SEITE-faq.md`, Abschnitte 1 und 2),
+Aus dem Netzwerk (26.09.2026; neue Seite `/aus-dem-netzwerk` mit Wix Blog – kostenlos, heute nicht installiert; drei Kategorien, vier Beiträge
+von der heutigen Startseite übernommen; Startseite und Mitglied sein füllen sich automatisch; wichtigste Funde: kein Archiv, Texte ohne Datum
+wirken veraltet, Netzwerk-Texte an drei Stellen der Startseite – `SEITE-netzwerk.md`, Abschnitte 1 und 2).
 **Aufräumen dokumentiert, Umsetzung offen** (26.09.2026; `/inquiry-services-page`, `/book-online` löschen, `/lp-singing-family` nach Rückfrage;
 eine Weiterleitungsliste für die ganze Webseite; Website-Name „Sikra Deutschland“ betrifft 24 von 38 Seiten; Landkarte ohne Seitentitel;
 9 vermutlich ungenutzte Wix-Apps prüfen – `SEITE-aufraeumen.md`, Abschnitte 1, 3, 4 und 6).
