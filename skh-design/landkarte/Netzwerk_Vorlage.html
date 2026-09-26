@@ -151,6 +151,12 @@ button,input,select{font:inherit;color:inherit}
 .punkt:hover{transform:scale(1.25)}
 .punkt.active-marker{transform:scale(1.45);outline:2px solid #393434;outline-offset:1px}
 
+/* Jahrestagung: türkiser Punkt mit Schild (Tagungsfarbe „Flow“; Weiß auf #137F7D = 4,9 : 1) */
+.jt-marke{position:relative;width:0;height:0}
+.jt-punkt{position:absolute;left:-11px;top:-11px;width:22px;height:22px;border-radius:50%;background:#137F7D;border:3px solid #FFFFFF;box-sizing:border-box;cursor:pointer}
+.jt-schild{position:absolute;left:14px;top:-13px;white-space:nowrap;background:#137F7D;color:#FFFFFF;font-weight:700;font-size:13px;line-height:1;padding:6px 10px;border-radius:9999px;border:2px solid #FFFFFF;cursor:pointer}
+.badge.jt{background:#137F7D;color:#FFFFFF}
+
 /* Handy: Karte zuerst, darunter Filter und Liste */
 @media (max-width:780px){
   body{height:auto;overflow:auto}
@@ -277,6 +283,18 @@ button,input,select{font:inherit;color:inherit}
 // berufAnzeigen: Beruf von Singleiter:innen anzeigen. AUS, weil der Zertifikatsantrag nur Name, PLZ, Ort, E-Mail,
 //   Telefon und Webseite zur Veröffentlichung abdeckt (SEITE-landkarte.md, Abschnitt 7).
 var EINSTELLUNGEN = { logosAnzeigen:false, berufAnzeigen:false };
+
+// Jahrestagung: eigener türkiser Punkt mit Schild (Farbe des Tagungsmotivs „Flow“). Jedes Jahr hier anpassen;
+// anzeigen:false blendet ihn aus. Koordinaten = Tagungsort (kein Personeneintrag, wird nicht mitgezählt).
+var JAHRESTAGUNG = {
+  anzeigen: true,
+  titel: "Jahrestagung 2027",
+  thema: "Flow – ins Fließen kommen",
+  datum: "16.–18. April 2027",
+  ort: "Parkhotel Hagenbeck, Hamburg",
+  lat: 53.5946, lng: 9.9425,
+  link: "https://www.singende-krankenhaeuser.de/jahrestagung2027"
+};
 
 // ------------------------------------------------------------
 // Dateneinbettung (wird vom VBA-Makro ersetzt)
@@ -426,7 +444,7 @@ KARTE_BKG.addTo(map);
 (function(){
   const Leg=L.Control.extend({options:{position:"bottomleft"},onAdd:function(){
     const d=L.DomUtil.create("div","lk-legende");
-    d.innerHTML='<span><i style="background:#2F4A14"></i>Singleiter:innen</span><span><i style="background:#96B839"></i>Singkreise</span><span><i style="background:#EFB110"></i>Einrichtungen</span>';
+    d.innerHTML='<span><i style="background:#2F4A14"></i>Singleiter:innen</span><span><i style="background:#96B839"></i>Singkreise</span><span><i style="background:#EFB110"></i>Einrichtungen</span>'+(JAHRESTAGUNG.anzeigen?'<span><i style="background:#137F7D"></i>'+esc(JAHRESTAGUNG.titel)+'</span>':'');
     return d;}});
   map.addControl(new Leg());
 })();
@@ -759,6 +777,16 @@ function initMap(rows){
     markers.push(m);
   });
   markers.forEach(m=>{ if(m) m.addTo(map); });
+  if(JAHRESTAGUNG.anzeigen){
+    const jt=JAHRESTAGUNG;
+    const ic=L.divIcon({className:"punkt-wrap",
+      html:`<div class="jt-marke"><span class="jt-punkt"></span><span class="jt-schild">${esc(jt.titel)}</span></div>`,
+      iconSize:[1,1], iconAnchor:[0,0], popupAnchor:[0,-12]});
+    L.marker([jt.lat,jt.lng],{icon:ic,zIndexOffset:1000,keyboard:true,title:jt.titel}).addTo(map)
+      .bindPopup(`<div class="popup-inner"><div class="popup-title"><span class="badge jt">Jahrestagung</span><span>${esc(jt.thema)}</span></div>
+        <div class="popup-meta">${esc(jt.datum)} · ${esc(jt.ort)}</div>
+        <div class="popup-contacts"><a class="popup-link" href="${esc(jt.link)}" target="_blank" rel="noopener"><span>Programm und Anmeldung →</span></a></div></div>`,{maxWidth:300});
+  }
   // Beim Start auf alle Punkte zoomen (statt fester Ausschnitt)
   const pts=markers.filter(Boolean).map(m=>m.getLatLng());
   if(pts.length) map.fitBounds(L.latLngBounds(pts),{padding:[24,24],maxZoom:9});

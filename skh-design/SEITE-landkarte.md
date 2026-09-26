@@ -308,6 +308,11 @@ Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
 - **Gleiche Koordinaten werden versetzt angezeigt:** 70 Orte mit 2–5 Einträgen auf exakt derselben Koordinate (151 Einträge,
   meist Ortsmitte bei gleicher PLZ) lagen bisher übereinander. Jetzt stehen sie im kleinen Kreis um den Ort (ab 9 Einträgen als
   Spirale); der Abstand bleibt bei jedem Zoom gleich, jeder Punkt ist einzeln anklickbar.
+- **Jahrestagung als eigener Punkt** (Idee Tom 26.09.2026): türkiser Punkt mit Schild „Jahrestagung 2027“ am Tagungsort
+  (Parkhotel Hagenbeck, Hamburg); Klick zeigt Thema, Datum, Ort und „Programm und Anmeldung →“ (`/jahrestagung2027`), dazu eine
+  Zeile in der Legende. Türkis ist die Farbe des Tagungsmotivs „Flow“ (Weiß darauf 4,9 : 1). Der Punkt ist kein Eintrag der
+  Excel-Datei und wird nicht mitgezählt. **Jährliche Pflege** (nach Bekanntgabe des neuen Tagungsorts): in der Vorlage oben den
+  Block `JAHRESTAGUNG` anpassen (Titel, Thema, Datum, Ort, `lat`/`lng`, Link) oder mit `anzeigen:false` ausblenden, dann Makro.
 - **Zwei falsche Koordinaten in der Excel-Datei** (Ursache, warum „Österreich“ bis nach Deutschland/Schweiz herauszoomte):
   Zeile 199 (Singkreis, 3400 Klosterneuburg) lag bei Burgdorf in der **Schweiz** (47,058 / 7,619 – dort gibt es auch die PLZ 3400);
   Zeile 636 (Einrichtung, 4924 Waldzell) lag in **Unterfranken** (49,938 / 9,626). Richtig: Klosterneuburg **48,3057 / 16,3256**
