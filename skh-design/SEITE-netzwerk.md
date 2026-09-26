@@ -1,7 +1,6 @@
 # SEITE-netzwerk.md – Seite „Aus dem Netzwerk“ im Stil „Foto“ (Wix Blog)
 
-Stand: 26.09.2026 · Verantwortlich: Tom (Webseite/Marketing, IT) · Fachlich zuständig: Vera Kimmig (Geschäftsstelle, sammelt
-Beiträge – Vorschlag, Abschnitt 7, Punkt 1), Vorstand (Martin, Paula: Abnahme)
+Stand: 26.09.2026 · Verantwortlich: Tom (Webseite/Marketing, IT) · **Redaktion (sammelt und stellt ein): Tom** (Entscheidung Tom, 26.09.2026 – Abschnitt 7, Punkt 1) · Abnahme: Vorstand (Martin, Paula)
 Vorschau: `skh-design/vorschau-foto-netzwerk.html` (im Browser öffnen). Oben schaltet „Nur Vorschau – Ansicht“ zwischen der
 **Übersicht** (Blog-Seite) und einem **Beitrag** (Vorlage) um. Direkt aufrufbar: `…netzwerk.html#beitrag-schnupperkurs`,
 `#beitrag-sommerakademie`, `#beitrag-trauer`, `#beitrag-nicole`; Kategorien: `#kategorie-rueckblicke`, `#kategorie-blog`,
@@ -61,7 +60,8 @@ Editor), (c) eigene Seite mit der App **Wix Blog**. **Gewählt: (c).**
 **Gründe:** (1) Ein Beitrag wird **einmal** geschrieben und erscheint automatisch auf der Netzwerk-Seite, auf der Startseite und
 (Fokus) auf „Mitglied sein“ – **Einsparmöglichkeit**: bisher zwei Seiten im Editor je Aktualisierung, künftig ein Formular im
 Dashboard (geschätzt 20–30 Minuten weniger je Monat). (2) Beiträge schreibt man im **Dashboard**, ohne den Editor zu öffnen –
-das kann auch Vera, ohne dass sie das Layout verschieben kann. (3) Jeder Beitrag hat Datum, eigene Adresse und wird von Google
+das geht schnell und ohne Gefahr, das Layout zu verschieben; bei Vertretung oder Nachfolge kann eine zweite Person
+eine reine Blog-Rolle bekommen (Abschnitt 6, Pflege-Ablauf). (3) Jeder Beitrag hat Datum, eigene Adresse und wird von Google
 gefunden; ein Link aus Newsletter oder Instagram zeigt genau auf diese Geschichte. (4) Archiv entsteht von selbst (Fund 3).
 (5) **Kosten: keine** – Wix Blog ist eine kostenlose App von Wix, im bestehenden Paket enthalten.
 **Warum nicht (b):** gleiche Handarbeit wie heute, nur an anderer Stelle; kein Datum, kein Archiv.
@@ -282,7 +282,7 @@ Lied-Karte wie Mitglied sein; Randnotiz „Vor Veröffentlichung“ und Ansicht-
    (`SEITE-rechtliches.md`, Abschnitt 4) geben – am Wortlaut der Rechtstexte selbst wird hier nichts geändert.
 10. **Handy prüfen** (Mobil-Editor): Karten untereinander, Foto oben, Kategorien umbrechen sauber.
 11. **Adressen eintragen:** tatsächliche Adressen von Blog-Seite, Kategorien und einem Beitrag in diese Doku (Entscheidung 2).
-12. **Abnahme:** Gestaltung Vorstand (Martin, Paula), Texte und Einwilligungen Vera (Abschnitt 7).
+12. **Abnahme:** Gestaltung Vorstand (Martin, Paula), Texte und Einwilligungen Tom (Abschnitt 7).
 
 **Einsparmöglichkeiten:**
 - **Newsletter aus dem Blog füllen:** Wix Blog liefert einen RSS-Feed (`/blog-feed.xml`, erst nach der Installation erreichbar).
@@ -295,26 +295,29 @@ Lied-Karte wie Mitglied sein; Randnotiz „Vor Veröffentlichung“ und Ansicht-
 
 | Wann | Was | Wer (Vorschlag) |
 |---|---|---|
-| nach jedem Modul, Schnupperkurs, Treffen mit gutem Material | Rückblick: 3–6 Sätze, 1–2 Fotos (Einwilligung!), Verweis-Kasten auf die nächsten Termine | Dozent:in liefert, Vera stellt ein |
-| monatlich (Anfang des Monats) | Blog des Monats | Vera/Vorstand |
-| monatlich | MitgLIEDER im Fokus: Foto, Geschichte, Lied (MP3), Text & Noten (PDF), ggf. Feedback des Monats | Mitglied liefert, Vera stellt ein |
+| nach jedem Modul, Schnupperkurs, Treffen mit gutem Material | Rückblick: 3–6 Sätze, 1–2 Fotos (Einwilligung!), Verweis-Kasten auf die nächsten Termine | Dozent:in liefert, Tom stellt ein |
+| monatlich (Anfang des Monats) | Blog des Monats | Tom (Themenvorschläge gern aus Vorstand und Geschäftsstelle) |
+| monatlich | MitgLIEDER im Fokus: Foto, Geschichte, Lied (MP3), Text & Noten (PDF), ggf. Feedback des Monats | Mitglied liefert, Tom stellt ein |
 | jeder neue Beitrag | Checkliste Abschnitt 8 (Punkte „Beitrag“); Startseite und Mitglied sein **nicht** anfassen – aktualisieren sich selbst | wer einstellt |
 | halbjährlich | Links in den Verweis-Kästen der letzten Beiträge anklicken; tote Links auf alte Veranstaltungsseiten durch Termine ersetzen | Tom |
 | jährlich im Januar | Beiträge ohne Einwilligung mehr (Widerruf) löschen; Kategorien und Anzahl prüfen | Tom |
+| Urlaub, Vertretung, Nachfolge | zweite Person in Wix unter *Einstellungen → Rollen & Berechtigungen* als **„Blog-Autor:in“** bzw. **„Blog-Redakteur:in“** einladen – nur Blog, kein Editor, kostenlos. Diese Doku ist die Anleitung. | Tom lädt ein |
 
 ---
 
 ## 7. Offene Punkte – vor der Veröffentlichung klären
 
-1. **Wer stellt ein, wer liefert?** Vorschlag: Vera sammelt und stellt ein, Tom richtet ein und hilft beim ersten Beitrag. Braucht
-   Vera eine Wix-Rolle „Blog-Autor:in“ oder „Blog-Redakteur:in“ (nur Blog, kein Editor)? → Vera, Tom.
+1. ~~Wer stellt ein, wer liefert?~~ – **erledigt**, entschieden am 26.09.2026 (Tom): **Tom sammelt die Beiträge und stellt sie ein.**
+   Material kommt von Dozent:innen, Mitgliedern und der Geschäftsstelle; Vorschläge über das Kontaktformular (Band „Du hast etwas zu erzählen?“)
+   gehen an die Geschäftsstelle – mit Vera absprechen, dass sie sie an Tom weiterleitet.
+   Vertretung: siehe Pflege-Ablauf (Blog-Rolle).
 2. **Echte Veröffentlichungsdaten** der vier Beiträge (Abschnitt 4 – angenommen). → Tom (Wix-Verlauf der Startseite).
 3. **Einwilligungen** für Fotos und Namen im dauerhaften Archiv, besonders Nicole (auch ihre E-Mail-Adresse steht im Beitrag) und
-   Brigitta (Vorname und Alter). → Vera.
+   Brigitta (Vorname und Alter). → Tom (bei Nicole direkt, bei Brigitta über Nicole).
 4. **Alwine Deege:** Schreibweise im Fotonachweis (Fund 5) und Link zum Radio-Interview (Fund 6) prüfen. → Tom.
 5. **Ältere Beiträge nachtragen?** Frühere Rückblicke und Lieder des Monats sind auf der Webseite nicht mehr vorhanden (Fund 3).
    Wenn sie im Vereins-OneDrive oder im Newsletter-Archiv liegen, können sie mit ihrem alten Datum nachgetragen werden – **optional**,
-   nur wenn Zeit ist. → Vera.
+   nur wenn Zeit ist. → Tom.
 6. **Redaktionell verantwortlich:** Mit einem Blog gibt es eindeutig redaktionelle Inhalte; das Impressum nennt dafür heute keine
    natürliche Person (`SEITE-rechtliches.md`, Fund 4, Abschnitt 7, Punkt 4). Gehört in den Rechtstexte-Auftrag. → Vorstand.
 7. **RSS im Newsletter** (Einsparmöglichkeit, Abschnitt 6): Tarif prüfen. → Tom.

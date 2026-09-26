@@ -126,7 +126,7 @@ Beispieltermine, Modulbeschreibung auf der Veranstaltungsvorlage, Shop-Produkte 
 ### Nachtrag (26.09.2026): Seite „Aus dem Netzwerk“ aufgenommen
 
 Neue Seite nach Entscheidung Tom (`SEITE-netzwerk.md`). In `abnahme.html` ergänzt: Karte in Teil 2 (nach „Mitglied sein“, Vorschaubild
-`abnahme/vorschau-foto-netzwerk.jpg`), Frage an Vera in Teil 3, Zeile im Bogen (Teil 4, Schlüssel `s-netzwerk` – bisherige Rückmeldungen
+`abnahme/vorschau-foto-netzwerk.jpg`; gefragt: Vorstand – Beiträge sammelt und stellt Tom ein, Entscheidung Tom 26.09.2026), Zeile im Bogen (Teil 4, Schlüssel `s-netzwerk` – bisherige Rückmeldungen
 bleiben erhalten), Direktlink `#netzwerk`, „17 Seiten“ im Kopf. Mitgeprüft werden dabei die geänderte Startseite (Abschnitt „Aktuelles“)
 und „Mitglied sein“ (`#fokus`), deren Vorschaubilder unverändert bleiben (Änderung liegt unterhalb des sichtbaren Ausschnitts).
 
