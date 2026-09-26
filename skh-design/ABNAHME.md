@@ -80,8 +80,14 @@ dabei nur für die Veröffentlichung einen HTML-Rahmen `<!doctype html>` mit Zei
 zugänglich, ohne dass man sieht, dass sie über Claude läuft? Geprüft: (1) Cloudflare Pages + Cloudflare Access (kostenlos, Zugang
 per E-Mail-Code) unter `vorschau.singende-krankenhaeuser.de`, DNS-Eintrag im Wix-Dashboard; Rückmeldebogen dann über Microsoft Forms,
 weil der eingebaute Bogen nur im Claude-Link speichert. (2) Wix-Subdomain: nur für eine Wix-Website möglich (Nachbau nötig, eigenes
-Premium-Abo). (3) ZIP über OneDrive. **Entscheidung Tom: bleibt beim privaten Claude-Link (A).** Weg (1) bleibt die Möglichkeit,
+Premium-Abo). (3) ZIP über OneDrive. **Entscheidung Tom (Stand Vormittag 26.09.2026): bleibt beim privaten Claude-Link (A).** Weg (1) bleibt die Möglichkeit,
 falls die Frage wiederkommt (ca. 45 Minuten, 0 €).
+
+**Nachtrag 26.09.2026 (Abend) – Entscheidung revidiert: doch eigene Adresse (Weg 1).** Tom setzt Weg (1) jetzt um: Cloudflare
+Pages + Cloudflare Access unter `vorschau.singende-krankenhaeuser.de`, Rückmeldungen über Microsoft Forms. Grund: Leitungsteam
+soll die Vorschau ohne sichtbaren Claude-Bezug sehen. Vorbereitet in `vorschau-paket/` (Skript `erzeuge_paket.py`, Schritt-für-
+Schritt-Anleitung `vorschau-paket/ANLEITUNG.md`). Umsetzung Schritt für Schritt mit Claude, Details und Stand siehe dort.
+Der private Claude-Link (A) bleibt zusätzlich als Fallback bestehen, falls Cloudflare/DNS klemmt.
 
 **Empfehlung:** **A für alle, C für den Vorstand.** Der Link macht es für Vera und Sandra am einfachsten; im Vorstand geht die
 Diskussion im Termin schneller als per Mail.

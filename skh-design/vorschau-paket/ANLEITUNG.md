@@ -80,6 +80,14 @@ du bekommst einen Code“, Rückmeldefrist.
 **Auswahl** („passt“ / „ändern“) und darunter eine **Text**-Frage „Anmerkung“ (nicht Pflicht). Zum Schluss „Gesamteindruck“ (Text).
 Link über *Antworten sammeln → Link kopieren*.
 
+**Achtung, häufiger Fehler:** Der Link muss der **Ausfüll-Link** sein (kurz, Form `forms.cloud.microsoft/e/…` oder
+`forms.office.com/r/…`). **Nicht** den Link aus der Adresszeile beim Bearbeiten des Formulars verwenden
+(`…DesignPageV2.aspx?...subpage=design…`) – der öffnet bei den Empfänger:innen die Bearbeitungsansicht statt des Formulars und
+verlangt ggf. eine Anmeldung mit Rechte-Fehler. Den richtigen Link holt man über den Reiter **„Antworten“** im Formular → Knopf
+**„Antworten sammeln“** → Link kopieren.
+
+Aktueller Link (Formular „Rückmeldung neue Webseite“, angelegt 26.09.2026): `https://forms.cloud.microsoft/e/X0hy5Qp9bt`
+
 1. Grundsatz 1 · Stil „Vorschlag Tom“
 2. Grundsatz 2 · Menü mit sechs Punkten
 3. Grundsatz 3 · Jahrestagung bleibt
