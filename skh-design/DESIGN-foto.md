@@ -14,7 +14,8 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Kontakt** (in der Fußzeile) → `SEITE-kontakt.md` + `vorschau-foto-kontakt.html` ·
 **Downloads & Formulare** (neu, in der Fußzeile) → `SEITE-downloads.md` + `vorschau-foto-downloads.html` ·
 **Anmeldung Weiterbildung** (gehört zu Weiterbildung, mit Widerrufs-Knopf) → `SEITE-anmeldung.md` + `vorschau-foto-anmeldung.html` ·
-**Veranstaltungsseiten** (Wix-Events-Vorlage für alle `/event-details/…`, gehört zu Termine; `/veranstaltungen` → `/termine`) → `SEITE-veranstaltung.md` + `vorschau-foto-veranstaltung.html`
+**Veranstaltungsseiten** (Wix-Events-Vorlage für alle `/event-details/…`, gehört zu Termine; `/veranstaltungen` → `/termine`) → `SEITE-veranstaltung.md` + `vorschau-foto-veranstaltung.html` ·
+**Shop** (Wix Stores, Übersicht `/category/all-products` und Vorlage für alle 93 `/product-page/…`, in der Fußzeile) → `SEITE-shop.md` + `vorschau-foto-shop.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
@@ -145,6 +146,7 @@ Regeln:
   Karten-Rahmen (Filter + Karte), Filter-Pillen, Punkte nach Art, Eintrags-Kasten und Datenschutz-Doppelliste: `SEITE-landkarte.md`, Abschnitt 6.
   Formular in nummerierten Teilen, Auswahl-Karte, Tipp-Kasten, Fehlermeldung und Widerrufs-Bereich: `SEITE-anmeldung.md`, Abschnitt 6.
   Datumszeile im Titelkasten, Zeit-&-Ort-Spalte, Meta-Zeilen und die drei Zustände einer Veranstaltung (offen, vorbei, abgesagt): `SEITE-veranstaltung.md`, Abschnitt 6.
+  Produktkarte (Bild auf weißer Kachel, ohne Knopf), Kategorienliste mit Anzahl und Kaufbereich: `SEITE-shop.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
@@ -159,8 +161,10 @@ Regeln:
   Kurzfassung der Teilnahmebedingungen, Ablauf nach der Anmeldung → Anmeldung – rechtlich verbindlich bleiben die AGB, Abschnitt 12;
   Widerruf online („Vertrag widerrufen“, Pflicht seit 19.06.2026) → eigene Seite, in der Fußzeile aller Seiten verlinkt;
   Beschreibung eines einzelnen Termins (Inhalt, Leitung, Zielgruppe, genaue Zeiten, Ort, Modul-PDF) → Veranstaltungsseite –
-  dort keine Preise, sondern ein Satz mit Link auf Anmeldung; die Liste `/veranstaltungen` entfällt zugunsten von Termine).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md` und `SEITE-veranstaltung.md`, jeweils Abschnitt 2.
+  dort keine Preise, sondern ein Satz mit Link auf Anmeldung; die Liste `/veranstaltungen` entfällt zugunsten von Termine;
+  Warenangebot und Bestellweg → Shop – Versand, Zahlung und Widerruf stehen in AGB und Widerrufsrecht, der Shop fasst sie in
+  einem Satz zusammen; kostenpflichtige Liedblätter → Shop, kostenlose PDFs → Downloads).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md` und `SEITE-shop.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -253,7 +257,7 @@ bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 
 
 ---
 
-### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Veranstaltungsseiten)
+### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Shop)
 
 **Im Foto-Stil fertig (Vorschau + Doku):** Startseite, Weiterbildung, Dozent:innen, Sing mit, Für Einrichtungen,
 Mitglied sein, Termine, Über uns, Kontakt, Downloads & Formulare (neu), Singende Landkarte (26.09.2026; Karte technisch unverändert,
@@ -261,7 +265,10 @@ neu gestaltet und mit Datenschutz-Prüfung – `SEITE-landkarte.md`, Abschnitte 
 ein Wix-Formular statt Wix-Events, mit Widerrufs-Knopf nach § 356a BGB – `SEITE-anmeldung.md`, Abschnitt 2),
 Veranstaltungsseiten (26.09.2026; eine Vorlage für alle 40 Wix-Events-Seiten, `/veranstaltungen` wird auf `/termine` umgeleitet,
 „Anmelden“ → `/anmeldung`; wichtigste Funde: 36 Anmelde-Links auf `sonjaheim9.wixsite.com`, Modul V ist in Wix-Events abgesagt,
-Beschreibungen stehen nur im PDF – `SEITE-veranstaltung.md`, Abschnitte 1 und 2).
+Beschreibungen stehen nur im PDF – `SEITE-veranstaltung.md`, Abschnitte 1 und 2),
+Shop (26.09.2026; nur Farben, Schrift, Knöpfe und Texte der zwei Wix-Stores-Vorlagen, Kopf ohne Titelfoto; wichtigste Funde:
+Wix-Platzhaltertexte „Rückgaberichtlinie/Versandinfo“ auf 19 Produktseiten, zwei Bestellwege (Warenkorb und E-Mail), Liedblätter
+werden von Hand verschickt – als digitale Produkte spart das Arbeit; „weltweiter Versand“ ↔ AGB „nur Deutschland“ – `SEITE-shop.md`, Abschnitte 1 und 2).
 **Bewusst nicht:** Jahrestagung (9 Seiten, siehe oben); Zweig-Seiten und `/wichtige-infos` (werden auf `/weiterbildung` umgeleitet);
 die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
@@ -269,8 +276,7 @@ die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
 | Seite | Adresse | Was dort heute ist | Vorschlag |
 |---|---|---|---|
-| **Shop** | `/category/all-products` (93 Produktseiten) | Wix Stores | nur Farben/Schrift der Shop-Vorlage anpassen |
-| **Rechtliches** | `/impressum`, `/datenschutz`, `/agb`, `/widerrufsrecht` + neu `/vertrag-widerrufen` | Textseiten | Kopf ohne Titelfoto; Impressum aktualisieren (TMG → DDG, `SEITE-kontakt.md`, Punkt 9); AGB: Storno-Widerspruch, Widerrufsbelehrung für die Weiterbildung, Widerrufs-Knopf auch für Shop und Jahrestagung (`SEITE-anmeldung.md`, Punkte 1–3) – **alles in einem Auftrag prüfen lassen** |
+| **Rechtliches** | `/impressum`, `/datenschutz`, `/agb`, `/widerrufsrecht` + neu `/vertrag-widerrufen` | Textseiten | Kopf ohne Titelfoto; Impressum aktualisieren (TMG → DDG, `SEITE-kontakt.md`, Punkt 9); AGB: Storno-Widerspruch, Widerrufsbelehrung für die Weiterbildung, Widerrufs-Knopf auch für Shop und Jahrestagung (`SEITE-anmeldung.md`, Punkte 1–3); Shop: veraltete Widerrufsbelehrung, digitale Inhalte, fehlende „Seite Versand“, Preishinweis (`SEITE-shop.md`, Abschnitt 7, Punkt 1) – **alles in einem Auftrag prüfen lassen** |
 | **FAQ** | Fußzeilen-Link `singende-krankenhaeuser.de/haeufige-fragen.html` | **Link ist tot** (alte Webseite); `/faq` gehört zur Jahrestagung | entscheiden: eigene FAQ-Seite oder Fußzeilen-Link entfernen |
 | **Aufräumen ohne Neugestaltung** | `/inquiry-services-page`, `/lp-singing-family`, `/book-online` | Wix-Vorlagenseiten: Werbetext für „Webgestaltung, SEO“, leere Landingpage, „nichts zu buchen“ – stehen in der Sitemap | **sofort löschen** (oder auf „nicht indexieren“ + ausblenden) |
 
