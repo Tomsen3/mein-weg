@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartenstile im Vergleich – Singende Landkarte</title>
+<!-- Nur zum Vergleichen (26.09.2026): welcher kostenlose Kartenhintergrund gefällt am besten?
+     Enthält nur Beispielpunkte, keine Personendaten. Doku: SEITE-landkarte.md, Abschnitt 6. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PT Sans","Trebuchet MS",system-ui,sans-serif;color:#393434;background:#fff;height:100vh;display:flex;flex-direction:column}
+header{padding:14px 18px;border-bottom:1px solid #DDE6C9;display:flex;flex-direction:column;gap:10px}
+h1{font-size:20px;font-weight:400}
+.stile{display:flex;flex-wrap:wrap;gap:8px}
+.stile button{font:inherit;font-size:15px;font-weight:700;color:#393434;background:#F5F3E8;border:1px solid #393434;border-radius:9999px;padding:6px 14px;cursor:pointer}
+.stile button[aria-pressed="true"]{background:#2F4A14;border-color:#2F4A14;color:#fff}
+#info{font-size:15px;color:#6B6464;max-width:900px}
+#map{flex:1}
+.punkt{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-sizing:border-box}
+</style>
+</head>
+<body>
+<header>
+  <h1>Welcher Kartenhintergrund gefällt dir am besten?</h1>
+  <div class="stile" id="stile"></div>
+  <p id="info"></p>
+</header>
+<div id="map"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
+<script>
+const map=L.map("map",{center:[50.3,10.6],zoom:6});
+const OFM='&copy; <a href="https://openfreemap.org" target="_blank">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank">OpenMapTiles</a>, Daten &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>-Mitwirkende';
+const BKG='&copy; <a href="https://www.bkg.bund.de" target="_blank">Bundesamt für Kartographie und Geodäsie</a> (2026)';
+// Vereinsfarben für den Stil „Positron im Vereinston“
+function vereinston(ml){
+  ml.getStyle().layers.forEach(l=>{
+    try{
+      if(l.id==="background") ml.setPaintProperty(l.id,"background-color","#F5F3E8");
+      else if(l.type==="fill" && /water/.test(l.id)) ml.setPaintProperty(l.id,"fill-color","#D6E2E4");
+      else if(l.type==="fill" && /(park|wood|grass|landcover|landuse)/.test(l.id)) ml.setPaintProperty(l.id,"fill-color","#E6ECD8");
+      else if(l.type==="line" && /boundary/.test(l.id)) ml.setPaintProperty(l.id,"line-color","#9C958C");
+    }catch(e){}
+  });
+}
+const STILE=[
+  {name:"1 · Positron (hell, ruhig)",typ:"vektor",url:"https://tiles.openfreemap.org/styles/positron",attr:OFM,
+   info:"OpenFreeMap „Positron“: sehr hell und ruhig, wenige Details – ähnlich der früheren CARTO-Karte. Kostenlos, ohne Anmeldung, ohne Schlüssel."},
+  {name:"2 · Positron im Vereinston",typ:"vektor",url:"https://tiles.openfreemap.org/styles/positron",attr:OFM,faerben:true,
+   info:"Wie 1, aber Land in Leinen, Wasser zartes Blaugrau, Grünflächen in Salbei – passt zur Webseite. Kostenlos, ohne Anmeldung."},
+  {name:"3 · Bright (farbig, freundlich)",typ:"vektor",url:"https://tiles.openfreemap.org/styles/bright",attr:OFM,
+   info:"OpenFreeMap „Bright“: farbiger, mit Straßen und Grünflächen – gut zur Orientierung, aber unruhiger. Kostenlos, ohne Anmeldung."},
+  {name:"4 · Liberty (klassisch)",typ:"vektor",url:"https://tiles.openfreemap.org/styles/liberty",attr:OFM,
+   info:"OpenFreeMap „Liberty“: klassische Straßenkarte mit Gebäuden beim Hineinzoomen. Kostenlos, ohne Anmeldung."},
+  {name:"5 · BKG grau (heute)",typ:"raster",url:"https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",attr:BKG,max:18,
+   info:"Bundesamt für Kartographie „TopPlusOpen grau“ – so ist es jetzt eingestellt. Amtlich, Server in Deutschland, aber eher technisch-grau."},
+  {name:"6 · BKG farbig",typ:"raster",url:"https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png",attr:BKG,max:18,
+   info:"Bundesamt für Kartographie „TopPlusOpen“ in Farbe – wie eine topografische Karte."}
+];
+let aktiv=null;
+function zeige(i){
+  if(aktiv) map.removeLayer(aktiv);
+  const s=STILE[i];
+  if(s.typ==="vektor"){
+    if(!L.maplibreGL){ document.getElementById("info").textContent="Der Vektor-Baustein (MapLibre) konnte nicht geladen werden."; return; }
+    aktiv=L.maplibreGL({style:s.url,attribution:s.attr}).addTo(map);
+    if(s.faerben){ const ml=aktiv.getMaplibreMap(); if(ml.isStyleLoaded()) vereinston(ml); else ml.once("load",()=>vereinston(ml)); }
+  } else {
+    aktiv=L.tileLayer(s.url,{attribution:s.attr,maxZoom:s.max||19}).addTo(map);
+  }
+  document.querySelectorAll("#stile button").forEach((b,k)=>b.setAttribute("aria-pressed",k===i?"true":"false"));
+  document.getElementById("info").textContent=s.info;
+}
+STILE.forEach((s,i)=>{const b=document.createElement("button");b.type="button";b.textContent=s.name;b.onclick=()=>zeige(i);document.getElementById("stile").appendChild(b);});
+// Beispielpunkte (erfunden, nur Städte) in den Vereinsfarben
+const FARBE={S:"#2F4A14",K:"#96B839",E:"#EFB110"};
+[[48.14,11.58,"S"],[48.10,11.50,"K"],[52.52,13.40,"S"],[52.48,13.35,"E"],[50.94,6.96,"S"],[50.98,7.02,"K"],[48.78,9.18,"E"],[48.70,9.10,"S"],[53.55,9.99,"K"],[51.34,12.37,"S"],[49.45,11.08,"E"],[47.99,7.85,"K"],[48.21,16.37,"S"],[48.25,16.30,"K"],[47.07,15.44,"E"],[47.27,11.40,"S"],[47.37,8.54,"K"],[46.95,7.45,"S"],[51.51,7.47,"S"],[50.11,8.68,"K"],[52.37,9.73,"E"],[54.32,10.13,"S"]]
+.forEach(p=>L.marker([p[0],p[1]],{icon:L.divIcon({className:"",html:`<div class="punkt" style="background:${FARBE[p[2]]}"></div>`,iconSize:[18,18],iconAnchor:[9,9]})}).addTo(map));
+// Jahrestagung
+L.marker([53.5946,9.9425],{zIndexOffset:1000,icon:L.divIcon({className:"",html:'<div style="position:relative"><span class="punkt" style="position:absolute;left:-11px;top:-11px;width:22px;height:22px;background:#137F7D;border-width:3px;display:block"></span><span style="position:absolute;left:14px;top:-13px;white-space:nowrap;background:#137F7D;color:#fff;font-weight:700;font-size:13px;line-height:1;padding:6px 10px;border-radius:9999px;border:2px solid #fff">Jahrestagung 2027</span></div>',iconSize:[1,1],iconAnchor:[0,0]})}).addTo(map);
+zeige(1);
+</script>
+</body>
+</html>
