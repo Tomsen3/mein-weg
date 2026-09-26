@@ -301,7 +301,7 @@ Funktionszeilen, Quellenhinweis, Namenszusätze und Brotkrumen (wie auf allen Un
    Abschnitt „Was wir wollen“ entfernen, das Logo „Musikalischer Botschafter“ bei „Unsere Zertifikate“ entfernen.
 9. **Sofort-Korrekturen** auf den heutigen Seiten (auch ohne Neugestaltung): Mail-Link `info@website.com` bei Sandra
    (Team Geschäftsführung, Kontakt), Link „WEB“ bei Suli Puschban, doppelter Text bei Erzsébet Gazdag, „Vorsitzende
-   seit 2016“ bei Elke Wünnenberg.
+   seit 2016“ bei Elke Wünnenberg → „Vorsitzende 2016–2025, heute Ehrenvorsitzende“.
 10. **Handy-Ansicht prüfen**, dann Vorschau an Sonja (Geschäftsstelle, Spenden), Martin und Paula (Vorstand) zur Abnahme.
 
 ### Pflege-Ablauf
@@ -339,7 +339,9 @@ Spenden frei.
    Vereinsregister (Amtsgericht Stuttgart, VR 720762) nachsehen. → Sonja.
 7. **Vorstandsteam:** Zuordnung der Zitate (Martin: „Singen macht glücklich …“, Paula: „Die gesundheitsfördernde
    Wirkung …“) und Berufe bestätigen; Paulas **Schwerpunkt** fehlt („wird ergänzt“); seit wann ist das Team im Amt, und
-   bis wann war Elke Wünnenberg Vorsitzende (Karte sagt „ab 2016“)? → Tom, Martin, Paula.
+   bis wann war Elke Wünnenberg Vorsitzende? → Tom, Martin, Paula.
+   **Teilweise erledigt 26.09.2026 (Tom):** Elke Wünnenberg war **bis 2025** Vorsitzende – Karte „Vorsitz 2016–2025“, Zeitleiste und
+   Dozent:innen-Text angepasst. Offen: Ist das Vorstandsteam seit 2025 im Amt (dann „Heute“ in der Zeitleiste als „2025“ benennen)?
 8. **Schirmherrin:** Die Beschreibung „Ehefrau des baden-württembergischen Ministerpräsidenten“ (Seite und Infoflyer)
    ist seit dem Regierungswechsel 2026 überholt (Winfried Kretschmann ist nach der Landtagswahl im März 2026 nicht mehr
    Ministerpräsident – bitte bestätigen). Die Vorschau schreibt nur „Schirmherrin seit 2011“. → Sonja fragt nach, ob die
