@@ -280,12 +280,15 @@ button,input,select{font:inherit;color:inherit}
 // ------------------------------------------------------------
 // Einstellungen (Umbau 26.09.2026) – hier ein- und ausschalten
 // ------------------------------------------------------------
-// logosAnzeigen: Logo der Webseite im Eintrags-Kasten. AUS, weil die Logos beim Besuch über den Google-Dienst
-//   „s2/favicons“ geladen werden – dabei geht die IP-Adresse jeder Besucherin an Google (ohne Einwilligung).
-//   Nur auf true stellen, wenn der Vorstand das entschieden hat und es in der Datenschutzerklärung steht.
+// logos: Logo (Webseiten-Symbol) im Eintrags-Kasten.
+//   "webseite" (Standard seit 26.09.2026): wird erst beim Anklicken eines Eintrags direkt von dessen eigener Webseite
+//              geladen (/apple-touch-icon.png, sonst /favicon.ico) – ohne Google. Gibt es keins, bleibt der Platz leer.
+//   "google":  alter Weg über den Google-Dienst „s2/favicons“ (findet mehr Logos, aber IP-Adresse geht an Google –
+//              nur mit Beschluss des Vorstands und Eintrag in der Datenschutzerklärung).
+//   "aus":     keine Logos.
 // berufAnzeigen: Beruf von Singleiter:innen anzeigen. AUS, weil der Zertifikatsantrag nur Name, PLZ, Ort, E-Mail,
 //   Telefon und Webseite zur Veröffentlichung abdeckt (SEITE-landkarte.md, Abschnitt 7).
-var EINSTELLUNGEN = { logosAnzeigen:false, berufAnzeigen:false };
+var EINSTELLUNGEN = { logos:"webseite", berufAnzeigen:false };
 
 // Jahrestagung: eigener türkiser Punkt mit Schild (Farbe des Tagungsmotivs „Flow“). Jedes Jahr hier anpassen;
 // anzeigen:false blendet ihn aus. Koordinaten = Tagungsort (kein Personeneintrag, wird nicht mitgezählt).
@@ -638,9 +641,16 @@ function buildPopup(d){
   const typChip=`<span class="badge ${TYPE_CLS[d.typ]||"singleiter"}">${esc(d.typ==="Einrichtung"?"Einrichtung":(d.typ==="Singkreis"?"Singkreis":"Singleiter:in"))}</span>`;
 
   let headerFav="";
-  if(EINSTELLUNGEN.logosAnzeigen && d.webseite){
-    const fav=faviconFromUrl(firstWebsiteUrl(d.webseite));
-    if(fav) headerFav=`<img class="popup-header-fav" src="${fav}" alt="" loading="lazy" onerror="this.onerror=null;this.src='';this.style.display='none';">`;
+  if(EINSTELLUNGEN.logos!=="aus" && d.webseite){
+    const w=firstWebsiteUrl(d.webseite);
+    if(EINSTELLUNGEN.logos==="google"){
+      const fav=faviconFromUrl(w);
+      if(fav) headerFav=`<img class="popup-header-fav" src="${fav}" alt="" loading="lazy" onerror="this.onerror=null;this.style.display='none';">`;
+    } else {
+      let origin=""; try{ origin=new URL(w).origin; }catch(e){}
+      // erst das große Symbol (180 px), dann favicon.ico; kleine Symbole in echter Größe (höchstens 40 px), damit nichts unscharf wird
+      if(origin) headerFav=`<img class="popup-header-fav" src="${esc(origin)}/apple-touch-icon.png" data-alt="${esc(origin)}/favicon.ico" alt="" style="display:none" onload="if(this.naturalWidth>=32||!this.dataset.alt){var g=Math.min(40,this.naturalWidth);this.style.width=g+'px';this.style.height=g+'px';this.style.display='block'}else{var a=this.dataset.alt;this.dataset.alt='';this.src=a;}" onerror="if(this.dataset.alt){var a=this.dataset.alt;this.dataset.alt='';this.src=a;}else{this.remove();}">`;
+    }
   }
 
   return `<div class="popup-inner">

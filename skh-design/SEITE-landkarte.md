@@ -284,7 +284,7 @@ im Ordner `04_Gemeinsame Karte`). Testbilder mit erfundenen Daten: `landkarte/te
 | Punktfarbe | nach **Land** (Grün/Rot/Gold) | nach **Art**: Tiefgrün = Singleiter:innen, Logo-Grün = Singkreise, Logo-Gelb = Einrichtungen; Symbole (Sänger, Note, Kreuz) bleiben | man sucht nach Art, nicht nach Land; Rot ist keine Vereinsfarbe (Befund 3) |
 | Legende | keine | unten links in der Karte | Farben erklären sich |
 | Schrift | Nunito + Source Sans 3 von **Google Fonts** | **PT Sans**, in die Datei eingebettet (Lizenz SIL OFL) | Vereinsschrift; keine Verbindung zu Google (Abschnitt 7, Punkt 2) |
-| Logos der Webseiten | beim Besuch über Google (`s2/favicons`) | **aus** – Schalter `logosAnzeigen` oben im Programmteil | IP-Adresse ging ohne Einwilligung an Google (Abschnitt 7, Punkt 1) |
+| Logos der Webseiten | beim Besuch über Google (`s2/favicons`) | **ohne Google:** erst beim Anklicken eines Eintrags direkt von dessen eigener Webseite (`/apple-touch-icon.png`, sonst `/favicon.ico`); kleine Symbole in echter Größe, fehlende ohne Lücke. Schalter `logos` oben im Programmteil: `"webseite"` (Standard), `"google"`, `"aus"` | IP-Adresse ging ohne Einwilligung an Google (Abschnitt 7, Punkt 1). **Korrektur 26.09.2026:** zuerst ganz ausgeschaltet – Hinweis Tom „die Logos der Einrichtungen werden nicht mehr angezeigt“. Nachteil: Seiten ohne eigenes Symbol zeigen kein Logo (Google fand mehr) |
 | Beruf von Singleiter:innen | angezeigt | **aus** – Schalter `berufAnzeigen` | von der Einwilligung im Antrag nicht gedeckt (Befund 5) |
 | „Stand:“ | immer das heutige Datum | Datum der Kartendatei; ohne Dateidatum keine Anzeige | täuschte Aktualität vor (Befund 2) |
 | Filter | kleine Reiter, „Singleiter“, „🌐“ | Filter-Pillen wie die Vorschau: „Was suchst du?“ (Alle, Singleiter:innen, Singkreise, Einrichtungen, Online), „Land“ | größer, gegendert, verständlich |
@@ -308,6 +308,8 @@ Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
 - **Gleiche Koordinaten werden versetzt angezeigt:** 70 Orte mit 2–5 Einträgen auf exakt derselben Koordinate (151 Einträge,
   meist Ortsmitte bei gleicher PLZ) lagen bisher übereinander. Jetzt stehen sie im kleinen Kreis um den Ort (ab 9 Einträgen als
   Spirale); der Abstand bleibt bei jedem Zoom gleich, jeder Punkt ist einzeln anklickbar.
+- **Datenschutzerklärung (Logos):** „Beim Öffnen eines Eintrags wird das Symbol (Logo) von der Webseite dieses Eintrags geladen;
+  dabei erhält deren Betreiber Ihre IP-Adresse.“ (Rechtstexte-Auftrag)
 - **Kartenhintergrund „Positron im Vereinston“** (Wahl Tom aus `landkarte/Kartenstile_Vergleich.html`, 26.09.2026): Vektorkarte
   von **OpenFreeMap** (Stil „Positron“, kostenlos, ohne Schlüssel und Anmeldung, Server in der EU), eingefärbt in Vereinsfarben:
   Land Leinen `#F5F3E8`, Wasser `#D6E2E4`, Grünflächen `#E6ECD8`, Grenzen `#9C958C`. Dafür lädt die Vorlage zusätzlich MapLibre 4.7.1
