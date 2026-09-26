@@ -317,11 +317,13 @@ Zuständigkeit: Sandra bekommt und bearbeitet Anmeldungen und Widerrufe (Formula
    und Jahrestagung mitdenken. *Das ist eine fachliche Einschätzung, keine Rechtsberatung.* **Spartipp:** Zuerst fragen, ob
    der Verein über einen Dachverband kostenlose Rechtsberatung bekommt; sonst die Rechtstexte (AGB, Widerruf, Impressum
    nach DDG, `SEITE-kontakt.md`, Punkt 9) **in einem Auftrag** prüfen lassen statt einzeln. → Vorstand (Martin, Paula), Tom.
-4. **Ablauf nach der Anmeldung bestätigen** (die Anmeldungen landen bei Sandra): Die Vorschau nimmt an, ~~(a) wer die Zahlungsangaben schickt~~ – **geklärt (26.09.2026, Tom): Sandra schickt die Rechnung**, so steht es jetzt
+4. ~~**Ablauf nach der Anmeldung bestätigen**~~ – **erledigt** (die Anmeldungen landen bei Sandra): ~~(a) wer die Zahlungsangaben schickt~~ – **geklärt (26.09.2026, Tom): Sandra schickt die Rechnung**, so steht es jetzt
    in `#danach` (Schritt 2) und bei „Vorher wissen“ (Zahlung); ~~(b) wer die Zimmer reserviert~~ – **geklärt (26.09.2026, Tom): Der Verein reserviert die Zimmer**, außer wenn keins
    gebraucht wird; im Seminarhaus Sonnenberg in **Einbeck** reservieren die Teilnehmenden selbst. So steht es jetzt unter
-   „Übernachtung“, bei „Vorher wissen“ und in `#danach` (Schritt 3); (c) wie hoch die
-   Verpflegungspauschale ist. → Sandra, Vera.
+   „Übernachtung“, bei „Vorher wissen“ und in `#danach` (Schritt 3); ~~(c) Verpflegung~~ – **geklärt (26.09.2026, Tom): Die Verpflegung ist im Zimmerpreis (160–230 €)
+   enthalten**; so steht es jetzt bei „Vorher wissen“, unter „Übernachtung“ und in `#danach`. Nur wer **ohne Zimmer** bucht,
+   zahlt die Verpflegungspauschale extra – deren Höhe steht nirgends; bei Gelegenheit nachtragen, falls es Rückfragen gibt.
+   → Sandra, Vera (niedrige Priorität).
 5. **Anschrift Pflicht?** Wird für Rechnung oder Teilnahmebescheinigung eine Postanschrift gebraucht? Wenn ja, Pflichtfeld
    und Satz „für die Rechnung“. → Sandra.
 6. ~~**Geburtsdatum:** Wofür wird es erhoben?~~ **Geklärt (26.09.2026, Tom):** für die Teilnehmerliste der Dozent:innen.
