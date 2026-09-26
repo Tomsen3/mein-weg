@@ -109,10 +109,10 @@ button,input,select{font:inherit;color:inherit}
 #dl-box p{font-size:14px;color:var(--grey);margin-top:6px}
 
 /* Karte */
-#map{flex:1;z-index:1;background:#EEF0E4}
+#map{flex:1;z-index:1;background:#F5F3E8}
 .leaflet-container{font-family:var(--sans)}
-/* Hintergrund leicht aufhellen, damit die Punkte wirken; Ersatzkarte OpenStreetMap zusätzlich entsättigen */
-.leaflet-tile-pane{filter:brightness(1.05)}
+/* Ersatzkarten: BKG leicht aufhellen, OpenStreetMap zusätzlich entsättigen (die Vektorkarte hat ihre Farben selbst) */
+#map.karte-bkg .leaflet-tile-pane{filter:brightness(1.05)}
 #map.karte-osm .leaflet-tile-pane{filter:grayscale(.55) brightness(1.04) contrast(.95)}
 .leaflet-control-attribution{font-size:12px}
 .leaflet-bar a{color:var(--anthra)}
@@ -273,6 +273,9 @@ button,input,select{font:inherit;color:inherit}
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- Vektorkarte OpenFreeMap: MapLibre + Leaflet-Verbindung (kostenlos, ohne Schlüssel) -->
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 <script>
 // ------------------------------------------------------------
 // Einstellungen (Umbau 26.09.2026) – hier ein- und ausschalten
@@ -435,11 +438,39 @@ KARTE_BKG.on("tileerror",function(){
   kartenFehler++;
   if(kartenFehler===4 && map.hasLayer(KARTE_BKG)){
     map.removeLayer(KARTE_BKG);
+    document.getElementById("map").classList.remove("karte-bkg");
     document.getElementById("map").classList.add("karte-osm");
     KARTE_OSM.addTo(map);
   }
 });
-KARTE_BKG.addTo(map);
+function karteBKG(){
+  if(map.hasLayer(KARTE_BKG)||map.hasLayer(KARTE_OSM)) return;
+  document.getElementById("map").classList.add("karte-bkg");
+  KARTE_BKG.addTo(map);
+}
+// 1. Wahl (seit 26.09.2026, Wahl Tom aus dem Vergleich): OpenFreeMap „Positron“ im Vereinston –
+//    Land Leinen, Wasser zartes Blaugrau, Grünflächen Salbei. Kostenlos, ohne Schlüssel, Server in der EU.
+//    Lädt die Vektorkarte nicht (Baustein fehlt, Server nicht erreichbar), springt die Karte auf BKG grau.
+const OFM_ATTR='&copy; <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a>, Daten &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende';
+function vereinston(ml){
+  (ml.getStyle().layers||[]).forEach(l=>{
+    try{
+      if(l.id==="background") ml.setPaintProperty(l.id,"background-color","#F5F3E8");
+      else if(l.type==="fill" && /water/.test(l.id)) ml.setPaintProperty(l.id,"fill-color","#D6E2E4");
+      else if(l.type==="fill" && /(park|wood|grass|landcover|landuse)/.test(l.id)) ml.setPaintProperty(l.id,"fill-color","#E6ECD8");
+      else if(l.type==="line" && /boundary/.test(l.id)) ml.setPaintProperty(l.id,"line-color","#9C958C");
+    }catch(e){}
+  });
+}
+(function(){
+  if(!L.maplibreGL || !window.maplibregl){ karteBKG(); return; }
+  let geladen=false;
+  const vk=L.maplibreGL({style:"https://tiles.openfreemap.org/styles/positron",attribution:OFM_ATTR}).addTo(map);
+  const ml=vk.getMaplibreMap();
+  ml.once("load",()=>{ geladen=true; vereinston(ml); });
+  ml.on("error",()=>{ if(!geladen){ map.removeLayer(vk); karteBKG(); } });
+  setTimeout(()=>{ if(!geladen && map.hasLayer(vk)){ map.removeLayer(vk); karteBKG(); } },8000);
+})();
 // Legende unten links
 (function(){
   const Leg=L.Control.extend({options:{position:"bottomleft"},onAdd:function(){

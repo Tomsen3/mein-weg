@@ -308,6 +308,13 @@ Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
 - **Gleiche Koordinaten werden versetzt angezeigt:** 70 Orte mit 2–5 Einträgen auf exakt derselben Koordinate (151 Einträge,
   meist Ortsmitte bei gleicher PLZ) lagen bisher übereinander. Jetzt stehen sie im kleinen Kreis um den Ort (ab 9 Einträgen als
   Spirale); der Abstand bleibt bei jedem Zoom gleich, jeder Punkt ist einzeln anklickbar.
+- **Kartenhintergrund „Positron im Vereinston“** (Wahl Tom aus `landkarte/Kartenstile_Vergleich.html`, 26.09.2026): Vektorkarte
+  von **OpenFreeMap** (Stil „Positron“, kostenlos, ohne Schlüssel und Anmeldung, Server in der EU), eingefärbt in Vereinsfarben:
+  Land Leinen `#F5F3E8`, Wasser `#D6E2E4`, Grünflächen `#E6ECD8`, Grenzen `#9C958C`. Dafür lädt die Vorlage zusätzlich MapLibre 4.7.1
+  und die Leaflet-Verbindung 0.0.22 von jsdelivr. **Ersatzkette:** lädt die Vektorkarte nicht innerhalb von 8 Sekunden → BKG grau →
+  bei Fehlern dort OpenStreetMap. Unten rechts steht immer, welche Karte gerade läuft. Risiko: OpenFreeMap ist ein Projekt einer
+  Einzelperson (daher die Ersatzkette). **Datenschutzerklärung:** OpenFreeMap (Kartenkacheln) und jsdelivr (Programmbausteine)
+  ergänzen; BKG und OpenStreetMap als Ersatz nennen (Rechtstexte-Auftrag).
 - **Jahrestagung als eigener Punkt** (Idee Tom 26.09.2026): türkiser Punkt mit Schild „Jahrestagung 2027“ am Tagungsort
   (Parkhotel Hagenbeck, Hamburg); Klick zeigt Thema, Datum, Ort und „Programm und Anmeldung →“ (`/jahrestagung2027`), dazu eine
   Zeile in der Legende. Türkis ist die Farbe des Tagungsmotivs „Flow“ (Weiß darauf 4,9 : 1). Der Punkt ist kein Eintrag der
