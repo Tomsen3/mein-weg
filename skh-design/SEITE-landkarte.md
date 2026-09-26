@@ -45,7 +45,7 @@ der HTML-Datei**; sie werden aus einer Excel-Datei erzeugt.
 ```
 Netzwerkkarte_stammdaten.xlsm  ──┐
 (Excel, eine Zeile je Eintrag,   │  Makro-Knopf 1 „Karte aktualisieren“
- Pflege: Vera)                   ├──────────────────────────────────►  netzwerkkarte.html
+ Pflege: Tom)                    ├──────────────────────────────────►  netzwerkkarte.html
 Netzwerk_Vorlage.html  ──────────┘                                      │
 (Gestaltung + Programm, nicht direkt bearbeiten)                        │ in Wix-Medien hochladen,
                                                                         ▼ URL ins HTML-Element eintragen
@@ -116,7 +116,7 @@ Geprüft wurde, ob die Karte besser mit Wix-Bordmitteln (Datensammlung + Wix-Kar
 
 Was sich ändert: **Gestaltung der Vorlage** (Farben, Schrift, Markerfarbe nach Art), **Datenschutz** (Abschnitt 7) und die
 **Seite um die Karte herum** (Abschnitt 3). Die Änderungen an der Vorlage macht Tom oder Andy einmalig in `Netzwerk_Vorlage.html`;
-die Datenpflege durch Vera bleibt gleich.
+die Datenpflege macht **Tom** (Korrektur 26.09.2026: Tom betreut die Landkarte, nicht Vera oder Sonja).
 
 ### Hauptorte – was abgeglichen wurde
 
@@ -131,8 +131,7 @@ die Datenpflege durch Vera bleibt gleich.
 | **Singleitung für Einrichtungen, Vergütung 90 €** | Für Einrichtungen, Sing mit | **Für Einrichtungen** (`#singleitung`, `#verguetung`) | Landkarte: Link in der Karte „Singleiter:innen“ und in „Nichts in der Nähe?“ | |
 | **Schnupperkurse** | Termine, Weiterbildung, Startseite | **Termine** (`#schnuppern`) | Landkarte: Link in „Nichts in der Nähe?“ | |
 | **Online-Runden für Mitglieder** | Mitglied sein, Termine | **Mitglied sein** | nicht auf der Landkarte – auf der Karte stehen nur **öffentliche** Online-Singkreise (Filter „Online“) | nicht vermischen: Mitglieder-Angebot ≠ offene Gruppe |
-| **Ansprechperson für Einträge** (Datenpflege) | Anleitung (Vera = Datenpflege), Kontakt | **Landkarte** (ein Kontaktkasten, `#eintrag`); Übersicht aller Nummern: **Kontakt** | Landkarte verlinkt „Kontakt → `#team`“ | Regel aus `SEITE-kontakt.md`: Aufgabenseite zeigt die **eine** zuständige Person |
-| **Telefonnummer Vera** | Weiterbildung, Kontakt | Kontakt | hier gleich wie dort: Mobil +49 1520 4301 191, Mo–Do 9–12 Uhr | offener Punkt 4 in `SEITE-kontakt.md` gilt auch hier |
+| **Ansprechperson für Einträge** (Datenpflege) | Anleitung (veraltet: „Vera = Datenpflege“), Kontakt | **Landkarte** (ein Kontaktkasten, `#eintrag`: **Tom Jansen**); im Wegweiser der Kontaktseite eine Zeile „Singende Landkarte“ | Landkarte verlinkt „Kontakt → `#wegweiser`“ | Regel aus `SEITE-kontakt.md`: Aufgabenseite zeigt die **eine** zuständige Person |
 | **Mitglied werden** (Knopf) | alle Seiten | **Mitglied sein** | Tiefgrün-Band wie überall → `/mitglied-sein` | heute führt der Knopf auf der Landkarte direkt auf die PDF-Beitrittserklärung |
 | **Zahl „3 Länder“** | Sing mit (`#netzwerk`, große Zahl) | Landkarte | bleibt | stimmt (Rumänien/Niederlande nur in alten PDF-Listen) |
 | **Zahl der Einträge** („über 500“) | – | Landkarte (Titel, Etiketten 361 / 163) | – | bei jedem Karten-Update prüfen (Abschnitt 6, Pflege) |
@@ -171,7 +170,7 @@ Karte; das stimmt erst, wenn Offener Punkt 2 erledigt ist. Die Ehrenvorsitzenden
 | 2 | Leinen | **Finde Singleiter:innen und Singkreise** (`#karte`) | Einleitung; **Karten-Rahmen** (Filter links, Karte rechts, Handy: Karte oben); Legende; drei Tipps (PLZ-Suche, Kontakt aufnehmen, Liste ausdrucken) | Die Karte ist der Zweck der Seite – sofort sichtbar, ohne Scrollen hinter Text |
 | 3 | Salbei | **Drei Arten, mitzusingen** (`#angebote`) | 3 Foto-Karten mit Etikett (Anzahl): Singleiter:innen → Für Einrichtungen `#singleitung`; Singkreise → Sing mit `#mitsingen`; Zertifizierte Einrichtungen („in Vorbereitung“) → Für Einrichtungen `#voraussetzungen`; Hinweis „Auch online“ | erklärt, was hinter den Reitern steckt |
 | 4 | Weizen | **Dann fang doch an.** (`#keine-gruppe`) | Foto hochkant; drei Wege: Schnupperkurs → Termine `#schnuppern`; Singleiter:in werden → Weiterbildung; In deiner Einrichtung fragen → Für Einrichtungen `#singleitung` | fängt auf, wer nichts in der Nähe findet – statt leerer Suche eine Handlung |
-| 5 | Leinen | **Du willst auf die Karte – oder etwas ändern?** (`#eintrag`) | drei Wege (Singleiter:in → Sing mit `#zertifikat`; Singkreis → E-Mail an Vera; Einrichtung → Für Einrichtungen `#antrag`); Kontaktkasten Vera Kimmig mit Foto, Telefon, Sprechzeiten, E-Mail, Link Kontakt `#team` | für Mitglieder; Pflege-Anlaufstelle |
+| 5 | Leinen | **Du willst auf die Karte – oder etwas ändern?** (`#eintrag`) | drei Wege (Singleiter:in → Sing mit `#zertifikat`; Singkreis → E-Mail an Tom; Einrichtung → Für Einrichtungen `#antrag`); Kontaktkasten Tom Jansen mit Foto und E-Mail (keine Telefonnummer), Link Kontakt `#wegweiser` | für Mitglieder; Pflege-Anlaufstelle |
 | 6 | Salbei | **Was wir von dir zeigen – und was nicht** (`#datenschutz`) | zwei Häkchen-Listen („Das steht auf der Karte“ / „Das zeigen wir nie“); Hinweiskasten „Jederzeit widerrufen“ + Link Datenschutzerklärung | Pflicht zur Information (Art. 13 DSGVO) und Vertrauen für neue Einträge |
 | 7 | Tiefgrün | **Werde Teil des Netzwerks.** (`#mitglied`) | wie Kontakt | Abschluss wie auf allen Seiten |
 | – | Tiefgrün | Fußzeile | wie Startseite | |
@@ -197,8 +196,7 @@ Bänder: Leinen → Salbei → Weizen → Leinen → Salbei → Tiefgrün.
 | Funktionen der Karte, Zahlen 361 / 163 / 1 / 0 | `netzwerkkarte.html` (OneDrive, Stand 23.08.2026) |
 | Was gezeigt wird (Name, PLZ, Ort, E-Mail, Telefon, Homepage) | Einwilligungstext der beiden Zertifikatsanträge |
 | „Punkt in der Ortsmitte, keine Privatadresse“ | Bedienungsanleitung Netzwerkkarte, Abschnitt 3.3 |
-| Vera Kimmig pflegt die Daten | Bedienungsanleitung, Abschnitt 8 („Datenpflege (Inhalte): Büro (Vera)“) |
-| Telefon, Sprechzeiten Vera | Kontakt-Vorschau (`SEITE-kontakt.md`) |
+| Tom Jansen betreut die Karte | Hinweis Tom, 26.09.2026 (die Bedienungsanleitung, Abschnitt 8, nennt noch „Büro (Vera)“ – dort anpassen) |
 | „Eintrag anfragen“, „Noch keine Gruppe? Werde selbst Singleiter:in“ | Entwurf `Landkarte.dc.html` |
 
 **Selbst formuliert** (bitte bei der Abnahme gegenlesen): Titel „Singen in deiner Nähe.“ und Titeltext, alle Überschriften, die
@@ -274,20 +272,20 @@ Kontraste: nur geprüfte Kombinationen (Weiß auf Tiefgrün 10 : 1, Anthrazit au
 10. **Datenschutzerklärung ergänzen** (Abschnitt 7, Punkt 5) – vor dem Veröffentlichen.
 11. **Einrichtungen eintragen**, sobald die Liste da ist (Offener Punkt 2): Zeilen mit `typ` = `Einrichtung`, Spalten
     `einrichtung_typ` und `zertifizierung_datum` füllen; Punkt auf die Adresse der Einrichtung (keine Person, kein Datenschutzproblem).
-12. **Prüfen** (Desktop und Handy): Filter, PLZ-Suche, Klick auf Punkt, „PDF / Drucken“; dann Abnahme durch Vera (Datenpflege) und
-    Sonja (Einwilligungen, Einrichtungen).
+12. **Prüfen** (Desktop und Handy): Filter, PLZ-Suche, Klick auf Punkt, „PDF / Drucken“; dann Abnahme durch Tom.
 
 ### Pflege-Ablauf
 
 | Wann | Was | Wer |
 |---|---|---|
-| bei jedem neuen Zertifikat mit „Ja“ zur Landkarte | Zeile in der Excel-Datei anlegen (nur freigegebene Kontaktwege), Ortskoordinate = Ortsmitte | Vera |
-| bei Änderungs- oder Löschwunsch | Zeile ändern/löschen, Karte neu erzeugen und hochladen, **alte Datei in Wix-Medien löschen** – spätestens innerhalb eines Monats | Vera, Tom (Hochladen) |
+| bei jedem neuen Zertifikat mit „Ja“ zur Landkarte | Zeile in der Excel-Datei anlegen (nur freigegebene Kontaktwege), Ortskoordinate = Ortsmitte | Tom |
+| bei Änderungs- oder Löschwunsch | Zeile ändern/löschen, Karte neu erzeugen und hochladen, **alte Datei in Wix-Medien löschen** – spätestens innerhalb eines Monats | Tom |
 | monatlich (wenn sich etwas geändert hat) | Makro „Karte aktualisieren“, hochladen, URL im HTML-Element tauschen | Tom |
-| halbjährlich | Makro-Knöpfe „Webseiten prüfen“ und „Kontakt prüfen“; Zahlen auf der Seite (Titel, Etiketten) anpassen | Vera, Tom |
-| jährlich | Stichprobe: Liegt für jeden Eintrag eine Einwilligung vor? Einträge ohne Nachweis anschreiben oder entfernen | Sonja |
+| halbjährlich | Makro-Knöpfe „Webseiten prüfen“ und „Kontakt prüfen“; Zahlen auf der Seite (Titel, Etiketten) anpassen | Tom |
+| jährlich | Stichprobe: Liegt für jeden Eintrag eine Einwilligung vor? Einträge ohne Nachweis anschreiben oder entfernen | Tom |
 
-Zuständigkeit (Vorschlag): Vera pflegt die Daten, Tom erzeugt und lädt hoch, Sonja entscheidet bei Einwilligungsfragen.
+Zuständigkeit: **Tom** betreut die Landkarte vollständig – Daten pflegen, Karte erzeugen und hochladen, Einwilligungsfragen
+(Korrektur 26.09.2026 durch Tom; vorher hier als Vorschlag Vera/Tom/Sonja). Die Bedienungsanleitung (Abschnitt 8) entsprechend anpassen.
 
 ---
 
@@ -353,25 +351,25 @@ Rechtsberatung. Bei Zweifeln die Datenschutzbeauftragte bzw. den Verein beraten 
    OneDrive? (Wix-Editor → Element anklicken → „Code bearbeiten“ → URL ansehen.) → Tom.
 2. **Zertifizierte Einrichtungen fehlen auf der Karte** (0 statt „100“). Liste der zertifizierten Einrichtungen mit Ort, Typ und
    Zertifizierungsdatum zusammenstellen; Zustimmung zur Veröffentlichung (Satz in der Vereinbarung) klären; dann eintragen. Bis
-   dahin: Etikett „in Vorbereitung“ (so in der Vorschau) oder Reiter ausblenden. → Sonja (Liste), Vera (Eintragen).
+   dahin: Etikett „in Vorbereitung“ (so in der Vorschau) oder Reiter ausblenden. → Tom (Liste der zertifizierten Einrichtungen ggf. aus den Zertifizierungsunterlagen).
 3. **Singkreise – Einwilligung:** Woher stammen die 163 Einträge, gibt es Einwilligungen? Vorschlag Meldetext für neue Gruppen:
    „Ich leite den Singkreis … und bin einverstanden, dass Name der Gruppe, PLZ/Ort, [E-Mail/Telefon/Webseite] auf der Singenden
-   Landkarte veröffentlicht werden. Widerruf jederzeit per E-Mail an die Geschäftsstelle.“ Ob Singkreis-Leitungen Mitglied sein
-   müssen (Live-Text: „Singgruppen unserer Mitglieder“), festlegen. → Sonja, Vera.
+   Landkarte veröffentlicht werden. Widerruf jederzeit per E-Mail an tom.jansen@singende-krankenhaeuser.de.“ Ob Singkreis-Leitungen Mitglied sein
+   müssen (Live-Text: „Singgruppen unserer Mitglieder“), festlegen. → Tom.
 4. **Einwilligungen prüfen:** Stichprobe bei Singleiter:innen (auch „Nein“-Ankreuzungen); Beruf-Angaben entfernen oder
-   Antrag erweitern (bei der nächsten Überarbeitung der Anträge, `SEITE-sing-mit.md`). → Sonja, Vera.
+   Antrag erweitern (bei der nächsten Überarbeitung der Anträge, `SEITE-sing-mit.md`). → Tom.
 5. **Vorstandsentscheidungen Datenschutz:** Zwei-Klick-Lösung für die Karte ja/nein; E-Mail in der Druckliste ja/nein. → Martin,
    Paula, Tom (Vorstand).
 6. **Ablage für die Nachfolge:** Die Kartendateien liegen in Toms persönlichem OneDrive. In die Vereinsablage (SharePoint
    „Singende Krankenhäuser Homepage“, `520 Website & Social Media/Webseite/`) verschieben, Anleitung (Pfad, Punkt „alte Datei
    behalten“) anpassen. **Achtung:** Das Makro braucht die Dateien offline im selben Ordner (Anleitung, Abschnitt 2). → Tom, Andy.
 7. **Rumänien und Niederlande:** 3 Singleiter:innen aus den alten Listen sind nicht auf der Karte (sie kennt nur DE/AT/CH). Aufnehmen
-   (Land ergänzen) oder bewusst weglassen? → Sonja.
+   (Land ergänzen) oder bewusst weglassen? → Tom.
 8. **Österreich:** Die alte Österreich-Liste trägt „www.singende-krankenhaeuser.at“ – pflegt Österreich eine eigene Karte oder
    Liste? Doppelpflege vermeiden. → Tom mit Sybille Mikula.
 9. **Titelfoto** `lk-titel.jpg` und `lk-draussen.jpg`: erkennbare Personen – Einwilligung für die Verwendung als Titel- bzw.
    Seitenfoto prüfen; für `lk-draussen.jpg` höher aufgelöstes Original erfragen. → Tom.
-10. **Texte gegenlesen** (Abschnitt 4, „Selbst formuliert“), besonders den Datenschutz-Bereich. → Sonja, ggf. Datenschutzberatung.
+10. **Texte gegenlesen** (Abschnitt 4, „Selbst formuliert“), besonders den Datenschutz-Bereich. → Tom, ggf. Datenschutzberatung.
 
 ---
 
