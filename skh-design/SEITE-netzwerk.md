@@ -148,6 +148,7 @@ von selbst, ein Titelfoto müsste gepflegt werden.
 | Blog des Monats | „Diese haben es sich zur Aufgabe gemacht haben“ | „Diese haben es sich zur Aufgabe gemacht“ | doppeltes „haben“ |
 | Blog des Monats | „Ein hörenswertes Radio-Interview … in dem sie sagt, dass …“ | „Hörenswert ist ein Radio-Interview … Darin sagt sie, …“ | Satz ohne Hauptverb |
 | Blog des Monats | „Foto: Alwine Deegen“ | „Foto: Alwine Deege“ | Schreibweise wie überall sonst (Fund 5, bestätigen) |
+| alle Stellen | kleine Überschrift „MitgLIEDER im Fokus“ erschien als „MITGLIEDER IM FOKUS“ (automatische Großbuchstaben) | immer „MitgLIEDER im Fokus“ | Hinweis Tom, 26.09.2026 – Wortspiel mit „Lieder“ geht sonst verloren; Regel in `DESIGN-foto.md`, Abschnitt 3; in Wix-Blog-Kategorie genau so schreiben |
 | Fokus, Feedback | Tippfehler („mindesten“, „platze“, „Epo itaitai“) | wie schon auf der „Mitglied sein“-Vorschau korrigiert | `SEITE-mitglied-sein.md`, Abschnitt 2 |
 
 ### Korrekturen auf den Nachbar-Vorschauen (26.09.2026)

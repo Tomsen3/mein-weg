@@ -1119,6 +1119,8 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
 .nw-card h3 a{text-decoration:none}
 .nw-card h3 a:hover{text-decoration:underline}
 .nw-date{font-size:16px}
+/* „MitgLIEDER im Fokus“ immer in dieser Schreibweise – auch in kleinen Überschriften keine Großbuchstaben (Hinweis Tom, 26.09.2026) */
+.eyebrow.nw-name{text-transform:none;letter-spacing:.02em}
 .nw-card .ghost{margin-top:2px}
 /* neuester Beitrag groß (in Wix: Layout „Hervorgehobener Beitrag“ bzw. erster Beitrag im Layout „Seite an Seite“) */
 .nw-card.lead{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-bottom:clamp(24px,4vw,40px);border-bottom:1px solid var(--anthra)}
@@ -1240,7 +1242,7 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
     <article class="nw-card" data-cat="fokus">
       <a class="photo g" href="#beitrag-nicole" aria-hidden="true" tabindex="-1"><img src="fotos/aktuell-nicole.jpg" alt=""></a>
       <div class="nw-txt">
-        <span class="eyebrow">MitgLIEDER im Fokus</span>
+        <span class="eyebrow nw-name">MitgLIEDER im Fokus</span>
         <h3><a href="#beitrag-nicole">Nicole Rubinstein-Gross: „Ich will mich spüren“</a></h3>
         <p class="nw-date">29. Juli 2026</p>
         <p>Eine Psychotherapeutin verbindet Psyche und Singen – mit ihrem Lied zum Anhören und Mitsingen, Text und Noten.</p>
@@ -1329,7 +1331,7 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
 <div data-page="beitrag-nicole" hidden>
 <nav class="crumbs" aria-label="Du bist hier"><ol><li><a href="vorschau-foto.html">Start</a></li><li><a href="vorschau-foto-ueber-uns.html">Über uns</a></li><li><a href="#">Aus dem Netzwerk</a></li><li>MitgLIEDER im Fokus</li></ol></nav>
 <article class="nw-art"><div class="wrap">
-  <a class="eyebrow" href="#kategorie-fokus">MitgLIEDER im Fokus · Lied des Monats</a>
+  <a class="eyebrow nw-name" href="#kategorie-fokus">MitgLIEDER im Fokus · Lied des Monats</a>
   <h1>Nicole Rubinstein-Gross: „Ich will mich spüren“</h1>
   <p class="nw-meta">29. Juli 2026 · <a href="#kategorie-fokus">MitgLIEDER im Fokus</a></p>
   <p class="lead-p">Eine Psychotherapeutin verbindet Psyche und Singen – und stellt ihr Lied für deine persönliche Sammlung vor.</p>

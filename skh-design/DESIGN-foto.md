@@ -125,6 +125,8 @@ Eine einzige Schrift: **PT Sans** (Google Fonts, kostenlos).
 Regeln:
 - Große Überschriften **nicht fett** – die Ruhe kommt aus „groß, aber normal stark“.
 - Fett nur für Buttons, Links, kleine Überschriften und Begriffe in Listen.
+- **„MitgLIEDER im Fokus“** steht immer genau so (Wortspiel mit „Lieder“) – auch in kleinen Überschriften **keine** automatischen
+  Großbuchstaben (Hinweis Tom, 26.09.2026). In Wix bei diesen Textfeldern „Großbuchstaben“ ausschalten und von Hand schreiben.
 - **Handy-Größen** (Spalte „Handy“) gelten seit 26.09.2026 – vorher 44/38/26 px; Hinweis Tom: „am Handy viel zu wuchtig“.
 
 ---
