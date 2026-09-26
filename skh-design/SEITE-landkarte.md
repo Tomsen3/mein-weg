@@ -88,6 +88,20 @@ Angaben je Eintrag: E-Mail 497 ×, Telefon 280 ×, Webseite 229 ×, **Beruf 50 �
 5. **Beruf wird angezeigt**, obwohl der Antrag nur Name, PLZ, Ort, E-Mail, Telefon und Homepage nennt – Abschnitt 7.
 6. Die Anleitung nennt als Ablageort „OneDrive → SKH → Webseite → Netzwerkkarte“; tatsächlich liegen die Dateien in Toms
    persönlichem OneDrive (Pfad oben). Für eine Nachfolge müssen sie in eine Vereinsablage. → Offener Punkt 6.
+8. **Neu (26.09.2026, Hinweis Tom): Die Straßenkarte lädt nicht mehr.** Statt der Karte erscheinen Kacheln mit „API KEY REQUIRED –
+   carto.com/basemaps/apikey“; die Punkte werden weiter angezeigt. Ursache: Der Kartenanbieter **CARTO** liefert seine Kacheln
+   (`basemaps.cartocdn.com/light_all`) nicht mehr ohne Schlüssel aus. **Sofortmaßnahme** (kostenlos, ohne Anmeldung): in
+   `Netzwerk_Vorlage.html` die Kachel-Zeile auf **OpenStreetMap** umstellen, Makro ausführen, neue Datei hochladen:
+   ```
+   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+     attribution:"&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>-Mitwirkende", maxZoom:19
+   }).addTo(map);
+   ```
+   OpenStreetMap-Kacheln sind farbiger als CARTO „light“. Damit die Karte ruhig bleibt, im `<style>` der Vorlage ergänzen:
+   `.leaflet-tile-pane{filter:grayscale(.55) brightness(1.04) contrast(.95)}`. Nutzungsbedingungen der OSM-Kacheln: Namensnennung
+   (steht unten rechts) und nur geringe Last – für eine Vereinsseite erfüllt. **Datenschutz:** In der Datenschutzerklärung
+   „CARTO“ durch „OpenStreetMap Foundation (Kartenkacheln)“ ersetzen (Rechtstexte-Auftrag, `SEITE-rechtliches.md`, Abschnitt 4).
+   Die neu gestaltete Vorlage (Weg A, Entscheidung Tom 26.09.2026) verwendet von Anfang an OpenStreetMap.
 7. Die Anleitung empfiehlt, die alte `netzwerkkarte.html` in den Wix-Medien „zur Sicherheit als Backup zu behalten“. Jede hochgeladene
    Datei hat aber eine **öffentliche Adresse** – gelöschte oder geänderte Einträge bleiben dort abrufbar. → Abschnitt 7, Punkt 6.
 
