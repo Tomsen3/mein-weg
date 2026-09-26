@@ -109,7 +109,7 @@ Nicht geändert: Kontaktkästen der Aufgabenseiten (bleiben), Fußzeile „Spend
 | – | Leinen | Brotkrumen | „Start › Kontakt“ | |
 | 1 | Titelfoto + Tiefgrün-Kasten links | **Wir sind für dich da.** | ein Satz (wofür die Geschäftsstelle da ist, drei Wege); Buttons „Zum Kontaktformular“, „Wer hilft bei was? →“ | |
 | – | Leinen | Sprungleiste | Wer hilft bei was? · Ansprechpersonen · Formular · Presse · Anschrift | |
-| 2 | Leinen | **Wer hilft bei was?** (`#wegweiser`) | 9 Zeilen: Thema · Person mit Funktion · Link zur Aufgabenseite; Hinweiskasten „Singgruppe in deiner Nähe? → Singende Landkarte“ | häufigste Fragen zuerst beantworten |
+| 2 | Leinen | **Wer hilft bei was?** (`#wegweiser`) | 10 Zeilen (seit 26.09.2026; vorher 9): Thema · Person mit Funktion · Link zur Aufgabenseite; Hinweiskasten „Singgruppe in deiner Nähe? → Singende Landkarte“ | häufigste Fragen zuerst beantworten |
 | 3 | Salbei | **So erreichst du uns persönlich** (`#team`) | 3 Kontakt-Karten: Porträt, Name, Funktion, Telefon (anklickbar), Sprechzeiten, E-Mail, „Ansprechperson für“; Hinweis „Außerhalb der Sprechzeiten …“; Link „Mehr über unser Team →“ | für alle, die lieber anrufen |
 | 4 | Leinen | **Schreib uns** (`#formular`) | links Erklärung (Weiterleitung, Rückruf, Flyer, Pflichtfelder), rechts Formular-Karte | für alles, was nicht in den Wegweiser passt |
 | 5 | Weizen | **Für Presse und Medien** (`#presse`) | Titelseite Infoflyer (Bild, verlinkt), Text, Liste der Druckschriften mit PDF-Links, Link „Zahlen, Geschichte, Vorstand → Über uns“, Ansprechperson Sonja Heim ohne Foto | Presse als eigener, klarer Bereich |
@@ -123,7 +123,8 @@ Bänder: Leinen → Salbei → Leinen → Weizen → Leinen → Tiefgrün.
 
 | Thema | Person | Ziel |
 |---|---|---|
-| Weiterbildung, Module und Anmeldung, Weiterbildungsflyer | Vera Kimmig | Weiterbildung `#beratung` |
+| Beratung zur Weiterbildung, Weiterbildungsflyer | Vera Kimmig | Weiterbildung `#beratung` |
+| Anmeldung zu Modulen und Rechnungen (geändert 26.09.2026: die Anmeldungen gehen an Sandra, `SEITE-anmeldung.md`) | Sandra Roß-Lünenschloß | Anmeldung `/anmeldung` |
 | Module in Österreich | Sybille Mikula | singende-krankenhaeuser.at |
 | Zertifikat als Singleiter:in beantragen | Sonja Heim | Sing mit `#zertifikat` |
 | Zertifizierung als „Singendes Krankenhaus“ / „Singende Pflegeeinrichtung“ | Sonja Heim | Für Einrichtungen `#antrag` |
@@ -263,7 +264,7 @@ Zuständigkeit (Vorschlag): Sandra pflegt die Seite, Sonja gibt Änderungen frei
 
 - [ ] E-Mail-Links führen auf die richtigen Adressen (nicht `info@website.com`)?
 - [ ] Telefonnummern auf dem Handy antippbar, gleich wie auf den Aufgabenseiten und im Flyer?
-- [ ] Wegweiser: alle 9 Links funktionieren und zeigen auf die richtige Stelle?
+- [ ] Wegweiser: alle 10 Links funktionieren und zeigen auf die richtige Stelle?
 - [ ] Formular: Test-Nachricht angekommen? Anschriftfelder erscheinen nur mit Flyer-Häkchen?
 - [ ] Spendenkasten entfernt, Link auf Über uns `#spenden`?
 - [ ] Nur **ein** Infoflyer verlinkt (aktuelle Fassung)?

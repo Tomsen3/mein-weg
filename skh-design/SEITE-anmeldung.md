@@ -159,10 +159,8 @@ Beginn, AGB 12.3) ist die Regel des Vereins. Beide stehen getrennt bei „Vorher
 |---|---|---|---|
 | Weiterbildung | „Die nächsten Module“, Knopf „Zur Anmeldung“ | `#` | → `vorschau-foto-anmeldung.html` |
 | Weiterbildung | Tiefgrün-Band, „Zur Anmeldung →“ | `#` | → `vorschau-foto-anmeldung.html` |
+| Kontakt | Wegweiser, Zeile „Weiterbildung, Module und Anmeldung“ (nur Vera) | – | aufgeteilt (entschieden 26.09.2026, Tom): **Beratung: Vera** → Weiterbildung `#beratung`; **Anmeldung und Rechnungen: Sandra** → Anmeldung. Sandras Karte: „Anmeldung und Rechnungen der Weiterbildung“ statt „Organisation der Weiterbildung“ |
 | alle zwölf Vorschauen | Fußzeile „Rechtliches & Kanäle“ | – | neuer Link **„Vertrag widerrufen“** → `vorschau-foto-anmeldung.html#widerruf` |
-
-Zu prüfen (nicht geändert): Der Wegweiser auf Kontakt nennt für „Weiterbildung, Module und Anmeldung“ nur Vera Kimmig. Da die
-Anmeldungen bei Sandra landen, ggf. aufteilen („Beratung: Vera · Anmeldung und Rechnungen: Sandra“) – mit beiden abstimmen.
 
 Nicht geändert: „Details & anmelden“ auf Start, Termine, Weiterbildung (führt in Wix auf die Veranstaltungsseite, von dort
 „Anmelden“ → `/anmeldung`).
