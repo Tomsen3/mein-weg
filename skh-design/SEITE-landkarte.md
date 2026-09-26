@@ -303,6 +303,11 @@ Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
 - **Zoom auf die Treffer:** Nach jeder Auswahl (Art, Land, Region, Art der Einrichtung, Suche ab 3 Zeichen) zoomt die Karte auf
   die gefundenen Einträge; beim Start auf alle Punkte. Am Handy scrollt die Seite danach zur Karte hoch, weil die Filter dort unter
   der Karte stehen. Anlass: Hinweis Tom „Österreich und Schweiz werden mir gar nicht angezeigt, wenn sie ausgewählt sind“.
+- **Schlichte Punkte statt Symbole** (Wunsch Tom: „nicht so verspielt“): runde Punkte (18 px) in der Farbe der Art mit weißem
+  Rand, wie in der Vorschau; der gewählte Punkt wird größer und bekommt einen dunklen Ring.
+- **Gleiche Koordinaten werden versetzt angezeigt:** 70 Orte mit 2–5 Einträgen auf exakt derselben Koordinate (151 Einträge,
+  meist Ortsmitte bei gleicher PLZ) lagen bisher übereinander. Jetzt stehen sie im kleinen Kreis um den Ort (ab 9 Einträgen als
+  Spirale); der Abstand bleibt bei jedem Zoom gleich, jeder Punkt ist einzeln anklickbar.
 - **Zwei falsche Koordinaten in der Excel-Datei** (Ursache, warum „Österreich“ bis nach Deutschland/Schweiz herauszoomte):
   Zeile 199 (Singkreis, 3400 Klosterneuburg) lag bei Burgdorf in der **Schweiz** (47,058 / 7,619 – dort gibt es auch die PLZ 3400);
   Zeile 636 (Einrichtung, 4924 Waldzell) lag in **Unterfranken** (49,938 / 9,626). Richtig: Klosterneuburg **48,3057 / 16,3256**

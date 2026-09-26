@@ -142,9 +142,14 @@ button,input,select{font:inherit;color:inherit}
 .popup-link svg{flex:0 0 14px}
 .popup-header-fav{width:40px;height:40px;border-radius:8px;object-fit:contain;background:var(--white);border:1px solid var(--sage)}
 
-/* Punkte */
-.icon-bubble{transition:transform .2s;transform-origin:center}
-.icon-bubble.active-marker{transform:scale(1.3)}
+/* Punkte: schlicht, Farbe nach Art, weißer Rand (wie die Vorschau) */
+.punkt-wrap{background:none;border:0}
+.punkt{border-radius:50%;border:2px solid #FFFFFF;box-sizing:border-box;transition:transform .15s;cursor:pointer}
+.punkt.singleiter{background:#2F4A14}
+.punkt.singkreis{background:#96B839}
+.punkt.einrichtung{background:#EFB110}
+.punkt:hover{transform:scale(1.25)}
+.punkt.active-marker{transform:scale(1.45);outline:2px solid #393434;outline-offset:1px}
 
 /* Handy: Karte zuerst, darunter Filter und Liste */
 @media (max-width:780px){
@@ -376,12 +381,16 @@ const ICONS = {
 };
 
 function makeIcon(d, active){
+  // Schlichte Punkte ohne Symbol (Wunsch Tom 26.09.2026: „nicht so verspielt“), Farbe nach Art.
+  // Liegen mehrere Einträge auf derselben Koordinate, bekommt jeder einen kleinen Versatz (d._dx/_dy in Pixeln),
+  // damit alle sichtbar und anklickbar sind. Der Versatz bleibt bei jedem Zoom gleich.
   const tcls = TYPE_CLS[d.typ] || "singleiter";
-  const svg = (ICONS[tcls] || ICONS.singleiter).replace('width="40" height="40"','width="32" height="32"');
+  const size = 18, half = size/2;
+  const dx = d._dx||0, dy = d._dy||0;
   return L.divIcon({
-    className:"",
-    html:`<div class="icon-bubble${active?" active-marker":""}" style="width:32px;height:32px">${svg}</div>`,
-    iconSize:[32,32], iconAnchor:[16,16], popupAnchor:[0,-18]
+    className:"punkt-wrap",
+    html:`<div class="punkt ${tcls}${active?" active-marker":""}" style="width:${size}px;height:${size}px"></div>`,
+    iconSize:[size,size], iconAnchor:[half-dx,half-dy], popupAnchor:[dx,dy-half-2]
   });
 }
 
@@ -719,6 +728,23 @@ function initMap(rows){
   });
   Object.keys(BL_BY_LAND).forEach(l=>{
     BL_BY_LAND[l]=Object.keys(BL_BY_LAND[l]).sort((a,b)=>a.localeCompare(b,"de"));
+  });
+
+  // Gleiche Koordinaten: Einträge im kleinen Kreis (bis 8) bzw. in einer Spirale um den Ort verteilen
+  const proOrt={};
+  DATA.forEach(d=>{
+    if(d.typ==="Online"||!d.lat||!d.lng) return;
+    const key=parseFloat(d.lat).toFixed(5)+","+parseFloat(d.lng).toFixed(5);
+    (proOrt[key]=proOrt[key]||[]).push(d);
+  });
+  Object.keys(proOrt).forEach(key=>{
+    const g=proOrt[key]; if(g.length<2) return;
+    g.forEach((d,k)=>{
+      let r,w;
+      if(g.length<=8){ r=Math.max(11,g.length*20/(2*Math.PI)); w=-Math.PI/2+k*2*Math.PI/g.length; }
+      else { r=9*Math.sqrt(k+1); w=k*2.39996; }
+      d._dx=Math.round(r*Math.cos(w)); d._dy=Math.round(r*Math.sin(w));
+    });
   });
 
   markers=[];
