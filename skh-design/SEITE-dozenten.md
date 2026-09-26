@@ -128,6 +128,8 @@ jedes Jahr und stehen nur auf Termine (Hauptort). Zuordnung in der Vorschau:
 | Weiterbildung | „Das sagen Teilnehmende“: „Unsere Dozent:innen →“ | `#` | → `vorschau-foto-dozenten.html` |
 | Über uns | Vorstandsteam: „unseren Dozent:innen“ | `#` | → `vorschau-foto-dozenten.html` |
 | Weiterbildung, Sing mit | Brotkrumen „Start“ | `#` | → `vorschau-foto.html` (Nebenbei gefunden, wie auf den anderen Unterseiten) |
+| alle 16 Foto-Vorschauen (26.09.2026) | Kopfleiste, Menüpunkt Weiterbildung | ohne Unterpunkte | Untermenü „Dozent:innen · Anmeldung“ (Computer aufklappend, Handy eingerückt) | Seite war am Handy nur über Links im Text erreichbar (`DESIGN-foto.md`, Abschnitt 4) |
+| Weiterbildung (26.09.2026) | Titelkasten | Link nur ganz unten („Das sagen Teilnehmende“) | zusätzlich „Unsere Dozent:innen →“ neben den Knöpfen | wie oben |
 | Dozent:innen (26.09.2026, Hinweise Tom) | Karten Martina Baumann/Uwe Loda und Lisa Jantzen | vorhanden | entfernt; Titelkasten „26“ → „23 Dozent:innen“; 19 Karten mit der neuen Porträtserie (Abschnitt 5) |
 
 Die Fußzeilen-Links „Kontakt“ und „Presse“ sind in `SEITE-kontakt.md`, Abschnitt 2, beschrieben.

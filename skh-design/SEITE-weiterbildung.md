@@ -57,7 +57,7 @@ Module. In der Vorschau führen die Links „Alle Module dieses Zweigs →“ je
 | – | Weizen | Hinweisleiste | Jahrestagung 2027 (wie Startseite) | auf allen Seiten gleich |
 | 0 | Weiß | Kopfleiste | Logo, 6 Menüpunkte, „Weiterbildung“ **gelb unterstrichen** | zeigt, auf welcher Seite man ist |
 | – | Leinen | Brotkrumen | „Start › Weiterbildung“ | ältere Besucher:innen finden leichter zurück |
-| 1 | Titelfoto + Tiefgrün-Kasten | **Werde Singleiter:in** | Zitat Ya Beppo, Begrüßung, Buttons „Nächste Module“ und „Kostenlos reinschnuppern“ | die zwei häufigsten Absichten sofort erreichbar |
+| 1 | Titelfoto + Tiefgrün-Kasten | **Werde Singleiter:in** | Zitat Ya Beppo, Begrüßung, Buttons „Nächste Module“ und „Kostenlos reinschnuppern“, dazu Textlink „Unsere Dozent:innen →“ (seit 26.09.2026) | die zwei häufigsten Absichten sofort erreichbar |
 | 2 | Leinen | **Wähle deinen Schwerpunkt** | die zwei Zweige als große Fotokarten mit „Zertifikat 1/2“, Kasten „Gut zu wissen“ (Module einzeln buchbar) | erste Entscheidung, die man treffen muss |
 | 3 | Salbei | **So viele Module brauchst du** (Sprungmarke `#modulzahl`) | 5 / 4 / 3 Module mit Erklärung (Vorerfahrung seit 26.09.2026: **3** statt 2 Module, Vereinbarung laut Tom), Pflichtmodul je Zweig, Link „Zertifikat beantragen“ auf die Seite Sing mit | beantwortet die häufigste Frage mit einer großen Zahl; der Antrag selbst steht auf Sing mit (siehe `SEITE-sing-mit.md`, Abschnitt 2) |
 | 4 | Leinen | **Was du mitbringst / Was du lernst** | zwei Fotos mit Häkchen-Listen | nimmt Unsicherheit („Kann ich das?“) |

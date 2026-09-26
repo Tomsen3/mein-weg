@@ -179,6 +179,11 @@ Regeln:
   Häufige Fragen → ist für **kein** Thema Hauptort: je Frage ein bis zwei Sätze und genau ein Link, ohne Preise, Zahlen, Fristen,
   Termine oder Namen – Tagungsfragen bleiben auf `/faq` der Jahrestagung).
   Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md` und `SEITE-faq.md`, jeweils Abschnitt 2.
+- **Untermenü (seit 26.09.2026):** Es bleibt bei **sechs Hauptpunkten**; Unterpunkte sind erlaubt, wo eine Seite sonst nicht
+  auffindbar wäre. Einziges Untermenü: **Weiterbildung › Dozent:innen, Anmeldung**. Computer: kleines Aufklappmenü (weiße Fläche,
+  1 px Anthrazit, 14 px Rundung, „▾“ am Menüpunkt); Handy: eingerückt unter „Weiterbildung“ im aufgeklappten Menü. Die aktive
+  Unterseite ist gelb unterstrichen. Anlass: Hinweis Tom „wo finde ich die Dozenten auf dem Handy?“ – heute gibt es dafür
+  „WEITERBILDUNG ▸ Dozenten“.
 - **Shop-Link in der Kopfleiste:** schlichter Textlink mit Tüten-Symbol links neben „Mitglied werden“ – kein Menüpunkt, kein
   zweiter Button (Entscheidung 26.09.2026, Abnahme-Hinweis Tom: „der Shop taucht nicht im Header auf“).
 - **Handy (bis 640 px Breite, seit 26.09.2026):** Kopfleiste in einer Zeile – Logo 46 px hoch, rechts Knopf „☰ Menü“; Menü,
@@ -316,6 +321,8 @@ Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11; Paket
 
 1. **Menü straffen:** Editor → *Menüs & Seiten* → Seiten „Jahrestagung“, „Kontakt“, „Shop“,
    „Mitglied sein“ aus dem Hauptmenü nehmen („Im Menü ausblenden“ – die Seiten bleiben erhalten).
+   Unter „Weiterbildung“ die Seiten „Dozent:innen“ und „Anmeldung“ als **Unterseiten** anlegen (*Menüs & Seiten* → Seite auf
+   „Weiterbildung“ ziehen → „Als Unterseite“); Wix zeigt sie am Computer als Aufklappmenü und am Handy eingerückt.
    Dann den Button „Mitglied werden“ in die Kopfleiste setzen und links daneben einen Textlink „Shop“ mit Tüten-Symbol
    (PT Sans fett 17 px, Anthrazit, Symbol 22 px, Link auf die Shop-Übersicht; auf den Shop-Seiten gelb unterstrichen wie der aktive Menüpunkt).
 2. **Fotos zuerst:** Fotos sammeln, Einwilligungen prüfen, in Wix hochladen
