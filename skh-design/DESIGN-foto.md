@@ -5,6 +5,7 @@ Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante:
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
 **Sing mit** → `SEITE-sing-mit.md` + `vorschau-foto-sing-mit.html` ·
+**Singende Landkarte** (Menüpunkt, Karte mit Singleiter:innen, Singkreisen, Einrichtungen) → `SEITE-landkarte.md` + `vorschau-foto-landkarte.html` ·
 **Für Einrichtungen** → `SEITE-einrichtungen.md` + `vorschau-foto-einrichtungen.html` ·
 **Mitglied sein** (Ziel des Buttons „Mitglied werden“) → `SEITE-mitglied-sein.md` + `vorschau-foto-mitglied-sein.html` ·
 **Termine** (Gesamtkalender) → `SEITE-termine.md` + `vorschau-foto-termine.html` ·
@@ -139,6 +140,7 @@ Regeln:
   Porträt-Raster mit Zweig-Filter und kompakte Personenzeile (Handy): `SEITE-dozenten.md`, Abschnitt 6.
   Wegweiser-Liste, Kontakt-Karte, Formular-Felder und Dokument-Vorschau: `SEITE-kontakt.md`, Abschnitt 6.
   Kopf ohne Titelfoto (Service-Seiten), Dokumentzeile und Verweisliste: `SEITE-downloads.md`, Abschnitt 6.
+  Karten-Rahmen (Filter + Karte), Filter-Pillen, Punkte nach Art, Eintrags-Kasten und Datenschutz-Doppelliste: `SEITE-landkarte.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
@@ -147,8 +149,10 @@ Regeln:
   Vision, Geschichte, Personen mit Funktion, Beirat, Botschafter:innen, Singforschung und Spenden → Über uns;
   Telefonnummern und Sprechzeiten bleiben auf den Aufgabenseiten; Porträts und Werdegänge der Dozent:innen → Dozent:innen;
   Übersicht aller Telefonnummern, Wegweiser, Kontaktformular und Presse → Kontakt; Verzeichnis aller öffentlichen PDFs → Downloads,
-  dort nur Links auf dieselben Dateien, keine Erklärungen).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md` und `SEITE-kontakt.md`, jeweils Abschnitt 2.
+  dort nur Links auf dieselben Dateien, keine Erklärungen; Verzeichnis aller Singleiter:innen, Singkreise und zertifizierten
+  Einrichtungen mit Druckliste, „Wie komme ich auf die Karte?“ und welche Personendaten gezeigt werden → Singende Landkarte –
+  die alten Singleiter-Listen als PDF entfallen; wie ein Singkreis abläuft bleibt auf Sing mit).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md` und `SEITE-landkarte.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -241,10 +245,11 @@ bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 
 
 ---
 
-### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 25.09.2026)
+### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026)
 
 **Im Foto-Stil fertig (Vorschau + Doku):** Startseite, Weiterbildung, Dozent:innen, Sing mit, Für Einrichtungen,
-Mitglied sein, Termine, Über uns, Kontakt, Downloads & Formulare (neu).
+Mitglied sein, Termine, Über uns, Kontakt, Downloads & Formulare (neu), Singende Landkarte (26.09.2026; Karte technisch unverändert,
+neu gestaltet und mit Datenschutz-Prüfung – `SEITE-landkarte.md`, Abschnitte 2 und 7).
 **Bewusst nicht:** Jahrestagung (9 Seiten, siehe oben); Zweig-Seiten und `/wichtige-infos` (werden auf `/weiterbildung` umgeleitet);
 die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
@@ -252,7 +257,6 @@ die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
 | Seite | Adresse | Was dort heute ist | Vorschlag |
 |---|---|---|---|
-| **Singende Landkarte** | `/singende-landkarte` | Menüpunkt; Karte mit Singleiter:innen, Singkreisen, Einrichtungen (DE/AT/CH), Druckfunktion | als Nächstes: wird von fast allen Seiten verlinkt, bisher überall Platzhalter |
 | **Anmeldung Weiterbildung** | `/anmeldung` (+ `/anmeldung-erfolgreich`) | Wix-Formular (Module, Unterkunft, Storno, Haftung) | Formular im Foto-Stil (Bausteine von Kontakt); klären, ob künftig Wix-Events die Anmeldung übernimmt (`SEITE-termine.md`) |
 | **Veranstaltungsseiten** | Wix-Events (40 Seiten) + Liste `/veranstaltungen` | Details & Anmeldung je Termin; Liste doppelt zu Termine | nur Vorlage gestalten; `/veranstaltungen` auf `/termine` umleiten |
 | **Shop** | `/category/all-products` (93 Produktseiten) | Wix Stores | nur Farben/Schrift der Shop-Vorlage anpassen |
