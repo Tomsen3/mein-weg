@@ -732,6 +732,9 @@ function initMap(rows){
     markers.push(m);
   });
   markers.forEach(m=>{ if(m) m.addTo(map); });
+  // Beim Start auf alle Punkte zoomen (statt fester Ausschnitt)
+  const pts=markers.filter(Boolean).map(m=>m.getLatLng());
+  if(pts.length) map.fitBounds(L.latLngBounds(pts),{padding:[24,24],maxZoom:9});
   setHeaderCount(DATA.length);
   el("loading").classList.add("hidden");
   updateRegionSelect();
