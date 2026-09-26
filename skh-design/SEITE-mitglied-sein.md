@@ -250,6 +250,10 @@ Wer den Monatswechsel übernimmt, ist noch offen (Abschnitt 7, Punkt 8).
    weder Teams-Link noch Hinweis. → Klären, wie Mitglieder den Link bekommen (Newsletter? E-Mail von Sandra?) und
    **einen** Satz im Bereich `#unterstuetzung` ergänzen. Den Link selbst **nicht öffentlich** auf die Seite stellen
    (sonst ist es kein Mitgliederangebot mehr).
+   **Nachtrag 26.09.2026:** Der Teams-Link der Mitgliedertermine steht **heute schon öffentlich** auf `/termine` (Knopf
+   „MITGLIEDERTERMINE“, `teams.microsoft.com/meet/3812…`). Auf Toms Wunsch (Abnahme-Durchsicht) ist er in der Vorschau an beiden
+   Karten („Zum Teams-Raum (für Mitglieder) →“) hinterlegt, mit Randnotiz. Entscheidung offen: öffentlich lassen (einfach, jede:r
+   kann teilnehmen) oder nur per Newsletter/E-Mail an Mitglieder (dann Link in Teams erneuern, weil der alte bekannt ist). → Vorstand.
 5. **Namen der Reihen vereinheitlichen:** Webseite „Guitar- & Ukulele-Factory“ / „Singleiter:innen im Gespräch“, PDF
    „Gitarren-Factory“ / „Ukulele-Factory“ / „Singleiter im Gespräch – Supervision“. → Eine Schreibweise festlegen
    (Vorschlag: „Gitarren- & Ukulele-Factory“ und „Singleiter:innen im Gespräch“) und im nächsten Termin-PDF übernehmen.

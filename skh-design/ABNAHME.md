@@ -104,6 +104,25 @@ Diskussion im Termin schneller als per Mail.
   „Zur Jahrestagung“ in den Vorschauen führen jetzt auf die echte Seite (`/jahrestagung2027`, Dozent:innen auf `/dozentenjahrestagung`).
 - Jede Seite öffnet sich im veröffentlichten Link oben (Skript im HTML-Rahmen, Abschnitt 3).
 
+### Korrekturen nach Toms Durchsicht (26.09.2026): Links in den Vorschauen
+
+Viele PDF-Knöpfe außerhalb von „Downloads“ waren noch Platzhalter (`#`). Jetzt führen sie auf dieselben Dateien wie die Seite Downloads
+(alle 15 PDF-Adressen am 26.09.2026 geprüft: Status 200, echte PDFs) und öffnen in einem neuen Fenster.
+
+| Seite | Link | Ziel |
+|---|---|---|
+| alle 16 | Fußzeile „Allgemeiner Infoflyer“ | Infoflyer-PDF |
+| Sing mit | Leitlinien, Antrag Krankenhäuser, Antrag Pflege (Singleiter-Zertifikat), Beitrittserklärung | PDFs wie Downloads `#singleitung`, `#mitglied` |
+| Für Einrichtungen | Richtlinien (2×), Leitlinien, Vereinbarung, Antrag Krankenhäuser, Antrag Pflege (Einrichtung), Beitrittserklärung | PDFs wie Downloads `#einrichtung` |
+| Mitglied sein | Alle Termine 2026 (Online-Termine für Mitglieder), Beitrittserklärung (2×), Infoflyer, Text & Noten | PDFs; dazu an beiden Karten „Zum Teams-Raum (für Mitglieder)“ = Teams-Link „MITGLIEDERTERMINE“ von `/termine` (Randnotiz, `SEITE-mitglied-sein.md`, Abschnitt 7, Punkt 4) |
+| Termine | Zum Online-Schnupperkurs | Teams-Link „SCHNUPPERKURS-TERMINE“ von `/termine` |
+| Termine | Alle Schnupperkurse 2026, Terminvorschau 2027, „Programm ansehen“ | PDFs bzw. `/programmjahrestagung` |
+| Über uns | Kooperationspartner, Organigramm | PDFs |
+| Kontakt | Presse: Infoflyer, Broschüre | Infoflyer-PDF, SharePoint-Link der Broschüre |
+
+Weiterhin Platzhalter (bewusst): Newsletter, Social Media (Konten falsch, `SEITE-dozenten.md`, Punkt 10), „Details & anmelden“ der
+Beispieltermine, Modulbeschreibung auf der Veranstaltungsvorlage, Shop-Produkte der Beispielansicht.
+
 ## 4. Rückmeldungen sammeln und einarbeiten
 
 ### Entscheidung 6: **Bogen zum Ankreuzen direkt auf der Seite** (Tom, 26.09.2026)
