@@ -267,6 +267,54 @@ Kontraste: nur geprüfte Kombinationen (Weiß auf Tiefgrün 10 : 1, Anthrazit au
 
 ### Umsetzung in Wix – Schritt für Schritt
 
+### Umbau der Kartenvorlage – erledigt am 26.09.2026 (Entscheidung Tom: Weg A, Pflege mit Excel bleibt)
+
+**Entscheidung (Tom, 26.09.2026):** Die Pflege bleibt wie bisher – Excel `Netzwerkkarte_stammdaten.xlsm` → Makro „Karte
+aktualisieren“ → `netzwerkkarte.html` → in Wix hochladen. Nur die **Vorlage** `Netzwerk_Vorlage.html` wird neu gestaltet.
+**Nicht gewählt:** Daten direkt in einer Wix-Datensammlung (Weg B) – wäre ohne Makro und Hochladen gegangen, hätte aber Wix-Code
+gebraucht und die Prüf-Makros („Webseiten prüfen“, „Kontakt prüfen“) ersetzt.
+
+**Neue Vorlage:** `skh-design/landkarte/Netzwerk_Vorlage.html` (Grundlage: Toms Vorlage vom 12.06.2026, identisch mit der Datei
+im Ordner `04_Gemeinsame Karte`). Testbilder mit erfundenen Daten: `landkarte/test-computer.png`, `landkarte/test-handy.png`.
+
+| Was | vorher | jetzt | Grund |
+|---|---|---|---|
+| Kartenhintergrund | CARTO „light_all“ – zeigt seit 2026 „API KEY REQUIRED“ | **OpenStreetMap**, leicht entsättigt | Karte lädt wieder; kostenlos, ohne Anmeldung (Befund 8) |
+| Punktfarbe | nach **Land** (Grün/Rot/Gold) | nach **Art**: Tiefgrün = Singleiter:innen, Logo-Grün = Singkreise, Logo-Gelb = Einrichtungen; Symbole (Sänger, Note, Kreuz) bleiben | man sucht nach Art, nicht nach Land; Rot ist keine Vereinsfarbe (Befund 3) |
+| Legende | keine | unten links in der Karte | Farben erklären sich |
+| Schrift | Nunito + Source Sans 3 von **Google Fonts** | **PT Sans**, in die Datei eingebettet (Lizenz SIL OFL) | Vereinsschrift; keine Verbindung zu Google (Abschnitt 7, Punkt 2) |
+| Logos der Webseiten | beim Besuch über Google (`s2/favicons`) | **aus** – Schalter `logosAnzeigen` oben im Programmteil | IP-Adresse ging ohne Einwilligung an Google (Abschnitt 7, Punkt 1) |
+| Beruf von Singleiter:innen | angezeigt | **aus** – Schalter `berufAnzeigen` | von der Einwilligung im Antrag nicht gedeckt (Befund 5) |
+| „Stand:“ | immer das heutige Datum | Datum der Kartendatei; ohne Dateidatum keine Anzeige | täuschte Aktualität vor (Befund 2) |
+| Filter | kleine Reiter, „Singleiter“, „🌐“ | Filter-Pillen wie die Vorschau: „Was suchst du?“ (Alle, Singleiter:innen, Singkreise, Einrichtungen, Online), „Land“ | größer, gegendert, verständlich |
+| Umkreissuche | hinter einem Knopf versteckt | immer sichtbar: „In der Nähe von“ + Postleitzahl + Umkreis, Knopf „Suchen“ als gelbe Pille | häufigste Suche, ohne Umweg |
+| „PDF / Drucken“ | grüner Balken | gelbe Pille unten in der Spalte, mit Erklärsatz | Hauptknopf der Karte |
+| Eintrags-Kasten | Schatten, Logo, blaue Links | weißer Kasten mit feinem Rand, Etikett (Art), Name, PLZ Ort · Region · Land, Telefon, E-Mail, Webseite als fette Textlinks | Stil „Foto“; Telefonnummer und E-Mail-Adresse bleiben sichtbar (am Computer funktionieren „tel:“-Links oft nicht) |
+| Handy | Filter oben, Karte erst nach 55 % Höhe | **Karte zuerst** (62 % der Höhe), darunter Filter und Liste | man sieht sofort die Karte |
+| Druckliste | Arial, Blau | PT Sans, Anthrazit/Tiefgrün, Titel „Singende Landkarte“ | einheitlich |
+
+**Unverändert (wichtig für das Makro):** die Zeile `var EMBEDDED_DATA = [];` und der Kommentar darüber, alle Spaltennamen
+(`typ`, `name`, `vorname`, `nachname`, `plz`, `ort`, `bundesland`, `land`, `lat`, `lng`, `email`, `telefon`, `webseite`, `beruf`,
+`einrichtung_typ`, `zertifizierung_datum`), Suche, Umkreissuche (Nominatim), Filter Region und Art der Einrichtung, Liste,
+Druckfunktion mit Logo. Leaflet 1.9.4 kommt weiter von cdnjs.
+
+**So setzt du die neue Vorlage ein (ca. 20 Minuten):**
+1. Im Ordner `04_Gemeinsame Karte` die bisherige `Netzwerk_Vorlage.html` nach `Alt/` verschieben und umbenennen in
+   `Netzwerk_Vorlage_bis_2026-09-26.html` (Rückweg, falls etwas nicht klappt).
+2. Die neue `Netzwerk_Vorlage.html` (aus dem Repo bzw. von Claude geschickt) in `04_Gemeinsame Karte` legen – **gleicher Name**,
+   damit das Makro sie findet. Excel-Datei und Vorlage offline im selben Ordner (Anleitung, Abschnitt 2).
+3. Excel öffnen, **Makro „Karte aktualisieren“** ausführen. Die neue `netzwerkkarte.html` im Browser öffnen und prüfen: Karte
+   sichtbar, Zahl oben rechts stimmt (26.09.2026: 82 Einrichtungen), Klick auf einen Punkt, „Suchen“ mit einer PLZ, „PDF / Drucken“.
+4. **Falls die Karte leer bleibt** („Karte wird geladen …“ bleibt stehen): Das Makro sucht die Zeile `var EMBEDDED_DATA = [];`.
+   Prüfen, ob es im VBA-Code eine andere Suchzeile verwendet (VBA-Editor mit Alt + F11, nach `EMBEDDED_DATA` suchen) – dann Tom/Andy.
+   Zurück zur alten Vorlage geht jederzeit über Schritt 1.
+5. In Wix wie gewohnt hochladen, die Adresse im HTML-Element tauschen, **alte Datei in den Wix-Medien löschen**.
+   Größe des HTML-Elements: Computer volle Inhaltsbreite, ca. 700 px hoch; Handy ca. 1100 px hoch.
+6. **Datenschutzerklärung:** „CARTO“ durch „OpenStreetMap Foundation (Kartenkacheln)“ ersetzen, Google Fonts und
+   Google-Favicon-Dienst für die Karte streichen (Rechtstexte-Auftrag, `SEITE-rechtliches.md`, Abschnitt 4).
+
+Damit sind die Schritte 1–4 unten erledigt (in der Vorlage umgesetzt); Schritt 1 „alte Dateien löschen“ bleibt bei jedem Hochladen.
+
 > Wie bei der Startseite: zuerst an der **duplizierten Website** testen. Die Karte selbst wird **nicht** in Wix gebaut, sondern
 > in der Vorlage `Netzwerk_Vorlage.html` geändert (Schritte 1–4, einmalig, Tom oder Andy). Danach wie gewohnt mit dem Makro erzeugen.
 
