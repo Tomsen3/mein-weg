@@ -76,6 +76,13 @@ können Martin, Paula, Sonja, Vera und Sandra die Seite **nicht** öffnen. Für 
 dabei nur für die Veröffentlichung einen HTML-Rahmen `<!doctype html>` mit Zeichensatz und ein kleines Skript, das jede Seite beim
 Öffnen oben anzeigt statt an der zuletzt gescrollten Stelle – die Dateien im Repo bleiben unverändert).
 
+**Nachtrag 26.09.2026 – geprüft und verworfen: eigene Adresse ohne Claude-Hinweis.** Frage Tom: Wie wird die Vorschau
+zugänglich, ohne dass man sieht, dass sie über Claude läuft? Geprüft: (1) Cloudflare Pages + Cloudflare Access (kostenlos, Zugang
+per E-Mail-Code) unter `vorschau.singende-krankenhaeuser.de`, DNS-Eintrag im Wix-Dashboard; Rückmeldebogen dann über Microsoft Forms,
+weil der eingebaute Bogen nur im Claude-Link speichert. (2) Wix-Subdomain: nur für eine Wix-Website möglich (Nachbau nötig, eigenes
+Premium-Abo). (3) ZIP über OneDrive. **Entscheidung Tom: bleibt beim privaten Claude-Link (A).** Weg (1) bleibt die Möglichkeit,
+falls die Frage wiederkommt (ca. 45 Minuten, 0 €).
+
 **Empfehlung:** **A für alle, C für den Vorstand.** Der Link macht es für Vera und Sandra am einfachsten; im Vorstand geht die
 Diskussion im Termin schneller als per Mail.
 
