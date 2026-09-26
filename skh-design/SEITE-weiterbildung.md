@@ -59,7 +59,7 @@ Module. In der Vorschau führen die Links „Alle Module dieses Zweigs →“ je
 | – | Leinen | Brotkrumen | „Start › Weiterbildung“ | ältere Besucher:innen finden leichter zurück |
 | 1 | Titelfoto + Tiefgrün-Kasten | **Werde Singleiter:in** | Zitat Ya Beppo, Begrüßung, Buttons „Nächste Module“ und „Kostenlos reinschnuppern“ | die zwei häufigsten Absichten sofort erreichbar |
 | 2 | Leinen | **Wähle deinen Schwerpunkt** | die zwei Zweige als große Fotokarten mit „Zertifikat 1/2“, Kasten „Gut zu wissen“ (Module einzeln buchbar) | erste Entscheidung, die man treffen muss |
-| 3 | Salbei | **So viele Module brauchst du** (Sprungmarke `#modulzahl`) | 5 / 4 / 2 Module mit Erklärung, Pflichtmodul je Zweig, Link „Zertifikat beantragen“ auf die Seite Sing mit | beantwortet die häufigste Frage mit einer großen Zahl; der Antrag selbst steht auf Sing mit (siehe `SEITE-sing-mit.md`, Abschnitt 2) |
+| 3 | Salbei | **So viele Module brauchst du** (Sprungmarke `#modulzahl`) | 5 / 4 / 3 Module mit Erklärung (Vorerfahrung seit 26.09.2026: **3** statt 2 Module, Vereinbarung laut Tom), Pflichtmodul je Zweig, Link „Zertifikat beantragen“ auf die Seite Sing mit | beantwortet die häufigste Frage mit einer großen Zahl; der Antrag selbst steht auf Sing mit (siehe `SEITE-sing-mit.md`, Abschnitt 2) |
 | 4 | Leinen | **Was du mitbringst / Was du lernst** | zwei Fotos mit Häkchen-Listen | nimmt Unsicherheit („Kann ich das?“) |
 | 5 | Weizen | **So läuft die Weiterbildung** | Faktenliste: Form, Orte, Reihenfolge, Rhythmus, Mitgliedschaft, Unterkunft, Rücktritt | alle praktischen Fakten an einem Ort |
 | 6 | Leinen | **Die nächsten Module** | nur kommende Termine, Filter nach Zweig, Etiketten, Erklärung Buchstabe/römische Zahl; Links „Alle Termine auf einen Blick →“ und „Vorschau 2027 →“ auf die Seite Termine (geändert 25.09.2026, vorher PDFs – siehe `SEITE-termine.md`, Abschnitt 2) | ein Termin-Überblick statt zwei langer Listen; dieselbe Quelle (Wix-Events) wie der Kalender auf „Termine“ |
@@ -83,7 +83,7 @@ steht so auch auf der neuen Startseite), gekürzt und mit Doppelpunkt gegendert.
 
 | Bereich | Quelle |
 |---|---|
-| Titel, Zitat, Zweige, „Gut zu wissen“, 5/4/2 Module, Mitbringen, Lernen, Aufbau, Stimmen | `/weiterbildung` (= `/wichtige-infos`) |
+| Titel, Zitat, Zweige, „Gut zu wissen“, 5/4/2 Module (heute; neu 5/4/3), Mitbringen, Lernen, Aufbau, Stimmen | `/weiterbildung` (= `/wichtige-infos`) |
 | Zielgruppen-Texte der Zweige, Schnupperkurs, Erklärung Buchstabe/römische Zahl, Modultermine, Beratung Vera Kimmig | `/kranken-und-gesundheitshäuser` und `/pflege-und-senioren` |
 | Zimmerpreise 160–230 €, Rücktritt bis 4 Wochen | `/anmeldung` (Formular) |
 | Modul F: Uhrzeit, Adresse | `/event-details/modul-f-mit-der-stimme-zur-starke` |
@@ -197,6 +197,11 @@ für Vorleseprogramme (`aria-current`).
    Krankenhaus „Singen als Dialog“ (Modul P), im Zweig Pflege „Mit dem Herzen pflegen“. Beide stehen jetzt
    in der Vorschau (Bereich „So viele Module brauchst du“). Details und Folgefragen: `SEITE-sing-mit.md`, Abschnitt 7.
 6. **Einwilligungen** der fotografierten Personen (siehe Abschnitt 4).
+
+**Nachtrag 26.09.2026 – Modulzahl mit Vorerfahrung:** Laut Tom ist vereinbart, die Zahl für „Mit Vorerfahrung“ (Weiterbildung bei der
+Akademie Bossinger oder Zertifikat im anderen Zweig) von **2 auf 3 Module** anzuheben. Vorschau angepasst. Noch nachziehen: heutige
+Seite `/weiterbildung` (= `/wichtige-infos`), Weiterbildungsflyer, Zertifikatsanträge und ggf. AGB 12 bzw. Leitlinien, falls die
+Zahl dort steht; ab wann die neue Regel gilt (Stichtag), festlegen. → Vorstand, Vera, Sonja.
 
 ---
 

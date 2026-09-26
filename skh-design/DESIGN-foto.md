@@ -111,19 +111,20 @@ Eine einzige Schrift: **PT Sans** (Google Fonts, kostenlos).
 
 | Rolle | Desktop | Handy | Schnitt | Zeilenabstand |
 |---|---|---|---|---|
-| Titel im Foto (H1) | 72–80 px | 44 px | **Regular 400**, Laufweite −1,5 % | 0,98 |
-| Abschnittsüberschrift (H2) | 56–64 px | 38 px | Regular 400 | 1,0 |
-| Kartenüberschrift (H3) | 28 px | 26 px | Regular 400 | 1,1 |
+| Titel im Foto (H1) | 72–80 px | 34 px | **Regular 400**, Laufweite −1,5 % | 0,98 |
+| Abschnittsüberschrift (H2) | 56–64 px | 30 px | Regular 400 | 1,0 |
+| Kartenüberschrift (H3) | 28 px | 22 px | Regular 400 | 1,1 |
 | Abschnittsüberschrift in Rechtstexten und Häufigen Fragen | 28 px | 26 px | Regular 400, Linie darüber | 1,1 |
 | Frage in der Aufklappliste | 18 px | 18 px | Bold 700 | 1,35 |
 | Kleine Überschrift (GROSSBUCHSTABEN) | 15 px | 15 px | Bold 700, Laufweite +8 % | – |
-| Einleitung | 21 px | 18 px | Regular 400 | 1,5 |
+| Einleitung | 21 px | 17 px (im Titelkasten) | Regular 400 | 1,5 |
 | **Fließtext** | **18 px** | **18 px** | Regular 400 | 1,6 |
 | Button | 17 px | 17 px | Bold 700 | – |
 
 Regeln:
 - Große Überschriften **nicht fett** – die Ruhe kommt aus „groß, aber normal stark“.
 - Fett nur für Buttons, Links, kleine Überschriften und Begriffe in Listen.
+- **Handy-Größen** (Spalte „Handy“) gelten seit 26.09.2026 – vorher 44/38/26 px; Hinweis Tom: „am Handy viel zu wuchtig“.
 
 ---
 
@@ -180,6 +181,11 @@ Regeln:
   Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md` und `SEITE-faq.md`, jeweils Abschnitt 2.
 - **Shop-Link in der Kopfleiste:** schlichter Textlink mit Tüten-Symbol links neben „Mitglied werden“ – kein Menüpunkt, kein
   zweiter Button (Entscheidung 26.09.2026, Abnahme-Hinweis Tom: „der Shop taucht nicht im Header auf“).
+- **Handy (bis 640 px Breite, seit 26.09.2026):** Kopfleiste in einer Zeile – Logo 46 px hoch, rechts Knopf „☰ Menü“; Menü,
+  Shop-Link und „Mitglied werden“ klappen darunter auf (entspricht dem Wix-Handy-Menü). Titelfoto 210 px hoch **über** dem
+  Tiefgrün-Kasten (Kasten ragt 26 px ins Foto), Abschnitte 40 px Abstand oben/unten statt 56 px, Fotos in Abschnitten im Format
+  3 : 2 (Porträts oben ausgerichtet), Hinweisleiste 14 px. Fließtext bleibt 18 px. Umgesetzt als gemeinsamer CSS-Block
+  „Handy-Feinschliff“ am Ende jeder Vorschau.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -325,7 +331,9 @@ Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11; Paket
    unten links; darin Titel (Weiß), Text (Weiß), Button.
 8. **Fotos rund:** Bild anklicken → *Design* → *Ecken* 20 px. Kein Rahmen, kein Schatten.
 9. **Bänder:** Abschnitt → *Hintergrund ändern* → Farbe Salbei bzw. Weizen.
-10. **Handy-Ansicht prüfen:** Titelkasten unter das Foto rutschen lassen, Größen aus Abschnitt 3.
+10. **Handy-Ansicht prüfen:** In Wix *Mobil-Editor* öffnen. Titelkasten unter das Foto rutschen lassen (Foto ca. 210 px hoch), Größen
+    aus Abschnitt 3 (Spalte „Handy“), Abstände zwischen Abschnitten verkleinern, Fotos flacher zuschneiden; Menü als Wix-Handy-Menü
+    (Symbol „☰“) mit „Mitglied werden“ als letztem Eintrag.
 11. **Abnahme:** Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen. Ablauf, Zuständigkeiten
     und Übersichtsseite: `ABNAHME.md` und `abnahme.html`.
 
