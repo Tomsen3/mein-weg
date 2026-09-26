@@ -130,6 +130,13 @@ Neue Seite nach Entscheidung Tom (`SEITE-netzwerk.md`). In `abnahme.html` ergän
 bleiben erhalten), Direktlink `#netzwerk`, „17 Seiten“ im Kopf. Mitgeprüft werden dabei die geänderte Startseite (Abschnitt „Aktuelles“)
 und „Mitglied sein“ (`#fokus`), deren Vorschaubilder unverändert bleiben (Änderung liegt unterhalb des sichtbaren Ausschnitts).
 
+### Nachtrag (26.09.2026): Navigation nach Zielgruppen
+
+Menüpunkt „Sing mit“ heißt „Für Singleiter:innen“, „Singende Landkarte“ im Menü kurz „Landkarte“; Startseite mit vierter Frage
+(Einrichtungen); Kopfleiste rechts mit Suche, Kontakt und Shop über „Mitglied werden“; Fußzeile „Für Mitglieder“. In `abnahme.html`
+angepasst: Grundsatz 2 (Menü), Karte und Bogenzeile „Für Singleiter:innen (Sing mit)“ – der Schlüssel `s-sing-mit` bleibt, bisherige
+Rückmeldungen bleiben erhalten. Alle Vorschaubilder neu erzeugt (Kopfleiste geändert). Begründung: `DESIGN-foto.md`, Abschnitt 4.
+
 ### Direktlinks (26.09.2026)
 
 Jede Vorschau lässt sich direkt aufrufen: Adresse des Abnahme-Links + `#` + Seitenname, z. B.
