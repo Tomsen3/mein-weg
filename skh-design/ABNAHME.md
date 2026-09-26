@@ -68,6 +68,12 @@ zusammen bleibt. Einzelne Dateien per Mail zu schicken geht deshalb nicht.
 | **B: ZIP-Datei** | Ordner `skh-design` (ohne `.md`-Dateien) als ZIP über OneDrive/SharePoint teilen | alles im eigenen Microsoft 365 | Empfänger:innen müssen entpacken und `abnahme.html` öffnen; am Handy umständlich; SharePoint zeigt HTML nicht an, sondern lädt es herunter |
 | **C: Gemeinsamer Termin** | Vorstandssitzung (Teams), Tom teilt den Bildschirm | nichts zu verschicken, Fragen sofort geklärt | Geschäftsstelle braucht trotzdem A oder B für ihre Seiten |
 
+**Gewählt (Tom, 26.09.2026): A** – veröffentlicht als privater Link https://claude.ai/artifact/XsCqKTCemUZxgFSVAPuG9V
+(Übersicht, 17 Vorschauen, 101 Fotos, Vorschaubilder). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen; ohne Freigabe
+können Martin, Paula, Sonja, Vera und Sandra die Seite **nicht** öffnen. Für den Vorstand zusätzlich C.
+**Nach Änderungen an Vorschauen** den Link aktualisieren (Claude: dieselbe Adresse neu veröffentlichen; die Vorschau-Dateien bekommen
+dabei nur für die Veröffentlichung einen HTML-Rahmen `<!doctype html>` mit Zeichensatz – die Dateien im Repo bleiben unverändert).
+
 **Empfehlung:** **A für alle, C für den Vorstand.** Der Link macht es für Vera und Sandra am einfachsten; im Vorstand geht die
 Diskussion im Termin schneller als per Mail.
 
@@ -123,7 +129,7 @@ Diskussion im Termin schneller als per Mail.
 
 ## 7. Offene Punkte
 
-1. **Weg zum Verschicken wählen** (Abschnitt 3). → Tom.
+1. ~~Weg zum Verschicken wählen~~ – **erledigt** 26.09.2026: privater Link (Abschnitt 3). Offen: Link im *Teilen*-Menü für die Beteiligten freigeben. → Tom.
 2. **Rückmeldefrist** in `abnahme.html` eintragen („[Datum eintragen]“). → Tom.
 3. **Sitzungstermin Vorstand** für die Grundsätze festlegen. → Tom, Martin, Paula.
 
