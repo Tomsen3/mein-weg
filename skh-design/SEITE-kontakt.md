@@ -109,7 +109,7 @@ Nicht geändert: Kontaktkästen der Aufgabenseiten (bleiben), Fußzeile „Spend
 | – | Leinen | Brotkrumen | „Start › Kontakt“ | |
 | 1 | Titelfoto + Tiefgrün-Kasten links | **Wir sind für dich da.** | ein Satz (wofür die Geschäftsstelle da ist, drei Wege); Buttons „Zum Kontaktformular“, „Wer hilft bei was? →“ | |
 | – | Leinen | Sprungleiste | Wer hilft bei was? · Ansprechpersonen · Formular · Presse · Anschrift | |
-| 2 | Leinen | **Wer hilft bei was?** (`#wegweiser`) | 10 Zeilen (seit 26.09.2026; vorher 9): Thema · Person mit Funktion · Link zur Aufgabenseite; Hinweiskasten „Singgruppe in deiner Nähe? → Singende Landkarte“ | häufigste Fragen zuerst beantworten |
+| 2 | Leinen | **Wer hilft bei was?** (`#wegweiser`) | 10 Zeilen (seit 26.09.2026; vorher 9): Thema · Person mit Funktion · Link zur Aufgabenseite; Hinweiskästen „Singgruppe in deiner Nähe? → Singende Landkarte“ und „Nur eine kurze Frage? → Häufige Fragen“ (seit 26.09.2026, `SEITE-faq.md`) | häufigste Fragen zuerst beantworten |
 | 3 | Salbei | **So erreichst du uns persönlich** (`#team`) | 3 Kontakt-Karten: Porträt, Name, Funktion, Telefon (anklickbar), Sprechzeiten, E-Mail, „Ansprechperson für“; Hinweis „Außerhalb der Sprechzeiten …“; Link „Mehr über unser Team →“ | für alle, die lieber anrufen |
 | 4 | Leinen | **Schreib uns** (`#formular`) | links Erklärung (Weiterleitung, Rückruf, Flyer, Pflichtfelder), rechts Formular-Karte | für alles, was nicht in den Wegweiser passt |
 | 5 | Weizen | **Für Presse und Medien** (`#presse`) | Titelseite Infoflyer (Bild, verlinkt), Text, Liste der Druckschriften mit PDF-Links, Link „Zahlen, Geschichte, Vorstand → Über uns“, Ansprechperson Sonja Heim ohne Foto | Presse als eigener, klarer Bereich |

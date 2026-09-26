@@ -1,6 +1,6 @@
 # DESIGN-foto.md – Alternative „Foto“ für Singende Krankenhäuser e.V.
 
-Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Rechtliches) · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Häufige Fragen) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
@@ -16,7 +16,8 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Anmeldung Weiterbildung** (gehört zu Weiterbildung, mit Widerrufs-Knopf) → `SEITE-anmeldung.md` + `vorschau-foto-anmeldung.html` ·
 **Veranstaltungsseiten** (Wix-Events-Vorlage für alle `/event-details/…`, gehört zu Termine; `/veranstaltungen` → `/termine`) → `SEITE-veranstaltung.md` + `vorschau-foto-veranstaltung.html` ·
 **Shop** (Wix Stores, Übersicht `/category/all-products` und Vorlage für alle 93 `/product-page/…`, in der Fußzeile) → `SEITE-shop.md` + `vorschau-foto-shop.html` ·
-**Rechtliches** (eine Vorlage für Impressum, Datenschutz, AGB, Widerrufsrecht, in der Fußzeile) → `SEITE-rechtliches.md` + `vorschau-foto-rechtliches.html`
+**Rechtliches** (eine Vorlage für Impressum, Datenschutz, AGB, Widerrufsrecht, in der Fußzeile) → `SEITE-rechtliches.md` + `vorschau-foto-rechtliches.html` ·
+**Häufige Fragen** (neu, `/haeufige-fragen`, in der Fußzeile statt des toten Links „FAQ“) → `SEITE-faq.md` + `vorschau-foto-faq.html`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
@@ -83,7 +84,7 @@ organisieren, die ebenfalls Fotos braucht (Kosten teilen).
 | **Leinen** | `#F5F3E8` | Seitenhintergrund | – |
 | **Salbei** | `#DDE6C9` | Wechselband (z. B. Weiterbildung) | – |
 | **Weizen** | `#EDE1C8` | Wechselband (z. B. Termine) | – |
-| **Weiß** | `#FFFFFF` | Kopfleiste mit Logo, Schrift auf Tiefgrün, Foto-Beschriftung | – |
+| **Weiß** | `#FFFFFF` | Kopfleiste mit Logo, Schrift auf Tiefgrün, Foto-Beschriftung; Kreis mit „+“/„–“ in der Aufklappliste (Häufige Fragen) | – |
 | **Logo-Grün** | `#96B839` | nur sparsam, z. B. Symbole | Schrift, Buttons |
 
 **Geprüfte Kontraste (Mindestwert nach WCAG: 4,5 : 1):**
@@ -111,7 +112,8 @@ Eine einzige Schrift: **PT Sans** (Google Fonts, kostenlos).
 | Titel im Foto (H1) | 72–80 px | 44 px | **Regular 400**, Laufweite −1,5 % | 0,98 |
 | Abschnittsüberschrift (H2) | 56–64 px | 38 px | Regular 400 | 1,0 |
 | Kartenüberschrift (H3) | 28 px | 26 px | Regular 400 | 1,1 |
-| Abschnittsüberschrift in Rechtstexten | 28 px | 26 px | Regular 400, Linie darüber | 1,1 |
+| Abschnittsüberschrift in Rechtstexten und Häufigen Fragen | 28 px | 26 px | Regular 400, Linie darüber | 1,1 |
+| Frage in der Aufklappliste | 18 px | 18 px | Bold 700 | 1,35 |
 | Kleine Überschrift (GROSSBUCHSTABEN) | 15 px | 15 px | Bold 700, Laufweite +8 % | – |
 | Einleitung | 21 px | 18 px | Regular 400 | 1,5 |
 | **Fließtext** | **18 px** | **18 px** | Regular 400 | 1,6 |
@@ -150,6 +152,7 @@ Regeln:
   Datumszeile im Titelkasten, Zeit-&-Ort-Spalte, Meta-Zeilen und die drei Zustände einer Veranstaltung (offen, vorbei, abgesagt): `SEITE-veranstaltung.md`, Abschnitt 6.
   Produktkarte (Bild auf weißer Kachel, ohne Knopf), Kategorienliste mit Anzahl und Kaufbereich: `SEITE-shop.md`, Abschnitt 6.
   Reiterleiste, Stand-Zeile, Inhaltsverzeichnis mit Lesespalte, „Du suchst …“-Kasten und Widerrufs-Kasten: `SEITE-rechtliches.md`, Abschnitt 6.
+  Aufklappliste für Fragen (Frage fett, weißer Plus-Kreis): `SEITE-faq.md`, Abschnitt 6.
 - **Grundregel für Unterseiten:** Jede Information hat genau einen Hauptort; andere Seiten fassen in einem
   Satz zusammen und verlinken dorthin (Beispiel: Modulzahl → Weiterbildung, Zertifikat beantragen → Sing mit,
   Vergütung der Singleitung → Für Einrichtungen, Mitgliedsbeiträge, 15 % Rabatt und Unterstützungskultur → Mitglied sein,
@@ -169,8 +172,10 @@ Regeln:
   einem Satz zusammen; kostenpflichtige Liedblätter → Shop, kostenlose PDFs → Downloads;
   Anbieterangaben → Impressum (Kontakt wiederholt drei Zeilen); verbindliche Teilnahmebedingungen → AGB, Abschnitt 12, verbindliche
   Shop-Bedingungen → AGB, Abschnitte 6–8 und 11 – die leicht verständlichen Fassungen bleiben auf Anmeldung und Shop, die Rechtsseiten
-  verweisen nur dorthin; Widerrufsbelehrung → nur noch auf Widerrufsrecht (Vorschlag für den Rechtstexte-Auftrag), AGB 5 verlinkt).
-  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md` und `SEITE-rechtliches.md`, jeweils Abschnitt 2.
+  verweisen nur dorthin; Widerrufsbelehrung → nur noch auf Widerrufsrecht (Vorschlag für den Rechtstexte-Auftrag), AGB 5 verlinkt;
+  Häufige Fragen → ist für **kein** Thema Hauptort: je Frage ein bis zwei Sätze und genau ein Link, ohne Preise, Zahlen, Fristen,
+  Termine oder Namen – Tagungsfragen bleiben auf `/faq` der Jahrestagung).
+  Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md` und `SEITE-faq.md`, jeweils Abschnitt 2.
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -201,7 +206,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | 5 | Leinen | **Hör mal rein** | „Was macht Lieder gesundheitsfördernd?“, drei Hörbeispiele, Stimme von Astrid |
 | 6 | Leinen | **Aktuelles aus unserem Netzwerk** | drei Karten: Rückblick, Blog des Monats, MitgLIEDER im Fokus |
 | 7 | Tiefgrün | **Mitsingen. Mitmachen. Mitglied werden.** | Mitgliedschaft, Spenden (mit Rumänien-Projekt, Spendenbescheinigung), Newsletter |
-| 8 | Tiefgrün | Fußzeile | Mitmachen · Service · Rechtliches & Kanäle (alle bisherigen Fußzeilen-Links + Shop, Presse, YouTube …) |
+| 8 | Tiefgrün | Fußzeile | Mitmachen · Service · Rechtliches & Kanäle (alle bisherigen Fußzeilen-Links + Shop, Presse, YouTube …; „FAQ“ heißt „Häufige Fragen“ und führt auf `/haeufige-fragen`) |
 
 **Was von der Startseite wegzieht – und wohin:**
 
@@ -263,7 +268,7 @@ bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 
 
 ---
 
-### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Rechtliches)
+### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Häufige Fragen)
 
 **Im Foto-Stil fertig (Vorschau + Doku):** Startseite, Weiterbildung, Dozent:innen, Sing mit, Für Einrichtungen,
 Mitglied sein, Termine, Über uns, Kontakt, Downloads & Formulare (neu), Singende Landkarte (26.09.2026; Karte technisch unverändert,
@@ -278,7 +283,9 @@ werden von Hand verschickt – als digitale Produkte spart das Arbeit; „weltwe
 Rechtliches (26.09.2026; eine Vorlage für `/impressum`, `/datenschutz`, `/agb`, `/widerrufsrecht` mit Reiterleiste und Kopf ohne Titelfoto –
 **nur die Gestaltung ist fertig, die Texte selbst werden im gemeinsamen Rechtstexte-Auftrag geprüft**; wichtigste Funde: AGB-Link „Datenschutz“
 führt auf healingsongs.de, zwei verschiedene Steuernummern, Widerrufsbelehrung zweimal in abweichender Fassung, Datenschutzerklärung ist ein
-Generator-Text mit Diensten, die die Seite nicht nutzt – `SEITE-rechtliches.md`, Abschnitte 1, 2 und 7).
+Generator-Text mit Diensten, die die Seite nicht nutzt – `SEITE-rechtliches.md`, Abschnitte 1, 2 und 7),
+Häufige Fragen (26.09.2026; neue Seite `/haeufige-fragen` statt Fußzeilen-Link entfernen, Weiterleitung von der toten Adresse
+`haeufige-fragen.html`; 23 Fragen in 7 Themen, jede Antwort nur Wegweiser zum Hauptort; Tagungs-FAQ `/faq` bleibt – `SEITE-faq.md`, Abschnitte 1 und 2).
 **Bewusst nicht:** Jahrestagung (9 Seiten, siehe oben); Zweig-Seiten und `/wichtige-infos` (werden auf `/weiterbildung` umgeleitet);
 die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
@@ -287,8 +294,7 @@ die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
 | Seite | Adresse | Was dort heute ist | Vorschlag |
 |---|---|---|---|
-| **FAQ** | Fußzeilen-Link `singende-krankenhaeuser.de/haeufige-fragen.html` | **Link ist tot** (alte Webseite); `/faq` gehört zur Jahrestagung | entscheiden: eigene FAQ-Seite oder Fußzeilen-Link entfernen |
-| **Aufräumen ohne Neugestaltung** | `/inquiry-services-page`, `/lp-singing-family`, `/book-online` | Wix-Vorlagenseiten: Werbetext für „Webgestaltung, SEO“, leere Landingpage, „nichts zu buchen“ – stehen in der Sitemap | **sofort löschen** (oder auf „nicht indexieren“ + ausblenden) |
+| **Aufräumen ohne Neugestaltung** | `/inquiry-services-page`, `/lp-singing-family`, `/book-online` | Wix-Vorlagenseiten: Werbetext für „Webgestaltung, SEO“, leere Landingpage, „nichts zu buchen“ – stehen in der Sitemap | **sofort löschen** (oder auf „nicht indexieren“ + ausblenden); im selben Durchgang die toten Adressen der alten Webseite (`….html`) weiterleiten – `SEITE-faq.md`, Abschnitt 7, Punkt 6 |
 
 ## 6. Umsetzung in Wix – Schritt für Schritt
 
@@ -327,5 +333,6 @@ die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 - [ ] Fließtext mindestens 18 px?
 - [ ] Du-Ansprache und Gendern mit Doppelpunkt eingehalten?
 - [ ] Höchstens 6 Menüpunkte, Startseite höchstens 8 Abschnitte?
+- [ ] Neue Seite oder geänderte Sprungmarke? Links in „Häufige Fragen“ nachziehen (`SEITE-faq.md`, Abschnitt 2, Tabelle „Hauptorte“)?
 - [ ] Fußzeile mit Impressum, Datenschutz, AGB, Widerrufsrecht und „Vertrag widerrufen“; Links auf Rechtstexte mit Sprungmarke (z. B. AGB, Abschnitt 12)?
 - [ ] Handy-Ansicht geprüft?

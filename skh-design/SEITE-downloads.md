@@ -145,7 +145,7 @@ Foto-Stil ohne Titelfoto (Baustein „Kopf ohne Titelfoto“, Abschnitt 6).
 
 | Baustein | Aussehen | Begründung |
 |---|---|---|
-| **Kopf ohne Titelfoto** | Leinen, Kicker, H1 in Anthrazit (44–76 px), ein Satz, Hinweiskasten | für reine Service-Seiten (Downloads; später ggf. Impressum, Datenschutz, FAQ) |
+| **Kopf ohne Titelfoto** | Leinen, Kicker, H1 in Anthrazit (44–76 px), ein Satz, Hinweiskasten | für reine Service-Seiten (Downloads; auch Rechtliches und Häufige Fragen, siehe `SEITE-rechtliches.md` und `SEITE-faq.md`) |
 | **Dokumentzeile** | links stilisiertes Blatt „PDF“ (64 × 80 px, weiß, 1 px Anthrazit, Eselsohr in der Bandfarbe), Mitte Titel (H3), ein Satz, Angaben „Seiten · Stand · zum Ausdrucken“, rechts Button bzw. Textlink; auf dem Handy rutscht der Link unter den Text | Titel, Umfang und Aktualität auf einen Blick – ohne das PDF öffnen zu müssen |
 | **Verweisliste** | zweispaltig, Begriff fett, darunter wohin | „Nicht dabei?“ ohne neue Inhalte |
 
