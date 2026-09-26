@@ -284,7 +284,7 @@ Funktionszeilen, Quellenhinweis, Namenszusätze und Brotkrumen (wie auf allen Un
    Danach *Dashboard → Marketing & SEO → SEO-Tools → URL-Weiterleitungsmanager*: `/über-uns`, `/team-vorstand`,
    `/team-geschäftsführung`, `/ehrenvorsitzende`, `/botschafter-und-beirat`, `/singforschung` jeweils mit **301** auf
    `/überuns`. Erst dann die sechs Seiten löschen. (Wix leitet nur auf Seiten, nicht auf Sprungmarken weiter – deshalb
-   die Sprungleiste gleich oben.)
+   die Sprungleiste gleich oben.) Alle Weiterleitungen gesammelt: `SEITE-aufraeumen.md`, Abschnitt 3.
 3. **Anker setzen:** `anliegen`, `netzwerk`, `geschichte`, `team`, `vorstand`, `geschaeftsstelle`, `ehrenvorsitz`,
    `schirmherrin`, `beirat`, `botschafter`, `landesbotschafter`, `forschung`, `spenden`, `mitglied`.
 4. **Team-Karten:** Porträts aus der Studioserie (Abschnitt 5), *Ecken 20 px*, kein Rahmen, kein Schatten. **Keine

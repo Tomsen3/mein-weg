@@ -147,7 +147,7 @@ für Vorleseprogramme (`aria-current`).
 1. **Seiten zusammenlegen:** Seite „Weiterbildung“ neu aufbauen. Seite „Wichtige Infos“ im Menü
    ausblenden und eine **301-Weiterleitung** einrichten (*Dashboard → Marketing & SEO → SEO →
    URL-Weiterleitungen*: `/wichtige-infos` → `/weiterbildung`). Grund: alte Links in Mails,
-   PDFs und bei Google funktionieren weiter.
+   PDFs und bei Google funktionieren weiter. (alle Weiterleitungen gesammelt: `SEITE-aufraeumen.md`, Abschnitt 3)
 2. **Bereiche anlegen:** In der Reihenfolge aus Abschnitt 2; Hintergrundfarben der Bänder
    genau wie dort (Leinen, Salbei, Weizen, Tiefgrün).
 3. **Titelbereich:** wie in `DESIGN-foto.md` Schritt 7, aber Kasten unten **rechts**. In der
@@ -164,7 +164,7 @@ für Vorleseprogramme (`aria-current`).
    erst nach Klärung von Punkt 7.1 verlinken.
 7. **Zweig-Seiten umleiten** (erst nach Schritt 4 und wenn alle Module in Wix-Events stehen): beide Zweig-Seiten aus
    dem Menü nehmen und im URL-Weiterleitungsmanager `/kranken-und-gesundheitshäuser` und `/pflege-und-senioren` mit
-   **301** auf `/weiterbildung` leiten; erst danach löschen. Die Links „Alle Module dieses Zweigs →“ zeigen auf die
+   **301** auf `/weiterbildung` leiten; erst danach löschen (alle Weiterleitungen gesammelt: `SEITE-aufraeumen.md`, Abschnitt 3). Die Links „Alle Module dieses Zweigs →“ zeigen auf die
    Modulliste (Anker `module`) – Wix kann den Filter nicht per Link vorwählen, deshalb dort den Hinweis „Filter oben
    auf deinen Zweig stellen“ als kleinen Text ergänzen oder zwei Veranstaltungslisten mit festem Filter verwenden.
 8. **Handy-Ansicht prüfen** und Vorschau an Sandra (Weiterbildung), Vera und Sonja zur

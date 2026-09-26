@@ -344,7 +344,7 @@ Einrichtungen; Aufklapptext wie Mitglied sein; Verweisliste wie Downloads; Ansic
    **festen Bereich „Gut zu wissen“** mit drei Aufklapptexten anlegen (Entscheidung 7) und den Salbei-Bereich „Fragen zur
    Bestellung“ mit Sandra. An zwei verschiedenen Produkten prüfen, dass die Bereiche erscheinen.
 6. **Adressen aufräumen** (Fund 9): die 6 Produkte mit `kopie-von-…` umbenennen (*Produkt → SEO → URL*), z. B.
-   `ukulele-factory-25-04-blues-pdf`. Danach *Marketing & SEO → SEO-Tools → URL-Weiterleitungen*: alte → neue Adresse (301).
+   `ukulele-factory-25-04-blues-pdf`. Danach *Marketing & SEO → SEO-Tools → URL-Weiterleitungen*: alte → neue Adresse (301); die sechs alten Adressen stehen in `SEITE-aufraeumen.md`, Abschnitt 3, Gruppe C.
    Genauso für geänderte Kategorie-Adressen.
 7. **Bestellweg vereinheitlichen** (Entscheidung 3): in den 23 Beschreibungen den Satz „Bestellung bitte per E-Mail …“ löschen.
 8. **Liedblätter digital** (Entscheidung 4): je Produkt *Produktart → Digitales Produkt*, PDF hochladen, Zusatzinfo „Download“

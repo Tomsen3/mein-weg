@@ -220,6 +220,7 @@ Seite eine Liste von Aufklappzeilen.
 1. **Vorher:** Website duplizieren und an der Kopie arbeiten (wie `DESIGN-foto.md`, Abschnitt 6).
 2. **Weiterleitungen** (ca. 10 Minuten, geht sofort, auch vor der Neugestaltung): *Dashboard → Marketing & SEO → SEO-Tools →
    URL-Weiterleitungen* → neue Weiterleitung (301): alte Adresse `/haeufige-fragen.html` → neue Seite `/haeufige-fragen`.
+   Vollständige Weiterleitungsliste der Webseite: `SEITE-aufraeumen.md`, Abschnitt 3 (dort Gruppe A).
    **Einsparmöglichkeit:** im selben Schritt die zwei alten Adressen aus den Einrichtungs-Anträgen weiterleiten
    (`/singende-gesundheitseinrichtungen.html` und `/singende-altersheime.html` → `/singende-landkarte`, Fund 4). Dann funktionieren auch
    schon verschickte und ausgedruckte Anträge; die PDFs können bei der nächsten Überarbeitung nachgezogen werden.
@@ -271,7 +272,7 @@ Seite eine Liste von Aufklappzeilen.
    es offen ist (`SEITE-mitglied-sein.md`, Abschnitt 7, Punkt 9). Nach der Entscheidung als Frage unter „Zertifikat“ ergänzen. → Vorstand.
 6. **Weitere tote Adressen der alten Webseite finden** (**Einsparmöglichkeit**, kostenlos): In der Google Search Console
    (*Seiten → Nicht gefunden (404)*) stehen die Adressen, die Besucher:innen noch aufrufen. Alle in einem Durchgang weiterleiten
-   (Abschnitt 6, Schritt 2) statt einzeln, wenn jemand sich beschwert. Falls die Search Console noch nicht verbunden ist: in Wix unter
+   (Abschnitt 6, Schritt 2; eintragen in `SEITE-aufraeumen.md`, Abschnitt 3, Gruppe D) statt einzeln, wenn jemand sich beschwert. Falls die Search Console noch nicht verbunden ist: in Wix unter
    *Marketing & SEO → SEO → Mit Google verbinden*. → Tom, ggf. Andy.
 7. **Tagungs-FAQ** (`/faq`): nicht angefasst. Inhaltliche Fehler im Tagungsbereich werden wie bisher über `SEITE-termine.md`,
    Abschnitt 7, gemeldet.

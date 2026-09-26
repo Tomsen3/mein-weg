@@ -214,6 +214,7 @@ Termine, Landkarte (26.09.2026) und den Seiten-Dokus – **bitte mit Andy/Tom im
 | Zoom | Online-Module | ja | Erklärung | ob weiter Zoom genutzt wird |
 | Facebook, Instagram | Links in der Fußzeile | ja (als eingebettete Elemente) | Fußzeile (heute Wix-Konten, Fund 17) | nur Links, keine eingebetteten Elemente? Dann kürzer |
 | Tumblr, Kommentarfunktion, Google Maps, Bonitätsprüfung, 12 Zahlungsdienste | – | ja | **nicht gefunden** | streichen, wenn bestätigt |
+| weitere installierte Wix-Apps (Bookings, Services, Pricing Plans, Get Funding, Chat, Countdown, Music, ShoutOut, alte Formulare, Mitgliederbereich) | teils unbekannt | nein | Quelltext, `SEITE-aufraeumen.md`, Fund 5 | erst aufräumen (dort Abschnitt 6, Schritt 5), dann nur die übrigen aufnehmen |
 
 ---
 

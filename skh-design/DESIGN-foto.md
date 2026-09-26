@@ -1,6 +1,6 @@
 # DESIGN-foto.md – Alternative „Foto“ für Singende Krankenhäuser e.V.
 
-Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Häufige Fragen) · Verantwortlich: Tom (Webseite/Marketing)
+Stand: 26.09.2026 (überarbeitet: echte Seitenstruktur; zuletzt ergänzt: Aufräumen) · Verantwortlich: Tom (Webseite/Marketing)
 Vorschau: `skh-design/vorschau-foto.html` (im Browser öffnen) · Hauptvariante: `skh-design/DESIGN.md` („Fable“)
 Weitere Alternativen: `DESIGN-plakat.md`, `DESIGN-rund.md`, `DESIGN-zeitung.md`
 Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vorschau-foto-weiterbildung.html` ·
@@ -18,6 +18,7 @@ Unterseiten im Foto-Stil: **Weiterbildung** → `SEITE-weiterbildung.md` + `vors
 **Shop** (Wix Stores, Übersicht `/category/all-products` und Vorlage für alle 93 `/product-page/…`, in der Fußzeile) → `SEITE-shop.md` + `vorschau-foto-shop.html` ·
 **Rechtliches** (eine Vorlage für Impressum, Datenschutz, AGB, Widerrufsrecht, in der Fußzeile) → `SEITE-rechtliches.md` + `vorschau-foto-rechtliches.html` ·
 **Häufige Fragen** (neu, `/haeufige-fragen`, in der Fußzeile statt des toten Links „FAQ“) → `SEITE-faq.md` + `vorschau-foto-faq.html`
+Ohne Vorschau: **Aufräumen** (Vorlagenseiten löschen, vollständige Weiterleitungsliste, Seitentitel für Google, Wix-Apps) → `SEITE-aufraeumen.md`
 Nicht im Foto-Stil: der Bereich **Jahrestagung** (bleibt, wie er ist – Entscheidung und Begründung in Abschnitt 5)
 
 Dieses Dokument beschreibt die Stilrichtung **„Foto“**: große, warme Fotos stehen im
@@ -268,7 +269,7 @@ bleibt der vorhandene Audio-Player; nur Farbe (Knopf Tiefgrün, Karte Weiß, 20 
 
 ---
 
-### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Häufige Fragen)
+### Übersicht: Welche Seiten sind umgesetzt, welche fehlen noch? (Stand 26.09.2026, nach Aufräumen)
 
 **Im Foto-Stil fertig (Vorschau + Doku):** Startseite, Weiterbildung, Dozent:innen, Sing mit, Für Einrichtungen,
 Mitglied sein, Termine, Über uns, Kontakt, Downloads & Formulare (neu), Singende Landkarte (26.09.2026; Karte technisch unverändert,
@@ -286,15 +287,18 @@ führt auf healingsongs.de, zwei verschiedene Steuernummern, Widerrufsbelehrung 
 Generator-Text mit Diensten, die die Seite nicht nutzt – `SEITE-rechtliches.md`, Abschnitte 1, 2 und 7),
 Häufige Fragen (26.09.2026; neue Seite `/haeufige-fragen` statt Fußzeilen-Link entfernen, Weiterleitung von der toten Adresse
 `haeufige-fragen.html`; 23 Fragen in 7 Themen, jede Antwort nur Wegweiser zum Hauptort; Tagungs-FAQ `/faq` bleibt – `SEITE-faq.md`, Abschnitte 1 und 2).
+**Aufräumen dokumentiert, Umsetzung offen** (26.09.2026; `/inquiry-services-page`, `/book-online` löschen, `/lp-singing-family` nach Rückfrage;
+eine Weiterleitungsliste für die ganze Webseite; Website-Name „Sikra Deutschland“ betrifft 24 von 38 Seiten; Landkarte ohne Seitentitel;
+9 vermutlich ungenutzte Wix-Apps prüfen – `SEITE-aufraeumen.md`, Abschnitte 1, 3, 4 und 6).
 **Bewusst nicht:** Jahrestagung (9 Seiten, siehe oben); Zweig-Seiten und `/wichtige-infos` (werden auf `/weiterbildung` umgeleitet);
 die sechs Über-uns-Unterseiten (werden auf `/überuns` umgeleitet).
 
-**Noch offen** (Reihenfolge = Vorschlag nach Nutzen). Außerdem offen, aber keine Gestaltungsaufgabe: der **Rechtstexte-Auftrag**
-(Impressum, Datenschutz, AGB, Widerruf, Weiterbildung, Shop – alles in einem Auftrag, gesammelt in `SEITE-rechtliches.md`, Abschnitt 7, Punkt 1).
-
-| Seite | Adresse | Was dort heute ist | Vorschlag |
-|---|---|---|---|
-| **Aufräumen ohne Neugestaltung** | `/inquiry-services-page`, `/lp-singing-family`, `/book-online` | Wix-Vorlagenseiten: Werbetext für „Webgestaltung, SEO“, leere Landingpage, „nichts zu buchen“ – stehen in der Sitemap | **sofort löschen** (oder auf „nicht indexieren“ + ausblenden); im selben Durchgang die toten Adressen der alten Webseite (`….html`) weiterleiten – `SEITE-faq.md`, Abschnitt 7, Punkt 6 |
+**Noch offen – Gestaltung:** keine Seite mehr (Stand 26.09.2026). Alle Seiten außerhalb der Jahrestagung haben eine Vorschau und eine
+Doku oder sind als Weiterleitung bzw. Löschung dokumentiert (`SEITE-aufraeumen.md`, Abschnitt 1, Tabelle „Die 38 Seiten“).
+**Noch offen – keine Gestaltungsaufgaben:** (1) der **Rechtstexte-Auftrag** (Impressum, Datenschutz, AGB, Widerruf, Weiterbildung, Shop –
+alles in einem Auftrag, gesammelt in `SEITE-rechtliches.md`, Abschnitt 7, Punkt 1); (2) die offenen Punkte in Abschnitt 7 der einzelnen
+Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11) und danach die Umsetzung in Wix. Vorschlag für den Anfang:
+`SEITE-aufraeumen.md`, Abschnitt 6, Schritte 1–4 – geht sofort, ohne Neugestaltung, in 1–2 Stunden.
 
 ## 6. Umsetzung in Wix – Schritt für Schritt
 

@@ -335,7 +335,7 @@ nicht 1 : 1 möglich: 20-px-Rundung des Titelfotos, die kleine Überschrift „M
    Anmeldeseite, Abschnitt 7, Punkt 4).
 9. **Liste `/veranstaltungen` umleiten** (Entscheidung 2): *Menüs & Seiten → Seite „Veranstaltungen“ → SEO-Grundlagen*:
    Adresse auf `veranstaltungen-liste` ändern, „Seite in Suchergebnissen anzeigen“ ausschalten, im Menü ausgeblendet lassen.
-   Dann *Dashboard → Marketing & SEO → SEO-Tools → URL-Weiterleitungen*: `/veranstaltungen` → `/termine` (301).
+   Dann *Dashboard → Marketing & SEO → SEO-Tools → URL-Weiterleitungen*: `/veranstaltungen` → `/termine` (301) (alle Weiterleitungen gesammelt: `SEITE-aufraeumen.md`, Abschnitt 3).
    Test: `singende-krankenhaeuser.de/veranstaltungen` im privaten Browserfenster aufrufen → landet auf Termine.
 10. **Handy-Ansicht prüfen** (Wix-Handy-Editor): Titelkasten lesbar, Knopf gut antippbar, kein seitliches Scrollen.
 11. **Abnahme:** Vera (Inhalte, Orte, Zweig-Angaben), Sandra (Anmeldeweg), Sonja und Vorstand (Gesamtbild).
@@ -374,6 +374,8 @@ Zuständigkeit: Vorschlag Vera (wie in `SEITE-termine.md`, Punkt 7), weil sie di
    (bei Problemen **Andy**).
 7. **Anrechnung Modul F:** „Modul in beiden Zweigen, zählt für das Zertifikat“ bestätigen. → **Vera**.
 8. **Website-Name „Sikra Deutschland“** in Google-Titeln ändern (betrifft alle Seiten). → **Sonja** entscheidet, **Tom** setzt um.
+   Nachtrag 26.09.2026: betroffen sind 24 der 38 normalen Seiten plus alle Veranstaltungs- und Shop-Seiten; Vorgehen und Titel-Liste
+   in `SEITE-aufraeumen.md`, Abschnitt 4.
 9. **Karte und Datenschutz** (fachliche Einschätzung, keine Rechtsberatung): Eine eingebettete Google-Karte lädt beim Öffnen
    Daten von Google und braucht nach gängiger Auffassung eine Einwilligung (Cookie-Banner). Die Vorschau nutzt deshalb nur einen
    Link („Weg dorthin“), die Karte in Wix bleibt aus. Beim Test der Live-Seiten wurden Verbindungsversuche zu `google.com`
