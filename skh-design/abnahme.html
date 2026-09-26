@@ -1094,6 +1094,34 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
   .ab-card{break-inside:avoid}
   .ab-q article,.ab-t{border:1px solid var(--anthra)}
 }
+/* Rückmeldebogen zum Ankreuzen (nur im veröffentlichten Link mit Speicher; sonst bleibt der Bogen zum Abschreiben) */
+.ab-who-am{font-size:16px;margin:-12px 0 18px}
+.ab-form{display:flex;flex-direction:column;gap:18px}
+.ab-rows{list-style:none;margin:0;padding:0;background:var(--white);border-radius:20px;overflow:hidden}
+.ab-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 18px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--anthra)}
+.ab-row:last-child{border-bottom:0}
+.ab-row>span{font-weight:700;line-height:1.3}
+.ab-opts{display:flex;gap:8px}
+.ab-opts button{font:inherit;font-size:16px;font-weight:700;border:2px solid var(--anthra);background:var(--white);color:var(--anthra);border-radius:9999px;padding:6px 14px;cursor:pointer}
+.ab-opts button[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:var(--white)}
+.ab-opts button:focus-visible{outline:3px solid var(--anthra);outline-offset:3px}
+.ab-row textarea{grid-column:1/-1}
+.ab-row textarea,.ab-all-note textarea{font:inherit;font-size:17px;width:100%;border:1px solid var(--anthra);border-radius:12px;padding:8px 12px;background:var(--linen);color:var(--anthra)}
+.ab-all-note{display:flex;flex-direction:column;gap:8px}
+.ab-save{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.ab-save button{border:0;cursor:pointer;font-family:inherit}
+.ab-save button:disabled{opacity:.55;cursor:default}
+#bogen-status{font-size:16px}
+.ab-sub{font-size:28px;margin-top:44px;margin-bottom:12px}
+.ab-scroll{overflow-x:auto;max-width:100%}
+.ab-all{min-width:520px}
+.ab-all td,.ab-all th{white-space:nowrap}
+.ab-all td:first-child{white-space:normal;min-width:220px}
+.ab-all td:last-child{width:auto}
+.ab-all .ok{color:var(--leafink);font-weight:700}
+.ab-all .chg{font-weight:700}
+.ab-notes{margin-top:18px}
+@media (max-width:640px){ .ab-row{grid-template-columns:1fr} }
 </style>
 
 <div class="note">Abnahme-Paket „Foto“ – Übersicht für Vorstand und Geschäftsstelle. Diese Seite ist <b>keine</b> Seite der Webseite. Ablauf und Hintergrund: <code>ABNAHME.md</code>.</div>
@@ -1107,7 +1135,7 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
   <ol class="ab-steps">
     <li><b>Grundsätze</b> lesen (Teil 1) – das ist für den Vorstand das Wichtigste.</li>
     <li><b>Eure Seiten</b> ansehen (Teil 2) – die Vorschaubilder führen zur Seite. Am Handy und am Computer.</li>
-    <li><b>Eure Fragen</b> beantworten (Teil 3) und den <b>Bogen</b> (Teil 4) ausgefüllt an Tom schicken.</li>
+    <li><b>Eure Fragen</b> beantworten (Teil 3) und im <b>Bogen</b> (Teil 4) direkt ankreuzen und speichern – oder per E-Mail an Tom.</li>
   </ol>
 </div></section>
 
@@ -1213,8 +1241,23 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
 </div></section>
 
 <section class="ab-sec band-w" id="bogen"><div class="wrap">
-  <div class="head"><div><span class="eyebrow">Teil 4 · zum Ausdrucken oder Abschreiben</span><h2 class="h2">Rückmeldebogen</h2></div></div>
-  <p class="ab-intro">Name: ______________________ &nbsp; Datum: ____________ &nbsp; Bitte ankreuzen. Bei „Änderung“ kurz notieren, was – oder direkt in eine E-Mail an Tom.</p>
+  <div class="head"><div><span class="eyebrow">Teil 4 · direkt hier ankreuzen</span><h2 class="h2">Rückmeldebogen</h2></div></div>
+  <div id="bogen-live" hidden>
+    <p class="ab-intro">Kreuze je Zeile „passt“ oder „ändern“ an und schreib bei „ändern“ kurz dazu, was. Mit <b>Rückmeldung speichern</b> ist sie bei Tom – du kannst sie bis zur Frist jederzeit ändern. Unten siehst du, was die anderen schon zurückgemeldet haben.</p>
+    <p class="ab-who-am" id="bogen-me"></p>
+    <p class="vh" id="bogen-ro" hidden><b>Nur lesen:</b> Mit deinem Zugang kannst du hier nichts speichern. Bitte Tom, dich als „Mitwirkende:r“ freizugeben – oder antworte per E-Mail.</p>
+    <form id="bogen-form" class="ab-form" novalidate>
+      <ol class="ab-rows" id="bogen-rows"></ol>
+      <label class="ab-all-note" for="bogen-gesamt"><b>Sonst noch etwas?</b><textarea id="bogen-gesamt" rows="3" placeholder="Gesamteindruck, Fragen, Ideen"></textarea></label>
+      <div class="ab-save"><button type="submit" class="pill gold" id="bogen-save">Rückmeldung speichern</button><span id="bogen-status" role="status" aria-live="polite"></span></div>
+    </form>
+    <h3 class="ab-sub">Alle Rückmeldungen</h3>
+    <p id="bogen-empty">Noch keine Rückmeldung gespeichert.</p>
+    <div class="ab-scroll"><table class="ab-t ab-all" id="bogen-all" hidden><thead></thead><tbody></tbody></table></div>
+    <ul class="note-list ab-notes" id="bogen-notes" hidden></ul>
+  </div>
+  <div id="bogen-static">
+    <p class="ab-intro">Name: ______________________ &nbsp; Datum: ____________ &nbsp; Bitte ankreuzen. Bei „Änderung“ kurz notieren, was – oder direkt in eine E-Mail an Tom.</p>
   <table class="ab-t">
     <thead><tr><th>Was</th><th>passt</th><th>ändern</th><th>Anmerkung</th></tr></thead>
     <tbody>
@@ -1246,6 +1289,7 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
     </tbody>
   </table>
   <p class="good ab-print"><b>Tipp:</b> Am einfachsten antwortest du per E-Mail an Tom: je Zeile „passt“ oder „ändern: …“. Wer die Datei direkt im Browser geöffnet hat, kann sie auch drucken (Strg + P) – Teil 4 steht dann auf eigenen Blättern.</p>
+  </div>
 </div></section>
 
 <section class="ab-sec" id="nicht"><div class="wrap">
@@ -1258,5 +1302,95 @@ fieldset.part>legend .lt{font-size:clamp(24px,2.4vw,28px);line-height:1.15}
   </ul>
 </div></section>
 
+<script>
+// Rückmeldebogen: speichert je Person ein Dokument bogen/<id> (Speicher des veröffentlichten Links).
+// Ohne Speicher (Datei lokal geöffnet, kein Zugang) bleibt der Bogen zum Abschreiben sichtbar.
+(async function(){
+  var ITEMS=[{"k": "g1", "t": "Grundsatz 1 · Stil „Foto“"}, {"k": "g2", "t": "Grundsatz 2 · Menü mit sechs Punkten"}, {"k": "g3", "t": "Grundsatz 3 · Jahrestagung bleibt"}, {"k": "g4", "t": "Grundsatz 4 · Weniger Seiten"}, {"k": "g5", "t": "Grundsatz 5 · Drei neue Seiten"}, {"k": "g6", "t": "Grundsatz 6 · Jede Information an einer Stelle"}, {"k": "g7", "t": "Grundsatz 7 · Du-Ansprache und Gendern"}, {"k": "g8", "t": "Grundsatz 8 · Ein Rechtstexte-Auftrag (Budget)"}, {"k": "g9", "t": "Grundsatz 9 · Name bei Google"}, {"k": "s-start", "t": "Seite · Startseite"}, {"k": "s-weiterbildung", "t": "Seite · Weiterbildung"}, {"k": "s-dozenten", "t": "Seite · Dozent:innen"}, {"k": "s-anmeldung", "t": "Seite · Anmeldung Weiterbildung"}, {"k": "s-sing-mit", "t": "Seite · Sing mit"}, {"k": "s-landkarte", "t": "Seite · Singende Landkarte"}, {"k": "s-einrichtungen", "t": "Seite · Für Einrichtungen"}, {"k": "s-termine", "t": "Seite · Termine"}, {"k": "s-veranstaltung", "t": "Seite · Veranstaltungsseite"}, {"k": "s-ueber-uns", "t": "Seite · Über uns"}, {"k": "s-mitglied-sein", "t": "Seite · Mitglied sein"}, {"k": "s-kontakt", "t": "Seite · Kontakt"}, {"k": "s-downloads", "t": "Seite · Downloads & Formulare"}, {"k": "s-shop", "t": "Seite · Shop"}, {"k": "s-faq", "t": "Seite · Häufige Fragen"}, {"k": "s-rechtliches", "t": "Seite · Rechtliches"}];
+  if(!window.claude||!window.claude.use) return;
+  var res=await Promise.all([window.claude.use("db"),window.claude.use("user")]);
+  var db=res[0], user=res[1];
+  if(!db||!user) return;
+  var uid=await user.id();
+  if(!uid) return;
+  var $=function(id){return document.getElementById(id);};
+  $("bogen-static").hidden=true; $("bogen-live").hidden=false;
+  var canWrite=await user.can("data.write");
+  var me=await user.me();
+  $("bogen-me").textContent="Du antwortest als "+(me.name||"du")+".";
+  var state={items:{},gesamt:""};
+  var rows=$("bogen-rows");
+  ITEMS.forEach(function(it){
+    var li=document.createElement("li"); li.className="ab-row";
+    var lab=document.createElement("span"); lab.textContent=it.t; lab.id="lab-"+it.k;
+    var opts=document.createElement("div"); opts.className="ab-opts"; opts.setAttribute("role","group"); opts.setAttribute("aria-labelledby",lab.id);
+    [["ok","passt"],["aendern","ändern"]].forEach(function(o){
+      var b=document.createElement("button"); b.type="button"; b.textContent=o[1]; b.dataset.k=it.k; b.dataset.v=o[0]; b.setAttribute("aria-pressed","false");
+      b.addEventListener("click",function(){
+        var cur=(state.items[it.k]||{}).s; var v=cur===o[0]?"":o[0];
+        state.items[it.k]=Object.assign({},state.items[it.k],{s:v}); paint(it.k); dirty();
+      });
+      opts.appendChild(b);
+    });
+    var ta=document.createElement("textarea"); ta.id="note-"+it.k; ta.rows=1; ta.placeholder="Anmerkung (bei „ändern“: was?)"; ta.setAttribute("aria-label","Anmerkung zu "+it.t);
+    ta.addEventListener("input",function(){ state.items[it.k]=Object.assign({},state.items[it.k],{n:ta.value}); dirty(); });
+    li.appendChild(lab); li.appendChild(opts); li.appendChild(ta); rows.appendChild(li);
+  });
+  $("bogen-gesamt").addEventListener("input",function(e){ state.gesamt=e.target.value; dirty(); });
+  function paint(k){
+    document.querySelectorAll('.ab-opts button[data-k="'+k+'"]').forEach(function(b){ b.setAttribute("aria-pressed",String((state.items[k]||{}).s===b.dataset.v)); });
+    var ta=$("note-"+k); var n=(state.items[k]||{}).n||""; if(ta.value!==n) ta.value=n;
+  }
+  function status(t){ $("bogen-status").textContent=t; }
+  function dirty(){ status("Noch nicht gespeichert."); }
+  var ref=db.doc("bogen/"+uid);
+  try{
+    var snap=await ref.get();
+    if(snap.exists){ var d=JSON.parse(JSON.stringify(snap.data())); state.items=d.items||{}; state.gesamt=d.gesamt||"";
+      if(d.updatedAt) status("Zuletzt gespeichert: "+new Date(d.updatedAt).toLocaleString("de-DE",{dateStyle:"short",timeStyle:"short"})); }
+  }catch(e){}
+  ITEMS.forEach(function(it){ paint(it.k); }); $("bogen-gesamt").value=state.gesamt;
+  function readOnly(){ $("bogen-ro").hidden=false; document.querySelectorAll("#bogen-form button,#bogen-form textarea").forEach(function(el){ el.disabled=true; }); }
+  if(canWrite===false) readOnly();
+  var saving=false;
+  $("bogen-form").addEventListener("submit",async function(ev){
+    ev.preventDefault(); if(saving) return; saving=true; $("bogen-save").disabled=true; status("Wird gespeichert …");
+    var body={items:state.items,gesamt:state.gesamt,updatedAt:new Date().toISOString()};
+    try{ await ref.set(body); status("Gespeichert – danke! Du kannst bis zur Frist noch ändern."); }
+    catch(e){
+      if(e&&e.code==="unavailable"){ try{ await new Promise(function(r){setTimeout(r,800+Math.random()*800);}); await ref.set(body); status("Gespeichert – danke!"); }catch(e2){ status("Speichern hat nicht geklappt. Bitte später noch einmal versuchen oder per E-Mail an Tom."); } }
+      else if(e&&e.code==="invalid_argument"){ readOnly(); status("Speichern nicht möglich (kein Schreibzugang)."); }
+      else status("Speichern hat nicht geklappt. Bitte später noch einmal versuchen oder per E-Mail an Tom.");
+    }
+    saving=false; if(canWrite!==false) $("bogen-save").disabled=false;
+  });
+  var LABEL={ok:"passt",aendern:"ändern"};
+  db.collection("bogen").onSnapshot(async function(qs){
+    var docs=qs.docs.filter(function(d){return d.exists;});
+    $("bogen-empty").hidden=docs.length>0; $("bogen-all").hidden=docs.length===0;
+    var ids=docs.map(function(d){return d.id;});
+    var ps=ids.length?await user.profiles(ids):{};
+    var thead=$("bogen-all").tHead, tbody=$("bogen-all").tBodies[0];
+    thead.textContent=""; tbody.textContent="";
+    var hr=document.createElement("tr"); var th0=document.createElement("th"); th0.textContent="Was"; hr.appendChild(th0);
+    docs.forEach(function(d){ var th=document.createElement("th"); th.textContent=(ps[d.id]&&ps[d.id].name)||"Jemand"; hr.appendChild(th); });
+    thead.appendChild(hr);
+    var notes=[];
+    ITEMS.forEach(function(it){
+      var tr=document.createElement("tr"); var td0=document.createElement("td"); td0.textContent=it.t; tr.appendChild(td0);
+      docs.forEach(function(d){
+        var v=((d.data().items||{})[it.k])||{}; var td=document.createElement("td");
+        td.textContent=v.s?LABEL[v.s]||"":"–"; if(v.s==="ok") td.className="ok"; if(v.s==="aendern") td.className="chg";
+        if(v.n){ td.textContent+=" *"; notes.push([it.t,(ps[d.id]&&ps[d.id].name)||"Jemand",v.n]); }
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    docs.forEach(function(d){ var g=d.data().gesamt; if(g) notes.push(["Sonst noch etwas",(ps[d.id]&&ps[d.id].name)||"Jemand",g]); });
+    var ul=$("bogen-notes"); ul.textContent=""; ul.hidden=notes.length===0;
+    notes.forEach(function(n){ var li=document.createElement("li"); var b=document.createElement("b"); b.textContent=n[0]+" – "+n[1]; var sp=document.createElement("span"); sp.textContent=n[2]; li.appendChild(b); li.appendChild(sp); ul.appendChild(li); });
+  },function(){ $("bogen-empty").textContent="Die Übersicht lässt sich gerade nicht laden. Bitte die Seite neu öffnen."; });
+})();
+</script>
 </body>
 </html>

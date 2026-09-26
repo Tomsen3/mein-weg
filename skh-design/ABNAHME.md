@@ -69,7 +69,8 @@ zusammen bleibt. Einzelne Dateien per Mail zu schicken geht deshalb nicht.
 | **C: Gemeinsamer Termin** | Vorstandssitzung (Teams), Tom teilt den Bildschirm | nichts zu verschicken, Fragen sofort geklärt | Geschäftsstelle braucht trotzdem A oder B für ihre Seiten |
 
 **Gewählt (Tom, 26.09.2026): A** – veröffentlicht als privater Link https://claude.ai/artifact/XsCqKTCemUZxgFSVAPuG9V
-(Übersicht, 17 Vorschauen, 101 Fotos, Vorschaubilder). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen; ohne Freigabe
+(Übersicht, 17 Vorschauen, 101 Fotos, Vorschaubilder). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen, Rolle **„Mitwirkende:r“** (Contributor) – nur damit können sie im
+Bogen speichern; als „Betrachter:in“ sehen sie nur den Bogen zum Abschreiben bzw. den Hinweis „Nur lesen“; ohne Freigabe
 können Martin, Paula, Sonja, Vera und Sandra die Seite **nicht** öffnen. Für den Vorstand zusätzlich C.
 **Nach Änderungen an Vorschauen** den Link aktualisieren (Claude: dieselbe Adresse neu veröffentlichen; die Vorschau-Dateien bekommen
 dabei nur für die Veröffentlichung einen HTML-Rahmen `<!doctype html>` mit Zeichensatz – die Dateien im Repo bleiben unverändert).
@@ -93,6 +94,19 @@ Diskussion im Termin schneller als per Mail.
 ---
 
 ## 4. Rückmeldungen sammeln und einarbeiten
+
+### Entscheidung 6: **Bogen zum Ankreuzen direkt auf der Seite** (Tom, 26.09.2026)
+
+Im veröffentlichten Link kreuzt jede Person je Grundsatz und Seite „passt“ oder „ändern“ an, schreibt eine Anmerkung dazu und klickt
+**Rückmeldung speichern**. Darunter steht für alle die Tabelle **„Alle Rückmeldungen“** (je Person eine Spalte) mit allen Anmerkungen.
+**Gründe:** keine Mails abtippen, alle sehen den Stand, Doppelungen fallen sofort auf (**Einsparmöglichkeit**: Arbeitszeit).
+**Technik (für Nachfolger:innen):** Die Seite speichert im Speicher des Artifacts je Person ein Dokument `bogen/<Personen-ID>`
+(`items` je Zeile mit `s` = `ok`/`aendern` und `n` = Anmerkung, dazu `gesamt` und `updatedAt`). Zugriffsregeln: lesen alle ab
+„Mitwirkende:r“, schreiben darf jede Person nur ihr eigenes Dokument. Namen werden nicht gespeichert, sondern beim Anzeigen aus dem
+Konto gelesen. Öffnet man `abnahme.html` lokal aus dem Repo (ohne Speicher), erscheint automatisch der Bogen zum Abschreiben.
+**Auswerten:** die Tabelle auf der Seite lesen – oder Claude bitten, den Speicher des Links (Sammlung `bogen`) auszulesen und die
+Rückmeldungen in die Seiten-Dokus zu übertragen.
+
 
 1. Rückmeldungen (Bogen, Mail, Sitzungsprotokoll) in einer Tabelle sammeln: **Seite · Wer · Rückmeldung · Entscheidung · erledigt**.
    Vorschlag: eine Liste in Microsoft Lists oder Excel im SharePoint des Vereins (kostenlos, alle Beteiligten haben Zugriff).
