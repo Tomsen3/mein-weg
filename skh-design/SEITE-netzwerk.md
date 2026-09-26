@@ -224,7 +224,7 @@ Alle Fotos stammen von der Webseite (Wix-Medien). In Wix die **Originale** verwe
 
 | Datei (Vorschau) | Wo | Motiv | Herkunft |
 |---|---|---|---|
-| `nw-schnupperkurs.jpg` (**neu**) | Beitragsbild Schnupperkurs (Karte, Startseite) | die Porträts von Monika Ananda Wiese und Jan Henning Foh nebeneinander | zusammengesetzt aus `dz-wiese.jpg` und `dz-foh.jpg` (neue Porträtserie, `SEITE-dozenten.md`, Abschnitt 5) |
+| `nw-schnupperkurs.jpg` (**neu**) | Beitragsbild Schnupperkurs (Karte, Startseite) | die Porträts von Monika Ananda Wiese und Jan Henning Foh nebeneinander | zusammengesetzt aus Monikas Foto (Wix `7530fd_e6e0a094…png`, Korrektur Tom 26.09.2026) und `dz-foh.jpg` (neue Porträtserie) – in Affinity nachbauen oder im Beitrag zwei Bilder nebeneinander |
 | `dz-wiese.jpg`, `dz-foh.jpg` | im Beitrag Schnupperkurs, zwei Porträts | Porträts | wie Dozent:innen-Seite |
 | `aktuell-martina-uwe.jpg` | Beitragsbild Sommerakademie | Martina Baumann mit Gouni, Uwe Loda mit Zither | Startseite, schon vorhanden |
 | `nw-gouni.jpg` (**neu**) | im Beitrag Sommerakademie | Hände an den Saiten der Gouni | Startseite, Wix `7530fd_789cae41…png` („Martina und Uwe.png“), verkleinert auf 800 px |
@@ -233,9 +233,10 @@ Alle Fotos stammen von der Webseite (Wix-Medien). In Wix die **Originale** verwe
 
 **Warum hier Fotos „doppelt“ vorkommen:** Das Beitragsbild erscheint absichtlich überall, wo der Beitrag angezeigt wird
 (Blog-Seite, Startseite, Mitglied sein) – das macht Wix Blog automatisch, es ist dieselbe Datei, keine Kopie.
-Für die Schnupperkurs-Karte wurden die Porträts aus der **neuen** Porträtserie genommen statt der älteren, uneinheitlichen
-Fotos der Live-Seite (`7530fd_e6e0a094…png`, `7530fd_98176106…png`); eine pHash-Prüfung ergab: das ältere Foto von Jan Henning Foh
-ist fast gleich wie `dz-foh.jpg` (Abstand 12), deshalb wurde es nicht zusätzlich gespeichert.
+Für die Schnupperkurs-Karte zuerst beide Porträts aus der neuen Porträtserie. **Korrektur Tom (26.09.2026):** Für Monika Ananda Wiese
+wird an allen Stellen ihr Foto von der Live-Seite verwendet (`7530fd_e6e0a094…png`, `SEITE-dozenten.md`, Abschnitt 5). Für Jan Henning
+Foh bleibt `dz-foh.jpg`; eine pHash-Prüfung ergab: sein älteres Foto (`7530fd_98176106…png`) ist fast gleich (Abstand 12), deshalb
+wurde es nicht zusätzlich gespeichert.
 **Einwilligungen:** Die Personen stehen schon mit diesen Fotos auf der Webseite. Die neue Verwendung (dauerhaft im Archiv, als
 Karte auf mehreren Seiten, beim Teilen in Social Media) vor dem Übertragen kurz bestätigen lassen (Abschnitt 7, Punkt 3).
 

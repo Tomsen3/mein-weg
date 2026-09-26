@@ -279,7 +279,7 @@ wo das Foto steht:
 | `frage1-singleiterin.jpg` | Frage 1 (Singleiter:in werden) | Singleiterin singt mitten in der Gruppe |
 | `frage2-mitglieder.jpg` | Frage 2 (Mitglied werden) | lachende Mitgliedergruppe |
 | `frage3-singgruppe.jpg` | Frage 3 (Singgruppe finden) | Singkreis von hinten |
-| `weiterbildung-monika-ananda.jpg` | Weiterbildung | Porträt Dozentin Monika Ananda Wiese (seit 26.09.2026 aus der neuen Porträtserie, `SEITE-dozenten.md`, Abschnitt 5) |
+| `weiterbildung-monika-ananda.jpg` | Weiterbildung | Porträt Dozentin Monika Ananda Wiese (seit 26.09.2026 ihr Foto mit Brille und grauem Mantel – Korrektur Tom, Ausnahme von der neuen Porträtserie, `SEITE-dozenten.md`, Abschnitt 5) |
 | `nw-schnupperkurs.jpg`, `aktuell-martina-uwe.jpg`, `aktuell-alwine.jpg` (und `aktuell-nicole.jpg`, wenn der Fokus-Beitrag unter den drei neuesten ist) | Aktuelles | Beitragsbilder – kommen in Wix automatisch aus dem Blog (`SEITE-netzwerk.md`, Abschnitt 5) |
 
 In Wix sind diese Fotos bereits in der Medienverwaltung – dort das **Original** verwenden, nicht

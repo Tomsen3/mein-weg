@@ -204,6 +204,12 @@ Bildvergleich geprüft: keines ist auf einer anderen Foto-Vorschau verwendet. In
 `weiterbildung-monika-ananda` (880 × 1100). Sichtbar anders als vorher: Elke Wünnenberg (Über uns), Monika Ananda Wiese
 (Startseite), Sonja Heim (Für Einrichtungen), Vera Kimmig (Weiterbildung); die übrigen zeigten schon Fotos dieser Serie.
 
+**Ausnahme Monika Ananda Wiese (Korrektur Tom, 26.09.2026):** Auf Wunsch von Tom zeigt jede Stelle, an der sie auftaucht, **ihr
+anderes Foto** (lächelnd, Brille, grauer Mantel mit pinkfarbener Kapuze, heller Hintergrund) statt des Fotos aus der neuen Serie. Quelle:
+Startseite, Wix `7530fd_e6e0a094…png` (1122 × 1402, von Tom geschickt). Neu erzeugt: `dz-wiese.jpg` (600 × 600, Dozent:innen-Karte),
+`weiterbildung-monika-ananda.jpg` (880 × 1100, Startseite), `nw-schnupperkurs.jpg` (Beitragsbild „Aus dem Netzwerk“). In Wix überall
+dieses Original verwenden.
+
 **Nicht verwendet:** die Einzelfotos von Katharina und Wolfgang Bossinger (Paarfoto stattdessen), die zwei
 Stockvideos hinter den Menuhin-Zitaten (Singende in einer Kirche; Klangschale im Gras – Wix-Medien `11062b_…` bzw. ohne
 Vereinsbezug).
