@@ -29,12 +29,12 @@ python3 vorschau-paket/erzeuge_paket.py "https://forms.office.com/…"
 
 | Frage | Entscheidung | Grund |
 |---|---|---|
-| Wo liegen die Dateien? | **Cloudflare Pages** (kostenlos) | lädt einen fertigen Ordner hoch, eigene Adresse möglich, 0 € |
+| Wo liegen die Dateien? | **Cloudflare Workers** (Assets-Hosting, kostenlos; hat Cloudflare Pages inzwischen abgelöst) | lädt einen fertigen Ordner hoch, 0 € |
 | Wer kommt hinein? | **Cloudflare Access** (kostenlos bis 50 Personen): nur freigegebene E-Mail-Adressen, Anmeldung mit Einmal-Code per E-Mail | kein Konto, kein Passwort; Vorschau ist nicht öffentlich |
-| Adresse | `vorschau.singende-krankenhaeuser.de` (Vorschlag) | eigene Domain, kein Hinweis auf Dienstleister |
-| DNS-Eintrag | im **Wix-Dashboard** (Tom: „ich kann in Wix eine eigene Subdomain anlegen“) | Domain wird über Wix verwaltet |
+| Adresse | `sikra-vorschau.<Cloudflare-Benutzername>.workers.dev` (**nicht** die ursprünglich geplante eigene Domain – siehe „Abweichungen“ in Abschnitt 3) | kein Claude/Anthropic-Bezug, 0 €, kein DNS-Risiko für die echte Webseite |
+| DNS-Eintrag | **entfällt** – keine eigene Domain nötig | Wix-DNS und E-Mail (MX) bleiben unangetastet |
 | Rückmeldungen | **Microsoft Forms** (Non-Profit-M365) | kostenlos, Antworten landen gesammelt in Excel |
-| Nicht gewählt | Wix-Subdomain als eigene Wix-Website (Nachbau + eigenes Premium-Abo); ZIP über OneDrive (umständlich, am Handy kaum nutzbar) | Aufwand bzw. Kosten |
+| Nicht gewählt | Eigene Domain `vorschau.singende-krankenhaeuser.de` (würde Nameserver-Umstellung der ganzen Domain zu Cloudflare erfordern, Risiko für Wix-Webseite und E-Mail); Wix-Subdomain als eigene Wix-Website (Nachbau + eigenes Premium-Abo); ZIP über OneDrive (umständlich, am Handy kaum nutzbar) | Aufwand bzw. Risiko/Kosten |
 
 **Datenschutz:** Cloudflare (USA, EU-US Data Privacy Framework) sieht die IP-Adressen der Besucher:innen und die E-Mail-Adressen
 für den Code. Es ist eine interne Vorschau für das Leitungsteam; die Seiten enthalten nur Inhalte, die schon öffentlich auf der
@@ -42,36 +42,65 @@ Webseite stehen. Nach der Abnahme das Cloudflare-Projekt löschen (Abschnitt 5).
 
 ## 3. Einrichten – Schritt für Schritt (ca. 45 Minuten)
 
+**Hinweis (Stand 26.09.2026, tatsächlicher Ablauf – weicht an zwei Stellen von der ursprünglichen Planung ab, Details siehe
+„Abweichungen“ unten):**
+
 **A. Cloudflare-Konto** (5 Min.): `dash.cloudflare.com/sign-up` – mit einer Vereinsadresse (z. B. tom.jansen@…), kostenloser Tarif.
 
 **B. Seiten hochladen** (10 Min.):
-1. *Workers & Pages → Erstellen → Pages → Assets hochladen* (engl. „Upload assets“).
-2. Projektname: `skh-vorschau` → *Projekt erstellen*.
-3. Die ZIP-Datei `vorschau-paket.zip` hochladen (oder den entpackten Ordner hineinziehen) → *Bereitstellen*.
-4. Cloudflare zeigt eine Adresse `skh-vorschau.pages.dev` – kurz öffnen, Startseite muss die Abnahme-Übersicht zeigen.
+1. Cloudflare-Startseite → Kachel „Ship something new“ → die ZIP-Datei `vorschau-paket.zip` in das Feld „Drop a folder, or a zip“
+   ziehen. (Workers und Pages sind bei Cloudflare inzwischen zusammengelegt; es gibt keinen separaten „Pages“-Menüpunkt mehr.)
+2. *Bereitstellen* klicken. Cloudflare vergibt automatisch einen Zufallsnamen (z. B. `nameless-scene-xxxx`) und eine Adresse
+   `<name>.<dein-cloudflare-benutzername>.workers.dev`.
+3. Projekt umbenennen: *Workers und Pages → Projekt öffnen → Einstellungen → Allgemeines → Name* → `sikra-vorschau` eintragen,
+   *Bereitstellen*. Adresse ist danach `sikra-vorschau.<benutzername>.workers.dev`.
+4. Adresse öffnen, Startseite muss die Abnahme-Übersicht zeigen.
 
-**C. Eigene Adresse** (10 Min.):
-1. Im Pages-Projekt *Benutzerdefinierte Domains → Domain einrichten* → `vorschau.singende-krankenhaeuser.de`.
-2. Cloudflare nennt einen **CNAME-Eintrag**: Name `vorschau`, Ziel `skh-vorschau.pages.dev`.
-3. Im **Wix-Dashboard**: *Einstellungen → Domains → (eure Domain) → DNS-Einträge verwalten → CNAME → Eintrag hinzufügen*,
-   Host `vorschau`, Wert `skh-vorschau.pages.dev`, speichern. (Nicht `www` oder `@` ändern!)
-4. Warten, bis Cloudflare „Aktiv“ zeigt (einige Minuten bis wenige Stunden).
+**C. Eigene Adresse – entfällt, siehe Abweichung 1 unten.** Wir bleiben bei der `workers.dev`-Adresse aus Schritt B.
 
-**D. Zugangsschutz** (15 Min.) – **vor** dem Verschicken der Adresse:
-1. *Zero Trust* öffnen (beim ersten Mal Teamnamen wählen, Tarif **Free**; es wird ggf. eine Zahlungsart abgefragt, berechnet wird im
-   Free-Tarif nichts).
-2. *Access → Anwendungen → Anwendung hinzufügen → Selbst gehostet* („Self-hosted“).
-3. Name „SKH Vorschau“; **zwei** Adressen eintragen: `vorschau.singende-krankenhaeuser.de` **und** `skh-vorschau.pages.dev`
-   (sonst ist die pages.dev-Adresse offen!).
-4. Richtlinie „Leitungsteam“: Aktion *Zulassen*, Regel *E-Mails* → die Adressen von Martin, Paula, Sonja, Vera, Sandra, Tom.
-5. Anmeldemethode: *Einmal-PIN* („One-time PIN“).
-6. Test im privaten Browserfenster: Adresse öffnen → E-Mail eingeben → Code aus der Mail → Übersicht erscheint. Mit einer **nicht**
-   freigegebenen Adresse darf kein Code kommen.
+**D. Zugangsschutz** (15–20 Min., mit den Cloudflare-Eigenheiten unten eher 25 Min.) – **vor** dem Verschicken der Adresse:
+1. *Zero Trust* öffnen (beim ersten Mal Teamnamen wählen, Tarif **Free**; evtl. wird eine Zahlungsart abgefragt, berechnet wird im
+   Free-Tarif nichts – 0 $/Monat bis 50 Nutzer:innen).
+2. *Zugriffssteuerungen → Anwendungen → Neue Anwendung erstellen → Selbst gehostet und privat*.
+3. Bei „Ziele“ den Reiter **„Workers“** wählen (nicht „Öffentliches DNS“ – Custom Domains für Workers verlangen sonst, dass die
+   ganze Domain-Zone zu Cloudflare transferiert wird, siehe Abweichung 1), Worker `sikra-vorschau` auswählen, **und auf
+   „+ Workers hinzufügen“ klicken** (die reine Dropdown-Auswahl reicht nicht, sie muss extra bestätigt werden – die „Vorschau“
+   unten auf der Seite aktualisiert sich dabei nicht zuverlässig live, das ist eine Anzeige-Macke, kein Fehler).
+4. Richtlinie „Leitungsteam“ neu erstellen: Aktion *Erlauben*, Regel *E-Mails* → die Adressen von Martin, Paula, Sonja, Vera,
+   Sandra und Tom eintragen.
+5. Name der Anwendung ausfüllen (**Pflichtfeld**, wird leicht übersehen): `SKH Vorschau`.
+6. Ganz nach unten scrollen und wirklich auf **„Erstellen“** klicken – nicht vorher zu einer anderen Dashboard-Seite wechseln,
+   sonst geht die Konfiguration verloren (ist uns beim ersten Versuch passiert).
+7. **Anmeldemethode prüfen** (wichtigster Stolperpunkt, siehe Abweichung 2): *Zugriffssteuerungen → Integrationen von
+   Identitätsanbietern*. Falls dort ein Anbieter „Cloudflare“ steht: löschen (drei Punkte → Löschen) – der führt sonst zum
+   normalen Cloudflare-Account-Login (Passwort/Google/GitHub), den externe Nutzer:innen nicht haben. Dann
+   „+ Identitätsanbieter hinzufügen“ → **„One-time PIN“** auswählen. Ohne diesen Schritt bekommen Besucher:innen die Meldung
+   „There are no login methods available for this account“.
+8. Test im privaten Browserfenster: Adresse öffnen → E-Mail eingeben → „Send login code“ → Code aus der Mail eingeben →
+   Übersicht muss erscheinen. Mit einer **nicht** freigegebenen Adresse darf kein Code funktionieren (Gegentest empfohlen).
 
-**E. Forms-Formular** (Abschnitt 4), Link ins Paket (Skript mit Link aufrufen), ZIP erneut hochladen (*Neue Bereitstellung*).
+**E. Forms-Formular** (Abschnitt 4), Link ins Paket (Skript mit Link aufrufen), ZIP erneut hochladen (*Neue Bereitstellung*,
+gleicher Weg wie B.1–B.2, diesmal auf das bestehende Projekt `sikra-vorschau`).
 
-**F. Einladung verschicken:** Adresse `https://vorschau.singende-krankenhaeuser.de`, Hinweis „Anmeldung mit deiner E-Mail-Adresse,
-du bekommst einen Code“, Rückmeldefrist.
+**F. Einladung verschicken:** Adresse `https://sikra-vorschau.<benutzername>.workers.dev`, Hinweis „Anmeldung mit deiner
+E-Mail-Adresse, du bekommst einen Code“, Rückmeldefrist.
+
+### Abweichungen von der ursprünglichen Planung (26.09.2026)
+
+1. **Keine eigene Domain (`vorschau.singende-krankenhaeuser.de`) – stattdessen `workers.dev`-Adresse.** Grund: Cloudflare hat
+   Workers und Pages zusammengelegt; die „Custom Domain“-Funktion für Workers verlangt jetzt, dass die **komplette Domain**
+   (`singende-krankenhaeuser.de`) als Zone zu Cloudflare gehört (Nameserver-Umstellung) – nicht mehr nur ein CNAME-Eintrag im
+   Wix-Dashboard wie ursprünglich geplant. Eine Nameserver-Umstellung würde die live laufende Wix-Webseite und den
+   E-Mail-Empfang (MX-Einträge) der ganzen Organisation betreffen – zu viel Risiko für eine interne Vorschau. Die
+   `workers.dev`-Adresse erfüllt die eigentliche Anforderung („kein Claude/Anthropic-Bezug sichtbar“) genauso gut, kostet 0 €
+   und hat kein DNS-Risiko. Falls doch mal eine eigene Domain gewünscht ist: entweder die Nameserver-Umstellung bewusst und mit
+   Zeitpuffer separat planen, oder prüfen, ob Cloudflare zu einem späteren Zeitpunkt wieder eine einfachere Custom-Domain-Option
+   für Workers anbietet.
+2. **Anmeldemethode „One-time PIN“ musste explizit hinzugefügt werden.** In diesem Cloudflare-Konto war unter „Integrationen von
+   Identitätsanbietern“ bereits ein Anbieter „Cloudflare“ vorhanden (Standard-Account-Login) – der hat den eigentlich als
+   Vorgabe dokumentierten Einmalcode-Login verdrängt. Erst nach Löschen dieses Anbieters und explizitem Hinzufügen von
+   „One-time PIN“ hat der Zugang wie geplant funktioniert. Bei einem ganz neuen/leeren Cloudflare-Zero-Trust-Konto ist dieser
+   Schritt möglicherweise nicht nötig – aber sicherheitshalber immer unter „Integrationen von Identitätsanbietern“ prüfen.
 
 ## 4. Microsoft-Forms-Formular
 
@@ -121,12 +150,13 @@ Aktueller Link (Formular „Rückmeldung neue Webseite“, angelegt 26.09.2026):
 |---|---|
 | Vorschau geändert | Skript neu ausführen, ZIP in Cloudflare als neue Bereitstellung hochladen |
 | Person kommt dazu | Zero Trust → Access → Anwendung → Richtlinie → E-Mail ergänzen |
-| Abnahme abgeschlossen | Cloudflare-Projekt löschen, Access-Anwendung löschen, CNAME `vorschau` in Wix löschen |
+| Abnahme abgeschlossen | Cloudflare-Projekt (`sikra-vorschau`) löschen, Access-Anwendung „SKH Vorschau“ löschen |
 
 ## 6. Checkliste
 
 - [ ] Paket mit Forms-Link erzeugt, keine Fehlermeldung des Skripts?
-- [ ] Beide Adressen (eigene und `pages.dev`) nur mit Code erreichbar?
+- [ ] `workers.dev`-Adresse nur mit E-Mail-Code erreichbar (Anmeldemethode „One-time PIN“ unter „Integrationen von
+      Identitätsanbietern“ geprüft, kein störender „Cloudflare“-Anbieter aktiv)?
 - [ ] Mit nicht freigegebener E-Mail kein Zugang?
 - [ ] Alle Seiten und Bilder laden, Direktlinks (`/#dozenten`) funktionieren?
 - [ ] Forms-Formular getestet, Antworten kommen in Excel an?
