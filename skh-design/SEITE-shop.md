@@ -204,6 +204,7 @@ Einzelheiten stehen in AGB und Widerrufsbelehrung. Werden diese überarbeitet, d
 |---|---|---|---|---|
 | alle 13 Vorschauen | Fußzeile, „Mitmachen“ → Shop | `#` | → `vorschau-foto-shop.html` | Vorschau gibt es jetzt |
 | Kontakt | Wegweiser „Bestellungen im Shop“, „Zum Shop →“ | `#` | → `vorschau-foto-shop.html` | wie oben |
+| alle 16 Foto-Vorschauen (Nachtrag 26.09.2026, nach Abnahme-Hinweis von Tom) | Kopfleiste | Shop nur in der Fußzeile | zusätzlich kleiner Link „Shop“ mit Tüten-Symbol neben „Mitglied werden“; auf den Shop-Seiten gelb unterstrichen | Besucher:innen suchen den Shop oben; kein 7. Menüpunkt (`DESIGN-foto.md`, Abschnitte 4 und 5) |
 | Downloads | „Nicht dabei?“ | – | neue Zeile „Liedblätter zur Guitar- und Ukulele-Factory, Liederbücher, CDs – kostenpflichtig – Shop“ | wer Liedblätter unter Downloads sucht, findet den Weg (Fund 11) |
 
 Kopfleiste und Fußzeile (mit „Vertrag widerrufen“) sowie das gesamte CSS sind aus `vorschau-foto-veranstaltung.html`

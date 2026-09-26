@@ -178,6 +178,8 @@ Regeln:
   Häufige Fragen → ist für **kein** Thema Hauptort: je Frage ein bis zwei Sätze und genau ein Link, ohne Preise, Zahlen, Fristen,
   Termine oder Namen – Tagungsfragen bleiben auf `/faq` der Jahrestagung).
   Übersicht aller Hauptorte: `SEITE-einrichtungen.md`, `SEITE-mitglied-sein.md`, `SEITE-termine.md`, `SEITE-ueber-uns.md`, `SEITE-dozenten.md`, `SEITE-kontakt.md`, `SEITE-landkarte.md`, `SEITE-anmeldung.md`, `SEITE-veranstaltung.md`, `SEITE-shop.md`, `SEITE-rechtliches.md` und `SEITE-faq.md`, jeweils Abschnitt 2.
+- **Shop-Link in der Kopfleiste:** schlichter Textlink mit Tüten-Symbol links neben „Mitglied werden“ – kein Menüpunkt, kein
+  zweiter Button (Entscheidung 26.09.2026, Abnahme-Hinweis Tom: „der Shop taucht nicht im Header auf“).
 - **Verboten:** Schrift direkt auf Fotos, Schatten, weitere Akzentfarben, eckige Buttons, fette Großüberschriften.
 
 ---
@@ -215,7 +217,7 @@ Menüpunkt „Mitglied sein“ und führt auf die Seite `/mitglied-sein`, siehe 
 | Bisher auf der Startseite | Neuer Ort | Grund |
 |---|---|---|
 | Menüpunkt JAHRESTAGUNG (9 Unterseiten) | Hinweisleiste oben + eigener Bereich, **der nicht neu gestaltet wird** (siehe „Entscheidung: Jahrestagung“ unten) | zeitlich begrenzt, sprengt das Menü |
-| Menüpunkte KONTAKT, SHOP | Fußzeile | selten gesucht, dort erwartet man sie |
+| Menüpunkte KONTAKT, SHOP | Fußzeile; der Shop zusätzlich als **kleiner Link „Shop“ mit Tüten-Symbol** in der Kopfleiste neben „Mitglied werden“ (Entscheidung Tom, 26.09.2026) | selten gesucht, dort erwartet man sie; den Shop suchen Besucher:innen trotzdem oben – der kleine Link ist kein 7. Menüpunkt |
 | Menüpunkt MITGLIED SEIN | gelber Button „Mitglied werden“ → Seite `/mitglied-sein` (`SEITE-mitglied-sein.md`) | wichtigste Handlung, soll auffallen |
 | Kasten „Modul F“ mit Schnupperkurs | erste Zeile in „Termine“; Schnupperkurse: Seite Termine (`#schnuppern`) | doppelte Information vermeiden |
 | „Was wir wollen“ (Vision) | Seite „Über uns“ (`#anliegen`, `SEITE-ueber-uns.md`) | Startseite zeigt Angebote, nicht Leitbild |
@@ -308,7 +310,8 @@ Seiten-Dokus; (3) die **Abnahme** der Vorschauen (Abschnitt 6, Schritt 11; Paket
 
 1. **Menü straffen:** Editor → *Menüs & Seiten* → Seiten „Jahrestagung“, „Kontakt“, „Shop“,
    „Mitglied sein“ aus dem Hauptmenü nehmen („Im Menü ausblenden“ – die Seiten bleiben erhalten).
-   Dann den Button „Mitglied werden“ in die Kopfleiste setzen.
+   Dann den Button „Mitglied werden“ in die Kopfleiste setzen und links daneben einen Textlink „Shop“ mit Tüten-Symbol
+   (PT Sans fett 17 px, Anthrazit, Symbol 22 px, Link auf die Shop-Übersicht; auf den Shop-Seiten gelb unterstrichen wie der aktive Menüpunkt).
 2. **Fotos zuerst:** Fotos sammeln, Einwilligungen prüfen, in Wix hochladen
    (*Medien* → *Hochladen*). Ohne gute Fotos diesen Stil **nicht** umsetzen.
 3. **Schrift:** PT Sans wählen (in Wix meist vorhanden, sonst hochladen:
