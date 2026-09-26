@@ -354,7 +354,8 @@ Spenden frei.
     (Kontaktseite, im PDF unter Ungarn)? George Kam Wing Ho für China **und** Kanada? Michael Stillwater aus der Liste
     nehmen, Gedenkzeile bis Februar 2027. Karin Juchem ist laut Kooperations-PDF auch Obfrau von „Sing Dich gesund“ –
     Verhältnis zu Sybille Mikula (Österreich-Module, `SEITE-termine.md`) klären. → Sonja.
-11. **Zahlen** „über 700 Mitglieder“ und „100 zertifizierte Einrichtungen“: Stand unbekannt. → Sandra (Mitglieder) und
+11. **Zahlen** „über 700 Mitglieder“ und „100 zertifizierte Einrichtungen“: Stand unbekannt. (Nachtrag 26.09.2026: Einrichtungen laut
+    Live-Landkarte **82** – Vorschau jetzt „über 80 zertifizierten Einrichtungen“, `SEITE-landkarte.md`, Befund 1.) → Sandra (Mitglieder) und
     Sonja (Zertifizierungen) liefern aktuelle Zahlen; dann den Quellenhinweis unter den Zahlen entfernen.
 12. **Organigramm:** nennt Regionalbeauftragte, Ethikrat, Arbeitskreise, Patenschaften und Förderer – gibt es sie? Wenn
     ja: je ein Satz auf „Über uns“; wenn nein: Organigramm vereinfachen (Canva, Autor Tom). Binnen-I „SingleiterInnen“

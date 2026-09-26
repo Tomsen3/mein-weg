@@ -68,14 +68,17 @@ Netzwerk_Vorlage.html  ──────────┘                        
 | Singleiter:innen | 311 | 42 | 8 | – | **361** |
 | Singkreise | 121 | 41 | 1 | – | **163** |
 | Online | – | – | – | 1 | **1** |
-| **Einrichtungen** | 0 | 0 | 0 | – | **0** |
+| **Einrichtungen** | 0 | 0 | 0 | – | **0** (Live-Karte am 26.09.2026: **82**, siehe unten) |
 | **Summe** | 432 | 83 | 9 | 1 | **525** |
 
 Angaben je Eintrag: E-Mail 497 ×, Telefon 280 ×, Webseite 229 ×, **Beruf 50 ×** (nicht von der Einwilligung gedeckt, Abschnitt 7).
 
 **Befunde:**
 
-1. **Keine einzige zertifizierte Einrichtung auf der Karte** – obwohl die Seite, „Für Einrichtungen“ (`SEITE-einrichtungen.md`,
+1. ~~**Keine einzige zertifizierte Einrichtung auf der Karte**~~ – **überholt** (Korrektur Tom, 26.09.2026): Auf der **Live-Karte** stehen
+   **82 Einrichtungen** (von Tom über den Filter „Einrichtungen“ geprüft). Die Datei im OneDrive (23.08.2026) ist also nicht die
+   Live-Fassung – Offener Punkt 1 damit beantwortet. Die Vorschau zählt die 82 mit (Etikett „82 Einträge“, Zähler 607), zeichnet sie
+   aber nicht ein, weil ihre Orte nicht vorlagen. Früherer Befund: – obwohl die Seite, „Für Einrichtungen“ (`SEITE-einrichtungen.md`,
    Abschnitt 2: „Liste der zertifizierten Einrichtungen → Singende Landkarte“) und die Ehrenvorsitzenden-Seite („100 zertifizierte
    Einrichtungen“) das versprechen. Reiter und Filter „Einrichtung“ sind leer. → Offener Punkt 2.
 2. **„Stand:“ oben in der Karte zeigt immer das heutige Datum** (wird beim Öffnen berechnet), nicht das Datum der Daten. Das
@@ -347,9 +350,11 @@ Rechtsberatung. Bei Zweifeln die Datenschutzbeauftragte bzw. den Verein beraten 
 
 ## 8. Offene Punkte – vor der Veröffentlichung klären
 
-1. **Live-Fassung der Karte bestätigen:** Ist die Datei im Wix-HTML-Element dieselbe wie `netzwerkkarte.html` vom 23.08.2026 im
+1. ~~**Live-Fassung der Karte bestätigen:**~~ – **erledigt** 26.09.2026: Live ist eine neuere Fassung (mit 82 Einrichtungen). Die aktuelle
+   Excel-Datei bzw. `netzwerkkarte.html` bitte in den Ordner `04_Gemeinsame Karte` legen, damit Doku und Ablage stimmen. Ursprüngliche Frage: Ist die Datei im Wix-HTML-Element dieselbe wie `netzwerkkarte.html` vom 23.08.2026 im
    OneDrive? (Wix-Editor → Element anklicken → „Code bearbeiten“ → URL ansehen.) → Tom.
-2. **Zertifizierte Einrichtungen fehlen auf der Karte** (0 statt „100“). Liste der zertifizierten Einrichtungen mit Ort, Typ und
+2. ~~**Zertifizierte Einrichtungen fehlen auf der Karte**~~ – **erledigt**: 82 auf der Live-Karte (26.09.2026). Offen bleibt nur, ob die
+   Zertifizierungs-Vereinbarung einen Satz zur Veröffentlichung enthält. Ursprünglich: (0 statt „100“). Liste der zertifizierten Einrichtungen mit Ort, Typ und
    Zertifizierungsdatum zusammenstellen; Zustimmung zur Veröffentlichung (Satz in der Vereinbarung) klären; dann eintragen. Bis
    dahin: Etikett „in Vorbereitung“ (so in der Vorschau) oder Reiter ausblenden. → Tom (Liste der zertifizierten Einrichtungen ggf. aus den Zertifizierungsunterlagen).
 3. **Singkreise – Einwilligung:** Woher stammen die 163 Einträge, gibt es Einwilligungen? Vorschlag Meldetext für neue Gruppen:
@@ -382,7 +387,7 @@ Rechtsberatung. Bei Zweifeln die Datenschutzbeauftragte bzw. den Verein beraten 
 - [ ] Datenschutzerklärung um „Singende Landkarte“ ergänzt?
 - [ ] Markerfarbe nach Art, Legende stimmt?
 - [ ] Filter, PLZ-Suche, Klick auf Punkt und „PDF / Drucken“ auf Desktop **und** Handy getestet?
-- [ ] Einrichtungen eingetragen – oder Etikett „in Vorbereitung“ gesetzt?
+- [ ] Etikett „Einrichtungen“ zeigt die aktuelle Zahl (26.09.2026: 82)?
 - [ ] Zahlen auf der Seite (Titel, Etiketten) stimmen mit der Karte überein?
 - [ ] Knopf „Mitglied werden“ → `/mitglied-sein`?
 - [ ] Alle Links der Nachbarseiten zeigen auf die richtigen Sprungmarken?

@@ -833,7 +833,7 @@ form.form .pill{border:0;cursor:pointer;font-family:inherit}
 }
 </style>
 
-<div class="note">Abnahme-Paket „Vorschlag Tom“ – Seite Singende Landkarte. Inhalte von singende-krankenhaeuser.de (Seite „Singende Landkarte“, Zertifikatsanträge, Stand 25.09.2026) und aus der Kartendatei „netzwerkkarte.html“ (Stand 23.08.2026). Die Karte zeigt nur gerundete Punkte ohne Namen; die Einträge in der Liste sind erfunden.</div>
+<div class="note">Abnahme-Paket „Vorschlag Tom“ – Seite Singende Landkarte. Inhalte von singende-krankenhaeuser.de (Seite „Singende Landkarte“, Zertifikatsanträge, Stand 25.09.2026) und aus der Kartendatei „netzwerkkarte.html“ (Stand 23.08.2026); Einrichtungen: 82 laut Live-Karte (Filter, geprüft von Tom am 26.09.2026). Die Karte zeigt nur gerundete Punkte ohne Namen; die Einträge in der Liste sind erfunden.</div>
 
 <div class="notice"><b>Jahrestagung 2027:</b> Programm, Workshops, Liedernacht und Anmeldung · <a href="https://www.singende-krankenhaeuser.de/jahrestagung2027">Zur Jahrestagung →</a></div>
 
@@ -891,7 +891,7 @@ form.form .pill{border:0;cursor:pointer;font-family:inherit}
         <button class="pill gold" type="submit" style="border:0;cursor:pointer;font-family:inherit;align-self:flex-start;padding:12px 22px">Suchen</button>
         <p class="lk-hint" id="plz-hint" hidden>In der Vorschau ohne Funktion. Auf der echten Seite zeigt die Karte dann nur Einträge im gewählten Umkreis.</p>
       </form>
-      <p class="lk-count" aria-live="polite"><b id="cnt">525</b> Einträge</p>
+      <p class="lk-count" aria-live="polite"><b id="cnt">607</b> Einträge</p>
       <ul class="lk-list" aria-label="Beispiel-Einträge">
         <li><b>Vorname Nachname</b><span class="tag">Singleiter:in</span><span>12345 Musterstadt · Bayern</span><span><a href="#karte">Telefon</a> · <a href="#karte">E-Mail</a> · <a href="#karte">Webseite</a></span><span class="ex">Beispiel-Eintrag</span></li>
         <li><b>Offener Singkreis Musterstadt</b><span class="tag">Singkreis</span><span>12345 Musterstadt · Leitung: Vorname Nachname</span><span><a href="#karte">E-Mail</a> · <a href="#karte">Webseite</a></span><span class="ex">Beispiel-Eintrag</span></li>
@@ -905,7 +905,7 @@ form.form .pill{border:0;cursor:pointer;font-family:inherit}
       <svg id="lk-svg" viewBox="0 0 780 980" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="svg-t"><title id="svg-t">Verteilung der Einträge über Deutschland, Österreich und die Schweiz</title><g id="dots"></g>
         <text class="lab" x="367" y="350" text-anchor="middle">Deutschland</text><text class="lab" x="573" y="850" text-anchor="middle">Österreich</text><text class="lab" x="181" y="910" text-anchor="middle">Schweiz</text></svg>
       <div class="lk-pop" aria-hidden="true"><b>Vorname Nachname</b><span class="tag">Singleiter:in</span><span>12345 Musterstadt · Bayern</span><a href="#karte">Anrufen</a><a href="#karte">E-Mail schreiben</a><a href="#karte">Webseite ↗</a></div>
-      <p class="lk-note">Vorschau: Punkte auf ca. 25 km gerundet, ohne Kartenhintergrund. Auf der echten Seite liegt darunter die Straßenkarte.</p>
+      <p class="lk-note">Vorschau: Punkte auf ca. 25 km gerundet, ohne Kartenhintergrund; die 82 Einrichtungen sind mitgezählt, aber nicht eingezeichnet (ihre Orte lagen für die Vorschau nicht vor). Auf der echten Seite liegt darunter die Straßenkarte.</p>
     </div>
   </div>
   <ul class="legend-lk"><li><i style="background:var(--deep)"></i>Singleiter:innen</li><li><i style="background:var(--leaf)"></i>Singkreise</li><li><i style="background:var(--gold)"></i>zertifizierte Einrichtungen</li><li>Ein großer Punkt = mehrere Einträge am selben Ort</li></ul>
@@ -936,9 +936,9 @@ form.form .pill{border:0;cursor:pointer;font-family:inherit}
     </article>
     <article>
       <div class="photo"><img src="fotos/lk-einrichtung.jpg" alt="Von hinten: Menschen sitzen im Stuhlkreis, vorne eine Frau mit bunter Strickjacke und eine Ordensschwester" loading="lazy"></div>
-      <span class="tag">in Vorbereitung</span>
+      <span class="tag">82 Einträge</span>
       <h3>Zertifizierte Einrichtungen</h3>
-      <p>Krankenhäuser, Pflege- und Gesundheitseinrichtungen, in denen regelmäßig gesungen wird. Sie kommen als eigene Ebene auf die Karte.</p>
+      <p>Krankenhäuser, Pflege- und Gesundheitseinrichtungen, in denen regelmäßig gesungen wird – auf der Karte als gelbe Punkte.</p>
       <a class="ghost" href="vorschau-foto-einrichtungen.html#voraussetzungen">So wird eine Einrichtung zertifiziert →</a>
     </article>
   </div>
@@ -1059,6 +1059,8 @@ function draw(){
     c.setAttribute('stroke','#fff'); c.setAttribute('stroke-width','1.5');
     g.appendChild(c);
   });
+  // 82 zertifizierte Einrichtungen (Live-Karte, geprüft von Tom am 26.09.2026) – ohne Orte, nur mitgezählt
+  if((art==='alle'||art==='E')&&land==='alle') n+=82;
   document.getElementById('cnt').textContent=n;
 }
 function seg(id,set){
