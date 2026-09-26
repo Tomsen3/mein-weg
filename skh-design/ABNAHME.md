@@ -13,13 +13,13 @@ abschließen können – auch bei einer späteren Überarbeitung.
 
 ## 1. Ausgangslage
 
-- Alle Seiten außerhalb der Jahrestagung haben eine Vorschau und eine Doku (`DESIGN-foto.md`, Übersicht). Das sind 16 Vorschauen im
+- Alle Seiten außerhalb der Jahrestagung haben eine Vorschau und eine Doku (`DESIGN-foto.md`, Übersicht). Das sind 17 Vorschauen im
   Ordner `skh-design/`. Die frühere Vergleichsvariante „Fable“ (`vorschau.html`) ist nicht Teil der Abnahme (Entscheidung 7).
 - Jede Seiten-Doku nennt in Abschnitt 6 die Personen, die „ihre“ Seite abnehmen sollen, und in Abschnitt 7 offene Fragen – zusammen
-  über 100 Punkte, verteilt auf 17 Dokumente. Einzeln verschickt wären das 16 Abnahme-Runden.
+  über 100 Punkte, verteilt auf 18 Dokumente. Einzeln verschickt wären das 17 Abnahme-Runden.
 - `DESIGN-foto.md`, Abschnitt 6, Schritt 11, sieht vor: „Vorschau an Sonja, Martin und Paula schicken, erst danach live umsetzen.“
 
-**Problem:** Niemand soll 17 Dokumente lesen müssen, und niemand soll Seiten ansehen, die ihn nicht betreffen.
+**Problem:** Niemand soll 18 Dokumente lesen müssen, und niemand soll Seiten ansehen, die ihn nicht betreffen.
 
 ---
 
@@ -27,7 +27,7 @@ abschließen können – auch bei einer späteren Überarbeitung.
 
 ### Entscheidung 1: **Eine Abnahme-Runde für alles, mit einer Übersichtsseite**
 
-Statt 16 Einzelrunden gibt es **eine** Übersichtsseite (`abnahme.html`) mit vier Teilen: Grundsätze, Seiten, Fragen je Person,
+Statt 17 Einzelrunden gibt es **eine** Übersichtsseite (`abnahme.html`) mit vier Teilen: Grundsätze, Seiten, Fragen je Person,
 Rückmeldebogen. **Gründe:** (1) Weniger Mails und Termine (**Einsparmöglichkeit**: Arbeitszeit aller Beteiligten). (2) Die Grundsätze
 werden einmal entschieden, nicht bei jeder Seite neu diskutiert. (3) Jede Person sieht auf einen Blick, was sie betrifft.
 
@@ -69,7 +69,7 @@ zusammen bleibt. Einzelne Dateien per Mail zu schicken geht deshalb nicht.
 | **C: Gemeinsamer Termin** | Vorstandssitzung (Teams), Tom teilt den Bildschirm | nichts zu verschicken, Fragen sofort geklärt | Geschäftsstelle braucht trotzdem A oder B für ihre Seiten |
 
 **Gewählt (Tom, 26.09.2026): A** – veröffentlicht als privater Link https://claude.ai/artifact/XsCqKTCemUZxgFSVAPuG9V
-(Übersicht, 16 Vorschauen, Link auf die heutige Jahrestagung-Seite, 101 Fotos, Vorschaubilder). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen, Rolle **„Mitwirkende:r“** (Contributor) – nur damit können sie im
+(Übersicht, 17 Vorschauen, Link auf die heutige Jahrestagung-Seite, 108 Fotos, Vorschaubilder; zuletzt neu veröffentlicht 26.09.2026 mit „Aus dem Netzwerk“). **Freigeben:** Link öffnen → Menü *Teilen* → Personen hinzufügen, Rolle **„Mitwirkende:r“** (Contributor) – nur damit können sie im
 Bogen speichern; als „Betrachter:in“ sehen sie nur den Bogen zum Abschreiben bzw. den Hinweis „Nur lesen“; ohne Freigabe
 können Martin, Paula, Sonja, Vera und Sandra die Seite **nicht** öffnen. Für den Vorstand zusätzlich C.
 **Nach Änderungen an Vorschauen** den Link aktualisieren (Claude: dieselbe Adresse neu veröffentlichen; die Vorschau-Dateien bekommen
@@ -123,12 +123,19 @@ Viele PDF-Knöpfe außerhalb von „Downloads“ waren noch Platzhalter (`#`). J
 Weiterhin Platzhalter (bewusst): Newsletter, Social Media (Konten falsch, `SEITE-dozenten.md`, Punkt 10), „Details & anmelden“ der
 Beispieltermine, Modulbeschreibung auf der Veranstaltungsvorlage, Shop-Produkte der Beispielansicht.
 
+### Nachtrag (26.09.2026): Seite „Aus dem Netzwerk“ aufgenommen
+
+Neue Seite nach Entscheidung Tom (`SEITE-netzwerk.md`). In `abnahme.html` ergänzt: Karte in Teil 2 (nach „Mitglied sein“, Vorschaubild
+`abnahme/vorschau-foto-netzwerk.jpg`), Frage an Vera in Teil 3, Zeile im Bogen (Teil 4, Schlüssel `s-netzwerk` – bisherige Rückmeldungen
+bleiben erhalten), Direktlink `#netzwerk`, „17 Seiten“ im Kopf. Mitgeprüft werden dabei die geänderte Startseite (Abschnitt „Aktuelles“)
+und „Mitglied sein“ (`#fokus`), deren Vorschaubilder unverändert bleiben (Änderung liegt unterhalb des sichtbaren Ausschnitts).
+
 ### Direktlinks (26.09.2026)
 
 Jede Vorschau lässt sich direkt aufrufen: Adresse des Abnahme-Links + `#` + Seitenname, z. B.
 `https://claude.ai/artifact/XsCqKTCemUZxgFSVAPuG9V#dozenten`. Namen: `start`, `weiterbildung`, `dozenten`, `anmeldung`, `sing-mit`,
-`landkarte`, `einrichtungen`, `termine`, `veranstaltung`, `ueber-uns`, `mitglied-sein`, `kontakt`, `downloads`, `shop`, `faq`,
-`rechtliches`. Technik: ein kleines Skript am Anfang von `abnahme.html` leitet bei diesen Namen auf die Vorschau weiter (der
+`landkarte`, `einrichtungen`, `termine`, `veranstaltung`, `ueber-uns`, `mitglied-sein`, `netzwerk`, `kontakt`, `downloads`, `shop`,
+`faq`, `rechtliches`. Technik: ein kleines Skript am Anfang von `abnahme.html` leitet bei diesen Namen auf die Vorschau weiter (der
 Link-Viewer gibt nur `#…` an die Seite weiter, keine Unterpfade).
 
 ## 4. Rückmeldungen sammeln und einarbeiten
