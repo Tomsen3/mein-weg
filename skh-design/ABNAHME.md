@@ -189,6 +189,13 @@ Rückmeldungen in die Seiten-Dokus zu übertragen.
    Gruppe A, Website-Name, Dankeseite) – 1–2 Stunden.
 2. **Website duplizieren** und den Stil an der Kopie umsetzen (`DESIGN-foto.md`, Abschnitt 6). Reihenfolge-Vorschlag: Grundstil und
    Kopf-/Fußzeile → Startseite → Weiterbildung, Termine, Anmeldung (größter Nutzen) → übrige Seiten → Weiterleitungen Gruppe C.
+   *Entscheidung (27.09.2026, Tom):* Wir bauen auf einem **Duplikat der aktiven Seite**, nicht auf der schon vorhandenen,
+   unveröffentlichten Wix-Seite. Begründung: Im Duplikat sind Apps und Einstellungen der aktiven Seite (Wix Events, Wix Stores,
+   Formulare, Mitgliederbereich, SEO-Einstellungen) sowie der Bereich Jahrestagung unverändert mitkopiert, und es entfällt ein
+   Umzug von Premium-Paket und Domain. Die unveröffentlichte Seite wird für die Neugestaltung nicht genutzt.
+   *Wichtig:* Kontakte, Anmeldungen und Bestellungen laufen während des Umbaus weiter auf der aktiven Seite ein, das Duplikat
+   enthält nur den Stand vom Tag des Kopierens. Deshalb vor dem Livegang klären, wie das Duplikat live geht (z. B. die neue
+   Gestaltung zurück in die aktive Seite übertragen oder Daten übertragen), und das hier festhalten.
 3. **Rechtstexte-Auftrag** parallel vergeben (Grundsatz 8).
 4. **Live schalten**, danach jede Seite am Handy durchklicken und die Checklisten (jeweils Abschnitt 8) abhaken.
 
