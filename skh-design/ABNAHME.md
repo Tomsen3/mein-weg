@@ -217,6 +217,11 @@ Rückmeldungen in die Seiten-Dokus zu übertragen.
    - **Kostenhinweis:** Die Verlängerung am 29.11.2026 zahlt 2 Jahre im Voraus. Vor dem Termin prüfen, ob Core noch passt
      (Shop-Zahlungen brauchen mindestens Core), und das Paket **erst nach dem Livegang** übertragen – sonst läuft die Kopie
      mit Paket, während die alte Seite noch gebraucht wird. → Abschnitt 7, Punkt 5.
+   *Entscheidungen (27.09.2026, Tom):* (a) „Sikra Deutsch Kopie“ ist das frische Duplikat der aktiven Seite und die einzige
+   Arbeitskopie. (b) Auch das Aufräumen (`SEITE-aufraeumen.md`, Abschnitt 6, Schritte 1–4) passiert **in der Kopie**, nicht auf
+   der aktiven Seite. Begründung: Die aktive Seite bleibt bis zur ausdrücklichen Freigabe unverändert; doppelte Arbeit entfällt.
+   Nachteil: Tote Links und Vorlagenseiten bleiben bis zum Livegang bei Google sichtbar. (c) Claude klickt im Editor selbst
+   (Claude in Chrome), kündigt jeden Schritt an und löscht oder veröffentlicht nur nach Toms ausdrücklichem Ja.
 3. **Rechtstexte-Auftrag** parallel vergeben (Grundsatz 8).
 4. **Live schalten**, danach jede Seite am Handy durchklicken und die Checklisten (jeweils Abschnitt 8) abhaken.
 
@@ -228,7 +233,7 @@ Vorschau stehen in der jeweiligen `SEITE-*.md` unter „Korrekturen“, nicht hi
 
 | Seite / Schritt | Doku | umgesetzt am | geprüft Handy | offen |
 |---|---|---|---|---|
-| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | | – | Wo umsetzen: aktive Seite oder Kopie? |
+| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | | – | in der Kopie (Entscheidung 27.09.2026) |
 | Grundstil (Farben, Schrift, Text-Themen, Button-Vorlage) | `DESIGN-foto.md` | | | |
 | Kopfleiste und Fußzeile (Menü, Untermenüs, Kontakt, Shop, Suche) | `DESIGN-foto.md` | | | Suche erst nach dem Aufräumen |
 | Startseite | `DESIGN-foto.md` | | | |
