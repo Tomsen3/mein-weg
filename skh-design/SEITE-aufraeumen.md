@@ -101,6 +101,16 @@ wirkt, doch etwas tun (z. B. Countdown auf den Jahrestagung-Seiten, Wix Music f�
 | `SEITE-rechtliches.md` | Abschnitt 4, Dienste-Liste | neue Zeile „weitere installierte Wix-Apps“ mit Verweis auf Fund 5 | Datenschutzerklärung nennt nur, was übrig bleibt |
 | `SEITE-anmeldung.md` | – | **nicht geändert** (gesperrt); Fund 9 und die Titel-Abweichung stehen in Abschnitt 7, Punkt 5 | Vorgabe |
 
+### Korrekturen bei der Umsetzung in Wix (27.09.2026, geprüft in der Arbeitskopie „Sikra Deutsch Kopie“)
+
+| Stelle | Plan | Befund in Wix | Folge / Begründung |
+|---|---|---|---|
+| Schritt 1, `Inquiry Services Page` und `ONLINE BUCHEN` | Seite *Löschen* | Beides sind **App-Seiten**: `Inquiry Services Page` gehört zu **Wix Services** (*Website-Seiten und Menü → Wix Services*), „Online buchen“ zu **Wix Bookings** (*→ Buchungsseiten*, dort zusammen mit „Dienstleistungsseite“, „Buchungskalender“, „Buchungsformular“). Das ···-Menü bietet nur *Einstellungen*, *SEO* und *Umbenennen* – **kein Löschen**. | Die Seiten verschwinden nur, wenn die App entfernt wird. Schritt 1 wird für diese beiden Seiten deshalb **mit Schritt 5 (Apps prüfen) zusammengelegt**: erst 5 a–c für Wix Bookings und Wix Services, dann *App entfernen*, danach Weiterleitungen Gruppe B. |
+| Schritt 1, `LP_Singing_Family` | *SEO → nicht indexieren* und aus dem Menü nehmen | War schon erledigt: im Menü ausgeblendet (durchgestrichenes Auge), Schalter *Suchmaschinen können die Seite indexieren* aus. | Nichts zu tun; Löschen weiter erst nach Rückfrage (Abschnitt 7, Punkt 1). |
+| Schritt 4, Dankeseite `/anmeldung-erfolgreich` | *SEO → nicht indexieren* | War schon erledigt (Schalter aus). Da die Kopie ein Duplikat ist, gilt das auch für die aktive Seite. | Nichts zu tun. Fund 9 damit erledigt. |
+| Schritt 3, Website-Name | „Sikra Deutschland“ → „Singende Krankenhäuser e.V.“ | In der Kopie steht als Website-Name **„Sikra Deutsch Kopie“** – er erscheint in jedem Google-Titel („Anmeldung erfolgreich \| Sikra Deutsch Kopie“). | Beim Umbenennen in der Kopie wird beides auf einmal behoben. |
+| Schritt 2, Weiterleitungen Gruppe A | sofort anlegen | Wir arbeiten in der Kopie (`ABNAHME.md`, Abschnitt 5); Weiterleitungen wirken dort erst ab dem Livegang. | Vorschlag: Gruppe A zusammen mit B und C am Ende anlegen (Reihenfolge im Umsetzungsauftrag), dann gleich mit dem endgültigen Ziel (`/haeufige-fragen` statt vorläufig `/kontakt`) – so entsteht keine Kette. |
+
 ---
 
 ## 3. Weiterleitungsliste (Hauptort)
@@ -269,7 +279,7 @@ Geschätzter Aufwand für Schritte 1–5: **1 bis 2 Stunden**. Alles geht **vor*
 - [ ] Website-Name „Singende Krankenhäuser e.V.“ – kein Google-Titel endet mehr auf „Sikra Deutschland“?
 - [ ] `/singende-landkarte` hat Titel und Beschreibung?
 - [ ] Alle Titel im Muster „Seitenname | Singende Krankenhäuser e.V.“, keine Großbuchstaben?
-- [ ] `/anmeldung-erfolgreich` nicht indexiert?
+- [x] `/anmeldung-erfolgreich` nicht indexiert? (geprüft 27.09.2026, war schon so)
 - [ ] App-Status-Tabelle ausgefüllt, ungenutzte Apps entfernt, ungenutzte Abos gekündigt?
 - [ ] **Danach** Suche (Lupe) in der Kopfleiste einblenden und testen: Tauchen nur echte Seiten auf, keine Vorlagenseiten und kein „Sikra Deutschland“? (`DESIGN-foto.md`, Abschnitt 4, Navigation nach Zielgruppen, Punkt 6)
 - [ ] Übrig gebliebene Apps an die Dienste-Liste (`SEITE-rechtliches.md`, Abschnitt 4) gegeben?

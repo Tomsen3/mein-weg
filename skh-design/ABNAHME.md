@@ -233,7 +233,7 @@ Vorschau stehen in der jeweiligen `SEITE-*.md` unter „Korrekturen“, nicht hi
 
 | Seite / Schritt | Doku | umgesetzt am | geprüft Handy | offen |
 |---|---|---|---|---|
-| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | | – | in der Kopie (Entscheidung 27.09.2026) |
+| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | teilweise 27.09.2026 (Schritt 4 war schon erledigt) | – | Schritt 1 nur über App-Entfernung (Bookings, Services); Schritt 3 Website-Name; Schritt 2 ans Ende verschoben |
 | Grundstil (Farben, Schrift, Text-Themen, Button-Vorlage) | `DESIGN-foto.md` | | | |
 | Kopfleiste und Fußzeile (Menü, Untermenüs, Kontakt, Shop, Suche) | `DESIGN-foto.md` | | | Suche erst nach dem Aufräumen |
 | Startseite | `DESIGN-foto.md` | | | |
