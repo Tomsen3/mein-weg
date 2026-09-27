@@ -237,8 +237,8 @@ Geschätzter Aufwand für Schritte 1–5: **1 bis 2 Stunden**. Alles geht **vor*
 
 | App | Vermutung | Befund (eingebaut? Daten? Abo?) | entfernt am |
 |---|---|---|---|
-| Wix Bookings | nur für `/book-online` | | |
-| Wix Services | nur für `/inquiry-services-page` | | |
+| Wix Bookings | nur für `/book-online` | **27.09.2026 (Kopie):** eingebaut nur auf den eigenen App-Seiten (Online buchen, Dienstleistungsseite, Buchungskalender, Buchungsformular) – keine andere der 38 Live-Seiten enthält ein Buchungs-Element (Quelltext-Abgleich). Daten: **kein** eigener Service angelegt (*Produkte & Services → Buchungsservices* zeigt nur Wix-Vorschläge). Abo: nein (einziges Abo im Konto ist das Premium-Paket Core). → entfernen | |
+| Wix Services | nur für `/inquiry-services-page` | **27.09.2026 (Kopie):** eingebaut nur auf `Inquiry Services Page`. Daten: 3 „Anfrage-Services“, alle **Wix-Mustertexte** (z. B. „Individuelles Webdesign ab 1.500 €“, „Suchmaschinenoptimierung ab 2.000 €“) – keine echten Inhalte. Abo: nein. → entfernen. *Achtung:* Auf der aktiven Seite ist diese Musterseite heute öffentlich erreichbar und steht in der Sitemap. | |
 | Wix Pricing Plans | keine sichtbare Verwendung | | |
 | Get Funding | keine sichtbare Verwendung (Spenden laufen per Überweisung, `SEITE-ueber-uns.md`) | | |
 | Wix Chat | keine sichtbare Verwendung; würde Besucherdaten speichern | | |
