@@ -233,7 +233,7 @@ Vorschau stehen in der jeweiligen `SEITE-*.md` unter „Korrekturen“, nicht hi
 
 | Seite / Schritt | Doku | umgesetzt am | geprüft Handy | offen |
 |---|---|---|---|---|
-| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | 27.09.2026: Schritt 3 (Website-Name) erledigt, Schritt 4 war schon erledigt | – | Schritt 1 nur über App-Entfernung (Bookings, Services); Schritt 2 ans Ende verschoben; Jahrestagungs-Titel (`SEITE-aufraeumen.md`, Abschnitt 7, Punkt 6) |
+| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | 27.09.2026: Schritt 3 (Website-Name) erledigt, Schritt 4 war schon erledigt | – | Schritt 1 erledigt (Wix Bookings und Wix Services entfernt, 27.09.2026); App-Liste abgleichen; Schritt 2 ans Ende verschoben; Jahrestagungs-Titel (`SEITE-aufraeumen.md`, Abschnitt 7, Punkt 6) |
 | Grundstil (Farben, Schrift, Text-Themen, Button-Vorlage) | `DESIGN-foto.md` | | | |
 | Kopfleiste und Fußzeile (Menü, Untermenüs, Kontakt, Shop, Suche) | `DESIGN-foto.md` | | | Suche erst nach dem Aufräumen |
 | Startseite | `DESIGN-foto.md` | | | |
