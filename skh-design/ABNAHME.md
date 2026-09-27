@@ -1,6 +1,6 @@
 # ABNAHME.md – Abnahme der neuen Webseite im Stil „Foto“
 
-Stand: 26.09.2026 · Verantwortlich: Tom (Webseite/Marketing, Vorstand) · Beteiligt: Martin, Paula (Vorstand), Sonja (Geschäftsführung),
+Stand: 27.09.2026 · Verantwortlich: Tom (Webseite/Marketing, Vorstand) · Beteiligt: Martin, Paula (Vorstand), Sonja (Geschäftsführung),
 Vera (Geschäftsstelle), Sandra (Mitglieder, Weiterbildung, Shop)
 Übersichtsseite für die Beteiligten: `skh-design/abnahme.html` (im Browser öffnen) · Vorschaubilder: `skh-design/abnahme/`
 Stilregeln: `DESIGN-foto.md` · Seiten-Dokus: `SEITE-*.md`
@@ -198,8 +198,59 @@ Rückmeldungen in die Seiten-Dokus zu übertragen.
    Gestaltung zurück in die aktive Seite übertragen oder Daten übertragen), und das hier festhalten.
    *Werkzeug (27.09.2026, Tom):* Umgesetzt wird im **Wix Editor** (klassischer Editor), nicht in Wix Studio. Alle
    Klickanleitungen in den `SEITE-*.md` beziehen sich auf den Wix Editor.
+   *Geprüft (27.09.2026, Claude mit Tom, im Browser):*
+   - **Editor:** klassischer Wix Editor (Menüleiste oben: *Website · Einstellungen · Dev-Modus · Profi engagieren · Hilfe*,
+     rechts *Speichern · Vorschau · Veröffentlichen*). Kein Wix Studio.
+   - **Premium-Paket:** **Core**, gebucht auf die aktive Seite **„Sikra Deutschland“**, 2-Jahres-Abrechnung, bezahlt per PayPal,
+     **nächste Zahlung 29.11.2026**. Zu finden unter *Wix-Konto (Profilbild oben rechts) → Premium-Abonnements*. Das Wix-Konto
+     läuft auf Sonja (Eigentümerin).
+   - **Arbeitskopie:** „Sikra Deutsch Kopie“ – hat **kein** Premium-Paket und keine Domain (Adresse `wix.com/mysite`, Knöpfe
+     *Upgraden* und *Domain verbinden*). Das ist gewollt: Das Duplikat kostet nichts extra. Auf *Upgraden* **nicht** klicken.
+   - **Was das für die Anleitungen heißt:** Alles, was Core bietet (Online-Shop mit Zahlung, Events, eigene Domain, keine
+     Wix-Werbung), steht auf der Kopie im Editor ebenfalls zur Verfügung, wird aber erst mit dem Paket öffentlich wirksam.
+     Weiterleitungen (301) und SEO-Einstellungen lassen sich in der Kopie anlegen, wirken aber erst, wenn die Kopie unter
+     `www.singende-krankenhaeuser.de` läuft.
+   - **Livegang der Kopie (Vorschlag, noch nicht entschieden):** Premium-Paket von „Sikra Deutschland“ auf die Kopie übertragen
+     (*Premium-Abonnements → ··· → Zu anderer Website verschieben*, kostenlos) und die Domain umhängen. Vorher klären, welche
+     Daten nur auf der aktiven Seite liegen (Kontakte, Formular-Einträge, Anmeldungen in Wix Events, Bestellungen im Shop,
+     Newsletter-Anmeldungen) und wie sie mitkommen. → Abschnitt 7, Punkt 4.
+   - **Kostenhinweis:** Die Verlängerung am 29.11.2026 zahlt 2 Jahre im Voraus. Vor dem Termin prüfen, ob Core noch passt
+     (Shop-Zahlungen brauchen mindestens Core), und das Paket **erst nach dem Livegang** übertragen – sonst läuft die Kopie
+     mit Paket, während die alte Seite noch gebraucht wird. → Abschnitt 7, Punkt 5.
 3. **Rechtstexte-Auftrag** parallel vergeben (Grundsatz 8).
 4. **Live schalten**, danach jede Seite am Handy durchklicken und die Checklisten (jeweils Abschnitt 8) abhaken.
+
+### Fortschritt der Umsetzung in Wix (Hauptort)
+
+Reihenfolge wie im Umsetzungsauftrag vom 27.09.2026. Eine Zeile gilt als „umgesetzt“, wenn sie in der Kopie gespeichert ist; „geprüft
+Handy“, wenn die Handy-Ansicht im Editor **und** die Checkliste (Abschnitt 8 der jeweiligen Doku) abgehakt sind. Abweichungen von der
+Vorschau stehen in der jeweiligen `SEITE-*.md` unter „Korrekturen“, nicht hier.
+
+| Seite / Schritt | Doku | umgesetzt am | geprüft Handy | offen |
+|---|---|---|---|---|
+| Aufräumen, Schritte 1–4 | `SEITE-aufraeumen.md` | | – | Wo umsetzen: aktive Seite oder Kopie? |
+| Grundstil (Farben, Schrift, Text-Themen, Button-Vorlage) | `DESIGN-foto.md` | | | |
+| Kopfleiste und Fußzeile (Menü, Untermenüs, Kontakt, Shop, Suche) | `DESIGN-foto.md` | | | Suche erst nach dem Aufräumen |
+| Startseite | `DESIGN-foto.md` | | | |
+| Weiterbildung | `SEITE-weiterbildung.md` | | | |
+| Termine | `SEITE-termine.md` | | | |
+| Anmeldung | `SEITE-anmeldung.md` | | | Inhalt nicht ändern |
+| Veranstaltung | `SEITE-veranstaltung.md` | | | |
+| Sing mit | `SEITE-sing-mit.md` | | | |
+| Einrichtungen | `SEITE-einrichtungen.md` | | | |
+| Mitglied sein | `SEITE-mitglied-sein.md` | | | |
+| Über uns | `SEITE-ueber-uns.md` | | | |
+| Dozent:innen | `SEITE-dozenten.md` | | | |
+| Downloads | `SEITE-downloads.md` | | | |
+| FAQ | `SEITE-faq.md` | | | |
+| Kontakt | `SEITE-kontakt.md` | | | |
+| Shop | `SEITE-shop.md` | | | |
+| Rechtliches (nur Gestaltung) | `SEITE-rechtliches.md` | | | Wortlaut: eigener Auftrag |
+| Wix Blog „Aus dem Netzwerk“ | `SEITE-netzwerk.md` | | | |
+| Landkarte (HTML-Element `netzwerkkarte.html`) | `SEITE-landkarte.md` | | | alte Datei danach in Wix-Medien löschen |
+| Weiterleitungen | `SEITE-aufraeumen.md`, Abschnitt 3 | | – | |
+| Handy-Ansicht gesamt | `DESIGN-foto.md` | | | |
+| Checklisten aller Seiten | je Abschnitt 8 | | | |
 
 ---
 
@@ -220,6 +271,9 @@ Rückmeldungen in die Seiten-Dokus zu übertragen.
 1. ~~Weg zum Verschicken wählen~~ – **erledigt** 26.09.2026: privater Link (Abschnitt 3). Offen: Link im *Teilen*-Menü für die Beteiligten freigeben. → Tom.
 2. **Rückmeldefrist** in `abnahme.html` eintragen („[Datum eintragen]“). → Tom.
 3. **Sitzungstermin Vorstand** für die Grundsätze festlegen. → Tom, Martin, Paula.
+4. **Weg zum Livegang der Kopie** festlegen (Premium-Paket und Domain umhängen, Datenabgleich mit der aktiven Seite; Abschnitt 5,
+   Schritt 2). Vor dem Livegang. → Tom, Sonja (Konto-Eigentümerin).
+5. **Premium-Verlängerung 29.11.2026:** vorher prüfen, ob Core weiter passt; Paket erst nach Livegang auf die Kopie verschieben. → Tom, Sonja.
 
 ---
 
