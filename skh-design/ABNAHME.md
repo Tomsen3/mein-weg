@@ -196,6 +196,8 @@ Rückmeldungen in die Seiten-Dokus zu übertragen.
    *Wichtig:* Kontakte, Anmeldungen und Bestellungen laufen während des Umbaus weiter auf der aktiven Seite ein, das Duplikat
    enthält nur den Stand vom Tag des Kopierens. Deshalb vor dem Livegang klären, wie das Duplikat live geht (z. B. die neue
    Gestaltung zurück in die aktive Seite übertragen oder Daten übertragen), und das hier festhalten.
+   *Werkzeug (27.09.2026, Tom):* Umgesetzt wird im **Wix Editor** (klassischer Editor), nicht in Wix Studio. Alle
+   Klickanleitungen in den `SEITE-*.md` beziehen sich auf den Wix Editor.
 3. **Rechtstexte-Auftrag** parallel vergeben (Grundsatz 8).
 4. **Live schalten**, danach jede Seite am Handy durchklicken und die Checklisten (jeweils Abschnitt 8) abhaken.
 
