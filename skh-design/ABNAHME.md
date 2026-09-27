@@ -278,8 +278,8 @@ Vorschau stehen in der jeweiligen `SEITE-*.md` unter „Korrekturen“, nicht hi
 3. **Sitzungstermin Vorstand** für die Grundsätze festlegen. → Tom, Martin, Paula.
 4. **Weg zum Livegang der Kopie** festlegen (Premium-Paket und Domain umhängen, Datenabgleich mit der aktiven Seite; Abschnitt 5,
    Schritt 2). Vor dem Livegang. → Tom, Sonja (Konto-Eigentümerin).
-6. **Beim Livegang Indexierung einschalten:** In der Kopie ist *Suchmaschinen können deine Website indexieren* aus (Duplikat). → Tom.
 5. **Premium-Verlängerung 29.11.2026:** vorher prüfen, ob Core weiter passt; Paket erst nach Livegang auf die Kopie verschieben. → Tom, Sonja.
+6. **Beim Livegang Indexierung einschalten:** In der Kopie ist *Suchmaschinen können deine Website indexieren* aus (Duplikat). → Tom.
 
 ---
 
