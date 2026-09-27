@@ -109,6 +109,9 @@ wirkt, doch etwas tun (z. B. Countdown auf den Jahrestagung-Seiten, Wix Music f�
 | Schritt 1, `LP_Singing_Family` | *SEO → nicht indexieren* und aus dem Menü nehmen | War schon erledigt: im Menü ausgeblendet (durchgestrichenes Auge), Schalter *Suchmaschinen können die Seite indexieren* aus. | Nichts zu tun; Löschen weiter erst nach Rückfrage (Abschnitt 7, Punkt 1). |
 | Schritt 4, Dankeseite `/anmeldung-erfolgreich` | *SEO → nicht indexieren* | War schon erledigt (Schalter aus). Da die Kopie ein Duplikat ist, gilt das auch für die aktive Seite. | Nichts zu tun. Fund 9 damit erledigt. |
 | Schritt 3, Website-Name | „Sikra Deutschland“ → „Singende Krankenhäuser e.V.“ | In der Kopie steht als Website-Name **„Sikra Deutsch Kopie“** – er erscheint in jedem Google-Titel („Anmeldung erfolgreich \| Sikra Deutsch Kopie“). | Beim Umbenennen in der Kopie wird beides auf einmal behoben. |
+| Schritt 3, Ort der Einstellung | *SEO-Einstellungen* bzw. *Einstellungen → Allgemeine Infos → Website-Name* | Richtiger Ort: **Verwaltung → Einstellungen → Website-Einstellungen → Website-Name** (Suche in den Einstellungen nach „Website-Name“). *Unternehmensinfo → Name* ist etwas anderes und stand schon auf „Singende Krankenhäuser e.V.“. Die Titel-Vorlage steht unter *Marketing → SEO & GEO → SEO-Einstellungen → Hauptseiten → Standardeinstellungen anpassen → Basics*: „{Seitenname} \| {Website-Name}“. | **Erledigt 27.09.2026** in der Kopie (Tom hat den Namen freigegeben). Die Kopie heißt damit auch in der Wix-Websiteliste „Singende Krankenhäuser e.V.“; die aktive Seite heißt dort weiter „Sikra Deutschland“ – so bleiben beide unterscheidbar. |
+| Schritt 3, Wirkung | „repariert 24 Seiten auf einmal“, Jahrestagung inklusive | Seiten mit **von Hand bearbeitetem Titel** (in der SEO-Liste „BEARBEITET“) übernehmen den Website-Namen nicht. Fest „\| Sikra Deutschland“ eingetragen haben: die **9 Jahrestagungs-Seiten** (`/jahrestagung2027`, `/programmjahrestagung`, `/dozentenjahrestagung`, `/workshops`, `/liedernacht`, `/organisation`, `/anmeldungjahrestagung`, `/teilnahmebedingungen`, `/faq`) und `/veranstaltungen`. Stand der Live-Titel am 27.09.2026 per Abruf aller 38 Adressen aus `pages-sitemap.xml`. | Jahrestagung: **nicht angefasst** (Bereich gesperrt) – offener Punkt 6. `/veranstaltungen` entfällt ohnehin (Gruppe C). Alle übrigen Titel bekommen beim Umbau ihrer Seite den neuen Titel aus der Tabelle unten. |
+| Nebenbefund | – | In der Kopie ist *SEO-Einstellungen → Suchmaschinen können deine Website indexieren* **aus** (Wix macht das bei Duplikaten so). | Für die Arbeitsphase richtig. **Beim Livegang einschalten**, sonst verschwindet die Webseite aus Google – steht in der Checkliste und in `ABNAHME.md`, Abschnitt 7. |
 | Schritt 2, Weiterleitungen Gruppe A | sofort anlegen | Wir arbeiten in der Kopie (`ABNAHME.md`, Abschnitt 5); Weiterleitungen wirken dort erst ab dem Livegang. | Vorschlag: Gruppe A zusammen mit B und C am Ende anlegen (Reihenfolge im Umsetzungsauftrag), dann gleich mit dem endgültigen Ziel (`/haeufige-fragen` statt vorläufig `/kontakt`) – so entsteht keine Kette. |
 
 ---
@@ -268,6 +271,9 @@ Geschätzter Aufwand für Schritte 1–5: **1 bis 2 Stunden**. Alles geht **vor*
 5. **Nachtrag für `SEITE-anmeldung.md`** (dort gesperrt, deshalb hier gesammelt): (a) Dankeseite `/anmeldung-erfolgreich` auf „nicht
    indexieren“ (Fund 9); (b) Titel-Muster an Entscheidung 3 angleichen: „Anmeldung zur Weiterbildung | Singende Krankenhäuser e.V.“ und
    „Anmeldung erfolgreich | Singende Krankenhäuser e.V.“. Beim nächsten Auftrag zu `SEITE-anmeldung.md` dort übernehmen. → Tom.
+6. **Titel der Jahrestagung** (9 Seiten) enden fest auf „| Sikra Deutschland“ und ändern sich durch den Website-Namen nicht (Korrekturen,
+   27.09.2026). Der Bereich ist für diesen Auftrag gesperrt. Entscheiden, wer die Titel ändert (reine SEO-Einstellung, Seite bleibt
+   unverändert). → Tom.
 
 ---
 
@@ -276,7 +282,9 @@ Geschätzter Aufwand für Schritte 1–5: **1 bis 2 Stunden**. Alles geht **vor*
 - [ ] `/inquiry-services-page` und `/book-online` gelöscht, Weiterleitungen Gruppe B angelegt?
 - [ ] `/lp-singing-family` nicht indexiert, nach Rückfrage gelöscht?
 - [ ] Weiterleitungen Gruppe A angelegt und im privaten Browserfenster getestet (auch Umlaut-Adressen)?
-- [ ] Website-Name „Singende Krankenhäuser e.V.“ – kein Google-Titel endet mehr auf „Sikra Deutschland“?
+- [x] Website-Name „Singende Krankenhäuser e.V.“ gesetzt (Kopie, 27.09.2026)
+- [ ] Kein Google-Titel endet mehr auf „Sikra Deutschland“? (Jahrestagung: offener Punkt 6)
+- [ ] **Beim Livegang:** *Suchmaschinen können deine Website indexieren* eingeschaltet?
 - [ ] `/singende-landkarte` hat Titel und Beschreibung?
 - [ ] Alle Titel im Muster „Seitenname | Singende Krankenhäuser e.V.“, keine Großbuchstaben?
 - [x] `/anmeldung-erfolgreich` nicht indexiert? (geprüft 27.09.2026, war schon so)
